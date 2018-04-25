@@ -7,6 +7,12 @@ php:
 services:
   - mysql
 
+env:
+  - DB_CONNECTION=mysql
+  - DB_DATABASE=homestead
+  - DB_USERNAME=root
+  - DB_PASSWORD=
+
 cache:
   directories:
     - $HOME/.yarn-cache
