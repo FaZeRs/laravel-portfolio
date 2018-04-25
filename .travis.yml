@@ -7,12 +7,6 @@ php:
 services:
   - mysql
 
-env:
-  - DB_CONNECTION=mysql
-  - DB_DATABASE=homestead
-  - DB_USERNAME=root
-  - DB_PASSWORD=
-
 cache:
   directories:
     - $HOME/.yarn-cache
@@ -20,7 +14,7 @@ cache:
     - vendor
 
 before_script:
-  - cp .env.example .env
+  - cp .env.travis.example .env
   - composer self-update
   - composer install --no-progress --no-interaction --prefer-source --no-suggest
   - php artisan key:generate
