@@ -9,8 +9,6 @@ services:
 
 cache:
   directories:
-    - $HOME/.yarn-cache
-    - node_modules
     - vendor
 
 before_script:
@@ -19,11 +17,6 @@ before_script:
   - composer install --no-progress --no-interaction --prefer-source --no-suggest
   - php artisan key:generate
   - php artisan migrate
-  - curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-  - sudo apt-get install -y nodejs
-  - npm install --global yarn
-  - yarn
-  - yarn dev
 
 before_install:
   - mysql -e 'CREATE DATABASE homestead;'
