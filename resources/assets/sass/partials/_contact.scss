@@ -1,0 +1,19 @@
+.contact-block {
+  @include box-shadow();
+  padding: 30px;
+  > h4 {
+    color: #000;
+    margin-bottom: 50px;
+    position: relative;
+    &::after {
+      width: 50px;
+      height: 2px;
+      background: #000;
+      content: '';
+      top: 100%;
+      position: absolute;
+      left: 0;
+      margin-top: 15px;
+    }
+  }
+}

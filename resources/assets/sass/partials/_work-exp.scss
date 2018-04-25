@@ -1,0 +1,13 @@
+.work-exp-block {
+  position: relative;
+  background: #fff;
+  @include box-shadow();
+  padding: 30px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.working-duration {
+  float: right;
+  @include theme-color-gradient();
+}

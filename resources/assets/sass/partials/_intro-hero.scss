@@ -1,0 +1,61 @@
+.typelist-skill {
+  font-weight: bold;
+  > .selectedText {
+    display: none;
+  }
+  &::after {
+    position: relative;
+    top: 7px;
+    display: inline-block;
+    height: 30px;
+    margin-left: 5px;
+    content: ' ';
+    animation: blink 0.5s step-end infinite alternate;
+    border-right: 2px solid;
+  }
+  @-webkit-keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+.social-intro {
+  color: #fff;
+  padding: 10px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: rgba(244, 244, 244, 0.1);
+  border-radius: 4px;
+  transform: rotate(45deg);
+  margin: 5px;
+  .fa-hover {
+    transform: rotate(-45deg);
+  }
+  &:hover {
+    color: $base-color;
+    transform: rotate(0);
+    background: rgba(244, 244, 244, 0.8);
+    .fa-hover {
+      transform: rotate(0);
+    }
+  }
+}

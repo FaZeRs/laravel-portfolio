@@ -1,0 +1,87 @@
+<template>
+  <v-form>
+    <v-alert v-model="successful" dismissible outline transition="scale-transition" type="success">
+      {{ $t('contact_success') }}
+    </v-alert>
+    <v-layout row wrap>
+      <v-flex xs12 sm6>
+        <v-text-field v-validate="'required'" :label="$t('name')" v-model="name" :error-messages="errors.collect('name')" data-vv-name="name" required/>
+      </v-flex>
+      <v-flex xs12 sm6>
+        <v-text-field v-validate="'required|email'" :label="$t('email')" v-model="email" :error-messages="errors.collect('email')" data-vv-name="email" required/>
+      </v-flex>
+      <v-flex xs12>
+        <v-text-field v-validate="'required'" :label="$t('message')" v-model="message" :error-messages="errors.collect('message')" data-vv-name="message" multi-line/>
+      </v-flex>
+      <v-btn @click="submit">{{ $t('send_message') }}</v-btn>
+      <v-btn @click="clear">{{ $t('clear') }}</v-btn>
+    </v-layout>
+  </v-form>
+</template>
+
+<script>
+import axios from 'axios'
+import { mapGetters } from 'vuex'
+
+export default {
+  $_veeValidate: {
+    validator: 'new'
+  },
+
+  data: () => ({
+    name: '',
+    email: '',
+    message: '',
+    successful: false,
+    locale: 'en'
+  }),
+  computed: mapGetters({
+    locale: 'lang/locale'
+  }),
+  mounted () {
+    this.$validator.localize(this.$i18n.locale, this.dictionary)
+  },
+  created () {
+    this.$validator.localize('lv', {
+      messages: {
+        email: (field) => `Laukam ${field} jābūt derīgai e-pasta adresei.`,
+        required: (field) => `Lauks ${field} ir obligāts.`
+      },
+      attributes: {
+        email: 'e-pasts',
+        name: 'vārds',
+        message: 'vēstule'
+      }
+    })
+
+    this.$validator.localize(this.$i18n.locale)
+  },
+  methods: {
+    submit () {
+      this.$validator.validateAll().then((result) => {
+        if (result) {
+          axios.post('/api/contact/send', {
+            name: this.name,
+            email: this.email,
+            message: this.message
+          }).then(() => {
+            this.successful = true
+          })
+
+          this.name = ''
+          this.email = ''
+          this.message = ''
+          this.successful = false
+          this.$validator.reset()
+        }
+      })
+    },
+    clear () {
+      this.name = ''
+      this.email = ''
+      this.message = ''
+      this.$validator.reset()
+    }
+  }
+}
+</script>
