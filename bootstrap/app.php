@@ -25,9 +25,9 @@ $app = new Laravel\Lumen\Application(
 
 require_once __DIR__.'/helpers.php';
 
-$app->instance('path.config', app()->basePath() . DIRECTORY_SEPARATOR . 'config');
-$app->instance('path.storage', app()->basePath() . DIRECTORY_SEPARATOR . 'storage');
-$app->instance('path.public', app()->basePath() . DIRECTORY_SEPARATOR . 'public');
+$app->instance('path.config', app()->basePath().DIRECTORY_SEPARATOR.'config');
+$app->instance('path.storage', app()->basePath().DIRECTORY_SEPARATOR.'storage');
+$app->instance('path.public', app()->basePath().DIRECTORY_SEPARATOR.'public');
 
 $app->withFacades();
 
@@ -124,7 +124,7 @@ $app->register(\Illuminate\Redis\RedisServiceProvider::class);
 */
 
 $app->router->group([
-    'prefix' => 'api',
+    'prefix'    => 'api',
     'namespace' => 'App\Http\Controllers\Api',
 ], function ($router) {
     require __DIR__.'/../routes/api.php';
