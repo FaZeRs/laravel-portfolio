@@ -31,7 +31,6 @@ $app->instance('path.public', app()->basePath().DIRECTORY_SEPARATOR.'public');
 
 $app->withFacades();
 
-//$app->withEloquent();
 $app->make('queue');
 
 $app->configure('app');
