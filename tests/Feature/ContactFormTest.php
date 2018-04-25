@@ -2,11 +2,11 @@
 
 namespace Tests\Feature;
 
-use Tests\TestCase;
-use Illuminate\Support\Facades\Mail;
 use App\Mail\Contact\SendContact;
+use Illuminate\Support\Facades\Mail;
+use Tests\TestCase;
 
-class FillContactFormTest extends TestCase
+class ContactFormTest extends TestCase
 {
     /** @test */
     public function a_contact_mail_gets_sent()
@@ -14,8 +14,8 @@ class FillContactFormTest extends TestCase
         Mail::fake();
 
         $this->call('POST', '/api/contact/send', [
-            'name' => 'John Doe',
-            'email' => 'john@example.com',
+            'name'    => 'John Doe',
+            'email'   => 'john@example.com',
             'message' => 'This is a test message',
         ]);
 
@@ -28,7 +28,7 @@ class FillContactFormTest extends TestCase
     public function name_is_required()
     {
         $this->call('POST', '/api/contact/send', [
-            'email' => 'john@example.com',
+            'email'   => 'john@example.com',
             'message' => 'This is a test message',
         ]);
 
@@ -39,7 +39,7 @@ class FillContactFormTest extends TestCase
     public function email_is_required()
     {
         $this->call('POST', '/api/contact/send', [
-            'name' => 'John Doe',
+            'name'    => 'John Doe',
             'message' => 'This is a test message',
         ]);
 
@@ -49,8 +49,8 @@ class FillContactFormTest extends TestCase
     /** @test */
     public function message_is_required()
     {
-        $this->call('POST','/api/contact/send', [
-            'name' => 'John Doe',
+        $this->call('POST', '/api/contact/send', [
+            'name'  => 'John Doe',
             'email' => 'john@example.com',
         ]);
 
