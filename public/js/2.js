@@ -186,7 +186,7 @@ if (false) {(function () {
       email: '',
       message: '',
       successful: false,
-      sitekey: '6LfAJCAUAAAAAPQEfvFrzDql9BKIN7zHFKr9hybp'
+      sitekey: window.config.googleReCaptcha
     };
   },
   mounted: function mounted() {
@@ -240,7 +240,6 @@ if (false) {(function () {
       this.message = '';
       this.successful = false;
       this.$validator.reset();
-      this.$refs.recaptcha.reset();
     },
     clear: function clear() {
       this.name = '';

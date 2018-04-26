@@ -36,7 +36,7 @@ export default {
     email: '',
     message: '',
     successful: false,
-    sitekey: '6LfAJCAUAAAAAPQEfvFrzDql9BKIN7zHFKr9hybp'
+    sitekey: window.config.googleReCaptcha
   }),
   mounted () {
     this.$validator.localize(this.$i18n.locale, this.dictionary)

@@ -4,6 +4,7 @@
         'locale' => $locale = app('translator')->getLocale(),
         'locales' => config('app.locales'),
         'year' => date('Y'),
+        'googleReCaptcha' => config('app.google_recaptcha'),
     ];
 @endphp
 <!DOCTYPE html>
