@@ -79,7 +79,6 @@ export default {
       this.message = ''
       this.successful = false
       this.$validator.reset()
-      this.$refs.recaptcha.reset()
     },
     clear () {
       this.name = ''
