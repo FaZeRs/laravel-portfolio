@@ -9,4 +9,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## 1.0.0 - 2018-04-25
 - Initial commit.
 
-[Unreleased]: https://github.com/fazers/naurislinde.com/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/fazers/naurislinde.com/compare/1.0.0...HEAD
