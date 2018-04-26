@@ -4,6 +4,7 @@
         'locale' => $locale = app('translator')->getLocale(),
         'locales' => config('app.locales'),
         'year' => date('Y'),
+        'googleReCaptcha' => config('app.google_recaptcha'),
     ];
 @endphp
 <!DOCTYPE html>
@@ -33,6 +34,7 @@
     <link rel="alternate" hreflang="en" href="https://naurislinde.com"/>
 
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer></script>
 </head>
 <body>
     <div id="app"></div>

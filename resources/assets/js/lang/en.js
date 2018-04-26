@@ -49,5 +49,7 @@ export const en = {
   'sem_position': 'Back End Web Developer',
 
   'page_not_found': 'Page not found',
-  'clear': 'clear'
+  'clear': 'clear',
+  'cookies_message': 'This website uses cookies to ensure you get the best experience on our website.',
+  'cookies_button_text': 'Got it!'
 }

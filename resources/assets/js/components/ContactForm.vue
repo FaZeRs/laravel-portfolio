@@ -13,6 +13,7 @@
       <v-flex xs12>
         <v-text-field v-validate="'required'" :label="$t('message')" v-model="message" :error-messages="errors.collect('message')" data-vv-name="message" multi-line/>
       </v-flex>
+      <vue-recaptcha ref="recaptcha" :sitekey="sitekey" size="invisible" @verify="onCaptchaVerified" @expired="onCaptchaExpired"/>
       <v-btn @click="submit">{{ $t('send_message') }}</v-btn>
       <v-btn @click="clear">{{ $t('clear') }}</v-btn>
     </v-layout>
@@ -21,22 +22,21 @@
 
 <script>
 import axios from 'axios'
-import { mapGetters } from 'vuex'
+import VueRecaptcha from 'vue-recaptcha'
 
 export default {
   $_veeValidate: {
     validator: 'new'
   },
-
+  components: {
+    VueRecaptcha
+  },
   data: () => ({
     name: '',
     email: '',
     message: '',
     successful: false,
-    locale: 'en'
-  }),
-  computed: mapGetters({
-    locale: 'lang/locale'
+    sitekey: window.config.googleReCaptcha
   }),
   mounted () {
     this.$validator.localize(this.$i18n.locale, this.dictionary)
@@ -60,27 +60,35 @@ export default {
     submit () {
       this.$validator.validateAll().then((result) => {
         if (result) {
-          axios.post('/api/contact/send', {
-            name: this.name,
-            email: this.email,
-            message: this.message
-          }).then(() => {
-            this.successful = true
-          })
-
-          this.name = ''
-          this.email = ''
-          this.message = ''
-          this.successful = false
-          this.$validator.reset()
+          this.$refs.recaptcha.execute()
         }
       })
+    },
+    onCaptchaVerified: function (recaptchaToken) {
+      this.$refs.recaptcha.reset()
+      axios.post('/api/contact/send', {
+        name: this.name,
+        email: this.email,
+        message: this.message
+      }).then(() => {
+        this.successful = true
+      })
+
+      this.name = ''
+      this.email = ''
+      this.message = ''
+      this.successful = false
+      this.$validator.reset()
     },
     clear () {
       this.name = ''
       this.email = ''
       this.message = ''
       this.$validator.reset()
+      this.$refs.recaptcha.reset()
+    },
+    onCaptchaExpired: function () {
+      this.$refs.recaptcha.reset()
     }
   }
 }
