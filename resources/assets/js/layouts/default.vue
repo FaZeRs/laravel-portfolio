@@ -40,6 +40,7 @@
         </v-flex>
       </v-layout>
     </v-footer>
+    <cookie-law :message="$t('cookies_message')" :buttonText="$t('cookies_button_text')" theme="dark-blue"/>
     <back-to-top visible-offset="500"/>
   </v-app>
 </template>
@@ -47,12 +48,14 @@
 <script>
 import NavBar from '~/partials/NavBar'
 import BackToTop from '../components/BackToTop'
+import CookieLaw from 'vue-cookie-law'
 
 export default {
   name: 'MainLayout',
   components: {
     BackToTop,
-    NavBar
+    NavBar,
+    CookieLaw
   },
   data: () => ({
     appName: window.config.appName,

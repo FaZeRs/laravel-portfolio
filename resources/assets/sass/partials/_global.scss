@@ -65,3 +65,20 @@
     transition: 0.3s;
   }
 }
+
+.Cookie--dark-blue {
+  background: #edeff5;
+  color: #838391;
+  padding: 1.25em;
+
+  .Cookie__button {
+    background: #4b81e8;
+    padding: 0.625em 3.125em;
+    color: #fff;
+    border-radius: 0;
+
+    &:hover {
+      background: darken(#4b81e8, 10%);
+    }
+  }
+}
