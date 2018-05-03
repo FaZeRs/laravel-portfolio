@@ -1,6 +1,5 @@
 const path = require('path')
 const mix = require('laravel-mix')
-require('laravel-mix-purgecss')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
 mix.config.vue.esModule = true
@@ -62,6 +61,7 @@ if (mix.inProduction()) {
     'v-img',
     'vee-validate',
     'vue',
+    'vue-cookie-law',
     'vue-i18n',
     'vue-meta',
     'vue-recaptcha',
@@ -73,5 +73,4 @@ if (mix.inProduction()) {
 
   mix.version()
   mix.disableNotifications()
-  mix.purgeCss()
 }
