@@ -1,13 +1,13 @@
 webpackJsonp([1],{
 
-/***/ 565:
+/***/ 566:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_cacheDirectory_true_presets_env_modules_false_targets_browsers_2_uglify_true_plugins_transform_object_rest_spread_transform_runtime_polyfill_false_helpers_false_node_modules_vue_loader_lib_selector_type_script_index_0_portfolio_vue__ = __webpack_require__(571);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_cacheDirectory_true_presets_env_modules_false_targets_browsers_2_uglify_true_plugins_transform_object_rest_spread_transform_runtime_polyfill_false_helpers_false_node_modules_vue_loader_lib_selector_type_script_index_0_portfolio_vue__ = __webpack_require__(572);
 /* empty harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_54c5180a_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_portfolio_vue__ = __webpack_require__(593);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_6a1eaf01_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_portfolio_vue__ = __webpack_require__(594);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__node_modules_vue_loader_lib_runtime_component_normalizer__ = __webpack_require__(48);
 var disposed = false
 /* script */
@@ -26,14 +26,14 @@ var __vue_module_identifier__ = null
 
 var Component = Object(__WEBPACK_IMPORTED_MODULE_2__node_modules_vue_loader_lib_runtime_component_normalizer__["a" /* default */])(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_cacheDirectory_true_presets_env_modules_false_targets_browsers_2_uglify_true_plugins_transform_object_rest_spread_transform_runtime_polyfill_false_helpers_false_node_modules_vue_loader_lib_selector_type_script_index_0_portfolio_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_54c5180a_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_portfolio_vue__["a" /* render */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_54c5180a_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_portfolio_vue__["b" /* staticRenderFns */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_6a1eaf01_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_portfolio_vue__["a" /* render */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_6a1eaf01_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_portfolio_vue__["b" /* staticRenderFns */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/pages/portfolio.vue"
+Component.options.__file = "resources\\assets\\js\\pages\\portfolio.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -42,9 +42,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-54c5180a", Component.options)
+    hotAPI.createRecord("data-v-6a1eaf01", Component.options)
   } else {
-    hotAPI.reload("data-v-54c5180a", Component.options)
+    hotAPI.reload("data-v-6a1eaf01", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -56,7 +56,7 @@ if (false) {(function () {
 
 /***/ }),
 
-/***/ 571:
+/***/ 572:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -122,8 +122,8 @@ if (false) {(function () {
         categories: ['all', 'wordpress'],
         tech: ['Wordpress'],
         image: {
-          thumb: __webpack_require__(587),
-          src: __webpack_require__(588)
+          thumb: __webpack_require__(588),
+          src: __webpack_require__(589)
         },
         link: 'http://balticprobiotics.lv'
       }, {
@@ -132,8 +132,8 @@ if (false) {(function () {
         categories: ['all', 'laravel', 'open-source'],
         tech: ['Vue.js', 'Vuetify', 'Lumen'],
         image: {
-          thumb: __webpack_require__(589),
-          src: __webpack_require__(590)
+          thumb: __webpack_require__(590),
+          src: __webpack_require__(591)
         },
         link: 'https://naurislinde.com'
       }, {
@@ -142,8 +142,8 @@ if (false) {(function () {
         categories: ['all', 'laravel', 'open-source'],
         tech: ['Laravel', 'Bootstrap', 'MySQL'],
         image: {
-          thumb: __webpack_require__(591),
-          src: __webpack_require__(592)
+          thumb: __webpack_require__(592),
+          src: __webpack_require__(593)
         },
         github: 'https://github.com/FaZeRs/Boilerplate'
       }],
@@ -167,49 +167,49 @@ if (false) {(function () {
 
 /***/ }),
 
-/***/ 587:
+/***/ 588:
 /***/ (function(module, exports) {
 
 module.exports = "/images/baltic_probiotics_thumb.png?986ccbccacf24c4d88086374b2d44a87";
 
 /***/ }),
 
-/***/ 588:
+/***/ 589:
 /***/ (function(module, exports) {
 
 module.exports = "/images/baltic_probiotics.png?7c597e2f694d8cd91c2be9b747f36b87";
 
 /***/ }),
 
-/***/ 589:
+/***/ 590:
 /***/ (function(module, exports) {
 
 module.exports = "/images/naurislinde_thumb.png?9d4e6d9b26a81671429482733ae16ed8";
 
 /***/ }),
 
-/***/ 590:
+/***/ 591:
 /***/ (function(module, exports) {
 
 module.exports = "/images/naurislinde.png?2ee2b01d90ea55f20219699ecddcaf0e";
 
 /***/ }),
 
-/***/ 591:
-/***/ (function(module, exports) {
-
-module.exports = "/images/boilerplate_thumb.png?7b3597fed900de965ced51415df1c3b9";
-
-/***/ }),
-
 /***/ 592:
 /***/ (function(module, exports) {
 
-module.exports = "/images/boilerplate.png?76459720248bb6f1e8acb786aab380c3";
+module.exports = "/images/boilerplate_thumb.png?b73fcac894fbb458a9ca644497d7c8bd";
 
 /***/ }),
 
 /***/ 593:
+/***/ (function(module, exports) {
+
+module.exports = "/images/boilerplate.png?cb82968e7017df75fc2420f9b31585a9";
+
+/***/ }),
+
+/***/ 594:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -446,7 +446,7 @@ render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-54c5180a", { render: render, staticRenderFns: staticRenderFns })
+    require("vue-hot-reload-api")      .rerender("data-v-6a1eaf01", { render: render, staticRenderFns: staticRenderFns })
   }
 }
 
