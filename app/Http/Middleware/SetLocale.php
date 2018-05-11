@@ -29,7 +29,7 @@ class SetLocale
      *
      * @return string|null
      */
-    protected function parseLocale($request)
+    protected function parseLocale($request): ?string
     {
         $locales = config('app.locales');
 
