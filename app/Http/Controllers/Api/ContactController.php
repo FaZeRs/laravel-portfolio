@@ -8,17 +8,16 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 /**
- * Class ContactController
- *
- * @package App\Http\Controllers\Api
+ * Class ContactController.
  */
 class ContactController extends Controller
 {
     /**
      * @param \Illuminate\Http\Request $request
      *
-     * @return \Illuminate\Http\JsonResponse
      * @throws \Illuminate\Validation\ValidationException
+     *
+     * @return \Illuminate\Http\JsonResponse
      */
     public function send(Request $request): \Illuminate\Http\JsonResponse
     {
