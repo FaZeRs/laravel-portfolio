@@ -8,18 +8,19 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 /**
- * Class ContactController.
+ * Class ContactController
+ *
+ * @package App\Http\Controllers\Api
  */
 class ContactController extends Controller
 {
     /**
-     * @param Request $request
+     * @param \Illuminate\Http\Request $request
      *
+     * @return \Illuminate\Http\JsonResponse
      * @throws \Illuminate\Validation\ValidationException
-     *
-     * @return void
      */
-    public function send(Request $request)
+    public function send(Request $request): \Illuminate\Http\JsonResponse
     {
         $this->validate($request, [
             'name'    => 'required|string|max:191',
@@ -28,5 +29,7 @@ class ContactController extends Controller
         ]);
 
         Mail::send(new SendContact($request->only(['name', 'email', 'message'])));
+
+        return response()->json(true);
     }
 }
