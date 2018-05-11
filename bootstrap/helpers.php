@@ -64,7 +64,7 @@ if (!function_exists('public_path')) {
      */
     function public_path($path = '')
     {
-        $public_folder = realpath(__DIR__.'/../public/');
+        $public_folder = dirname(__DIR__).'/public/';
 
         return $public_folder.($path ? DIRECTORY_SEPARATOR.ltrim($path, DIRECTORY_SEPARATOR) : $path);
     }
