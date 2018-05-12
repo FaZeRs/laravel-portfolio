@@ -6,6 +6,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0]  - 2018-05-12
+
+### Added
+- Added Docker ([fa0ef43](https://github.com/FaZeRs/naurislinde.com/commit/fa0ef437ed8f8b402a53e07a23803528f2841b84))
+- Added return type declarations ([1ad8809](https://github.com/FaZeRs/naurislinde.com/commit/1ad88097ed0a84b2379f9de6739f07849758fd3e))
+
+### Changed
+- Return json & Add return type declaration ([da4ac62](https://github.com/FaZeRs/naurislinde.com/commit/da4ac62483071d6ac4d8f312d9d8bb4abd5cbcf5))
+- Use ::class ([09cab17](https://github.com/FaZeRs/naurislinde.com/commit/09cab17ffd98091568d793eadddb35b661bc0907)) ([232629b](https://github.com/FaZeRs/naurislinde.com/commit/232629b6aa161925b9d3520a719fcf434a421ace))
+- Updated validation translations ([f6a7b60](https://github.com/FaZeRs/naurislinde.com/commit/f6a7b60b10358f95b8f52871ecafddbfbe837ae0))
+- Added .yml file type to .editorconfig ([a383382](https://github.com/FaZeRs/naurislinde.com/commit/a383382aeec7112f3fd86946ab1435a2f7329274))
+- Changed to dirname instead of realpath ([0390cf6](https://github.com/FaZeRs/naurislinde.com/commit/0390cf6a1e7049a63637dc83b77007a2e268fffd))
+- Set default string length if mysql charset is utf8mb4 and use https only in production ([86b799f](https://github.com/FaZeRs/naurislinde.com/commit/86b799fb8797887efd17b9b8aad55e8ddaa022ba))
+- Changed $e to $exception ([3fd1c6a](https://github.com/FaZeRs/naurislinde.com/commit/3fd1c6a709f8376019857a9f05ca660954d24480))
+
+### Fixed
+- Fixed 'composer test' & remove illuminate packages ([055f6ae](https://github.com/FaZeRs/naurislinde.com/commit/055f6ae67a11701a5320f2e9dca2fb2c7903c400))
+- Fixed for json responses ([9047b43](https://github.com/FaZeRs/naurislinde.com/commit/9047b430b285797a98848957d476ec73a705cdd0))
+- Removed laravel mix purgecss ([d07057c](https://github.com/FaZeRs/naurislinde.com/commit/d07057cbb9c003ef48d34c51b9b90fdce8cf8013))
+
 ## [1.1.0]  - 2018-04-26
 
 ### Added
@@ -24,5 +44,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## 1.0.0 - 2018-04-25
 - Initial commit.
 
-[Unreleased]: https://github.com/fazers/naurislinde.com/compare/1.1.0...HEAD
+[Unreleased]: https://github.com/fazers/naurislinde.com/compare/1.2.0...HEAD
+[1.2.0]: https://github.com/fazers/naurislinde.com/compare/1.1.0...1.2.0
 [1.1.0]: https://github.com/fazers/naurislinde.com/compare/1.0.0...1.1.0

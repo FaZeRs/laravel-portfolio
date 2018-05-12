@@ -6,10 +6,6 @@
     "type": "project",
     "require": {
         "php": "^7.1.3",
-        "illuminate/cookie": "^5.6",
-        "illuminate/mail": "^5.6",
-        "illuminate/redis": "^5.6",
-        "illuminate/session": "^5.6",
         "laravel/lumen-framework": "5.6.*",
         "predis/predis": "^1.1",
         "vlucas/phpdotenv": "~2.2"
@@ -34,8 +30,14 @@
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
-        "test" : [
-            "vendor/bin/phpunit"
+        "test": "\"vendor/bin/phpunit\"",
+        "env:copy": "cp .env.docker .env",
+        "start": [
+            "@composer run env:copy",
+            "@composer install -n --prefer-dist",
+            "@php artisan key:generate",
+            "@php artisan migrate --seed",
+            "@composer test"
         ]
     },
     "config": {

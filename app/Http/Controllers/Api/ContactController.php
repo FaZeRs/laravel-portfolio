@@ -13,13 +13,13 @@ use Illuminate\Support\Facades\Mail;
 class ContactController extends Controller
 {
     /**
-     * @param Request $request
+     * @param \Illuminate\Http\Request $request
      *
      * @throws \Illuminate\Validation\ValidationException
      *
-     * @return void
+     * @return \Illuminate\Http\JsonResponse
      */
-    public function send(Request $request)
+    public function send(Request $request): \Illuminate\Http\JsonResponse
     {
         $this->validate($request, [
             'name'    => 'required|string|max:191',
@@ -28,5 +28,7 @@ class ContactController extends Controller
         ]);
 
         Mail::send(new SendContact($request->only(['name', 'email', 'message'])));
+
+        return response()->json(true);
     }
 }

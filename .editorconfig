@@ -11,6 +11,6 @@ insert_final_newline = true
 [*.md]
 trim_trailing_whitespace = false
 
-[*.{vue,js,json,html,scss,blade.php}]
+[*.{vue,js,json,html,scss,blade.php,yml}]
 indent_style = space
 indent_size = 2

@@ -1,5 +1,8 @@
 <?php
 
+use Illuminate\Cookie\CookieServiceProvider;
+use Illuminate\Mail\MailServiceProvider;
+
 require_once __DIR__.'/../vendor/autoload.php';
 
 try {
@@ -20,7 +23,7 @@ try {
 */
 
 $app = new Laravel\Lumen\Application(
-    realpath(__DIR__.'/../')
+    dirname(__DIR__).'/'
 );
 
 require_once __DIR__.'/helpers.php';
@@ -61,7 +64,7 @@ $app->singleton(
 );
 
 $app->singleton('mailer', function ($app) {
-    return $app->loadComponent('mail', 'Illuminate\Mail\MailServiceProvider', 'mailer');
+    return $app->loadComponent('mail', MailServiceProvider::class, 'mailer');
 });
 $app->alias('mailer', Illuminate\Contracts\Mail\Mailer::class);
 
@@ -70,7 +73,7 @@ $app->bind(\Illuminate\Session\SessionManager::class, function () use ($app) {
 });
 
 $app->singleton('cookie', function () use ($app) {
-    return $app->loadComponent('session', 'Illuminate\Cookie\CookieServiceProvider', 'cookie');
+    return $app->loadComponent('session', CookieServiceProvider::class, 'cookie');
 });
 
 $app->bind(\Illuminate\Contracts\Cookie\QueueingFactory::class, 'cookie');

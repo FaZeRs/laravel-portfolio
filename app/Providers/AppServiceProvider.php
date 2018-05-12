@@ -2,6 +2,10 @@
 
 namespace App\Providers;
 
+use Illuminate\Contracts\Routing\ResponseFactory;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Routing\Redirector;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 
@@ -14,7 +18,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        URL::forceScheme('https');
+        if (config('database.connections.mysql.charset') === 'utf8mb4') {
+            Schema::defaultStringLength(191);
+        }
+
+        if (app()->environment('production')) {
+            URL::forceScheme('https');
+        }
     }
 
     /**
@@ -24,6 +34,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->singleton(ResponseFactory::class, function ($app) {
+            return new \Illuminate\Routing\ResponseFactory(
+                $app[Factory::class],
+                $app[Redirector::class]
+            );
+        });
     }
 }

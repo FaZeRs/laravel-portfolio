@@ -55,7 +55,7 @@ class KeyGenerateCommand extends Command
      *
      * @return string
      */
-    protected function generateRandomKey()
+    protected function generateRandomKey(): string
     {
         return 'base64:'.base64_encode(random_bytes(
                 $this->laravel['config']['app.cipher'] == 'AES-128-CBC' ? 16 : 32
@@ -69,7 +69,7 @@ class KeyGenerateCommand extends Command
      *
      * @return bool
      */
-    protected function setKeyInEnvironmentFile($key)
+    protected function setKeyInEnvironmentFile($key): bool
     {
         $currentKey = $this->laravel['config']['app.key'] ?: env('APP_KEY');
         if (strlen($currentKey) !== 0 && (!$this->confirmToProceed())) {
@@ -101,7 +101,7 @@ class KeyGenerateCommand extends Command
      *
      * @return string
      */
-    protected function keyReplacementPattern()
+    protected function keyReplacementPattern(): string
     {
         $currentKey = $this->laravel['config']['app.key'] ?: env('APP_KEY');
         $escaped = preg_quote('='.$currentKey, '/');
