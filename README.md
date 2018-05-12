@@ -27,7 +27,33 @@ Clone this repository
 git clone git@github.com:FaZeRs/naurislinde.com.git
 ```
 
-Lumen project dependencies are managed through the [PHP Composer tool](https://getcomposer.org/). The first step is to install the depencencies by navigating into your project in terminal and typing this command:
+#### With Docker
+
+Build containers
+```
+docker-compose up -d --build
+```
+
+Access docker environment
+```
+docker container exec -it lumen-portfolio sh
+```
+
+Run this command inside terminal to create .env file, install dependencies, generate key, run migrations and tests. 
+```
+composer start
+```
+
+To install javascript dependencies and compile assets run this command
+```
+yarn start
+```
+
+The application will be available on http://localhost:8000, the phpMyAdmin on http://localhost:8080, the mailhog on http://localhost:8025
+
+#### Common way
+
+Lumen project dependencies are managed through the [PHP Composer tool](https://getcomposer.org/). The first step is to install the dependencies by navigating into your project in terminal and typing this command:
 ```
 composer install
 ```
@@ -92,6 +118,7 @@ composer test
 * [Lumen](https://lumen.laravel.com) - The backend framework used
 * [Vue](https://vuejs.org) - The frontend framework used
 * [Vuetify](https://vuetifyjs.com) - Vue component framework used
+* [Docker](https://www.docker.com/) - PHP development environment
 
 ## Contributing
 

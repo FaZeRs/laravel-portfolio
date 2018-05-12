@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "start": "yarn && yarn prod",
+    "start": "yarn && yarn dev",
     "dev": "yarn run development",
     "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "watch": "yarn run development --watch",

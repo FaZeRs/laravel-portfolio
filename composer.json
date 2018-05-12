@@ -30,7 +30,15 @@
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
-        "test": "\"vendor/bin/phpunit\""
+        "test": "\"vendor/bin/phpunit\"",
+        "env:copy": "cp .env.docker .env",
+        "start": [
+            "@composer run env:copy",
+            "@composer install -n --prefer-dist",
+            "@php artisan key:generate",
+            "@php artisan migrate --seed",
+            "@composer test"
+        ]
     },
     "config": {
         "preferred-install": "dist",
