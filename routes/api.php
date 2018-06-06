@@ -12,3 +12,12 @@
 */
 
 $router->post('contact/send', 'ContactController@send');
+
+$router->post('login', 'LoginController@login');
+$router->post('register', 'RegisterController@register');
+$router->post('password/email', 'ForgotPasswordController@sendResetLinkEmail');
+$router->post('password/reset', 'ResetPasswordController@reset');
+$router->group(['middleware' => 'auth:api'], function () use ($router) {
+    $router->post('details', 'UserController@details');
+    $router->post('logout', 'UserController@logout');
+});

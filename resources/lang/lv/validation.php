@@ -108,6 +108,7 @@ return [
         'array'   => ' :attribute jāsatur :size vienības.',
     ],
     'string'               => ' :attribute jābūt virknē.',
+    'strong_password'      => ' :attribute jāsatur vismaz 1 lielais latīņu alfabēta burts, vismaz 1 mazais latīņu alfabēta burts, vismaz 1 cipars un vismaz 1 speciālais simbols',
     'timezone'             => ' :attribute jābūt derīgā zonā.',
     'unique'               => ' :attribute jau ir aizņemts.',
     'uploaded'             => ' :attribute netika augšuplādēts.',

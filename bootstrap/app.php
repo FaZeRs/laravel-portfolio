@@ -33,10 +33,12 @@ $app->instance('path.storage', app()->basePath().DIRECTORY_SEPARATOR.'storage');
 $app->instance('path.public', app()->basePath().DIRECTORY_SEPARATOR.'public');
 
 $app->withFacades();
+$app->withEloquent();
 
 $app->make('queue');
 
 $app->configure('app');
+$app->configure('auth');
 $app->configure('cache');
 $app->configure('database');
 $app->configure('mail');
@@ -94,7 +96,12 @@ $app->middleware([
     \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
     \Illuminate\Session\Middleware\StartSession::class,
     \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-    App\Http\Middleware\SetLocale::class,
+    \Laravel\Passport\Http\Middleware\CreateFreshApiToken::class,
+]);
+
+$app->routeMiddleware([
+    'auth'  => App\Http\Middleware\Authenticate::class,
+    'admin' => App\Http\Middleware\AdminMiddleware::class,
 ]);
 
 /*
@@ -109,10 +116,13 @@ $app->middleware([
 */
 
 $app->register(App\Providers\AppServiceProvider::class);
+$app->register(App\Providers\AuthServiceProvider::class);
 $app->register(\Illuminate\Session\SessionServiceProvider::class);
 $app->register(\Illuminate\Queue\QueueServiceProvider::class);
 $app->register(\Illuminate\Mail\MailServiceProvider::class);
 $app->register(\Illuminate\Redis\RedisServiceProvider::class);
+$app->register(Laravel\Passport\PassportServiceProvider::class);
+$app->register(Dusterio\LumenPassport\PassportServiceProvider::class);
 
 /*
 |--------------------------------------------------------------------------
