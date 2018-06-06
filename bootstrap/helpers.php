@@ -2,7 +2,7 @@
 
 use Illuminate\Support\HtmlString;
 
-if (!function_exists('mix')) {
+if (! function_exists('mix')) {
     /**
      * Get the path to a versioned Mix file.
      *
@@ -17,11 +17,11 @@ if (!function_exists('mix')) {
     {
         static $manifests = [];
 
-        if (!starts_with($path, '/')) {
+        if (! starts_with($path, '/')) {
             $path = "/{$path}";
         }
 
-        if ($manifestDirectory && !starts_with($manifestDirectory, '/')) {
+        if ($manifestDirectory && ! starts_with($manifestDirectory, '/')) {
             $manifestDirectory = "/{$manifestDirectory}";
         }
 
@@ -34,7 +34,7 @@ if (!function_exists('mix')) {
         if (in_array($manifestKey, $manifests)) {
             $manifest = $manifests[$manifestKey];
         } else {
-            if (!file_exists($manifestPath = public_path($manifestDirectory.'/mix-manifest.json'))) {
+            if (! file_exists($manifestPath = public_path($manifestDirectory.'/mix-manifest.json'))) {
                 throw new Exception('The Mix manifest does not exist.');
             }
 
@@ -43,7 +43,7 @@ if (!function_exists('mix')) {
             );
         }
 
-        if (!array_key_exists($path, $manifest)) {
+        if (! array_key_exists($path, $manifest)) {
             throw new Exception(
                 "Unable to locate Mix file: {$path}. Please check your ".
                 'webpack.mix.js output paths and try again.'
@@ -54,7 +54,7 @@ if (!function_exists('mix')) {
     }
 }
 
-if (!function_exists('public_path')) {
+if (! function_exists('public_path')) {
     /**
      * Get the path to the public folder.
      *

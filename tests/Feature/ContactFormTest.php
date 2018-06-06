@@ -2,9 +2,9 @@
 
 namespace Tests\Feature;
 
+use Tests\TestCase;
 use App\Mail\Contact\SendContact;
 use Illuminate\Support\Facades\Mail;
-use Tests\TestCase;
 
 class ContactFormTest extends TestCase
 {

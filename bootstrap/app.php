@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Cookie\CookieServiceProvider;
 use Illuminate\Mail\MailServiceProvider;
+use Illuminate\Cookie\CookieServiceProvider;
 
 require_once __DIR__.'/../vendor/autoload.php';
 
