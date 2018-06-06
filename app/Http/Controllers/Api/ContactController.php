@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Controller;
-use App\Mail\Contact\SendContact;
 use Illuminate\Http\Request;
+use App\Mail\Contact\SendContact;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
 
 /**
