@@ -2,9 +2,9 @@
 
 namespace Tests\Feature;
 
+use Tests\TestCase;
 use App\Models\User;
 use Laravel\Passport\Passport;
-use Tests\TestCase;
 use Laravel\Lumen\Testing\DatabaseMigrations;
 
 class PassportTest extends TestCase
