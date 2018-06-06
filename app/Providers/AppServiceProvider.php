@@ -2,12 +2,13 @@
 
 namespace App\Providers;
 
-use Illuminate\Contracts\Routing\ResponseFactory;
-use Illuminate\Contracts\View\Factory;
 use Illuminate\Routing\Redirector;
-use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\URL;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
+use Dusterio\LumenPassport\LumenPassport;
+use Illuminate\Contracts\Routing\ResponseFactory;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -25,6 +26,8 @@ class AppServiceProvider extends ServiceProvider
         if (app()->environment('production')) {
             URL::forceScheme('https');
         }
+
+        LumenPassport::routes($this->app);
     }
 
     /**

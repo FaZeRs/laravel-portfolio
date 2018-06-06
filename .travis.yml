@@ -17,6 +17,7 @@ before_script:
   - composer install --no-progress --no-interaction --prefer-source --no-suggest
   - php artisan key:generate
   - php artisan migrate
+  - php artisan passport:install
 
 before_install:
   - mysql -e 'CREATE DATABASE homestead;'

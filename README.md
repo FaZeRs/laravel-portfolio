@@ -106,6 +106,19 @@ yarn dev
 yarn watch
 ```
 
+## REST API
+
+We use [Laravel Passport](https://laravel.com/docs/master/passport). It is an OAuth2 server and API authentication package.
+
+#### API Links
+
+Verb | Path | NamedRoute | Controller | Action | Middleware
+--- | --- | --- | --- | --- | ---
+POST   | /api/login                             |            | \App\Http\Controllers\Api\LoginController           | login | -
+POST   | /api/register                             |            | \App\Http\Controllers\Api\RegisterController           | register | -
+POST   | /api/details                             |            | \App\Http\Controllers\Api\UserController           | details | auth
+POST   | /api/logout                             |            | \App\Http\Controllers\Api\UserController           | logout | auth
+
 ## Running the tests
 
 ```

@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.0]  - 2018-06-06
+
+### Added
+- Added API Authentication ([9d2b5d0](https://github.com/FaZeRs/naurislinde.com/commit/9d2b5d0c53b2485bafd3e2a13936da4229a2053e))
+
+### Changed
+- Removed SetLocale middleware ([8a89e5b](https://github.com/FaZeRs/naurislinde.com/commit/8a89e5b5ad6f319eabb6ad5becdc0c5cf2ef7745))
+- Updated dependencies and assets ([5740cb7](https://github.com/FaZeRs/naurislinde.com/commit/5740cb7fa22cceec86ec7f856e87f49c1529c1bc))
+
 ## [1.2.0]  - 2018-05-12
 
 ### Added
@@ -44,6 +53,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## 1.0.0 - 2018-04-25
 - Initial commit.
 
-[Unreleased]: https://github.com/fazers/naurislinde.com/compare/1.2.0...HEAD
+[Unreleased]: https://github.com/fazers/naurislinde.com/compare/1.3.0...HEAD
+[1.3.0]: https://github.com/fazers/naurislinde.com/compare/1.2.0...1.3.0
 [1.2.0]: https://github.com/fazers/naurislinde.com/compare/1.1.0...1.2.0
 [1.1.0]: https://github.com/fazers/naurislinde.com/compare/1.0.0...1.1.0

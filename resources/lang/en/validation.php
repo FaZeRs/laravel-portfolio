@@ -108,6 +108,7 @@ return [
         'array'   => 'The :attribute must contain :size items.',
     ],
     'string'               => 'The :attribute must be a string.',
+    'strong_password'      => 'Password needs to contain at least one uppercase letter, one lowercase letter, one number and one symbol',
     'timezone'             => 'The :attribute must be a valid zone.',
     'unique'               => 'The :attribute has already been taken.',
     'uploaded'             => 'The :attribute failed to upload.',
