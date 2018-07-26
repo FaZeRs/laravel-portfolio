@@ -24,16 +24,14 @@ services:
       - php
   mariadb:
     image: mariadb:10.3
-    container_name: ${DB_CONNECTION}
+    container_name: mysql
     working_dir: /var/www
     restart: always
-    env_file:
-      - .env
     environment:
-      - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
-      - MYSQL_DATABASE=${DB_DATABASE}
-      - MYSQL_USER=${DB_USERNAME}
-      - MYSQL_PASSWORD=${DB_PASSWORD}
+      - MYSQL_ROOT_PASSWORD=secret
+      - MYSQL_DATABASE=homestead
+      - MYSQL_USER=homestead
+      - MYSQL_PASSWORD=secret
     ports:
       - 3306:3306
     volumes:
@@ -60,7 +58,7 @@ services:
       - 8080:80
     environment:
       - PMA_ARBITRARY=1
-      - PMA_HOST=${DB_CONNECTION}
+      - PMA_HOST=mysql
     restart: always
     depends_on:
       - mariadb
