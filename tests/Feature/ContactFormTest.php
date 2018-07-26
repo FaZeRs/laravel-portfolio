@@ -13,13 +13,13 @@ class ContactFormTest extends TestCase
     {
         Mail::fake();
 
-        $this->call('POST', '/api/contact/send', [
+        $response = $this->json('POST', '/api/contact/send', [
             'name'    => 'John Doe',
             'email'   => 'john@example.com',
             'message' => 'This is a test message',
         ]);
 
-        $this->assertResponseOk();
+        $response->assertSuccessful();
 
         Mail::assertQueued(SendContact::class);
     }
@@ -27,33 +27,36 @@ class ContactFormTest extends TestCase
     /** @test */
     public function name_is_required()
     {
-        $this->call('POST', '/api/contact/send', [
+        $response = $this->json('POST', '/api/contact/send', [
             'email'   => 'john@example.com',
             'message' => 'This is a test message',
         ]);
 
-        $this->assertResponseStatus(422);
+        $response->assertStatus(422);
+        $response->assertJsonValidationErrors('name');
     }
 
     /** @test */
     public function email_is_required()
     {
-        $this->call('POST', '/api/contact/send', [
+        $response = $this->json('POST', '/api/contact/send', [
             'name'    => 'John Doe',
             'message' => 'This is a test message',
         ]);
 
-        $this->assertResponseStatus(422);
+        $response->assertStatus(422);
+        $response->assertJsonValidationErrors('email');
     }
 
     /** @test */
     public function message_is_required()
     {
-        $this->call('POST', '/api/contact/send', [
+        $response = $this->json('POST', '/api/contact/send', [
             'name'  => 'John Doe',
             'email' => 'john@example.com',
         ]);
 
-        $this->assertResponseStatus(422);
+        $response->assertStatus(422);
+        $response->assertJsonValidationErrors('message');
     }
 }

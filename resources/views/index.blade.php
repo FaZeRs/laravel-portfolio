@@ -1,14 +1,14 @@
 @php
     $config = [
         'appName' => config('app.name'),
-        'locale' => $locale = app('translator')->getLocale(),
+        'locale' => app()->getLocale(),
         'locales' => config('app.locales'),
         'year' => date('Y'),
         'googleReCaptcha' => config('app.google_recaptcha'),
     ];
 @endphp
 <!DOCTYPE html>
-<html lang="{{ app('translator')->getLocale() }}">
+<html lang="{{ app()->getLocale() }}">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

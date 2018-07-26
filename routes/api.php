@@ -11,13 +11,13 @@
 |
 */
 
-$router->post('contact/send', 'ContactController@send');
+Route::post('contact/send', 'ContactController@send');
 
-$router->post('login', 'LoginController@login');
-$router->post('register', 'RegisterController@register');
-$router->post('password/email', 'ForgotPasswordController@sendResetLinkEmail');
-$router->post('password/reset', 'ResetPasswordController@reset');
-$router->group(['middleware' => 'auth:api'], function () use ($router) {
-    $router->post('details', 'UserController@details');
-    $router->post('logout', 'UserController@logout');
+Route::post('login', 'LoginController@login');
+Route::post('register', 'RegisterController@register');
+Route::post('password/email', 'ForgotPasswordController@sendResetLinkEmail');
+Route::post('password/reset', 'ResetPasswordController@reset');
+Route::middleware('auth:api')->group(function () {
+    Route::post('details', 'UserController@details');
+    Route::post('logout', 'UserController@logout');
 });
