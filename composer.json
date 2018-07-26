@@ -38,6 +38,7 @@
             "@composer install -n --prefer-dist",
             "@php artisan key:generate",
             "@php artisan migrate --seed",
+            "@php artisan passport:install",
             "@composer test"
         ]
     },
