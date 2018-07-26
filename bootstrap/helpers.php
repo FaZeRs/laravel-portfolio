@@ -39,7 +39,8 @@ if (! function_exists('mix')) {
             }
 
             $manifests[$manifestKey] = $manifest = json_decode(
-                file_get_contents($manifestPath), true
+                file_get_contents($manifestPath),
+                true
             );
         }
 
