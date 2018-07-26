@@ -7,3 +7,6 @@ RUN apk add --no-cache g++ git wget gnupg openssh-client supervisor jpegoptim op
 RUN apk add --no-cache nodejs yarn
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+RUN adduser -D portfolio
+USER portfolio
