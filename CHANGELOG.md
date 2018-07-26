@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.1]  - 2018-07-27
+
+### Added
+- Added passport:install to composer install ([b7e53ad](https://github.com/FaZeRs/naurislinde.com/commit/b7e53ad3152efa1307f3d00c12054e55543c75f0))
+
+### Changed
+- Use non-root user to avoid permission issues with Linux OS ([dbf39c1](https://github.com/FaZeRs/naurislinde.com/commit/dbf39c1b75d6340db1474419abb9ac83c6311c2a))
+- Use static values to create database before .env file is created  ([b984e32](https://github.com/FaZeRs/naurislinde.com/commit/b984e3276ec2e82ca1d17383ffbc3a9c7cb06556))
+
 ## [1.3.0]  - 2018-06-06
 
 ### Added
@@ -53,7 +62,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## 1.0.0 - 2018-04-25
 - Initial commit.
 
-[Unreleased]: https://github.com/fazers/naurislinde.com/compare/1.3.0...HEAD
+[Unreleased]: https://github.com/fazers/naurislinde.com/compare/1.3.1...HEAD
+[1.3.1]: https://github.com/fazers/naurislinde.com/compare/1.3.0...1.3.1
 [1.3.0]: https://github.com/fazers/naurislinde.com/compare/1.2.0...1.3.0
 [1.2.0]: https://github.com/fazers/naurislinde.com/compare/1.1.0...1.2.0
 [1.1.0]: https://github.com/fazers/naurislinde.com/compare/1.0.0...1.1.0
