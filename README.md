@@ -77,7 +77,12 @@ DB_PASSWORD=secret
 
 We are going to run the built in migrations to create the database tables
 ```
-php artisan migrate
+php artisan migrate --seed
+```
+
+Now we need to create the encryption keys needed to generate secure access tokens.
+```
+php artisan passport:install
 ```
 
 In order to install the Javascript packages for frontend development, you will need the [Node Package Manager](https://www.npmjs.com/), and optionally the [Yarn Package Manager](https://yarnpkg.com/lang/en/) by Facebook (Recommended)
