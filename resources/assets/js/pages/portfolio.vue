@@ -68,7 +68,7 @@ export default {
         id: 2,
         name: 'Nauris Linde',
         categories: ['all', 'laravel', 'open-source'],
-        tech: ['Vue.js', 'Vuetify', 'Lumen'],
+        tech: ['Vue.js', 'Vuetify', 'Laravel'],
         image: {
           thumb: require('../../img/naurislinde_thumb.png'),
           src: require('../../img/naurislinde.png')

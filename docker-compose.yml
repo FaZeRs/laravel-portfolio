@@ -3,7 +3,7 @@ version: '3'
 services:
   php:
     build: .
-    container_name: lumen-portfolio
+    container_name: laravel-portfolio
     working_dir: /var/www
     volumes:
       - ./:/var/www
