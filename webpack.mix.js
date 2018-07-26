@@ -49,9 +49,9 @@ mix.sass('resources/assets/sass/app.scss', 'public/css/app.css')
 
 if (mix.inProduction()) {
   mix.extract([
-    '@fortawesome/fontawesome',
-    '@fortawesome/fontawesome-free-brands',
-    '@fortawesome/fontawesome-free-solid',
+    '@fortawesome/fontawesome-svg-core',
+    '@fortawesome/free-brands-svg-icons',
+    '@fortawesome/free-solid-svg-icons',
     '@fortawesome/vue-fontawesome',
     'axios',
     'babel-polyfill',
