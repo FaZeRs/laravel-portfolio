@@ -45,7 +45,7 @@ export default {
   }),
   methods: {
     onScroll (e) {
-      if (window.pageYOffset > 300) {
+      if (window.pageYOffset > 310) {
         this.color = 'blue darken-3'
       } else {
         this.color = 'transparent'

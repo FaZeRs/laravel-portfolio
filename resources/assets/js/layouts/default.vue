@@ -1,5 +1,8 @@
 <template>
   <v-app id="inspire" light>
+    <a href="https://github.com/FaZeRs/naurislinde.com" target="_blank">
+      <img style="position: fixed; top: 0; left: 0; border: 0; z-index: 100" src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub">
+    </a>
     <nav-bar/>
     <v-jumbotron :src="jumbotronBg" gradient="to top right, rgba(63,81,181, .7), rgba(25,32,72, .7)" dark>
       <v-container fill-height text-xs-center>

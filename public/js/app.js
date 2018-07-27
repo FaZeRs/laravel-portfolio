@@ -20004,6 +20004,9 @@ if(false) {
 //
 //
 //
+//
+//
+//
 
 
 
@@ -20083,7 +20086,7 @@ if(false) {
   },
   methods: {
     onScroll: function onScroll(e) {
-      if (window.pageYOffset > 300) {
+      if (window.pageYOffset > 310) {
         this.color = 'blue darken-3';
       } else {
         this.color = 'transparent';
@@ -44008,6 +44011,32 @@ var render = function() {
     "v-app",
     { attrs: { id: "inspire", light: "" } },
     [
+      _c(
+        "a",
+        {
+          attrs: {
+            href: "https://github.com/FaZeRs/naurislinde.com",
+            target: "_blank"
+          }
+        },
+        [
+          _c("img", {
+            staticStyle: {
+              position: "fixed",
+              top: "0",
+              left: "0",
+              border: "0",
+              "z-index": "100"
+            },
+            attrs: {
+              src:
+                "https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png",
+              alt: "Fork me on GitHub"
+            }
+          })
+        ]
+      ),
+      _vm._v(" "),
       _c("nav-bar"),
       _vm._v(" "),
       _c(
