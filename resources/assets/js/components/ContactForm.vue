@@ -13,7 +13,7 @@
       <v-flex xs12>
         <v-textarea v-validate="'required'" :label="$t('message')" v-model="message" :error-messages="errors.collect('message')" data-vv-name="message"/>
       </v-flex>
-      <vue-recaptcha ref="recaptcha" :sitekey="sitekey" size="invisible" @verify="onCaptchaVerified" @expired="onCaptchaExpired"/>
+      <vue-recaptcha v-if="sitekey" ref="recaptcha" :sitekey="sitekey" size="invisible" @verify="onCaptchaVerified" @expired="onCaptchaExpired"/>
       <v-btn @click="submit">{{ $t('send_message') }}</v-btn>
       <v-btn @click="clear">{{ $t('clear') }}</v-btn>
     </v-layout>
@@ -60,12 +60,19 @@ export default {
     submit () {
       this.$validator.validateAll().then((result) => {
         if (result) {
-          this.$refs.recaptcha.execute()
+            if(this.$refs.recaptcha) {
+              this.$refs.recaptcha.execute()
+            } else {
+              this.send()
+            }
         }
       })
     },
     onCaptchaVerified: function (recaptchaToken) {
       this.$refs.recaptcha.reset()
+      this.send()
+    },
+    send () {
       axios.post('/api/contact/send', {
         name: this.name,
         email: this.email,
@@ -85,7 +92,9 @@ export default {
       this.email = ''
       this.message = ''
       this.$validator.reset()
-      this.$refs.recaptcha.reset()
+      if(this.$refs.recaptcha) {
+        this.$refs.recaptcha.reset()
+      }
     },
     onCaptchaExpired: function () {
       this.$refs.recaptcha.reset()

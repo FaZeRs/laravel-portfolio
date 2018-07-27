@@ -233,15 +233,22 @@ component.options.__file = "resources/assets/js/pages/contact.vue"
 
       this.$validator.validateAll().then(function (result) {
         if (result) {
-          _this.$refs.recaptcha.execute();
+          if (_this.$refs.recaptcha) {
+            _this.$refs.recaptcha.execute();
+          } else {
+            _this.send();
+          }
         }
       });
     },
 
     onCaptchaVerified: function onCaptchaVerified(recaptchaToken) {
+      this.$refs.recaptcha.reset();
+      this.send();
+    },
+    send: function send() {
       var _this2 = this;
 
-      this.$refs.recaptcha.reset();
       __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post('/api/contact/send', {
         name: this.name,
         email: this.email,
@@ -261,7 +268,9 @@ component.options.__file = "resources/assets/js/pages/contact.vue"
       this.email = '';
       this.message = '';
       this.$validator.reset();
-      this.$refs.recaptcha.reset();
+      if (this.$refs.recaptcha) {
+        this.$refs.recaptcha.reset();
+      }
     },
 
     onCaptchaExpired: function onCaptchaExpired() {
@@ -698,11 +707,16 @@ var render = function() {
             1
           ),
           _vm._v(" "),
-          _c("vue-recaptcha", {
-            ref: "recaptcha",
-            attrs: { sitekey: _vm.sitekey, size: "invisible" },
-            on: { verify: _vm.onCaptchaVerified, expired: _vm.onCaptchaExpired }
-          }),
+          _vm.sitekey
+            ? _c("vue-recaptcha", {
+                ref: "recaptcha",
+                attrs: { sitekey: _vm.sitekey, size: "invisible" },
+                on: {
+                  verify: _vm.onCaptchaVerified,
+                  expired: _vm.onCaptchaExpired
+                }
+              })
+            : _vm._e(),
           _vm._v(" "),
           _c("v-btn", { on: { click: _vm.submit } }, [
             _vm._v(_vm._s(_vm.$t("send_message")))
