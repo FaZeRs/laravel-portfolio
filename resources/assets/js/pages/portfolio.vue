@@ -13,7 +13,7 @@
             </v-flex>
           </v-layout>
           <v-layout row wrap>
-            <v-flex v-for="(project, index) in filteredProjects" :key="index" :class="[project.category]" xs4>
+            <v-flex v-for="(project, index) in filteredProjects" :key="index" :class="[project.category]" xs12 sm6 md4>
               <v-card>
                 <v-card-media v-img="{src: project.image.src}" :src="project.image.thumb" height="200px" contain/>
                 <v-card-title primary-title class="justify-center">

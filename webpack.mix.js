@@ -35,7 +35,7 @@ mix.webpackConfig({
   ],
   output: {
     chunkFilename: mix.inProduction() ? 'js/[name].[chunkhash].js' : 'js/[name].js',
-    publicPath: mix.config.hmr ? '//localhost:8080' : '/'
+    publicPath: mix.config.hmr ? '//localhost:8000' : '/'
   },
   node: {
     fs: 'empty'
@@ -43,7 +43,8 @@ mix.webpackConfig({
 })
 
 mix.browserSync({
-  proxy: 'dev.naurislinde.com'
+  proxy: 'localhost:8000',
+  open: false
 })
 
 mix.js('resources/assets/js/app.js', 'public/js/app.js')

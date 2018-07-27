@@ -287,7 +287,7 @@ var render = function() {
                         {
                           key: index,
                           class: [project.category],
-                          attrs: { xs4: "" }
+                          attrs: { xs12: "", sm6: "", md4: "" }
                         },
                         [
                           _c(

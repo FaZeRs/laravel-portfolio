@@ -44,7 +44,7 @@
           <v-layout row wrap class="text-xs-left">
             <v-flex xs12 sm6>
               <div class="work-exp-block">
-                <div class="working-duration title">
+                <div class="working-duration title d-block">
                   2016-{{ $t('present') }}
                 </div>
                 <div class="work-exp-logo">

@@ -156,6 +156,10 @@ component.options.__file = "resources/assets/js/pages/services.vue"
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   layout: 'default',
@@ -357,26 +361,45 @@ var render = function() {
                       }
                     },
                     [
-                      _c("v-flex", { attrs: { xs12: "", sm5: "" } }, [
-                        _c("div", { staticClass: "work-process-icon mb-4" }, [
-                          _c("img", {
-                            attrs: {
-                              src: _vm.workProcess1,
-                              alt: _vm.$t("planing_and_research")
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "work-process-text" }, [
-                          _c("h4", { staticClass: "block-title" }, [
-                            _vm._v(
-                              "\n                " +
-                                _vm._s(_vm.$t("planing_and_research")) +
-                                "\n              "
-                            )
-                          ])
-                        ])
-                      ]),
+                      _c(
+                        "v-flex",
+                        { attrs: { xs12: "", sm5: "" } },
+                        [
+                          _c(
+                            "v-card",
+                            {
+                              staticClass: "elevation-0",
+                              attrs: { color: "transparent" }
+                            },
+                            [
+                              _c("v-card-media", {
+                                attrs: {
+                                  src: _vm.workProcess1,
+                                  alt: _vm.$t("planing_and_research"),
+                                  height: "200px",
+                                  contain: ""
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                { staticClass: "work-process-text mt-5" },
+                                [
+                                  _c("h4", { staticClass: "block-title" }, [
+                                    _vm._v(
+                                      "\n                  " +
+                                        _vm._s(_vm.$t("planing_and_research")) +
+                                        "\n                "
+                                    )
+                                  ])
+                                ]
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      ),
                       _vm._v(" "),
                       _c(
                         "v-flex",
@@ -387,47 +410,89 @@ var render = function() {
                         [_c("img", { attrs: { src: _vm.arrowLeft, alt: "" } })]
                       ),
                       _vm._v(" "),
-                      _c("v-flex", { attrs: { xs12: "", sm5: "" } }, [
-                        _c("div", { staticClass: "work-process-icon mb-4" }, [
-                          _c("img", {
-                            attrs: {
-                              src: _vm.workProcess2,
-                              alt: _vm.$t("design_and_development")
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "work-process-text" }, [
-                          _c("h4", { staticClass: "block-title" }, [
-                            _vm._v(
-                              "\n                " +
-                                _vm._s(_vm.$t("design_and_development")) +
-                                "\n              "
-                            )
-                          ])
-                        ])
-                      ]),
+                      _c(
+                        "v-flex",
+                        { attrs: { xs12: "", sm5: "" } },
+                        [
+                          _c(
+                            "v-card",
+                            {
+                              staticClass: "elevation-0",
+                              attrs: { color: "transparent" }
+                            },
+                            [
+                              _c("v-card-media", {
+                                attrs: {
+                                  src: _vm.workProcess2,
+                                  alt: _vm.$t("design_and_development"),
+                                  height: "200px",
+                                  contain: ""
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                { staticClass: "work-process-text mt-5" },
+                                [
+                                  _c("h4", { staticClass: "block-title" }, [
+                                    _vm._v(
+                                      "\n                  " +
+                                        _vm._s(
+                                          _vm.$t("design_and_development")
+                                        ) +
+                                        "\n                "
+                                    )
+                                  ])
+                                ]
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      ),
                       _vm._v(" "),
-                      _c("v-flex", { attrs: { xs12: "", sm5: "" } }, [
-                        _c("div", { staticClass: "work-process-icon mb-4" }, [
-                          _c("img", {
-                            attrs: {
-                              src: _vm.workProcess3,
-                              alt: _vm.$t("testing_and_bug_fixing")
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "work-process-text" }, [
-                          _c("h4", { staticClass: "block-title" }, [
-                            _vm._v(
-                              "\n                " +
-                                _vm._s(_vm.$t("testing_and_bug_fixing")) +
-                                "\n              "
-                            )
-                          ])
-                        ])
-                      ]),
+                      _c(
+                        "v-flex",
+                        { attrs: { xs12: "", sm5: "" } },
+                        [
+                          _c(
+                            "v-card",
+                            {
+                              staticClass: "elevation-0",
+                              attrs: { color: "transparent" }
+                            },
+                            [
+                              _c("v-card-media", {
+                                attrs: {
+                                  src: _vm.workProcess3,
+                                  alt: _vm.$t("testing_and_bug_fixing"),
+                                  height: "200px",
+                                  contain: ""
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                { staticClass: "work-process-text mt-5" },
+                                [
+                                  _c("h4", { staticClass: "block-title" }, [
+                                    _vm._v(
+                                      "\n                  " +
+                                        _vm._s(
+                                          _vm.$t("testing_and_bug_fixing")
+                                        ) +
+                                        "\n                "
+                                    )
+                                  ])
+                                ]
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      ),
                       _vm._v(" "),
                       _c(
                         "v-flex",
@@ -438,26 +503,47 @@ var render = function() {
                         [_c("img", { attrs: { src: _vm.arrowLeft, alt: "" } })]
                       ),
                       _vm._v(" "),
-                      _c("v-flex", { attrs: { xs12: "", sm5: "" } }, [
-                        _c("div", { staticClass: "work-process-icon mb-4" }, [
-                          _c("img", {
-                            attrs: {
-                              src: _vm.workProcess4,
-                              alt: _vm.$t("project_launch_and_support")
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "work-process-text" }, [
-                          _c("h4", { staticClass: "block-title" }, [
-                            _vm._v(
-                              "\n                " +
-                                _vm._s(_vm.$t("project_launch_and_support")) +
-                                "\n              "
-                            )
-                          ])
-                        ])
-                      ])
+                      _c(
+                        "v-flex",
+                        { attrs: { xs12: "", sm5: "" } },
+                        [
+                          _c(
+                            "v-card",
+                            {
+                              staticClass: "elevation-0",
+                              attrs: { color: "transparent" }
+                            },
+                            [
+                              _c("v-card-media", {
+                                attrs: {
+                                  src: _vm.workProcess4,
+                                  alt: _vm.$t("project_launch_and_support"),
+                                  height: "200px",
+                                  contain: ""
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                { staticClass: "work-process-text mt-5" },
+                                [
+                                  _c("h4", { staticClass: "block-title" }, [
+                                    _vm._v(
+                                      "\n                  " +
+                                        _vm._s(
+                                          _vm.$t("project_launch_and_support")
+                                        ) +
+                                        "\n                "
+                                    )
+                                  ])
+                                ]
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
                     ],
                     1
                   )

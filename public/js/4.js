@@ -275,13 +275,17 @@ var render = function() {
                     [
                       _c("v-flex", { attrs: { xs12: "", sm6: "" } }, [
                         _c("div", { staticClass: "work-exp-block" }, [
-                          _c("div", { staticClass: "working-duration title" }, [
-                            _vm._v(
-                              "\n                2016-" +
-                                _vm._s(_vm.$t("present")) +
-                                "\n              "
-                            )
-                          ]),
+                          _c(
+                            "div",
+                            { staticClass: "working-duration title d-block" },
+                            [
+                              _vm._v(
+                                "\n                2016-" +
+                                  _vm._s(_vm.$t("present")) +
+                                  "\n              "
+                              )
+                            ]
+                          ),
                           _vm._v(" "),
                           _c("div", { staticClass: "work-exp-logo" }, [
                             _c("img", {
