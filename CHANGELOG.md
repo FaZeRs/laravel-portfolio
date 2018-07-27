@@ -6,6 +6,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.0]  - 2018-07-27
+
+### Changed
+- Migrate to Laravel 5.6 ([e015cae](https://github.com/FaZeRs/naurislinde.com/commit/e015caef3e0660cc9cb5866963fdaa6d8bc14dfb))
+- Updated packages ([ac14174](https://github.com/FaZeRs/naurislinde.com/commit/ac1417410baf56845cfac80cd3d3c2a82df64cd0)) ([9b2289e](https://github.com/FaZeRs/naurislinde.com/commit/9b2289ec48ca17183cb3c6ff74ea2392f524296f))
+- Removed helpers file ([99997fb](https://github.com/FaZeRs/naurislinde.com/commit/99997fb959efaee1a71f2a67af14a81b34901aac))
+- Use Alpine 3.8 repositories ([6e9e24d](https://github.com/FaZeRs/naurislinde.com/commit/6e9e24df9b915a2b75f7e6cbc12a841caa57a85c))
+- Changed <v-text-field multi-line> to <v-textarea> ([f1b5205](https://github.com/FaZeRs/naurislinde.com/commit/f1b52053d272f85205f457646c2588bb238f35e7))
+
+### Fixed
+- Fixed issue when could not yarn in docker container ([10031d5](https://github.com/FaZeRs/naurislinde.com/commit/10031d511e651a79a981ac192f23b6b2a92700e1))
+- Typo fixes ([ae1cf84](https://github.com/FaZeRs/naurislinde.com/commit/ae1cf846c38e9ee0962ec2d694004733db6c1c7f)) ([361ce47](https://github.com/FaZeRs/naurislinde.com/commit/361ce474d3823b79bc7ce7cbf1f2428d8d7ef65d)) ([2b507f2](https://github.com/FaZeRs/naurislinde.com/commit/2b507f256da6ed8d026cc0b877a140ca386152e1))
+- Fixed issues for small device ([f5824b3](https://github.com/FaZeRs/naurislinde.com/commit/f5824b3f293274d149139a52bb3e3ba19876a8fc))
+
 ## [1.3.1]  - 2018-07-27
 
 ### Added
@@ -62,7 +76,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## 1.0.0 - 2018-04-25
 - Initial commit.
 
-[Unreleased]: https://github.com/fazers/naurislinde.com/compare/1.3.1...HEAD
+[Unreleased]: https://github.com/fazers/naurislinde.com/compare/1.4.0...HEAD
+[1.4.0]: https://github.com/fazers/naurislinde.com/compare/1.3.1...1.4.0
 [1.3.1]: https://github.com/fazers/naurislinde.com/compare/1.3.0...1.3.1
 [1.3.0]: https://github.com/fazers/naurislinde.com/compare/1.2.0...1.3.0
 [1.2.0]: https://github.com/fazers/naurislinde.com/compare/1.1.0...1.2.0

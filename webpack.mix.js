@@ -1,6 +1,7 @@
 const path = require('path')
 const mix = require('laravel-mix')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 mix.config.vue.esModule = true
 
@@ -30,10 +31,11 @@ mix.webpackConfig({
   },
   plugins: [
     // new BundleAnalyzerPlugin()
+    new VueLoaderPlugin()
   ],
   output: {
     chunkFilename: mix.inProduction() ? 'js/[name].[chunkhash].js' : 'js/[name].js',
-    publicPath: mix.config.hmr ? '//localhost:8080' : '/'
+    publicPath: mix.config.hmr ? '//localhost:8000' : '/'
   },
   node: {
     fs: 'empty'
@@ -41,7 +43,8 @@ mix.webpackConfig({
 })
 
 mix.browserSync({
-  proxy: 'dev.naurislinde.com'
+  proxy: 'localhost:8000',
+  open: false
 })
 
 mix.js('resources/assets/js/app.js', 'public/js/app.js')
@@ -49,9 +52,9 @@ mix.sass('resources/assets/sass/app.scss', 'public/css/app.css')
 
 if (mix.inProduction()) {
   mix.extract([
-    '@fortawesome/fontawesome',
-    '@fortawesome/fontawesome-free-brands',
-    '@fortawesome/fontawesome-free-solid',
+    '@fortawesome/fontawesome-svg-core',
+    '@fortawesome/free-brands-svg-icons',
+    '@fortawesome/free-solid-svg-icons',
     '@fortawesome/vue-fontawesome',
     'axios',
     'babel-polyfill',

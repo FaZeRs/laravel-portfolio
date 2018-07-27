@@ -50,6 +50,6 @@ export const lv = {
 
   'page_not_found': 'Page not found',
   'clear': 'Notīrīt',
-  'cookies_message': 'Lai nodrošinātu vislabāko If interneta lapas darbību, mēs izmantojam sīkdatnes.',
+  'cookies_message': 'Lai nodrošinātu vislabāko interneta lapas darbību, mēs izmantojam sīkdatnes.',
   'cookies_button_text': 'Sapratu!'
 }

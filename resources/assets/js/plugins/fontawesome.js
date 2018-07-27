@@ -1,14 +1,14 @@
 import Vue from 'vue'
-import fontawesome from '@fortawesome/fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon, FontAwesomeLayers } from '@fortawesome/vue-fontawesome'
 
 import {
   faFacebookF, faTwitter, faLinkedinIn, faGithub, faGitlab
-} from '@fortawesome/fontawesome-free-brands'
+} from '@fortawesome/free-brands-svg-icons'
 
-import { faCircle } from '@fortawesome/fontawesome-free-solid'
+import { faCircle } from '@fortawesome/free-solid-svg-icons'
 
-fontawesome.library.add(
+library.add(
   faFacebookF, faTwitter, faLinkedinIn, faGithub, faGitlab, faCircle
 )
 

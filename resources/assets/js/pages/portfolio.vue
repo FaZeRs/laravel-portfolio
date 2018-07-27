@@ -13,7 +13,7 @@
             </v-flex>
           </v-layout>
           <v-layout row wrap>
-            <v-flex v-for="(project, index) in filteredProjects" :key="index" :class="[project.category]" xs4>
+            <v-flex v-for="(project, index) in filteredProjects" :key="index" :class="[project.category]" xs12 sm6 md4>
               <v-card>
                 <v-card-media v-img="{src: project.image.src}" :src="project.image.thumb" height="200px" contain/>
                 <v-card-title primary-title class="justify-center">
@@ -68,7 +68,7 @@ export default {
         id: 2,
         name: 'Nauris Linde',
         categories: ['all', 'laravel', 'open-source'],
-        tech: ['Vue.js', 'Vuetify', 'Lumen'],
+        tech: ['Vue.js', 'Vuetify', 'Laravel'],
         image: {
           thumb: require('../../img/naurislinde_thumb.png'),
           src: require('../../img/naurislinde.png')

@@ -11,7 +11,7 @@
         <v-text-field v-validate="'required|email'" :label="$t('email')" v-model="email" :error-messages="errors.collect('email')" data-vv-name="email" required/>
       </v-flex>
       <v-flex xs12>
-        <v-text-field v-validate="'required'" :label="$t('message')" v-model="message" :error-messages="errors.collect('message')" data-vv-name="message" multi-line/>
+        <v-textarea v-validate="'required'" :label="$t('message')" v-model="message" :error-messages="errors.collect('message')" data-vv-name="message"/>
       </v-flex>
       <vue-recaptcha ref="recaptcha" :sitekey="sitekey" size="invisible" @verify="onCaptchaVerified" @expired="onCaptchaExpired"/>
       <v-btn @click="submit">{{ $t('send_message') }}</v-btn>

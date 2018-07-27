@@ -37,50 +37,54 @@
           <h2 class="section-title mb-5">{{ $t('how_i_work') }}</h2>
           <v-layout row fill-height align-center wrap>
             <v-flex xs12 sm5>
-              <div class="work-process-icon mb-4">
-                <img :src="workProcess1" :alt="$t('planing_and_research')">
-              </div>
-              <div class="work-process-text">
-                <h4 class="block-title">
-                  {{ $t('planing_and_research') }}
-                </h4>
-              </div>
+              <v-card class="elevation-0" color="transparent">
+                <v-card-media :src="workProcess1" :alt="$t('planing_and_research')" height="200px" contain>
+                </v-card-media>
+                <div class="work-process-text mt-5">
+                  <h4 class="block-title">
+                    {{ $t('planing_and_research') }}
+                  </h4>
+                </div>
+              </v-card>
             </v-flex>
             <v-flex xs12 sm2 class="hidden-xs-only">
               <img :src="arrowLeft" alt="">
             </v-flex>
             <v-flex xs12 sm5>
-              <div class="work-process-icon mb-4">
-                <img :src="workProcess2" :alt="$t('design_and_development')">
-              </div>
-              <div class="work-process-text">
-                <h4 class="block-title">
-                  {{ $t('design_and_development') }}
-                </h4>
-              </div>
+              <v-card class="elevation-0" color="transparent">
+                <v-card-media :src="workProcess2" :alt="$t('design_and_development')" height="200px" contain>
+                </v-card-media>
+                <div class="work-process-text mt-5">
+                  <h4 class="block-title">
+                    {{ $t('design_and_development') }}
+                  </h4>
+                </div>
+              </v-card>
             </v-flex>
             <v-flex xs12 sm5>
-              <div class="work-process-icon mb-4">
-                <img :src="workProcess3" :alt="$t('testing_and_bug_fixing')">
-              </div>
-              <div class="work-process-text">
-                <h4 class="block-title">
-                  {{ $t('testing_and_bug_fixing') }}
-                </h4>
-              </div>
+              <v-card class="elevation-0" color="transparent">
+                <v-card-media :src="workProcess3" :alt="$t('testing_and_bug_fixing')" height="200px" contain>
+                </v-card-media>
+                <div class="work-process-text mt-5">
+                  <h4 class="block-title">
+                    {{ $t('testing_and_bug_fixing') }}
+                  </h4>
+                </div>
+              </v-card>
             </v-flex>
             <v-flex xs12 sm2 class="hidden-xs-only">
               <img :src="arrowLeft" alt="">
             </v-flex>
             <v-flex xs12 sm5>
-              <div class="work-process-icon mb-4">
-                <img :src="workProcess4" :alt="$t('project_launch_and_support')">
-              </div>
-              <div class="work-process-text">
-                <h4 class="block-title">
-                  {{ $t('project_launch_and_support') }}
-                </h4>
-              </div>
+              <v-card class="elevation-0" color="transparent">
+                <v-card-media :src="workProcess4" :alt="$t('project_launch_and_support')" height="200px" contain>
+                </v-card-media>
+                <div class="work-process-text mt-5">
+                  <h4 class="block-title">
+                    {{ $t('project_launch_and_support') }}
+                  </h4>
+                </div>
+              </v-card>
             </v-flex>
           </v-layout>
         </v-flex>

@@ -36,7 +36,7 @@ docker-compose up -d --build
 
 Access docker environment
 ```
-docker container exec -it lumen-portfolio sh
+docker container exec -it laravel-portfolio sh
 ```
 
 Run this command inside terminal to create .env file, install dependencies, generate key, run migrations and tests. 
@@ -53,14 +53,14 @@ The application will be available on http://localhost:8000, the phpMyAdmin on ht
 
 #### Common way
 
-Lumen project dependencies are managed through the [PHP Composer tool](https://getcomposer.org/). The first step is to install the dependencies by navigating into your project in terminal and typing this command:
+Laravel project dependencies are managed through the [PHP Composer tool](https://getcomposer.org/). The first step is to install the dependencies by navigating into your project in terminal and typing this command:
 ```
 composer install
 ```
 
 This repository ships with a .env.example file in the root of the project. You must rename this file to just .env
 
-The first thing we are going to so is set the key that Lumen will use when doing encryption.
+The first thing we are going to so is set the key that Laravel will use when doing encryption.
 ```
 php artisan key:generate
 ```
@@ -133,7 +133,7 @@ composer test
 
 ## Built With
 
-* [Lumen](https://lumen.laravel.com) - The backend framework used
+* [Laravel](https://laravel.com/) - The backend framework used
 * [Vue](https://vuejs.org) - The frontend framework used
 * [Vuetify](https://vuetifyjs.com) - Vue component framework used
 * [Docker](https://www.docker.com/) - PHP development environment

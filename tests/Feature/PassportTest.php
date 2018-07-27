@@ -5,21 +5,21 @@ namespace Tests\Feature;
 use Tests\TestCase;
 use App\Models\User;
 use Laravel\Passport\Passport;
-use Laravel\Lumen\Testing\DatabaseMigrations;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class PassportTest extends TestCase
 {
-    use DatabaseMigrations;
+    use RefreshDatabase;
 
     public function testUserGetDetails()
     {
         $user = factory(User::class)->create();
         Passport::actingAs($user);
 
-        $this->json('POST', '/api/details');
+        $response = $this->json('POST', '/api/details');
 
-        $this->assertResponseStatus(200);
-        $this->seeJsonContains([
+        $response->assertStatus(200);
+        $response->assertJson([
             'details' => [
                 'id' => $user->id,
                 'name' => $user->name,
@@ -35,17 +35,17 @@ class PassportTest extends TestCase
         $user = factory(User::class)->create();
         Passport::actingAs($user);
 
-        $this->json('POST', '/api/logout');
+        $response = $this->json('POST', '/api/logout');
 
-        $this->assertResponseStatus(200);
-        $this->seeJsonContains([
+        $response->assertStatus(200);
+        $response->assertJson([
             'success' => 'You have successfully logged out',
         ]);
     }
 
     public function testGuest()
     {
-        $this->json('POST', '/api/details');
-        $this->assertResponseStatus(401);
+        $response = $this->json('POST', '/api/details');
+        $response->assertStatus(401);
     }
 }
