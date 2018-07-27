@@ -1,12 +1,12 @@
 webpackJsonp([2],{
 
-/***/ 600:
+/***/ 601:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__contact_vue_vue_type_template_id_60abb193___ = __webpack_require__(638);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__contact_vue_vue_type_script_lang_js___ = __webpack_require__(610);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__contact_vue_vue_type_template_id_60abb193___ = __webpack_require__(639);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__contact_vue_vue_type_script_lang_js___ = __webpack_require__(611);
 /* empty harmony namespace reexport */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__node_modules_vue_loader_lib_runtime_componentNormalizer_js__ = __webpack_require__(51);
 
@@ -51,21 +51,21 @@ component.options.__file = "resources/assets/js/pages/contact.vue"
 
 /***/ }),
 
-/***/ 610:
+/***/ 611:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_contact_vue_vue_type_script_lang_js___ = __webpack_require__(611);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_contact_vue_vue_type_script_lang_js___ = __webpack_require__(612);
 /* unused harmony namespace reexport */
  /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0__node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_contact_vue_vue_type_script_lang_js___["a" /* default */]); 
 
 /***/ }),
 
-/***/ 611:
+/***/ 612:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_ContactForm__ = __webpack_require__(640);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_ContactForm__ = __webpack_require__(641);
 //
 //
 //
@@ -145,23 +145,23 @@ component.options.__file = "resources/assets/js/pages/contact.vue"
 
 /***/ }),
 
-/***/ 612:
+/***/ 613:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ContactForm_vue_vue_type_script_lang_js___ = __webpack_require__(613);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ContactForm_vue_vue_type_script_lang_js___ = __webpack_require__(614);
 /* unused harmony namespace reexport */
  /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0__node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ContactForm_vue_vue_type_script_lang_js___["a" /* default */]); 
 
 /***/ }),
 
-/***/ 613:
+/***/ 614:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(119);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_recaptcha__ = __webpack_require__(643);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_recaptcha__ = __webpack_require__(644);
 //
 //
 //
@@ -272,18 +272,18 @@ component.options.__file = "resources/assets/js/pages/contact.vue"
 
 /***/ }),
 
-/***/ 638:
+/***/ 639:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_contact_vue_vue_type_template_id_60abb193___ = __webpack_require__(639);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_contact_vue_vue_type_template_id_60abb193___ = __webpack_require__(640);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_contact_vue_vue_type_template_id_60abb193___["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_contact_vue_vue_type_template_id_60abb193___["b"]; });
 
 
 /***/ }),
 
-/***/ 639:
+/***/ 640:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -508,12 +508,12 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ 640:
+/***/ 641:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ContactForm_vue_vue_type_template_id_667ae69d___ = __webpack_require__(641);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ContactForm_vue_vue_type_script_lang_js___ = __webpack_require__(612);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ContactForm_vue_vue_type_template_id_667ae69d___ = __webpack_require__(642);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ContactForm_vue_vue_type_script_lang_js___ = __webpack_require__(613);
 /* unused harmony namespace reexport */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__node_modules_vue_loader_lib_runtime_componentNormalizer_js__ = __webpack_require__(51);
 
@@ -558,18 +558,18 @@ component.options.__file = "resources/assets/js/components/ContactForm.vue"
 
 /***/ }),
 
-/***/ 641:
+/***/ 642:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ContactForm_vue_vue_type_template_id_667ae69d___ = __webpack_require__(642);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ContactForm_vue_vue_type_template_id_667ae69d___ = __webpack_require__(643);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ContactForm_vue_vue_type_template_id_667ae69d___["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ContactForm_vue_vue_type_template_id_667ae69d___["b"]; });
 
 
 /***/ }),
 
-/***/ 642:
+/***/ 643:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -672,7 +672,7 @@ var render = function() {
             "v-flex",
             { attrs: { xs12: "" } },
             [
-              _c("v-text-field", {
+              _c("v-textarea", {
                 directives: [
                   {
                     name: "validate",
@@ -684,8 +684,7 @@ var render = function() {
                 attrs: {
                   label: _vm.$t("message"),
                   "error-messages": _vm.errors.collect("message"),
-                  "data-vv-name": "message",
-                  "multi-line": ""
+                  "data-vv-name": "message"
                 },
                 model: {
                   value: _vm.message,
@@ -726,7 +725,7 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ 643:
+/***/ 644:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

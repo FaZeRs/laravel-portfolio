@@ -19,7 +19,8 @@ import {
   VChip,
   VForm,
   VAlert,
-  VTextField
+  VTextField,
+  VTextarea
 } from 'vuetify'
 import { Ripple, Scroll } from 'vuetify/es5/directives'
 
@@ -52,7 +53,8 @@ Vue.use(Vuetify, {
     VChip,
     VForm,
     VAlert,
-    VTextField
+    VTextField,
+    VTextarea
   },
   directives: {
     Ripple,

@@ -1,12 +1,12 @@
 webpackJsonp([1],{
 
-/***/ 599:
+/***/ 600:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__portfolio_vue_vue_type_template_id_54c5180a___ = __webpack_require__(630);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__portfolio_vue_vue_type_script_lang_js___ = __webpack_require__(608);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__portfolio_vue_vue_type_template_id_54c5180a___ = __webpack_require__(631);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__portfolio_vue_vue_type_script_lang_js___ = __webpack_require__(609);
 /* empty harmony namespace reexport */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__node_modules_vue_loader_lib_runtime_componentNormalizer_js__ = __webpack_require__(51);
 
@@ -51,17 +51,17 @@ component.options.__file = "resources/assets/js/pages/portfolio.vue"
 
 /***/ }),
 
-/***/ 608:
+/***/ 609:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_portfolio_vue_vue_type_script_lang_js___ = __webpack_require__(609);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_portfolio_vue_vue_type_script_lang_js___ = __webpack_require__(610);
 /* unused harmony namespace reexport */
  /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0__node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_portfolio_vue_vue_type_script_lang_js___["a" /* default */]); 
 
 /***/ }),
 
-/***/ 609:
+/***/ 610:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -127,8 +127,8 @@ component.options.__file = "resources/assets/js/pages/portfolio.vue"
         categories: ['all', 'wordpress'],
         tech: ['Wordpress'],
         image: {
-          thumb: __webpack_require__(632),
-          src: __webpack_require__(633)
+          thumb: __webpack_require__(633),
+          src: __webpack_require__(634)
         },
         link: 'http://balticprobiotics.lv'
       }, {
@@ -137,8 +137,8 @@ component.options.__file = "resources/assets/js/pages/portfolio.vue"
         categories: ['all', 'laravel', 'open-source'],
         tech: ['Vue.js', 'Vuetify', 'Laravel'],
         image: {
-          thumb: __webpack_require__(634),
-          src: __webpack_require__(635)
+          thumb: __webpack_require__(635),
+          src: __webpack_require__(636)
         },
         link: 'https://naurislinde.com'
       }, {
@@ -147,8 +147,8 @@ component.options.__file = "resources/assets/js/pages/portfolio.vue"
         categories: ['all', 'laravel', 'open-source'],
         tech: ['Laravel', 'Bootstrap', 'MySQL'],
         image: {
-          thumb: __webpack_require__(636),
-          src: __webpack_require__(637)
+          thumb: __webpack_require__(637),
+          src: __webpack_require__(638)
         },
         github: 'https://github.com/FaZeRs/Boilerplate'
       }],
@@ -172,18 +172,18 @@ component.options.__file = "resources/assets/js/pages/portfolio.vue"
 
 /***/ }),
 
-/***/ 630:
+/***/ 631:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_portfolio_vue_vue_type_template_id_54c5180a___ = __webpack_require__(631);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_portfolio_vue_vue_type_template_id_54c5180a___ = __webpack_require__(632);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_portfolio_vue_vue_type_template_id_54c5180a___["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_portfolio_vue_vue_type_template_id_54c5180a___["b"]; });
 
 
 /***/ }),
 
-/***/ 631:
+/***/ 632:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -421,42 +421,42 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ 632:
+/***/ 633:
 /***/ (function(module, exports) {
 
 module.exports = "/images/baltic_probiotics_thumb.png?986ccbccacf24c4d88086374b2d44a87";
 
 /***/ }),
 
-/***/ 633:
+/***/ 634:
 /***/ (function(module, exports) {
 
 module.exports = "/images/baltic_probiotics.png?7c597e2f694d8cd91c2be9b747f36b87";
 
 /***/ }),
 
-/***/ 634:
+/***/ 635:
 /***/ (function(module, exports) {
 
 module.exports = "/images/naurislinde_thumb.png?9d4e6d9b26a81671429482733ae16ed8";
 
 /***/ }),
 
-/***/ 635:
+/***/ 636:
 /***/ (function(module, exports) {
 
 module.exports = "/images/naurislinde.png?2ee2b01d90ea55f20219699ecddcaf0e";
 
 /***/ }),
 
-/***/ 636:
+/***/ 637:
 /***/ (function(module, exports) {
 
 module.exports = "/images/boilerplate_thumb.png?7b3597fed900de965ced51415df1c3b9";
 
 /***/ }),
 
-/***/ 637:
+/***/ 638:
 /***/ (function(module, exports) {
 
 module.exports = "/images/boilerplate.png?76459720248bb6f1e8acb786aab380c3";
