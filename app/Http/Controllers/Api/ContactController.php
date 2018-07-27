@@ -29,6 +29,6 @@ class ContactController extends Controller
 
         Mail::send(new SendContact($request->only(['name', 'email', 'message'])));
 
-        return response()->json(true);
+        return response()->json(['message' => 'success']);
     }
 }

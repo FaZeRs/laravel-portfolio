@@ -24,9 +24,9 @@ class SendContact extends Mailable implements ShouldQueue
     /**
      * SendContact constructor.
      *
-     * @param $request
+     * @param array $request
      */
-    public function __construct($request)
+    public function __construct(array $request)
     {
         $this->request = $request;
     }
@@ -34,11 +34,12 @@ class SendContact extends Mailable implements ShouldQueue
     /**
      * Build the message.
      *
-     * @return $this
+     * @return \App\Mail\Contact\SendContact
      */
     public function build()
     {
-        return $this->to(config('mail.from.address'), config('mail.from.name'))
+        return $this
+            ->to(config('mail.from.address'), config('mail.from.name'))
             ->subject(__('strings.emails.contact.subject', ['app_name' => config('app.name')]))
             ->from($this->request['email'], $this->request['name'])
             ->replyTo($this->request['email'], $this->request['name'])
