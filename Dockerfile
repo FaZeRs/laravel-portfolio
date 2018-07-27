@@ -7,7 +7,7 @@ RUN echo 'http://dl-cdn.alpinelinux.org/alpine/v3.8/main' > /etc/apk/repositorie
 
 RUN apk --no-cache add gcc g++ git wget gnupg openssh-client supervisor \
   jpegoptim optipng pngquant gifsicle make libc-dev libpng-dev automake autoconf libtool nasm \
-  && docker-php-ext-install pdo_mysql zip
+  && docker-php-ext-install pdo_mysql zip pcntl
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
@@ -17,3 +17,7 @@ RUN rm -rf /var/cache/apk/*
 
 RUN adduser -D portfolio
 USER portfolio
+
+COPY docker/supervisor/supervisord.conf /etc/supervisord.conf
+
+ENTRYPOINT ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisord.conf"]
