@@ -21,3 +21,4 @@ Todo.rtf
 .vagrant
 /storage/oauth-private.key
 /storage/oauth-public.key
+.phpunit.result.cache
