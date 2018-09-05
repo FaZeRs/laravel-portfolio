@@ -1,14 +1,14 @@
 webpackJsonp([2],{
 
-/***/ 601:
+/***/ 611:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__contact_vue_vue_type_template_id_60abb193___ = __webpack_require__(639);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__contact_vue_vue_type_script_lang_js___ = __webpack_require__(611);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__contact_vue_vue_type_template_id_60abb193___ = __webpack_require__(649);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__contact_vue_vue_type_script_lang_js___ = __webpack_require__(621);
 /* empty harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__node_modules_vue_loader_lib_runtime_componentNormalizer_js__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__node_modules_vue_loader_lib_runtime_componentNormalizer_js__ = __webpack_require__(52);
 
 
 
@@ -29,7 +29,7 @@ var component = Object(__WEBPACK_IMPORTED_MODULE_2__node_modules_vue_loader_lib_
 
 /* hot reload */
 if (false) {
-  var api = require("/var/www/node_modules/vue-hot-reload-api/dist/index.js")
+  var api = require("/home/nauris/Github/naurislinde.com/node_modules/vue-hot-reload-api/dist/index.js")
   api.install(require('vue'))
   if (api.compatible) {
     module.hot.accept()
@@ -51,21 +51,25 @@ component.options.__file = "resources/assets/js/pages/contact.vue"
 
 /***/ }),
 
-/***/ 611:
+/***/ 621:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_contact_vue_vue_type_script_lang_js___ = __webpack_require__(612);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_contact_vue_vue_type_script_lang_js___ = __webpack_require__(622);
 /* unused harmony namespace reexport */
  /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0__node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_contact_vue_vue_type_script_lang_js___["a" /* default */]); 
 
 /***/ }),
 
-/***/ 612:
+/***/ 622:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_ContactForm__ = __webpack_require__(641);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_ContactForm__ = __webpack_require__(651);
+//
+//
+//
+//
 //
 //
 //
@@ -145,23 +149,23 @@ component.options.__file = "resources/assets/js/pages/contact.vue"
 
 /***/ }),
 
-/***/ 613:
+/***/ 623:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ContactForm_vue_vue_type_script_lang_js___ = __webpack_require__(614);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ContactForm_vue_vue_type_script_lang_js___ = __webpack_require__(624);
 /* unused harmony namespace reexport */
  /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0__node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ContactForm_vue_vue_type_script_lang_js___["a" /* default */]); 
 
 /***/ }),
 
-/***/ 614:
+/***/ 624:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(119);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_recaptcha__ = __webpack_require__(644);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_recaptcha__ = __webpack_require__(654);
 //
 //
 //
@@ -281,18 +285,18 @@ component.options.__file = "resources/assets/js/pages/contact.vue"
 
 /***/ }),
 
-/***/ 639:
+/***/ 649:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_contact_vue_vue_type_template_id_60abb193___ = __webpack_require__(640);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_contact_vue_vue_type_template_id_60abb193___ = __webpack_require__(650);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_contact_vue_vue_type_template_id_60abb193___["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_contact_vue_vue_type_template_id_60abb193___["b"]; });
 
 
 /***/ }),
 
-/***/ 640:
+/***/ 650:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -335,165 +339,252 @@ var render = function() {
                         1
                       ),
                       _vm._v(" "),
-                      _c("v-flex", { attrs: { xs12: "", md4: "" } }, [
-                        _c("div", { staticClass: "contact-block" }, [
-                          _c("h4", { staticClass: "headline" }, [
-                            _vm._v(_vm._s(_vm.$t("contact_information")))
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "flex pb-6" }, [
-                            _c(
-                              "div",
-                              { staticClass: "con-text" },
-                              [
-                                _c("v-icon", [_vm._v("email")]),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    attrs: {
-                                      href: "mailto:naurislinde@gmail.com"
-                                    }
-                                  },
-                                  [_vm._v("naurislinde@gmail.com")]
-                                )
-                              ],
-                              1
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "social mt-4" }, [
-                            _c(
-                              "a",
+                      _c(
+                        "v-flex",
+                        { attrs: { xs12: "", md4: "" } },
+                        [
+                          _c("v-hover", {
+                            scopedSlots: _vm._u([
                               {
-                                attrs: {
-                                  href: "https://www.facebook.com/nauris.linde",
-                                  target: "_blank"
+                                key: "default",
+                                fn: function(ref) {
+                                  var hover = ref.hover
+                                  return _c(
+                                    "v-card",
+                                    { class: "elevation-" + (hover ? 12 : 1) },
+                                    [
+                                      _c(
+                                        "div",
+                                        { staticClass: "contact-block" },
+                                        [
+                                          _c(
+                                            "h4",
+                                            { staticClass: "headline" },
+                                            [
+                                              _vm._v(
+                                                _vm._s(
+                                                  _vm.$t("contact_information")
+                                                )
+                                              )
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "div",
+                                            { staticClass: "flex pb-6" },
+                                            [
+                                              _c(
+                                                "div",
+                                                { staticClass: "con-text" },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("email")
+                                                  ]),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "a",
+                                                    {
+                                                      attrs: {
+                                                        href:
+                                                          "mailto:naurislinde@gmail.com"
+                                                      }
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        "naurislinde@gmail.com"
+                                                      )
+                                                    ]
+                                                  )
+                                                ],
+                                                1
+                                              )
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "div",
+                                            { staticClass: "social mt-4" },
+                                            [
+                                              _c(
+                                                "a",
+                                                {
+                                                  attrs: {
+                                                    href:
+                                                      "https://www.facebook.com/nauris.linde",
+                                                    target: "_blank"
+                                                  }
+                                                },
+                                                [
+                                                  _c(
+                                                    "font-awesome-layers",
+                                                    { staticClass: "fa-4x" },
+                                                    [
+                                                      _c("font-awesome-icon", {
+                                                        staticStyle: {
+                                                          color: "#3b5998"
+                                                        },
+                                                        attrs: {
+                                                          icon: "circle"
+                                                        }
+                                                      }),
+                                                      _vm._v(" "),
+                                                      _c("font-awesome-icon", {
+                                                        staticStyle: {
+                                                          color: "white"
+                                                        },
+                                                        attrs: {
+                                                          icon: [
+                                                            "fab",
+                                                            "facebook-f"
+                                                          ],
+                                                          transform: "shrink-6"
+                                                        }
+                                                      })
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "a",
+                                                {
+                                                  attrs: {
+                                                    href:
+                                                      "https://twitter.com/naurislinde",
+                                                    target: "_blank"
+                                                  }
+                                                },
+                                                [
+                                                  _c(
+                                                    "font-awesome-layers",
+                                                    { staticClass: "fa-4x" },
+                                                    [
+                                                      _c("font-awesome-icon", {
+                                                        staticStyle: {
+                                                          color: "#55acee"
+                                                        },
+                                                        attrs: {
+                                                          icon: "circle"
+                                                        }
+                                                      }),
+                                                      _vm._v(" "),
+                                                      _c("font-awesome-icon", {
+                                                        staticStyle: {
+                                                          color: "white"
+                                                        },
+                                                        attrs: {
+                                                          icon: [
+                                                            "fab",
+                                                            "twitter"
+                                                          ],
+                                                          transform: "shrink-6"
+                                                        }
+                                                      })
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "a",
+                                                {
+                                                  attrs: {
+                                                    href:
+                                                      "https://www.linkedin.com/in/nauris-linde-4027aaaa",
+                                                    target: "_blank"
+                                                  }
+                                                },
+                                                [
+                                                  _c(
+                                                    "font-awesome-layers",
+                                                    { staticClass: "fa-4x" },
+                                                    [
+                                                      _c("font-awesome-icon", {
+                                                        staticStyle: {
+                                                          color: "#1985bc"
+                                                        },
+                                                        attrs: {
+                                                          icon: "circle"
+                                                        }
+                                                      }),
+                                                      _vm._v(" "),
+                                                      _c("font-awesome-icon", {
+                                                        staticStyle: {
+                                                          color: "white"
+                                                        },
+                                                        attrs: {
+                                                          icon: [
+                                                            "fab",
+                                                            "linkedin-in"
+                                                          ],
+                                                          transform: "shrink-6"
+                                                        }
+                                                      })
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "a",
+                                                {
+                                                  attrs: {
+                                                    href:
+                                                      "https://github.com/FaZeRs",
+                                                    target: "_blank"
+                                                  }
+                                                },
+                                                [
+                                                  _c(
+                                                    "font-awesome-layers",
+                                                    { staticClass: "fa-4x" },
+                                                    [
+                                                      _c("font-awesome-icon", {
+                                                        staticStyle: {
+                                                          color: "#222222"
+                                                        },
+                                                        attrs: {
+                                                          icon: "circle"
+                                                        }
+                                                      }),
+                                                      _vm._v(" "),
+                                                      _c("font-awesome-icon", {
+                                                        staticStyle: {
+                                                          color: "white"
+                                                        },
+                                                        attrs: {
+                                                          icon: [
+                                                            "fab",
+                                                            "github"
+                                                          ],
+                                                          transform: "shrink-6"
+                                                        }
+                                                      })
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      )
+                                    ]
+                                  )
                                 }
-                              },
-                              [
-                                _c(
-                                  "font-awesome-layers",
-                                  { staticClass: "fa-4x" },
-                                  [
-                                    _c("font-awesome-icon", {
-                                      staticStyle: { color: "#3b5998" },
-                                      attrs: { icon: "circle" }
-                                    }),
-                                    _vm._v(" "),
-                                    _c("font-awesome-icon", {
-                                      staticStyle: { color: "white" },
-                                      attrs: {
-                                        icon: ["fab", "facebook-f"],
-                                        transform: "shrink-6"
-                                      }
-                                    })
-                                  ],
-                                  1
-                                )
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "a",
-                              {
-                                attrs: {
-                                  href: "https://twitter.com/naurislinde",
-                                  target: "_blank"
-                                }
-                              },
-                              [
-                                _c(
-                                  "font-awesome-layers",
-                                  { staticClass: "fa-4x" },
-                                  [
-                                    _c("font-awesome-icon", {
-                                      staticStyle: { color: "#55acee" },
-                                      attrs: { icon: "circle" }
-                                    }),
-                                    _vm._v(" "),
-                                    _c("font-awesome-icon", {
-                                      staticStyle: { color: "white" },
-                                      attrs: {
-                                        icon: ["fab", "twitter"],
-                                        transform: "shrink-6"
-                                      }
-                                    })
-                                  ],
-                                  1
-                                )
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "a",
-                              {
-                                attrs: {
-                                  href:
-                                    "https://www.linkedin.com/in/nauris-linde-4027aaaa",
-                                  target: "_blank"
-                                }
-                              },
-                              [
-                                _c(
-                                  "font-awesome-layers",
-                                  { staticClass: "fa-4x" },
-                                  [
-                                    _c("font-awesome-icon", {
-                                      staticStyle: { color: "#1985bc" },
-                                      attrs: { icon: "circle" }
-                                    }),
-                                    _vm._v(" "),
-                                    _c("font-awesome-icon", {
-                                      staticStyle: { color: "white" },
-                                      attrs: {
-                                        icon: ["fab", "linkedin-in"],
-                                        transform: "shrink-6"
-                                      }
-                                    })
-                                  ],
-                                  1
-                                )
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "a",
-                              {
-                                attrs: {
-                                  href: "https://github.com/FaZeRs",
-                                  target: "_blank"
-                                }
-                              },
-                              [
-                                _c(
-                                  "font-awesome-layers",
-                                  { staticClass: "fa-4x" },
-                                  [
-                                    _c("font-awesome-icon", {
-                                      staticStyle: { color: "#222222" },
-                                      attrs: { icon: "circle" }
-                                    }),
-                                    _vm._v(" "),
-                                    _c("font-awesome-icon", {
-                                      staticStyle: { color: "white" },
-                                      attrs: {
-                                        icon: ["fab", "github"],
-                                        transform: "shrink-6"
-                                      }
-                                    })
-                                  ],
-                                  1
-                                )
-                              ],
-                              1
-                            )
-                          ])
-                        ])
-                      ])
+                              }
+                            ])
+                          })
+                        ],
+                        1
+                      )
                     ],
                     1
                   )
@@ -517,14 +608,14 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ 641:
+/***/ 651:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ContactForm_vue_vue_type_template_id_667ae69d___ = __webpack_require__(642);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ContactForm_vue_vue_type_script_lang_js___ = __webpack_require__(613);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ContactForm_vue_vue_type_template_id_667ae69d___ = __webpack_require__(652);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ContactForm_vue_vue_type_script_lang_js___ = __webpack_require__(623);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__node_modules_vue_loader_lib_runtime_componentNormalizer_js__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__node_modules_vue_loader_lib_runtime_componentNormalizer_js__ = __webpack_require__(52);
 
 
 
@@ -545,7 +636,7 @@ var component = Object(__WEBPACK_IMPORTED_MODULE_2__node_modules_vue_loader_lib_
 
 /* hot reload */
 if (false) {
-  var api = require("/var/www/node_modules/vue-hot-reload-api/dist/index.js")
+  var api = require("/home/nauris/Github/naurislinde.com/node_modules/vue-hot-reload-api/dist/index.js")
   api.install(require('vue'))
   if (api.compatible) {
     module.hot.accept()
@@ -567,18 +658,18 @@ component.options.__file = "resources/assets/js/components/ContactForm.vue"
 
 /***/ }),
 
-/***/ 642:
+/***/ 652:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ContactForm_vue_vue_type_template_id_667ae69d___ = __webpack_require__(643);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ContactForm_vue_vue_type_template_id_667ae69d___ = __webpack_require__(653);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ContactForm_vue_vue_type_template_id_667ae69d___["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ContactForm_vue_vue_type_template_id_667ae69d___["b"]; });
 
 
 /***/ }),
 
-/***/ 643:
+/***/ 653:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -739,7 +830,7 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ 644:
+/***/ 654:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

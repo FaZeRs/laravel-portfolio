@@ -1,23 +1,44 @@
+#
+# PHP Dependencies
+#
+FROM composer:1.7 as vendor
+
+COPY database/ database/
+
+COPY composer.json composer.json
+COPY composer.lock composer.lock
+
+RUN composer install \
+    --ignore-platform-reqs \
+    --no-interaction \
+    --no-plugins \
+    --no-scripts \
+    --prefer-dist
+
+#
+# Frontend
+#
+FROM node:10.9-alpine as frontend
+
+RUN mkdir -p /app/public
+
+COPY package.json webpack.mix.js yarn.lock /app/
+COPY resources/assets/ /app/resources/assets/
+
+WORKDIR /app
+
+RUN yarn install && yarn development
+
+#
+# Application
+#
 FROM php:7.2-fpm-alpine
-LABEL maintainer="Nauris Linde <naurislinde@gmail.com>"
-
-RUN echo 'http://dl-cdn.alpinelinux.org/alpine/v3.8/main' > /etc/apk/repositories \
-	&& echo 'http://dl-cdn.alpinelinux.org/alpine/v3.8/community' >> /etc/apk/repositories \
-    && apk upgrade -U -a
-
-RUN apk --no-cache add gcc g++ git wget gnupg openssh-client supervisor \
-  jpegoptim optipng pngquant gifsicle make libc-dev libpng-dev automake autoconf libtool nasm \
-  && docker-php-ext-install pdo_mysql zip pcntl
-
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-
-RUN apk --no-cache add nodejs yarn
-
-RUN rm -rf /var/cache/apk/*
 
 RUN adduser -D portfolio
 USER portfolio
 
-COPY docker/supervisor/supervisord.conf /etc/supervisord.conf
-
-ENTRYPOINT ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisord.conf"]
+COPY . /var/www/html
+COPY --from=vendor /app/vendor/ /var/www/html/vendor/
+COPY --from=frontend /app/public/js/ /var/www/html/public/js/
+COPY --from=frontend /app/public/css/ /var/www/html/public/css/
+COPY --from=frontend /app/mix-manifest.json /var/www/html/public/mix-manifest.json

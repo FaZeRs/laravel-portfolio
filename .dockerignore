@@ -1,0 +1,14 @@
+.git
+.idea
+.env
+vendor/
+node_modules/
+public/js/
+public/css/
+yarn-error.log
+bootstrap/cache/*
+storage/app/*
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/framework/views/*
+storage/logs/*

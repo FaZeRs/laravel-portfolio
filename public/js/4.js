@@ -1,14 +1,14 @@
 webpackJsonp([4],{
 
-/***/ 598:
+/***/ 608:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__experience_vue_vue_type_template_id_4616ab72___ = __webpack_require__(618);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__experience_vue_vue_type_script_lang_js___ = __webpack_require__(605);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__experience_vue_vue_type_template_id_4616ab72___ = __webpack_require__(628);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__experience_vue_vue_type_script_lang_js___ = __webpack_require__(615);
 /* empty harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__node_modules_vue_loader_lib_runtime_componentNormalizer_js__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__node_modules_vue_loader_lib_runtime_componentNormalizer_js__ = __webpack_require__(52);
 
 
 
@@ -29,7 +29,7 @@ var component = Object(__WEBPACK_IMPORTED_MODULE_2__node_modules_vue_loader_lib_
 
 /* hot reload */
 if (false) {
-  var api = require("/var/www/node_modules/vue-hot-reload-api/dist/index.js")
+  var api = require("/home/nauris/Github/naurislinde.com/node_modules/vue-hot-reload-api/dist/index.js")
   api.install(require('vue'))
   if (api.compatible) {
     module.hot.accept()
@@ -51,20 +51,32 @@ component.options.__file = "resources/assets/js/pages/experience.vue"
 
 /***/ }),
 
-/***/ 605:
+/***/ 615:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_experience_vue_vue_type_script_lang_js___ = __webpack_require__(606);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_experience_vue_vue_type_script_lang_js___ = __webpack_require__(616);
 /* unused harmony namespace reexport */
  /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0__node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_experience_vue_vue_type_script_lang_js___["a" /* default */]); 
 
 /***/ }),
 
-/***/ 606:
+/***/ 616:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -139,25 +151,25 @@ component.options.__file = "resources/assets/js/pages/experience.vue"
 
   data: function data() {
     return {
-      sem: __webpack_require__(620)
+      sem: __webpack_require__(630)
     };
   }
 });
 
 /***/ }),
 
-/***/ 618:
+/***/ 628:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_experience_vue_vue_type_template_id_4616ab72___ = __webpack_require__(619);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_experience_vue_vue_type_template_id_4616ab72___ = __webpack_require__(629);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_experience_vue_vue_type_template_id_4616ab72___["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_experience_vue_vue_type_template_id_4616ab72___["b"]; });
 
 
 /***/ }),
 
-/***/ 619:
+/***/ 629:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -193,57 +205,137 @@ var render = function() {
                       attrs: { row: "", wrap: "" }
                     },
                     [
-                      _c("v-flex", { attrs: { xs12: "", sm6: "" } }, [
-                        _c("div", { staticClass: "edu-block h-full" }, [
-                          _c("div", { staticClass: "edu-session" }, [
-                            _c("span", [_vm._v("2015 - 2017")])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "pl-5" }, [
-                            _c("h4", { staticClass: "block-title title" }, [
-                              _vm._v(
-                                "\n                  " +
-                                  _vm._s(_vm.$t("rtu_education")) +
-                                  "\n                "
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("h5", { staticClass: "mb-4 mt-3 subheading" }, [
-                              _vm._v(
-                                "\n                  " +
-                                  _vm._s(_vm.$t("rtu_address")) +
-                                  "\n                "
-                              )
+                      _c(
+                        "v-flex",
+                        { attrs: { xs12: "", sm6: "", "fill-height": "" } },
+                        [
+                          _c("v-hover", {
+                            scopedSlots: _vm._u([
+                              {
+                                key: "default",
+                                fn: function(ref) {
+                                  var hover = ref.hover
+                                  return _c(
+                                    "v-card",
+                                    { class: "elevation-" + (hover ? 12 : 1) },
+                                    [
+                                      _c("div", { staticClass: "edu-block" }, [
+                                        _c(
+                                          "div",
+                                          { staticClass: "edu-session" },
+                                          [_c("span", [_vm._v("2015 - 2017")])]
+                                        ),
+                                        _vm._v(" "),
+                                        _c("div", { staticClass: "pl-5" }, [
+                                          _c(
+                                            "h4",
+                                            {
+                                              staticClass: "block-title title"
+                                            },
+                                            [
+                                              _vm._v(
+                                                "\n                      " +
+                                                  _vm._s(
+                                                    _vm.$t("rtu_education")
+                                                  ) +
+                                                  "\n                    "
+                                              )
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "h5",
+                                            {
+                                              staticClass:
+                                                "mb-4 mt-3 subheading"
+                                            },
+                                            [
+                                              _vm._v(
+                                                "\n                      " +
+                                                  _vm._s(
+                                                    _vm.$t("rtu_address")
+                                                  ) +
+                                                  "\n                    "
+                                              )
+                                            ]
+                                          )
+                                        ])
+                                      ])
+                                    ]
+                                  )
+                                }
+                              }
                             ])
-                          ])
-                        ])
-                      ]),
+                          })
+                        ],
+                        1
+                      ),
                       _vm._v(" "),
-                      _c("v-flex", { attrs: { xs12: "", sm6: "" } }, [
-                        _c("div", { staticClass: "edu-block h-full" }, [
-                          _c("div", { staticClass: "edu-session" }, [
-                            _c("span", [_vm._v("2011 - 2015")])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "pl-5" }, [
-                            _c("h4", { staticClass: "block-title title" }, [
-                              _vm._v(
-                                "\n                  " +
-                                  _vm._s(_vm.$t("lvt_education")) +
-                                  "\n                "
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("h5", { staticClass: "mb-4 mt-3 subheading" }, [
-                              _vm._v(
-                                "\n                  " +
-                                  _vm._s(_vm.$t("lvt_address")) +
-                                  "\n                "
-                              )
+                      _c(
+                        "v-flex",
+                        { attrs: { xs12: "", sm6: "", "fill-height": "" } },
+                        [
+                          _c("v-hover", {
+                            scopedSlots: _vm._u([
+                              {
+                                key: "default",
+                                fn: function(ref) {
+                                  var hover = ref.hover
+                                  return _c(
+                                    "v-card",
+                                    { class: "elevation-" + (hover ? 12 : 1) },
+                                    [
+                                      _c("div", { staticClass: "edu-block" }, [
+                                        _c(
+                                          "div",
+                                          { staticClass: "edu-session" },
+                                          [_c("span", [_vm._v("2011 - 2015")])]
+                                        ),
+                                        _vm._v(" "),
+                                        _c("div", { staticClass: "pl-5" }, [
+                                          _c(
+                                            "h4",
+                                            {
+                                              staticClass: "block-title title"
+                                            },
+                                            [
+                                              _vm._v(
+                                                "\n                      " +
+                                                  _vm._s(
+                                                    _vm.$t("lvt_education")
+                                                  ) +
+                                                  "\n                    "
+                                              )
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "h5",
+                                            {
+                                              staticClass:
+                                                "mb-4 mt-3 subheading"
+                                            },
+                                            [
+                                              _vm._v(
+                                                "\n                      " +
+                                                  _vm._s(
+                                                    _vm.$t("lvt_address")
+                                                  ) +
+                                                  "\n                    "
+                                              )
+                                            ]
+                                          )
+                                        ])
+                                      ])
+                                    ]
+                                  )
+                                }
+                              }
                             ])
-                          ])
-                        ])
-                      ])
+                          })
+                        ],
+                        1
+                      )
                     ],
                     1
                   )
@@ -273,44 +365,92 @@ var render = function() {
                       attrs: { row: "", wrap: "" }
                     },
                     [
-                      _c("v-flex", { attrs: { xs12: "", sm6: "" } }, [
-                        _c("div", { staticClass: "work-exp-block" }, [
-                          _c(
-                            "div",
-                            { staticClass: "working-duration title d-block" },
-                            [
-                              _vm._v(
-                                "\n                2016-" +
-                                  _vm._s(_vm.$t("present")) +
-                                  "\n              "
-                              )
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "work-exp-logo" }, [
-                            _c("img", {
-                              attrs: { src: _vm.sem, alt: "SIA Sem.lv" }
-                            })
-                          ]),
-                          _vm._v(" "),
-                          _c("h4", { staticClass: "headline mt-3" }, [
-                            _vm._v(_vm._s(_vm.$t("sem_position")))
-                          ]),
-                          _vm._v(" "),
-                          _c("h6", { staticClass: "color-text title mt-2" }, [
-                            _c(
-                              "a",
+                      _c(
+                        "v-flex",
+                        { attrs: { xs12: "", sm6: "" } },
+                        [
+                          _c("v-hover", {
+                            scopedSlots: _vm._u([
                               {
-                                attrs: {
-                                  href: "https://sem.lv/",
-                                  target: "_blank"
+                                key: "default",
+                                fn: function(ref) {
+                                  var hover = ref.hover
+                                  return _c(
+                                    "v-card",
+                                    { class: "elevation-" + (hover ? 12 : 1) },
+                                    [
+                                      _c(
+                                        "div",
+                                        { staticClass: "work-exp-block" },
+                                        [
+                                          _c(
+                                            "div",
+                                            {
+                                              staticClass:
+                                                "working-duration title d-block"
+                                            },
+                                            [
+                                              _vm._v(
+                                                "\n                    2016-" +
+                                                  _vm._s(_vm.$t("present")) +
+                                                  "\n                  "
+                                              )
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "div",
+                                            { staticClass: "work-exp-logo" },
+                                            [
+                                              _c("img", {
+                                                attrs: {
+                                                  src: _vm.sem,
+                                                  alt: "SIA Sem.lv"
+                                                }
+                                              })
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "h4",
+                                            { staticClass: "headline mt-3" },
+                                            [
+                                              _vm._v(
+                                                _vm._s(_vm.$t("sem_position"))
+                                              )
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "h6",
+                                            {
+                                              staticClass:
+                                                "color-text title mt-2"
+                                            },
+                                            [
+                                              _c(
+                                                "a",
+                                                {
+                                                  attrs: {
+                                                    href: "https://sem.lv/",
+                                                    target: "_blank"
+                                                  }
+                                                },
+                                                [_vm._v("SIA Sem.lv")]
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      )
+                                    ]
+                                  )
                                 }
-                              },
-                              [_vm._v("SIA Sem.lv")]
-                            )
-                          ])
-                        ])
-                      ])
+                              }
+                            ])
+                          })
+                        ],
+                        1
+                      )
                     ],
                     1
                   )
@@ -334,10 +474,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ 620:
+/***/ 630:
 /***/ (function(module, exports) {
 
-module.exports = "/images/sem.png?1de51b3c9b78f2d488cb4a1319c59fe2";
+module.exports = "/images/sem.png?8d45343ebe1f6ccec50d9e26a4423817";
 
 /***/ })
 
