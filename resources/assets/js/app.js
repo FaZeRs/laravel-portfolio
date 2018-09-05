@@ -10,9 +10,9 @@ import {
   VList,
   VDivider,
   VIcon,
+  VImg,
   VBtn,
   VMenu,
-  VJumbotron,
   VAvatar,
   VGrid,
   VCard,
@@ -20,7 +20,8 @@ import {
   VForm,
   VAlert,
   VTextField,
-  VTextarea
+  VTextarea,
+  VHover,
 } from 'vuetify'
 import { Ripple, Scroll } from 'vuetify/es5/directives'
 
@@ -44,17 +45,18 @@ Vue.use(Vuetify, {
     VList,
     VDivider,
     VIcon,
+    VImg,
     VBtn,
     VGrid,
     VMenu,
-    VJumbotron,
     VAvatar,
     VCard,
     VChip,
     VForm,
     VAlert,
     VTextField,
-    VTextarea
+    VTextarea,
+    VHover
   },
   directives: {
     Ripple,

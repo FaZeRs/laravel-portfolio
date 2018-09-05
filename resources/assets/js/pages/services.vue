@@ -6,28 +6,34 @@
           <h2 class="section-title mb-5">{{ $t('what_i_do') }}</h2>
           <v-layout wrap justify-space-around>
             <v-flex xs12 sm4>
-              <v-card>
-                <v-card-media :src="webDevelopment" height="200px" contain/>
-                <v-card-title primary-title class="justify-center">
-                  <h3 class="headline">{{ $t('web_development') }}</h3>
-                </v-card-title>
-              </v-card>
+              <v-hover>
+                <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
+                  <v-img :src="webDevelopment" :alt="$t('web_development')" :lazy-src="webDevelopment" height="200" contain></v-img>
+                  <v-card-title primary-title class="justify-center">
+                    <h3 class="headline">{{ $t('web_development') }}</h3>
+                  </v-card-title>
+                </v-card>
+              </v-hover>
             </v-flex>
             <v-flex xs12 sm4>
-              <v-card>
-                <v-card-media :src="seoOptimization" height="200px" contain/>
-                <v-card-title primary-title class="justify-center">
-                  <h3 class="headline">{{ $t('seo_optimization') }}</h3>
-                </v-card-title>
-              </v-card>
+              <v-hover>
+                <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
+                  <v-img :src="seoOptimization" :alt="$t('seo_optimization')" :lazy-src="seoOptimization" height="200" contain></v-img>
+                  <v-card-title primary-title class="justify-center">
+                    <h3 class="headline">{{ $t('seo_optimization') }}</h3>
+                  </v-card-title>
+                </v-card>
+              </v-hover>
             </v-flex>
             <v-flex xs12 sm4>
-              <v-card>
-                <v-card-media :src="serverManagement" height="200px" contain/>
-                <v-card-title primary-title class="justify-center">
-                  <h3 class="headline">{{ $t('server_management') }}</h3>
-                </v-card-title>
-              </v-card>
+              <v-hover>
+                <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
+                  <v-img :src="serverManagement" :alt="$t('server_management')" :lazy-src="serverManagement" height="200" contain></v-img>
+                  <v-card-title primary-title class="justify-center">
+                    <h3 class="headline">{{ $t('server_management') }}</h3>
+                  </v-card-title>
+                </v-card>
+              </v-hover>
             </v-flex>
           </v-layout>
         </v-flex>
@@ -38,13 +44,14 @@
           <v-layout row fill-height align-center wrap>
             <v-flex xs12 sm5>
               <v-card class="elevation-0" color="transparent">
-                <v-card-media :src="workProcess1" :alt="$t('planing_and_research')" height="200px" contain>
-                </v-card-media>
-                <div class="work-process-text mt-5">
-                  <h4 class="block-title">
-                    {{ $t('planing_and_research') }}
-                  </h4>
-                </div>
+                <v-img :src="workProcess1" :alt="$t('planing_and_research')" :lazy-src="workProcess1" height="200" contain></v-img>
+                <v-hover>
+                  <div class="work-process-text mt-5" slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 1}`">
+                    <h4 class="block-title">
+                      {{ $t('planing_and_research') }}
+                    </h4>
+                  </div>
+                </v-hover>
               </v-card>
             </v-flex>
             <v-flex xs12 sm2 class="hidden-xs-only">
@@ -52,24 +59,26 @@
             </v-flex>
             <v-flex xs12 sm5>
               <v-card class="elevation-0" color="transparent">
-                <v-card-media :src="workProcess2" :alt="$t('design_and_development')" height="200px" contain>
-                </v-card-media>
-                <div class="work-process-text mt-5">
-                  <h4 class="block-title">
-                    {{ $t('design_and_development') }}
-                  </h4>
-                </div>
+                <v-img :src="workProcess2" :alt="$t('design_and_development')" :lazy-src="workProcess2" height="200" contain></v-img>
+                <v-hover>
+                  <div class="work-process-text mt-5" slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 1}`">
+                    <h4 class="block-title">
+                      {{ $t('design_and_development') }}
+                    </h4>
+                  </div>
+                </v-hover>
               </v-card>
             </v-flex>
             <v-flex xs12 sm5>
               <v-card class="elevation-0" color="transparent">
-                <v-card-media :src="workProcess3" :alt="$t('testing_and_bug_fixing')" height="200px" contain>
-                </v-card-media>
-                <div class="work-process-text mt-5">
-                  <h4 class="block-title">
-                    {{ $t('testing_and_bug_fixing') }}
-                  </h4>
-                </div>
+                <v-img :src="workProcess3" :alt="$t('testing_and_bug_fixing')" :lazy-src="workProcess3" height="200" contain></v-img>
+                <v-hover>
+                  <div class="work-process-text mt-5" slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 1}`">
+                    <h4 class="block-title">
+                      {{ $t('testing_and_bug_fixing') }}
+                    </h4>
+                  </div>
+                </v-hover>
               </v-card>
             </v-flex>
             <v-flex xs12 sm2 class="hidden-xs-only">
@@ -77,13 +86,14 @@
             </v-flex>
             <v-flex xs12 sm5>
               <v-card class="elevation-0" color="transparent">
-                <v-card-media :src="workProcess4" :alt="$t('project_launch_and_support')" height="200px" contain>
-                </v-card-media>
-                <div class="work-process-text mt-5">
-                  <h4 class="block-title">
-                    {{ $t('project_launch_and_support') }}
-                  </h4>
-                </div>
+                <v-img :src="workProcess4" :alt="$t('project_launch_and_support')" :lazy-src="workProcess4" height="200" contain></v-img>
+                <v-hover>
+                  <div class="work-process-text mt-5" slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 1}`">
+                    <h4 class="block-title">
+                      {{ $t('project_launch_and_support') }}
+                    </h4>
+                  </div>
+                </v-hover>
               </v-card>
             </v-flex>
           </v-layout>

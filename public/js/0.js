@@ -1,14 +1,14 @@
 webpackJsonp([0],{
 
-/***/ 599:
+/***/ 609:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__services_vue_vue_type_template_id_fc7e570a___ = __webpack_require__(621);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_vue_vue_type_script_lang_js___ = __webpack_require__(607);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__services_vue_vue_type_template_id_fc7e570a___ = __webpack_require__(631);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_vue_vue_type_script_lang_js___ = __webpack_require__(617);
 /* empty harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__node_modules_vue_loader_lib_runtime_componentNormalizer_js__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__node_modules_vue_loader_lib_runtime_componentNormalizer_js__ = __webpack_require__(52);
 
 
 
@@ -29,7 +29,7 @@ var component = Object(__WEBPACK_IMPORTED_MODULE_2__node_modules_vue_loader_lib_
 
 /* hot reload */
 if (false) {
-  var api = require("/var/www/node_modules/vue-hot-reload-api/dist/index.js")
+  var api = require("/home/nauris/Github/naurislinde.com/node_modules/vue-hot-reload-api/dist/index.js")
   api.install(require('vue'))
   if (api.compatible) {
     module.hot.accept()
@@ -51,20 +51,30 @@ component.options.__file = "resources/assets/js/pages/services.vue"
 
 /***/ }),
 
-/***/ 607:
+/***/ 617:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_services_vue_vue_type_script_lang_js___ = __webpack_require__(608);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_services_vue_vue_type_script_lang_js___ = __webpack_require__(618);
 /* unused harmony namespace reexport */
  /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0__node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_services_vue_vue_type_script_lang_js___["a" /* default */]); 
 
 /***/ }),
 
-/***/ 608:
+/***/ 618:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -170,32 +180,32 @@ component.options.__file = "resources/assets/js/pages/services.vue"
   data: function data() {
     return {
       title: window.config.appName,
-      webDevelopment: __webpack_require__(623),
-      seoOptimization: __webpack_require__(624),
-      serverManagement: __webpack_require__(625),
-      workProcess1: __webpack_require__(626),
-      workProcess2: __webpack_require__(627),
-      workProcess3: __webpack_require__(628),
-      workProcess4: __webpack_require__(629),
-      arrowLeft: __webpack_require__(630)
+      webDevelopment: __webpack_require__(633),
+      seoOptimization: __webpack_require__(634),
+      serverManagement: __webpack_require__(635),
+      workProcess1: __webpack_require__(636),
+      workProcess2: __webpack_require__(637),
+      workProcess3: __webpack_require__(638),
+      workProcess4: __webpack_require__(639),
+      arrowLeft: __webpack_require__(640)
     };
   }
 });
 
 /***/ }),
 
-/***/ 621:
+/***/ 631:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_services_vue_vue_type_template_id_fc7e570a___ = __webpack_require__(622);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_services_vue_vue_type_template_id_fc7e570a___ = __webpack_require__(632);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_services_vue_vue_type_template_id_fc7e570a___["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_services_vue_vue_type_template_id_fc7e570a___["b"]; });
 
 
 /***/ }),
 
-/***/ 622:
+/***/ 632:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -231,32 +241,53 @@ var render = function() {
                         "v-flex",
                         { attrs: { xs12: "", sm4: "" } },
                         [
-                          _c(
-                            "v-card",
-                            [
-                              _c("v-card-media", {
-                                attrs: {
-                                  src: _vm.webDevelopment,
-                                  height: "200px",
-                                  contain: ""
+                          _c("v-hover", {
+                            scopedSlots: _vm._u([
+                              {
+                                key: "default",
+                                fn: function(ref) {
+                                  var hover = ref.hover
+                                  return _c(
+                                    "v-card",
+                                    { class: "elevation-" + (hover ? 12 : 2) },
+                                    [
+                                      _c("v-img", {
+                                        attrs: {
+                                          src: _vm.webDevelopment,
+                                          alt: _vm.$t("web_development"),
+                                          "lazy-src": _vm.webDevelopment,
+                                          height: "200",
+                                          contain: ""
+                                        }
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-card-title",
+                                        {
+                                          staticClass: "justify-center",
+                                          attrs: { "primary-title": "" }
+                                        },
+                                        [
+                                          _c(
+                                            "h3",
+                                            { staticClass: "headline" },
+                                            [
+                                              _vm._v(
+                                                _vm._s(
+                                                  _vm.$t("web_development")
+                                                )
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
                                 }
-                              }),
-                              _vm._v(" "),
-                              _c(
-                                "v-card-title",
-                                {
-                                  staticClass: "justify-center",
-                                  attrs: { "primary-title": "" }
-                                },
-                                [
-                                  _c("h3", { staticClass: "headline" }, [
-                                    _vm._v(_vm._s(_vm.$t("web_development")))
-                                  ])
-                                ]
-                              )
-                            ],
-                            1
-                          )
+                              }
+                            ])
+                          })
                         ],
                         1
                       ),
@@ -265,32 +296,53 @@ var render = function() {
                         "v-flex",
                         { attrs: { xs12: "", sm4: "" } },
                         [
-                          _c(
-                            "v-card",
-                            [
-                              _c("v-card-media", {
-                                attrs: {
-                                  src: _vm.seoOptimization,
-                                  height: "200px",
-                                  contain: ""
+                          _c("v-hover", {
+                            scopedSlots: _vm._u([
+                              {
+                                key: "default",
+                                fn: function(ref) {
+                                  var hover = ref.hover
+                                  return _c(
+                                    "v-card",
+                                    { class: "elevation-" + (hover ? 12 : 2) },
+                                    [
+                                      _c("v-img", {
+                                        attrs: {
+                                          src: _vm.seoOptimization,
+                                          alt: _vm.$t("seo_optimization"),
+                                          "lazy-src": _vm.seoOptimization,
+                                          height: "200",
+                                          contain: ""
+                                        }
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-card-title",
+                                        {
+                                          staticClass: "justify-center",
+                                          attrs: { "primary-title": "" }
+                                        },
+                                        [
+                                          _c(
+                                            "h3",
+                                            { staticClass: "headline" },
+                                            [
+                                              _vm._v(
+                                                _vm._s(
+                                                  _vm.$t("seo_optimization")
+                                                )
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
                                 }
-                              }),
-                              _vm._v(" "),
-                              _c(
-                                "v-card-title",
-                                {
-                                  staticClass: "justify-center",
-                                  attrs: { "primary-title": "" }
-                                },
-                                [
-                                  _c("h3", { staticClass: "headline" }, [
-                                    _vm._v(_vm._s(_vm.$t("seo_optimization")))
-                                  ])
-                                ]
-                              )
-                            ],
-                            1
-                          )
+                              }
+                            ])
+                          })
                         ],
                         1
                       ),
@@ -299,32 +351,53 @@ var render = function() {
                         "v-flex",
                         { attrs: { xs12: "", sm4: "" } },
                         [
-                          _c(
-                            "v-card",
-                            [
-                              _c("v-card-media", {
-                                attrs: {
-                                  src: _vm.serverManagement,
-                                  height: "200px",
-                                  contain: ""
+                          _c("v-hover", {
+                            scopedSlots: _vm._u([
+                              {
+                                key: "default",
+                                fn: function(ref) {
+                                  var hover = ref.hover
+                                  return _c(
+                                    "v-card",
+                                    { class: "elevation-" + (hover ? 12 : 2) },
+                                    [
+                                      _c("v-img", {
+                                        attrs: {
+                                          src: _vm.serverManagement,
+                                          alt: _vm.$t("server_management"),
+                                          "lazy-src": _vm.serverManagement,
+                                          height: "200",
+                                          contain: ""
+                                        }
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-card-title",
+                                        {
+                                          staticClass: "justify-center",
+                                          attrs: { "primary-title": "" }
+                                        },
+                                        [
+                                          _c(
+                                            "h3",
+                                            { staticClass: "headline" },
+                                            [
+                                              _vm._v(
+                                                _vm._s(
+                                                  _vm.$t("server_management")
+                                                )
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
                                 }
-                              }),
-                              _vm._v(" "),
-                              _c(
-                                "v-card-title",
-                                {
-                                  staticClass: "justify-center",
-                                  attrs: { "primary-title": "" }
-                                },
-                                [
-                                  _c("h3", { staticClass: "headline" }, [
-                                    _vm._v(_vm._s(_vm.$t("server_management")))
-                                  ])
-                                ]
-                              )
-                            ],
-                            1
-                          )
+                              }
+                            ])
+                          })
                         ],
                         1
                       )
@@ -372,28 +445,50 @@ var render = function() {
                               attrs: { color: "transparent" }
                             },
                             [
-                              _c("v-card-media", {
+                              _c("v-img", {
                                 attrs: {
                                   src: _vm.workProcess1,
                                   alt: _vm.$t("planing_and_research"),
-                                  height: "200px",
+                                  "lazy-src": _vm.workProcess1,
+                                  height: "200",
                                   contain: ""
                                 }
                               }),
                               _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "work-process-text mt-5" },
-                                [
-                                  _c("h4", { staticClass: "block-title" }, [
-                                    _vm._v(
-                                      "\n                  " +
-                                        _vm._s(_vm.$t("planing_and_research")) +
-                                        "\n                "
-                                    )
-                                  ])
-                                ]
-                              )
+                              _c("v-hover", {
+                                scopedSlots: _vm._u([
+                                  {
+                                    key: "default",
+                                    fn: function(ref) {
+                                      var hover = ref.hover
+                                      return _c(
+                                        "div",
+                                        {
+                                          staticClass: "work-process-text mt-5",
+                                          class: "elevation-" + (hover ? 12 : 1)
+                                        },
+                                        [
+                                          _c(
+                                            "h4",
+                                            { staticClass: "block-title" },
+                                            [
+                                              _vm._v(
+                                                "\n                    " +
+                                                  _vm._s(
+                                                    _vm.$t(
+                                                      "planing_and_research"
+                                                    )
+                                                  ) +
+                                                  "\n                  "
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      )
+                                    }
+                                  }
+                                ])
+                              })
                             ],
                             1
                           )
@@ -421,30 +516,50 @@ var render = function() {
                               attrs: { color: "transparent" }
                             },
                             [
-                              _c("v-card-media", {
+                              _c("v-img", {
                                 attrs: {
                                   src: _vm.workProcess2,
                                   alt: _vm.$t("design_and_development"),
-                                  height: "200px",
+                                  "lazy-src": _vm.workProcess2,
+                                  height: "200",
                                   contain: ""
                                 }
                               }),
                               _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "work-process-text mt-5" },
-                                [
-                                  _c("h4", { staticClass: "block-title" }, [
-                                    _vm._v(
-                                      "\n                  " +
-                                        _vm._s(
-                                          _vm.$t("design_and_development")
-                                        ) +
-                                        "\n                "
-                                    )
-                                  ])
-                                ]
-                              )
+                              _c("v-hover", {
+                                scopedSlots: _vm._u([
+                                  {
+                                    key: "default",
+                                    fn: function(ref) {
+                                      var hover = ref.hover
+                                      return _c(
+                                        "div",
+                                        {
+                                          staticClass: "work-process-text mt-5",
+                                          class: "elevation-" + (hover ? 12 : 1)
+                                        },
+                                        [
+                                          _c(
+                                            "h4",
+                                            { staticClass: "block-title" },
+                                            [
+                                              _vm._v(
+                                                "\n                    " +
+                                                  _vm._s(
+                                                    _vm.$t(
+                                                      "design_and_development"
+                                                    )
+                                                  ) +
+                                                  "\n                  "
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      )
+                                    }
+                                  }
+                                ])
+                              })
                             ],
                             1
                           )
@@ -463,30 +578,50 @@ var render = function() {
                               attrs: { color: "transparent" }
                             },
                             [
-                              _c("v-card-media", {
+                              _c("v-img", {
                                 attrs: {
                                   src: _vm.workProcess3,
                                   alt: _vm.$t("testing_and_bug_fixing"),
-                                  height: "200px",
+                                  "lazy-src": _vm.workProcess3,
+                                  height: "200",
                                   contain: ""
                                 }
                               }),
                               _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "work-process-text mt-5" },
-                                [
-                                  _c("h4", { staticClass: "block-title" }, [
-                                    _vm._v(
-                                      "\n                  " +
-                                        _vm._s(
-                                          _vm.$t("testing_and_bug_fixing")
-                                        ) +
-                                        "\n                "
-                                    )
-                                  ])
-                                ]
-                              )
+                              _c("v-hover", {
+                                scopedSlots: _vm._u([
+                                  {
+                                    key: "default",
+                                    fn: function(ref) {
+                                      var hover = ref.hover
+                                      return _c(
+                                        "div",
+                                        {
+                                          staticClass: "work-process-text mt-5",
+                                          class: "elevation-" + (hover ? 12 : 1)
+                                        },
+                                        [
+                                          _c(
+                                            "h4",
+                                            { staticClass: "block-title" },
+                                            [
+                                              _vm._v(
+                                                "\n                    " +
+                                                  _vm._s(
+                                                    _vm.$t(
+                                                      "testing_and_bug_fixing"
+                                                    )
+                                                  ) +
+                                                  "\n                  "
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      )
+                                    }
+                                  }
+                                ])
+                              })
                             ],
                             1
                           )
@@ -514,30 +649,50 @@ var render = function() {
                               attrs: { color: "transparent" }
                             },
                             [
-                              _c("v-card-media", {
+                              _c("v-img", {
                                 attrs: {
                                   src: _vm.workProcess4,
                                   alt: _vm.$t("project_launch_and_support"),
-                                  height: "200px",
+                                  "lazy-src": _vm.workProcess4,
+                                  height: "200",
                                   contain: ""
                                 }
                               }),
                               _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "work-process-text mt-5" },
-                                [
-                                  _c("h4", { staticClass: "block-title" }, [
-                                    _vm._v(
-                                      "\n                  " +
-                                        _vm._s(
-                                          _vm.$t("project_launch_and_support")
-                                        ) +
-                                        "\n                "
-                                    )
-                                  ])
-                                ]
-                              )
+                              _c("v-hover", {
+                                scopedSlots: _vm._u([
+                                  {
+                                    key: "default",
+                                    fn: function(ref) {
+                                      var hover = ref.hover
+                                      return _c(
+                                        "div",
+                                        {
+                                          staticClass: "work-process-text mt-5",
+                                          class: "elevation-" + (hover ? 12 : 1)
+                                        },
+                                        [
+                                          _c(
+                                            "h4",
+                                            { staticClass: "block-title" },
+                                            [
+                                              _vm._v(
+                                                "\n                    " +
+                                                  _vm._s(
+                                                    _vm.$t(
+                                                      "project_launch_and_support"
+                                                    )
+                                                  ) +
+                                                  "\n                  "
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      )
+                                    }
+                                  }
+                                ])
+                              })
                             ],
                             1
                           )
@@ -567,59 +722,59 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ 623:
+/***/ 633:
 /***/ (function(module, exports) {
 
-module.exports = "/images/web-development.png?a5546bdbe3c0708fd508eb77c8cc310c";
+module.exports = "/images/web-development.png?78653efbf01901a2c6ba7d6a79711a10";
 
 /***/ }),
 
-/***/ 624:
+/***/ 634:
 /***/ (function(module, exports) {
 
-module.exports = "/images/seo-optimization.png?fde8803422d65f7f87adc294b423958a";
+module.exports = "/images/seo-optimization.png?1871e233b5dd84a644a144b1d406b31d";
 
 /***/ }),
 
-/***/ 625:
+/***/ 635:
 /***/ (function(module, exports) {
 
-module.exports = "/images/server-management.png?4e8262646486c4ffe47ec155c1f4136f";
+module.exports = "/images/server-management.png?e59cdf323e9eb2a1ab7df895aca22fab";
 
 /***/ }),
 
-/***/ 626:
+/***/ 636:
 /***/ (function(module, exports) {
 
-module.exports = "/images/Work-Process_1.png?9380b0abc12fec45c70a16d344f493c9";
+module.exports = "/images/Work-Process_1.png?77c92a315ba7ab0a04f4ce4f9b80c303";
 
 /***/ }),
 
-/***/ 627:
+/***/ 637:
 /***/ (function(module, exports) {
 
-module.exports = "/images/Work-Process_2.png?7bf4c4b35abea7073ac985e46dd8394a";
+module.exports = "/images/Work-Process_2.png?0a22659290dd3032bcfb2029ce5abc30";
 
 /***/ }),
 
-/***/ 628:
+/***/ 638:
 /***/ (function(module, exports) {
 
-module.exports = "/images/Work-Process_3.png?835ea809a0a329a5d572d9e84d3d2cc1";
+module.exports = "/images/Work-Process_3.png?466157fd99a1db0b90930c8eaf571f39";
 
 /***/ }),
 
-/***/ 629:
+/***/ 639:
 /***/ (function(module, exports) {
 
-module.exports = "/images/Work-Process_4.png?6eb9df4c0e65390c0c475be8f59703c0";
+module.exports = "/images/Work-Process_4.png?791743ee58fafb4aba1a0e7588445997";
 
 /***/ }),
 
-/***/ 630:
+/***/ 640:
 /***/ (function(module, exports) {
 
-module.exports = "/images/arrow-left.png?3eea75503d5df0f42557018bf0072d9c";
+module.exports = "/images/arrow-left.png?b976d5f3688b34875e8dab13b39745ad";
 
 /***/ })
 

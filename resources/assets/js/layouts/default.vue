@@ -4,13 +4,13 @@
       <img style="position: fixed; top: 0; left: 0; border: 0; z-index: 100" src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub">
     </a>
     <nav-bar/>
-    <v-jumbotron :src="jumbotronBg" gradient="to top right, rgba(63,81,181, .7), rgba(25,32,72, .7)" dark>
+    <v-img :src="jumbotronBg" :lazy-src="jumbotronBg" height="400" gradient="to top right, rgba(63,81,181, .7), rgba(25,32,72, .7)">
       <v-container fill-height text-xs-center>
         <v-layout align-center>
           <v-flex>
-            <h3 class="display-3"><span v-html="$t('hello_guys')"/></h3>
-            <span class="headline">{{ $t('i_am') }} <span class="typelist-skill">{{ $t('a_developer') }}</span></span>
-            <v-divider class="my-3"/>
+            <h3 class="display-3 white--text"><span v-html="$t('hello_guys')"/></h3>
+            <span class="headline white--text">{{ $t('i_am') }} <span class="typelist-skill">{{ $t('a_developer') }}</span></span>
+            <v-divider class="my-3" dark/>
             <v-layout justify-space-around>
               <a href="https://www.facebook.com/nauris.linde" class="social-intro" target="_blank">
                 <font-awesome-icon :icon="['fab', 'facebook-f']" class="fa-hover"/>
@@ -28,8 +28,7 @@
           </v-flex>
         </v-layout>
       </v-container>
-    </v-jumbotron>
-
+    </v-img>
     <v-content>
       <router-view/>
     </v-content>
