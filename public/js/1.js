@@ -1,14 +1,14 @@
 webpackJsonp([1],{
 
-/***/ 600:
+/***/ 610:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__portfolio_vue_vue_type_template_id_54c5180a___ = __webpack_require__(631);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__portfolio_vue_vue_type_script_lang_js___ = __webpack_require__(609);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__portfolio_vue_vue_type_template_id_54c5180a___ = __webpack_require__(641);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__portfolio_vue_vue_type_script_lang_js___ = __webpack_require__(619);
 /* empty harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__node_modules_vue_loader_lib_runtime_componentNormalizer_js__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__node_modules_vue_loader_lib_runtime_componentNormalizer_js__ = __webpack_require__(52);
 
 
 
@@ -29,7 +29,7 @@ var component = Object(__WEBPACK_IMPORTED_MODULE_2__node_modules_vue_loader_lib_
 
 /* hot reload */
 if (false) {
-  var api = require("/var/www/node_modules/vue-hot-reload-api/dist/index.js")
+  var api = require("/home/nauris/Github/naurislinde.com/node_modules/vue-hot-reload-api/dist/index.js")
   api.install(require('vue'))
   if (api.compatible) {
     module.hot.accept()
@@ -51,20 +51,22 @@ component.options.__file = "resources/assets/js/pages/portfolio.vue"
 
 /***/ }),
 
-/***/ 609:
+/***/ 619:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_portfolio_vue_vue_type_script_lang_js___ = __webpack_require__(610);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_portfolio_vue_vue_type_script_lang_js___ = __webpack_require__(620);
 /* unused harmony namespace reexport */
  /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0__node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_portfolio_vue_vue_type_script_lang_js___["a" /* default */]); 
 
 /***/ }),
 
-/***/ 610:
+/***/ 620:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+//
+//
 //
 //
 //
@@ -127,8 +129,8 @@ component.options.__file = "resources/assets/js/pages/portfolio.vue"
         categories: ['all', 'wordpress'],
         tech: ['Wordpress'],
         image: {
-          thumb: __webpack_require__(633),
-          src: __webpack_require__(634)
+          thumb: __webpack_require__(643),
+          src: __webpack_require__(644)
         },
         link: 'http://balticprobiotics.lv'
       }, {
@@ -137,8 +139,8 @@ component.options.__file = "resources/assets/js/pages/portfolio.vue"
         categories: ['all', 'laravel', 'open-source'],
         tech: ['Vue.js', 'Vuetify', 'Laravel'],
         image: {
-          thumb: __webpack_require__(635),
-          src: __webpack_require__(636)
+          thumb: __webpack_require__(645),
+          src: __webpack_require__(646)
         },
         link: 'https://naurislinde.com'
       }, {
@@ -147,8 +149,8 @@ component.options.__file = "resources/assets/js/pages/portfolio.vue"
         categories: ['all', 'laravel', 'open-source'],
         tech: ['Laravel', 'Bootstrap', 'MySQL'],
         image: {
-          thumb: __webpack_require__(637),
-          src: __webpack_require__(638)
+          thumb: __webpack_require__(647),
+          src: __webpack_require__(648)
         },
         github: 'https://github.com/FaZeRs/Boilerplate'
       }],
@@ -172,18 +174,18 @@ component.options.__file = "resources/assets/js/pages/portfolio.vue"
 
 /***/ }),
 
-/***/ 631:
+/***/ 641:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_portfolio_vue_vue_type_template_id_54c5180a___ = __webpack_require__(632);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_portfolio_vue_vue_type_template_id_54c5180a___ = __webpack_require__(642);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_portfolio_vue_vue_type_template_id_54c5180a___["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_portfolio_vue_vue_type_template_id_54c5180a___["b"]; });
 
 
 /***/ }),
 
-/***/ 632:
+/***/ 642:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -290,112 +292,131 @@ var render = function() {
                           attrs: { xs12: "", sm6: "", md4: "" }
                         },
                         [
-                          _c(
-                            "v-card",
-                            [
-                              _c("v-card-media", {
-                                directives: [
-                                  {
-                                    name: "img",
-                                    rawName: "v-img",
-                                    value: { src: project.image.src },
-                                    expression: "{src: project.image.src}"
-                                  }
-                                ],
-                                attrs: {
-                                  src: project.image.thumb,
-                                  height: "200px",
-                                  contain: ""
-                                }
-                              }),
-                              _vm._v(" "),
-                              _c(
-                                "v-card-title",
-                                {
-                                  staticClass: "justify-center",
-                                  attrs: { "primary-title": "" }
-                                },
-                                [
-                                  _c("div", [
-                                    _c("h3", { staticClass: "headline" }, [
-                                      _vm._v(_vm._s(project.name))
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "span",
-                                      { staticClass: "grey--text" },
-                                      _vm._l(project.tech, function(
-                                        tech,
-                                        index
-                                      ) {
-                                        return _c(
-                                          "span",
+                          _c("v-hover", {
+                            scopedSlots: _vm._u([
+                              {
+                                key: "default",
+                                fn: function(ref) {
+                                  var hover = ref.hover
+                                  return _c(
+                                    "v-card",
+                                    { class: "elevation-" + (hover ? 12 : 2) },
+                                    [
+                                      _c("v-img", {
+                                        directives: [
                                           {
-                                            key: index,
-                                            staticClass: "text-xs-center"
-                                          },
-                                          [
-                                            _c("v-chip", [_vm._v(_vm._s(tech))])
-                                          ],
-                                          1
-                                        )
-                                      })
-                                    )
-                                  ])
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "v-card-actions",
-                                [
-                                  _c("v-spacer"),
-                                  _vm._v(" "),
-                                  project.link
-                                    ? _c(
-                                        "v-btn",
-                                        {
-                                          attrs: {
-                                            href: project.link,
-                                            target: "_blank",
-                                            icon: ""
+                                            name: "img",
+                                            rawName: "v-img",
+                                            value: { src: project.image.src },
+                                            expression:
+                                              "{src: project.image.src}"
                                           }
+                                        ],
+                                        attrs: {
+                                          src: project.image.thumb,
+                                          alt: project.name,
+                                          "lazy-src": project.image.thumb,
+                                          height: "200",
+                                          contain: ""
+                                        }
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-card-title",
+                                        {
+                                          staticClass: "justify-center",
+                                          attrs: { "primary-title": "" }
                                         },
                                         [
-                                          _c("v-icon", [
-                                            _vm._v("open_in_browser")
+                                          _c("div", [
+                                            _c(
+                                              "h3",
+                                              { staticClass: "headline" },
+                                              [_vm._v(_vm._s(project.name))]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "span",
+                                              { staticClass: "grey--text" },
+                                              _vm._l(project.tech, function(
+                                                tech,
+                                                index
+                                              ) {
+                                                return _c(
+                                                  "span",
+                                                  {
+                                                    key: index,
+                                                    staticClass:
+                                                      "text-xs-center"
+                                                  },
+                                                  [
+                                                    _c("v-chip", [
+                                                      _vm._v(_vm._s(tech))
+                                                    ])
+                                                  ],
+                                                  1
+                                                )
+                                              })
+                                            )
                                           ])
-                                        ],
-                                        1
-                                      )
-                                    : _vm._e(),
-                                  _vm._v(" "),
-                                  project.github
-                                    ? _c(
-                                        "v-btn",
-                                        {
-                                          attrs: {
-                                            href: project.github,
-                                            target: "_blank",
-                                            icon: ""
-                                          }
-                                        },
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-card-actions",
                                         [
-                                          _c("font-awesome-icon", {
-                                            attrs: {
-                                              icon: ["fab", "github"],
-                                              size: "lg"
-                                            }
-                                          })
+                                          _c("v-spacer"),
+                                          _vm._v(" "),
+                                          project.link
+                                            ? _c(
+                                                "v-btn",
+                                                {
+                                                  attrs: {
+                                                    href: project.link,
+                                                    target: "_blank",
+                                                    icon: ""
+                                                  }
+                                                },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("open_in_browser")
+                                                  ])
+                                                ],
+                                                1
+                                              )
+                                            : _vm._e(),
+                                          _vm._v(" "),
+                                          project.github
+                                            ? _c(
+                                                "v-btn",
+                                                {
+                                                  attrs: {
+                                                    href: project.github,
+                                                    target: "_blank",
+                                                    icon: ""
+                                                  }
+                                                },
+                                                [
+                                                  _c("font-awesome-icon", {
+                                                    attrs: {
+                                                      icon: ["fab", "github"],
+                                                      size: "lg"
+                                                    }
+                                                  })
+                                                ],
+                                                1
+                                              )
+                                            : _vm._e()
                                         ],
                                         1
                                       )
-                                    : _vm._e()
-                                ],
-                                1
-                              )
-                            ],
-                            1
-                          )
+                                    ],
+                                    1
+                                  )
+                                }
+                              }
+                            ])
+                          })
                         ],
                         1
                       )
@@ -421,45 +442,45 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ 633:
+/***/ 643:
 /***/ (function(module, exports) {
 
-module.exports = "/images/baltic_probiotics_thumb.png?986ccbccacf24c4d88086374b2d44a87";
+module.exports = "/images/baltic_probiotics_thumb.png?467ae436896db40344f953af7906e4f6";
 
 /***/ }),
 
-/***/ 634:
+/***/ 644:
 /***/ (function(module, exports) {
 
-module.exports = "/images/baltic_probiotics.png?7c597e2f694d8cd91c2be9b747f36b87";
+module.exports = "/images/baltic_probiotics.png?a428ab0a3d46de5613d390ec7c7007d6";
 
 /***/ }),
 
-/***/ 635:
+/***/ 645:
 /***/ (function(module, exports) {
 
-module.exports = "/images/naurislinde_thumb.png?9d4e6d9b26a81671429482733ae16ed8";
+module.exports = "/images/naurislinde_thumb.png?867e0d316ea82e4ed77d9836c187d0ff";
 
 /***/ }),
 
-/***/ 636:
+/***/ 646:
 /***/ (function(module, exports) {
 
-module.exports = "/images/naurislinde.png?2ee2b01d90ea55f20219699ecddcaf0e";
+module.exports = "/images/naurislinde.png?1e5acaabce0f47b98a5829385874a251";
 
 /***/ }),
 
-/***/ 637:
+/***/ 647:
 /***/ (function(module, exports) {
 
-module.exports = "/images/boilerplate_thumb.png?7b3597fed900de965ced51415df1c3b9";
+module.exports = "/images/boilerplate_thumb.png?5560b841dfba227a54912dbad375d179";
 
 /***/ }),
 
-/***/ 638:
+/***/ 648:
 /***/ (function(module, exports) {
 
-module.exports = "/images/boilerplate.png?76459720248bb6f1e8acb786aab380c3";
+module.exports = "/images/boilerplate.png?0b92fc9980fd0c7e3eb87b6fdb0d4c2e";
 
 /***/ })
 
