@@ -1,44 +1,48 @@
-#
-# PHP Dependencies
-#
-FROM composer:1.7 as vendor
-
-COPY database/ database/
-
-COPY composer.json composer.json
-COPY composer.lock composer.lock
-
-RUN composer install \
-    --ignore-platform-reqs \
-    --no-interaction \
-    --no-plugins \
-    --no-scripts \
-    --prefer-dist
-
-#
-# Frontend
-#
-FROM node:10.9-alpine as frontend
-
-RUN mkdir -p /app/public
-
-COPY package.json webpack.mix.js yarn.lock /app/
-COPY resources/assets/ /app/resources/assets/
-
-WORKDIR /app
-
-RUN yarn install && yarn development
-
-#
-# Application
-#
 FROM php:7.2-fpm-alpine
+
+# Install dev dependencies
+RUN apk add --no-cache --virtual .build-deps \
+    $PHPIZE_DEPS \
+    curl-dev \
+    imagemagick-dev \
+    libtool \
+    libxml2-dev \
+    postgresql-dev \
+    sqlite-dev
+
+# Install production dependencies
+RUN apk add --no-cache \
+    bash \
+    curl \
+    g++ \
+    gcc \
+    git \
+    imagemagick \
+    libc-dev \
+    libpng-dev \
+    make \
+    mysql-client \
+    nodejs \
+    nodejs-npm \
+    yarn \
+    openssh-client \
+    postgresql-libs \
+    rsync
+
+# Install PECL extensions
+RUN pecl install imagick xdebug
+
+# Install and enable php extensions
+RUN docker-php-ext-enable imagick xdebug
+RUN docker-php-ext-install curl iconv mbstring pdo pdo_mysql pdo_pgsql pdo_sqlite pcntl mbstring tokenizer xml gd zip;
+
+# Install composer
+RUN curl -s https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin/ --filename=composer
+ENV COMPOSER_ALLOW_SUPERUSER=1
+ENV PATH="./vendor/bin:$PATH"
+
+# Cleanup dev dependencies
+RUN apk del -f .build-deps
 
 RUN adduser -D portfolio
 USER portfolio
-
-COPY . /var/www/html
-COPY --from=vendor /app/vendor/ /var/www/html/vendor/
-COPY --from=frontend /app/public/js/ /var/www/html/public/js/
-COPY --from=frontend /app/public/css/ /var/www/html/public/css/
-COPY --from=frontend /app/mix-manifest.json /var/www/html/public/mix-manifest.json
