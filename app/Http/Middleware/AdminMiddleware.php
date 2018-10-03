@@ -15,7 +15,7 @@ class AdminMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if (auth()->user()->isAdmin()) {
+        if (auth()->user() && auth()->user()->isAdmin()) {
             return $next($request);
         }
 

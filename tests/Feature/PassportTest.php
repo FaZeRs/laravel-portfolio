@@ -13,10 +13,9 @@ class PassportTest extends TestCase
 
     public function testUserGetDetails()
     {
-        $user = factory(User::class)->create();
-        Passport::actingAs($user);
+        $user = $this->loginAsUser();
 
-        $response = $this->json('POST', '/api/details');
+        $response = $this->json('GET', '/api/details');
 
         $response->assertStatus(200);
         $response->assertJson([
@@ -32,10 +31,9 @@ class PassportTest extends TestCase
 
     public function testLogout()
     {
-        $user = factory(User::class)->create();
-        Passport::actingAs($user);
+        $this->loginAsUser();
 
-        $response = $this->json('POST', '/api/logout');
+        $response = $this->json('GET', '/api/logout');
 
         $response->assertStatus(200);
         $response->assertJson([
@@ -45,7 +43,7 @@ class PassportTest extends TestCase
 
     public function testGuest()
     {
-        $response = $this->json('POST', '/api/details');
+        $response = $this->json('GET', '/api/details');
         $response->assertStatus(401);
     }
 }
