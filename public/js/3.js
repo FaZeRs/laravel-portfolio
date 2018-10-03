@@ -97,7 +97,7 @@ component.options.__file = "resources/assets/js/pages/index.vue"
     return {
       appName: window.config.appName,
       myPhoto: __webpack_require__(627),
-      jumbotronBg: __webpack_require__(190)
+      jumbotronBg: __webpack_require__(191)
     };
   },
   metaInfo: function metaInfo() {
