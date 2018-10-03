@@ -3,8 +3,8 @@
 namespace Tests;
 
 use App\Models\User;
-use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 use Laravel\Passport\Passport;
+use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 
 abstract class TestCase extends BaseTestCase
 {
@@ -13,7 +13,7 @@ abstract class TestCase extends BaseTestCase
     /**
      * Create an user.
      *
-     * @param boolean $admin
+     * @param bool $admin
      *
      * @return mixed
      */

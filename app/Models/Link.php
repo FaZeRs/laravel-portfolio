@@ -25,7 +25,7 @@ class Link extends Model
         'title',
         'project_id',
         'url',
-        'order'
+        'order',
     ];
 
     /**

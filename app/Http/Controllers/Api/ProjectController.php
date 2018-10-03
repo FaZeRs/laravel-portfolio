@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Controller;
 use App\Models\Project;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use App\Http\Resources\ProjectResource;
 
 class ProjectController extends Controller
@@ -28,7 +28,7 @@ class ProjectController extends Controller
     {
         $project = Project::create($request->only('title', 'category_id', 'description', 'visible', 'order', 'status'));
 
-        if($request->has('tags')) {
+        if ($request->has('tags')) {
             $project->tags()->sync($request->get('tags'));
         }
 
@@ -40,7 +40,7 @@ class ProjectController extends Controller
         $project = Project::findOrFail($id);
         $project->update($request->only('title', 'category_id', 'description', 'visible', 'order', 'status'));
 
-        if($request->has('tags')) {
+        if ($request->has('tags')) {
             $project->tags()->sync($request->get('tags'));
         }
 
