@@ -2,7 +2,7 @@ version: '3'
 
 services:
   php:
-    build: .
+    build: ./docker
     container_name: portfolio
     working_dir: /var/www/html
     volumes:
@@ -12,6 +12,14 @@ services:
       - mariadb
       - redis
       - mail
+  horizon:
+    build: ./docker
+    container_name: horizon
+    command: php artisan horizon
+    depends_on:
+      - mariadb
+    volumes:
+      - ./:/var/www/html
   webserver:
     image: nginx:1.15-alpine
     container_name: webserver

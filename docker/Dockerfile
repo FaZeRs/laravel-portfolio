@@ -43,9 +43,9 @@ RUN pecl install imagick xdebug
 
 # Install and enable php extensions
 RUN docker-php-ext-enable imagick xdebug
-RUN docker-php-ext-install curl iconv mbstring pdo pdo_mysql pdo_pgsql pdo_sqlite pcntl mbstring tokenizer xml gd zip opcache;
+RUN docker-php-ext-install curl iconv mbstring pdo pdo_mysql pdo_pgsql pdo_sqlite pcntl mbstring tokenizer xml gd zip opcache bcmath;
 
-COPY docker/php/opcache.ini /usr/local/etc/php/conf.d/opcache.ini
+COPY php/opcache.ini /usr/local/etc/php/conf.d/opcache.ini
 
 # Install composer
 RUN curl -s https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin/ --filename=composer
