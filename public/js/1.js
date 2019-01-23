@@ -29,7 +29,7 @@ var component = Object(__WEBPACK_IMPORTED_MODULE_2__node_modules_vue_loader_lib_
 
 /* hot reload */
 if (false) {
-  var api = require("/home/nauris/Github/naurislinde.com/node_modules/vue-hot-reload-api/dist/index.js")
+  var api = require("C:\\Users\\nauri\\Desktop\\Github\\naurislinde.com\\node_modules\\vue-hot-reload-api\\dist\\index.js")
   api.install(require('vue'))
   if (api.compatible) {
     module.hot.accept()
@@ -132,7 +132,7 @@ component.options.__file = "resources/assets/js/pages/portfolio.vue"
           thumb: __webpack_require__(643),
           src: __webpack_require__(644)
         },
-        link: 'http://balticprobiotics.lv'
+        link: 'https://balticprobiotics.lv'
       }, {
         id: 2,
         name: 'Nauris Linde',
@@ -153,6 +153,16 @@ component.options.__file = "resources/assets/js/pages/portfolio.vue"
           src: __webpack_require__(648)
         },
         github: 'https://github.com/FaZeRs/Boilerplate'
+      }, {
+        id: 4,
+        name: 'Kurzemes bizness',
+        categories: ['all', 'wordpress'],
+        tech: ['Wordpress'],
+        image: {
+          thumb: __webpack_require__(649),
+          src: __webpack_require__(650)
+        },
+        link: 'https://kurzemesbizness.lv/'
       }],
       currentCategory: 'all'
     };
@@ -481,6 +491,20 @@ module.exports = "/images/boilerplate_thumb.png?5560b841dfba227a54912dbad375d179
 /***/ (function(module, exports) {
 
 module.exports = "/images/boilerplate.png?0b92fc9980fd0c7e3eb87b6fdb0d4c2e";
+
+/***/ }),
+
+/***/ 649:
+/***/ (function(module, exports) {
+
+module.exports = "/images/kurzemes_bizness_thumb.png?59df1d9435fa5265cc9a6fe3e570bdd6";
+
+/***/ }),
+
+/***/ 650:
+/***/ (function(module, exports) {
+
+module.exports = "/images/kurzemes_bizness.png?c2283ddeefc4369a73eec7c292bce6d8";
 
 /***/ })
 
