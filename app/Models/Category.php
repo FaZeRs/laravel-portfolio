@@ -4,10 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Translatable\HasTranslations;
+use Backpack\CRUD\CrudTrait;
 
 class Category extends Model
 {
     use HasTranslations;
+    use CrudTrait;
 
     /**
      * The table associated with the model.
