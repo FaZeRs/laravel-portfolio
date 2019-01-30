@@ -36,7 +36,7 @@ docker-compose up -d --build
 
 Access docker environment
 ```
-docker container exec -it laravel-portfolio sh
+docker container exec -it portfolio sh
 ```
 
 Run this command inside terminal to create .env file, install dependencies, generate key, run migrations and tests. 
