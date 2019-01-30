@@ -2,15 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Requests\TagRequest as StoreRequest;
+// VALIDATION: change the requests to match your own file names if you need form validation
+use App\Http\Requests\TagRequest as UpdateRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 
-// VALIDATION: change the requests to match your own file names if you need form validation
-use App\Http\Requests\TagRequest as StoreRequest;
-use App\Http\Requests\TagRequest as UpdateRequest;
-
 /**
- * Class TagCrudController
- * @package App\Http\Controllers\Admin
+ * Class TagCrudController.
  * @property-read CrudPanel $crud
  */
 class TagCrudController extends CrudController
@@ -23,7 +21,7 @@ class TagCrudController extends CrudController
         |--------------------------------------------------------------------------
         */
         $this->crud->setModel('App\Models\Tag');
-        $this->crud->setRoute(config('backpack.base.route_prefix') . '/tag');
+        $this->crud->setRoute(config('backpack.base.route_prefix').'/tag');
         $this->crud->setEntityNameStrings('tag', 'tags');
 
         /*

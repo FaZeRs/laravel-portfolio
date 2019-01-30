@@ -2,9 +2,9 @@
 
 namespace App\Models;
 
+use Backpack\CRUD\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Translatable\HasTranslations;
-use Backpack\CRUD\CrudTrait;
 
 class Category extends Model
 {
