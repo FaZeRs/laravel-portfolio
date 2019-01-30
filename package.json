@@ -34,6 +34,7 @@
     "webpack-bundle-analyzer": "^3.0.3"
   },
   "dependencies": {
+    "@babel/preset-env": "^7.3.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.13",
     "@fortawesome/free-brands-svg-icons": "^5.7.0",
     "@fortawesome/free-solid-svg-icons": "^5.7.0",
@@ -52,17 +53,21 @@
     "vue-recaptcha": "^1.1.1",
     "vue-router": "^3.0.2",
     "vuetify": "^1.4.4",
+    "vuetify-loader": "^1.2.0",
     "vuex": "^3.1.0",
     "vuex-router-sync": "^5.0.0"
   },
   "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ],
     "plugins": [
       "syntax-dynamic-import",
       [
         "transform-imports",
         {
           "vuetify": {
-            "transform": "vuetify/es5/components/${member}",
+            "transform": "vuetify/lib/components/${member}",
             "preventFullImport": true
           }
         }

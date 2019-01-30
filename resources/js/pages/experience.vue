@@ -5,7 +5,7 @@
         <v-flex class="text-xs-center" xs12>
           <h2 class="section-title mb-5">{{ $t('education') }}</h2>
           <v-layout row wrap class="text-xs-left">
-            <v-flex xs12 sm6 fill-height>
+            <v-flex xs12 sm6 d-flex>
               <v-hover>
                 <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 1}`">
                   <div class="edu-block">
@@ -24,7 +24,7 @@
                 </v-card>
               </v-hover>
             </v-flex>
-            <v-flex xs12 sm6 fill-height>
+            <v-flex xs12 sm6 d-flex>
               <v-hover>
                 <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 1}`">
                   <div class="edu-block">
@@ -50,7 +50,7 @@
         <v-flex class="text-xs-center" xs12>
           <h2 class="section-title mb-5">{{ $t('experience') }}</h2>
           <v-layout row wrap class="text-xs-left">
-            <v-flex xs12 sm6>
+            <v-flex xs12 sm6 d-flex>
               <v-hover>
                 <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 1}`">
                   <div class="work-exp-block">
@@ -68,7 +68,7 @@
                 </v-card>
               </v-hover>
             </v-flex>
-            <v-flex xs12 sm6>
+            <v-flex xs12 sm6 d-flex>
               <v-hover>
                 <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 1}`">
                   <div class="work-exp-block">

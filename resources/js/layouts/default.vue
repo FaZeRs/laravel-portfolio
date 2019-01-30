@@ -30,7 +30,9 @@
       </v-container>
     </v-img>
     <v-content>
-      <router-view/>
+      <v-container fluid>
+        <router-view></router-view>
+      </v-container>
     </v-content>
 
     <v-footer class="elevation-0 mt-5 mb-5" color="transparent">

@@ -1,6 +1,7 @@
 const path = require('path')
 const mix = require('laravel-mix')
 const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer')
+const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 
 mix.webpackConfig({
   resolve: {
@@ -20,6 +21,7 @@ mix.webpackConfig({
   },
   plugins: [
     // new BundleAnalyzerPlugin()
+    new VuetifyLoaderPlugin()
   ],
   output: {
     chunkFilename: mix.inProduction() ? 'js/[name].[chunkhash].js' : 'js/[name].js',

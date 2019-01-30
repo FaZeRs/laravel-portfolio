@@ -5,30 +5,30 @@
         <v-flex class="text-xs-center" xs12>
           <h2 class="section-title mb-5">{{ $t('what_i_do') }}</h2>
           <v-layout wrap justify-space-around>
-            <v-flex xs12 sm4>
+            <v-flex xs12 sm4 d-flex>
               <v-hover>
-                <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
-                  <v-img :src="webDevelopment" :alt="$t('web_development')" :lazy-src="webDevelopment" height="200" contain></v-img>
+                <v-card class="pa-3" slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
+                  <v-img :src="webDevelopment" :alt="$t('web_development')" :lazy-src="webDevelopment" height="75" aspect-ratio="1" contain></v-img>
                   <v-card-title primary-title class="justify-center">
                     <h3 class="headline">{{ $t('web_development') }}</h3>
                   </v-card-title>
                 </v-card>
               </v-hover>
             </v-flex>
-            <v-flex xs12 sm4>
+            <v-flex xs12 sm4 d-flex>
               <v-hover>
-                <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
-                  <v-img :src="seoOptimization" :alt="$t('seo_optimization')" :lazy-src="seoOptimization" height="200" contain></v-img>
+                <v-card class="pa-3" slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
+                  <v-img :src="seoOptimization" :alt="$t('seo_optimization')" :lazy-src="seoOptimization" height="75" aspect-ratio="1" contain></v-img>
                   <v-card-title primary-title class="justify-center">
                     <h3 class="headline">{{ $t('seo_optimization') }}</h3>
                   </v-card-title>
                 </v-card>
               </v-hover>
             </v-flex>
-            <v-flex xs12 sm4>
+            <v-flex xs12 sm4 d-flex>
               <v-hover>
-                <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
-                  <v-img :src="serverManagement" :alt="$t('server_management')" :lazy-src="serverManagement" height="200" contain></v-img>
+                <v-card class="pa-3" slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
+                  <v-img :src="serverManagement" :alt="$t('server_management')" :lazy-src="serverManagement" height="75" aspect-ratio="1" contain></v-img>
                   <v-card-title primary-title class="justify-center">
                     <h3 class="headline">{{ $t('server_management') }}</h3>
                   </v-card-title>
