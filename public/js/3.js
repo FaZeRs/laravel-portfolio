@@ -86,6 +86,24 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   layout: 'default',
   metaInfo: function metaInfo() {
@@ -95,7 +113,8 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      sem: __webpack_require__(/*! ../../img/sem.png */ "./resources/img/sem.png")
+      sem: __webpack_require__(/*! ../../img/sem.png */ "./resources/img/sem.png"),
+      giraffe360: __webpack_require__(/*! ../../img/giraffe360.svg */ "./resources/img/giraffe360.svg")
     };
   }
 });
@@ -329,7 +348,7 @@ var render = function() {
                                             },
                                             [
                                               _vm._v(
-                                                "\n                    2016-" +
+                                                "\n                    Jan 2019-" +
                                                   _vm._s(_vm.$t("present")) +
                                                   "\n                  "
                                               )
@@ -342,8 +361,98 @@ var render = function() {
                                             [
                                               _c("img", {
                                                 attrs: {
+                                                  src: _vm.giraffe360,
+                                                  width: "123",
+                                                  alt: "Giraffe360"
+                                                }
+                                              })
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "h4",
+                                            { staticClass: "headline mt-3" },
+                                            [
+                                              _vm._v(
+                                                _vm._s(
+                                                  _vm.$t("giraffe360_position")
+                                                )
+                                              )
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "h6",
+                                            {
+                                              staticClass:
+                                                "color-text title mt-2"
+                                            },
+                                            [
+                                              _c(
+                                                "a",
+                                                {
+                                                  attrs: {
+                                                    href:
+                                                      "https://giraffe360.com",
+                                                    target: "_blank"
+                                                  }
+                                                },
+                                                [_vm._v("Giraffe360")]
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      )
+                                    ]
+                                  )
+                                }
+                              }
+                            ])
+                          })
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-flex",
+                        { attrs: { xs12: "", sm6: "" } },
+                        [
+                          _c("v-hover", {
+                            scopedSlots: _vm._u([
+                              {
+                                key: "default",
+                                fn: function(ref) {
+                                  var hover = ref.hover
+                                  return _c(
+                                    "v-card",
+                                    { class: "elevation-" + (hover ? 12 : 1) },
+                                    [
+                                      _c(
+                                        "div",
+                                        { staticClass: "work-exp-block" },
+                                        [
+                                          _c(
+                                            "div",
+                                            {
+                                              staticClass:
+                                                "working-duration title d-block"
+                                            },
+                                            [
+                                              _vm._v(
+                                                "\n                    Aug 2016 - Jan 2019\n                  "
+                                              )
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "div",
+                                            { staticClass: "work-exp-logo" },
+                                            [
+                                              _c("img", {
+                                                attrs: {
                                                   src: _vm.sem,
-                                                  alt: "SIA Sem.lv"
+                                                  width: "123",
+                                                  alt: "Sem.lv"
                                                 }
                                               })
                                             ]
@@ -370,11 +479,11 @@ var render = function() {
                                                 "a",
                                                 {
                                                   attrs: {
-                                                    href: "https://sem.lv/",
+                                                    href: "https://sem.lv",
                                                     target: "_blank"
                                                   }
                                                 },
-                                                [_vm._v("SIA Sem.lv")]
+                                                [_vm._v("Sem.lv")]
                                               )
                                             ]
                                           )
@@ -409,6 +518,17 @@ var staticRenderFns = []
 render._withStripped = true
 
 
+
+/***/ }),
+
+/***/ "./resources/img/giraffe360.svg":
+/*!**************************************!*\
+  !*** ./resources/img/giraffe360.svg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/giraffe360.svg?a9e2cba64c07ac89ff671fddd1e2a9ae";
 
 /***/ }),
 

@@ -56,9 +56,4 @@ class User extends Authenticatable
         'created_at',
         'updated_at',
     ];
-
-    public function isAdmin()
-    {
-        return $this->is_admin;
-    }
 }
