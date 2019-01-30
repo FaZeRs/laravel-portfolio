@@ -1,4 +1,4 @@
-FROM php:7.2-fpm-alpine
+FROM php:7.3-fpm-alpine
 
 # Install dev dependencies
 RUN apk add --no-cache --virtual .build-deps \
@@ -27,7 +27,8 @@ RUN apk add --no-cache \
     yarn \
     openssh-client \
     postgresql-libs \
-    rsync
+    rsync \
+    libzip-dev
 
 # Don't clear env variables
 # This is very important since it will allow us to read environment variables from the container.
@@ -39,7 +40,7 @@ ENV PHP_OPCACHE_VALIDATE_TIMESTAMPS="0" \
     PHP_OPCACHE_MAX_WASTED_PERCENTAGE="10"
 
 # Install PECL extensions
-RUN pecl install imagick xdebug
+RUN pecl install imagick xdebug-2.7.0beta1
 
 # Install and enable php extensions
 RUN docker-php-ext-enable imagick xdebug
@@ -49,12 +50,11 @@ COPY php/opcache.ini /usr/local/etc/php/conf.d/opcache.ini
 
 # Install composer
 RUN curl -s https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin/ --filename=composer
-ENV COMPOSER_ALLOW_SUPERUSER=1
-ENV PATH="./vendor/bin:$PATH"
-RUN composer global require hirak/prestissimo
 
 # Cleanup dev dependencies
 RUN apk del -f .build-deps
 
 RUN adduser -D portfolio
 USER portfolio
+
+RUN composer global require hirak/prestissimo
