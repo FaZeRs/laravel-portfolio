@@ -24,7 +24,6 @@ RUN apk add --no-cache \
     mysql-client \
     nodejs \
     nodejs-npm \
-    yarn \
     openssh-client \
     postgresql-libs \
     rsync \
