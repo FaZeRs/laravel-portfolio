@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[5],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[6],{
 
 /***/ "./node_modules/laravel-mix/node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/errors/404.vue?vue&type=template&id=3c7084bd&":
 /*!*********************************************************************************************************************************************************************************************************************************!*\

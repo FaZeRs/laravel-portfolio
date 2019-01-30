@@ -1,70 +1,14 @@
-webpackJsonp([0],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[0],{
 
-/***/ 609:
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/portfolio.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/portfolio.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************/
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__services_vue_vue_type_template_id_fc7e570a___ = __webpack_require__(631);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_vue_vue_type_script_lang_js___ = __webpack_require__(617);
-/* empty harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__node_modules_vue_loader_lib_runtime_componentNormalizer_js__ = __webpack_require__(52);
-
-
-
-
-
-/* normalize component */
-
-var component = Object(__WEBPACK_IMPORTED_MODULE_2__node_modules_vue_loader_lib_runtime_componentNormalizer_js__["a" /* default */])(
-  __WEBPACK_IMPORTED_MODULE_1__services_vue_vue_type_script_lang_js___["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_0__services_vue_vue_type_template_id_fc7e570a___["a" /* render */],
-  __WEBPACK_IMPORTED_MODULE_0__services_vue_vue_type_template_id_fc7e570a___["b" /* staticRenderFns */],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) {
-  var api = require("C:\\Users\\nauri\\Desktop\\Github\\naurislinde.com\\node_modules\\vue-hot-reload-api\\dist\\index.js")
-  api.install(require('vue'))
-  if (api.compatible) {
-    module.hot.accept()
-    if (!module.hot.data) {
-      api.createRecord('fc7e570a', component.options)
-    } else {
-      api.reload('fc7e570a', component.options)
-    }
-    module.hot.accept("./services.vue?vue&type=template&id=fc7e570a&", function () {
-      api.rerender('fc7e570a', {
-        render: render,
-        staticRenderFns: staticRenderFns
-      })
-    })
-  }
-}
-component.options.__file = "resources/assets/js/pages/services.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ 617:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_services_vue_vue_type_script_lang_js___ = __webpack_require__(618);
-/* unused harmony namespace reexport */
- /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0__node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_services_vue_vue_type_script_lang_js___["a" /* default */]); 
-
-/***/ }),
-
-/***/ 618:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
+__webpack_require__.r(__webpack_exports__);
 //
 //
 //
@@ -113,104 +57,88 @@ component.options.__file = "resources/assets/js/pages/services.vue"
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["a"] = ({
+/* harmony default export */ __webpack_exports__["default"] = ({
   layout: 'default',
   metaInfo: function metaInfo() {
-    return { title: this.$t('services') };
+    return {
+      title: this.$t('portfolio')
+    };
   },
-
   data: function data() {
     return {
       title: window.config.appName,
-      webDevelopment: __webpack_require__(633),
-      seoOptimization: __webpack_require__(634),
-      serverManagement: __webpack_require__(635),
-      workProcess1: __webpack_require__(636),
-      workProcess2: __webpack_require__(637),
-      workProcess3: __webpack_require__(638),
-      workProcess4: __webpack_require__(639),
-      arrowLeft: __webpack_require__(640)
+      projects: [{
+        id: 1,
+        name: 'Baltic Probiotics',
+        categories: ['all', 'wordpress'],
+        tech: ['Wordpress'],
+        image: {
+          thumb: __webpack_require__(/*! ../../img/baltic_probiotics_thumb.png */ "./resources/img/baltic_probiotics_thumb.png"),
+          src: __webpack_require__(/*! ../../img/baltic_probiotics.png */ "./resources/img/baltic_probiotics.png")
+        },
+        link: 'https://balticprobiotics.lv'
+      }, {
+        id: 2,
+        name: 'Nauris Linde',
+        categories: ['all', 'laravel', 'open-source'],
+        tech: ['Vue.js', 'Vuetify', 'Laravel'],
+        image: {
+          thumb: __webpack_require__(/*! ../../img/naurislinde_thumb.png */ "./resources/img/naurislinde_thumb.png"),
+          src: __webpack_require__(/*! ../../img/naurislinde.png */ "./resources/img/naurislinde.png")
+        },
+        link: 'https://naurislinde.com'
+      }, {
+        id: 3,
+        name: 'Laravel Boilerplate CMS',
+        categories: ['all', 'laravel', 'open-source'],
+        tech: ['Laravel', 'Bootstrap', 'MySQL'],
+        image: {
+          thumb: __webpack_require__(/*! ../../img/boilerplate_thumb.png */ "./resources/img/boilerplate_thumb.png"),
+          src: __webpack_require__(/*! ../../img/boilerplate.png */ "./resources/img/boilerplate.png")
+        },
+        github: 'https://github.com/FaZeRs/Boilerplate'
+      }, {
+        id: 4,
+        name: 'Kurzemes bizness',
+        categories: ['all', 'wordpress'],
+        tech: ['Wordpress'],
+        image: {
+          thumb: __webpack_require__(/*! ../../img/kurzemes_bizness_thumb.png */ "./resources/img/kurzemes_bizness_thumb.png"),
+          src: __webpack_require__(/*! ../../img/kurzemes_bizness.png */ "./resources/img/kurzemes_bizness.png")
+        },
+        link: 'https://kurzemesbizness.lv/'
+      }],
+      currentCategory: 'all'
     };
+  },
+  computed: {
+    filteredProjects: function filteredProjects() {
+      var filter = this.currentCategory;
+      return this.projects.filter(function (project) {
+        return project.categories.indexOf(filter) !== -1;
+      });
+    }
+  },
+  methods: {
+    filter: function filter(category) {
+      this.currentCategory = category;
+    }
   }
 });
 
 /***/ }),
 
-/***/ 631:
+/***/ "./node_modules/laravel-mix/node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/portfolio.vue?vue&type=template&id=e0736ba2&":
+/*!********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/laravel-mix/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/portfolio.vue?vue&type=template&id=e0736ba2& ***!
+  \********************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_services_vue_vue_type_template_id_fc7e570a___ = __webpack_require__(632);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_services_vue_vue_type_template_id_fc7e570a___["a"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_services_vue_vue_type_template_id_fc7e570a___["b"]; });
-
-
-/***/ }),
-
-/***/ 632:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return staticRenderFns; });
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -224,132 +152,93 @@ var render = function() {
         [
           _c(
             "v-layout",
+            { attrs: { "align-center": "" } },
             [
               _c(
                 "v-flex",
                 { staticClass: "text-xs-center", attrs: { xs12: "" } },
                 [
                   _c("h2", { staticClass: "section-title mb-5" }, [
-                    _vm._v(_vm._s(_vm.$t("what_i_do")))
+                    _vm._v(_vm._s(_vm.$t("my_work")))
                   ]),
                   _vm._v(" "),
                   _c(
                     "v-layout",
-                    { attrs: { wrap: "", "justify-space-around": "" } },
+                    { staticClass: "mb-2", attrs: { row: "", wrap: "" } },
                     [
                       _c(
                         "v-flex",
-                        { attrs: { xs12: "", sm4: "" } },
+                        { attrs: { xs12: "", sm12: "", "text-xs-center": "" } },
                         [
-                          _c("v-hover", {
-                            scopedSlots: _vm._u([
-                              {
-                                key: "default",
-                                fn: function(ref) {
-                                  var hover = ref.hover
-                                  return _c(
-                                    "v-card",
-                                    { class: "elevation-" + (hover ? 12 : 2) },
-                                    [
-                                      _c("v-img", {
-                                        attrs: {
-                                          src: _vm.webDevelopment,
-                                          alt: _vm.$t("web_development"),
-                                          "lazy-src": _vm.webDevelopment,
-                                          height: "200",
-                                          contain: ""
-                                        }
-                                      }),
-                                      _vm._v(" "),
-                                      _c(
-                                        "v-card-title",
-                                        {
-                                          staticClass: "justify-center",
-                                          attrs: { "primary-title": "" }
-                                        },
-                                        [
-                                          _c(
-                                            "h3",
-                                            { staticClass: "headline" },
-                                            [
-                                              _vm._v(
-                                                _vm._s(
-                                                  _vm.$t("web_development")
-                                                )
-                                              )
-                                            ]
-                                          )
-                                        ]
-                                      )
-                                    ],
-                                    1
-                                  )
+                          _c(
+                            "v-btn",
+                            {
+                              attrs: { small: "" },
+                              on: {
+                                click: function($event) {
+                                  _vm.filter("all")
                                 }
                               }
-                            ])
-                          })
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-flex",
-                        { attrs: { xs12: "", sm4: "" } },
-                        [
-                          _c("v-hover", {
-                            scopedSlots: _vm._u([
-                              {
-                                key: "default",
-                                fn: function(ref) {
-                                  var hover = ref.hover
-                                  return _c(
-                                    "v-card",
-                                    { class: "elevation-" + (hover ? 12 : 2) },
-                                    [
-                                      _c("v-img", {
-                                        attrs: {
-                                          src: _vm.seoOptimization,
-                                          alt: _vm.$t("seo_optimization"),
-                                          "lazy-src": _vm.seoOptimization,
-                                          height: "200",
-                                          contain: ""
-                                        }
-                                      }),
-                                      _vm._v(" "),
-                                      _c(
-                                        "v-card-title",
-                                        {
-                                          staticClass: "justify-center",
-                                          attrs: { "primary-title": "" }
-                                        },
-                                        [
-                                          _c(
-                                            "h3",
-                                            { staticClass: "headline" },
-                                            [
-                                              _vm._v(
-                                                _vm._s(
-                                                  _vm.$t("seo_optimization")
-                                                )
-                                              )
-                                            ]
-                                          )
-                                        ]
-                                      )
-                                    ],
-                                    1
-                                  )
+                            },
+                            [_vm._v(_vm._s(_vm.$t("All")))]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-btn",
+                            {
+                              attrs: { small: "" },
+                              on: {
+                                click: function($event) {
+                                  _vm.filter("wordpress")
                                 }
                               }
-                            ])
-                          })
+                            },
+                            [_vm._v(_vm._s(_vm.$t("Wordpress")))]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-btn",
+                            {
+                              attrs: { small: "" },
+                              on: {
+                                click: function($event) {
+                                  _vm.filter("laravel")
+                                }
+                              }
+                            },
+                            [_vm._v(_vm._s(_vm.$t("Laravel")))]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-btn",
+                            {
+                              attrs: { small: "" },
+                              on: {
+                                click: function($event) {
+                                  _vm.filter("open-source")
+                                }
+                              }
+                            },
+                            [_vm._v(_vm._s(_vm.$t("Open source")))]
+                          )
                         ],
                         1
-                      ),
-                      _vm._v(" "),
-                      _c(
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-layout",
+                    { attrs: { row: "", wrap: "" } },
+                    _vm._l(_vm.filteredProjects, function(project, index) {
+                      return _c(
                         "v-flex",
-                        { attrs: { xs12: "", sm4: "" } },
+                        {
+                          key: index,
+                          class: [project.category],
+                          attrs: { xs12: "", sm6: "", md4: "" }
+                        },
                         [
                           _c("v-hover", {
                             scopedSlots: _vm._u([
@@ -362,10 +251,19 @@ var render = function() {
                                     { class: "elevation-" + (hover ? 12 : 2) },
                                     [
                                       _c("v-img", {
+                                        directives: [
+                                          {
+                                            name: "img",
+                                            rawName: "v-img",
+                                            value: { src: project.image.src },
+                                            expression:
+                                              "{src: project.image.src}"
+                                          }
+                                        ],
                                         attrs: {
-                                          src: _vm.serverManagement,
-                                          alt: _vm.$t("server_management"),
-                                          "lazy-src": _vm.serverManagement,
+                                          src: project.image.thumb,
+                                          alt: project.name,
+                                          "lazy-src": project.image.thumb,
                                           height: "200",
                                           contain: ""
                                         }
@@ -378,18 +276,87 @@ var render = function() {
                                           attrs: { "primary-title": "" }
                                         },
                                         [
-                                          _c(
-                                            "h3",
-                                            { staticClass: "headline" },
-                                            [
-                                              _vm._v(
-                                                _vm._s(
-                                                  _vm.$t("server_management")
+                                          _c("div", [
+                                            _c(
+                                              "h3",
+                                              { staticClass: "headline" },
+                                              [_vm._v(_vm._s(project.name))]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "span",
+                                              { staticClass: "grey--text" },
+                                              _vm._l(project.tech, function(
+                                                tech,
+                                                index
+                                              ) {
+                                                return _c(
+                                                  "span",
+                                                  {
+                                                    key: index,
+                                                    staticClass:
+                                                      "text-xs-center"
+                                                  },
+                                                  [
+                                                    _c("v-chip", [
+                                                      _vm._v(_vm._s(tech))
+                                                    ])
+                                                  ],
+                                                  1
                                                 )
-                                              )
-                                            ]
-                                          )
+                                              })
+                                            )
+                                          ])
                                         ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-card-actions",
+                                        [
+                                          _c("v-spacer"),
+                                          _vm._v(" "),
+                                          project.link
+                                            ? _c(
+                                                "v-btn",
+                                                {
+                                                  attrs: {
+                                                    href: project.link,
+                                                    target: "_blank",
+                                                    icon: ""
+                                                  }
+                                                },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("open_in_browser")
+                                                  ])
+                                                ],
+                                                1
+                                              )
+                                            : _vm._e(),
+                                          _vm._v(" "),
+                                          project.github
+                                            ? _c(
+                                                "v-btn",
+                                                {
+                                                  attrs: {
+                                                    href: project.github,
+                                                    target: "_blank",
+                                                    icon: ""
+                                                  }
+                                                },
+                                                [
+                                                  _c("font-awesome-icon", {
+                                                    attrs: {
+                                                      icon: ["fab", "github"],
+                                                      size: "lg"
+                                                    }
+                                                  })
+                                                ],
+                                                1
+                                              )
+                                            : _vm._e()
+                                        ],
+                                        1
                                       )
                                     ],
                                     1
@@ -401,306 +368,7 @@ var render = function() {
                         ],
                         1
                       )
-                    ],
-                    1
-                  )
-                ],
-                1
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "v-layout",
-            { staticClass: "mt-5 mb-5 pa-5" },
-            [
-              _c(
-                "v-flex",
-                { staticClass: "text-xs-center", attrs: { xs12: "" } },
-                [
-                  _c("h2", { staticClass: "section-title mb-5" }, [
-                    _vm._v(_vm._s(_vm.$t("how_i_work")))
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "v-layout",
-                    {
-                      attrs: {
-                        row: "",
-                        "fill-height": "",
-                        "align-center": "",
-                        wrap: ""
-                      }
-                    },
-                    [
-                      _c(
-                        "v-flex",
-                        { attrs: { xs12: "", sm5: "" } },
-                        [
-                          _c(
-                            "v-card",
-                            {
-                              staticClass: "elevation-0",
-                              attrs: { color: "transparent" }
-                            },
-                            [
-                              _c("v-img", {
-                                attrs: {
-                                  src: _vm.workProcess1,
-                                  alt: _vm.$t("planing_and_research"),
-                                  "lazy-src": _vm.workProcess1,
-                                  height: "200",
-                                  contain: ""
-                                }
-                              }),
-                              _vm._v(" "),
-                              _c("v-hover", {
-                                scopedSlots: _vm._u([
-                                  {
-                                    key: "default",
-                                    fn: function(ref) {
-                                      var hover = ref.hover
-                                      return _c(
-                                        "div",
-                                        {
-                                          staticClass: "work-process-text mt-5",
-                                          class: "elevation-" + (hover ? 12 : 1)
-                                        },
-                                        [
-                                          _c(
-                                            "h4",
-                                            { staticClass: "block-title" },
-                                            [
-                                              _vm._v(
-                                                "\n                    " +
-                                                  _vm._s(
-                                                    _vm.$t(
-                                                      "planing_and_research"
-                                                    )
-                                                  ) +
-                                                  "\n                  "
-                                              )
-                                            ]
-                                          )
-                                        ]
-                                      )
-                                    }
-                                  }
-                                ])
-                              })
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-flex",
-                        {
-                          staticClass: "hidden-xs-only",
-                          attrs: { xs12: "", sm2: "" }
-                        },
-                        [_c("img", { attrs: { src: _vm.arrowLeft, alt: "" } })]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-flex",
-                        { attrs: { xs12: "", sm5: "" } },
-                        [
-                          _c(
-                            "v-card",
-                            {
-                              staticClass: "elevation-0",
-                              attrs: { color: "transparent" }
-                            },
-                            [
-                              _c("v-img", {
-                                attrs: {
-                                  src: _vm.workProcess2,
-                                  alt: _vm.$t("design_and_development"),
-                                  "lazy-src": _vm.workProcess2,
-                                  height: "200",
-                                  contain: ""
-                                }
-                              }),
-                              _vm._v(" "),
-                              _c("v-hover", {
-                                scopedSlots: _vm._u([
-                                  {
-                                    key: "default",
-                                    fn: function(ref) {
-                                      var hover = ref.hover
-                                      return _c(
-                                        "div",
-                                        {
-                                          staticClass: "work-process-text mt-5",
-                                          class: "elevation-" + (hover ? 12 : 1)
-                                        },
-                                        [
-                                          _c(
-                                            "h4",
-                                            { staticClass: "block-title" },
-                                            [
-                                              _vm._v(
-                                                "\n                    " +
-                                                  _vm._s(
-                                                    _vm.$t(
-                                                      "design_and_development"
-                                                    )
-                                                  ) +
-                                                  "\n                  "
-                                              )
-                                            ]
-                                          )
-                                        ]
-                                      )
-                                    }
-                                  }
-                                ])
-                              })
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-flex",
-                        { attrs: { xs12: "", sm5: "" } },
-                        [
-                          _c(
-                            "v-card",
-                            {
-                              staticClass: "elevation-0",
-                              attrs: { color: "transparent" }
-                            },
-                            [
-                              _c("v-img", {
-                                attrs: {
-                                  src: _vm.workProcess3,
-                                  alt: _vm.$t("testing_and_bug_fixing"),
-                                  "lazy-src": _vm.workProcess3,
-                                  height: "200",
-                                  contain: ""
-                                }
-                              }),
-                              _vm._v(" "),
-                              _c("v-hover", {
-                                scopedSlots: _vm._u([
-                                  {
-                                    key: "default",
-                                    fn: function(ref) {
-                                      var hover = ref.hover
-                                      return _c(
-                                        "div",
-                                        {
-                                          staticClass: "work-process-text mt-5",
-                                          class: "elevation-" + (hover ? 12 : 1)
-                                        },
-                                        [
-                                          _c(
-                                            "h4",
-                                            { staticClass: "block-title" },
-                                            [
-                                              _vm._v(
-                                                "\n                    " +
-                                                  _vm._s(
-                                                    _vm.$t(
-                                                      "testing_and_bug_fixing"
-                                                    )
-                                                  ) +
-                                                  "\n                  "
-                                              )
-                                            ]
-                                          )
-                                        ]
-                                      )
-                                    }
-                                  }
-                                ])
-                              })
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-flex",
-                        {
-                          staticClass: "hidden-xs-only",
-                          attrs: { xs12: "", sm2: "" }
-                        },
-                        [_c("img", { attrs: { src: _vm.arrowLeft, alt: "" } })]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-flex",
-                        { attrs: { xs12: "", sm5: "" } },
-                        [
-                          _c(
-                            "v-card",
-                            {
-                              staticClass: "elevation-0",
-                              attrs: { color: "transparent" }
-                            },
-                            [
-                              _c("v-img", {
-                                attrs: {
-                                  src: _vm.workProcess4,
-                                  alt: _vm.$t("project_launch_and_support"),
-                                  "lazy-src": _vm.workProcess4,
-                                  height: "200",
-                                  contain: ""
-                                }
-                              }),
-                              _vm._v(" "),
-                              _c("v-hover", {
-                                scopedSlots: _vm._u([
-                                  {
-                                    key: "default",
-                                    fn: function(ref) {
-                                      var hover = ref.hover
-                                      return _c(
-                                        "div",
-                                        {
-                                          staticClass: "work-process-text mt-5",
-                                          class: "elevation-" + (hover ? 12 : 1)
-                                        },
-                                        [
-                                          _c(
-                                            "h4",
-                                            { staticClass: "block-title" },
-                                            [
-                                              _vm._v(
-                                                "\n                    " +
-                                                  _vm._s(
-                                                    _vm.$t(
-                                                      "project_launch_and_support"
-                                                    )
-                                                  ) +
-                                                  "\n                  "
-                                              )
-                                            ]
-                                          )
-                                        ]
-                                      )
-                                    }
-                                  }
-                                ])
-                              })
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      )
-                    ],
-                    1
+                    })
                   )
                 ],
                 1
@@ -722,60 +390,161 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ 633:
+/***/ "./resources/img/baltic_probiotics.png":
+/*!*********************************************!*\
+  !*** ./resources/img/baltic_probiotics.png ***!
+  \*********************************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/web-development.png?78653efbf01901a2c6ba7d6a79711a10";
+module.exports = "/images/baltic_probiotics.png?a428ab0a3d46de5613d390ec7c7007d6";
 
 /***/ }),
 
-/***/ 634:
+/***/ "./resources/img/baltic_probiotics_thumb.png":
+/*!***************************************************!*\
+  !*** ./resources/img/baltic_probiotics_thumb.png ***!
+  \***************************************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/seo-optimization.png?1871e233b5dd84a644a144b1d406b31d";
+module.exports = "/images/baltic_probiotics_thumb.png?467ae436896db40344f953af7906e4f6";
 
 /***/ }),
 
-/***/ 635:
+/***/ "./resources/img/boilerplate.png":
+/*!***************************************!*\
+  !*** ./resources/img/boilerplate.png ***!
+  \***************************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/server-management.png?e59cdf323e9eb2a1ab7df895aca22fab";
+module.exports = "/images/boilerplate.png?0b92fc9980fd0c7e3eb87b6fdb0d4c2e";
 
 /***/ }),
 
-/***/ 636:
+/***/ "./resources/img/boilerplate_thumb.png":
+/*!*********************************************!*\
+  !*** ./resources/img/boilerplate_thumb.png ***!
+  \*********************************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/Work-Process_1.png?77c92a315ba7ab0a04f4ce4f9b80c303";
+module.exports = "/images/boilerplate_thumb.png?5560b841dfba227a54912dbad375d179";
 
 /***/ }),
 
-/***/ 637:
+/***/ "./resources/img/kurzemes_bizness.png":
+/*!********************************************!*\
+  !*** ./resources/img/kurzemes_bizness.png ***!
+  \********************************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/Work-Process_2.png?0a22659290dd3032bcfb2029ce5abc30";
+module.exports = "/images/kurzemes_bizness.png?c2283ddeefc4369a73eec7c292bce6d8";
 
 /***/ }),
 
-/***/ 638:
+/***/ "./resources/img/kurzemes_bizness_thumb.png":
+/*!**************************************************!*\
+  !*** ./resources/img/kurzemes_bizness_thumb.png ***!
+  \**************************************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/Work-Process_3.png?466157fd99a1db0b90930c8eaf571f39";
+module.exports = "/images/kurzemes_bizness_thumb.png?59df1d9435fa5265cc9a6fe3e570bdd6";
 
 /***/ }),
 
-/***/ 639:
+/***/ "./resources/img/naurislinde.png":
+/*!***************************************!*\
+  !*** ./resources/img/naurislinde.png ***!
+  \***************************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/Work-Process_4.png?791743ee58fafb4aba1a0e7588445997";
+module.exports = "/images/naurislinde.png?1e5acaabce0f47b98a5829385874a251";
 
 /***/ }),
 
-/***/ 640:
+/***/ "./resources/img/naurislinde_thumb.png":
+/*!*********************************************!*\
+  !*** ./resources/img/naurislinde_thumb.png ***!
+  \*********************************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/arrow-left.png?b976d5f3688b34875e8dab13b39745ad";
+module.exports = "/images/naurislinde_thumb.png?867e0d316ea82e4ed77d9836c187d0ff";
+
+/***/ }),
+
+/***/ "./resources/js/pages/portfolio.vue":
+/*!******************************************!*\
+  !*** ./resources/js/pages/portfolio.vue ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _portfolio_vue_vue_type_template_id_e0736ba2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./portfolio.vue?vue&type=template&id=e0736ba2& */ "./resources/js/pages/portfolio.vue?vue&type=template&id=e0736ba2&");
+/* harmony import */ var _portfolio_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./portfolio.vue?vue&type=script&lang=js& */ "./resources/js/pages/portfolio.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _portfolio_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _portfolio_vue_vue_type_template_id_e0736ba2___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _portfolio_vue_vue_type_template_id_e0736ba2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/pages/portfolio.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/pages/portfolio.vue?vue&type=script&lang=js&":
+/*!*******************************************************************!*\
+  !*** ./resources/js/pages/portfolio.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_portfolio_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./portfolio.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/portfolio.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_portfolio_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/pages/portfolio.vue?vue&type=template&id=e0736ba2&":
+/*!*************************************************************************!*\
+  !*** ./resources/js/pages/portfolio.vue?vue&type=template&id=e0736ba2& ***!
+  \*************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_laravel_mix_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_portfolio_vue_vue_type_template_id_e0736ba2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/laravel-mix/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./portfolio.vue?vue&type=template&id=e0736ba2& */ "./node_modules/laravel-mix/node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/portfolio.vue?vue&type=template&id=e0736ba2&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_laravel_mix_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_portfolio_vue_vue_type_template_id_e0736ba2___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_laravel_mix_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_portfolio_vue_vue_type_template_id_e0736ba2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
 
 /***/ })
 
-});
+}]);

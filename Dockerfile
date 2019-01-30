@@ -23,7 +23,7 @@ FROM node:10.9-alpine as frontend
 RUN mkdir -p /app/public
 
 COPY package.json webpack.mix.js yarn.lock /app/
-COPY resources/assets/ /app/resources/assets/
+COPY resources/ /app/resources/
 
 WORKDIR /app
 

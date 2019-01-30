@@ -1,44 +1,29 @@
 const path = require('path')
 const mix = require('laravel-mix')
 const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer')
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
-
-mix.config.vue.esModule = true
 
 mix.webpackConfig({
   resolve: {
     extensions: ['.js', '.vue'],
     alias: {
-      '~': path.join(__dirname, './resources/assets/js'),
-      Components: path.resolve(__dirname, 'resources/assets/js/components'),
-      Lang: path.resolve(__dirname, 'resources/assets/js/lang'),
-      Layouts: path.resolve(__dirname, 'resources/assets/js/layouts'),
-      Middleware: path.resolve(__dirname, 'resources/assets/js/middleware'),
-      Pages: path.resolve(__dirname, 'resources/assets/js/pages'),
-      Partials: path.resolve(__dirname, 'resources/assets/js/partials'),
-      Plugins: path.resolve(__dirname, 'resources/assets/js/plugins'),
-      Routes: path.resolve(__dirname, 'resources/assets/js/router'),
-      Store: path.resolve(__dirname, 'resources/assets/js/store')
+      '~': path.join(__dirname, './resources/js'),
+      Components: path.resolve(__dirname, 'resources/js/components'),
+      Lang: path.resolve(__dirname, 'resources/js/lang'),
+      Layouts: path.resolve(__dirname, 'resources/js/layouts'),
+      Middleware: path.resolve(__dirname, 'resources/js/middleware'),
+      Pages: path.resolve(__dirname, 'resources/js/pages'),
+      Partials: path.resolve(__dirname, 'resources/js/partials'),
+      Plugins: path.resolve(__dirname, 'resources/js/plugins'),
+      Routes: path.resolve(__dirname, 'resources/js/router'),
+      Store: path.resolve(__dirname, 'resources/js/store')
     }
-  },
-  module: {
-    rules: [
-      {
-        test: /\.styl$/,
-        loader: ['style-loader', 'css-loader', 'stylus-loader']
-      }
-    ]
   },
   plugins: [
     // new BundleAnalyzerPlugin()
-    new VueLoaderPlugin()
   ],
   output: {
     chunkFilename: mix.inProduction() ? 'js/[name].[chunkhash].js' : 'js/[name].js',
     publicPath: mix.config.hmr ? '//localhost:8000' : '/'
-  },
-  node: {
-    fs: 'empty'
   }
 })
 
@@ -47,8 +32,8 @@ mix.browserSync({
   open: false
 })
 
-mix.js('resources/assets/js/app.js', 'public/js')
-mix.sass('resources/assets/sass/app.scss', 'public/css')
+mix.js('resources/js/app.js', 'public/js')
+mix.sass('resources/sass/app.scss', 'public/css')
 
 if (mix.inProduction()) {
   mix.extract([
