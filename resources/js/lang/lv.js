@@ -28,7 +28,7 @@ export const lv = {
   'a_developer': 'PHP Programmētājs',
 
   'about_me': 'Par Mani',
-  'hello_i_am': 'Sveiki! Es esmu <strong>Nauris Linde</strong>, 23 gadus jauns PHP programmētājs no Latvijas. Pašlaik strādāju SIA Sem.lv. Nodarbojos ar programmēšanu 4 gadus un specializējos Laravel mājaslapu izstrādē. Visi mani projekti ir bāzēti uz PHP un citām modernām tīmekļa tehnoloģijām (OO-PHP, MVC-pattern, MySQL, jQuery, AJAX, HTML5, CSS3, XML/JSON, Composer, Yarn). Varat atrast mani',
+  'hello_i_am': 'Sveiki! Es esmu <strong>Nauris Linde</strong>, 24 gadus jauns PHP programmētājs no Latvijas. Pašlaik strādāju SIA Sem.lv. Nodarbojos ar programmēšanu 4 gadus un specializējos Laravel mājaslapu izstrādē. Visi mani projekti ir bāzēti uz PHP un citām modernām tīmekļa tehnoloģijām (OO-PHP, MVC-pattern, MySQL, jQuery, AJAX, HTML5, CSS3, XML/JSON, Composer, Yarn). Varat atrast mani',
 
   'what_i_do': 'Ko es daru?',
   'web_development': 'Mājaslapu Izstrāde',

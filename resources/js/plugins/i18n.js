@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
-import axios from 'axios'
+import axios from '~/plugins/axios'
 import { messages } from '~/lang/messages';
 import Cookies from "js-cookie";
 

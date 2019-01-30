@@ -28,7 +28,7 @@ export const en = {
   'a_developer': 'a Backend Web Developer',
 
   'about_me': 'About me',
-  'hello_i_am': "Hello, I’m <strong>Nauris Linde</strong>, 23 years young backend web developer based in Latvia. Currently working as PHP Developer at Sem.lv. I have been programming for 4 years and I'm specialized in Laravel framework. All my projects are based on PHP in conjunction with other modern web technologies (OO-PHP, MVC-pattern, MySQL, jQuery, AJAX, HTML5, CSS3, XML/JSON, Composer, Yarn). Find me on",
+  'hello_i_am': "Hello, I’m <strong>Nauris Linde</strong>, 24 years young backend web developer based in Latvia. Currently working as PHP Developer at Sem.lv. I have been programming for 4 years and I'm specialized in Laravel framework. All my projects are based on PHP in conjunction with other modern web technologies (OO-PHP, MVC-pattern, MySQL, jQuery, AJAX, HTML5, CSS3, XML/JSON, Composer, Yarn). Find me on",
 
   'what_i_do': 'What I do?',
   'web_development': 'Web Development',

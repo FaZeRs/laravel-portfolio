@@ -64,7 +64,7 @@ export default {
           thumb: require('../../img/baltic_probiotics_thumb.png'),
           src: require('../../img/baltic_probiotics.png')
         },
-        link: 'http://balticprobiotics.lv'
+        link: 'https://balticprobiotics.lv'
       },
       {
         id: 2,
@@ -87,6 +87,17 @@ export default {
           src: require('../../img/boilerplate.png')
         },
         github: 'https://github.com/FaZeRs/Boilerplate'
+      },
+      {
+        id: 4,
+        name: 'Kurzemes bizness',
+        categories: ['all', 'wordpress'],
+        tech: ['Wordpress'],
+        image: {
+          thumb: require('../../img/kurzemes_bizness_thumb.png'),
+          src: require('../../img/kurzemes_bizness.png')
+        },
+        link: 'https://kurzemesbizness.lv/'
       }
     ],
     currentCategory: 'all'
