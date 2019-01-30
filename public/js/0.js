@@ -304,7 +304,8 @@ var render = function() {
                                                   ],
                                                   1
                                                 )
-                                              })
+                                              }),
+                                              0
                                             )
                                           ])
                                         ]
@@ -368,7 +369,8 @@ var render = function() {
                         ],
                         1
                       )
-                    })
+                    }),
+                    1
                   )
                 ],
                 1

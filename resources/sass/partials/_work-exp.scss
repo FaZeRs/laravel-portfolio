@@ -5,9 +5,14 @@
   padding: 30px;
   border-radius: 4px;
   overflow: hidden;
+  
+  .color-text a {
+    text-decoration: none;
+  }
 }
 
 .working-duration {
   float: right;
+  padding: 5px;
   @include theme-color-gradient();
 }
