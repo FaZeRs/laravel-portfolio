@@ -58,10 +58,10 @@
             "@composer run env:copy",
             "@composer install -n --prefer-dist",
             "@php artisan key:generate",
+            "@php artisan migrate --seed",
             "@php artisan passport:install",
             "@php artisan horizon:install",
             "@php artisan telescope:install",
-            "@php artisan migrate --seed",
             "@composer test"
         ]
     },
