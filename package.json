@@ -11,9 +11,8 @@
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "devDependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@vue/eslint-config-standard": "^4.0.0",
-    "babel-plugin-syntax-dynamic-import": "^6.18.0",
-    "babel-plugin-transform-imports": "^1.5.1",
     "browser-sync": "^2.26.3",
     "browser-sync-webpack-plugin": "^2.2.2",
     "cross-env": "^5.2.0",
@@ -31,10 +30,10 @@
     "stylus-loader": "^3.0.2",
     "vue-loader": "^15.6.2",
     "vue-template-compiler": "^2.5.22",
+    "vuetify-loader": "^1.2.0",
     "webpack-bundle-analyzer": "^3.0.3"
   },
   "dependencies": {
-    "@babel/preset-env": "^7.3.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.13",
     "@fortawesome/free-brands-svg-icons": "^5.7.0",
     "@fortawesome/free-solid-svg-icons": "^5.7.0",
@@ -53,26 +52,8 @@
     "vue-recaptcha": "^1.1.1",
     "vue-router": "^3.0.2",
     "vuetify": "^1.4.4",
-    "vuetify-loader": "^1.2.0",
     "vuex": "^3.1.0",
     "vuex-router-sync": "^5.0.0"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-env"
-    ],
-    "plugins": [
-      "syntax-dynamic-import",
-      [
-        "transform-imports",
-        {
-          "vuetify": {
-            "transform": "vuetify/lib/components/${member}",
-            "preventFullImport": true
-          }
-        }
-      ]
-    ]
   },
   "eslintConfig": {
     "root": true,
