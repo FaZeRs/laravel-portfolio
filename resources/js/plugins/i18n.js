@@ -1,6 +1,6 @@
 import Vue from 'vue'
+import store from '~/store'
 import VueI18n from 'vue-i18n'
-import axios from '~/plugins/axios'
 import { messages } from '~/lang/messages';
 import Cookies from "js-cookie";
 
@@ -13,30 +13,22 @@ const i18n = new VueI18n({
   silentTranslationWarn: false
 })
 
-const loadedLanguages = ['en', 'lv']
-
 /**
  * @param {String} locale
  */
-export function loadMessages (locale) {
-    if (i18n.locale !== locale) {
-        if (!loadedLanguages.includes(locale)) {
-            return import(/* webpackChunkName: "lang-[request]" */ `~/lang/${locale}`).then(msgs => {
-                i18n.setLocaleMessage(locale, msgs)
-                loadedLanguages.push(locale)
-                return setI18nLanguage(locale)
-            })
-        }
-        return Promise.resolve(setI18nLanguage(locale))
-    }
-    return Promise.resolve(locale)
+export async function loadMessages (locale) {
+  if (Object.keys(i18n.getLocaleMessage(locale)).length === 0) {
+    const messages = await import(/* webpackChunkName: "lang-[request]" */ `~/lang/${locale}`)
+    i18n.setLocaleMessage(locale, messages)
+  }
+
+  if (i18n.locale !== locale) {
+    i18n.locale = locale
+  }
 }
 
-function setI18nLanguage (locale) {
-    i18n.locale = locale
-    axios.defaults.headers.common['Accept-Language'] = locale
-    document.querySelector('html').setAttribute('lang', locale)
-    return locale
-}
+;(async function () {
+  await loadMessages(store.getters['lang/locale'])
+})()
 
 export default i18n
