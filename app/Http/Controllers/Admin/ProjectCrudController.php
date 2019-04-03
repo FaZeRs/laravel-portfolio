@@ -2,16 +2,14 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Backpack\CRUD\app\Http\Controllers\CrudController;
-
+use Backpack\CRUD\CrudPanel;
 // VALIDATION: change the requests to match your own file names if you need form validation
 use App\Http\Requests\ProjectRequest as StoreRequest;
 use App\Http\Requests\ProjectRequest as UpdateRequest;
-use Backpack\CRUD\CrudPanel;
+use Backpack\CRUD\app\Http\Controllers\CrudController;
 
 /**
- * Class ProjectCrudController
- * @package App\Http\Controllers\Admin
+ * Class ProjectCrudController.
  * @property-read CrudPanel $crud
  */
 class ProjectCrudController extends CrudController
@@ -36,7 +34,7 @@ class ProjectCrudController extends CrudController
         // TODO: remove setFromDb() and manually define Fields and Columns
         //$this->crud->setFromDb();
         $this->crud->addColumns([
-            ['name' => 'title', 'type' => 'text', 'label' => 'Title']
+            ['name' => 'title', 'type' => 'text', 'label' => 'Title'],
         ]);
         $this->crud->addFields([
             ['name' => 'title', 'type' => 'text', 'label' => 'Title'],
@@ -46,11 +44,11 @@ class ProjectCrudController extends CrudController
                 'label'     => 'Category',
                 'entity'    => 'category',
                 'attribute' => 'title',
-                'model'     => 'App\Models\Category'
+                'model'     => 'App\Models\Category',
             ],
             [
                 'name' => 'image', 'type' => 'image', 'upload' => true, 'crop' => false, 'aspect_ratio' => 1,
-                'disk' => 'public'
+                'disk' => 'public',
             ],
             ['name' => 'description', 'type' => 'summernote', 'label' => 'Description'],
             ['name' => 'status', 'type' => 'enum', 'label', 'Status'],
@@ -74,14 +72,14 @@ class ProjectCrudController extends CrudController
                 'columns'         => [
                     'title' => 'Title',
                     'url'   => 'Url',
-                    'icon'  => 'Icon'
+                    'icon'  => 'Icon',
                 ],
                 'max'             => 5,
                 'min'             => 0,
             ],
         ]);
         $this->crud->addField([
-            'name' => 'slug', 'type' => 'text', 'label' => 'Slug', 'attributes' => ['disabled' => 'disabled']
+            'name' => 'slug', 'type' => 'text', 'label' => 'Slug', 'attributes' => ['disabled' => 'disabled'],
         ], 'update')->afterField('title');
 
         // add asterisk for fields that are required in ProjectCrudControllerRequest
