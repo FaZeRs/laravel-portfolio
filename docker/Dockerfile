@@ -33,19 +33,12 @@ RUN apk add --no-cache \
 # This is very important since it will allow us to read environment variables from the container.
 RUN sed -e 's/;clear_env = no/clear_env = no/' -i /usr/local/etc/php-fpm.d/www.conf
 
-ENV PHP_OPCACHE_VALIDATE_TIMESTAMPS="0" \
-    PHP_OPCACHE_MAX_ACCELERATED_FILES="10000" \
-    PHP_OPCACHE_MEMORY_CONSUMPTION="192" \
-    PHP_OPCACHE_MAX_WASTED_PERCENTAGE="10"
-
 # Install PECL extensions
-RUN pecl install imagick xdebug-2.7.0beta1
+RUN pecl install imagick xdebug
 
 # Install and enable php extensions
 RUN docker-php-ext-enable imagick xdebug
-RUN docker-php-ext-install curl iconv mbstring pdo pdo_mysql pdo_pgsql pdo_sqlite pcntl mbstring tokenizer xml gd zip opcache bcmath;
-
-COPY php/opcache.ini /usr/local/etc/php/conf.d/opcache.ini
+RUN docker-php-ext-install curl iconv mbstring pdo pdo_mysql pdo_pgsql pdo_sqlite pcntl mbstring tokenizer xml gd zip bcmath;
 
 # Install composer
 RUN curl -s https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin/ --filename=composer
