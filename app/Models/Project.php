@@ -2,12 +2,12 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Str;
 use Backpack\CRUD\CrudTrait;
+use Intervention\Image\Facades\Image;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
-use Intervention\Image\Facades\Image;
 use Spatie\Translatable\HasTranslations;
-use Illuminate\Support\Str;
 
 class Project extends Model
 {
@@ -79,7 +79,7 @@ class Project extends Model
         static::updating(function (Project $project) {
             $project->slug = Str::slug($project->title);
         });
-        static::deleting(function($obj) {
+        static::deleting(function ($obj) {
             Storage::disk('public')->delete($obj->image);
         });
     }
@@ -117,7 +117,7 @@ class Project extends Model
         $destination_path = 'projects';
 
         // if the image was erased
-        if ($value==null) {
+        if ($value == null) {
             // delete the image from disk
             Storage::disk($disk)->delete($this->{$attribute_name});
 
@@ -126,8 +126,7 @@ class Project extends Model
         }
 
         // if a base64 was sent, store it in the db
-        if (Str::startsWith($value, 'data:image'))
-        {
+        if (Str::startsWith($value, 'data:image')) {
             // 0. Make the image
             $image = Image::make($value)->encode('png', 90);
             // 1. Generate a filename.
@@ -143,14 +142,14 @@ class Project extends Model
     {
         $this->links()->delete();
         $links = [];
-        foreach(json_decode($value) as $link) {
+        foreach (json_decode($value) as $link) {
             $links[] = new Link([
                 'title' => $link->title,
                 'url' => $link->url,
                 'icon' => $link->icon,
             ]);
         }
-        if($links) {
+        if ($links) {
             $this->links()->saveMany($links);
         }
     }
