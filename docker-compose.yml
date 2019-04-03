@@ -21,7 +21,7 @@ services:
     volumes:
       - ./:/var/www/html
   webserver:
-    image: nginx:1.15-alpine
+    image: nginx:alpine
     container_name: webserver
     volumes:
       - ./:/var/www/html
@@ -31,7 +31,7 @@ services:
     depends_on:
       - php
   mariadb:
-    image: mariadb:10.3
+    image: mariadb:latest
     container_name: mysql
     restart: always
     environment:
@@ -44,7 +44,7 @@ services:
     volumes:
       - dbdata:/var/lib/mysql
   redis:
-    image: redis:5.0-rc-alpine3.8
+    image: redis:alpine
     container_name: redis
     restart: always
     command: redis-server --requirepass secret
