@@ -18,7 +18,7 @@ class CreateLinksTable extends Migration
             $table->json('title');
             $table->integer('project_id')->unsigned()->index();
             $table->string('url')->nullable();
-            $table->integer('order');
+            $table->string('icon')->nullable();
             $table->timestamps();
 
             $table->foreign('project_id')

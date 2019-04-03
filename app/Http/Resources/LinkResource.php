@@ -19,7 +19,7 @@ class LinkResource extends JsonResource
             'title'      => $this->title,
             'project_id' => $this->project_id,
             'url'        => $this->url,
-            'order'      => $this->order,
+            'icon'       => $this->icon,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ];

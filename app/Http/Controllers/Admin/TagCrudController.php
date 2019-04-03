@@ -30,8 +30,10 @@ class TagCrudController extends CrudController
         |--------------------------------------------------------------------------
         */
 
-        // TODO: remove setFromDb() and manually define Fields and Columns
-        $this->crud->setFromDb();
+        $this->crud->addColumn(['name' => 'title', 'type' => 'text', 'label' => 'Title']);
+        $this->crud->addColumn(['name' => 'color', 'type' => 'text', 'label' => 'Color']);
+        $this->crud->addField(['name' => 'title', 'type' => 'text', 'label' => 'Title']);
+        $this->crud->addField(['name' => 'color', 'type' => 'color', 'label' => 'Color']);
 
         // add asterisk for fields that are required in TagRequest
         $this->crud->setRequiredFields(StoreRequest::class, 'create');

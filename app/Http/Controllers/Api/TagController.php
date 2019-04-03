@@ -11,12 +11,12 @@ class TagController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('admin')->except('index', 'show');
+        $this->middleware('api_admin')->except('index', 'show');
     }
 
     public function index()
     {
-        return TagResource::collection(Tag::paginate(25));
+        return TagResource::collection(Tag::all());
     }
 
     public function show(Tag $tag)

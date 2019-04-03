@@ -3,6 +3,7 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Support\Facades\Storage;
 
 class ProjectResource extends JsonResource
 {
@@ -18,11 +19,14 @@ class ProjectResource extends JsonResource
             'id'          => $this->id,
             'title'       => $this->title,
             'slug'        => $this->slug,
-            'category_id' => $this->category_id,
+            'category'    => $this->category,
             'description' => $this->description,
             'visible'     => $this->visible,
             'order'       => $this->order,
             'status'      => $this->status,
+            'image'       => Storage::url($this->image),
+            'tags'        => TagResource::collection($this->whenLoaded('tags')),
+            'links'       => LinkResource::collection($this->whenLoaded('links')),
             'created_at'  => $this->created_at,
             'updated_at'  => $this->updated_at,
         ];

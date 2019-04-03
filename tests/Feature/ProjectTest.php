@@ -88,18 +88,16 @@ class ProjectTest extends TestCase
         $response = $this->json('POST', '/api/projects', $data);
         $response->assertSuccessful();
         $response->assertJsonStructure([
-            'data' => [
-                'id',
-                'title',
-                'slug',
-                'category_id',
-                'description',
-                'visible',
-                'order',
-                'status',
-                'created_at',
-                'updated_at',
-            ],
+            'id',
+            'title',
+            'slug',
+            'category',
+            'description',
+            'visible',
+            'order',
+            'status',
+            'created_at',
+            'updated_at',
         ]);
     }
 
@@ -143,18 +141,16 @@ class ProjectTest extends TestCase
         $response = $this->json('PUT', '/api/projects/'.$project->id, $data);
         $response->assertSuccessful();
         $response->assertJsonStructure([
-            'data' => [
-                'id',
-                'title',
-                'slug',
-                'category_id',
-                'description',
-                'visible',
-                'order',
-                'status',
-                'created_at',
-                'updated_at',
-            ],
+            'id',
+            'title',
+            'slug',
+            'category',
+            'description',
+            'visible',
+            'order',
+            'status',
+            'created_at',
+            'updated_at',
         ]);
     }
 
@@ -191,19 +187,17 @@ class ProjectTest extends TestCase
         $response = $this->json('GET', '/api/projects');
         $response->assertSuccessful();
         $response->assertJsonStructure([
-            'data' => [
-                '*' => [
-                    'id',
-                    'title',
-                    'slug',
-                    'category_id',
-                    'description',
-                    'visible',
-                    'order',
-                    'status',
-                    'created_at',
-                    'updated_at',
-                ],
+            '*' => [
+                'id',
+                'title',
+                'slug',
+                'category',
+                'description',
+                'visible',
+                'order',
+                'status',
+                'created_at',
+                'updated_at',
             ],
         ]);
     }
@@ -215,18 +209,16 @@ class ProjectTest extends TestCase
         $response = $this->json('GET', '/api/projects/'.$project->id);
         $response->assertSuccessful();
         $response->assertJsonStructure([
-            'data' => [
-                'id',
-                'title',
-                'slug',
-                'category_id',
-                'description',
-                'visible',
-                'order',
-                'status',
-                'created_at',
-                'updated_at',
-            ],
+            'id',
+            'title',
+            'slug',
+            'category',
+            'description',
+            'visible',
+            'order',
+            'status',
+            'created_at',
+            'updated_at',
         ]);
     }
 

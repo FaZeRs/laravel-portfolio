@@ -20,7 +20,7 @@ class LinkTest extends TestCase
             'title'      => $this->faker->sentence,
             'project_id' => $project->id,
             'url'        => $this->faker->url,
-            'order'      => $this->faker->randomDigit,
+            'icon'       => $this->faker->word,
         ];
         $response = $this->json('POST', '/api/links', $data);
         $response->assertStatus(401);
@@ -34,7 +34,7 @@ class LinkTest extends TestCase
             'title'      => $this->faker->sentence,
             'project_id' => $project->id,
             'url'        => $this->faker->url,
-            'order'      => $this->faker->randomDigit,
+            'icon'       => $this->faker->word,
         ];
         $response = $this->json('POST', '/api/links', $data);
         $response->assertStatus(401);
@@ -48,20 +48,18 @@ class LinkTest extends TestCase
             'title'      => $this->faker->sentence,
             'project_id' => $project->id,
             'url'        => $this->faker->url,
-            'order'      => $this->faker->randomDigit,
+            'icon'       => $this->faker->word,
         ];
         $response = $this->json('POST', '/api/links', $data);
         $response->assertSuccessful();
         $response->assertJsonStructure([
-            'data' => [
-                'id',
-                'title',
-                'project_id',
-                'url',
-                'order',
-                'created_at',
-                'updated_at',
-            ],
+            'id',
+            'title',
+            'project_id',
+            'url',
+            'icon',
+            'created_at',
+            'updated_at',
         ]);
     }
 
@@ -96,15 +94,13 @@ class LinkTest extends TestCase
         $response = $this->json('PUT', '/api/links/'.$link->id, $data);
         $response->assertSuccessful();
         $response->assertJsonStructure([
-            'data' => [
-                'id',
-                'title',
-                'project_id',
-                'url',
-                'order',
-                'created_at',
-                'updated_at',
-            ],
+            'id',
+            'title',
+            'project_id',
+            'url',
+            'icon',
+            'created_at',
+            'updated_at',
         ]);
     }
 
@@ -137,16 +133,14 @@ class LinkTest extends TestCase
         $response = $this->json('GET', '/api/links');
         $response->assertSuccessful();
         $response->assertJsonStructure([
-            'data' => [
-                '*' => [
-                    'id',
-                    'title',
-                    'project_id',
-                    'url',
-                    'order',
-                    'created_at',
-                    'updated_at',
-                ],
+            '*' => [
+                'id',
+                'title',
+                'project_id',
+                'url',
+                'icon',
+                'created_at',
+                'updated_at',
             ],
         ]);
     }
@@ -157,15 +151,13 @@ class LinkTest extends TestCase
         $response = $this->json('GET', '/api/links/'.$link->id);
         $response->assertSuccessful();
         $response->assertJsonStructure([
-            'data' => [
-                'id',
-                'title',
-                'project_id',
-                'url',
-                'order',
-                'created_at',
-                'updated_at',
-            ],
+            'id',
+            'title',
+            'project_id',
+            'url',
+            'icon',
+            'created_at',
+            'updated_at',
         ]);
     }
 }

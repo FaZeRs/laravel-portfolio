@@ -11,12 +11,12 @@ class CategoryController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('admin')->except('index', 'show');
+        $this->middleware('api_admin')->except('index', 'show');
     }
 
     public function index()
     {
-        return CategoryResource::collection(Category::paginate(25));
+        return CategoryResource::collection(Category::all());
     }
 
     public function show(Category $category)

@@ -2,11 +2,16 @@
 
 namespace App\Models;
 
+use Backpack\CRUD\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
 use Spatie\Translatable\HasTranslations;
+use Illuminate\Support\Str;
 
 class Project extends Model
 {
+    use CrudTrait;
     use HasTranslations;
 
     /**
@@ -23,9 +28,10 @@ class Project extends Model
      */
     protected $fillable = [
         'title',
-        'slug',
         'category_id',
         'description',
+        'image',
+        'links',
         'status',
         'visible',
         'order',
@@ -68,10 +74,13 @@ class Project extends Model
         parent::boot();
 
         static::creating(function (Project $project) {
-            $project->slug = str_slug($project->title);
+            $project->slug = Str::slug($project->title);
         });
         static::updating(function (Project $project) {
-            $project->slug = str_slug($project->title);
+            $project->slug = Str::slug($project->title);
+        });
+        static::deleting(function($obj) {
+            Storage::disk('public')->delete($obj->image);
         });
     }
 
@@ -99,5 +108,50 @@ class Project extends Model
         return $this->tags()
             ->wherePivot('tag_id', $tag->id)
             ->exists();
+    }
+
+    public function setImageAttribute($value)
+    {
+        $attribute_name = 'image';
+        $disk = 'public';
+        $destination_path = 'projects';
+
+        // if the image was erased
+        if ($value==null) {
+            // delete the image from disk
+            Storage::disk($disk)->delete($this->{$attribute_name});
+
+            // set null in the database column
+            $this->attributes[$attribute_name] = null;
+        }
+
+        // if a base64 was sent, store it in the db
+        if (Str::startsWith($value, 'data:image'))
+        {
+            // 0. Make the image
+            $image = Image::make($value)->encode('png', 90);
+            // 1. Generate a filename.
+            $filename = md5($value.time()).'.png';
+            // 2. Store the image on disk.
+            Storage::disk($disk)->put($destination_path.'/'.$filename, $image->stream());
+            // 3. Save the path to the database
+            $this->attributes[$attribute_name] = $destination_path.'/'.$filename;
+        }
+    }
+
+    public function setLinksAttribute($value)
+    {
+        $this->links()->delete();
+        $links = [];
+        foreach(json_decode($value) as $link) {
+            $links[] = new Link([
+                'title' => $link->title,
+                'url' => $link->url,
+                'icon' => $link->icon,
+            ]);
+        }
+        if($links) {
+            $this->links()->saveMany($links);
+        }
     }
 }

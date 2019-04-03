@@ -18,11 +18,13 @@ class CreateProjectsTable extends Migration
             $table->json('title');
             $table->json('slug');
             $table->integer('category_id')->unsigned()->index();
-            $table->json('description');
-            $table->enum('status', ['unknown', 'open', 'scheduled', 'in_development', 'completed', 'cancelled']);
+            $table->json('description')->nullable();
+            $table->string('image')->nullable();
+            $table->enum('status', ['unknown', 'open', 'scheduled', 'in_development', 'completed', 'cancelled'])->default('unknown');
             $table->boolean('visible')->default(false);
-            $table->integer('order');
+            $table->integer('order')->default(0);
             $table->timestamps();
+            $table->softDeletes();
 
             $table->foreign('category_id')
                 ->references('id')

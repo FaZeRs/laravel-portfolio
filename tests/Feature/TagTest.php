@@ -48,13 +48,11 @@ class TagTest extends TestCase
         $response = $this->json('POST', '/api/tags', $data);
         $response->assertSuccessful();
         $response->assertJsonStructure([
-            'data' => [
-                'id',
-                'title',
-                'color',
-                'created_at',
-                'updated_at',
-            ],
+            'id',
+            'title',
+            'color',
+            'created_at',
+            'updated_at',
         ]);
     }
 
@@ -95,13 +93,11 @@ class TagTest extends TestCase
         $response = $this->json('PUT', '/api/tags/'.$tag->id, $data);
         $response->assertSuccessful();
         $response->assertJsonStructure([
-            'data' => [
-                'id',
-                'title',
-                'color',
-                'created_at',
-                'updated_at',
-            ],
+            'id',
+            'title',
+            'color',
+            'created_at',
+            'updated_at',
         ]);
     }
 
@@ -134,14 +130,12 @@ class TagTest extends TestCase
         $response = $this->json('GET', '/api/tags');
         $response->assertSuccessful();
         $response->assertJsonStructure([
-            'data' => [
-                '*' => [
-                    'id',
-                    'title',
-                    'color',
-                    'created_at',
-                    'updated_at',
-                ],
+            '*' => [
+                'id',
+                'title',
+                'color',
+                'created_at',
+                'updated_at',
             ],
         ]);
     }
@@ -153,13 +147,11 @@ class TagTest extends TestCase
         $response = $this->json('GET', '/api/tags/'.$tag->id);
         $response->assertSuccessful();
         $response->assertJsonStructure([
-            'data' => [
-                'id',
-                'title',
-                'color',
-                'created_at',
-                'updated_at',
-            ],
+            'id',
+            'title',
+            'color',
+            'created_at',
+            'updated_at',
         ]);
     }
 }

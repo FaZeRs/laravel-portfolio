@@ -15,8 +15,10 @@ use Faker\Generator as Faker;
 $factory->define(App\Models\Link::class, function (Faker $faker) {
     return [
         'title'      => $faker->sentence,
-        'project_id' => $faker->randomDigit,
+        'project_id' => function () {
+            return factory(App\Models\Project::class)->create()->id;
+        },
         'url'        => $faker->url,
-        'order'      => $faker->randomDigit,
+        'icon'       => $faker->word,
     ];
 });

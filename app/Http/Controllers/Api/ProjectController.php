@@ -11,12 +11,12 @@ class ProjectController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('admin')->except('index', 'show');
+        $this->middleware('api_admin')->except('index', 'show');
     }
 
     public function index()
     {
-        return ProjectResource::collection(Project::paginate(25));
+        return ProjectResource::collection(Project::with('tags', 'links')->get());
     }
 
     public function show(Project $project)

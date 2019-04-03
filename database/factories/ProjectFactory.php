@@ -15,7 +15,9 @@ use Faker\Generator as Faker;
 $factory->define(App\Models\Project::class, function (Faker $faker) {
     return [
         'title'       => $faker->sentence,
-        'category_id' => $faker->randomDigit,
+        'category_id' => function () {
+            return factory(App\Models\Category::class)->create()->id;
+        },
         'description' => $faker->paragraph,
         'visible'     => $faker->boolean($chanceOfGettingTrue = 80),
         'order'       => $faker->randomDigit,
@@ -27,5 +29,6 @@ $factory->define(App\Models\Project::class, function (Faker $faker) {
             'completed',
             'cancelled',
         ]),
+        'image'       => $faker->imageUrl($width = 640, $height = 480),
     ];
 });

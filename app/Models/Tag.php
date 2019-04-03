@@ -2,11 +2,13 @@
 
 namespace App\Models;
 
+use Backpack\CRUD\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Translatable\HasTranslations;
 
 class Tag extends Model
 {
+    use CrudTrait;
     use HasTranslations;
 
     /**

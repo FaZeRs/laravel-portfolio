@@ -11,12 +11,12 @@ class LinkController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('admin')->except('index', 'show');
+        $this->middleware('api_admin')->except('index', 'show');
     }
 
     public function index()
     {
-        return LinkResource::collection(Link::paginate(25));
+        return LinkResource::collection(Link::all());
     }
 
     public function show(Link $link)

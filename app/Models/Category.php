@@ -8,8 +8,8 @@ use Spatie\Translatable\HasTranslations;
 
 class Category extends Model
 {
-    use HasTranslations;
     use CrudTrait;
+    use HasTranslations;
 
     /**
      * The table associated with the model.

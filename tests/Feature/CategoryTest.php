@@ -45,12 +45,10 @@ class CategoryTest extends TestCase
         $response = $this->json('POST', '/api/categories', $data);
         $response->assertStatus(201);
         $response->assertJsonStructure([
-            'data' => [
-                'id',
-                'title',
-                'created_at',
-                'updated_at',
-            ],
+            'id',
+            'title',
+            'created_at',
+            'updated_at',
         ]);
     }
 
@@ -90,13 +88,11 @@ class CategoryTest extends TestCase
         $response = $this->json('PUT', '/api/categories/'.$category->id, $data);
         $response->assertStatus(200);
         $response->assertJsonStructure([
-                'data' => [
-                    'id',
-                    'title',
-                    'created_at',
-                    'updated_at',
-                ],
-            ]);
+            'id',
+            'title',
+            'created_at',
+            'updated_at',
+        ]);
     }
 
     public function test_guest_cannot_delete_a_category()
@@ -132,13 +128,11 @@ class CategoryTest extends TestCase
         $response = $this->json('GET', '/api/categories');
         $response->assertStatus(200);
         $response->assertJsonStructure([
-            'data' => [
-                '*' => [
-                    'id',
-                    'title',
-                    'created_at',
-                    'updated_at',
-                ],
+            '*' => [
+                'id',
+                'title',
+                'created_at',
+                'updated_at',
             ],
         ]);
     }
@@ -149,12 +143,10 @@ class CategoryTest extends TestCase
         $response = $this->json('GET', '/api/categories/'.$category->id);
         $response->assertStatus(200);
         $response->assertJsonStructure([
-            'data' => [
-                'id',
-                'title',
-                'created_at',
-                'updated_at',
-            ],
+            'id',
+            'title',
+            'created_at',
+            'updated_at',
         ]);
     }
 }

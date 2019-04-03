@@ -25,7 +25,7 @@ class Link extends Model
         'title',
         'project_id',
         'url',
-        'order',
+        'icon',
     ];
 
     /**
@@ -41,5 +41,12 @@ class Link extends Model
     public function project()
     {
         return $this->belongsTo(Project::class);
+    }
+
+    public function getTitleAttribute($value)
+    {
+        $value = json_decode($value, true);
+
+        return $value[app()->getLocale()];
     }
 }
