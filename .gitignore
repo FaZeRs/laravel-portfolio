@@ -23,3 +23,6 @@ Todo.rtf
 /storage/oauth-public.key
 .phpunit.result.cache
 /.rnd
+/public/hot
+/public/storage
+/storage/*.key
