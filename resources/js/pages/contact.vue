@@ -15,37 +15,23 @@
                     <h4 class="headline">{{ $t('contact_information') }}</h4>
                     <div class="flex pb-6">
                       <div class="con-text">
-                        <v-icon>email</v-icon>
+                        <v-icon small>mdi-email-outline</v-icon>
                         <a href="mailto:naurislinde@gmail.com">naurislinde@gmail.com</a>
                       </div>
                     </div>
                     <div class="social mt-4">
-                      <a href="https://www.facebook.com/nauris.linde" target="_blank">
-                        <font-awesome-layers class="fa-4x">
-                          <font-awesome-icon icon="circle" style="color: #3b5998;"/>
-                          <font-awesome-icon :icon="['fab', 'facebook-f']" transform="shrink-6" style="color: white;"/>
-                        </font-awesome-layers>
-                      </a>
-                      <a href="https://twitter.com/naurislinde" target="_blank">
-                        <font-awesome-layers class="fa-4x">
-                          <font-awesome-icon icon="circle" style="color: #55acee;"/>
-                          <font-awesome-icon :icon="['fab', 'twitter']" transform="shrink-6" style="color: white;"/>
-                        </font-awesome-layers>
-                      </a>
-
-                      <a href="https://www.linkedin.com/in/nauris-linde-4027aaaa" target="_blank">
-                        <font-awesome-layers class="fa-4x">
-                          <font-awesome-icon icon="circle" style="color: #1985bc;"/>
-                          <font-awesome-icon :icon="['fab', 'linkedin-in']" transform="shrink-6" style="color: white;"/>
-                        </font-awesome-layers>
-                      </a>
-
-                      <a href="https://github.com/FaZeRs" target="_blank">
-                        <font-awesome-layers class="fa-4x">
-                          <font-awesome-icon icon="circle" style="color: #222222;"/>
-                          <font-awesome-icon :icon="['fab', 'github']" transform="shrink-6" style="color: white;"/>
-                        </font-awesome-layers>
-                      </a>
+                      <v-btn color="#3b5998" dark small fab href="https://www.facebook.com/nauris.linde" target="_blank">
+                        <v-icon>mdi-facebook</v-icon>
+                      </v-btn>
+                      <v-btn color="#55acee" dark small fab href="https://twitter.com/naurislinde" target="_blank">
+                        <v-icon>mdi-twitter</v-icon>
+                      </v-btn>
+                      <v-btn color="#1985bc" dark small fab href="https://www.linkedin.com/in/nauris-linde-4027aaaa" target="_blank">
+                        <v-icon>mdi-linkedin</v-icon>
+                      </v-btn>
+                      <v-btn color="#222" dark small fab href="https://github.com/FaZeRs" target="_blank">
+                        <v-icon>mdi-github-circle</v-icon>
+                      </v-btn>
                     </div>
                   </div>
                 </v-card>
