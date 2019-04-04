@@ -8,29 +8,31 @@
       <v-container fill-height text-xs-center>
         <v-layout align-center>
           <v-flex>
-            <h3 class="display-3 white--text"><span v-html="$t('hello_guys')"/></h3>
-            <span class="headline white--text">{{ $t('i_am') }} <span class="typelist-skill">{{ $t('a_developer') }}</span></span>
+            <h3 class="white--text font-weight-regular display-3"><span v-html="$t('hello_guys')"/></h3>
+            <span class="font-weight-regular headline white--text">{{ $t('i_am') }} <span class="typelist-skill">{{ $t('a_developer') }}</span></span>
             <v-divider class="my-3" dark/>
             <v-layout justify-space-around>
-              <a href="https://www.facebook.com/nauris.linde" class="social-intro" target="_blank">
-                <font-awesome-icon :icon="['fab', 'facebook-f']" class="fa-hover"/>
-              </a>
-              <a href="https://twitter.com/naurislinde" class="social-intro" target="_blank">
-                <font-awesome-icon :icon="['fab', 'twitter']" class="fa-hover"/>
-              </a>
-              <a href="https://www.linkedin.com/in/nauris-linde-4027aaaa" class="social-intro" target="_blank">
-                <font-awesome-icon :icon="['fab', 'linkedin-in']" class="fa-hover"/>
-              </a>
-              <a href="https://github.com/FaZeRs" class="social-intro" target="_blank">
-                <font-awesome-icon :icon="['fab', 'github']" class="fa-hover"/>
-              </a>
+              <v-btn href="https://www.facebook.com/nauris.linde" target="_blank" outline fab color="white">
+                <v-icon class="fa-hover" dark>mdi-facebook</v-icon>
+              </v-btn>
+              <v-btn href="https://twitter.com/naurislinde" target="_blank" outline fab color="white">
+                <v-icon class="fa-hover" dark>mdi-twitter</v-icon>
+              </v-btn>
+              <v-btn href="https://www.linkedin.com/in/nauris-linde-4027aaaa" target="_blank" outline fab color="white">
+                <v-icon class="fa-hover" dark>mdi-linkedin</v-icon>
+              </v-btn>
+              <v-btn href="https://github.com/FaZeRs" target="_blank" outline fab color="white">
+                <v-icon class="fa-hover" dark>mdi-github-circle</v-icon>
+              </v-btn>
             </v-layout>
           </v-flex>
         </v-layout>
       </v-container>
     </v-img>
     <v-content>
-      <router-view/>
+      <v-container fluid>
+        <router-view></router-view>
+      </v-container>
     </v-content>
 
     <v-footer class="elevation-0 mt-5 mb-5" color="transparent">

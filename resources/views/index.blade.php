@@ -8,7 +8,7 @@
     ];
 @endphp
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
     <meta name="env" content="{{ app()->environment() }}">
@@ -29,6 +29,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="{{ config('app.name') }}">
     <meta name="twitter:description" content="Nauris Linde personal portfolio">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <link rel="alternate" hreflang="en" href="https://naurislinde.com"/>
 

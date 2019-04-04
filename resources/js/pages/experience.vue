@@ -5,7 +5,7 @@
         <v-flex class="text-xs-center" xs12>
           <h2 class="section-title mb-5">{{ $t('education') }}</h2>
           <v-layout row wrap class="text-xs-left">
-            <v-flex xs12 sm6 fill-height>
+            <v-flex xs12 sm6 d-flex>
               <v-hover>
                 <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 1}`">
                   <div class="edu-block">
@@ -24,7 +24,7 @@
                 </v-card>
               </v-hover>
             </v-flex>
-            <v-flex xs12 sm6 fill-height>
+            <v-flex xs12 sm6 d-flex>
               <v-hover>
                 <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 1}`">
                   <div class="edu-block">
@@ -50,19 +50,37 @@
         <v-flex class="text-xs-center" xs12>
           <h2 class="section-title mb-5">{{ $t('experience') }}</h2>
           <v-layout row wrap class="text-xs-left">
-            <v-flex xs12 sm6>
+            <v-flex xs12 sm6 d-flex>
               <v-hover>
                 <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 1}`">
                   <div class="work-exp-block">
                     <div class="working-duration title d-block">
-                      2016-{{ $t('present') }}
+                      Jan 2019-{{ $t('present') }}
                     </div>
                     <div class="work-exp-logo">
-                      <img :src="sem" alt="SIA Sem.lv">
+                      <img :src="giraffe360" width="123" alt="Giraffe360">
+                    </div>
+                    <h4 class="headline mt-3">{{ $t('giraffe360_position') }}</h4>
+                    <h6 class="color-text title mt-2">
+                      <a href="https://giraffe360.com" target="_blank">Giraffe360</a>
+                    </h6>
+                  </div>
+                </v-card>
+              </v-hover>
+            </v-flex>
+            <v-flex xs12 sm6 d-flex>
+              <v-hover>
+                <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 1}`">
+                  <div class="work-exp-block">
+                    <div class="working-duration title d-block">
+                      Aug 2016 - Jan 2019
+                    </div>
+                    <div class="work-exp-logo">
+                      <img :src="sem" width="123" alt="Sem.lv">
                     </div>
                     <h4 class="headline mt-3">{{ $t('sem_position') }}</h4>
                     <h6 class="color-text title mt-2">
-                      <a href="https://sem.lv/" target="_blank">SIA Sem.lv</a>
+                      <a href="https://sem.lv" target="_blank">Sem.lv</a>
                     </h6>
                   </div>
                 </v-card>
@@ -82,7 +100,8 @@ export default {
     return {title: this.$t('experience')}
   },
   data: () => ({
-    sem: require('../../img/sem.png')
+    sem: require('../../img/sem.png'),
+    giraffe360: require('../../img/giraffe360.svg'),
   })
 }
 </script>

@@ -1,6 +1,7 @@
 const path = require('path')
 const mix = require('laravel-mix')
 const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer')
+const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 
 mix.webpackConfig({
   resolve: {
@@ -20,45 +21,16 @@ mix.webpackConfig({
   },
   plugins: [
     // new BundleAnalyzerPlugin()
-  ],
-  output: {
-    chunkFilename: mix.inProduction() ? 'js/[name].[chunkhash].js' : 'js/[name].js',
-    publicPath: mix.config.hmr ? '//localhost:8000' : '/'
-  }
-})
-
-mix.browserSync({
-  proxy: 'localhost:8000',
-  open: false
+    new VuetifyLoaderPlugin()
+  ]
 })
 
 mix.js('resources/js/app.js', 'public/js')
 mix.sass('resources/sass/app.scss', 'public/css')
 
 if (mix.inProduction()) {
-  mix.extract([
-    '@fortawesome/fontawesome-svg-core',
-    '@fortawesome/free-brands-svg-icons',
-    '@fortawesome/free-solid-svg-icons',
-    '@fortawesome/vue-fontawesome',
-    'axios',
-    'babel-polyfill',
-    'js-cookie',
-    'lodash',
-    'promise',
-    'v-img',
-    'vee-validate',
-    'vue',
-    'vue-cookie-law',
-    'vue-i18n',
-    'vue-meta',
-    'vue-recaptcha',
-    'vue-router',
-    'vuetify',
-    'vuex',
-    'vuex-router-sync'
-  ])
-
+  mix.extract()
+  mix.sourceMaps()
   mix.version()
   mix.disableNotifications()
 }

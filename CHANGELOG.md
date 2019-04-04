@@ -6,6 +6,39 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0]  - 2019-04-04
+
+### Added
+- Added 'Fork me' image & Increase window page offset for menu color change ([52857e1](https://github.com/FaZeRs/naurislinde.com/commit/52857e11d71b638eb53e22952dd4f579541384d9))
+- Added Larastan ([364f4f1](https://github.com/FaZeRs/naurislinde.com/commit/364f4f1ceb8af1018c7726a5b98043995fa5140d))
+- Implement Bugsnag ([faf62b5](https://github.com/FaZeRs/naurislinde.com/commit/faf62b5e46962791809ba5e4748b620c0110af42))
+- Implement Laravel Horizon ([5e1843d](https://github.com/FaZeRs/naurislinde.com/commit/5e1843d857b5195a776255772f007900be09ba5b))
+- Added .phpunit.result.cache to the .gitignore ([dc4101a](https://github.com/FaZeRs/naurislinde.com/commit/dc4101a88951fd022b2dc1daf416fdfeca3a5e8d))
+- Created Portfolio CRUD ([6b6b8ce](https://github.com/FaZeRs/naurislinde.com/commit/6b6b8cecd562f71bf6ecf2e2d079f2a1cecee448))
+- Implemented Telescope ([363bb50](https://github.com/FaZeRs/naurislinde.com/commit/363bb5001e6bb975fbd8fd361041bdb71e0df36a))
+- Implemented Backpack ([7863e9a](https://github.com/FaZeRs/naurislinde.com/commit/7863e9aeef0657a52e39055e8a8198f4b561bb28))([3093317](https://github.com/FaZeRs/naurislinde.com/commit/3093317482204dbeed8faa75378306ea3e5ff09b))
+- Added laravel-dump-server ([70d1c86](https://github.com/FaZeRs/naurislinde.com/commit/70d1c86fe138b36fbda70d0b752eba8b89e6ea98))
+- Added name prefix to routes and named routes ([1b4ba1d](https://github.com/FaZeRs/naurislinde.com/commit/1b4ba1d3c3ada65bd777a7ec731304501da824ba))
+
+### Changed
+- Updated Template ([7ccc5ce](https://github.com/FaZeRs/naurislinde.com/commit/7ccc5ce0b32da35815db308c5c76de7aa2b88f26))
+- Updated to Laravel 5.7 ([ead3e58](https://github.com/FaZeRs/naurislinde.com/commit/ead3e585b8a61c9367fdf4482bbf9f1ecab6afde))([7940a3e](https://github.com/FaZeRs/naurislinde.com/commit/0be999f255058224f2e68cd9ea02e7d34bd46e43))([2f7a2ae](https://github.com/FaZeRs/naurislinde.com/commit/2f7a2aed1277d32133441ce58fe316b8a6d981f3))([d289622](https://github.com/FaZeRs/naurislinde.com/commit/d289622fac80588d77522f2097200911cc7b15a8))
+- Updated Docker ([25eebd2](https://github.com/FaZeRs/naurislinde.com/commit/25eebd243765870f12bb96f9c097111bd85f06b6))([92015ce](https://github.com/FaZeRs/naurislinde.com/commit/92015ce3086de1e0addb5053dbdf78e0938c9367))([8565a79](https://github.com/FaZeRs/naurislinde.com/commit/8565a793cf42855f8512fb784f5202cdfed13083))
+- Updated Docker build to PHP 7.3 ([d45d012](https://github.com/FaZeRs/naurislinde.com/commit/d45d0125db100c55b3858628764f75c1b032ce86))
+- Switched to npm ([3828d85](https://github.com/FaZeRs/naurislinde.com/commit/3828d85cd72f0aa8cbb07ba2b49dd0e653b523c7))
+- Updated Vuetify ([39f2374](https://github.com/FaZeRs/naurislinde.com/commit/39f23748a9c9345050ad6087c277c87a2be5224b))
+- Updated to Laravel 5.8 & Updated Horizon & Telescope ([f2f43d1](https://github.com/FaZeRs/naurislinde.com/commit/f2f43d16ef81ba92d14853625e0461b44db8655f))([c6ab792](https://github.com/FaZeRs/naurislinde.com/commit/c6ab7923a0e525444d100b18deb855ce93446b7f))
+- Updated frontend & display database data ([001912b](https://github.com/FaZeRs/naurislinde.com/commit/001912b3c6aab9f1a279b9eda146562ccc29b904))
+
+### Fixed
+- Initialize recaptcha only when sitekey is present ([9595ca0](https://github.com/FaZeRs/naurislinde.com/commit/9595ca0d89cd0fb7a3a9033613a43767ba646d19))
+- Larastan error fixes ([364f4f1](https://github.com/FaZeRs/naurislinde.com/commit/364f4f1ceb8af1018c7726a5b98043995fa5140d))
+- Migrate database before passport:install ([f4e9452](https://github.com/FaZeRs/naurislinde.com/commit/f4e94521713a544f4f1a6b8b7a8c2cc43b304382))
+- Fixed dynamic imports ([c090276](https://github.com/FaZeRs/naurislinde.com/commit/c090276352b0cabd9c418ba09b86a966f64ab5ae))([be1ea73](https://github.com/FaZeRs/naurislinde.com/commit/be1ea73015e197c628d2b727fe499299cd636719))([67d4e96](https://github.com/FaZeRs/naurislinde.com/commit/67d4e962d6e3f551d11a65ab2399aeddac15f26e))
+
+### Removed
+- Removed strong password validation & reduced password length to 6 characters ([7940a3e](https://github.com/FaZeRs/naurislinde.com/commit/7940a3ee07c33ac9114d157cf473f6898ef36465))
+
 ## [1.4.0]  - 2018-07-27
 
 ### Changed
@@ -76,7 +109,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## 1.0.0 - 2018-04-25
 - Initial commit.
 
-[Unreleased]: https://github.com/fazers/naurislinde.com/compare/1.4.0...HEAD
+[Unreleased]: https://github.com/fazers/naurislinde.com/compare/2.0.0...HEAD
+[2.0.0]: https://github.com/fazers/naurislinde.com/compare/1.4.0...2.0.0
 [1.4.0]: https://github.com/fazers/naurislinde.com/compare/1.3.1...1.4.0
 [1.3.1]: https://github.com/fazers/naurislinde.com/compare/1.3.0...1.3.1
 [1.3.0]: https://github.com/fazers/naurislinde.com/compare/1.2.0...1.3.0

@@ -46,7 +46,8 @@ export const en = {
   'lvt_education': 'Commercial Service Employee',
   'lvt_address': 'PIKC LVT, Liepaja, Latvia',
   'present': 'present',
-  'sem_position': 'Back End Web Developer',
+  'sem_position': 'Back-End Web Developer',
+  'giraffe360_position': 'Back-End Developer',
 
   'page_not_found': 'Page not found',
   'clear': 'clear',

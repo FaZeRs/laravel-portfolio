@@ -3,11 +3,19 @@
 namespace App\Providers;
 
 use Laravel\Passport\Passport;
-use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
 class AuthServiceProvider extends ServiceProvider
 {
+    /**
+     * The policy mappings for the application.
+     *
+     * @var array
+     */
+    protected $policies = [
+        //
+    ];
+
     /**
      * Register any application services.
      *
@@ -15,7 +23,7 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->registerPolicies();
     }
 
     /**
@@ -26,10 +34,5 @@ class AuthServiceProvider extends ServiceProvider
     public function boot()
     {
         Passport::routes();
-
-        Validator::extend('strong_password', function ($attribute, $value, $parameters, $validator) {
-            // Contain at least one uppercase/lowercase letters, one number and one special char
-            return preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]/', (string) $value);
-        }, trans('validation.strong_password'));
     }
 }

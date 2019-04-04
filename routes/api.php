@@ -11,13 +11,15 @@
 |
 */
 
-Route::post('contact/send', 'ContactController@send');
+Route::name('api.')->group(function () {
+    Route::post('contact/send', 'ContactController@send')->name('contact.send');
 
-Route::post('login', 'LoginController@login');
-Route::post('register', 'RegisterController@register');
-Route::post('password/email', 'ForgotPasswordController@sendResetLinkEmail');
-Route::post('password/reset', 'ResetPasswordController@reset');
-Route::middleware('auth:api')->group(function () {
-    Route::post('details', 'UserController@details');
-    Route::post('logout', 'UserController@logout');
+    Route::post('login', 'LoginController@login')->name('login');
+    Route::post('register', 'RegisterController@register')->name('register');
+    Route::get('details', 'UserController@details')->name('user.details');
+    Route::get('logout', 'UserController@logout')->name('user.logout');
+    Route::apiResource('categories', 'CategoryController');
+    Route::apiResource('projects', 'ProjectController');
+    Route::apiResource('tags', 'TagController');
+    Route::apiResource('links', 'LinkController');
 });
