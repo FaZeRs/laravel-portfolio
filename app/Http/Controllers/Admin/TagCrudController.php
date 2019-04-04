@@ -7,10 +7,6 @@ use App\Http\Requests\TagRequest as StoreRequest;
 use App\Http\Requests\TagRequest as UpdateRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 
-/**
- * Class TagCrudController.
- * @property-read CrudPanel $crud
- */
 class TagCrudController extends CrudController
 {
     public function setup()

@@ -16,9 +16,9 @@ class CheckIfAdmin
      * change the contents of this method to check that the logged in user
      * is an admin, and not a regular user.
      *
-     * @param [type] $user [description]
+     * @param \App\Models\BackpackUser $user
      *
-     * @return bool [description]
+     * @return bool
      */
     private function checkIfUserIsAdmin($user)
     {
@@ -28,9 +28,9 @@ class CheckIfAdmin
     /**
      * Answer to unauthorized access request.
      *
-     * @param [type] $request [description]
+     * @param \Illuminate\Http\Request $request
      *
-     * @return [type] [description]
+     * @return mixed
      */
     private function respondToUnauthorizedRequest($request)
     {

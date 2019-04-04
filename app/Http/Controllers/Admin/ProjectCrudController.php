@@ -8,10 +8,6 @@ use App\Http\Requests\ProjectRequest as StoreRequest;
 use App\Http\Requests\ProjectRequest as UpdateRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 
-/**
- * Class ProjectCrudController.
- * @property-read CrudPanel $crud
- */
 class ProjectCrudController extends CrudController
 {
     public function setup()

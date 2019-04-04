@@ -7,10 +7,6 @@ use App\Http\Requests\CategoryRequest as StoreRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use App\Http\Requests\CategoryRequest as UpdateRequest;
 
-/**
- * Class CategoryCrudController.
- * @property-read CrudPanel $crud
- */
 class CategoryCrudController extends CrudController
 {
     public function setup()

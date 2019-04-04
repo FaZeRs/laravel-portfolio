@@ -42,6 +42,6 @@ class CategoryController extends Controller
     {
         $category->delete();
 
-        return response()->json(null, 204);
+        return response()->json([], 204);
     }
 }
