@@ -46,7 +46,7 @@ composer start
 
 To install javascript dependencies and compile assets run this command
 ```
-yarn start
+npm run start
 ```
 
 The application will be available on http://localhost:8000, the phpMyAdmin on http://localhost:8080, the mailhog on http://localhost:8025
@@ -91,10 +91,6 @@ If you only have NPM installed you have to run this command from the root of the
 ```
 npm install
 ```
-If you have Yarn installed, run this instead from the root of the project:
-```
-yarn
-```
 
 Compile assets:
 ```
@@ -103,12 +99,6 @@ npm run dev
 
 # Watch to update automatically while developing
 npm run watch
-
-# Yarn
-yarn dev
-
-# Watch to update automatically while developing
-yarn watch
 ```
 
 ## REST API
@@ -119,10 +109,31 @@ We use [Laravel Passport](https://laravel.com/docs/master/passport). It is an OA
 
 Verb | Path | NamedRoute | Controller | Action | Middleware
 --- | --- | --- | --- | --- | ---
-POST   | /api/login                             |            | \App\Http\Controllers\Api\LoginController           | login | -
-POST   | /api/register                             |            | \App\Http\Controllers\Api\RegisterController           | register | -
-POST   | /api/details                             |            | \App\Http\Controllers\Api\UserController           | details | auth
-POST   | /api/logout                             |            | \App\Http\Controllers\Api\UserController           | logout | auth
+POST      | /api/login                  | api.login              | \App\Http\Controllers\Api\LoginController    | login      | -
+POST      | /api/register               | api.register           | \App\Http\Controllers\Api\RegisterController | register   | -
+GET       | /api/details                | api.user.details       | \App\Http\Controllers\Api\UserController     | details    | auth:api
+GET       | /api/logout                 | api.user.logout        | \App\Http\Controllers\Api\UserController     | logout     | auth:api
+GET       | /api/categories             | api.categories.index   | \App\Http\Controllers\Api\CategoryController | index      | -
+GET       | /api/categories/{category}  | api.categories.show    | \App\Http\Controllers\Api\CategoryController | show       | -
+POST      | /api/categories             | api.categories.store   | \App\Http\Controllers\Api\CategoryController | store      | api_admin
+PUT/PATCH | /api/categories/{category}  | api.categories.update  | \App\Http\Controllers\Api\CategoryController | update     | api_admin
+DELETE    | /api/categories/{category}  | api.categories.destroy | \App\Http\Controllers\Api\CategoryController | destroy    | api_admin
+GET       | /api/projects               | api.projects.index     | \App\Http\Controllers\Api\ProjectController  | index      | -
+GET       | /api/projects/{project}     | api.projects.show      | \App\Http\Controllers\Api\ProjectController  | show       | -
+POST      | /api/projects               | api.projects.store     | \App\Http\Controllers\Api\ProjectController  | store      | api_admin
+PUT/PATCH | /api/projects/{project}     | api.projects.update    | \App\Http\Controllers\Api\ProjectController  | update     | api_admin
+DELETE    | /api/projects/{project}     | api.projects.destroy   | \App\Http\Controllers\Api\ProjectController  | destroy    | api_admin
+GET       | /api/tags                   | api.tags.index         | \App\Http\Controllers\Api\TagController      | index      | -
+GET       | /api/tags/{tag}             | api.tags.show          | \App\Http\Controllers\Api\TagController      | show       | -
+POST      | /api/tags                   | api.tags.store         | \App\Http\Controllers\Api\TagController      | store      | api_admin
+PUT/PATCH | /api/tags/{project}         | api.tags.update        | \App\Http\Controllers\Api\TagController      | update     | api_admin
+DELETE    | /api/tags/{project}         | api.tags.destroy       | \App\Http\Controllers\Api\TagController      | destroy    | api_admin
+GET       | /api/links                  | api.links.index        | \App\Http\Controllers\Api\LinkController     | index      | -
+GET       | /api/links/{link}           | api.links.show         | \App\Http\Controllers\Api\LinkController     | show       | -
+POST      | /api/links                  | api.links.store        | \App\Http\Controllers\Api\LinkController     | store      | api_admin
+PUT/PATCH | /api/links/{link}           | api.links.update       | \App\Http\Controllers\Api\LinkController     | update     | api_admin
+DELETE    | /api/links/{link}           | api.links.destroy      | \App\Http\Controllers\Api\LinkController     | destroy    | api_admin
+POST      | /api/contact/send           | api.contact.send       | \App\Http\Controllers\Api\ContactController  | send       | -
 
 ## Running the tests
 
@@ -137,6 +148,7 @@ composer test
 * [Vue](https://vuejs.org) - The frontend framework used
 * [Vuetify](https://vuetifyjs.com) - Vue component framework used
 * [Docker](https://www.docker.com/) - PHP development environment
+* [Laravel Backpack](https://backpackforlaravel.com/) - Laravel admin panel
 
 ## Contributing
 
