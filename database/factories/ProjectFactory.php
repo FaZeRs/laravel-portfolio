@@ -19,6 +19,7 @@ $factory->define(App\Models\Project::class, function (Faker $faker) {
             return factory(App\Models\Category::class)->create()->id;
         },
         'description' => $faker->paragraph,
+        'image'       => 'projects/' . $faker->image(storage_path('app/public/projects'), 640, 480, null, false),
         'visible'     => $faker->boolean($chanceOfGettingTrue = 80),
         'order'       => $faker->randomDigit,
         'status'      => $faker->randomElement([
@@ -29,6 +30,5 @@ $factory->define(App\Models\Project::class, function (Faker $faker) {
             'completed',
             'cancelled',
         ]),
-        'image'       => $faker->imageUrl($width = 640, $height = 480),
     ];
 });

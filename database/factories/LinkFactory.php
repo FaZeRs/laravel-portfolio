@@ -19,6 +19,6 @@ $factory->define(App\Models\Link::class, function (Faker $faker) {
             return factory(App\Models\Project::class)->create()->id;
         },
         'url'        => $faker->url,
-        'icon'       => $faker->word,
+        'icon'       => $faker->randomElement(['open_in_browser', 'mdi-github-circle', 'mdi-gitlab', 'mdi-bitbucket']),
     ];
 });
