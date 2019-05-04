@@ -144,12 +144,14 @@ class Project extends Model
     {
         $this->links()->delete();
         $links = [];
-        foreach (json_decode($value) as $link) {
-            $links[] = new Link([
-                'title' => $link->title,
-                'url' => $link->url,
-                'icon' => $link->icon,
-            ]);
+        if(json_decode($value)) {
+            foreach (json_decode($value) as $link) {
+                $links[] = new Link([
+                    'title' => $link->title,
+                    'url' => $link->url,
+                    'icon' => $link->icon,
+                ]);
+            }
         }
         if ($links) {
             $this->links()->saveMany($links);
