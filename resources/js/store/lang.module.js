@@ -1,5 +1,7 @@
 import Cookies from 'js-cookie'
-import * as types from '../mutation-types'
+import {
+  SET_LOCALE
+} from './mutations.type'
 
 const { locale, locales } = window.config
 
@@ -17,7 +19,7 @@ export const getters = {
 
 // mutations
 export const mutations = {
-  [types.SET_LOCALE] (state, { locale }) {
+  [SET_LOCALE] (state, { locale }) {
     state.locale = locale
   }
 }
@@ -25,8 +27,15 @@ export const mutations = {
 // actions
 export const actions = {
   setLocale ({ commit }, { locale }) {
-    commit(types.SET_LOCALE, { locale })
+    commit(SET_LOCALE, { locale })
 
     Cookies.set('locale', locale, { expires: 365 })
   }
+}
+
+export default {
+  state,
+  actions,
+  mutations,
+  getters
 }

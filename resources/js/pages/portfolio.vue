@@ -6,7 +6,7 @@
           <h2 class="section-title mb-5">{{ $t('my_work') }}</h2>
           <v-layout row wrap class="mb-2">
             <v-flex xs12 sm12 text-xs-center>
-              <v-btn small @click="filter('all')">{{ $t('All') }}</v-btn>
+              <v-btn small @click="filter(0)">{{ $t('All') }}</v-btn>
               <v-btn v-for="category in categories" :key="category.id" small @click="filter(category.id)">
                 {{ category.title }}
               </v-btn>
@@ -44,6 +44,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import { FETCH_CATEGORIES, FETCH_PROJECTS } from '../store/actions.type'
 
 export default {
   layout: 'default',
@@ -52,74 +53,38 @@ export default {
   },
   data: () => ({
     title: window.config.appName,
-    // projects: [
-    //   {
-    //     id: 1,
-    //     name: 'Baltic Probiotics',
-    //     categories: ['all', 'wordpress'],
-    //     tech: ['Wordpress'],
-    //     image: {
-    //       thumb: require('../../img/baltic_probiotics_thumb.png'),
-    //       src: require('../../img/baltic_probiotics.png')
-    //     },
-    //     link: 'https://balticprobiotics.lv'
-    //   },
-    //   {
-    //     id: 2,
-    //     name: 'Nauris Linde',
-    //     categories: ['all', 'laravel', 'open-source'],
-    //     tech: ['Vue.js', 'Vuetify', 'Laravel'],
-    //     image: {
-    //       thumb: require('../../img/naurislinde_thumb.png'),
-    //       src: require('../../img/naurislinde.png')
-    //     },
-    //     link: 'https://naurislinde.com'
-    //   },
-    //   {
-    //     id: 3,
-    //     name: 'Laravel Boilerplate CMS',
-    //     categories: ['all', 'laravel', 'open-source'],
-    //     tech: ['Laravel', 'Bootstrap', 'MySQL'],
-    //     image: {
-    //       thumb: require('../../img/boilerplate_thumb.png'),
-    //       src: require('../../img/boilerplate.png')
-    //     },
-    //     github: 'https://github.com/FaZeRs/Boilerplate'
-    //   },
-    //   {
-    //     id: 4,
-    //     name: 'Kurzemes bizness',
-    //     categories: ['all', 'wordpress'],
-    //     tech: ['Wordpress'],
-    //     image: {
-    //       thumb: require('../../img/kurzemes_bizness_thumb.png'),
-    //       src: require('../../img/kurzemes_bizness.png')
-    //     },
-    //     link: 'https://kurzemesbizness.lv/'
-    //   }
-    // ],
-    currentCategory: 'all'
+    category: 0
   }),
   computed: {
-    // filteredProjects: function () {
-    //   let filter = this.currentCategory
-    //   return this.projects.filter(function (project) {
-    //     return project.categories.indexOf(filter) !== -1
-    //   })
-    // },
+    listConfig () {
+      const { category } = this
+      return {
+        category
+      }
+    },
     ...mapGetters([
-      'projects',
-      'categories'
+      'categories',
+      'projects'
     ])
   },
+  watch: {
+    category () {
+      this.fetchProjects()
+    }
+  },
   mounted () {
-    this.$store.dispatch('fetchProjects')
-    this.$store.dispatch('fetchCategories')
+    this.fetchCategories()
+    this.fetchProjects()
   },
   methods: {
+    fetchCategories () {
+      this.$store.dispatch(FETCH_CATEGORIES, {})
+    },
+    fetchProjects () {
+      this.$store.dispatch(FETCH_PROJECTS, this.listConfig)
+    },
     filter: function (category) {
-      //this.currentCategory = category
-      console.log(category)
+      this.category = category
     }
   }
 }

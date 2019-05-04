@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Filters\Filterable;
 use Illuminate\Support\Str;
 use Backpack\CRUD\CrudTrait;
 use Intervention\Image\Facades\Image;
@@ -13,6 +14,7 @@ class Project extends Model
 {
     use CrudTrait;
     use HasTranslations;
+    use Filterable;
 
     /**
      * The table associated with the model.
