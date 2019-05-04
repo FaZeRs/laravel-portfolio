@@ -60,23 +60,23 @@ class ProjectCrudController extends CrudController
                 'pivot'      => true,
                 'select_all' => true,
             ],
-            [
-                'name'            => 'links',
-                'label'           => 'Links',
-                'type'            => 'table',
-                'entity_singular' => 'link',
-                'columns'         => [
-                    'title' => 'Title',
-                    'url'   => 'Url',
-                    'icon'  => 'Icon',
-                ],
-                'max'             => 5,
-                'min'             => 0,
-            ],
         ]);
         $this->crud->addField([
-            'name' => 'slug', 'type' => 'text', 'label' => 'Slug', 'attributes' => ['disabled' => 'disabled'],
+            'name' => 'slug', 'type' => 'text', 'label' => 'Slug', 'attributes' => ['disabled' => 'disabled']
         ], 'update')->afterField('title');
+        $this->crud->addField([
+            'name'            => 'links',
+            'label'           => 'Links',
+            'type'            => 'table',
+            'entity_singular' => 'link',
+            'columns'         => [
+                'title' => 'Title',
+                'url'   => 'Url',
+                'icon'  => 'Icon',
+            ],
+            'max'             => 5,
+            'min'             => 0,
+        ], 'update')->afterField('order');
 
         // add asterisk for fields that are required in ProjectCrudControllerRequest
         $this->crud->setRequiredFields(StoreRequest::class, 'create');
