@@ -13,10 +13,12 @@ use Faker\Generator as Faker;
 |
 */
 $factory->define(App\Models\Project::class, function (Faker $faker) {
+    $category = App\Models\Category::inRandomOrder()->first();
+
     return [
         'title'       => $faker->sentence,
-        'category_id' => function () {
-            return factory(App\Models\Category::class)->create()->id;
+        'category_id' => function () use ($category) {
+            return optional($category)->id ?? factory(App\Models\Category::class)->create()->id;
         },
         'description' => $faker->paragraph,
         'image'       => 'projects/' . $faker->image(storage_path('app/public/projects'), 640, 480, null, false),
