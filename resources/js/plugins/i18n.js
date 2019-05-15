@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import store from '~/store'
 import VueI18n from 'vue-i18n'
-import { messages } from '~/lang/messages';
 import Cookies from "js-cookie";
 
 Vue.use(VueI18n)
@@ -9,7 +8,7 @@ Vue.use(VueI18n)
 const i18n = new VueI18n({
   locale: Cookies.get('locale') || 'en',
   fallbackLocale: 'en',
-  messages,
+  messages: {},
   silentTranslationWarn: false
 })
 
@@ -28,7 +27,7 @@ export async function loadMessages (locale) {
 }
 
 ;(async function () {
-  await loadMessages(store.getters['lang/locale'])
+  await loadMessages(store.getters['locale'])
 })()
 
 export default i18n

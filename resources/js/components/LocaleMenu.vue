@@ -18,13 +18,13 @@ import { loadMessages } from '~/plugins/i18n'
 
 export default {
   computed: mapGetters({
-    locale: 'lang/locale',
-    locales: 'lang/locales'
+    locale: 'locale',
+    locales: 'locales'
   }),
   methods: {
     setLocale (locale) {
       loadMessages(locale)
-      this.$store.dispatch('lang/setLocale', { locale })
+      this.$store.dispatch('setLocale', { locale })
       this.$validator.localize(locale)
     }
   }

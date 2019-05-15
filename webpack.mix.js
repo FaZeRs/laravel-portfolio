@@ -7,22 +7,18 @@ mix.webpackConfig({
   resolve: {
     extensions: ['.js', '.vue'],
     alias: {
-      '~': path.join(__dirname, './resources/js'),
-      Components: path.resolve(__dirname, 'resources/js/components'),
-      Lang: path.resolve(__dirname, 'resources/js/lang'),
-      Layouts: path.resolve(__dirname, 'resources/js/layouts'),
-      Middleware: path.resolve(__dirname, 'resources/js/middleware'),
-      Pages: path.resolve(__dirname, 'resources/js/pages'),
-      Partials: path.resolve(__dirname, 'resources/js/partials'),
-      Plugins: path.resolve(__dirname, 'resources/js/plugins'),
-      Routes: path.resolve(__dirname, 'resources/js/router'),
-      Store: path.resolve(__dirname, 'resources/js/store')
+      '~': path.join(__dirname, './resources/js')
     }
   },
   plugins: [
     // new BundleAnalyzerPlugin()
     new VuetifyLoaderPlugin()
-  ]
+  ],
+  output: {
+    filename: '[name].js',
+    chunkFilename: mix.inProduction() ? "js/chunks/[name].[chunkhash].js" : "js/chunks/[name].js",
+    path: path.resolve(__dirname, './public')
+  }
 })
 
 mix.js('resources/js/app.js', 'public/js')
