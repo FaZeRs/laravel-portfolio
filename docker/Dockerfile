@@ -11,7 +11,7 @@ RUN apk add --no-cache --virtual .build-deps \
     sqlite-dev
 
 # Install production dependencies
-RUN apk add --no-cache \
+RUN apk add --no-cache --update \
     bash \
     curl \
     g++ \
