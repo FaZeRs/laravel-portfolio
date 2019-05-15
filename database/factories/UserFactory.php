@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Str;
 use Faker\Generator as Faker;
+use Illuminate\Support\Facades\Hash;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +19,7 @@ $factory->define(App\Models\User::class, function (Faker $faker) {
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
         'email_verified_at' => now(),
-        'password' => bcrypt($faker->password),
+        'password' => Hash::make($faker->password),
         'remember_token' => Str::random(10),
         'is_admin' => 0,
     ];
