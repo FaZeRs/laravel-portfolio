@@ -1,5 +1,8 @@
 <?php
 
+/** @var \Illuminate\Database\Eloquent\Factory $factory */
+use App\Models\Project;
+use App\Models\Category;
 use Faker\Generator as Faker;
 
 /*
@@ -12,13 +15,13 @@ use Faker\Generator as Faker;
 | model instances for testing / seeding your application's database.
 |
 */
-$factory->define(App\Models\Project::class, function (Faker $faker) {
+$factory->define(Project::class, function (Faker $faker) {
     $category = App\Models\Category::inRandomOrder()->first();
 
     return [
         'title'       => $faker->sentence,
         'category_id' => function () use ($category) {
-            return optional($category)->id ?? factory(App\Models\Category::class)->create()->id;
+            return optional($category)->id ?? factory(Category::class)->create()->id;
         },
         'description' => $faker->paragraph,
         'image'       => 'projects/' . $faker->image(storage_path('app/public/projects'), 640, 480, null, false),
