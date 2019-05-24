@@ -3306,6 +3306,12 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _store_actions_type__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../store/actions.type */ "./resources/js/store/actions.type.js");
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 //
 //
 //
@@ -3384,23 +3390,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   layout: 'default',
   metaInfo: function metaInfo() {
@@ -3413,6 +3404,19 @@ __webpack_require__.r(__webpack_exports__);
       sem: __webpack_require__(/*! ../../img/sem.png */ "./resources/img/sem.png"),
       giraffe360: __webpack_require__(/*! ../../img/giraffe360.svg */ "./resources/img/giraffe360.svg")
     };
+  },
+  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])(['education', 'experience'])),
+  mounted: function mounted() {
+    this.fetchEducation();
+    this.fetchExperience();
+  },
+  methods: {
+    fetchEducation: function fetchEducation() {
+      this.$store.dispatch(_store_actions_type__WEBPACK_IMPORTED_MODULE_1__["FETCH_EDUCATION"], {});
+    },
+    fetchExperience: function fetchExperience() {
+      this.$store.dispatch(_store_actions_type__WEBPACK_IMPORTED_MODULE_1__["FETCH_EXPERIENCE"], {});
+    }
   }
 });
 
@@ -33851,139 +33855,102 @@ var render = function() {
                       staticClass: "text-xs-left",
                       attrs: { row: "", wrap: "" }
                     },
-                    [
-                      _c(
+                    _vm._l(_vm.education, function(school) {
+                      return _c(
                         "v-flex",
                         { attrs: { xs12: "", sm6: "", "d-flex": "" } },
                         [
                           _c("v-hover", {
-                            scopedSlots: _vm._u([
-                              {
-                                key: "default",
-                                fn: function(ref) {
-                                  var hover = ref.hover
-                                  return _c(
-                                    "v-card",
-                                    { class: "elevation-" + (hover ? 12 : 1) },
-                                    [
-                                      _c("div", { staticClass: "edu-block" }, [
+                            scopedSlots: _vm._u(
+                              [
+                                {
+                                  key: "default",
+                                  fn: function(ref) {
+                                    var hover = ref.hover
+                                    return _c(
+                                      "v-card",
+                                      {
+                                        class: "elevation-" + (hover ? 12 : 1)
+                                      },
+                                      [
                                         _c(
                                           "div",
-                                          { staticClass: "edu-session" },
-                                          [_c("span", [_vm._v("2015 - 2017")])]
-                                        ),
-                                        _vm._v(" "),
-                                        _c("div", { staticClass: "pl-5" }, [
-                                          _c(
-                                            "h4",
-                                            {
-                                              staticClass: "block-title title"
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                      " +
-                                                  _vm._s(
-                                                    _vm.$t("rtu_education")
-                                                  ) +
-                                                  "\n                    "
+                                          { staticClass: "edu-block" },
+                                          [
+                                            _c(
+                                              "div",
+                                              { staticClass: "edu-session" },
+                                              [
+                                                school.ongoing
+                                                  ? _c("span", [
+                                                      _vm._v(
+                                                        _vm._s(school.from) +
+                                                          " - " +
+                                                          _vm._s(
+                                                            _vm.$t("present")
+                                                          )
+                                                      )
+                                                    ])
+                                                  : _c("span", [
+                                                      _vm._v(
+                                                        _vm._s(school.from) +
+                                                          " - " +
+                                                          _vm._s(school.to)
+                                                      )
+                                                    ])
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c("div", { staticClass: "pl-5" }, [
+                                              _c(
+                                                "h4",
+                                                {
+                                                  staticClass:
+                                                    "block-title title"
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    "\n                      " +
+                                                      _vm._s(
+                                                        school.qualification
+                                                      ) +
+                                                      "\n                    "
+                                                  )
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "h5",
+                                                {
+                                                  staticClass:
+                                                    "mb-4 mt-3 subheading"
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    "\n                      " +
+                                                      _vm._s(
+                                                        school.organisation
+                                                      ) +
+                                                      "\n                    "
+                                                  )
+                                                ]
                                               )
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "h5",
-                                            {
-                                              staticClass:
-                                                "mb-4 mt-3 subheading"
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                      " +
-                                                  _vm._s(
-                                                    _vm.$t("rtu_address")
-                                                  ) +
-                                                  "\n                    "
-                                              )
-                                            ]
-                                          )
-                                        ])
-                                      ])
-                                    ]
-                                  )
+                                            ])
+                                          ]
+                                        )
+                                      ]
+                                    )
+                                  }
                                 }
-                              }
-                            ])
-                          })
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-flex",
-                        { attrs: { xs12: "", sm6: "", "d-flex": "" } },
-                        [
-                          _c("v-hover", {
-                            scopedSlots: _vm._u([
-                              {
-                                key: "default",
-                                fn: function(ref) {
-                                  var hover = ref.hover
-                                  return _c(
-                                    "v-card",
-                                    { class: "elevation-" + (hover ? 12 : 1) },
-                                    [
-                                      _c("div", { staticClass: "edu-block" }, [
-                                        _c(
-                                          "div",
-                                          { staticClass: "edu-session" },
-                                          [_c("span", [_vm._v("2011 - 2015")])]
-                                        ),
-                                        _vm._v(" "),
-                                        _c("div", { staticClass: "pl-5" }, [
-                                          _c(
-                                            "h4",
-                                            {
-                                              staticClass: "block-title title"
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                      " +
-                                                  _vm._s(
-                                                    _vm.$t("lvt_education")
-                                                  ) +
-                                                  "\n                    "
-                                              )
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "h5",
-                                            {
-                                              staticClass:
-                                                "mb-4 mt-3 subheading"
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                      " +
-                                                  _vm._s(
-                                                    _vm.$t("lvt_address")
-                                                  ) +
-                                                  "\n                    "
-                                              )
-                                            ]
-                                          )
-                                        ])
-                                      ])
-                                    ]
-                                  )
-                                }
-                              }
-                            ])
+                              ],
+                              null,
+                              true
+                            )
                           })
                         ],
                         1
                       )
-                    ],
+                    }),
                     1
                   )
                 ],
@@ -34012,96 +33979,117 @@ var render = function() {
                       attrs: { row: "", wrap: "" }
                     },
                     [
-                      _c(
-                        "v-flex",
-                        { attrs: { xs12: "", sm6: "", "d-flex": "" } },
-                        [
-                          _c("v-hover", {
-                            scopedSlots: _vm._u([
-                              {
-                                key: "default",
-                                fn: function(ref) {
-                                  var hover = ref.hover
-                                  return _c(
-                                    "v-card",
-                                    { class: "elevation-" + (hover ? 12 : 1) },
-                                    [
-                                      _c(
-                                        "div",
-                                        { staticClass: "work-exp-block" },
+                      _vm._l(_vm.experience, function(job) {
+                        return _c(
+                          "v-flex",
+                          { attrs: { xs12: "", sm6: "", "d-flex": "" } },
+                          [
+                            _c("v-hover", {
+                              scopedSlots: _vm._u(
+                                [
+                                  {
+                                    key: "default",
+                                    fn: function(ref) {
+                                      var hover = ref.hover
+                                      return _c(
+                                        "v-card",
+                                        {
+                                          class: "elevation-" + (hover ? 12 : 1)
+                                        },
                                         [
                                           _c(
                                             "div",
-                                            {
-                                              staticClass:
-                                                "working-duration title d-block"
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                    Jan 2019-" +
-                                                  _vm._s(_vm.$t("present")) +
-                                                  "\n                  "
-                                              )
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "div",
-                                            { staticClass: "work-exp-logo" },
-                                            [
-                                              _c("img", {
-                                                attrs: {
-                                                  src: _vm.giraffe360,
-                                                  width: "123",
-                                                  alt: "Giraffe360"
-                                                }
-                                              })
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "h4",
-                                            { staticClass: "headline mt-3" },
-                                            [
-                                              _vm._v(
-                                                _vm._s(
-                                                  _vm.$t("giraffe360_position")
-                                                )
-                                              )
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "h6",
-                                            {
-                                              staticClass:
-                                                "color-text title mt-2"
-                                            },
+                                            { staticClass: "work-exp-block" },
                                             [
                                               _c(
-                                                "a",
+                                                "div",
                                                 {
-                                                  attrs: {
-                                                    href:
-                                                      "https://giraffe360.com",
-                                                    target: "_blank"
-                                                  }
+                                                  staticClass:
+                                                    "working-duration title d-block"
                                                 },
-                                                [_vm._v("Giraffe360")]
+                                                [
+                                                  job.ongoing
+                                                    ? _c("span", [
+                                                        _vm._v(
+                                                          _vm._s(job.from) +
+                                                            " - " +
+                                                            _vm._s(
+                                                              _vm.$t("present")
+                                                            )
+                                                        )
+                                                      ])
+                                                    : _c("span", [
+                                                        _vm._v(
+                                                          _vm._s(job.from) +
+                                                            " - " +
+                                                            _vm._s(job.to)
+                                                        )
+                                                      ])
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "div",
+                                                {
+                                                  staticClass: "work-exp-logo"
+                                                },
+                                                [
+                                                  _c("img", {
+                                                    attrs: {
+                                                      src: _vm.giraffe360,
+                                                      width: "123",
+                                                      alt: "Giraffe360"
+                                                    }
+                                                  })
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "h4",
+                                                {
+                                                  staticClass: "headline mt-3"
+                                                },
+                                                [_vm._v(_vm._s(job.position))]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "h6",
+                                                {
+                                                  staticClass:
+                                                    "color-text title mt-2"
+                                                },
+                                                [
+                                                  _c(
+                                                    "a",
+                                                    {
+                                                      attrs: {
+                                                        href: job.website,
+                                                        target: "_blank"
+                                                      }
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        _vm._s(job.employer)
+                                                      )
+                                                    ]
+                                                  )
+                                                ]
                                               )
                                             ]
                                           )
                                         ]
                                       )
-                                    ]
-                                  )
-                                }
-                              }
-                            ])
-                          })
-                        ],
-                        1
-                      ),
+                                    }
+                                  }
+                                ],
+                                null,
+                                true
+                              )
+                            })
+                          ],
+                          1
+                        )
+                      }),
                       _vm._v(" "),
                       _c(
                         "v-flex",
@@ -34189,7 +34177,7 @@ var render = function() {
                         1
                       )
                     ],
-                    1
+                    2
                   )
                 ],
                 1
@@ -80600,13 +80588,15 @@ new vue__WEBPACK_IMPORTED_MODULE_1___default.a(_objectSpread({
 /*!********************************************!*\
   !*** ./resources/js/common/api.service.js ***!
   \********************************************/
-/*! exports provided: default, ProjectsService, CategoriesService */
+/*! exports provided: default, ProjectsService, CategoriesService, EducationService, ExperienceService */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProjectsService", function() { return ProjectsService; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CategoriesService", function() { return CategoriesService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EducationService", function() { return EducationService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExperienceService", function() { return ExperienceService; });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
@@ -80668,6 +80658,26 @@ var CategoriesService = {
   },
   get: function get(slug) {
     return ApiService.get('categories', slug);
+  }
+};
+var EducationService = {
+  query: function query(params) {
+    return ApiService.query('education', {
+      params: params
+    });
+  },
+  get: function get(id) {
+    return ApiService.get('education', id);
+  }
+};
+var ExperienceService = {
+  query: function query(params) {
+    return ApiService.query('experience', {
+      params: params
+    });
+  },
+  get: function get(id) {
+    return ApiService.get('experience', id);
   }
 };
 
@@ -82401,15 +82411,119 @@ __webpack_require__.r(__webpack_exports__);
 /*!********************************************!*\
   !*** ./resources/js/store/actions.type.js ***!
   \********************************************/
-/*! exports provided: FETCH_PROJECTS, FETCH_CATEGORIES */
+/*! exports provided: FETCH_PROJECTS, FETCH_CATEGORIES, FETCH_EDUCATION, FETCH_EXPERIENCE */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_PROJECTS", function() { return FETCH_PROJECTS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_CATEGORIES", function() { return FETCH_CATEGORIES; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_EDUCATION", function() { return FETCH_EDUCATION; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_EXPERIENCE", function() { return FETCH_EXPERIENCE; });
 var FETCH_PROJECTS = 'fetchProjects';
 var FETCH_CATEGORIES = 'fetchCategories';
+var FETCH_EDUCATION = 'fetchEducation';
+var FETCH_EXPERIENCE = 'fetchExperience';
+
+/***/ }),
+
+/***/ "./resources/js/store/education.module.js":
+/*!************************************************!*\
+  !*** ./resources/js/store/education.module.js ***!
+  \************************************************/
+/*! exports provided: state, actions, mutations, getters, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "state", function() { return state; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "actions", function() { return actions; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mutations", function() { return mutations; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getters", function() { return getters; });
+/* harmony import */ var _common_api_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ~/common/api.service */ "./resources/js/common/api.service.js");
+/* harmony import */ var _actions_type__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./actions.type */ "./resources/js/store/actions.type.js");
+/* harmony import */ var _mutations_type__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./mutations.type */ "./resources/js/store/mutations.type.js");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+var state = {
+  education: []
+};
+var actions = _defineProperty({}, _actions_type__WEBPACK_IMPORTED_MODULE_1__["FETCH_EDUCATION"], function (context, params) {
+  return _common_api_service__WEBPACK_IMPORTED_MODULE_0__["EducationService"].query(params).then(function (_ref) {
+    var data = _ref.data;
+    context.commit(_mutations_type__WEBPACK_IMPORTED_MODULE_2__["SET_EDUCATION"], data);
+    return data;
+  })["catch"](function (error) {
+    throw new Error(error);
+  });
+});
+var mutations = _defineProperty({}, _mutations_type__WEBPACK_IMPORTED_MODULE_2__["SET_EDUCATION"], function (state, education) {
+  state.education = education;
+});
+var getters = {
+  education: function education(state) {
+    return state.education;
+  }
+};
+/* harmony default export */ __webpack_exports__["default"] = ({
+  state: state,
+  actions: actions,
+  mutations: mutations,
+  getters: getters
+});
+
+/***/ }),
+
+/***/ "./resources/js/store/experience.module.js":
+/*!*************************************************!*\
+  !*** ./resources/js/store/experience.module.js ***!
+  \*************************************************/
+/*! exports provided: state, actions, mutations, getters, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "state", function() { return state; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "actions", function() { return actions; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mutations", function() { return mutations; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getters", function() { return getters; });
+/* harmony import */ var _common_api_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ~/common/api.service */ "./resources/js/common/api.service.js");
+/* harmony import */ var _actions_type__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./actions.type */ "./resources/js/store/actions.type.js");
+/* harmony import */ var _mutations_type__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./mutations.type */ "./resources/js/store/mutations.type.js");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+var state = {
+  experience: []
+};
+var actions = _defineProperty({}, _actions_type__WEBPACK_IMPORTED_MODULE_1__["FETCH_EXPERIENCE"], function (context, params) {
+  return _common_api_service__WEBPACK_IMPORTED_MODULE_0__["ExperienceService"].query(params).then(function (_ref) {
+    var data = _ref.data;
+    context.commit(_mutations_type__WEBPACK_IMPORTED_MODULE_2__["SET_EXPERIENCE"], data);
+    return data;
+  })["catch"](function (error) {
+    throw new Error(error);
+  });
+});
+var mutations = _defineProperty({}, _mutations_type__WEBPACK_IMPORTED_MODULE_2__["SET_EXPERIENCE"], function (state, experience) {
+  state.experience = experience;
+});
+var getters = {
+  experience: function experience(state) {
+    return state.experience;
+  }
+};
+/* harmony default export */ __webpack_exports__["default"] = ({
+  state: state,
+  actions: actions,
+  mutations: mutations,
+  getters: getters
+});
 
 /***/ }),
 
@@ -82427,6 +82541,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 /* harmony import */ var _project_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./project.module */ "./resources/js/store/project.module.js");
 /* harmony import */ var _lang_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./lang.module */ "./resources/js/store/lang.module.js");
+/* harmony import */ var _education_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./education.module */ "./resources/js/store/education.module.js");
+/* harmony import */ var _experience_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./experience.module */ "./resources/js/store/experience.module.js");
+
+
 
 
 
@@ -82435,7 +82553,9 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__
 /* harmony default export */ __webpack_exports__["default"] = (new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
   modules: {
     lang: _lang_module__WEBPACK_IMPORTED_MODULE_3__["default"],
-    project: _project_module__WEBPACK_IMPORTED_MODULE_2__["default"]
+    project: _project_module__WEBPACK_IMPORTED_MODULE_2__["default"],
+    education: _education_module__WEBPACK_IMPORTED_MODULE_4__["default"],
+    experience: _experience_module__WEBPACK_IMPORTED_MODULE_5__["default"]
   }
 }));
 
@@ -82509,7 +82629,7 @@ var actions = {
 /*!**********************************************!*\
   !*** ./resources/js/store/mutations.type.js ***!
   \**********************************************/
-/*! exports provided: SET_CATEGORIES, SET_PROJECTS, SET_LOCALE */
+/*! exports provided: SET_CATEGORIES, SET_PROJECTS, SET_LOCALE, SET_EDUCATION, SET_EXPERIENCE */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -82517,9 +82637,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_CATEGORIES", function() { return SET_CATEGORIES; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_PROJECTS", function() { return SET_PROJECTS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_LOCALE", function() { return SET_LOCALE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_EDUCATION", function() { return SET_EDUCATION; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_EXPERIENCE", function() { return SET_EXPERIENCE; });
 var SET_CATEGORIES = 'setCategories';
 var SET_PROJECTS = 'setProjects';
 var SET_LOCALE = 'SET_LOCALE';
+var SET_EDUCATION = 'setEducation';
+var SET_EXPERIENCE = 'setExperience';
 
 /***/ }),
 

@@ -22,4 +22,6 @@ Route::name('api.')->group(function () {
     Route::apiResource('projects', 'ProjectController');
     Route::apiResource('tags', 'TagController');
     Route::apiResource('links', 'LinkController');
+    Route::apiResource('education', 'EducationController');
+    Route::apiResource('experience', 'ExperienceController');
 });

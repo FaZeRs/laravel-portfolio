@@ -63,3 +63,25 @@ export const CategoriesService = {
     return ApiService.get('categories', slug)
   }
 }
+
+export const EducationService = {
+  query (params) {
+    return ApiService.query('education', {
+      params: params
+    })
+  },
+  get (id) {
+    return ApiService.get('education', id)
+  }
+}
+
+export const ExperienceService = {
+  query (params) {
+    return ApiService.query('experience', {
+      params: params
+    })
+  },
+  get (id) {
+    return ApiService.get('experience', id)
+  }
+}

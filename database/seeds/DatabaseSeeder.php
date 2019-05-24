@@ -16,6 +16,8 @@ class DatabaseSeeder extends Seeder
             CategoriesTableSeeder::class,
             TagsTableSeeder::class,
             ProjectsTableSeeder::class,
+            EducationTableSeeder::class,
+            ExperienceTableSeeder::class,
         ]);
     }
 }

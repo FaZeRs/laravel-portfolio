@@ -1,0 +1,67 @@
+<?php
+
+namespace App\Models;
+
+use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Model;
+use Backpack\CRUD\CrudTrait;
+use Backpack\CRUD\ModelTraits\SpatieTranslatable\HasTranslations;
+
+class Experience extends Model
+{
+    use CrudTrait;
+    use HasTranslations;
+
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'experience';
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'position',
+        'employer',
+        'website',
+        'from',
+        'to',
+        'ongoing',
+        'logo',
+    ];
+
+    /**
+     * The attributes that are translatable.
+     *
+     * @var array
+     */
+    public $translatable = [
+        'position',
+    ];
+
+    /**
+     * The attributes that should be mutated to dates.
+     *
+     * @var array
+     */
+    protected $dates = [
+        'from',
+        'to',
+        'created_at',
+        'updated_at',
+    ];
+
+    public function getFromAttribute($value)
+    {
+        return Carbon::parse($value)->format('M Y');
+    }
+
+    public function getToAttribute($value)
+    {
+        return Carbon::parse($value)->format('M Y');
+    }
+}
