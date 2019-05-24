@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
@@ -12,7 +13,7 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Models\User::class)->create([
+        factory(User::class)->create([
             'name' => 'Admin',
             'email' => 'admin@admin.com',
             'password' => Hash::make('secret'),
