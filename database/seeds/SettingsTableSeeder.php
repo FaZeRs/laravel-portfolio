@@ -129,14 +129,8 @@ class SettingsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('settings')->truncate();
         foreach ($this->settings as $index => $setting) {
-            $result = DB::table('settings')->insert($setting);
-            if (!$result) {
-                $this->command->info("Insert failed at record $index.");
-                return;
-            }
+            DB::table('settings')->insert($setting);
         }
-        $this->command->info('Inserted '.count($this->settings).' records.');
     }
 }
