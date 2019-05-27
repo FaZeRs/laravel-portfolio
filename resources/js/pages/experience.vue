@@ -5,7 +5,7 @@
         <v-flex class="text-xs-center" xs12>
           <h2 class="section-title mb-5">{{ $t('education') }}</h2>
           <v-layout row wrap class="text-xs-left">
-            <v-flex xs12 sm6 d-flex v-for="school in education" >
+            <v-flex v-for="school in education" :key="school.id" xs12 sm6 d-flex>
               <v-hover>
                 <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 1}`">
                   <div class="edu-block">
@@ -32,7 +32,7 @@
         <v-flex class="text-xs-center" xs12>
           <h2 class="section-title mb-5">{{ $t('experience') }}</h2>
           <v-layout row wrap class="text-xs-left">
-            <v-flex xs12 sm6 d-flex v-for="job in experience">
+            <v-flex v-for="job in experience" :key="job.id" xs12 sm6 d-flex >
               <v-hover>
                 <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 1}`">
                   <div class="work-exp-block">
@@ -41,29 +41,11 @@
                       <span v-else>{{ job.from }} - {{ job.to }}</span>
                     </div>
                     <div class="work-exp-logo">
-                      <img :src="giraffe360" width="123" alt="Giraffe360">
+                      <img v-if="job.logo" :src="job.logo" width="123" :alt="job.employer">
                     </div>
                     <h4 class="headline mt-3">{{ job.position }}</h4>
                     <h6 class="color-text title mt-2">
                       <a :href="job.website" target="_blank">{{ job.employer }}</a>
-                    </h6>
-                  </div>
-                </v-card>
-              </v-hover>
-            </v-flex>
-            <v-flex xs12 sm6 d-flex>
-              <v-hover>
-                <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 1}`">
-                  <div class="work-exp-block">
-                    <div class="working-duration title d-block">
-                      Aug 2016 - Jan 2019
-                    </div>
-                    <div class="work-exp-logo">
-                      <img :src="sem" width="123" alt="Sem.lv">
-                    </div>
-                    <h4 class="headline mt-3">{{ $t('sem_position') }}</h4>
-                    <h6 class="color-text title mt-2">
-                      <a href="https://sem.lv" target="_blank">Sem.lv</a>
                     </h6>
                   </div>
                 </v-card>

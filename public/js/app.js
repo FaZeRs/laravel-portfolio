@@ -3306,24 +3306,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -33909,7 +33891,10 @@ var render = function() {
                     _vm._l(_vm.education, function(school) {
                       return _c(
                         "v-flex",
-                        { attrs: { xs12: "", sm6: "", "d-flex": "" } },
+                        {
+                          key: school.id,
+                          attrs: { xs12: "", sm6: "", "d-flex": "" }
+                        },
                         [
                           _c("v-hover", {
                             scopedSlots: _vm._u(
@@ -34029,206 +34014,115 @@ var render = function() {
                       staticClass: "text-xs-left",
                       attrs: { row: "", wrap: "" }
                     },
-                    [
-                      _vm._l(_vm.experience, function(job) {
-                        return _c(
-                          "v-flex",
-                          { attrs: { xs12: "", sm6: "", "d-flex": "" } },
-                          [
-                            _c("v-hover", {
-                              scopedSlots: _vm._u(
-                                [
-                                  {
-                                    key: "default",
-                                    fn: function(ref) {
-                                      var hover = ref.hover
-                                      return _c(
-                                        "v-card",
-                                        {
-                                          class: "elevation-" + (hover ? 12 : 1)
-                                        },
-                                        [
-                                          _c(
-                                            "div",
-                                            { staticClass: "work-exp-block" },
-                                            [
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass:
-                                                    "working-duration title d-block"
-                                                },
-                                                [
-                                                  job.ongoing
-                                                    ? _c("span", [
-                                                        _vm._v(
-                                                          _vm._s(job.from) +
-                                                            " - " +
-                                                            _vm._s(
-                                                              _vm.$t("present")
-                                                            )
-                                                        )
-                                                      ])
-                                                    : _c("span", [
-                                                        _vm._v(
-                                                          _vm._s(job.from) +
-                                                            " - " +
-                                                            _vm._s(job.to)
-                                                        )
-                                                      ])
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass: "work-exp-logo"
-                                                },
-                                                [
-                                                  _c("img", {
-                                                    attrs: {
-                                                      src: _vm.giraffe360,
-                                                      width: "123",
-                                                      alt: "Giraffe360"
-                                                    }
-                                                  })
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "h4",
-                                                {
-                                                  staticClass: "headline mt-3"
-                                                },
-                                                [_vm._v(_vm._s(job.position))]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "h6",
-                                                {
-                                                  staticClass:
-                                                    "color-text title mt-2"
-                                                },
-                                                [
-                                                  _c(
-                                                    "a",
-                                                    {
-                                                      attrs: {
-                                                        href: job.website,
-                                                        target: "_blank"
-                                                      }
-                                                    },
-                                                    [
-                                                      _vm._v(
-                                                        _vm._s(job.employer)
-                                                      )
-                                                    ]
-                                                  )
-                                                ]
-                                              )
-                                            ]
-                                          )
-                                        ]
-                                      )
-                                    }
-                                  }
-                                ],
-                                null,
-                                true
-                              )
-                            })
-                          ],
-                          1
-                        )
-                      }),
-                      _vm._v(" "),
-                      _c(
+                    _vm._l(_vm.experience, function(job) {
+                      return _c(
                         "v-flex",
-                        { attrs: { xs12: "", sm6: "", "d-flex": "" } },
+                        {
+                          key: job.id,
+                          attrs: { xs12: "", sm6: "", "d-flex": "" }
+                        },
                         [
                           _c("v-hover", {
-                            scopedSlots: _vm._u([
-                              {
-                                key: "default",
-                                fn: function(ref) {
-                                  var hover = ref.hover
-                                  return _c(
-                                    "v-card",
-                                    { class: "elevation-" + (hover ? 12 : 1) },
-                                    [
-                                      _c(
-                                        "div",
-                                        { staticClass: "work-exp-block" },
-                                        [
-                                          _c(
-                                            "div",
-                                            {
-                                              staticClass:
-                                                "working-duration title d-block"
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                    Aug 2016 - Jan 2019\n                  "
-                                              )
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "div",
-                                            { staticClass: "work-exp-logo" },
-                                            [
-                                              _c("img", {
-                                                attrs: {
-                                                  src: _vm.sem,
-                                                  width: "123",
-                                                  alt: "Sem.lv"
-                                                }
-                                              })
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "h4",
-                                            { staticClass: "headline mt-3" },
-                                            [
-                                              _vm._v(
-                                                _vm._s(_vm.$t("sem_position"))
-                                              )
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "h6",
-                                            {
-                                              staticClass:
-                                                "color-text title mt-2"
-                                            },
-                                            [
-                                              _c(
-                                                "a",
-                                                {
-                                                  attrs: {
-                                                    href: "https://sem.lv",
-                                                    target: "_blank"
-                                                  }
-                                                },
-                                                [_vm._v("Sem.lv")]
-                                              )
-                                            ]
-                                          )
-                                        ]
-                                      )
-                                    ]
-                                  )
+                            scopedSlots: _vm._u(
+                              [
+                                {
+                                  key: "default",
+                                  fn: function(ref) {
+                                    var hover = ref.hover
+                                    return _c(
+                                      "v-card",
+                                      {
+                                        class: "elevation-" + (hover ? 12 : 1)
+                                      },
+                                      [
+                                        _c(
+                                          "div",
+                                          { staticClass: "work-exp-block" },
+                                          [
+                                            _c(
+                                              "div",
+                                              {
+                                                staticClass:
+                                                  "working-duration title d-block"
+                                              },
+                                              [
+                                                job.ongoing
+                                                  ? _c("span", [
+                                                      _vm._v(
+                                                        _vm._s(job.from) +
+                                                          " - " +
+                                                          _vm._s(
+                                                            _vm.$t("present")
+                                                          )
+                                                      )
+                                                    ])
+                                                  : _c("span", [
+                                                      _vm._v(
+                                                        _vm._s(job.from) +
+                                                          " - " +
+                                                          _vm._s(job.to)
+                                                      )
+                                                    ])
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "div",
+                                              { staticClass: "work-exp-logo" },
+                                              [
+                                                job.logo
+                                                  ? _c("img", {
+                                                      attrs: {
+                                                        src: job.logo,
+                                                        width: "123",
+                                                        alt: job.employer
+                                                      }
+                                                    })
+                                                  : _vm._e()
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "h4",
+                                              { staticClass: "headline mt-3" },
+                                              [_vm._v(_vm._s(job.position))]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "h6",
+                                              {
+                                                staticClass:
+                                                  "color-text title mt-2"
+                                              },
+                                              [
+                                                _c(
+                                                  "a",
+                                                  {
+                                                    attrs: {
+                                                      href: job.website,
+                                                      target: "_blank"
+                                                    }
+                                                  },
+                                                  [_vm._v(_vm._s(job.employer))]
+                                                )
+                                              ]
+                                            )
+                                          ]
+                                        )
+                                      ]
+                                    )
+                                  }
                                 }
-                              }
-                            ])
+                              ],
+                              null,
+                              true
+                            )
                           })
                         ],
                         1
                       )
-                    ],
-                    2
+                    }),
+                    1
                   )
                 ],
                 1
