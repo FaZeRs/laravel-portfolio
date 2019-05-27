@@ -51,7 +51,6 @@ class Setting extends SettingModel
                 {
                     preg_match("/^data:image\/(.*);base64/i", $value, $match);
                     $extension = $match[1];
-                   // dd($value);
                     $image = Image::make($value);
                     if (!is_null($image)) {
                         $filename = md5($value.time()).'.'.$extension;

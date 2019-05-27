@@ -17,9 +17,14 @@ RUN apk add --no-cache --update \
     g++ \
     gcc \
     git \
-    imagemagick \
-    libc-dev \
+    freetype \
+    freetype-dev \
+    libpng \
     libpng-dev \
+    libjpeg-turbo \
+    libjpeg-turbo-dev \
+    libjpeg \
+    libc-dev \
     make \
     mysql-client \
     nodejs \
@@ -27,7 +32,8 @@ RUN apk add --no-cache --update \
     openssh-client \
     postgresql-libs \
     rsync \
-    libzip-dev
+    libzip-dev \
+    imagemagick
 
 # Don't clear env variables
 # This is very important since it will allow us to read environment variables from the container.

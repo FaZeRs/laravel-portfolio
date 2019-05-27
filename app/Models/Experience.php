@@ -55,13 +55,35 @@ class Experience extends Model
         'updated_at',
     ];
 
-    public function getFromAttribute($value)
+    public function setLogoAttribute($value)
     {
-        return Carbon::parse($value)->format('M Y');
-    }
+        $attribute_name = 'logo';
+        $disk = 'public';
+        $destination_path = 'experience';
 
-    public function getToAttribute($value)
-    {
-        return Carbon::parse($value)->format('M Y');
+        if (is_null($value)) {
+            if (Storage::disk($disk)->delete($this->{$attribute_name})) {
+                $this->attributes[$attribute_name] = null;
+            }
+        }
+
+        if (Str::startsWith($value, 'data:image'))
+        {
+            preg_match("/^data:image\/(.*);base64/i", $value, $match);
+            $extension = $match[1];
+            $image = Image::make($value);
+            if (!is_null($image)) {
+                $filename = md5($value.time()).'.'.$extension;
+                try {
+                    Storage::disk($disk)->put($destination_path.'/'.$filename, $image->stream());
+                    $this->attributes[$attribute_name] = $destination_path.'/'.$filename;
+                } catch (\InvalidArgumentException $argumentException) {
+                    Alert::error($argumentException->getMessage())->flash();
+                    $this->attributes[$attribute_name] = null;
+                }
+            }
+        } else {
+            $this->attributes[$attribute_name] = $value;
+        }
     }
 }

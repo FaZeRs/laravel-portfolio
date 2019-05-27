@@ -22,6 +22,7 @@ class ExperienceResource extends JsonResource
             'from'       => $this->from,
             'to'         => $this->to,
             'ongoing'    => $this->ongoing,
+            'logo'       => Storage::url($this->logo),
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ];
