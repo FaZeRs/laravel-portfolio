@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use Carbon\Carbon;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class EducationResource extends JsonResource
@@ -18,8 +19,8 @@ class EducationResource extends JsonResource
             'id'            => $this->id,
             'qualification' => $this->qualification,
             'organisation'  => $this->organisation,
-            'from'          => $this->from,
-            'to'            => $this->to,
+            'from'          => Carbon::parse($this->from)->format('Y'),
+            'to'            => Carbon::parse($this->to)->format('Y'),
             'created_at'    => $this->created_at,
             'updated_at'    => $this->updated_at,
         ];

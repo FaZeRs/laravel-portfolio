@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\CrudTrait;
 use Backpack\CRUD\ModelTraits\SpatieTranslatable\HasTranslations;
@@ -53,14 +52,4 @@ class Education extends Model
         'created_at',
         'updated_at',
     ];
-
-    public function getFromAttribute($value)
-    {
-        return Carbon::parse($value)->format('Y');
-    }
-
-    public function getToAttribute($value)
-    {
-        return Carbon::parse($value)->format('Y');
-    }
 }

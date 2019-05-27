@@ -2,6 +2,8 @@
 
 namespace App\Http\Resources;
 
+use Carbon\Carbon;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class ExperienceResource extends JsonResource
@@ -19,8 +21,8 @@ class ExperienceResource extends JsonResource
             'position'   => $this->position,
             'employer'   => $this->employer,
             'website'    => $this->website,
-            'from'       => $this->from,
-            'to'         => $this->to,
+            'from'       => Carbon::parse($this->from)->format('M Y'),
+            'to'         => Carbon::parse($this->to)->format('M Y'),
             'ongoing'    => $this->ongoing,
             'logo'       => Storage::url($this->logo),
             'created_at' => $this->created_at,
