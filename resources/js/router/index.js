@@ -9,7 +9,7 @@ Vue.use(Meta)
 Vue.use(Router)
 
 // The middleware for every page of the application.
-const globalMiddleware = ['locale']
+const globalMiddleware = ['locale', 'settings']
 
 // Load middleware modules dynamically.
 const routeMiddleware = resolveMiddleware(

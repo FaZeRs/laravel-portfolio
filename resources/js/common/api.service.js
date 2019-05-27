@@ -85,3 +85,14 @@ export const ExperienceService = {
     return ApiService.get('experience', id)
   }
 }
+
+export const SettingsService = {
+  query (params) {
+    return ApiService.query('settings', {
+      params: params
+    })
+  },
+  get (key) {
+    return ApiService.get('settings', key)
+  }
+}

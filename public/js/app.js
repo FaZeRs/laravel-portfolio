@@ -1,50 +1,6 @@
 /******/ (function(modules) { // webpackBootstrap
-/******/ 	// install a JSONP callback for chunk loading
-/******/ 	function webpackJsonpCallback(data) {
-/******/ 		var chunkIds = data[0];
-/******/ 		var moreModules = data[1];
-/******/
-/******/
-/******/ 		// add "moreModules" to the modules object,
-/******/ 		// then flag all "chunkIds" as loaded and fire callback
-/******/ 		var moduleId, chunkId, i = 0, resolves = [];
-/******/ 		for(;i < chunkIds.length; i++) {
-/******/ 			chunkId = chunkIds[i];
-/******/ 			if(installedChunks[chunkId]) {
-/******/ 				resolves.push(installedChunks[chunkId][0]);
-/******/ 			}
-/******/ 			installedChunks[chunkId] = 0;
-/******/ 		}
-/******/ 		for(moduleId in moreModules) {
-/******/ 			if(Object.prototype.hasOwnProperty.call(moreModules, moduleId)) {
-/******/ 				modules[moduleId] = moreModules[moduleId];
-/******/ 			}
-/******/ 		}
-/******/ 		if(parentJsonpFunction) parentJsonpFunction(data);
-/******/
-/******/ 		while(resolves.length) {
-/******/ 			resolves.shift()();
-/******/ 		}
-/******/
-/******/ 	};
-/******/
-/******/
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
-/******/
-/******/ 	// object to store loaded and loading chunks
-/******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
-/******/ 	// Promise = chunk loading, 0 = chunk loaded
-/******/ 	var installedChunks = {
-/******/ 		"/js/app": 0
-/******/ 	};
-/******/
-/******/
-/******/
-/******/ 	// script path function
-/******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/chunks/" + ({"lang-en":"lang-en","lang-lv":"lang-lv"}[chunkId]||chunkId) + ".js"
-/******/ 	}
 /******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
@@ -70,64 +26,6 @@
 /******/ 		return module.exports;
 /******/ 	}
 /******/
-/******/ 	// This file contains only the entry chunk.
-/******/ 	// The chunk loading function for additional chunks
-/******/ 	__webpack_require__.e = function requireEnsure(chunkId) {
-/******/ 		var promises = [];
-/******/
-/******/
-/******/ 		// JSONP chunk loading for javascript
-/******/
-/******/ 		var installedChunkData = installedChunks[chunkId];
-/******/ 		if(installedChunkData !== 0) { // 0 means "already installed".
-/******/
-/******/ 			// a Promise means "currently loading".
-/******/ 			if(installedChunkData) {
-/******/ 				promises.push(installedChunkData[2]);
-/******/ 			} else {
-/******/ 				// setup Promise in chunk cache
-/******/ 				var promise = new Promise(function(resolve, reject) {
-/******/ 					installedChunkData = installedChunks[chunkId] = [resolve, reject];
-/******/ 				});
-/******/ 				promises.push(installedChunkData[2] = promise);
-/******/
-/******/ 				// start chunk loading
-/******/ 				var script = document.createElement('script');
-/******/ 				var onScriptComplete;
-/******/
-/******/ 				script.charset = 'utf-8';
-/******/ 				script.timeout = 120;
-/******/ 				if (__webpack_require__.nc) {
-/******/ 					script.setAttribute("nonce", __webpack_require__.nc);
-/******/ 				}
-/******/ 				script.src = jsonpScriptSrc(chunkId);
-/******/
-/******/ 				onScriptComplete = function (event) {
-/******/ 					// avoid mem leaks in IE.
-/******/ 					script.onerror = script.onload = null;
-/******/ 					clearTimeout(timeout);
-/******/ 					var chunk = installedChunks[chunkId];
-/******/ 					if(chunk !== 0) {
-/******/ 						if(chunk) {
-/******/ 							var errorType = event && (event.type === 'load' ? 'missing' : event.type);
-/******/ 							var realSrc = event && event.target && event.target.src;
-/******/ 							var error = new Error('Loading chunk ' + chunkId + ' failed.\n(' + errorType + ': ' + realSrc + ')');
-/******/ 							error.type = errorType;
-/******/ 							error.request = realSrc;
-/******/ 							chunk[1](error);
-/******/ 						}
-/******/ 						installedChunks[chunkId] = undefined;
-/******/ 					}
-/******/ 				};
-/******/ 				var timeout = setTimeout(function(){
-/******/ 					onScriptComplete({ type: 'timeout', target: script });
-/******/ 				}, 120000);
-/******/ 				script.onerror = script.onload = onScriptComplete;
-/******/ 				document.head.appendChild(script);
-/******/ 			}
-/******/ 		}
-/******/ 		return Promise.all(promises);
-/******/ 	};
 /******/
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = modules;
@@ -180,16 +78,6 @@
 /******/
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "/";
-/******/
-/******/ 	// on error function for async loading
-/******/ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };
-/******/
-/******/ 	var jsonpArray = window["webpackJsonp"] = window["webpackJsonp"] || [];
-/******/ 	var oldJsonpFunction = jsonpArray.push.bind(jsonpArray);
-/******/ 	jsonpArray.push = webpackJsonpCallback;
-/******/ 	jsonpArray = jsonpArray.slice();
-/******/ 	for(var i = 0; i < jsonpArray.length; i++) webpackJsonpCallback(jsonpArray[i]);
-/******/ 	var parentJsonpFunction = oldJsonpFunction;
 /******/
 /******/
 /******/ 	// Load entry module and return exports
@@ -3200,6 +3088,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 
@@ -3212,10 +3106,29 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      appName: window.config.appName,
+      appName: '',
+      name: '',
+      profession: '',
       year: window.config.year,
-      jumbotronBg: __webpack_require__(/*! ../../img/jumbotron-bg.jpg */ "./resources/img/jumbotron-bg.jpg")
+      jumbotronBg: __webpack_require__(/*! ../../img/jumbotron-bg.jpg */ "./resources/img/jumbotron-bg.jpg"),
+      facebook: null,
+      twitter: null,
+      linkedin: null,
+      github: null,
+      gitlab: null,
+      bitbucket: null
     };
+  },
+  created: function created() {
+    this.appName = this.$store.getters['settings']['app_name']['value'];
+    this.name = this.$store.getters['settings']['name']['value'];
+    this.profession = this.$store.getters['settings']['profession']['value'];
+    this.facebook = this.$store.getters['settings']['facebook']['value'];
+    this.twitter = this.$store.getters['settings']['twitter']['value'];
+    this.linkedin = this.$store.getters['settings']['linkedin']['value'];
+    this.github = this.$store.getters['settings']['github']['value'];
+    this.gitlab = this.$store.getters['settings']['gitlab']['value'];
+    this.bitbucket = this.$store.getters['settings']['bitbucket']['value'];
   }
 });
 
@@ -3277,6 +3190,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   layout: 'default',
@@ -3290,8 +3209,23 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      title: window.config.appName
+      email: null,
+      facebook: null,
+      twitter: null,
+      linkedin: null,
+      github: null,
+      gitlab: null,
+      bitbucket: null
     };
+  },
+  created: function created() {
+    this.email = this.$store.getters['settings']['contact_email']['value'];
+    this.facebook = this.$store.getters['settings']['facebook']['value'];
+    this.twitter = this.$store.getters['settings']['twitter']['value'];
+    this.linkedin = this.$store.getters['settings']['linkedin']['value'];
+    this.github = this.$store.getters['settings']['github']['value'];
+    this.gitlab = this.$store.getters['settings']['gitlab']['value'];
+    this.bitbucket = this.$store.getters['settings']['bitbucket']['value'];
   }
 });
 
@@ -3451,16 +3385,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   layout: 'default',
   data: function data() {
     return {
-      appName: window.config.appName,
+      name: '',
+      about_me: '',
+      photo: null,
       myPhoto: __webpack_require__(/*! ../../img/my-photo.png */ "./resources/img/my-photo.png"),
       jumbotronBg: __webpack_require__(/*! ../../img/jumbotron-bg.jpg */ "./resources/img/jumbotron-bg.jpg")
     };
@@ -3469,6 +3400,11 @@ __webpack_require__.r(__webpack_exports__);
     return {
       title: this.$t('home')
     };
+  },
+  created: function created() {
+    this.name = this.$store.getters['settings']['name']['value'];
+    this.about_me = this.$store.getters['settings']['about_you']['value'];
+    this.photo = this.$store.getters['settings']['photo']['value'];
   }
 });
 
@@ -33315,7 +33251,9 @@ var render = function() {
                         [
                           _c("span", {
                             domProps: {
-                              innerHTML: _vm._s(_vm.$t("hello_guys"))
+                              innerHTML: _vm._s(
+                                _vm.$t("hello_guys", { name: _vm.name })
+                              )
                             }
                           })
                         ]
@@ -33330,7 +33268,7 @@ var render = function() {
                         [
                           _vm._v(_vm._s(_vm.$t("i_am")) + " "),
                           _c("span", { staticClass: "typelist-skill" }, [
-                            _vm._v(_vm._s(_vm.$t("a_developer")))
+                            _vm._v(_vm._s(_vm.profession))
                           ])
                         ]
                       ),
@@ -33344,102 +33282,161 @@ var render = function() {
                         "v-layout",
                         { attrs: { "justify-space-around": "" } },
                         [
-                          _c(
-                            "v-btn",
-                            {
-                              attrs: {
-                                href: "https://www.facebook.com/nauris.linde",
-                                target: "_blank",
-                                outline: "",
-                                fab: "",
-                                color: "white"
-                              }
-                            },
-                            [
-                              _c(
-                                "v-icon",
+                          _vm.facebook
+                            ? _c(
+                                "v-btn",
                                 {
-                                  staticClass: "fa-hover",
-                                  attrs: { dark: "" }
+                                  attrs: {
+                                    href: _vm.facebook,
+                                    target: "_blank",
+                                    outline: "",
+                                    fab: "",
+                                    color: "white"
+                                  }
                                 },
-                                [_vm._v("mdi-facebook")]
+                                [
+                                  _c(
+                                    "v-icon",
+                                    {
+                                      staticClass: "fa-hover",
+                                      attrs: { dark: "" }
+                                    },
+                                    [_vm._v("mdi-facebook")]
+                                  )
+                                ],
+                                1
                               )
-                            ],
-                            1
-                          ),
+                            : _vm._e(),
                           _vm._v(" "),
-                          _c(
-                            "v-btn",
-                            {
-                              attrs: {
-                                href: "https://twitter.com/naurislinde",
-                                target: "_blank",
-                                outline: "",
-                                fab: "",
-                                color: "white"
-                              }
-                            },
-                            [
-                              _c(
-                                "v-icon",
+                          _vm.twitter
+                            ? _c(
+                                "v-btn",
                                 {
-                                  staticClass: "fa-hover",
-                                  attrs: { dark: "" }
+                                  attrs: {
+                                    href: _vm.twitter,
+                                    target: "_blank",
+                                    outline: "",
+                                    fab: "",
+                                    color: "white"
+                                  }
                                 },
-                                [_vm._v("mdi-twitter")]
+                                [
+                                  _c(
+                                    "v-icon",
+                                    {
+                                      staticClass: "fa-hover",
+                                      attrs: { dark: "" }
+                                    },
+                                    [_vm._v("mdi-twitter")]
+                                  )
+                                ],
+                                1
                               )
-                            ],
-                            1
-                          ),
+                            : _vm._e(),
                           _vm._v(" "),
-                          _c(
-                            "v-btn",
-                            {
-                              attrs: {
-                                href:
-                                  "https://www.linkedin.com/in/nauris-linde-4027aaaa",
-                                target: "_blank",
-                                outline: "",
-                                fab: "",
-                                color: "white"
-                              }
-                            },
-                            [
-                              _c(
-                                "v-icon",
+                          _vm.linkedin
+                            ? _c(
+                                "v-btn",
                                 {
-                                  staticClass: "fa-hover",
-                                  attrs: { dark: "" }
+                                  attrs: {
+                                    href: _vm.linkedin,
+                                    target: "_blank",
+                                    outline: "",
+                                    fab: "",
+                                    color: "white"
+                                  }
                                 },
-                                [_vm._v("mdi-linkedin")]
+                                [
+                                  _c(
+                                    "v-icon",
+                                    {
+                                      staticClass: "fa-hover",
+                                      attrs: { dark: "" }
+                                    },
+                                    [_vm._v("mdi-linkedin")]
+                                  )
+                                ],
+                                1
                               )
-                            ],
-                            1
-                          ),
+                            : _vm._e(),
                           _vm._v(" "),
-                          _c(
-                            "v-btn",
-                            {
-                              attrs: {
-                                href: "https://github.com/FaZeRs",
-                                target: "_blank",
-                                outline: "",
-                                fab: "",
-                                color: "white"
-                              }
-                            },
-                            [
-                              _c(
-                                "v-icon",
+                          _vm.github
+                            ? _c(
+                                "v-btn",
                                 {
-                                  staticClass: "fa-hover",
-                                  attrs: { dark: "" }
+                                  attrs: {
+                                    href: _vm.github,
+                                    target: "_blank",
+                                    outline: "",
+                                    fab: "",
+                                    color: "white"
+                                  }
                                 },
-                                [_vm._v("mdi-github-circle")]
+                                [
+                                  _c(
+                                    "v-icon",
+                                    {
+                                      staticClass: "fa-hover",
+                                      attrs: { dark: "" }
+                                    },
+                                    [_vm._v("mdi-github-circle")]
+                                  )
+                                ],
+                                1
                               )
-                            ],
-                            1
-                          )
+                            : _vm._e(),
+                          _vm._v(" "),
+                          _vm.gitlab
+                            ? _c(
+                                "v-btn",
+                                {
+                                  attrs: {
+                                    href: _vm.gitlab,
+                                    target: "_blank",
+                                    outline: "",
+                                    fab: "",
+                                    color: "white"
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "v-icon",
+                                    {
+                                      staticClass: "fa-hover",
+                                      attrs: { dark: "" }
+                                    },
+                                    [_vm._v("mdi-gitlab")]
+                                  )
+                                ],
+                                1
+                              )
+                            : _vm._e(),
+                          _vm._v(" "),
+                          _vm.bitbucket
+                            ? _c(
+                                "v-btn",
+                                {
+                                  attrs: {
+                                    href: _vm.bitbucket,
+                                    target: "_blank",
+                                    outline: "",
+                                    fab: "",
+                                    color: "white"
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "v-icon",
+                                    {
+                                      staticClass: "fa-hover",
+                                      attrs: { dark: "" }
+                                    },
+                                    [_vm._v("mdi-bitbucket")]
+                                  )
+                                ],
+                                1
+                              )
+                            : _vm._e()
                         ],
                         1
                       )
@@ -33595,37 +33592,41 @@ var render = function() {
                                             "div",
                                             { staticClass: "flex pb-6" },
                                             [
-                                              _c(
-                                                "div",
-                                                { staticClass: "con-text" },
-                                                [
-                                                  _c(
-                                                    "v-icon",
-                                                    { attrs: { small: "" } },
+                                              _vm.email
+                                                ? _c(
+                                                    "div",
+                                                    { staticClass: "con-text" },
                                                     [
-                                                      _vm._v(
-                                                        "mdi-email-outline"
+                                                      _c(
+                                                        "v-icon",
+                                                        {
+                                                          attrs: { small: "" }
+                                                        },
+                                                        [
+                                                          _vm._v(
+                                                            "mdi-email-outline"
+                                                          )
+                                                        ]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c(
+                                                        "a",
+                                                        {
+                                                          attrs: {
+                                                            href:
+                                                              "mailto:naurislinde@gmail.com"
+                                                          }
+                                                        },
+                                                        [
+                                                          _vm._v(
+                                                            _vm._s(_vm.email)
+                                                          )
+                                                        ]
                                                       )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "a",
-                                                    {
-                                                      attrs: {
-                                                        href:
-                                                          "mailto:naurislinde@gmail.com"
-                                                      }
-                                                    },
-                                                    [
-                                                      _vm._v(
-                                                        "naurislinde@gmail.com"
-                                                      )
-                                                    ]
+                                                    ],
+                                                    1
                                                   )
-                                                ],
-                                                1
-                                              )
+                                                : _vm._e()
                                             ]
                                           ),
                                           _vm._v(" "),
@@ -33633,89 +33634,139 @@ var render = function() {
                                             "div",
                                             { staticClass: "social mt-4" },
                                             [
-                                              _c(
-                                                "v-btn",
-                                                {
-                                                  attrs: {
-                                                    color: "#3b5998",
-                                                    dark: "",
-                                                    small: "",
-                                                    fab: "",
-                                                    href:
-                                                      "https://www.facebook.com/nauris.linde",
-                                                    target: "_blank"
-                                                  }
-                                                },
-                                                [
-                                                  _c("v-icon", [
-                                                    _vm._v("mdi-facebook")
-                                                  ])
-                                                ],
-                                                1
-                                              ),
+                                              _vm.facebook
+                                                ? _c(
+                                                    "v-btn",
+                                                    {
+                                                      attrs: {
+                                                        color: "#3b5998",
+                                                        dark: "",
+                                                        small: "",
+                                                        fab: "",
+                                                        href: _vm.facebook,
+                                                        target: "_blank"
+                                                      }
+                                                    },
+                                                    [
+                                                      _c("v-icon", [
+                                                        _vm._v("mdi-facebook")
+                                                      ])
+                                                    ],
+                                                    1
+                                                  )
+                                                : _vm._e(),
                                               _vm._v(" "),
-                                              _c(
-                                                "v-btn",
-                                                {
-                                                  attrs: {
-                                                    color: "#55acee",
-                                                    dark: "",
-                                                    small: "",
-                                                    fab: "",
-                                                    href:
-                                                      "https://twitter.com/naurislinde",
-                                                    target: "_blank"
-                                                  }
-                                                },
-                                                [
-                                                  _c("v-icon", [
-                                                    _vm._v("mdi-twitter")
-                                                  ])
-                                                ],
-                                                1
-                                              ),
+                                              _vm.twitter
+                                                ? _c(
+                                                    "v-btn",
+                                                    {
+                                                      attrs: {
+                                                        color: "#55acee",
+                                                        dark: "",
+                                                        small: "",
+                                                        fab: "",
+                                                        href: _vm.twitter,
+                                                        target: "_blank"
+                                                      }
+                                                    },
+                                                    [
+                                                      _c("v-icon", [
+                                                        _vm._v("mdi-twitter")
+                                                      ])
+                                                    ],
+                                                    1
+                                                  )
+                                                : _vm._e(),
                                               _vm._v(" "),
-                                              _c(
-                                                "v-btn",
-                                                {
-                                                  attrs: {
-                                                    color: "#1985bc",
-                                                    dark: "",
-                                                    small: "",
-                                                    fab: "",
-                                                    href:
-                                                      "https://www.linkedin.com/in/nauris-linde-4027aaaa",
-                                                    target: "_blank"
-                                                  }
-                                                },
-                                                [
-                                                  _c("v-icon", [
-                                                    _vm._v("mdi-linkedin")
-                                                  ])
-                                                ],
-                                                1
-                                              ),
+                                              _vm.linkedin
+                                                ? _c(
+                                                    "v-btn",
+                                                    {
+                                                      attrs: {
+                                                        color: "#1985bc",
+                                                        dark: "",
+                                                        small: "",
+                                                        fab: "",
+                                                        href: _vm.linkedin,
+                                                        target: "_blank"
+                                                      }
+                                                    },
+                                                    [
+                                                      _c("v-icon", [
+                                                        _vm._v("mdi-linkedin")
+                                                      ])
+                                                    ],
+                                                    1
+                                                  )
+                                                : _vm._e(),
                                               _vm._v(" "),
-                                              _c(
-                                                "v-btn",
-                                                {
-                                                  attrs: {
-                                                    color: "#222",
-                                                    dark: "",
-                                                    small: "",
-                                                    fab: "",
-                                                    href:
-                                                      "https://github.com/FaZeRs",
-                                                    target: "_blank"
-                                                  }
-                                                },
-                                                [
-                                                  _c("v-icon", [
-                                                    _vm._v("mdi-github-circle")
-                                                  ])
-                                                ],
-                                                1
-                                              )
+                                              _vm.github
+                                                ? _c(
+                                                    "v-btn",
+                                                    {
+                                                      attrs: {
+                                                        color: "#222",
+                                                        dark: "",
+                                                        small: "",
+                                                        fab: "",
+                                                        href: _vm.github,
+                                                        target: "_blank"
+                                                      }
+                                                    },
+                                                    [
+                                                      _c("v-icon", [
+                                                        _vm._v(
+                                                          "mdi-github-circle"
+                                                        )
+                                                      ])
+                                                    ],
+                                                    1
+                                                  )
+                                                : _vm._e(),
+                                              _vm._v(" "),
+                                              _vm.gitlab
+                                                ? _c(
+                                                    "v-btn",
+                                                    {
+                                                      attrs: {
+                                                        color: "#fca326",
+                                                        dark: "",
+                                                        small: "",
+                                                        fab: "",
+                                                        href: _vm.gitlab,
+                                                        target: "_blank"
+                                                      }
+                                                    },
+                                                    [
+                                                      _c("v-icon", [
+                                                        _vm._v("mdi-gitlab")
+                                                      ])
+                                                    ],
+                                                    1
+                                                  )
+                                                : _vm._e(),
+                                              _vm._v(" "),
+                                              _vm.bitbucket
+                                                ? _c(
+                                                    "v-btn",
+                                                    {
+                                                      attrs: {
+                                                        color: "#205081",
+                                                        dark: "",
+                                                        small: "",
+                                                        fab: "",
+                                                        href: _vm.bitbucket,
+                                                        target: "_blank"
+                                                      }
+                                                    },
+                                                    [
+                                                      _c("v-icon", [
+                                                        _vm._v("mdi-bitbucket")
+                                                      ])
+                                                    ],
+                                                    1
+                                                  )
+                                                : _vm._e()
                                             ],
                                             1
                                           )
@@ -34236,15 +34287,23 @@ var render = function() {
                 "v-flex",
                 { staticClass: "text-xs-center", attrs: { xs12: "", md4: "" } },
                 [
-                  _c(
-                    "v-avatar",
-                    { staticClass: "grey lighten-4", attrs: { size: "300px" } },
-                    [
-                      _c("img", {
-                        attrs: { src: _vm.myPhoto, alt: "Nauris Linde" }
-                      })
-                    ]
-                  )
+                  _vm.photo
+                    ? _c(
+                        "v-avatar",
+                        {
+                          staticClass: "grey lighten-4",
+                          attrs: { size: "300px" }
+                        },
+                        [
+                          _c("img", {
+                            attrs: {
+                              src: "storage/" + _vm.photo,
+                              alt: _vm.name
+                            }
+                          })
+                        ]
+                      )
+                    : _vm._e()
                 ],
                 1
               ),
@@ -34259,70 +34318,8 @@ var render = function() {
                   _vm._v(" "),
                   _c("p", { staticClass: "my-4 subheading text-xs-justify" }, [
                     _c("span", {
-                      domProps: { innerHTML: _vm._s(_vm.$t("hello_i_am")) }
-                    }),
-                    _vm._v(" "),
-                    _c(
-                      "a",
-                      {
-                        staticClass: "facebook-link",
-                        attrs: {
-                          href: "https://www.facebook.com/nauris.linde",
-                          target: "_blank"
-                        }
-                      },
-                      [_vm._v("Facebook")]
-                    ),
-                    _vm._v(",\n          "),
-                    _c(
-                      "a",
-                      {
-                        staticClass: "twitter-link",
-                        attrs: {
-                          href: "https://twitter.com/naurislinde",
-                          target: "_blank"
-                        }
-                      },
-                      [_vm._v("Twitter")]
-                    ),
-                    _vm._v(",\n          "),
-                    _c(
-                      "a",
-                      {
-                        staticClass: "linkedin-link",
-                        attrs: {
-                          href:
-                            "https://www.linkedin.com/in/nauris-linde-4027aaaa",
-                          target: "_blank"
-                        }
-                      },
-                      [_vm._v("LinkedIn")]
-                    ),
-                    _vm._v(",\n          "),
-                    _c(
-                      "a",
-                      {
-                        staticClass: "github-link",
-                        attrs: {
-                          href: "https://github.com/FaZeRs",
-                          target: "_blank"
-                        }
-                      },
-                      [_vm._v("GitHub")]
-                    ),
-                    _vm._v(",\n          "),
-                    _c(
-                      "a",
-                      {
-                        staticClass: "upwork-link",
-                        attrs: {
-                          href:
-                            "https://www.upwork.com/o/profiles/users/_~010151abb5cc799441/",
-                          target: "_blank"
-                        }
-                      },
-                      [_vm._v("UpWork")]
-                    )
+                      domProps: { innerHTML: _vm._s(_vm.about_me) }
+                    })
                   ])
                 ]
               )
@@ -80588,7 +80585,7 @@ new vue__WEBPACK_IMPORTED_MODULE_1___default.a(_objectSpread({
 /*!********************************************!*\
   !*** ./resources/js/common/api.service.js ***!
   \********************************************/
-/*! exports provided: default, ProjectsService, CategoriesService, EducationService, ExperienceService */
+/*! exports provided: default, ProjectsService, CategoriesService, EducationService, ExperienceService, SettingsService */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -80597,6 +80594,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CategoriesService", function() { return CategoriesService; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EducationService", function() { return EducationService; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExperienceService", function() { return ExperienceService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingsService", function() { return SettingsService; });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
@@ -80678,6 +80676,16 @@ var ExperienceService = {
   },
   get: function get(id) {
     return ApiService.get('experience', id);
+  }
+};
+var SettingsService = {
+  query: function query(params) {
+    return ApiService.query('settings', {
+      params: params
+    });
+  },
+  get: function get(key) {
+    return ApiService.get('settings', key);
   }
 };
 
@@ -81128,35 +81136,25 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./en": [
-		"./resources/js/lang/en.json",
-		"lang-en"
-	],
-	"./en.json": [
-		"./resources/js/lang/en.json",
-		"lang-en"
-	],
-	"./lv": [
-		"./resources/js/lang/lv.json",
-		"lang-lv"
-	],
-	"./lv.json": [
-		"./resources/js/lang/lv.json",
-		"lang-lv"
-	]
+	"./": "./resources/js/lang/index.js",
+	"./en": "./resources/js/lang/en.js",
+	"./en.js": "./resources/js/lang/en.js",
+	"./index": "./resources/js/lang/index.js",
+	"./index.js": "./resources/js/lang/index.js",
+	"./lv": "./resources/js/lang/lv.js",
+	"./lv.js": "./resources/js/lang/lv.js"
 };
+
 function webpackAsyncContext(req) {
-	if(!__webpack_require__.o(map, req)) {
-		return Promise.resolve().then(function() {
+	return Promise.resolve().then(function() {
+		if(!__webpack_require__.o(map, req)) {
 			var e = new Error("Cannot find module '" + req + "'");
 			e.code = 'MODULE_NOT_FOUND';
 			throw e;
-		});
-	}
+		}
 
-	var ids = map[req], id = ids[0];
-	return __webpack_require__.e(ids[1]).then(function() {
-		return __webpack_require__.t(id, 3);
+		var id = map[req];
+		return __webpack_require__(id);
 	});
 }
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
@@ -81164,6 +81162,144 @@ webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 };
 webpackAsyncContext.id = "./resources/js/lang lazy recursive ^\\.\\/.*$";
 module.exports = webpackAsyncContext;
+
+/***/ }),
+
+/***/ "./resources/js/lang/en.js":
+/*!*********************************!*\
+  !*** ./resources/js/lang/en.js ***!
+  \*********************************/
+/*! exports provided: en */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "en", function() { return en; });
+var en = {
+  home: 'Home',
+  about: 'About',
+  education: 'Education',
+  experience: 'Experience',
+  services: 'Services',
+  portfolio: 'Portfolio',
+  contact: 'Contact',
+  get_in_touch: 'get in touch',
+  name: 'Name',
+  email: 'Email',
+  message: 'Message',
+  send_message: 'Send message',
+  contact_success: 'Message Sent Successfully',
+  contact_information: 'Contact Information',
+  my_work: 'My work',
+  all: 'All',
+  wordpress: 'Wordpress',
+  laravel: 'Laravel',
+  open_source: 'Open source',
+  all_rights_reserved: 'All Rights Reserved.',
+  hello_guys: 'Hello Guys, I’m <strong>{name}</strong>',
+  i_am: "I'm a",
+  about_me: 'About me',
+  hello_i_am: "Hello, I’m <strong>Nauris Linde</strong>, 24 years young backend web developer based in Latvia. Currently working as Backend Developer at Giraffe360. I have been programming for 5 years and I'm specialized in Laravel framework. All my projects are based on PHP in conjunction with other modern web technologies (OO-PHP, MVC-pattern, MySQL, jQuery, AJAX, HTML5, CSS3, XML/JSON, Composer, Yarn). Find me on",
+  what_i_do: 'What I do?',
+  web_development: 'Web Development',
+  seo_optimization: 'Search Engine Optimization',
+  server_management: 'Server Management',
+  how_i_work: 'How I work?',
+  planing_and_research: 'Planning & Research',
+  design_and_development: 'Design & Development',
+  testing_and_bug_fixing: 'Testing & Bug Fixing',
+  project_launch_and_support: 'Project Launch & Support',
+  rtu_education: 'Bachelor Degree of Information Technology (Unfinished)',
+  rtu_address: 'Riga Technical University, Riga, Latvia',
+  lvt_education: 'Commercial Service Employee',
+  lvt_address: 'PIKC LVT, Liepaja, Latvia',
+  present: 'present',
+  sem_position: 'Back-End Web Developer',
+  giraffe360_position: 'Back-End Developer',
+  page_not_found: 'Page not found',
+  clear: 'clear',
+  cookies_message: 'This website uses cookies to ensure you get the best experience on our website.',
+  cookies_button_text: 'Got it!'
+};
+
+/***/ }),
+
+/***/ "./resources/js/lang/index.js":
+/*!************************************!*\
+  !*** ./resources/js/lang/index.js ***!
+  \************************************/
+/*! exports provided: messages */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "messages", function() { return messages; });
+/* harmony import */ var _en__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./en */ "./resources/js/lang/en.js");
+/* harmony import */ var _lv__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./lv */ "./resources/js/lang/lv.js");
+
+
+var messages = {
+  en: _en__WEBPACK_IMPORTED_MODULE_0__["en"],
+  lv: _lv__WEBPACK_IMPORTED_MODULE_1__["lv"]
+};
+
+/***/ }),
+
+/***/ "./resources/js/lang/lv.js":
+/*!*********************************!*\
+  !*** ./resources/js/lang/lv.js ***!
+  \*********************************/
+/*! exports provided: lv */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "lv", function() { return lv; });
+var lv = {
+  home: 'Sākums',
+  about: 'Par mani',
+  education: 'Izglītība',
+  experience: 'Pieredze',
+  services: 'Pakalpojumi',
+  portfolio: 'Portfelis',
+  contact: 'Kontakti',
+  get_in_touch: 'sazināties',
+  name: 'Vārds',
+  email: 'Epasts',
+  message: 'Jūsu teksts šeit...',
+  send_message: 'Sūtīt Vēstuli',
+  contact_success: 'Vēstule veiksmīgi nosūtīta',
+  contact_information: 'Kontaktinformācija',
+  my_work: 'Mani darbi',
+  all: 'Visi',
+  wordpress: 'Wordpress',
+  laravel: 'Laravel',
+  spen_source: 'Atvērtais pirmkods',
+  all_rights_reserved: 'Visas tiesības aizsargātas.',
+  hello_guys: 'Sveiki! Es esmu <strong>{name}</strong>',
+  i_am: 'Es esmu',
+  about_me: 'Par Mani',
+  hello_i_am: 'Sveiki! Es esmu <strong>Nauris Linde</strong>, 24 gadus jauns PHP programmētājs no Latvijas. Pašlaik strādāju Giraffe360 par Funkcionālo (Backend) Programmētāju. Nodarbojos ar programmēšanu 5 gadus un specializējos Laravel mājaslapu izstrādē. Visi mani projekti ir bāzēti uz PHP un citām modernām tīmekļa tehnoloģijām (OO-PHP, MVC-pattern, MySQL, jQuery, AJAX, HTML5, CSS3, XML/JSON, Composer, Yarn). Varat atrast mani',
+  what_i_do: 'Ko es daru?',
+  web_development: 'Mājaslapu Izstrāde',
+  seo_optimization: 'Meklētājprogrammas optimizācija',
+  server_management: 'Servera vadība',
+  how_i_work: 'Kā es strādāju?',
+  planing_and_research: 'Plānošana & Izpēte',
+  design_and_development: 'Dizains & Izstrāde',
+  testing_and_bug_fixing: 'Testēšana & Kļūdu labošana',
+  project_launch_and_support: 'Projekta palaišana & Atbalsts',
+  rtu_education: 'Bakalaura grāds Informācijas Tehnoloģijā (Nepabeigts)',
+  rtu_address: 'Rīgas Tehniskā Universitāte, Rīga, Latvija',
+  lvt_education: 'Komercdarbinieks',
+  lvt_address: 'PIKC LVT, Liepāja, Latvija',
+  present: 'pašlaik',
+  sem_position: 'PHP Programmētājs',
+  page_not_found: 'Page not found',
+  clear: 'Notīrīt',
+  cookies_message: 'Lai nodrošinātu vislabāko interneta lapas darbību, mēs izmantojam sīkdatnes.',
+  cookies_button_text: 'Sapratu!'
+};
 
 /***/ }),
 
@@ -81295,7 +81431,8 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./locale.js": "./resources/js/middleware/locale.js"
+	"./locale.js": "./resources/js/middleware/locale.js",
+	"./settings.js": "./resources/js/middleware/settings.js"
 };
 
 
@@ -81361,6 +81498,70 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }
       }
     }, _callee);
+  }));
+
+  return function (_x, _x2, _x3) {
+    return _ref.apply(this, arguments);
+  };
+})());
+
+/***/ }),
+
+/***/ "./resources/js/middleware/settings.js":
+/*!*********************************************!*\
+  !*** ./resources/js/middleware/settings.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ~/store */ "./resources/js/store/index.js");
+/* harmony import */ var _store_actions_type__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/actions.type */ "./resources/js/store/actions.type.js");
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (/*#__PURE__*/(function () {
+  var _ref = _asyncToGenerator(
+  /*#__PURE__*/
+  _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(to, from, next) {
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            if (!(Array.isArray(_store__WEBPACK_IMPORTED_MODULE_1__["default"].getters['settings']) && !_store__WEBPACK_IMPORTED_MODULE_1__["default"].getters['settings'].length)) {
+              _context.next = 8;
+              break;
+            }
+
+            _context.prev = 1;
+            _context.next = 4;
+            return _store__WEBPACK_IMPORTED_MODULE_1__["default"].dispatch(_store_actions_type__WEBPACK_IMPORTED_MODULE_2__["FETCH_SETTINGS"], {});
+
+          case 4:
+            _context.next = 8;
+            break;
+
+          case 6:
+            _context.prev = 6;
+            _context.t0 = _context["catch"](1);
+
+          case 8:
+            next();
+
+          case 9:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee, null, [[1, 6]]);
   }));
 
   return function (_x, _x2, _x3) {
@@ -81971,6 +82172,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-i18n */ "./node_modules/vue-i18n/dist/vue-i18n.esm.js");
 /* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! js-cookie */ "./node_modules/js-cookie/src/js.cookie.js");
 /* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(js_cookie__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _lang__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ~/lang */ "./resources/js/lang/index.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -81981,11 +82183,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
+
 vue__WEBPACK_IMPORTED_MODULE_1___default.a.use(vue_i18n__WEBPACK_IMPORTED_MODULE_3__["default"]);
 var i18n = new vue_i18n__WEBPACK_IMPORTED_MODULE_3__["default"]({
   locale: js_cookie__WEBPACK_IMPORTED_MODULE_4___default.a.get('locale') || 'en',
   fallbackLocale: 'en',
-  messages: {},
+  messages: _lang__WEBPACK_IMPORTED_MODULE_5__["messages"],
   silentTranslationWarn: false
 });
 /**
@@ -82000,7 +82203,8 @@ function _loadMessages() {
   _loadMessages = _asyncToGenerator(
   /*#__PURE__*/
   _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2(locale) {
-    var messages;
+    var _messages;
+
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
@@ -82014,8 +82218,8 @@ function _loadMessages() {
             return __webpack_require__("./resources/js/lang lazy recursive ^\\.\\/.*$")("./".concat(locale));
 
           case 3:
-            messages = _context2.sent;
-            i18n.setLocaleMessage(locale, messages);
+            _messages = _context2.sent;
+            i18n.setLocaleMessage(locale, _messages);
 
           case 5:
             if (i18n.locale !== locale) {
@@ -82111,7 +82315,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 vue__WEBPACK_IMPORTED_MODULE_1___default.a.use(vue_meta__WEBPACK_IMPORTED_MODULE_3___default.a);
 vue__WEBPACK_IMPORTED_MODULE_1___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_5__["default"]); // The middleware for every page of the application.
 
-var globalMiddleware = ['locale']; // Load middleware modules dynamically.
+var globalMiddleware = ['locale', 'settings']; // Load middleware modules dynamically.
 
 var routeMiddleware = resolveMiddleware(__webpack_require__("./resources/js/middleware sync .*\\.js$"));
 var router = createRouter();
@@ -82411,7 +82615,7 @@ __webpack_require__.r(__webpack_exports__);
 /*!********************************************!*\
   !*** ./resources/js/store/actions.type.js ***!
   \********************************************/
-/*! exports provided: FETCH_PROJECTS, FETCH_CATEGORIES, FETCH_EDUCATION, FETCH_EXPERIENCE */
+/*! exports provided: FETCH_PROJECTS, FETCH_CATEGORIES, FETCH_EDUCATION, FETCH_EXPERIENCE, FETCH_SETTINGS */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -82420,10 +82624,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_CATEGORIES", function() { return FETCH_CATEGORIES; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_EDUCATION", function() { return FETCH_EDUCATION; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_EXPERIENCE", function() { return FETCH_EXPERIENCE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_SETTINGS", function() { return FETCH_SETTINGS; });
 var FETCH_PROJECTS = 'fetchProjects';
 var FETCH_CATEGORIES = 'fetchCategories';
 var FETCH_EDUCATION = 'fetchEducation';
 var FETCH_EXPERIENCE = 'fetchExperience';
+var FETCH_SETTINGS = 'fetchSettings';
 
 /***/ }),
 
@@ -82543,6 +82749,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lang_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./lang.module */ "./resources/js/store/lang.module.js");
 /* harmony import */ var _education_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./education.module */ "./resources/js/store/education.module.js");
 /* harmony import */ var _experience_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./experience.module */ "./resources/js/store/experience.module.js");
+/* harmony import */ var _settings_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./settings.module */ "./resources/js/store/settings.module.js");
+
 
 
 
@@ -82555,7 +82763,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__
     lang: _lang_module__WEBPACK_IMPORTED_MODULE_3__["default"],
     project: _project_module__WEBPACK_IMPORTED_MODULE_2__["default"],
     education: _education_module__WEBPACK_IMPORTED_MODULE_4__["default"],
-    experience: _experience_module__WEBPACK_IMPORTED_MODULE_5__["default"]
+    experience: _experience_module__WEBPACK_IMPORTED_MODULE_5__["default"],
+    settings: _settings_module__WEBPACK_IMPORTED_MODULE_6__["default"]
   }
 }));
 
@@ -82629,7 +82838,7 @@ var actions = {
 /*!**********************************************!*\
   !*** ./resources/js/store/mutations.type.js ***!
   \**********************************************/
-/*! exports provided: SET_CATEGORIES, SET_PROJECTS, SET_LOCALE, SET_EDUCATION, SET_EXPERIENCE */
+/*! exports provided: SET_CATEGORIES, SET_PROJECTS, SET_LOCALE, SET_EDUCATION, SET_EXPERIENCE, SET_SETTINGS */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -82639,11 +82848,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_LOCALE", function() { return SET_LOCALE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_EDUCATION", function() { return SET_EDUCATION; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_EXPERIENCE", function() { return SET_EXPERIENCE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_SETTINGS", function() { return SET_SETTINGS; });
 var SET_CATEGORIES = 'setCategories';
 var SET_PROJECTS = 'setProjects';
 var SET_LOCALE = 'SET_LOCALE';
 var SET_EDUCATION = 'setEducation';
 var SET_EXPERIENCE = 'setExperience';
+var SET_SETTINGS = 'setSettings';
 
 /***/ }),
 
@@ -82702,6 +82913,95 @@ var getters = {
   },
   categories: function categories(state) {
     return state.categories;
+  }
+};
+/* harmony default export */ __webpack_exports__["default"] = ({
+  state: state,
+  actions: actions,
+  mutations: mutations,
+  getters: getters
+});
+
+/***/ }),
+
+/***/ "./resources/js/store/settings.module.js":
+/*!***********************************************!*\
+  !*** ./resources/js/store/settings.module.js ***!
+  \***********************************************/
+/*! exports provided: state, actions, mutations, getters, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "state", function() { return state; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "actions", function() { return actions; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mutations", function() { return mutations; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getters", function() { return getters; });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _common_api_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ~/common/api.service */ "./resources/js/common/api.service.js");
+/* harmony import */ var _actions_type__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./actions.type */ "./resources/js/store/actions.type.js");
+/* harmony import */ var _mutations_type__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./mutations.type */ "./resources/js/store/mutations.type.js");
+
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+
+
+
+var state = {
+  settings: []
+};
+var actions = _defineProperty({}, _actions_type__WEBPACK_IMPORTED_MODULE_2__["FETCH_SETTINGS"], function () {
+  var _ref = _asyncToGenerator(
+  /*#__PURE__*/
+  _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(context, params) {
+    var _ref2, data;
+
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            _context.prev = 0;
+            _context.next = 3;
+            return _common_api_service__WEBPACK_IMPORTED_MODULE_1__["SettingsService"].query(params);
+
+          case 3:
+            _ref2 = _context.sent;
+            data = _ref2.data;
+            context.commit(_mutations_type__WEBPACK_IMPORTED_MODULE_3__["SET_SETTINGS"], {
+              settings: data
+            });
+            _context.next = 10;
+            break;
+
+          case 8:
+            _context.prev = 8;
+            _context.t0 = _context["catch"](0);
+
+          case 10:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee, null, [[0, 8]]);
+  }));
+
+  return function (_x, _x2) {
+    return _ref.apply(this, arguments);
+  };
+}());
+var mutations = _defineProperty({}, _mutations_type__WEBPACK_IMPORTED_MODULE_3__["SET_SETTINGS"], function (state, _ref3) {
+  var settings = _ref3.settings;
+  state.settings = settings;
+});
+var getters = {
+  settings: function settings(state) {
+    return state.settings;
   }
 };
 /* harmony default export */ __webpack_exports__["default"] = ({

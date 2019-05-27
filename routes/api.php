@@ -24,4 +24,7 @@ Route::name('api.')->group(function () {
     Route::apiResource('links', 'LinkController');
     Route::apiResource('education', 'EducationController');
     Route::apiResource('experience', 'ExperienceController');
+    Route::apiResource('settings', 'SettingController')->only([
+        'index', 'show'
+    ]);
 });

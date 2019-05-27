@@ -8,21 +8,27 @@
       <v-container fill-height text-xs-center>
         <v-layout align-center>
           <v-flex>
-            <h3 class="white--text font-weight-regular display-3"><span v-html="$t('hello_guys')"/></h3>
-            <span class="font-weight-regular headline white--text">{{ $t('i_am') }} <span class="typelist-skill">{{ $t('a_developer') }}</span></span>
+            <h3 class="white--text font-weight-regular display-3"><span v-html="$t('hello_guys', { name: name })"/></h3>
+            <span class="font-weight-regular headline white--text">{{ $t('i_am') }} <span class="typelist-skill">{{ profession }}</span></span>
             <v-divider class="my-3" dark/>
             <v-layout justify-space-around>
-              <v-btn href="https://www.facebook.com/nauris.linde" target="_blank" outline fab color="white">
+              <v-btn v-if="facebook" :href="facebook" target="_blank" outline fab color="white">
                 <v-icon class="fa-hover" dark>mdi-facebook</v-icon>
               </v-btn>
-              <v-btn href="https://twitter.com/naurislinde" target="_blank" outline fab color="white">
+              <v-btn v-if="twitter" :href="twitter" target="_blank" outline fab color="white">
                 <v-icon class="fa-hover" dark>mdi-twitter</v-icon>
               </v-btn>
-              <v-btn href="https://www.linkedin.com/in/nauris-linde-4027aaaa" target="_blank" outline fab color="white">
+              <v-btn v-if="linkedin" :href="linkedin" target="_blank" outline fab color="white">
                 <v-icon class="fa-hover" dark>mdi-linkedin</v-icon>
               </v-btn>
-              <v-btn href="https://github.com/FaZeRs" target="_blank" outline fab color="white">
+              <v-btn v-if="github" :href="github" target="_blank" outline fab color="white">
                 <v-icon class="fa-hover" dark>mdi-github-circle</v-icon>
+              </v-btn>
+              <v-btn v-if="gitlab" :href="gitlab" target="_blank" outline fab color="white">
+                <v-icon class="fa-hover" dark>mdi-gitlab</v-icon>
+              </v-btn>
+              <v-btn v-if="bitbucket" :href="bitbucket" target="_blank" outline fab color="white">
+                <v-icon class="fa-hover" dark>mdi-bitbucket</v-icon>
               </v-btn>
             </v-layout>
           </v-flex>
@@ -62,9 +68,29 @@ export default {
     CookieLaw
   },
   data: () => ({
-    appName: window.config.appName,
+    appName: '',
+    name: '',
+    profession: '',
     year: window.config.year,
-    jumbotronBg: require('../../img/jumbotron-bg.jpg')
-  })
+    jumbotronBg: require('../../img/jumbotron-bg.jpg'),
+    facebook: null,
+    twitter: null,
+    linkedin: null,
+    github: null,
+    gitlab: null,
+    bitbucket: null,
+  }),
+  created () {
+    this.appName = this.$store.getters['settings']['app_name']['value'];
+    this.name = this.$store.getters['settings']['name']['value'];
+    this.profession = this.$store.getters['settings']['profession']['value'];
+
+    this.facebook = this.$store.getters['settings']['facebook']['value'];
+    this.twitter = this.$store.getters['settings']['twitter']['value'];
+    this.linkedin = this.$store.getters['settings']['linkedin']['value'];
+    this.github = this.$store.getters['settings']['github']['value'];
+    this.gitlab = this.$store.getters['settings']['gitlab']['value'];
+    this.bitbucket = this.$store.getters['settings']['bitbucket']['value'];
+  }
 }
 </script>
