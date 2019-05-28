@@ -44,7 +44,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { FETCH_CATEGORIES, FETCH_PROJECTS } from '../store/actions.type'
+import { FETCH_CATEGORIES, FETCH_PROJECTS } from '~/store/actions.type'
 
 export default {
   layout: 'default',

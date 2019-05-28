@@ -2759,9 +2759,11 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var vue_recaptcha__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-recaptcha */ "./node_modules/vue-recaptcha/dist/vue-recaptcha.es.js");
+/* harmony import */ var vue_recaptcha__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-recaptcha */ "./node_modules/vue-recaptcha/dist/vue-recaptcha.es.js");
+/* harmony import */ var _store_actions_type__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ~/store/actions.type */ "./resources/js/store/actions.type.js");
+//
+//
+//
 //
 //
 //
@@ -2791,14 +2793,17 @@ __webpack_require__.r(__webpack_exports__);
     validator: 'new'
   },
   components: {
-    VueRecaptcha: vue_recaptcha__WEBPACK_IMPORTED_MODULE_1__["default"]
+    VueRecaptcha: vue_recaptcha__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   data: function data() {
     return {
-      name: '',
-      email: '',
-      message: '',
+      contact: {
+        name: '',
+        email: '',
+        message: ''
+      },
       successful: false,
+      error: false,
       sitekey: window.config.googleReCaptcha
     };
   },
@@ -2837,35 +2842,29 @@ __webpack_require__.r(__webpack_exports__);
         }
       });
     },
-    onCaptchaVerified: function onCaptchaVerified(recaptchaToken) {
-      this.$refs.recaptcha.reset();
+    onCaptchaVerified: function onCaptchaVerified() {
       this.send();
     },
     send: function send() {
       var _this2 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/contact/send', {
-        name: this.name,
-        email: this.email,
-        message: this.message
-      }).then(function () {
+      this.$store.dispatch(_store_actions_type__WEBPACK_IMPORTED_MODULE_1__["SEND_CONTACT"], this.contact).then(function () {
+        _this2.error = false;
         _this2.successful = true;
+        _this2.contact.name = '';
+        _this2.contact.email = '';
+        _this2.contact.message = '';
+
+        _this2.$validator.reset();
+      })["catch"](function () {
+        _this2.error = true;
       });
-      this.name = '';
-      this.email = '';
-      this.message = '';
-      this.successful = false;
-      this.$validator.reset();
     },
     clear: function clear() {
       this.name = '';
       this.email = '';
       this.message = '';
       this.$validator.reset();
-
-      if (this.$refs.recaptcha) {
-        this.$refs.recaptcha.reset();
-      }
     },
     onCaptchaExpired: function onCaptchaExpired() {
       this.$refs.recaptcha.reset();
@@ -3034,7 +3033,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _partials_NavBar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ~/partials/NavBar */ "./resources/js/partials/NavBar.vue");
-/* harmony import */ var _components_BackToTop__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/BackToTop */ "./resources/js/components/BackToTop.vue");
+/* harmony import */ var _components_BackToTop__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ~/components/BackToTop */ "./resources/js/components/BackToTop.vue");
 /* harmony import */ var vue_cookie_law__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-cookie-law */ "./node_modules/vue-cookie-law/dist/vue-cookie-law.js");
 /* harmony import */ var vue_cookie_law__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue_cookie_law__WEBPACK_IMPORTED_MODULE_2__);
 //
@@ -3241,7 +3240,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
-/* harmony import */ var _store_actions_type__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../store/actions.type */ "./resources/js/store/actions.type.js");
+/* harmony import */ var _store_actions_type__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ~/store/actions.type */ "./resources/js/store/actions.type.js");
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -3402,7 +3401,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
-/* harmony import */ var _store_actions_type__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../store/actions.type */ "./resources/js/store/actions.type.js");
+/* harmony import */ var _store_actions_type__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ~/store/actions.type */ "./resources/js/store/actions.type.js");
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -32922,6 +32921,26 @@ var render = function() {
       ),
       _vm._v(" "),
       _c(
+        "v-alert",
+        {
+          attrs: {
+            dismissible: "",
+            outline: "",
+            transition: "scale-transition",
+            type: "error"
+          },
+          model: {
+            value: _vm.error,
+            callback: function($$v) {
+              _vm.error = $$v
+            },
+            expression: "error"
+          }
+        },
+        [_vm._v("\n    " + _vm._s(_vm.$t("contact_error")) + "\n  ")]
+      ),
+      _vm._v(" "),
+      _c(
         "v-layout",
         { attrs: { row: "", wrap: "" } },
         [
@@ -32945,11 +32964,11 @@ var render = function() {
                   required: ""
                 },
                 model: {
-                  value: _vm.name,
+                  value: _vm.contact.name,
                   callback: function($$v) {
-                    _vm.name = $$v
+                    _vm.$set(_vm.contact, "name", $$v)
                   },
-                  expression: "name"
+                  expression: "contact.name"
                 }
               })
             ],
@@ -32976,11 +32995,11 @@ var render = function() {
                   required: ""
                 },
                 model: {
-                  value: _vm.email,
+                  value: _vm.contact.email,
                   callback: function($$v) {
-                    _vm.email = $$v
+                    _vm.$set(_vm.contact, "email", $$v)
                   },
-                  expression: "email"
+                  expression: "contact.email"
                 }
               })
             ],
@@ -33006,11 +33025,11 @@ var render = function() {
                   "data-vv-name": "message"
                 },
                 model: {
-                  value: _vm.message,
+                  value: _vm.contact.message,
                   callback: function($$v) {
-                    _vm.message = $$v
+                    _vm.$set(_vm.contact, "message", $$v)
                   },
-                  expression: "message"
+                  expression: "contact.message"
                 }
               })
             ],
@@ -80479,7 +80498,7 @@ new vue__WEBPACK_IMPORTED_MODULE_1___default.a(_objectSpread({
 /*!********************************************!*\
   !*** ./resources/js/common/api.service.js ***!
   \********************************************/
-/*! exports provided: default, ProjectsService, CategoriesService, EducationService, ExperienceService, SettingsService */
+/*! exports provided: default, ProjectsService, CategoriesService, EducationService, ExperienceService, SettingsService, ContactService */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -80489,6 +80508,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EducationService", function() { return EducationService; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExperienceService", function() { return ExperienceService; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingsService", function() { return SettingsService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContactService", function() { return ContactService; });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
@@ -80580,6 +80600,11 @@ var SettingsService = {
   },
   get: function get(key) {
     return ApiService.get('settings', key);
+  }
+};
+var ContactService = {
+  send: function send(data) {
+    return ApiService.post('contact/send', data);
   }
 };
 
@@ -81082,7 +81107,8 @@ var en = {
   email: 'Email',
   message: 'Message',
   send_message: 'Send message',
-  contact_success: 'Message Sent Successfully',
+  contact_success: 'Message sent successfully.',
+  contact_error: 'Failed to send message. Please try again.',
   contact_information: 'Contact Information',
   my_work: 'My work',
   all: 'All',
@@ -81162,7 +81188,8 @@ var lv = {
   email: 'Epasts',
   message: 'Jūsu teksts šeit...',
   send_message: 'Sūtīt Vēstuli',
-  contact_success: 'Vēstule veiksmīgi nosūtīta',
+  contact_success: 'Vēstule veiksmīgi nosūtīta.',
+  contact_error: 'Vēstule netika nosūtīta. Mēģiniet velreiz.',
   contact_information: 'Kontaktinformācija',
   my_work: 'Mani darbi',
   all: 'Visi',
@@ -82509,7 +82536,7 @@ __webpack_require__.r(__webpack_exports__);
 /*!********************************************!*\
   !*** ./resources/js/store/actions.type.js ***!
   \********************************************/
-/*! exports provided: FETCH_PROJECTS, FETCH_CATEGORIES, FETCH_EDUCATION, FETCH_EXPERIENCE, FETCH_SETTINGS */
+/*! exports provided: FETCH_PROJECTS, FETCH_CATEGORIES, FETCH_EDUCATION, FETCH_EXPERIENCE, FETCH_SETTINGS, SEND_CONTACT */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -82519,11 +82546,73 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_EDUCATION", function() { return FETCH_EDUCATION; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_EXPERIENCE", function() { return FETCH_EXPERIENCE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_SETTINGS", function() { return FETCH_SETTINGS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SEND_CONTACT", function() { return SEND_CONTACT; });
 var FETCH_PROJECTS = 'fetchProjects';
 var FETCH_CATEGORIES = 'fetchCategories';
 var FETCH_EDUCATION = 'fetchEducation';
 var FETCH_EXPERIENCE = 'fetchExperience';
 var FETCH_SETTINGS = 'fetchSettings';
+var SEND_CONTACT = 'sendContact';
+
+/***/ }),
+
+/***/ "./resources/js/store/contact.module.js":
+/*!**********************************************!*\
+  !*** ./resources/js/store/contact.module.js ***!
+  \**********************************************/
+/*! exports provided: actions, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "actions", function() { return actions; });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _common_api_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ~/common/api.service */ "./resources/js/common/api.service.js");
+/* harmony import */ var _actions_type__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./actions.type */ "./resources/js/store/actions.type.js");
+
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+
+
+var actions = _defineProperty({}, _actions_type__WEBPACK_IMPORTED_MODULE_2__["SEND_CONTACT"], function () {
+  var _ref = _asyncToGenerator(
+  /*#__PURE__*/
+  _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(context, payload) {
+    var _ref2, data;
+
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            _context.next = 2;
+            return _common_api_service__WEBPACK_IMPORTED_MODULE_1__["ContactService"].send(payload);
+
+          case 2:
+            _ref2 = _context.sent;
+            data = _ref2.data;
+            return _context.abrupt("return", data);
+
+          case 5:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+
+  return function (_x, _x2) {
+    return _ref.apply(this, arguments);
+  };
+}());
+/* harmony default export */ __webpack_exports__["default"] = ({
+  actions: actions
+});
 
 /***/ }),
 
@@ -82644,6 +82733,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _education_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./education.module */ "./resources/js/store/education.module.js");
 /* harmony import */ var _experience_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./experience.module */ "./resources/js/store/experience.module.js");
 /* harmony import */ var _settings_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./settings.module */ "./resources/js/store/settings.module.js");
+/* harmony import */ var _contact_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./contact.module */ "./resources/js/store/contact.module.js");
+
 
 
 
@@ -82658,7 +82749,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__
     project: _project_module__WEBPACK_IMPORTED_MODULE_2__["default"],
     education: _education_module__WEBPACK_IMPORTED_MODULE_4__["default"],
     experience: _experience_module__WEBPACK_IMPORTED_MODULE_5__["default"],
-    settings: _settings_module__WEBPACK_IMPORTED_MODULE_6__["default"]
+    settings: _settings_module__WEBPACK_IMPORTED_MODULE_6__["default"],
+    contact: _contact_module__WEBPACK_IMPORTED_MODULE_7__["default"]
   }
 }));
 

@@ -12,7 +12,8 @@ export const en = {
   email: 'Email',
   message: 'Message',
   send_message: 'Send message',
-  contact_success: 'Message Sent Successfully',
+  contact_success: 'Message sent successfully.',
+  contact_error: 'Failed to send message. Please try again.',
   contact_information: 'Contact Information',
 
   my_work: 'My work',

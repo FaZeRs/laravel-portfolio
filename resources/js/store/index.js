@@ -6,6 +6,7 @@ import lang from './lang.module'
 import education from './education.module'
 import experience from './experience.module'
 import settings from './settings.module'
+import contact from './contact.module'
 
 Vue.use(Vuex)
 
@@ -15,6 +16,7 @@ export default new Vuex.Store({
     project,
     education,
     experience,
-    settings
+    settings,
+    contact
   }
 })

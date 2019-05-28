@@ -12,7 +12,8 @@ export const lv = {
   email: 'Epasts',
   message: 'Jūsu teksts šeit...',
   send_message: 'Sūtīt Vēstuli',
-  contact_success: 'Vēstule veiksmīgi nosūtīta',
+  contact_success: 'Vēstule veiksmīgi nosūtīta.',
+  contact_error: 'Vēstule netika nosūtīta. Mēģiniet velreiz.',
   contact_information: 'Kontaktinformācija',
 
   my_work: 'Mani darbi',

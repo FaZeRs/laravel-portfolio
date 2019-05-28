@@ -96,3 +96,10 @@ export const SettingsService = {
     return ApiService.get('settings', key)
   }
 }
+
+
+export const ContactService = {
+  send(data) {
+    return ApiService.post('contact/send', data);
+  },
+}

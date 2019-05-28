@@ -2,6 +2,7 @@
 
 namespace App\Mail\Contact;
 
+use App\Models\Setting;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
@@ -39,7 +40,7 @@ class SendContact extends Mailable implements ShouldQueue
     public function build()
     {
         return $this
-            ->to(config('mail.from.address'), config('mail.from.name'))
+            ->to(Setting::get('contact_email'))
             ->subject(__('strings.emails.contact.subject', ['app_name' => config('app.name')]))
             ->from($this->request['email'], $this->request['name'])
             ->replyTo($this->request['email'], $this->request['name'])

@@ -57,7 +57,7 @@
 
 <script>
 import NavBar from '~/partials/NavBar'
-import BackToTop from '../components/BackToTop'
+import BackToTop from '~/components/BackToTop'
 import CookieLaw from 'vue-cookie-law'
 
 export default {
