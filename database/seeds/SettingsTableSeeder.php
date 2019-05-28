@@ -106,6 +106,7 @@ class SettingsTableSeeder extends Seeder
             'active'      => 1,
         ],
     ];
+
     /**
      * Run the database seeds.
      *

@@ -2,16 +2,14 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Backpack\CRUD\app\Http\Controllers\CrudController;
-
+use Backpack\CRUD\CrudPanel;
 // VALIDATION: change the requests to match your own file names if you need form validation
+use Backpack\CRUD\app\Http\Controllers\CrudController;
 use App\Http\Requests\EducationRequest as StoreRequest;
 use App\Http\Requests\EducationRequest as UpdateRequest;
-use Backpack\CRUD\CrudPanel;
 
 /**
- * Class EducationCrudController
- * @package App\Http\Controllers\Admin
+ * Class EducationCrudController.
  * @property-read CrudPanel $crud
  */
 class EducationCrudController extends CrudController
@@ -24,7 +22,7 @@ class EducationCrudController extends CrudController
         |--------------------------------------------------------------------------
         */
         $this->crud->setModel('App\Models\Education');
-        $this->crud->setRoute(config('backpack.base.route_prefix') . '/education');
+        $this->crud->setRoute(config('backpack.base.route_prefix').'/education');
         $this->crud->setEntityNameStrings('education', 'education');
 
         /*

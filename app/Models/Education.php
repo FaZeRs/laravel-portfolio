@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\CrudTrait;
+use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\ModelTraits\SpatieTranslatable\HasTranslations;
 
 class Education extends Model

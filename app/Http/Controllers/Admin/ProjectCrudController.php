@@ -62,7 +62,7 @@ class ProjectCrudController extends CrudController
             ],
         ]);
         $this->crud->addField([
-            'name' => 'slug', 'type' => 'text', 'label' => 'Slug', 'attributes' => ['disabled' => 'disabled']
+            'name' => 'slug', 'type' => 'text', 'label' => 'Slug', 'attributes' => ['disabled' => 'disabled'],
         ], 'update')->afterField('title');
         $this->crud->addField([
             'name'            => 'links',

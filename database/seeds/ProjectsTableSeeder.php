@@ -1,8 +1,8 @@
 <?php
 
+use App\Models\Tag;
 use App\Models\Link;
 use App\Models\Project;
-use App\Models\Tag;
 use Illuminate\Database\Seeder;
 
 class ProjectsTableSeeder extends Seeder

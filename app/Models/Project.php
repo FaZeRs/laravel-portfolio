@@ -5,11 +5,11 @@ namespace App\Models;
 use App\Filters\Filterable;
 use Illuminate\Support\Str;
 use Backpack\CRUD\CrudTrait;
+use Prologue\Alerts\Facades\Alert;
 use Intervention\Image\Facades\Image;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use Backpack\CRUD\ModelTraits\SpatieTranslatable\HasTranslations;
-use Prologue\Alerts\Facades\Alert;
 
 class Project extends Model
 {
@@ -125,12 +125,11 @@ class Project extends Model
             }
         }
 
-        if (Str::startsWith($value, 'data:image'))
-        {
+        if (Str::startsWith($value, 'data:image')) {
             preg_match("/^data:image\/(.*);base64/i", $value, $match);
             $extension = $match[1];
             $image = Image::make($value);
-            if (!is_null($image)) {
+            if (! is_null($image)) {
                 $filename = md5($value.time()).'.'.$extension;
                 try {
                     Storage::disk($disk)->put($destination_path.'/'.$filename, $image->stream());
@@ -149,7 +148,7 @@ class Project extends Model
     {
         $this->links()->delete();
         $links = [];
-        if(json_decode($value)) {
+        if (json_decode($value)) {
             foreach (json_decode($value) as $link) {
                 $links[] = new Link([
                     'title' => $link->title,
