@@ -33,7 +33,8 @@ RUN apk add --no-cache --update \
     postgresql-libs \
     rsync \
     libzip-dev \
-    imagemagick
+    imagemagick \
+    procps
 
 # Don't clear env variables
 # This is very important since it will allow us to read environment variables from the container.

@@ -6,5 +6,6 @@
 <li><a href='{{ backpack_url('education') }}'><i class='fa fa-graduation-cap'></i> <span>Education</span></a></li>
 <li><a href='{{ backpack_url('experience') }}'><i class='fa fa-briefcase'></i> <span>Experience</span></a></li>
 <li><a href="{{ backpack_url('elfinder') }}"><i class="fa fa-files-o"></i> <span>{{ trans('backpack::crud.file_manager') }}</span></a></li>
-
-<li><a href='{{ url(config('backpack.base.route_prefix', 'admin') . '/setting') }}'><i class='fa fa-cog'></i> <span>Settings</span></a></li>
+<li><a href='{{ backpack_url('setting') }}'><i class='fa fa-cog'></i> <span>Settings</span></a></li>
+<li><a href='{{ url('telescope') }}'><i class='fa fa-wrench'></i> <span>Telescope</span></a></li>
+<li><a href='{{ url('horizon') }}'><i class='fa fa-wrench'></i> <span>Horizon</span></a></li>
