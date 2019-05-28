@@ -2,13 +2,13 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-use Backpack\CRUD\CrudTrait;
-use Backpack\CRUD\ModelTraits\SpatieTranslatable\HasTranslations;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
-use Intervention\Image\Facades\Image;
+use Backpack\CRUD\CrudTrait;
 use Prologue\Alerts\Facades\Alert;
+use Intervention\Image\Facades\Image;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
+use Backpack\CRUD\ModelTraits\SpatieTranslatable\HasTranslations;
 
 class Experience extends Model
 {
@@ -70,12 +70,11 @@ class Experience extends Model
             }
         }
 
-        if (Str::startsWith($value, 'data:image'))
-        {
+        if (Str::startsWith($value, 'data:image')) {
             preg_match("/^data:image\/(.*);base64/i", $value, $match);
             $extension = $match[1];
             $image = Image::make($value);
-            if (!is_null($image)) {
+            if (! is_null($image)) {
                 $filename = md5($value.time()).'.'.$extension;
                 try {
                     Storage::disk($disk)->put($destination_path.'/'.$filename, $image->stream());

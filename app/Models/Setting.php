@@ -2,11 +2,11 @@
 
 namespace App\Models;
 
-use Backpack\Settings\app\Models\Setting as SettingModel;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
-use Intervention\Image\Facades\Image;
 use Prologue\Alerts\Facades\Alert;
+use Intervention\Image\Facades\Image;
+use Illuminate\Support\Facades\Storage;
+use Backpack\Settings\app\Models\Setting as SettingModel;
 
 class Setting extends SettingModel
 {
@@ -47,12 +47,11 @@ class Setting extends SettingModel
                     }
                 }
 
-                if (Str::startsWith($value, 'data:image'))
-                {
+                if (Str::startsWith($value, 'data:image')) {
                     preg_match("/^data:image\/(.*);base64/i", $value, $match);
                     $extension = $match[1];
                     $image = Image::make($value);
-                    if (!is_null($image)) {
+                    if (! is_null($image)) {
                         $filename = md5($value.time()).'.'.$extension;
                         try {
                             Storage::disk($disk)->put($destination_path.'/'.$filename, $image->stream());

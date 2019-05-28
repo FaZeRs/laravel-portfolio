@@ -35,13 +35,12 @@ abstract class Filter
      */
     protected function getFilterMethods()
     {
-        $class  = new ReflectionClass(static::class);
+        $class = new ReflectionClass(static::class);
 
-        $methods = array_map(function($method) use ($class) {
+        $methods = array_map(function ($method) use ($class) {
             if ($method->class === $class->getName()) {
                 return $method->name;
             }
-            return null;
         }, $class->getMethods());
 
         return array_filter($methods);

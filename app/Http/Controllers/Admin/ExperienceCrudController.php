@@ -2,16 +2,14 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Backpack\CRUD\app\Http\Controllers\CrudController;
-
+use Backpack\CRUD\CrudPanel;
 // VALIDATION: change the requests to match your own file names if you need form validation
+use Backpack\CRUD\app\Http\Controllers\CrudController;
 use App\Http\Requests\ExperienceRequest as StoreRequest;
 use App\Http\Requests\ExperienceRequest as UpdateRequest;
-use Backpack\CRUD\CrudPanel;
 
 /**
- * Class ExperienceCrudController
- * @package App\Http\Controllers\Admin
+ * Class ExperienceCrudController.
  * @property-read CrudPanel $crud
  */
 class ExperienceCrudController extends CrudController
@@ -24,7 +22,7 @@ class ExperienceCrudController extends CrudController
         |--------------------------------------------------------------------------
         */
         $this->crud->setModel('App\Models\Experience');
-        $this->crud->setRoute(config('backpack.base.route_prefix') . '/experience');
+        $this->crud->setRoute(config('backpack.base.route_prefix').'/experience');
         $this->crud->setEntityNameStrings('experience', 'experiences');
 
         /*

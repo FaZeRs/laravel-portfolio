@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
             'links',
             'education',
             'experience',
-            'settings'
+            'settings',
         ]);
         $this->enableForeignKeys();
 
