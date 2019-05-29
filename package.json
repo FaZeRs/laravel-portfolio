@@ -25,7 +25,7 @@
     "sass-loader": "^7.1.0",
     "stylelint": "^9.10.1",
     "stylelint-config-standard": "^18.2.0",
-    "stylelint-scss": "^3.5.4",
+    "stylelint-scss": "^3.6.1",
     "stylelint-webpack-plugin": "^0.10.5",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
