@@ -97,9 +97,14 @@ export const SettingsService = {
   }
 }
 
-
 export const ContactService = {
   send(data) {
     return ApiService.post('contact/send', data);
+  },
+}
+
+export const LanguageService = {
+  swap(locale) {
+    return ApiService.get('lang', locale);
   },
 }
