@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
+use App\Models\Setting;
 
 class SettingsTableSeeder extends Seeder
 {
@@ -114,8 +114,8 @@ class SettingsTableSeeder extends Seeder
      */
     public function run()
     {
-        foreach ($this->settings as $index => $setting) {
-            DB::table('settings')->insert($setting);
+        foreach ($this->settings as $setting) {
+            Setting::create($setting);
         }
     }
 }

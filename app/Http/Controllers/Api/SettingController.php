@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\SettingResource;
-use Backpack\Settings\app\Models\Setting as Setting;
+use App\Models\Setting;
 
 class SettingController extends Controller
 {

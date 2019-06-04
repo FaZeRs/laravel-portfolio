@@ -7,9 +7,21 @@ use Prologue\Alerts\Facades\Alert;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Storage;
 use Backpack\Settings\app\Models\Setting as SettingModel;
+use Backpack\CRUD\ModelTraits\SpatieTranslatable\HasTranslations;
 
 class Setting extends SettingModel
 {
+    use HasTranslations;
+
+    /**
+     * The attributes that are translatable.
+     *
+     * @var array
+     */
+    public $translatable = [
+        'value',
+    ];
+
     /**
      * Model Boot function
      * Need it to delete image file from disk if the field type == image.
