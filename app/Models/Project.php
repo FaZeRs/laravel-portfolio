@@ -139,8 +139,6 @@ class Project extends Model
                     $this->attributes[$attribute_name] = null;
                 }
             }
-        } else {
-            $this->attributes[$attribute_name] = $value;
         }
     }
 
