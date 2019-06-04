@@ -13,12 +13,7 @@ mix.webpackConfig({
   plugins: [
     // new BundleAnalyzerPlugin()
     new VuetifyLoaderPlugin()
-  ],
-  output: {
-    filename: '[name].js',
-    chunkFilename: mix.inProduction() ? "js/chunks/[name].[chunkhash].js" : "js/chunks/[name].js",
-    path: path.resolve(__dirname, './public')
-  }
+  ]
 })
 
 mix.js('resources/js/app.js', 'public/js')
