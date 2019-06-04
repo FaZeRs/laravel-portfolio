@@ -15,6 +15,7 @@
 <script>
 import { mapGetters } from 'vuex'
 import { loadMessages } from '~/plugins/i18n'
+import { CHANGE_LOCALE } from "~/store/actions.type";
 
 export default {
   computed: mapGetters({
@@ -24,7 +25,7 @@ export default {
   methods: {
     setLocale (locale) {
       loadMessages(locale)
-      this.$store.dispatch('setLocale', { locale })
+      this.$store.dispatch(CHANGE_LOCALE, locale)
       this.$validator.localize(locale)
     }
   }

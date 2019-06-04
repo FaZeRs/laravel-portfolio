@@ -2989,6 +2989,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 /* harmony import */ var _plugins_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ~/plugins/i18n */ "./resources/js/plugins/i18n.js");
+/* harmony import */ var _store_actions_type__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ~/store/actions.type */ "./resources/js/store/actions.type.js");
 //
 //
 //
@@ -3003,6 +3004,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -3013,9 +3015,7 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     setLocale: function setLocale(locale) {
       Object(_plugins_i18n__WEBPACK_IMPORTED_MODULE_1__["loadMessages"])(locale);
-      this.$store.dispatch('setLocale', {
-        locale: locale
-      });
+      this.$store.dispatch(_store_actions_type__WEBPACK_IMPORTED_MODULE_2__["CHANGE_LOCALE"], locale);
       this.$validator.localize(locale);
     }
   }
@@ -80516,6 +80516,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-axios */ "./node_modules/vue-axios/dist/vue-axios.min.js");
 /* harmony import */ var vue_axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue_axios__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./config */ "./resources/js/common/config.js");
+/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! js-cookie */ "./node_modules/js-cookie/src/js.cookie.js");
+/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(js_cookie__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 
@@ -80524,6 +80527,7 @@ var ApiService = {
   init: function init() {
     vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_axios__WEBPACK_IMPORTED_MODULE_2___default.a, axios__WEBPACK_IMPORTED_MODULE_1___default.a);
     vue__WEBPACK_IMPORTED_MODULE_0___default.a.axios.defaults.baseURL = _config__WEBPACK_IMPORTED_MODULE_3__["API_URL"];
+    vue__WEBPACK_IMPORTED_MODULE_0___default.a.axios.defaults.headers.common['Content-Language'] = js_cookie__WEBPACK_IMPORTED_MODULE_4___default.a.get('locale') || 'en';
   },
   query: function query(resource, params) {
     return vue__WEBPACK_IMPORTED_MODULE_0___default.a.axios.get(resource, params)["catch"](function (error) {
@@ -80620,7 +80624,7 @@ var ContactService = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "API_URL", function() { return API_URL; });
-var API_URL = 'http://localhost:8000/api';
+var API_URL = "http://localhost:8000/api";
 /* harmony default export */ __webpack_exports__["default"] = (API_URL);
 
 /***/ }),
@@ -82145,6 +82149,7 @@ function _loadMessages() {
           case 5:
             if (i18n.locale !== locale) {
               i18n.locale = locale;
+              vue__WEBPACK_IMPORTED_MODULE_1___default.a.axios.defaults.headers.common['Content-Language'] = locale;
             }
 
           case 6:
@@ -82536,7 +82541,7 @@ __webpack_require__.r(__webpack_exports__);
 /*!********************************************!*\
   !*** ./resources/js/store/actions.type.js ***!
   \********************************************/
-/*! exports provided: FETCH_PROJECTS, FETCH_CATEGORIES, FETCH_EDUCATION, FETCH_EXPERIENCE, FETCH_SETTINGS, SEND_CONTACT */
+/*! exports provided: FETCH_PROJECTS, FETCH_CATEGORIES, FETCH_EDUCATION, FETCH_EXPERIENCE, FETCH_SETTINGS, SEND_CONTACT, CHANGE_LOCALE */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -82547,12 +82552,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_EXPERIENCE", function() { return FETCH_EXPERIENCE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_SETTINGS", function() { return FETCH_SETTINGS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SEND_CONTACT", function() { return SEND_CONTACT; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CHANGE_LOCALE", function() { return CHANGE_LOCALE; });
 var FETCH_PROJECTS = 'fetchProjects';
 var FETCH_CATEGORIES = 'fetchCategories';
 var FETCH_EDUCATION = 'fetchEducation';
 var FETCH_EXPERIENCE = 'fetchExperience';
 var FETCH_SETTINGS = 'fetchSettings';
 var SEND_CONTACT = 'sendContact';
+var CHANGE_LOCALE = 'changeLocale';
 
 /***/ }),
 
@@ -82772,7 +82779,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! js-cookie */ "./node_modules/js-cookie/src/js.cookie.js");
 /* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(js_cookie__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _mutations_type__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./mutations.type */ "./resources/js/store/mutations.type.js");
+/* harmony import */ var _actions_type__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./actions.type */ "./resources/js/store/actions.type.js");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -82794,23 +82803,16 @@ var getters = {
   } // mutations
 
 };
-var mutations = _defineProperty({}, _mutations_type__WEBPACK_IMPORTED_MODULE_1__["SET_LOCALE"], function (state, _ref) {
-  var locale = _ref.locale;
+var mutations = _defineProperty({}, _mutations_type__WEBPACK_IMPORTED_MODULE_1__["SET_LOCALE"], function (state, locale) {
   state.locale = locale;
 }); // actions
 
-var actions = {
-  setLocale: function setLocale(_ref2, _ref3) {
-    var commit = _ref2.commit;
-    var locale = _ref3.locale;
-    commit(_mutations_type__WEBPACK_IMPORTED_MODULE_1__["SET_LOCALE"], {
-      locale: locale
-    });
-    js_cookie__WEBPACK_IMPORTED_MODULE_0___default.a.set('locale', locale, {
-      expires: 365
-    });
-  }
-};
+var actions = _defineProperty({}, _actions_type__WEBPACK_IMPORTED_MODULE_2__["CHANGE_LOCALE"], function (context, locale) {
+  context.commit(_mutations_type__WEBPACK_IMPORTED_MODULE_1__["SET_LOCALE"], locale);
+  js_cookie__WEBPACK_IMPORTED_MODULE_0___default.a.set('locale', locale, {
+    expires: 365
+  });
+});
 /* harmony default export */ __webpack_exports__["default"] = ({
   state: state,
   actions: actions,
@@ -82837,7 +82839,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_SETTINGS", function() { return SET_SETTINGS; });
 var SET_CATEGORIES = 'setCategories';
 var SET_PROJECTS = 'setProjects';
-var SET_LOCALE = 'SET_LOCALE';
+var SET_LOCALE = 'setLocale';
 var SET_EDUCATION = 'setEducation';
 var SET_EXPERIENCE = 'setExperience';
 var SET_SETTINGS = 'setSettings';
@@ -82962,14 +82964,15 @@ var actions = _defineProperty({}, _actions_type__WEBPACK_IMPORTED_MODULE_2__["FE
             context.commit(_mutations_type__WEBPACK_IMPORTED_MODULE_3__["SET_SETTINGS"], {
               settings: data
             });
-            _context.next = 10;
+            _context.next = 11;
             break;
 
           case 8:
             _context.prev = 8;
             _context.t0 = _context["catch"](0);
+            throw new Error(_context.t0);
 
-          case 10:
+          case 11:
           case "end":
             return _context.stop();
         }

@@ -18,20 +18,9 @@ export const actions = {
       const { data } = await SettingsService.query(params)
 
       context.commit(SET_SETTINGS, { settings: data })
-    } catch (e) {
-
+    } catch (error) {
+      throw new Error(error)
     }
-
-    // return SettingsService.query(params)
-    //   .then(({ data }) => {
-    //     //data = JSON.parse(JSON.stringify(data));
-    //     //console.log(data);
-    //     context.commit(SET_SETTINGS, data)
-    //     return data
-    //   })
-    //   .catch(error => {
-    //     throw new Error(error)
-    //   })
   }
 }
 

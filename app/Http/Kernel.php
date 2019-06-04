@@ -39,6 +39,7 @@ class Kernel extends HttpKernel
 
         'api' => [
             'throttle:60,1',
+            'localization',
             'bindings',
         ],
     ];
@@ -61,6 +62,7 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'api_admin' => \App\Http\Middleware\ApiAdminMiddleware::class,
+        'localization' => \App\Http\Middleware\LocaleMiddleware::class,
     ];
 
     /**

@@ -2,11 +2,13 @@ import Vue from 'vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import { API_URL } from './config'
+import Cookies from "js-cookie";
 
 const ApiService = {
   init () {
     Vue.use(VueAxios, axios)
     Vue.axios.defaults.baseURL = API_URL
+    Vue.axios.defaults.headers.common['Content-Language'] = Cookies.get('locale') || 'en'
   },
 
   query (resource, params) {
@@ -100,11 +102,5 @@ export const SettingsService = {
 export const ContactService = {
   send(data) {
     return ApiService.post('contact/send', data);
-  },
-}
-
-export const LanguageService = {
-  swap(locale) {
-    return ApiService.get('lang', locale);
   },
 }
