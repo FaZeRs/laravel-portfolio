@@ -12,10 +12,11 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Requirements
 
-- PHP >= 7.1.3
+- PHP >= 7.2
 - OpenSSL PHP Extension
 - PDO PHP Extension
 - Mbstring PHP Extension
+- BCMath PHP Extension
 - Redis server (optional)
 
 ### Installing
@@ -109,31 +110,44 @@ We use [Laravel Passport](https://laravel.com/docs/master/passport). It is an OA
 
 Verb | Path | NamedRoute | Controller | Action | Middleware
 --- | --- | --- | --- | --- | ---
-POST      | /api/login                  | api.login              | \App\Http\Controllers\Api\LoginController    | login      | -
-POST      | /api/register               | api.register           | \App\Http\Controllers\Api\RegisterController | register   | -
-GET       | /api/details                | api.user.details       | \App\Http\Controllers\Api\UserController     | details    | auth:api
-GET       | /api/logout                 | api.user.logout        | \App\Http\Controllers\Api\UserController     | logout     | auth:api
-GET       | /api/categories             | api.categories.index   | \App\Http\Controllers\Api\CategoryController | index      | -
-GET       | /api/categories/{category}  | api.categories.show    | \App\Http\Controllers\Api\CategoryController | show       | -
-POST      | /api/categories             | api.categories.store   | \App\Http\Controllers\Api\CategoryController | store      | api_admin
-PUT/PATCH | /api/categories/{category}  | api.categories.update  | \App\Http\Controllers\Api\CategoryController | update     | api_admin
-DELETE    | /api/categories/{category}  | api.categories.destroy | \App\Http\Controllers\Api\CategoryController | destroy    | api_admin
-GET       | /api/projects               | api.projects.index     | \App\Http\Controllers\Api\ProjectController  | index      | -
-GET       | /api/projects/{project}     | api.projects.show      | \App\Http\Controllers\Api\ProjectController  | show       | -
-POST      | /api/projects               | api.projects.store     | \App\Http\Controllers\Api\ProjectController  | store      | api_admin
-PUT/PATCH | /api/projects/{project}     | api.projects.update    | \App\Http\Controllers\Api\ProjectController  | update     | api_admin
-DELETE    | /api/projects/{project}     | api.projects.destroy   | \App\Http\Controllers\Api\ProjectController  | destroy    | api_admin
-GET       | /api/tags                   | api.tags.index         | \App\Http\Controllers\Api\TagController      | index      | -
-GET       | /api/tags/{tag}             | api.tags.show          | \App\Http\Controllers\Api\TagController      | show       | -
-POST      | /api/tags                   | api.tags.store         | \App\Http\Controllers\Api\TagController      | store      | api_admin
-PUT/PATCH | /api/tags/{project}         | api.tags.update        | \App\Http\Controllers\Api\TagController      | update     | api_admin
-DELETE    | /api/tags/{project}         | api.tags.destroy       | \App\Http\Controllers\Api\TagController      | destroy    | api_admin
-GET       | /api/links                  | api.links.index        | \App\Http\Controllers\Api\LinkController     | index      | -
-GET       | /api/links/{link}           | api.links.show         | \App\Http\Controllers\Api\LinkController     | show       | -
-POST      | /api/links                  | api.links.store        | \App\Http\Controllers\Api\LinkController     | store      | api_admin
-PUT/PATCH | /api/links/{link}           | api.links.update       | \App\Http\Controllers\Api\LinkController     | update     | api_admin
-DELETE    | /api/links/{link}           | api.links.destroy      | \App\Http\Controllers\Api\LinkController     | destroy    | api_admin
-POST      | /api/contact/send           | api.contact.send       | \App\Http\Controllers\Api\ContactController  | send       | -
+POST      | /api/login                  | api.login              | \App\Http\Controllers\Api\LoginController      | login      | -
+POST      | /api/register               | api.register           | \App\Http\Controllers\Api\RegisterController   | register   | -
+GET       | /api/details                | api.user.details       | \App\Http\Controllers\Api\UserController       | details    | auth:api
+GET       | /api/logout                 | api.user.logout        | \App\Http\Controllers\Api\UserController       | logout     | auth:api
+GET       | /api/categories             | api.categories.index   | \App\Http\Controllers\Api\CategoryController   | index      | -
+GET       | /api/categories/{category}  | api.categories.show    | \App\Http\Controllers\Api\CategoryController   | show       | -
+POST      | /api/categories             | api.categories.store   | \App\Http\Controllers\Api\CategoryController   | store      | api_admin
+PUT/PATCH | /api/categories/{category}  | api.categories.update  | \App\Http\Controllers\Api\CategoryController   | update     | api_admin
+DELETE    | /api/categories/{category}  | api.categories.destroy | \App\Http\Controllers\Api\CategoryController   | destroy    | api_admin
+GET       | /api/projects               | api.projects.index     | \App\Http\Controllers\Api\ProjectController    | index      | -
+GET       | /api/projects/{project}     | api.projects.show      | \App\Http\Controllers\Api\ProjectController    | show       | -
+POST      | /api/projects               | api.projects.store     | \App\Http\Controllers\Api\ProjectController    | store      | api_admin
+PUT/PATCH | /api/projects/{project}     | api.projects.update    | \App\Http\Controllers\Api\ProjectController    | update     | api_admin
+DELETE    | /api/projects/{project}     | api.projects.destroy   | \App\Http\Controllers\Api\ProjectController    | destroy    | api_admin
+GET       | /api/tags                   | api.tags.index         | \App\Http\Controllers\Api\TagController        | index      | -
+GET       | /api/tags/{tag}             | api.tags.show          | \App\Http\Controllers\Api\TagController        | show       | -
+POST      | /api/tags                   | api.tags.store         | \App\Http\Controllers\Api\TagController        | store      | api_admin
+PUT/PATCH | /api/tags/{project}         | api.tags.update        | \App\Http\Controllers\Api\TagController        | update     | api_admin
+DELETE    | /api/tags/{project}         | api.tags.destroy       | \App\Http\Controllers\Api\TagController        | destroy    | api_admin
+GET       | /api/links                  | api.links.index        | \App\Http\Controllers\Api\LinkController       | index      | -
+GET       | /api/links/{link}           | api.links.show         | \App\Http\Controllers\Api\LinkController       | show       | -
+POST      | /api/links                  | api.links.store        | \App\Http\Controllers\Api\LinkController       | store      | api_admin
+PUT/PATCH | /api/links/{link}           | api.links.update       | \App\Http\Controllers\Api\LinkController       | update     | api_admin
+DELETE    | /api/links/{link}           | api.links.destroy      | \App\Http\Controllers\Api\LinkController       | destroy    | api_admin
+POST      | /api/contact/send           | api.contact.send       | \App\Http\Controllers\Api\ContactController    | send       | -
+GET       | /api/education              | api.education.index    | \App\Http\Controllers\Api\EducationController  | index      | -
+GET       | /api/education/{education}  | api.education.show     | \App\Http\Controllers\Api\EducationController  | show       | -
+POST      | /api/education              | api.education.store    | \App\Http\Controllers\Api\EducationController  | store      | api_admin
+PUT/PATCH | /api/education/{education}  | api.education.update   | \App\Http\Controllers\Api\EducationController  | update     | api_admin
+DELETE    | /api/education/{education}  | api.education.destroy  | \App\Http\Controllers\Api\EducationController  | destroy    | api_admin
+GET       | /api/experience             | api.experience.index   | \App\Http\Controllers\Api\ExperienceController | index      | -
+GET       | /api/experience/{experience}| api.experience.show    | \App\Http\Controllers\Api\ExperienceController | show       | -
+POST      | /api/experience             | api.experience.store   | \App\Http\Controllers\Api\ExperienceController | store      | api_admin
+PUT/PATCH | /api/experience/{experience}| api.experience.update  | \App\Http\Controllers\Api\ExperienceController | update     | api_admin
+DELETE    | /api/experience/{experience}| api.experience.destroy | \App\Http\Controllers\Api\ExperienceController | destroy    | api_admin  
+GET       | /api/settings               | api.settings.index     | \App\Http\Controllers\Api\SettingController    | index      | -
+GET       | /api/settings/{setting}     | api.settings.show      | \App\Http\Controllers\Api\SettingController    | show       | -
+
 
 ## Running the tests
 
