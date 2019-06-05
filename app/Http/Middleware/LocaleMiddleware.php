@@ -21,10 +21,10 @@ class LocaleMiddleware
     public function handle($request, Closure $next)
     {
         $locale = $request->header('Content-Language');
-        if(!$locale){
+        if (! $locale) {
             $locale = config('app.locale');
         }
-        if (!array_key_exists($locale, config('app.locales'))) {
+        if (! array_key_exists($locale, config('app.locales'))) {
             return abort(403, 'Language not supported.');
         }
         app()->setLocale($locale);

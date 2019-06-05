@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Models\Setting;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\SettingResource;
-use App\Models\Setting;
 
 class SettingController extends Controller
 {
