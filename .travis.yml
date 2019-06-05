@@ -7,9 +7,26 @@ php:
 services:
   - mysql
 
+addons:
+  apt:
+    sources:
+      - mysql-5.7-trusty
+    packages:
+      - mysql-server
+
+dist: trusty
+
+sudo: required
+
+branches:
+  only:
+    - master
+    - develop
+
 cache:
   directories:
     - vendor
+    - node_modules
 
 before_script:
   - cp .env.travis.example .env
