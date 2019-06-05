@@ -6,7 +6,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [2.0.0]  - 2019-04-04
+## [2.1.0]  - 05-06-2019
+
+### Added
+- Created database seeders ([fc3a2a6](https://github.com/FaZeRs/naurislinde.com/commit/fc3a2a609113f7f0f68c230757768ad6cffd5aa9))([d767557](https://github.com/FaZeRs/naurislinde.com/commit/d767557c497842f232b87abab25706867d572853))([089c117](https://github.com/FaZeRs/naurislinde.com/commit/089c11784f2a0e59d6c7016a148946464d26f672))
+- Created filterable projects ([cbd956d](https://github.com/FaZeRs/naurislinde.com/commit/cbd956d3d21602a2b605648937fdc24aae357686))
+- Implemented Education and Experience ([182a729](https://github.com/FaZeRs/naurislinde.com/commit/182a729a46ed57f38d022db1c333827fb4af19b5))
+- Implemented Settings ([350deb8](https://github.com/FaZeRs/naurislinde.com/commit/350deb8cffecb7e9fde8d7250f5509ce1681fe83))
+- Translatable settings ([dff5ba5](https://github.com/FaZeRs/naurislinde.com/commit/dff5ba5e2b376571b2ae375d4006cf163c3b47db))
+- Reload content when locale is changed ([0382b36](https://github.com/FaZeRs/naurislinde.com/commit/0382b3628d10bddd14d5909497be9c8645632e76))
+- Use value from .env file for API_URL ([5b31185](https://github.com/FaZeRs/naurislinde.com/commit/5b3118587ea66a61506b097b64345748409af6b2))
+
+### Changed
+- Add links field only on update ([8b5a9de](https://github.com/FaZeRs/naurislinde.com/commit/8b5a9ded3c9a52d5e5121a93af84466de288d57f))
+- Use Laravel Hash facade ([cc830fb](https://github.com/FaZeRs/naurislinde.com/commit/cc830fb33df43225734ff5e401e11e8d737518b3))
+- Changed increment to bigIncrement ([8582eeb](https://github.com/FaZeRs/naurislinde.com/commit/8582eeb532db8413ecf29ac7ffca23af05bddb05))
+- Changed minimal php version to 7.2 ([00f97bb](https://github.com/FaZeRs/naurislinde.com/commit/00f97bb0b7f997e5a0996997c045696fed0a7421))
+- Removed image attribute value if nothing is uploaded ([aa17d7d](https://github.com/FaZeRs/naurislinde.com/commit/aa17d7d7a0cdafb5fde0c2bd82eb48286e13c5ad))
+- Updated Travis CI configuration ([3497344](https://github.com/FaZeRs/naurislinde.com/commit/349734497bb282751fcdfab2cb1d3f6abf91e954))
+
+### Fixed
+- Check if $value isn't empty ([ca054eb](https://github.com/FaZeRs/naurislinde.com/commit/ca054eb8f6408350062c9172c22ef4ce52b6c9f7))
+- Fixed localization ([2a19468](https://github.com/FaZeRs/naurislinde.com/commit/2a19468be92bbf06179043cecfe7c28a3d20e714))([61ead68](https://github.com/FaZeRs/naurislinde.com/commit/61ead680508d9cf2b4d8451ed0c02e4db1481043))
+- Fixed contact form ([0af7381](https://github.com/FaZeRs/naurislinde.com/commit/0af73815fb284b314279358c0f5ba0b90cbd57ca))
+
+## [2.0.0]  - 04-04-2019
 
 ### Added
 - Added 'Fork me' image & Increase window page offset for menu color change ([52857e1](https://github.com/FaZeRs/naurislinde.com/commit/52857e11d71b638eb53e22952dd4f579541384d9))
@@ -39,7 +63,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 - Removed strong password validation & reduced password length to 6 characters ([7940a3e](https://github.com/FaZeRs/naurislinde.com/commit/7940a3ee07c33ac9114d157cf473f6898ef36465))
 
-## [1.4.0]  - 2018-07-27
+## [1.4.0]  - 27-07-2018
 
 ### Changed
 - Migrate to Laravel 5.6 ([e015cae](https://github.com/FaZeRs/naurislinde.com/commit/e015caef3e0660cc9cb5866963fdaa6d8bc14dfb))
@@ -53,7 +77,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Typo fixes ([ae1cf84](https://github.com/FaZeRs/naurislinde.com/commit/ae1cf846c38e9ee0962ec2d694004733db6c1c7f)) ([361ce47](https://github.com/FaZeRs/naurislinde.com/commit/361ce474d3823b79bc7ce7cbf1f2428d8d7ef65d)) ([2b507f2](https://github.com/FaZeRs/naurislinde.com/commit/2b507f256da6ed8d026cc0b877a140ca386152e1))
 - Fixed issues for small device ([f5824b3](https://github.com/FaZeRs/naurislinde.com/commit/f5824b3f293274d149139a52bb3e3ba19876a8fc))
 
-## [1.3.1]  - 2018-07-27
+## [1.3.1]  - 27-07-2018
 
 ### Added
 - Added passport:install to composer install ([b7e53ad](https://github.com/FaZeRs/naurislinde.com/commit/b7e53ad3152efa1307f3d00c12054e55543c75f0))
@@ -62,7 +86,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Use non-root user to avoid permission issues with Linux OS ([dbf39c1](https://github.com/FaZeRs/naurislinde.com/commit/dbf39c1b75d6340db1474419abb9ac83c6311c2a))
 - Use static values to create database before .env file is created  ([b984e32](https://github.com/FaZeRs/naurislinde.com/commit/b984e3276ec2e82ca1d17383ffbc3a9c7cb06556))
 
-## [1.3.0]  - 2018-06-06
+## [1.3.0]  - 06-06-2018
 
 ### Added
 - Added API Authentication ([9d2b5d0](https://github.com/FaZeRs/naurislinde.com/commit/9d2b5d0c53b2485bafd3e2a13936da4229a2053e))
@@ -71,7 +95,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed SetLocale middleware ([8a89e5b](https://github.com/FaZeRs/naurislinde.com/commit/8a89e5b5ad6f319eabb6ad5becdc0c5cf2ef7745))
 - Updated dependencies and assets ([5740cb7](https://github.com/FaZeRs/naurislinde.com/commit/5740cb7fa22cceec86ec7f856e87f49c1529c1bc))
 
-## [1.2.0]  - 2018-05-12
+## [1.2.0]  - 12-05-2018
 
 ### Added
 - Added Docker ([fa0ef43](https://github.com/FaZeRs/naurislinde.com/commit/fa0ef437ed8f8b402a53e07a23803528f2841b84))
@@ -91,7 +115,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed for json responses ([9047b43](https://github.com/FaZeRs/naurislinde.com/commit/9047b430b285797a98848957d476ec73a705cdd0))
 - Removed laravel mix purgecss ([d07057c](https://github.com/FaZeRs/naurislinde.com/commit/d07057cbb9c003ef48d34c51b9b90fdce8cf8013))
 
-## [1.1.0]  - 2018-04-26
+## [1.1.0]  - 26-04-2018
 
 ### Added
 - Added EU Cookie law ([65b8776](https://github.com/FaZeRs/naurislinde.com/commit/c164dc437db60e6f2cf8617e1efd2edc73d86331))
@@ -106,10 +130,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed links ([65b8776](https://github.com/FaZeRs/naurislinde.com/commit/65b8776fb48abca9243ae16ec4ad6bea10f140f7)) ([ff90980](https://github.com/FaZeRs/naurislinde.com/commit/ff90980b82eb22d6c24f08e4a72ade4311a529fb)) ([f89ce58](https://github.com/FaZeRs/naurislinde.com/commit/f89ce584103a9c15af4d3e40466207abe0993948))
 - Remove duplicate captcha reset ([f7ef4b9](https://github.com/FaZeRs/naurislinde.com/commit/f7ef4b95c93aa38fb6344321aed40aa4f5629ce4))
 
-## 1.0.0 - 2018-04-25
+## 1.0.0 - 25-04-2018
 - Initial commit.
 
-[Unreleased]: https://github.com/fazers/naurislinde.com/compare/2.0.0...HEAD
+[Unreleased]: https://github.com/fazers/naurislinde.com/compare/2.1.0...HEAD
+[2.1.0]: https://github.com/fazers/naurislinde.com/compare/2.0.0...2.1.0
 [2.0.0]: https://github.com/fazers/naurislinde.com/compare/1.4.0...2.0.0
 [1.4.0]: https://github.com/fazers/naurislinde.com/compare/1.3.1...1.4.0
 [1.3.1]: https://github.com/fazers/naurislinde.com/compare/1.3.0...1.3.1
