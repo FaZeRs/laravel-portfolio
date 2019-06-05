@@ -16,7 +16,7 @@
     "cross-env": "^5.2.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.2.2",
-    "laravel-mix": "git://github.com/JeffreyWay/laravel-mix.git#master",
+    "laravel-mix": "^4.0.16",
     "resolve-url-loader": "^3.1.0",
     "sass": "^1.19.0",
     "sass-loader": "^7.1.0",

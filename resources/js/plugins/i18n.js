@@ -2,13 +2,12 @@ import Vue from 'vue'
 import store from '~/store'
 import VueI18n from 'vue-i18n'
 import Cookies from "js-cookie";
-import { messages } from '~/lang';
 Vue.use(VueI18n)
 
 const i18n = new VueI18n({
   locale: Cookies.get('locale') || 'en',
   fallbackLocale: 'en',
-  messages,
+  messages: {},
   silentTranslationWarn: false
 })
 
@@ -18,7 +17,7 @@ const i18n = new VueI18n({
 export async function loadMessages (locale) {
   if (Object.keys(i18n.getLocaleMessage(locale)).length === 0) {
     const messages = await import(/* webpackChunkName: "lang-[request]" */ `~/lang/${locale}`)
-    i18n.setLocaleMessage(locale, messages)
+    i18n.setLocaleMessage(locale, messages[locale])
   }
 
   if (i18n.locale !== locale) {
@@ -27,7 +26,7 @@ export async function loadMessages (locale) {
 }
 
 ;(async function () {
-  await loadMessages(store.getters['locale'])
+  await loadMessages('en')
 })()
 
 export default i18n

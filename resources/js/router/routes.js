@@ -1,9 +1,4 @@
 import Index from '~/pages/index'
-import Experience from '~/pages/experience'
-import Services from '~/pages/services'
-import Portfolio from '~/pages/portfolio'
-import Contact from '~/pages/contact'
-import NotFound from '~/pages/errors/404'
 
 export default [
   {
@@ -14,25 +9,25 @@ export default [
   {
     path: '/experience',
     name: 'experience',
-    component: Experience
+    component: () => import(/* webpackChunkName: "experience" */ '~/pages/experience')
   },
   {
     path: '/services',
     name: 'services',
-    component: Services
+    component: () => import(/* webpackChunkName: "services" */ '~/pages/services')
   },
   {
     path: '/portfolio',
     name: 'portfolio',
-    component: Portfolio
+    component: () => import(/* webpackChunkName: "portfolio" */ '~/pages/portfolio')
   },
   {
     path: '/contact',
     name: 'contact',
-    component: Contact
+    component: () => import(/* webpackChunkName: "contact" */ '~/pages/contact')
   },
   {
     path: '*',
-    component: NotFound
+    component: () => import(/* webpackChunkName: "not-found" */ '~/pages/errors/404')
   }
 ]
