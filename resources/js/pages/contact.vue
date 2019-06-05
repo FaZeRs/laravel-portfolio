@@ -14,28 +14,28 @@
                   <div class="contact-block">
                     <h4 class="headline">{{ $t('contact_information') }}</h4>
                     <div class="flex pb-6">
-                      <div class="con-text" v-if="email">
+                      <div class="con-text" v-if="settings.contact_email.value">
                         <v-icon small>mdi-email-outline</v-icon>
-                        <a href="mailto:naurislinde@gmail.com">{{ email }}</a>
+                        <a :href="`mailto:${settings.contact_email.value}`">{{ settings.contact_email.value }}</a>
                       </div>
                     </div>
                     <div class="social mt-4">
-                      <v-btn v-if="facebook" color="#3b5998" dark small fab :href="facebook" target="_blank">
+                      <v-btn v-if="settings.facebook.value" color="#3b5998" dark small fab :href="facebook" target="_blank">
                         <v-icon>mdi-facebook</v-icon>
                       </v-btn>
-                      <v-btn v-if="twitter" color="#55acee" dark small fab :href="twitter" target="_blank">
+                      <v-btn v-if="settings.twitter.value" color="#55acee" dark small fab :href="twitter" target="_blank">
                         <v-icon>mdi-twitter</v-icon>
                       </v-btn>
-                      <v-btn v-if="linkedin" color="#1985bc" dark small fab :href="linkedin" target="_blank">
+                      <v-btn v-if="settings.linkedin.value" color="#1985bc" dark small fab :href="linkedin" target="_blank">
                         <v-icon>mdi-linkedin</v-icon>
                       </v-btn>
-                      <v-btn v-if="github" color="#222" dark small fab :href="github" target="_blank">
+                      <v-btn v-if="settings.github.value" color="#222" dark small fab :href="github" target="_blank">
                         <v-icon>mdi-github-circle</v-icon>
                       </v-btn>
-                      <v-btn v-if="gitlab" color="#fca326" dark small fab :href="gitlab" target="_blank">
+                      <v-btn v-if="settings.gitlab.value" color="#fca326" dark small fab :href="gitlab" target="_blank">
                         <v-icon>mdi-gitlab</v-icon>
                       </v-btn>
-                      <v-btn v-if="bitbucket" color="#205081" dark small fab :href="bitbucket" target="_blank">
+                      <v-btn v-if="settings.bitbucket.value" color="#205081" dark small fab :href="bitbucket" target="_blank">
                         <v-icon>mdi-bitbucket</v-icon>
                       </v-btn>
                     </div>
@@ -52,6 +52,7 @@
 
 <script>
 import ContactForm from '~/components/ContactForm'
+import { mapGetters } from 'vuex'
 
 export default {
   layout: 'default',
@@ -64,22 +65,11 @@ export default {
     ContactForm
   },
   data: () => ({
-    email: null,
-    facebook: null,
-    twitter: null,
-    linkedin: null,
-    github: null,
-    gitlab: null,
-    bitbucket: null,
   }),
-  created () {
-    this.email = this.$store.getters['settings']['contact_email']['value'];
-    this.facebook = this.$store.getters['settings']['facebook']['value'];
-    this.twitter = this.$store.getters['settings']['twitter']['value'];
-    this.linkedin = this.$store.getters['settings']['linkedin']['value'];
-    this.github = this.$store.getters['settings']['github']['value'];
-    this.gitlab = this.$store.getters['settings']['gitlab']['value'];
-    this.bitbucket = this.$store.getters['settings']['bitbucket']['value'];
+  computed: {
+    ...mapGetters([
+      'settings'
+    ])
   }
 }
 </script>

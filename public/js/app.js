@@ -2988,8 +2988,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
-/* harmony import */ var _plugins_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ~/plugins/i18n */ "./resources/js/plugins/i18n.js");
-/* harmony import */ var _store_actions_type__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ~/store/actions.type */ "./resources/js/store/actions.type.js");
+/* harmony import */ var _store_actions_type__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ~/store/actions.type */ "./resources/js/store/actions.type.js");
 //
 //
 //
@@ -3004,7 +3003,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -3014,8 +3012,7 @@ __webpack_require__.r(__webpack_exports__);
   }),
   methods: {
     setLocale: function setLocale(locale) {
-      Object(_plugins_i18n__WEBPACK_IMPORTED_MODULE_1__["loadMessages"])(locale);
-      this.$store.dispatch(_store_actions_type__WEBPACK_IMPORTED_MODULE_2__["CHANGE_LOCALE"], locale);
+      this.$store.dispatch(_store_actions_type__WEBPACK_IMPORTED_MODULE_1__["CHANGE_LOCALE"], locale);
       this.$validator.localize(locale);
     }
   }
@@ -3036,6 +3033,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_BackToTop__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ~/components/BackToTop */ "./resources/js/components/BackToTop.vue");
 /* harmony import */ var vue_cookie_law__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-cookie-law */ "./node_modules/vue-cookie-law/dist/vue-cookie-law.js");
 /* harmony import */ var vue_cookie_law__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue_cookie_law__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 //
 //
 //
@@ -3093,6 +3095,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 
 
 
@@ -3105,30 +3108,11 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      appName: '',
-      name: '',
-      profession: '',
       year: window.config.year,
-      jumbotronBg: __webpack_require__(/*! ../../img/jumbotron-bg.jpg */ "./resources/img/jumbotron-bg.jpg"),
-      facebook: null,
-      twitter: null,
-      linkedin: null,
-      github: null,
-      gitlab: null,
-      bitbucket: null
+      jumbotronBg: __webpack_require__(/*! ../../img/jumbotron-bg.jpg */ "./resources/img/jumbotron-bg.jpg")
     };
   },
-  created: function created() {
-    this.appName = this.$store.getters['settings']['app_name']['value'];
-    this.name = this.$store.getters['settings']['name']['value'];
-    this.profession = this.$store.getters['settings']['profession']['value'];
-    this.facebook = this.$store.getters['settings']['facebook']['value'];
-    this.twitter = this.$store.getters['settings']['twitter']['value'];
-    this.linkedin = this.$store.getters['settings']['linkedin']['value'];
-    this.github = this.$store.getters['settings']['github']['value'];
-    this.gitlab = this.$store.getters['settings']['gitlab']['value'];
-    this.bitbucket = this.$store.getters['settings']['bitbucket']['value'];
-  }
+  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_3__["mapGetters"])(['settings']))
 });
 
 /***/ }),
@@ -3143,6 +3127,11 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_ContactForm__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ~/components/ContactForm */ "./resources/js/components/ContactForm.vue");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 //
 //
 //
@@ -3196,6 +3185,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   layout: 'default',
   metaInfo: function metaInfo() {
@@ -3207,25 +3197,9 @@ __webpack_require__.r(__webpack_exports__);
     ContactForm: _components_ContactForm__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   data: function data() {
-    return {
-      email: null,
-      facebook: null,
-      twitter: null,
-      linkedin: null,
-      github: null,
-      gitlab: null,
-      bitbucket: null
-    };
+    return {};
   },
-  created: function created() {
-    this.email = this.$store.getters['settings']['contact_email']['value'];
-    this.facebook = this.$store.getters['settings']['facebook']['value'];
-    this.twitter = this.$store.getters['settings']['twitter']['value'];
-    this.linkedin = this.$store.getters['settings']['linkedin']['value'];
-    this.github = this.$store.getters['settings']['github']['value'];
-    this.gitlab = this.$store.getters['settings']['gitlab']['value'];
-    this.bitbucket = this.$store.getters['settings']['bitbucket']['value'];
-  }
+  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_1__["mapGetters"])(['settings']))
 });
 
 /***/ }),
@@ -3315,10 +3289,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     };
   },
   data: function data() {
-    return {
-      sem: __webpack_require__(/*! ../../img/sem.png */ "./resources/img/sem.png"),
-      giraffe360: __webpack_require__(/*! ../../img/giraffe360.svg */ "./resources/img/giraffe360.svg")
-    };
+    return {};
   },
   computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])(['education', 'experience'])),
   mounted: function mounted() {
@@ -3346,6 +3317,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 //
 //
 //
@@ -3366,26 +3342,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   layout: 'default',
   data: function data() {
     return {
-      name: '',
-      about_me: '',
-      photo: null,
-      myPhoto: __webpack_require__(/*! ../../img/my-photo.png */ "./resources/img/my-photo.png"),
       jumbotronBg: __webpack_require__(/*! ../../img/jumbotron-bg.jpg */ "./resources/img/jumbotron-bg.jpg")
     };
   },
+  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])(['settings'])),
   metaInfo: function metaInfo() {
     return {
       title: this.$t('home')
     };
-  },
-  created: function created() {
-    this.name = this.$store.getters['settings']['name']['value'];
-    this.about_me = this.$store.getters['settings']['about_you']['value'];
-    this.photo = this.$store.getters['settings']['photo']['value'];
   }
 });
 
@@ -3461,7 +3430,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   },
   data: function data() {
     return {
-      title: window.config.appName,
       category: 0
     };
   },
@@ -3472,15 +3440,24 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         category: category
       };
     }
-  }, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])(['categories', 'projects'])),
+  }, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])(['categories', 'projects', 'locale'])),
   watch: {
     category: function category() {
       this.fetchProjects();
     }
   },
   mounted: function mounted() {
+    var _this = this;
+
     this.fetchCategories();
     this.fetchProjects();
+    this.$store.subscribe(function (mutation, state) {
+      if (mutation.type === 'setLocale') {
+        _this.fetchCategories();
+
+        _this.fetchProjects();
+      }
+    });
   },
   methods: {
     fetchCategories: function fetchCategories() {
@@ -3620,7 +3597,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      title: window.config.appName,
       webDevelopment: __webpack_require__(/*! ../../img/web-development.png */ "./resources/img/web-development.png"),
       seoOptimization: __webpack_require__(/*! ../../img/seo-optimization.png */ "./resources/img/seo-optimization.png"),
       serverManagement: __webpack_require__(/*! ../../img/server-management.png */ "./resources/img/server-management.png"),
@@ -33253,7 +33229,9 @@ var render = function() {
                           _c("span", {
                             domProps: {
                               innerHTML: _vm._s(
-                                _vm.$t("hello_guys", { name: _vm.name })
+                                _vm.$t("hello_guys", {
+                                  name: _vm.settings.name.value
+                                })
                               )
                             }
                           })
@@ -33269,7 +33247,7 @@ var render = function() {
                         [
                           _vm._v(_vm._s(_vm.$t("i_am")) + " "),
                           _c("span", { staticClass: "typelist-skill" }, [
-                            _vm._v(_vm._s(_vm.profession))
+                            _vm._v(_vm._s(_vm.settings.profession.value))
                           ])
                         ]
                       ),
@@ -33283,12 +33261,12 @@ var render = function() {
                         "v-layout",
                         { attrs: { "justify-space-around": "" } },
                         [
-                          _vm.facebook
+                          _vm.settings.facebook.value
                             ? _c(
                                 "v-btn",
                                 {
                                   attrs: {
-                                    href: _vm.facebook,
+                                    href: _vm.settings.facebook.value,
                                     target: "_blank",
                                     outline: "",
                                     fab: "",
@@ -33309,12 +33287,12 @@ var render = function() {
                               )
                             : _vm._e(),
                           _vm._v(" "),
-                          _vm.twitter
+                          _vm.settings.twitter.value
                             ? _c(
                                 "v-btn",
                                 {
                                   attrs: {
-                                    href: _vm.twitter,
+                                    href: _vm.settings.twitter.value,
                                     target: "_blank",
                                     outline: "",
                                     fab: "",
@@ -33335,12 +33313,12 @@ var render = function() {
                               )
                             : _vm._e(),
                           _vm._v(" "),
-                          _vm.linkedin
+                          _vm.settings.linkedin.value
                             ? _c(
                                 "v-btn",
                                 {
                                   attrs: {
-                                    href: _vm.linkedin,
+                                    href: _vm.settings.linkedin.value,
                                     target: "_blank",
                                     outline: "",
                                     fab: "",
@@ -33361,12 +33339,12 @@ var render = function() {
                               )
                             : _vm._e(),
                           _vm._v(" "),
-                          _vm.github
+                          _vm.settings.github.value
                             ? _c(
                                 "v-btn",
                                 {
                                   attrs: {
-                                    href: _vm.github,
+                                    href: _vm.settings.github.value,
                                     target: "_blank",
                                     outline: "",
                                     fab: "",
@@ -33387,12 +33365,12 @@ var render = function() {
                               )
                             : _vm._e(),
                           _vm._v(" "),
-                          _vm.gitlab
+                          _vm.settings.gitlab.value
                             ? _c(
                                 "v-btn",
                                 {
                                   attrs: {
-                                    href: _vm.gitlab,
+                                    href: _vm.settings.gitlab.value,
                                     target: "_blank",
                                     outline: "",
                                     fab: "",
@@ -33413,12 +33391,12 @@ var render = function() {
                               )
                             : _vm._e(),
                           _vm._v(" "),
-                          _vm.bitbucket
+                          _vm.settings.bitbucket.value
                             ? _c(
                                 "v-btn",
                                 {
                                   attrs: {
-                                    href: _vm.bitbucket,
+                                    href: _vm.settings.bitbucket.value,
                                     target: "_blank",
                                     outline: "",
                                     fab: "",
@@ -33477,7 +33455,7 @@ var render = function() {
                     "\n          © 2017 - " +
                       _vm._s(_vm.year) +
                       " " +
-                      _vm._s(_vm.appName) +
+                      _vm._s(_vm.settings.app_name.value) +
                       ". " +
                       _vm._s(_vm.$t("all_rights_reserved")) +
                       "\n        "
@@ -33593,7 +33571,7 @@ var render = function() {
                                             "div",
                                             { staticClass: "flex pb-6" },
                                             [
-                                              _vm.email
+                                              _vm.settings.contact_email.value
                                                 ? _c(
                                                     "div",
                                                     { staticClass: "con-text" },
@@ -33615,12 +33593,19 @@ var render = function() {
                                                         {
                                                           attrs: {
                                                             href:
-                                                              "mailto:naurislinde@gmail.com"
+                                                              "mailto:" +
+                                                              _vm.settings
+                                                                .contact_email
+                                                                .value
                                                           }
                                                         },
                                                         [
                                                           _vm._v(
-                                                            _vm._s(_vm.email)
+                                                            _vm._s(
+                                                              _vm.settings
+                                                                .contact_email
+                                                                .value
+                                                            )
                                                           )
                                                         ]
                                                       )
@@ -33635,7 +33620,7 @@ var render = function() {
                                             "div",
                                             { staticClass: "social mt-4" },
                                             [
-                                              _vm.facebook
+                                              _vm.settings.facebook.value
                                                 ? _c(
                                                     "v-btn",
                                                     {
@@ -33657,7 +33642,7 @@ var render = function() {
                                                   )
                                                 : _vm._e(),
                                               _vm._v(" "),
-                                              _vm.twitter
+                                              _vm.settings.twitter.value
                                                 ? _c(
                                                     "v-btn",
                                                     {
@@ -33679,7 +33664,7 @@ var render = function() {
                                                   )
                                                 : _vm._e(),
                                               _vm._v(" "),
-                                              _vm.linkedin
+                                              _vm.settings.linkedin.value
                                                 ? _c(
                                                     "v-btn",
                                                     {
@@ -33701,7 +33686,7 @@ var render = function() {
                                                   )
                                                 : _vm._e(),
                                               _vm._v(" "),
-                                              _vm.github
+                                              _vm.settings.github.value
                                                 ? _c(
                                                     "v-btn",
                                                     {
@@ -33725,7 +33710,7 @@ var render = function() {
                                                   )
                                                 : _vm._e(),
                                               _vm._v(" "),
-                                              _vm.gitlab
+                                              _vm.settings.gitlab.value
                                                 ? _c(
                                                     "v-btn",
                                                     {
@@ -33747,7 +33732,7 @@ var render = function() {
                                                   )
                                                 : _vm._e(),
                                               _vm._v(" "),
-                                              _vm.bitbucket
+                                              _vm.settings.bitbucket.value
                                                 ? _c(
                                                     "v-btn",
                                                     {
@@ -34200,7 +34185,7 @@ var render = function() {
                 "v-flex",
                 { staticClass: "text-xs-center", attrs: { xs12: "", md4: "" } },
                 [
-                  _vm.photo
+                  _vm.settings.photo.value
                     ? _c(
                         "v-avatar",
                         {
@@ -34210,8 +34195,8 @@ var render = function() {
                         [
                           _c("img", {
                             attrs: {
-                              src: "storage/" + _vm.photo,
-                              alt: _vm.name
+                              src: "storage/" + _vm.settings.photo.value,
+                              alt: _vm.settings.name.value
                             }
                           })
                         ]
@@ -34231,7 +34216,9 @@ var render = function() {
                   _vm._v(" "),
                   _c("p", { staticClass: "my-4 subheading text-xs-justify" }, [
                     _c("span", {
-                      domProps: { innerHTML: _vm._s(_vm.about_me) }
+                      domProps: {
+                        innerHTML: _vm._s(_vm.settings.about_you.value)
+                      }
                     })
                   ])
                 ]
@@ -80357,17 +80344,6 @@ module.exports = "/images/arrow-left.png?b976d5f3688b34875e8dab13b39745ad";
 
 /***/ }),
 
-/***/ "./resources/img/giraffe360.svg":
-/*!**************************************!*\
-  !*** ./resources/img/giraffe360.svg ***!
-  \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/giraffe360.svg?a9e2cba64c07ac89ff671fddd1e2a9ae";
-
-/***/ }),
-
 /***/ "./resources/img/jumbotron-bg.jpg":
 /*!****************************************!*\
   !*** ./resources/img/jumbotron-bg.jpg ***!
@@ -80376,28 +80352,6 @@ module.exports = "/images/giraffe360.svg?a9e2cba64c07ac89ff671fddd1e2a9ae";
 /***/ (function(module, exports) {
 
 module.exports = "/images/jumbotron-bg.jpg?8db8bf5238c6ce0cfb3d4a93e82c258b";
-
-/***/ }),
-
-/***/ "./resources/img/my-photo.png":
-/*!************************************!*\
-  !*** ./resources/img/my-photo.png ***!
-  \************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/my-photo.png?aef6aec949d3660bb8725f47b8c05048";
-
-/***/ }),
-
-/***/ "./resources/img/sem.png":
-/*!*******************************!*\
-  !*** ./resources/img/sem.png ***!
-  \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/sem.png?8d45343ebe1f6ccec50d9e26a4423817";
 
 /***/ }),
 
@@ -80531,13 +80485,13 @@ var ApiService = {
   },
   query: function query(resource, params) {
     return vue__WEBPACK_IMPORTED_MODULE_0___default.a.axios.get(resource, params)["catch"](function (error) {
-      throw new Error("[RWV] ApiService ".concat(error));
+      throw new Error("[PORTFOLIO] ApiService ".concat(error));
     });
   },
   get: function get(resource) {
     var slug = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
     return vue__WEBPACK_IMPORTED_MODULE_0___default.a.axios.get("".concat(resource, "/").concat(slug))["catch"](function (error) {
-      throw new Error("[RWV] ApiService ".concat(error));
+      throw new Error("[PORTFOLIO] ApiService ".concat(error));
     });
   },
   post: function post(resource, params) {
@@ -80551,7 +80505,7 @@ var ApiService = {
   },
   "delete": function _delete(resource) {
     return vue__WEBPACK_IMPORTED_MODULE_0___default.a.axios["delete"](resource)["catch"](function (error) {
-      throw new Error("[RWV] ApiService ".concat(error));
+      throw new Error("[PORTFOLIO] ApiService ".concat(error));
     });
   }
 };
@@ -81461,24 +81415,24 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            if (!(Array.isArray(_store__WEBPACK_IMPORTED_MODULE_1__["default"].getters['settings']) && !_store__WEBPACK_IMPORTED_MODULE_1__["default"].getters['settings'].length)) {
-              _context.next = 8;
-              break;
-            }
-
-            _context.prev = 1;
-            _context.next = 4;
+            _context.prev = 0;
+            _context.next = 3;
             return _store__WEBPACK_IMPORTED_MODULE_1__["default"].dispatch(_store_actions_type__WEBPACK_IMPORTED_MODULE_2__["FETCH_SETTINGS"], {});
 
-          case 4:
-            _context.next = 8;
+          case 3:
+            _context.next = 7;
             break;
 
-          case 6:
-            _context.prev = 6;
-            _context.t0 = _context["catch"](1);
+          case 5:
+            _context.prev = 5;
+            _context.t0 = _context["catch"](0);
 
-          case 8:
+          case 7:
+            _store__WEBPACK_IMPORTED_MODULE_1__["default"].subscribe(function (mutation, state) {
+              if (mutation.type === 'setLocale') {
+                _store__WEBPACK_IMPORTED_MODULE_1__["default"].dispatch(_store_actions_type__WEBPACK_IMPORTED_MODULE_2__["FETCH_SETTINGS"], {});
+              }
+            });
             next();
 
           case 9:
@@ -81486,7 +81440,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             return _context.stop();
         }
       }
-    }, _callee, null, [[1, 6]]);
+    }, _callee, null, [[0, 5]]);
   }));
 
   return function (_x, _x2, _x3) {
@@ -82149,7 +82103,6 @@ function _loadMessages() {
           case 5:
             if (i18n.locale !== locale) {
               i18n.locale = locale;
-              vue__WEBPACK_IMPORTED_MODULE_1___default.a.axios.defaults.headers.common['Content-Language'] = locale;
             }
 
           case 6:
@@ -82776,11 +82729,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getters", function() { return getters; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mutations", function() { return mutations; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "actions", function() { return actions; });
-/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! js-cookie */ "./node_modules/js-cookie/src/js.cookie.js");
-/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(js_cookie__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _mutations_type__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./mutations.type */ "./resources/js/store/mutations.type.js");
-/* harmony import */ var _actions_type__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./actions.type */ "./resources/js/store/actions.type.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! js-cookie */ "./node_modules/js-cookie/src/js.cookie.js");
+/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(js_cookie__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _plugins_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ~/plugins/i18n */ "./resources/js/plugins/i18n.js");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ~/store */ "./resources/js/store/index.js");
+/* harmony import */ var _mutations_type__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./mutations.type */ "./resources/js/store/mutations.type.js");
+/* harmony import */ var _actions_type__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./actions.type */ "./resources/js/store/actions.type.js");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
 
 
 
@@ -82790,7 +82750,7 @@ var _window$config = window.config,
     locales = _window$config.locales; // state
 
 var state = {
-  locale: js_cookie__WEBPACK_IMPORTED_MODULE_0___default.a.get('locale') || locale,
+  locale: js_cookie__WEBPACK_IMPORTED_MODULE_1___default.a.get('locale') || locale,
   locales: locales // getters
 
 };
@@ -82803,15 +82763,17 @@ var getters = {
   } // mutations
 
 };
-var mutations = _defineProperty({}, _mutations_type__WEBPACK_IMPORTED_MODULE_1__["SET_LOCALE"], function (state, locale) {
+var mutations = _defineProperty({}, _mutations_type__WEBPACK_IMPORTED_MODULE_4__["SET_LOCALE"], function (state, locale) {
   state.locale = locale;
 }); // actions
 
-var actions = _defineProperty({}, _actions_type__WEBPACK_IMPORTED_MODULE_2__["CHANGE_LOCALE"], function (context, locale) {
-  context.commit(_mutations_type__WEBPACK_IMPORTED_MODULE_1__["SET_LOCALE"], locale);
-  js_cookie__WEBPACK_IMPORTED_MODULE_0___default.a.set('locale', locale, {
+var actions = _defineProperty({}, _actions_type__WEBPACK_IMPORTED_MODULE_5__["CHANGE_LOCALE"], function (context, locale) {
+  vue__WEBPACK_IMPORTED_MODULE_0___default.a.axios.defaults.headers.common['Content-Language'] = locale;
+  Object(_plugins_i18n__WEBPACK_IMPORTED_MODULE_2__["loadMessages"])(locale);
+  js_cookie__WEBPACK_IMPORTED_MODULE_1___default.a.set('locale', locale, {
     expires: 365
   });
+  context.commit(_mutations_type__WEBPACK_IMPORTED_MODULE_4__["SET_LOCALE"], locale);
 });
 /* harmony default export */ __webpack_exports__["default"] = ({
   state: state,

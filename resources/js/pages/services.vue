@@ -110,7 +110,6 @@ export default {
     return {title: this.$t('services')}
   },
   data: () => ({
-    title: window.config.appName,
     webDevelopment: require('../../img/web-development.png'),
     seoOptimization: require('../../img/seo-optimization.png'),
     serverManagement: require('../../img/server-management.png'),

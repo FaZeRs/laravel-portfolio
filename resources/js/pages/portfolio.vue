@@ -52,7 +52,6 @@ export default {
     return { title: this.$t('portfolio') }
   },
   data: () => ({
-    title: window.config.appName,
     category: 0
   }),
   computed: {
@@ -64,7 +63,8 @@ export default {
     },
     ...mapGetters([
       'categories',
-      'projects'
+      'projects',
+      'locale'
     ])
   },
   watch: {
@@ -75,6 +75,12 @@ export default {
   mounted () {
     this.fetchCategories()
     this.fetchProjects()
+    this.$store.subscribe((mutation, state) => {
+      if(mutation.type === 'setLocale') {
+        this.fetchCategories()
+        this.fetchProjects()
+      }
+    });
   },
   methods: {
     fetchCategories () {

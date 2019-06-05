@@ -68,8 +68,6 @@ export default {
     return {title: this.$t('experience')}
   },
   data: () => ({
-    sem: require('../../img/sem.png'),
-    giraffe360: require('../../img/giraffe360.svg'),
   }),
   computed: {
     ...mapGetters([

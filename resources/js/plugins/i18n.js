@@ -23,7 +23,6 @@ export async function loadMessages (locale) {
 
   if (i18n.locale !== locale) {
     i18n.locale = locale
-    Vue.axios.defaults.headers.common['Content-Language'] = locale
   }
 }
 
