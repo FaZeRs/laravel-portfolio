@@ -14,10 +14,10 @@ class CreateProjectsTable extends Migration
     public function up()
     {
         Schema::create('projects', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->json('title');
             $table->json('slug');
-            $table->integer('category_id')->unsigned()->index();
+            $table->unsignedBigInteger('category_id');
             $table->json('description')->nullable();
             $table->string('image')->nullable();
             $table->enum('status', ['unknown', 'open', 'scheduled', 'in_development', 'completed', 'cancelled'])->default('unknown');

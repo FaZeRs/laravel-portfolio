@@ -11,28 +11,26 @@
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "devDependencies": {
-    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
-    "@mdi/font": "^3.5.95",
-    "@vue/eslint-config-standard": "^4.0.0",
-    "browser-sync": "^2.26.3",
-    "browser-sync-webpack-plugin": "^2.2.2",
+    "@mdi/font": "^3.6.95",
+    "babel-eslint": "^10.0.1",
     "cross-env": "^5.2.0",
-    "eslint": "^5.15.3",
+    "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.2.2",
-    "laravel-mix": "^4.0.15",
-    "resolve-url-loader": "^3.0.1",
-    "sass": "^1.17.3",
+    "laravel-mix": "^4.0.16",
+    "resolve-url-loader": "^3.1.0",
+    "sass": "^1.19.0",
     "sass-loader": "^7.1.0",
-    "stylelint": "^9.10.1",
-    "stylelint-config-standard": "^18.2.0",
-    "stylelint-scss": "^3.5.4",
+    "stylelint": "^10.0.1",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-scss": "^3.6.0",
     "stylelint-webpack-plugin": "^0.10.5",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
     "vue-loader": "^15.7.0",
     "vue-template-compiler": "^2.6.10",
-    "vuetify-loader": "^1.2.1",
-    "webpack-bundle-analyzer": "^3.1.0"
+    "vuetify-loader": "^1.2.2",
+    "webpack": "^4.31.0",
+    "webpack-bundle-analyzer": "^3.3.2"
   },
   "dependencies": {
     "axios": "^0.18",
@@ -41,59 +39,17 @@
     "lodash": "^4.17.11",
     "promise": "^8.0.3",
     "v-img": "^0.2.0",
-    "vee-validate": "^2.2.0",
+    "vee-validate": "^2.2.7",
     "vue": "^2.6.10",
+    "vue-axios": "^2.1.4",
     "vue-cookie-law": "^1.10.0",
-    "vue-i18n": "^8.9.0",
-    "vue-meta": "^1.5.8",
+    "vue-i18n": "^8.11.2",
+    "vue-meta": "^1.6.0",
     "vue-recaptcha": "^1.1.1",
-    "vue-router": "^3.0.2",
-    "vuetify": "^1.5.7",
-    "vuex": "^3.1.0",
+    "vue-router": "^3.0.6",
+    "vuetify": "^1.5.12",
+    "vuex": "^3.1.1",
     "vuex-router-sync": "^5.0.0"
-  },
-  "eslintConfig": {
-    "root": true,
-    "extends": [
-      "plugin:vue/recommended",
-      "@vue/standard"
-    ],
-    "rules": {
-      "vue/max-attributes-per-line": "off"
-    }
-  },
-  "stylelint": {
-    "extends": "stylelint-config-standard",
-    "plugins": [
-      "stylelint-scss"
-    ],
-    "rules": {
-      "at-rule-empty-line-before": null,
-      "declaration-empty-line-before": null,
-      "rule-empty-line-before": false,
-      "at-rule-no-unknown": [
-        true,
-        {
-          "ignoreAtRules": [
-            "extend",
-            "at-root",
-            "debug",
-            "warn",
-            "error",
-            "if",
-            "else",
-            "for",
-            "each",
-            "while",
-            "mixin",
-            "include",
-            "content",
-            "return",
-            "function"
-          ]
-        }
-      ]
-    }
   },
   "engines": {
     "node": ">= 6.0.0",

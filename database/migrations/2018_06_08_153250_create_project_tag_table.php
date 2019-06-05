@@ -14,8 +14,8 @@ class CreateProjectTagTable extends Migration
     public function up()
     {
         Schema::create('project_tag', function (Blueprint $table) {
-            $table->unsignedInteger('project_id');
-            $table->unsignedInteger('tag_id');
+            $table->unsignedBigInteger('project_id');
+            $table->unsignedBigInteger('tag_id');
             $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');
             $table->foreign('tag_id')->references('id')->on('tags')->onDelete('cascade');
         });

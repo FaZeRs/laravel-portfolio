@@ -1,9 +1,12 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Eloquent\Model;
 
 class DatabaseSeeder extends Seeder
 {
+    use DisableForeignKeys, TruncateTable;
+
     /**
      * Run the database seeds.
      *
@@ -11,6 +14,32 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        Model::unguard();
+
+        $this->disableForeignKeys();
+        $this->truncateMultiple([
+            'users',
+            'categories',
+            'tags',
+            'projects',
+            'project_tag',
+            'links',
+            'education',
+            'experience',
+            'settings',
+        ]);
+        $this->enableForeignKeys();
+
+        $this->call([
+            UserTableSeeder::class,
+            CategoriesTableSeeder::class,
+            TagsTableSeeder::class,
+            ProjectsTableSeeder::class,
+            EducationTableSeeder::class,
+            ExperienceTableSeeder::class,
+            SettingsTableSeeder::class,
+        ]);
+
+        Model::reguard();
     }
 }

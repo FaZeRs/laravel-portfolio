@@ -11,20 +11,14 @@ import App from '~/components/App'
 import VeeValidate from 'vee-validate'
 import VueImg from 'v-img'
 
-import '~/plugins'
 import '~/components'
 
-window.axios = require('axios')
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
-let token = document.head.querySelector('meta[name="csrf-token"]')
-
-if (token) {
-  window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content
-} else {
-  console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token')
-}
+import ApiService from '~/common/api.service'
 
 Vue.config.productionTip = false
+
+ApiService.init()
+
 Vue.use(Vuetify, {
   iconfont: 'mdi'
 })

@@ -11,15 +11,20 @@ RUN apk add --no-cache --virtual .build-deps \
     sqlite-dev
 
 # Install production dependencies
-RUN apk add --no-cache \
+RUN apk add --no-cache --update \
     bash \
     curl \
     g++ \
     gcc \
     git \
-    imagemagick \
-    libc-dev \
+    freetype \
+    freetype-dev \
+    libpng \
     libpng-dev \
+    libjpeg-turbo \
+    libjpeg-turbo-dev \
+    libjpeg \
+    libc-dev \
     make \
     mysql-client \
     nodejs \
@@ -27,7 +32,9 @@ RUN apk add --no-cache \
     openssh-client \
     postgresql-libs \
     rsync \
-    libzip-dev
+    libzip-dev \
+    imagemagick \
+    procps
 
 # Don't clear env variables
 # This is very important since it will allow us to read environment variables from the container.

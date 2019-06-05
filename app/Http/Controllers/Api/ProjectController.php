@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Models\Project;
 use Illuminate\Http\Request;
+use App\Filters\ProjectFilter;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\ProjectResource;
 
@@ -14,9 +15,9 @@ class ProjectController extends Controller
         $this->middleware('api_admin')->except('index', 'show');
     }
 
-    public function index()
+    public function index(ProjectFilter $filter)
     {
-        return ProjectResource::collection(Project::with('tags', 'links')->get());
+        return ProjectResource::collection(Project::with('tags', 'links')->filter($filter)->get());
     }
 
     public function show(Project $project)

@@ -1,5 +1,8 @@
 <?php
 
+/** @var \Illuminate\Database\Eloquent\Factory $factory */
+use App\Models\Link;
+use App\Models\Project;
 use Faker\Generator as Faker;
 
 /*
@@ -12,13 +15,13 @@ use Faker\Generator as Faker;
 | model instances for testing / seeding your application's database.
 |
 */
-$factory->define(App\Models\Link::class, function (Faker $faker) {
+$factory->define(Link::class, function (Faker $faker) {
     return [
         'title'      => $faker->sentence,
         'project_id' => function () {
-            return factory(App\Models\Project::class)->create()->id;
+            return factory(Project::class)->create()->id;
         },
         'url'        => $faker->url,
-        'icon'       => $faker->word,
+        'icon'       => $faker->randomElement(['open_in_browser', 'mdi-github-circle', 'mdi-gitlab', 'mdi-bitbucket']),
     ];
 });

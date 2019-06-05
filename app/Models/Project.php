@@ -2,17 +2,20 @@
 
 namespace App\Models;
 
+use App\Filters\Filterable;
 use Illuminate\Support\Str;
 use Backpack\CRUD\CrudTrait;
+use Prologue\Alerts\Facades\Alert;
 use Intervention\Image\Facades\Image;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
-use Spatie\Translatable\HasTranslations;
+use Backpack\CRUD\ModelTraits\SpatieTranslatable\HasTranslations;
 
 class Project extends Model
 {
     use CrudTrait;
     use HasTranslations;
+    use Filterable;
 
     /**
      * The table associated with the model.
@@ -116,25 +119,26 @@ class Project extends Model
         $disk = 'public';
         $destination_path = 'projects';
 
-        // if the image was erased
-        if ($value == null) {
-            // delete the image from disk
-            Storage::disk($disk)->delete($this->{$attribute_name});
-
-            // set null in the database column
-            $this->attributes[$attribute_name] = null;
+        if (is_null($value)) {
+            if (Storage::disk($disk)->delete($this->{$attribute_name})) {
+                $this->attributes[$attribute_name] = null;
+            }
         }
 
-        // if a base64 was sent, store it in the db
         if (Str::startsWith($value, 'data:image')) {
-            // 0. Make the image
-            $image = Image::make($value)->encode('png', 90);
-            // 1. Generate a filename.
-            $filename = md5($value.time()).'.png';
-            // 2. Store the image on disk.
-            Storage::disk($disk)->put($destination_path.'/'.$filename, $image->stream());
-            // 3. Save the path to the database
-            $this->attributes[$attribute_name] = $destination_path.'/'.$filename;
+            preg_match("/^data:image\/(.*);base64/i", $value, $match);
+            $extension = $match[1];
+            $image = Image::make($value);
+            if (! is_null($image)) {
+                $filename = md5($value.time()).'.'.$extension;
+                try {
+                    Storage::disk($disk)->put($destination_path.'/'.$filename, $image->stream());
+                    $this->attributes[$attribute_name] = $destination_path.'/'.$filename;
+                } catch (\InvalidArgumentException $argumentException) {
+                    Alert::error($argumentException->getMessage())->flash();
+                    $this->attributes[$attribute_name] = null;
+                }
+            }
         }
     }
 
@@ -142,12 +146,14 @@ class Project extends Model
     {
         $this->links()->delete();
         $links = [];
-        foreach (json_decode($value) as $link) {
-            $links[] = new Link([
-                'title' => $link->title,
-                'url' => $link->url,
-                'icon' => $link->icon,
-            ]);
+        if (json_decode($value)) {
+            foreach (json_decode($value) as $link) {
+                $links[] = new Link([
+                    'title' => $link->title,
+                    'url' => $link->url,
+                    'icon' => $link->icon,
+                ]);
+            }
         }
         if ($links) {
             $this->links()->saveMany($links);

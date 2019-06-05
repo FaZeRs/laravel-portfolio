@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Backpack\CRUD\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
-use Spatie\Translatable\HasTranslations;
+use Backpack\CRUD\ModelTraits\SpatieTranslatable\HasTranslations;
 
 class Tag extends Model
 {

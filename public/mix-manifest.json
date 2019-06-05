@@ -1,4 +1,12 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/css/app.css": "/css/app.css",
+    "/js/contact.js": "/js/contact.js",
+    "/js/experience.js": "/js/experience.js",
+    "/js/lang-.js": "/js/lang-.js",
+    "/js/lang-en.js": "/js/lang-en.js",
+    "/js/lang-lv.js": "/js/lang-lv.js",
+    "/js/not-found.js": "/js/not-found.js",
+    "/js/portfolio.js": "/js/portfolio.js",
+    "/js/services.js": "/js/services.js"
 }

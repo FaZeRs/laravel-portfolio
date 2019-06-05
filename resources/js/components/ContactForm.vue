@@ -3,15 +3,18 @@
     <v-alert v-model="successful" dismissible outline transition="scale-transition" type="success">
       {{ $t('contact_success') }}
     </v-alert>
+    <v-alert v-model="error" dismissible outline transition="scale-transition" type="error">
+      {{ $t('contact_error') }}
+    </v-alert>
     <v-layout row wrap>
       <v-flex xs12 sm6>
-        <v-text-field v-validate="'required'" :label="$t('name')" v-model="name" :error-messages="errors.collect('name')" data-vv-name="name" required/>
+        <v-text-field v-validate="'required'" :label="$t('name')" v-model="contact.name" :error-messages="errors.collect('name')" data-vv-name="name" required/>
       </v-flex>
       <v-flex xs12 sm6>
-        <v-text-field v-validate="'required|email'" :label="$t('email')" v-model="email" :error-messages="errors.collect('email')" data-vv-name="email" required/>
+        <v-text-field v-validate="'required|email'" :label="$t('email')" v-model="contact.email" :error-messages="errors.collect('email')" data-vv-name="email" required/>
       </v-flex>
       <v-flex xs12>
-        <v-textarea v-validate="'required'" :label="$t('message')" v-model="message" :error-messages="errors.collect('message')" data-vv-name="message"/>
+        <v-textarea v-validate="'required'" :label="$t('message')" v-model="contact.message" :error-messages="errors.collect('message')" data-vv-name="message"/>
       </v-flex>
       <vue-recaptcha v-if="sitekey" ref="recaptcha" :sitekey="sitekey" size="invisible" @verify="onCaptchaVerified" @expired="onCaptchaExpired"/>
       <v-btn @click="submit">{{ $t('send_message') }}</v-btn>
@@ -21,8 +24,8 @@
 </template>
 
 <script>
-import axios from 'axios'
 import VueRecaptcha from 'vue-recaptcha'
+import { SEND_CONTACT } from "~/store/actions.type";
 
 export default {
   $_veeValidate: {
@@ -32,10 +35,13 @@ export default {
     VueRecaptcha
   },
   data: () => ({
-    name: '',
-    email: '',
-    message: '',
+    contact: {
+      name: '',
+      email: '',
+      message: '',
+    },
     successful: false,
+    error: false,
     sitekey: window.config.googleReCaptcha
   }),
   mounted () {
@@ -68,33 +74,28 @@ export default {
         }
       })
     },
-    onCaptchaVerified: function (recaptchaToken) {
-      this.$refs.recaptcha.reset()
+    onCaptchaVerified: function () {
       this.send()
     },
     send () {
-      axios.post('/api/contact/send', {
-        name: this.name,
-        email: this.email,
-        message: this.message
-      }).then(() => {
-        this.successful = true
-      })
-
-      this.name = ''
-      this.email = ''
-      this.message = ''
-      this.successful = false
-      this.$validator.reset()
+      this.$store.dispatch(SEND_CONTACT, this.contact)
+        .then(() => {
+          this.error = false;
+          this.successful = true
+          this.contact.name = ''
+          this.contact.email = ''
+          this.contact.message = ''
+          this.$validator.reset()
+        })
+        .catch(() => {
+          this.error = true
+        });
     },
     clear () {
       this.name = ''
       this.email = ''
       this.message = ''
       this.$validator.reset()
-      if(this.$refs.recaptcha) {
-        this.$refs.recaptcha.reset()
-      }
     },
     onCaptchaExpired: function () {
       this.$refs.recaptcha.reset()
