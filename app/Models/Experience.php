@@ -58,6 +58,16 @@ class Experience extends Model
         'updated_at',
     ];
 
+    public static function boot()
+    {
+        parent::boot();
+        static::deleting(function ($obj) {
+            if (!Storage::disk('public')->delete($obj->logo)) {
+                Alert::error(trans('backpack::settings.delete_image_file_not_message'))->flash();
+            }
+        });
+    }
+
     public function setLogoAttribute($value)
     {
         $attribute_name = 'logo';
@@ -77,6 +87,9 @@ class Experience extends Model
             if (! is_null($image)) {
                 $filename = md5($value.time()).'.'.$extension;
                 try {
+                    if(!is_null($this->attributes[$attribute_name])) {
+                        Storage::disk($disk)->delete($this->attributes[$attribute_name]);
+                    }
                     Storage::disk($disk)->put($destination_path.'/'.$filename, $image->stream());
                     $this->attributes[$attribute_name] = $destination_path.'/'.$filename;
                 } catch (\InvalidArgumentException $argumentException) {

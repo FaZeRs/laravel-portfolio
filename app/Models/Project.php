@@ -83,7 +83,9 @@ class Project extends Model
             $project->slug = Str::slug($project->title);
         });
         static::deleting(function ($obj) {
-            Storage::disk('public')->delete($obj->image);
+            if (!Storage::disk('public')->delete($obj->image)) {
+                Alert::error(trans('backpack::settings.delete_image_file_not_message'))->flash();
+            }
         });
     }
 
@@ -132,6 +134,9 @@ class Project extends Model
             if (! is_null($image)) {
                 $filename = md5($value.time()).'.'.$extension;
                 try {
+                    if(!is_null($this->attributes[$attribute_name])) {
+                        Storage::disk($disk)->delete($this->attributes[$attribute_name]);
+                    }
                     Storage::disk($disk)->put($destination_path.'/'.$filename, $image->stream());
                     $this->attributes[$attribute_name] = $destination_path.'/'.$filename;
                 } catch (\InvalidArgumentException $argumentException) {

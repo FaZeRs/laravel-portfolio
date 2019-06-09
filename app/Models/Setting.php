@@ -30,15 +30,11 @@ class Setting extends SettingModel
     {
         parent::boot();
         static::deleting(function ($obj) {
-            // 1. get field type
             $type = $obj->field;
-            // 2. check if it's image
             if ($type == 'image') {
-                // 3. delete from disk
-                //if (!Storage::disk(config('backpack.settings.images_disk_name'))->delete($obj->value)) {
-                    // filed to delete image file
-//                    Alert::error(trans('backpack::settings.delete_image_file_not_message'))->flash();
-                //}
+                if (!Storage::disk('public')->delete($obj->value)) {
+                    Alert::error(trans('backpack::settings.delete_image_file_not_message'))->flash();
+                }
             }
         });
     }
@@ -85,6 +81,9 @@ class Setting extends SettingModel
                     if (! is_null($image)) {
                         $filename = md5($value.time()).'.'.$extension;
                         try {
+                            if(!is_null($this->attributes[$attribute_name])) {
+                                Storage::disk($disk)->delete($this->attributes[$attribute_name]);
+                            }
                             Storage::disk($disk)->put($destination_path.'/'.$filename, $image->stream());
                             $this->attributes[$attribute_name] = $destination_path.'/'.$filename;
                         } catch (\InvalidArgumentException $argumentException) {
