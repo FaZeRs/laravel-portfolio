@@ -52,11 +52,10 @@ class Setting extends SettingModel
      */
     public static function get($key)
     {
-
         $setting = new self();
         $entry = $setting->where('key', $key)->first();
 
-        if (!$entry) {
+        if (! $entry) {
             return;
         }
 
