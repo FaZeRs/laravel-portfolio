@@ -32,7 +32,7 @@ class Setting extends SettingModel
         static::deleting(function ($obj) {
             $type = $obj->field;
             if ($type == 'image') {
-                if (!Storage::disk('public')->delete($obj->value)) {
+                if (! Storage::disk('public')->delete($obj->value)) {
                     Alert::error(trans('backpack::settings.delete_image_file_not_message'))->flash();
                 }
             }
@@ -81,7 +81,7 @@ class Setting extends SettingModel
                     if (! is_null($image)) {
                         $filename = md5($value.time()).'.'.$extension;
                         try {
-                            if(!is_null($this->attributes[$attribute_name])) {
+                            if (! is_null($this->attributes[$attribute_name])) {
                                 Storage::disk($disk)->delete($this->attributes[$attribute_name]);
                             }
                             Storage::disk($disk)->put($destination_path.'/'.$filename, $image->stream());
