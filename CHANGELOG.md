@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Translatable settings ([dff5ba5](https://github.com/FaZeRs/naurislinde.com/commit/dff5ba5e2b376571b2ae375d4006cf163c3b47db))
 - Reload content when locale is changed ([0382b36](https://github.com/FaZeRs/naurislinde.com/commit/0382b3628d10bddd14d5909497be9c8645632e76))
 - Use value from .env file for API_URL ([5b31185](https://github.com/FaZeRs/naurislinde.com/commit/5b3118587ea66a61506b097b64345748409af6b2))
+- Delete old images of models ([8331abf](https://github.com/FaZeRs/naurislinde.com/commit/8331abfc6f0efda9f61ffbe349d2940e6366852f))
 
 ### Changed
 - Add links field only on update ([8b5a9de](https://github.com/FaZeRs/naurislinde.com/commit/8b5a9ded3c9a52d5e5121a93af84466de288d57f))
@@ -29,6 +30,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Check if $value isn't empty ([ca054eb](https://github.com/FaZeRs/naurislinde.com/commit/ca054eb8f6408350062c9172c22ef4ce52b6c9f7))
 - Fixed localization ([2a19468](https://github.com/FaZeRs/naurislinde.com/commit/2a19468be92bbf06179043cecfe7c28a3d20e714))([61ead68](https://github.com/FaZeRs/naurislinde.com/commit/61ead680508d9cf2b4d8451ed0c02e4db1481043))
 - Fixed contact form ([0af7381](https://github.com/FaZeRs/naurislinde.com/commit/0af73815fb284b314279358c0f5ba0b90cbd57ca))
+- Fixed horizon access for production environment ([71fd2d3](https://github.com/FaZeRs/naurislinde.com/commit/71fd2d3b0351958f20104bfcbcca835cff735a45))
+- Fixed telescope for production environment ([b137350](https://github.com/FaZeRs/naurislinde.com/commit/b137350aec02b6c37224b88105454a728917f7ce))
+- Override Setting get() function to fix translations ([30f520a](https://github.com/FaZeRs/naurislinde.com/commit/30f520a8cb2c331a015bd75141701b9207a4d5c3))
+- Fixed experience image size ([b8db390](https://github.com/FaZeRs/naurislinde.com/commit/b8db39094890010abfd311d03be33e0ee5e265f5))
 
 ## [2.0.0]  - 04-04-2019
 
