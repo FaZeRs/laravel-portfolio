@@ -41,7 +41,7 @@
                       <span v-else>{{ job.from }} - {{ job.to }}</span>
                     </div>
                     <div class="work-exp-logo">
-                      <img v-if="job.logo" :src="job.logo" width="123" :alt="job.employer">
+                      <v-img v-if="job.logo" :src="job.logo" aspect-ratio="1" contain max-width="125"></v-img>
                     </div>
                     <h4 class="headline mt-3">{{ job.position }}</h4>
                     <h6 class="color-text title mt-2">

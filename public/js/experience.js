@@ -327,15 +327,17 @@ var render = function() {
                                               { staticClass: "work-exp-logo" },
                                               [
                                                 job.logo
-                                                  ? _c("img", {
+                                                  ? _c("v-img", {
                                                       attrs: {
                                                         src: job.logo,
-                                                        width: "123",
-                                                        alt: job.employer
+                                                        "aspect-ratio": "1",
+                                                        contain: "",
+                                                        "max-width": "125"
                                                       }
                                                     })
                                                   : _vm._e()
-                                              ]
+                                              ],
+                                              1
                                             ),
                                             _vm._v(" "),
                                             _c(
@@ -440,7 +442,8 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 
 
-_var_www_html_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default()(component, {VCard: vuetify_lib__WEBPACK_IMPORTED_MODULE_4__["VCard"],VContainer: vuetify_lib__WEBPACK_IMPORTED_MODULE_4__["VContainer"],VFlex: vuetify_lib__WEBPACK_IMPORTED_MODULE_4__["VFlex"],VHover: vuetify_lib__WEBPACK_IMPORTED_MODULE_4__["VHover"],VLayout: vuetify_lib__WEBPACK_IMPORTED_MODULE_4__["VLayout"]})
+
+_var_www_html_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default()(component, {VCard: vuetify_lib__WEBPACK_IMPORTED_MODULE_4__["VCard"],VContainer: vuetify_lib__WEBPACK_IMPORTED_MODULE_4__["VContainer"],VFlex: vuetify_lib__WEBPACK_IMPORTED_MODULE_4__["VFlex"],VHover: vuetify_lib__WEBPACK_IMPORTED_MODULE_4__["VHover"],VImg: vuetify_lib__WEBPACK_IMPORTED_MODULE_4__["VImg"],VLayout: vuetify_lib__WEBPACK_IMPORTED_MODULE_4__["VLayout"]})
 
 
 /* hot reload */
