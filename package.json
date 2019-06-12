@@ -44,7 +44,7 @@
     "vue-axios": "^2.1.4",
     "vue-cookie-law": "^1.10.0",
     "vue-i18n": "^8.11.2",
-    "vue-meta": "^2.0.2",
+    "vue-meta": "^2.0.3",
     "vue-recaptcha": "^1.1.1",
     "vue-router": "^3.0.6",
     "vuetify": "^1.5.14",
