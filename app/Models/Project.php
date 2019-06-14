@@ -76,10 +76,10 @@ class Project extends Model
     {
         parent::boot();
 
-        static::creating(function (Project $project) {
+        static::creating(function (self $project) {
             $project->slug = Str::slug($project->title);
         });
-        static::updating(function (Project $project) {
+        static::updating(function (self $project) {
             $project->slug = Str::slug($project->title);
         });
         static::deleting(function ($obj) {
