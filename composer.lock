@@ -11,12 +11,12 @@
             "version": "v2.4.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/almasaeed2010/AdminLTE.git",
+                "url": "https://github.com/ColorlibHQ/AdminLTE.git",
                 "reference": "b3acb63ac56b13eb45b36e628b384a9a2507b50e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/almasaeed2010/AdminLTE/zipball/b3acb63ac56b13eb45b36e628b384a9a2507b50e",
+                "url": "https://api.github.com/repos/ColorlibHQ/AdminLTE/zipball/b3acb63ac56b13eb45b36e628b384a9a2507b50e",
                 "reference": "b3acb63ac56b13eb45b36e628b384a9a2507b50e",
                 "shasum": ""
             },
@@ -1762,16 +1762,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.8.21",
+            "version": "v5.8.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "c78796cc1159c8dc63c45a2011ddc4af17059cb4"
+                "reference": "02d242212348bddd048702f5dee8dab693ac830b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/c78796cc1159c8dc63c45a2011ddc4af17059cb4",
-                "reference": "c78796cc1159c8dc63c45a2011ddc4af17059cb4",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/02d242212348bddd048702f5dee8dab693ac830b",
+                "reference": "02d242212348bddd048702f5dee8dab693ac830b",
                 "shasum": ""
             },
             "require": {
@@ -1905,7 +1905,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2019-06-05T00:13:05+00:00"
+            "time": "2019-06-13T21:08:56+00:00"
         },
         {
             "name": "laravel/horizon",
@@ -2550,16 +2550,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.19.1",
+            "version": "2.19.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "5cf102d1476fdf92f1f991bd1a1a0d93c65755ca"
+                "reference": "adcad3f3af52d0ad4ad7b05f43aa58243b6ca67b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/5cf102d1476fdf92f1f991bd1a1a0d93c65755ca",
-                "reference": "5cf102d1476fdf92f1f991bd1a1a0d93c65755ca",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/adcad3f3af52d0ad4ad7b05f43aa58243b6ca67b",
+                "reference": "adcad3f3af52d0ad4ad7b05f43aa58243b6ca67b",
                 "shasum": ""
             },
             "require": {
@@ -2606,7 +2606,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2019-06-04T20:07:46+00:00"
+            "time": "2019-06-07T09:56:45+00:00"
         },
         {
             "name": "opis/closure",
@@ -4177,7 +4177,7 @@
                 },
                 {
                     "name": "Gert de Pagter",
-                    "email": "backendtea@gmail.com"
+                    "email": "BackEndTea@gmail.com"
                 }
             ],
             "description": "Symfony polyfill for ctype functions",
@@ -6101,7 +6101,7 @@
                     "homepage": "https://nette.org/contributors"
                 }
             ],
-            "description": "🍸 Nette NEON: encodes and decodes NEON file format.",
+            "description": "? Nette NEON: encodes and decodes NEON file format.",
             "homepage": "http://ne-on.org",
             "keywords": [
                 "export",
