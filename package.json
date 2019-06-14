@@ -29,7 +29,7 @@
     "vue-loader": "^15.7.0",
     "vue-template-compiler": "^2.6.10",
     "vuetify-loader": "^1.2.2",
-    "webpack": "^4.33.0",
+    "webpack": "^4.34.0",
     "webpack-bundle-analyzer": "^3.3.2"
   },
   "dependencies": {
