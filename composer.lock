@@ -544,16 +544,16 @@
         },
         {
             "name": "cakephp/chronos",
-            "version": "1.2.6",
+            "version": "1.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/chronos.git",
-                "reference": "5af476617f8a2919a829b92df4f8c3c62e23f4c5"
+                "reference": "c981a911149151d5eceefccf1980f4554fc42619"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/chronos/zipball/5af476617f8a2919a829b92df4f8c3c62e23f4c5",
-                "reference": "5af476617f8a2919a829b92df4f8c3c62e23f4c5",
+                "url": "https://api.github.com/repos/cakephp/chronos/zipball/c981a911149151d5eceefccf1980f4554fc42619",
+                "reference": "c981a911149151d5eceefccf1980f4554fc42619",
                 "shasum": ""
             },
             "require": {
@@ -597,7 +597,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2019-05-30T13:29:03+00:00"
+            "time": "2019-06-06T07:08:18+00:00"
         },
         {
             "name": "composer/ca-bundle",
@@ -1909,16 +1909,16 @@
         },
         {
             "name": "laravel/horizon",
-            "version": "v3.2.2",
+            "version": "v3.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/horizon.git",
-                "reference": "5a6a1744c7101ce509df79e4caa12198eff40faa"
+                "reference": "a6e4a89525e328ef8009509b8da02d0bc98f264f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/horizon/zipball/5a6a1744c7101ce509df79e4caa12198eff40faa",
-                "reference": "5a6a1744c7101ce509df79e4caa12198eff40faa",
+                "url": "https://api.github.com/repos/laravel/horizon/zipball/a6e4a89525e328ef8009509b8da02d0bc98f264f",
+                "reference": "a6e4a89525e328ef8009509b8da02d0bc98f264f",
                 "shasum": ""
             },
             "require": {
@@ -1974,7 +1974,7 @@
                 "laravel",
                 "queue"
             ],
-            "time": "2019-06-04T13:52:41+00:00"
+            "time": "2019-06-14T12:32:39+00:00"
         },
         {
             "name": "laravel/passport",
