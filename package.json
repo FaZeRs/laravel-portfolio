@@ -11,7 +11,7 @@
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "devDependencies": {
-    "@mdi/font": "^3.6.95",
+    "@mdi/font": "^3.7.95",
     "babel-eslint": "^10.0.2",
     "cross-env": "^5.2.0",
     "eslint": "^5.16.0",
