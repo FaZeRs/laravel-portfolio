@@ -51,16 +51,16 @@
         },
         {
             "name": "backpack/base",
-            "version": "1.1.4",
+            "version": "1.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laravel-Backpack/Base.git",
-                "reference": "0f295827f202d311e04214a82428712d9afc981e"
+                "reference": "a88d3638376a1d3c6f23c61b923d257624ad7e96"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Backpack/Base/zipball/0f295827f202d311e04214a82428712d9afc981e",
-                "reference": "0f295827f202d311e04214a82428712d9afc981e",
+                "url": "https://api.github.com/repos/Laravel-Backpack/Base/zipball/a88d3638376a1d3c6f23c61b923d257624ad7e96",
+                "reference": "a88d3638376a1d3c6f23c61b923d257624ad7e96",
                 "shasum": ""
             },
             "require": {
@@ -111,20 +111,20 @@
                 "backpack",
                 "base"
             ],
-            "time": "2019-03-19T08:08:26+00:00"
+            "time": "2019-06-24T05:07:31+00:00"
         },
         {
             "name": "backpack/crud",
-            "version": "3.6.21",
+            "version": "3.6.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laravel-Backpack/CRUD.git",
-                "reference": "6710b704bdce3b80e2a2afd46c106b1cded188f4"
+                "reference": "4a361e2e19b38c23ef120235bc3f3f3a9b74beef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Backpack/CRUD/zipball/6710b704bdce3b80e2a2afd46c106b1cded188f4",
-                "reference": "6710b704bdce3b80e2a2afd46c106b1cded188f4",
+                "url": "https://api.github.com/repos/Laravel-Backpack/CRUD/zipball/4a361e2e19b38c23ef120235bc3f3f3a9b74beef",
+                "reference": "4a361e2e19b38c23ef120235bc3f3f3a9b74beef",
                 "shasum": ""
             },
             "require": {
@@ -186,7 +186,7 @@
                 "read",
                 "update"
             ],
-            "time": "2019-05-16T08:19:45+00:00"
+            "time": "2019-07-03T07:16:11+00:00"
         },
         {
             "name": "backpack/settings",
@@ -1696,16 +1696,16 @@
         },
         {
             "name": "intervention/image",
-            "version": "2.4.2",
+            "version": "2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Intervention/image.git",
-                "reference": "e82d274f786e3d4b866a59b173f42e716f0783eb"
+                "reference": "39eaef720d082ecc54c64bf54541c55f10db546d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Intervention/image/zipball/e82d274f786e3d4b866a59b173f42e716f0783eb",
-                "reference": "e82d274f786e3d4b866a59b173f42e716f0783eb",
+                "url": "https://api.github.com/repos/Intervention/image/zipball/39eaef720d082ecc54c64bf54541c55f10db546d",
+                "reference": "39eaef720d082ecc54c64bf54541c55f10db546d",
                 "shasum": ""
             },
             "require": {
@@ -1762,7 +1762,7 @@
                 "thumbnail",
                 "watermark"
             ],
-            "time": "2018-05-29T14:19:03+00:00"
+            "time": "2019-06-24T14:06:31+00:00"
         },
         {
             "name": "laravel/framework",
