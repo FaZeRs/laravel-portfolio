@@ -114,6 +114,7 @@
 /******/ 							var errorType = event && (event.type === 'load' ? 'missing' : event.type);
 /******/ 							var realSrc = event && event.target && event.target.src;
 /******/ 							error.message = 'Loading chunk ' + chunkId + ' failed.\n(' + errorType + ': ' + realSrc + ')';
+/******/ 							error.name = 'ChunkLoadError';
 /******/ 							error.type = errorType;
 /******/ 							error.request = realSrc;
 /******/ 							chunk[1](error);
@@ -986,62 +987,51 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/fonts/vendor/@mdi/materialdesignicons-webfont.eot?be7691c114e7c9d0543b89e824c4003d";
+module.exports = "/fonts/vendor/@mdi/materialdesignicons-webfont.eot?84cd5ee65fd195790df16e5d0075e99f";
 
 /***/ }),
 
-/***/ "./node_modules/@mdi/font/fonts/materialdesignicons-webfont.eot?v=3.6.95":
+/***/ "./node_modules/@mdi/font/fonts/materialdesignicons-webfont.eot?v=3.7.95":
 /*!*******************************************************************************!*\
-  !*** ./node_modules/@mdi/font/fonts/materialdesignicons-webfont.eot?v=3.6.95 ***!
+  !*** ./node_modules/@mdi/font/fonts/materialdesignicons-webfont.eot?v=3.7.95 ***!
   \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/fonts/vendor/@mdi/materialdesignicons-webfont.eot?be7691c114e7c9d0543b89e824c4003d";
+module.exports = "/fonts/vendor/@mdi/materialdesignicons-webfont.eot?84cd5ee65fd195790df16e5d0075e99f";
 
 /***/ }),
 
-/***/ "./node_modules/@mdi/font/fonts/materialdesignicons-webfont.svg?v=3.6.95":
+/***/ "./node_modules/@mdi/font/fonts/materialdesignicons-webfont.ttf?v=3.7.95":
 /*!*******************************************************************************!*\
-  !*** ./node_modules/@mdi/font/fonts/materialdesignicons-webfont.svg?v=3.6.95 ***!
+  !*** ./node_modules/@mdi/font/fonts/materialdesignicons-webfont.ttf?v=3.7.95 ***!
   \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/fonts/vendor/@mdi/materialdesignicons-webfont.svg?c68a0a65b3a0be718f4c81c02c5f69ca";
+module.exports = "/fonts/vendor/@mdi/materialdesignicons-webfont.ttf?f6e666527036392fb3d0030d50118269";
 
 /***/ }),
 
-/***/ "./node_modules/@mdi/font/fonts/materialdesignicons-webfont.ttf?v=3.6.95":
-/*!*******************************************************************************!*\
-  !*** ./node_modules/@mdi/font/fonts/materialdesignicons-webfont.ttf?v=3.6.95 ***!
-  \*******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/fonts/vendor/@mdi/materialdesignicons-webfont.ttf?6acc7d6cffa21f6eda4baaa90e835fd2";
-
-/***/ }),
-
-/***/ "./node_modules/@mdi/font/fonts/materialdesignicons-webfont.woff2?v=3.6.95":
+/***/ "./node_modules/@mdi/font/fonts/materialdesignicons-webfont.woff2?v=3.7.95":
 /*!*********************************************************************************!*\
-  !*** ./node_modules/@mdi/font/fonts/materialdesignicons-webfont.woff2?v=3.6.95 ***!
+  !*** ./node_modules/@mdi/font/fonts/materialdesignicons-webfont.woff2?v=3.7.95 ***!
   \*********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/fonts/vendor/@mdi/materialdesignicons-webfont.woff2?84c6fe1e4353c916d8f1452e82bdef8d";
+module.exports = "/fonts/vendor/@mdi/materialdesignicons-webfont.woff2?c774cc6f2499d2b0d15a75179268eeb3";
 
 /***/ }),
 
-/***/ "./node_modules/@mdi/font/fonts/materialdesignicons-webfont.woff?v=3.6.95":
+/***/ "./node_modules/@mdi/font/fonts/materialdesignicons-webfont.woff?v=3.7.95":
 /*!********************************************************************************!*\
-  !*** ./node_modules/@mdi/font/fonts/materialdesignicons-webfont.woff?v=3.6.95 ***!
+  !*** ./node_modules/@mdi/font/fonts/materialdesignicons-webfont.woff?v=3.7.95 ***!
   \********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/fonts/vendor/@mdi/materialdesignicons-webfont.woff?1a95531b09ffc9b76104e0003b456a0e";
+module.exports = "/fonts/vendor/@mdi/materialdesignicons-webfont.woff?848935b04b3f6512d1f47de14de9ba33";
 
 /***/ }),
 
@@ -15036,7 +15026,7 @@ exports = module.exports = __webpack_require__(/*! ../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/* MaterialDesignIcons.com */\n@font-face {\n  font-family: \"Material Design Icons\";\n  src: url(" + escape(__webpack_require__(/*! ../fonts/materialdesignicons-webfont.eot?v=3.6.95 */ "./node_modules/@mdi/font/fonts/materialdesignicons-webfont.eot?v=3.6.95")) + ");\n  src: url(" + escape(__webpack_require__(/*! ../fonts/materialdesignicons-webfont.eot */ "./node_modules/@mdi/font/fonts/materialdesignicons-webfont.eot")) + "?#iefix&v=3.6.95) format(\"embedded-opentype\"), url(" + escape(__webpack_require__(/*! ../fonts/materialdesignicons-webfont.woff2?v=3.6.95 */ "./node_modules/@mdi/font/fonts/materialdesignicons-webfont.woff2?v=3.6.95")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../fonts/materialdesignicons-webfont.woff?v=3.6.95 */ "./node_modules/@mdi/font/fonts/materialdesignicons-webfont.woff?v=3.6.95")) + ") format(\"woff\"), url(" + escape(__webpack_require__(/*! ../fonts/materialdesignicons-webfont.ttf?v=3.6.95 */ "./node_modules/@mdi/font/fonts/materialdesignicons-webfont.ttf?v=3.6.95")) + ") format(\"truetype\"), url(" + escape(__webpack_require__(/*! ../fonts/materialdesignicons-webfont.svg?v=3.6.95 */ "./node_modules/@mdi/font/fonts/materialdesignicons-webfont.svg?v=3.6.95")) + "#materialdesigniconsregular) format(\"svg\");\n  font-weight: normal;\n  font-style: normal;\n}\n.mdi:before,\n.mdi-set {\n  display: inline-block;\n  font: normal normal normal 24px/1 \"Material Design Icons\";\n  font-size: inherit;\n  text-rendering: auto;\n  line-height: inherit;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n\n.mdi-access-point:before {\n  content: \"\\F002\";\n}\n\n.mdi-access-point-network:before {\n  content: \"\\F003\";\n}\n\n.mdi-access-point-network-off:before {\n  content: \"\\FBBD\";\n}\n\n.mdi-account:before {\n  content: \"\\F004\";\n}\n\n.mdi-account-alert:before {\n  content: \"\\F005\";\n}\n\n.mdi-account-alert-outline:before {\n  content: \"\\FB2C\";\n}\n\n.mdi-account-arrow-left:before {\n  content: \"\\FB2D\";\n}\n\n.mdi-account-arrow-left-outline:before {\n  content: \"\\FB2E\";\n}\n\n.mdi-account-arrow-right:before {\n  content: \"\\FB2F\";\n}\n\n.mdi-account-arrow-right-outline:before {\n  content: \"\\FB30\";\n}\n\n.mdi-account-badge:before {\n  content: \"\\FD83\";\n}\n\n.mdi-account-badge-alert:before {\n  content: \"\\FD84\";\n}\n\n.mdi-account-badge-alert-outline:before {\n  content: \"\\FD85\";\n}\n\n.mdi-account-badge-horizontal:before {\n  content: \"\\FDF0\";\n}\n\n.mdi-account-badge-horizontal-outline:before {\n  content: \"\\FDF1\";\n}\n\n.mdi-account-badge-outline:before {\n  content: \"\\FD86\";\n}\n\n.mdi-account-box:before {\n  content: \"\\F006\";\n}\n\n.mdi-account-box-multiple:before {\n  content: \"\\F933\";\n}\n\n.mdi-account-box-outline:before {\n  content: \"\\F007\";\n}\n\n.mdi-account-card-details:before {\n  content: \"\\F5D2\";\n}\n\n.mdi-account-card-details-outline:before {\n  content: \"\\FD87\";\n}\n\n.mdi-account-check:before {\n  content: \"\\F008\";\n}\n\n.mdi-account-check-outline:before {\n  content: \"\\FBBE\";\n}\n\n.mdi-account-child:before {\n  content: \"\\FA88\";\n}\n\n.mdi-account-child-circle:before {\n  content: \"\\FA89\";\n}\n\n.mdi-account-circle:before {\n  content: \"\\F009\";\n}\n\n.mdi-account-circle-outline:before {\n  content: \"\\FB31\";\n}\n\n.mdi-account-clock:before {\n  content: \"\\FB32\";\n}\n\n.mdi-account-clock-outline:before {\n  content: \"\\FB33\";\n}\n\n.mdi-account-convert:before {\n  content: \"\\F00A\";\n}\n\n.mdi-account-details:before {\n  content: \"\\F631\";\n}\n\n.mdi-account-edit:before {\n  content: \"\\F6BB\";\n}\n\n.mdi-account-group:before {\n  content: \"\\F848\";\n}\n\n.mdi-account-group-outline:before {\n  content: \"\\FB34\";\n}\n\n.mdi-account-heart:before {\n  content: \"\\F898\";\n}\n\n.mdi-account-heart-outline:before {\n  content: \"\\FBBF\";\n}\n\n.mdi-account-key:before {\n  content: \"\\F00B\";\n}\n\n.mdi-account-key-outline:before {\n  content: \"\\FBC0\";\n}\n\n.mdi-account-minus:before {\n  content: \"\\F00D\";\n}\n\n.mdi-account-minus-outline:before {\n  content: \"\\FAEB\";\n}\n\n.mdi-account-multiple:before {\n  content: \"\\F00E\";\n}\n\n.mdi-account-multiple-check:before {\n  content: \"\\F8C4\";\n}\n\n.mdi-account-multiple-minus:before {\n  content: \"\\F5D3\";\n}\n\n.mdi-account-multiple-minus-outline:before {\n  content: \"\\FBC1\";\n}\n\n.mdi-account-multiple-outline:before {\n  content: \"\\F00F\";\n}\n\n.mdi-account-multiple-plus:before {\n  content: \"\\F010\";\n}\n\n.mdi-account-multiple-plus-outline:before {\n  content: \"\\F7FF\";\n}\n\n.mdi-account-network:before {\n  content: \"\\F011\";\n}\n\n.mdi-account-network-outline:before {\n  content: \"\\FBC2\";\n}\n\n.mdi-account-off:before {\n  content: \"\\F012\";\n}\n\n.mdi-account-off-outline:before {\n  content: \"\\FBC3\";\n}\n\n.mdi-account-outline:before {\n  content: \"\\F013\";\n}\n\n.mdi-account-plus:before {\n  content: \"\\F014\";\n}\n\n.mdi-account-plus-outline:before {\n  content: \"\\F800\";\n}\n\n.mdi-account-question:before {\n  content: \"\\FB35\";\n}\n\n.mdi-account-question-outline:before {\n  content: \"\\FB36\";\n}\n\n.mdi-account-remove:before {\n  content: \"\\F015\";\n}\n\n.mdi-account-remove-outline:before {\n  content: \"\\FAEC\";\n}\n\n.mdi-account-search:before {\n  content: \"\\F016\";\n}\n\n.mdi-account-search-outline:before {\n  content: \"\\F934\";\n}\n\n.mdi-account-settings:before {\n  content: \"\\F630\";\n}\n\n.mdi-account-star:before {\n  content: \"\\F017\";\n}\n\n.mdi-account-star-outline:before {\n  content: \"\\FBC4\";\n}\n\n.mdi-account-supervisor:before {\n  content: \"\\FA8A\";\n}\n\n.mdi-account-supervisor-circle:before {\n  content: \"\\FA8B\";\n}\n\n.mdi-account-switch:before {\n  content: \"\\F019\";\n}\n\n.mdi-account-tie:before {\n  content: \"\\FCBF\";\n}\n\n.mdi-accusoft:before {\n  content: \"\\F849\";\n}\n\n.mdi-adchoices:before {\n  content: \"\\FD1E\";\n}\n\n.mdi-adjust:before {\n  content: \"\\F01A\";\n}\n\n.mdi-adobe:before {\n  content: \"\\F935\";\n}\n\n.mdi-air-conditioner:before {\n  content: \"\\F01B\";\n}\n\n.mdi-air-filter:before {\n  content: \"\\FD1F\";\n}\n\n.mdi-air-horn:before {\n  content: \"\\FD88\";\n}\n\n.mdi-air-purifier:before {\n  content: \"\\FD20\";\n}\n\n.mdi-airbag:before {\n  content: \"\\FBC5\";\n}\n\n.mdi-airballoon:before {\n  content: \"\\F01C\";\n}\n\n.mdi-airplane:before {\n  content: \"\\F01D\";\n}\n\n.mdi-airplane-landing:before {\n  content: \"\\F5D4\";\n}\n\n.mdi-airplane-off:before {\n  content: \"\\F01E\";\n}\n\n.mdi-airplane-takeoff:before {\n  content: \"\\F5D5\";\n}\n\n.mdi-airplay:before {\n  content: \"\\F01F\";\n}\n\n.mdi-airport:before {\n  content: \"\\F84A\";\n}\n\n.mdi-alarm:before {\n  content: \"\\F020\";\n}\n\n.mdi-alarm-bell:before {\n  content: \"\\F78D\";\n}\n\n.mdi-alarm-check:before {\n  content: \"\\F021\";\n}\n\n.mdi-alarm-light:before {\n  content: \"\\F78E\";\n}\n\n.mdi-alarm-light-outline:before {\n  content: \"\\FBC6\";\n}\n\n.mdi-alarm-multiple:before {\n  content: \"\\F022\";\n}\n\n.mdi-alarm-off:before {\n  content: \"\\F023\";\n}\n\n.mdi-alarm-plus:before {\n  content: \"\\F024\";\n}\n\n.mdi-alarm-snooze:before {\n  content: \"\\F68D\";\n}\n\n.mdi-album:before {\n  content: \"\\F025\";\n}\n\n.mdi-alert:before {\n  content: \"\\F026\";\n}\n\n.mdi-alert-box:before {\n  content: \"\\F027\";\n}\n\n.mdi-alert-box-outline:before {\n  content: \"\\FCC0\";\n}\n\n.mdi-alert-circle:before {\n  content: \"\\F028\";\n}\n\n.mdi-alert-circle-outline:before {\n  content: \"\\F5D6\";\n}\n\n.mdi-alert-decagram:before {\n  content: \"\\F6BC\";\n}\n\n.mdi-alert-decagram-outline:before {\n  content: \"\\FCC1\";\n}\n\n.mdi-alert-octagon:before {\n  content: \"\\F029\";\n}\n\n.mdi-alert-octagon-outline:before {\n  content: \"\\FCC2\";\n}\n\n.mdi-alert-octagram:before {\n  content: \"\\F766\";\n}\n\n.mdi-alert-octagram-outline:before {\n  content: \"\\FCC3\";\n}\n\n.mdi-alert-outline:before {\n  content: \"\\F02A\";\n}\n\n.mdi-alien:before {\n  content: \"\\F899\";\n}\n\n.mdi-all-inclusive:before {\n  content: \"\\F6BD\";\n}\n\n.mdi-alpha:before {\n  content: \"\\F02B\";\n}\n\n.mdi-alpha-a:before {\n  content: \"A\";\n}\n\n.mdi-alpha-a-box:before {\n  content: \"\\FAED\";\n}\n\n.mdi-alpha-a-box-outline:before {\n  content: \"\\FBC7\";\n}\n\n.mdi-alpha-a-circle:before {\n  content: \"\\FBC8\";\n}\n\n.mdi-alpha-a-circle-outline:before {\n  content: \"\\FBC9\";\n}\n\n.mdi-alpha-b:before {\n  content: \"B\";\n}\n\n.mdi-alpha-b-box:before {\n  content: \"\\FAEE\";\n}\n\n.mdi-alpha-b-box-outline:before {\n  content: \"\\FBCA\";\n}\n\n.mdi-alpha-b-circle:before {\n  content: \"\\FBCB\";\n}\n\n.mdi-alpha-b-circle-outline:before {\n  content: \"\\FBCC\";\n}\n\n.mdi-alpha-c:before {\n  content: \"C\";\n}\n\n.mdi-alpha-c-box:before {\n  content: \"\\FAEF\";\n}\n\n.mdi-alpha-c-box-outline:before {\n  content: \"\\FBCD\";\n}\n\n.mdi-alpha-c-circle:before {\n  content: \"\\FBCE\";\n}\n\n.mdi-alpha-c-circle-outline:before {\n  content: \"\\FBCF\";\n}\n\n.mdi-alpha-d:before {\n  content: \"D\";\n}\n\n.mdi-alpha-d-box:before {\n  content: \"\\FAF0\";\n}\n\n.mdi-alpha-d-box-outline:before {\n  content: \"\\FBD0\";\n}\n\n.mdi-alpha-d-circle:before {\n  content: \"\\FBD1\";\n}\n\n.mdi-alpha-d-circle-outline:before {\n  content: \"\\FBD2\";\n}\n\n.mdi-alpha-e:before {\n  content: \"E\";\n}\n\n.mdi-alpha-e-box:before {\n  content: \"\\FAF1\";\n}\n\n.mdi-alpha-e-box-outline:before {\n  content: \"\\FBD3\";\n}\n\n.mdi-alpha-e-circle:before {\n  content: \"\\FBD4\";\n}\n\n.mdi-alpha-e-circle-outline:before {\n  content: \"\\FBD5\";\n}\n\n.mdi-alpha-f:before {\n  content: \"F\";\n}\n\n.mdi-alpha-f-box:before {\n  content: \"\\FAF2\";\n}\n\n.mdi-alpha-f-box-outline:before {\n  content: \"\\FBD6\";\n}\n\n.mdi-alpha-f-circle:before {\n  content: \"\\FBD7\";\n}\n\n.mdi-alpha-f-circle-outline:before {\n  content: \"\\FBD8\";\n}\n\n.mdi-alpha-g:before {\n  content: \"G\";\n}\n\n.mdi-alpha-g-box:before {\n  content: \"\\FAF3\";\n}\n\n.mdi-alpha-g-box-outline:before {\n  content: \"\\FBD9\";\n}\n\n.mdi-alpha-g-circle:before {\n  content: \"\\FBDA\";\n}\n\n.mdi-alpha-g-circle-outline:before {\n  content: \"\\FBDB\";\n}\n\n.mdi-alpha-h:before {\n  content: \"H\";\n}\n\n.mdi-alpha-h-box:before {\n  content: \"\\FAF4\";\n}\n\n.mdi-alpha-h-box-outline:before {\n  content: \"\\FBDC\";\n}\n\n.mdi-alpha-h-circle:before {\n  content: \"\\FBDD\";\n}\n\n.mdi-alpha-h-circle-outline:before {\n  content: \"\\FBDE\";\n}\n\n.mdi-alpha-i:before {\n  content: \"I\";\n}\n\n.mdi-alpha-i-box:before {\n  content: \"\\FAF5\";\n}\n\n.mdi-alpha-i-box-outline:before {\n  content: \"\\FBDF\";\n}\n\n.mdi-alpha-i-circle:before {\n  content: \"\\FBE0\";\n}\n\n.mdi-alpha-i-circle-outline:before {\n  content: \"\\FBE1\";\n}\n\n.mdi-alpha-j:before {\n  content: \"J\";\n}\n\n.mdi-alpha-j-box:before {\n  content: \"\\FAF6\";\n}\n\n.mdi-alpha-j-box-outline:before {\n  content: \"\\FBE2\";\n}\n\n.mdi-alpha-j-circle:before {\n  content: \"\\FBE3\";\n}\n\n.mdi-alpha-j-circle-outline:before {\n  content: \"\\FBE4\";\n}\n\n.mdi-alpha-k:before {\n  content: \"K\";\n}\n\n.mdi-alpha-k-box:before {\n  content: \"\\FAF7\";\n}\n\n.mdi-alpha-k-box-outline:before {\n  content: \"\\FBE5\";\n}\n\n.mdi-alpha-k-circle:before {\n  content: \"\\FBE6\";\n}\n\n.mdi-alpha-k-circle-outline:before {\n  content: \"\\FBE7\";\n}\n\n.mdi-alpha-l:before {\n  content: \"L\";\n}\n\n.mdi-alpha-l-box:before {\n  content: \"\\FAF8\";\n}\n\n.mdi-alpha-l-box-outline:before {\n  content: \"\\FBE8\";\n}\n\n.mdi-alpha-l-circle:before {\n  content: \"\\FBE9\";\n}\n\n.mdi-alpha-l-circle-outline:before {\n  content: \"\\FBEA\";\n}\n\n.mdi-alpha-m:before {\n  content: \"M\";\n}\n\n.mdi-alpha-m-box:before {\n  content: \"\\FAF9\";\n}\n\n.mdi-alpha-m-box-outline:before {\n  content: \"\\FBEB\";\n}\n\n.mdi-alpha-m-circle:before {\n  content: \"\\FBEC\";\n}\n\n.mdi-alpha-m-circle-outline:before {\n  content: \"\\FBED\";\n}\n\n.mdi-alpha-n:before {\n  content: \"N\";\n}\n\n.mdi-alpha-n-box:before {\n  content: \"\\FAFA\";\n}\n\n.mdi-alpha-n-box-outline:before {\n  content: \"\\FBEE\";\n}\n\n.mdi-alpha-n-circle:before {\n  content: \"\\FBEF\";\n}\n\n.mdi-alpha-n-circle-outline:before {\n  content: \"\\FBF0\";\n}\n\n.mdi-alpha-o:before {\n  content: \"O\";\n}\n\n.mdi-alpha-o-box:before {\n  content: \"\\FAFB\";\n}\n\n.mdi-alpha-o-box-outline:before {\n  content: \"\\FBF1\";\n}\n\n.mdi-alpha-o-circle:before {\n  content: \"\\FBF2\";\n}\n\n.mdi-alpha-o-circle-outline:before {\n  content: \"\\FBF3\";\n}\n\n.mdi-alpha-p:before {\n  content: \"P\";\n}\n\n.mdi-alpha-p-box:before {\n  content: \"\\FAFC\";\n}\n\n.mdi-alpha-p-box-outline:before {\n  content: \"\\FBF4\";\n}\n\n.mdi-alpha-p-circle:before {\n  content: \"\\FBF5\";\n}\n\n.mdi-alpha-p-circle-outline:before {\n  content: \"\\FBF6\";\n}\n\n.mdi-alpha-q:before {\n  content: \"Q\";\n}\n\n.mdi-alpha-q-box:before {\n  content: \"\\FAFD\";\n}\n\n.mdi-alpha-q-box-outline:before {\n  content: \"\\FBF7\";\n}\n\n.mdi-alpha-q-circle:before {\n  content: \"\\FBF8\";\n}\n\n.mdi-alpha-q-circle-outline:before {\n  content: \"\\FBF9\";\n}\n\n.mdi-alpha-r:before {\n  content: \"R\";\n}\n\n.mdi-alpha-r-box:before {\n  content: \"\\FAFE\";\n}\n\n.mdi-alpha-r-box-outline:before {\n  content: \"\\FBFA\";\n}\n\n.mdi-alpha-r-circle:before {\n  content: \"\\FBFB\";\n}\n\n.mdi-alpha-r-circle-outline:before {\n  content: \"\\FBFC\";\n}\n\n.mdi-alpha-s:before {\n  content: \"S\";\n}\n\n.mdi-alpha-s-box:before {\n  content: \"\\FAFF\";\n}\n\n.mdi-alpha-s-box-outline:before {\n  content: \"\\FBFD\";\n}\n\n.mdi-alpha-s-circle:before {\n  content: \"\\FBFE\";\n}\n\n.mdi-alpha-s-circle-outline:before {\n  content: \"\\FBFF\";\n}\n\n.mdi-alpha-t:before {\n  content: \"T\";\n}\n\n.mdi-alpha-t-box:before {\n  content: \"\\FB00\";\n}\n\n.mdi-alpha-t-box-outline:before {\n  content: \"\\FC00\";\n}\n\n.mdi-alpha-t-circle:before {\n  content: \"\\FC01\";\n}\n\n.mdi-alpha-t-circle-outline:before {\n  content: \"\\FC02\";\n}\n\n.mdi-alpha-u:before {\n  content: \"U\";\n}\n\n.mdi-alpha-u-box:before {\n  content: \"\\FB01\";\n}\n\n.mdi-alpha-u-box-outline:before {\n  content: \"\\FC03\";\n}\n\n.mdi-alpha-u-circle:before {\n  content: \"\\FC04\";\n}\n\n.mdi-alpha-u-circle-outline:before {\n  content: \"\\FC05\";\n}\n\n.mdi-alpha-v:before {\n  content: \"V\";\n}\n\n.mdi-alpha-v-box:before {\n  content: \"\\FB02\";\n}\n\n.mdi-alpha-v-box-outline:before {\n  content: \"\\FC06\";\n}\n\n.mdi-alpha-v-circle:before {\n  content: \"\\FC07\";\n}\n\n.mdi-alpha-v-circle-outline:before {\n  content: \"\\FC08\";\n}\n\n.mdi-alpha-w:before {\n  content: \"W\";\n}\n\n.mdi-alpha-w-box:before {\n  content: \"\\FB03\";\n}\n\n.mdi-alpha-w-box-outline:before {\n  content: \"\\FC09\";\n}\n\n.mdi-alpha-w-circle:before {\n  content: \"\\FC0A\";\n}\n\n.mdi-alpha-w-circle-outline:before {\n  content: \"\\FC0B\";\n}\n\n.mdi-alpha-x:before {\n  content: \"X\";\n}\n\n.mdi-alpha-x-box:before {\n  content: \"\\FB04\";\n}\n\n.mdi-alpha-x-box-outline:before {\n  content: \"\\FC0C\";\n}\n\n.mdi-alpha-x-circle:before {\n  content: \"\\FC0D\";\n}\n\n.mdi-alpha-x-circle-outline:before {\n  content: \"\\FC0E\";\n}\n\n.mdi-alpha-y:before {\n  content: \"Y\";\n}\n\n.mdi-alpha-y-box:before {\n  content: \"\\FB05\";\n}\n\n.mdi-alpha-y-box-outline:before {\n  content: \"\\FC0F\";\n}\n\n.mdi-alpha-y-circle:before {\n  content: \"\\FC10\";\n}\n\n.mdi-alpha-y-circle-outline:before {\n  content: \"\\FC11\";\n}\n\n.mdi-alpha-z:before {\n  content: \"Z\";\n}\n\n.mdi-alpha-z-box:before {\n  content: \"\\FB06\";\n}\n\n.mdi-alpha-z-box-outline:before {\n  content: \"\\FC12\";\n}\n\n.mdi-alpha-z-circle:before {\n  content: \"\\FC13\";\n}\n\n.mdi-alpha-z-circle-outline:before {\n  content: \"\\FC14\";\n}\n\n.mdi-alphabetical:before {\n  content: \"\\F02C\";\n}\n\n.mdi-altimeter:before {\n  content: \"\\F5D7\";\n}\n\n.mdi-amazon:before {\n  content: \"\\F02D\";\n}\n\n.mdi-amazon-alexa:before {\n  content: \"\\F8C5\";\n}\n\n.mdi-amazon-drive:before {\n  content: \"\\F02E\";\n}\n\n.mdi-ambulance:before {\n  content: \"\\F02F\";\n}\n\n.mdi-ammunition:before {\n  content: \"\\FCC4\";\n}\n\n.mdi-ampersand:before {\n  content: \"\\FA8C\";\n}\n\n.mdi-amplifier:before {\n  content: \"\\F030\";\n}\n\n.mdi-anchor:before {\n  content: \"\\F031\";\n}\n\n.mdi-android:before {\n  content: \"\\F032\";\n}\n\n.mdi-android-auto:before {\n  content: \"\\FA8D\";\n}\n\n.mdi-android-debug-bridge:before {\n  content: \"\\F033\";\n}\n\n.mdi-android-head:before {\n  content: \"\\F78F\";\n}\n\n.mdi-android-messages:before {\n  content: \"\\FD21\";\n}\n\n.mdi-android-studio:before {\n  content: \"\\F034\";\n}\n\n.mdi-angle-acute:before {\n  content: \"\\F936\";\n}\n\n.mdi-angle-obtuse:before {\n  content: \"\\F937\";\n}\n\n.mdi-angle-right:before {\n  content: \"\\F938\";\n}\n\n.mdi-angular:before {\n  content: \"\\F6B1\";\n}\n\n.mdi-angularjs:before {\n  content: \"\\F6BE\";\n}\n\n.mdi-animation:before {\n  content: \"\\F5D8\";\n}\n\n.mdi-animation-outline:before {\n  content: \"\\FA8E\";\n}\n\n.mdi-animation-play:before {\n  content: \"\\F939\";\n}\n\n.mdi-animation-play-outline:before {\n  content: \"\\FA8F\";\n}\n\n.mdi-anvil:before {\n  content: \"\\F89A\";\n}\n\n.mdi-apple:before {\n  content: \"\\F035\";\n}\n\n.mdi-apple-finder:before {\n  content: \"\\F036\";\n}\n\n.mdi-apple-icloud:before {\n  content: \"\\F038\";\n}\n\n.mdi-apple-ios:before {\n  content: \"\\F037\";\n}\n\n.mdi-apple-keyboard-caps:before {\n  content: \"\\F632\";\n}\n\n.mdi-apple-keyboard-command:before {\n  content: \"\\F633\";\n}\n\n.mdi-apple-keyboard-control:before {\n  content: \"\\F634\";\n}\n\n.mdi-apple-keyboard-option:before {\n  content: \"\\F635\";\n}\n\n.mdi-apple-keyboard-shift:before {\n  content: \"\\F636\";\n}\n\n.mdi-apple-safari:before {\n  content: \"\\F039\";\n}\n\n.mdi-application:before {\n  content: \"\\F614\";\n}\n\n.mdi-application-export:before {\n  content: \"\\FD89\";\n}\n\n.mdi-application-import:before {\n  content: \"\\FD8A\";\n}\n\n.mdi-apps:before {\n  content: \"\\F03B\";\n}\n\n.mdi-apps-box:before {\n  content: \"\\FD22\";\n}\n\n.mdi-arch:before {\n  content: \"\\F8C6\";\n}\n\n.mdi-archive:before {\n  content: \"\\F03C\";\n}\n\n.mdi-arrange-bring-forward:before {\n  content: \"\\F03D\";\n}\n\n.mdi-arrange-bring-to-front:before {\n  content: \"\\F03E\";\n}\n\n.mdi-arrange-send-backward:before {\n  content: \"\\F03F\";\n}\n\n.mdi-arrange-send-to-back:before {\n  content: \"\\F040\";\n}\n\n.mdi-arrow-all:before {\n  content: \"\\F041\";\n}\n\n.mdi-arrow-bottom-left:before {\n  content: \"\\F042\";\n}\n\n.mdi-arrow-bottom-left-bold-outline:before {\n  content: \"\\F9B6\";\n}\n\n.mdi-arrow-bottom-left-thick:before {\n  content: \"\\F9B7\";\n}\n\n.mdi-arrow-bottom-right:before {\n  content: \"\\F043\";\n}\n\n.mdi-arrow-bottom-right-bold-outline:before {\n  content: \"\\F9B8\";\n}\n\n.mdi-arrow-bottom-right-thick:before {\n  content: \"\\F9B9\";\n}\n\n.mdi-arrow-collapse:before {\n  content: \"\\F615\";\n}\n\n.mdi-arrow-collapse-all:before {\n  content: \"\\F044\";\n}\n\n.mdi-arrow-collapse-down:before {\n  content: \"\\F791\";\n}\n\n.mdi-arrow-collapse-horizontal:before {\n  content: \"\\F84B\";\n}\n\n.mdi-arrow-collapse-left:before {\n  content: \"\\F792\";\n}\n\n.mdi-arrow-collapse-right:before {\n  content: \"\\F793\";\n}\n\n.mdi-arrow-collapse-up:before {\n  content: \"\\F794\";\n}\n\n.mdi-arrow-collapse-vertical:before {\n  content: \"\\F84C\";\n}\n\n.mdi-arrow-decision:before {\n  content: \"\\F9BA\";\n}\n\n.mdi-arrow-decision-auto:before {\n  content: \"\\F9BB\";\n}\n\n.mdi-arrow-decision-auto-outline:before {\n  content: \"\\F9BC\";\n}\n\n.mdi-arrow-decision-outline:before {\n  content: \"\\F9BD\";\n}\n\n.mdi-arrow-down:before {\n  content: \"\\F045\";\n}\n\n.mdi-arrow-down-bold:before {\n  content: \"\\F72D\";\n}\n\n.mdi-arrow-down-bold-box:before {\n  content: \"\\F72E\";\n}\n\n.mdi-arrow-down-bold-box-outline:before {\n  content: \"\\F72F\";\n}\n\n.mdi-arrow-down-bold-circle:before {\n  content: \"\\F047\";\n}\n\n.mdi-arrow-down-bold-circle-outline:before {\n  content: \"\\F048\";\n}\n\n.mdi-arrow-down-bold-hexagon-outline:before {\n  content: \"\\F049\";\n}\n\n.mdi-arrow-down-bold-outline:before {\n  content: \"\\F9BE\";\n}\n\n.mdi-arrow-down-box:before {\n  content: \"\\F6BF\";\n}\n\n.mdi-arrow-down-circle:before {\n  content: \"\\FCB7\";\n}\n\n.mdi-arrow-down-circle-outline:before {\n  content: \"\\FCB8\";\n}\n\n.mdi-arrow-down-drop-circle:before {\n  content: \"\\F04A\";\n}\n\n.mdi-arrow-down-drop-circle-outline:before {\n  content: \"\\F04B\";\n}\n\n.mdi-arrow-down-thick:before {\n  content: \"\\F046\";\n}\n\n.mdi-arrow-expand:before {\n  content: \"\\F616\";\n}\n\n.mdi-arrow-expand-all:before {\n  content: \"\\F04C\";\n}\n\n.mdi-arrow-expand-down:before {\n  content: \"\\F795\";\n}\n\n.mdi-arrow-expand-horizontal:before {\n  content: \"\\F84D\";\n}\n\n.mdi-arrow-expand-left:before {\n  content: \"\\F796\";\n}\n\n.mdi-arrow-expand-right:before {\n  content: \"\\F797\";\n}\n\n.mdi-arrow-expand-up:before {\n  content: \"\\F798\";\n}\n\n.mdi-arrow-expand-vertical:before {\n  content: \"\\F84E\";\n}\n\n.mdi-arrow-left:before {\n  content: \"\\F04D\";\n}\n\n.mdi-arrow-left-bold:before {\n  content: \"\\F730\";\n}\n\n.mdi-arrow-left-bold-box:before {\n  content: \"\\F731\";\n}\n\n.mdi-arrow-left-bold-box-outline:before {\n  content: \"\\F732\";\n}\n\n.mdi-arrow-left-bold-circle:before {\n  content: \"\\F04F\";\n}\n\n.mdi-arrow-left-bold-circle-outline:before {\n  content: \"\\F050\";\n}\n\n.mdi-arrow-left-bold-hexagon-outline:before {\n  content: \"\\F051\";\n}\n\n.mdi-arrow-left-bold-outline:before {\n  content: \"\\F9BF\";\n}\n\n.mdi-arrow-left-box:before {\n  content: \"\\F6C0\";\n}\n\n.mdi-arrow-left-circle:before {\n  content: \"\\FCB9\";\n}\n\n.mdi-arrow-left-circle-outline:before {\n  content: \"\\FCBA\";\n}\n\n.mdi-arrow-left-drop-circle:before {\n  content: \"\\F052\";\n}\n\n.mdi-arrow-left-drop-circle-outline:before {\n  content: \"\\F053\";\n}\n\n.mdi-arrow-left-right-bold-outline:before {\n  content: \"\\F9C0\";\n}\n\n.mdi-arrow-left-thick:before {\n  content: \"\\F04E\";\n}\n\n.mdi-arrow-right:before {\n  content: \"\\F054\";\n}\n\n.mdi-arrow-right-bold:before {\n  content: \"\\F733\";\n}\n\n.mdi-arrow-right-bold-box:before {\n  content: \"\\F734\";\n}\n\n.mdi-arrow-right-bold-box-outline:before {\n  content: \"\\F735\";\n}\n\n.mdi-arrow-right-bold-circle:before {\n  content: \"\\F056\";\n}\n\n.mdi-arrow-right-bold-circle-outline:before {\n  content: \"\\F057\";\n}\n\n.mdi-arrow-right-bold-hexagon-outline:before {\n  content: \"\\F058\";\n}\n\n.mdi-arrow-right-bold-outline:before {\n  content: \"\\F9C1\";\n}\n\n.mdi-arrow-right-box:before {\n  content: \"\\F6C1\";\n}\n\n.mdi-arrow-right-circle:before {\n  content: \"\\FCBB\";\n}\n\n.mdi-arrow-right-circle-outline:before {\n  content: \"\\FCBC\";\n}\n\n.mdi-arrow-right-drop-circle:before {\n  content: \"\\F059\";\n}\n\n.mdi-arrow-right-drop-circle-outline:before {\n  content: \"\\F05A\";\n}\n\n.mdi-arrow-right-thick:before {\n  content: \"\\F055\";\n}\n\n.mdi-arrow-split-horizontal:before {\n  content: \"\\F93A\";\n}\n\n.mdi-arrow-split-vertical:before {\n  content: \"\\F93B\";\n}\n\n.mdi-arrow-top-left:before {\n  content: \"\\F05B\";\n}\n\n.mdi-arrow-top-left-bold-outline:before {\n  content: \"\\F9C2\";\n}\n\n.mdi-arrow-top-left-thick:before {\n  content: \"\\F9C3\";\n}\n\n.mdi-arrow-top-right:before {\n  content: \"\\F05C\";\n}\n\n.mdi-arrow-top-right-bold-outline:before {\n  content: \"\\F9C4\";\n}\n\n.mdi-arrow-top-right-thick:before {\n  content: \"\\F9C5\";\n}\n\n.mdi-arrow-up:before {\n  content: \"\\F05D\";\n}\n\n.mdi-arrow-up-bold:before {\n  content: \"\\F736\";\n}\n\n.mdi-arrow-up-bold-box:before {\n  content: \"\\F737\";\n}\n\n.mdi-arrow-up-bold-box-outline:before {\n  content: \"\\F738\";\n}\n\n.mdi-arrow-up-bold-circle:before {\n  content: \"\\F05F\";\n}\n\n.mdi-arrow-up-bold-circle-outline:before {\n  content: \"\\F060\";\n}\n\n.mdi-arrow-up-bold-hexagon-outline:before {\n  content: \"\\F061\";\n}\n\n.mdi-arrow-up-bold-outline:before {\n  content: \"\\F9C6\";\n}\n\n.mdi-arrow-up-box:before {\n  content: \"\\F6C2\";\n}\n\n.mdi-arrow-up-circle:before {\n  content: \"\\FCBD\";\n}\n\n.mdi-arrow-up-circle-outline:before {\n  content: \"\\FCBE\";\n}\n\n.mdi-arrow-up-down-bold-outline:before {\n  content: \"\\F9C7\";\n}\n\n.mdi-arrow-up-drop-circle:before {\n  content: \"\\F062\";\n}\n\n.mdi-arrow-up-drop-circle-outline:before {\n  content: \"\\F063\";\n}\n\n.mdi-arrow-up-thick:before {\n  content: \"\\F05E\";\n}\n\n.mdi-artist:before {\n  content: \"\\F802\";\n}\n\n.mdi-artist-outline:before {\n  content: \"\\FCC5\";\n}\n\n.mdi-artstation:before {\n  content: \"\\FB37\";\n}\n\n.mdi-aspect-ratio:before {\n  content: \"\\FA23\";\n}\n\n.mdi-assistant:before {\n  content: \"\\F064\";\n}\n\n.mdi-asterisk:before {\n  content: \"\\F6C3\";\n}\n\n.mdi-at:before {\n  content: \"\\F065\";\n}\n\n.mdi-atlassian:before {\n  content: \"\\F803\";\n}\n\n.mdi-atm:before {\n  content: \"\\FD23\";\n}\n\n.mdi-atom:before {\n  content: \"\\F767\";\n}\n\n.mdi-attachment:before {\n  content: \"\\F066\";\n}\n\n.mdi-audio-video:before {\n  content: \"\\F93C\";\n}\n\n.mdi-audiobook:before {\n  content: \"\\F067\";\n}\n\n.mdi-augmented-reality:before {\n  content: \"\\F84F\";\n}\n\n.mdi-auto-fix:before {\n  content: \"\\F068\";\n}\n\n.mdi-auto-upload:before {\n  content: \"\\F069\";\n}\n\n.mdi-autorenew:before {\n  content: \"\\F06A\";\n}\n\n.mdi-av-timer:before {\n  content: \"\\F06B\";\n}\n\n.mdi-aws:before {\n  content: \"\\FDF2\";\n}\n\n.mdi-axe:before {\n  content: \"\\F8C7\";\n}\n\n.mdi-axis:before {\n  content: \"\\FD24\";\n}\n\n.mdi-axis-arrow:before {\n  content: \"\\FD25\";\n}\n\n.mdi-axis-arrow-lock:before {\n  content: \"\\FD26\";\n}\n\n.mdi-axis-lock:before {\n  content: \"\\FD27\";\n}\n\n.mdi-axis-x-arrow:before {\n  content: \"\\FD28\";\n}\n\n.mdi-axis-x-arrow-lock:before {\n  content: \"\\FD29\";\n}\n\n.mdi-axis-x-rotate-clockwise:before {\n  content: \"\\FD2A\";\n}\n\n.mdi-axis-x-rotate-counterclockwise:before {\n  content: \"\\FD2B\";\n}\n\n.mdi-axis-x-y-arrow-lock:before {\n  content: \"\\FD2C\";\n}\n\n.mdi-axis-y-arrow:before {\n  content: \"\\FD2D\";\n}\n\n.mdi-axis-y-arrow-lock:before {\n  content: \"\\FD2E\";\n}\n\n.mdi-axis-y-rotate-clockwise:before {\n  content: \"\\FD2F\";\n}\n\n.mdi-axis-y-rotate-counterclockwise:before {\n  content: \"\\FD30\";\n}\n\n.mdi-axis-z-arrow:before {\n  content: \"\\FD31\";\n}\n\n.mdi-axis-z-arrow-lock:before {\n  content: \"\\FD32\";\n}\n\n.mdi-axis-z-rotate-clockwise:before {\n  content: \"\\FD33\";\n}\n\n.mdi-axis-z-rotate-counterclockwise:before {\n  content: \"\\FD34\";\n}\n\n.mdi-azure:before {\n  content: \"\\F804\";\n}\n\n.mdi-babel:before {\n  content: \"\\FA24\";\n}\n\n.mdi-baby:before {\n  content: \"\\F06C\";\n}\n\n.mdi-baby-buggy:before {\n  content: \"\\F68E\";\n}\n\n.mdi-backburger:before {\n  content: \"\\F06D\";\n}\n\n.mdi-backspace:before {\n  content: \"\\F06E\";\n}\n\n.mdi-backspace-outline:before {\n  content: \"\\FB38\";\n}\n\n.mdi-backup-restore:before {\n  content: \"\\F06F\";\n}\n\n.mdi-badminton:before {\n  content: \"\\F850\";\n}\n\n.mdi-bag-personal:before {\n  content: \"\\FDF3\";\n}\n\n.mdi-bag-personal-off:before {\n  content: \"\\FDF4\";\n}\n\n.mdi-bag-personal-off-outline:before {\n  content: \"\\FDF5\";\n}\n\n.mdi-bag-personal-outline:before {\n  content: \"\\FDF6\";\n}\n\n.mdi-balloon:before {\n  content: \"\\FA25\";\n}\n\n.mdi-ballot:before {\n  content: \"\\F9C8\";\n}\n\n.mdi-ballot-outline:before {\n  content: \"\\F9C9\";\n}\n\n.mdi-ballot-recount:before {\n  content: \"\\FC15\";\n}\n\n.mdi-ballot-recount-outline:before {\n  content: \"\\FC16\";\n}\n\n.mdi-bandage:before {\n  content: \"\\FD8B\";\n}\n\n.mdi-bandcamp:before {\n  content: \"\\F674\";\n}\n\n.mdi-bank:before {\n  content: \"\\F070\";\n}\n\n.mdi-bank-minus:before {\n  content: \"\\FD8C\";\n}\n\n.mdi-bank-plus:before {\n  content: \"\\FD8D\";\n}\n\n.mdi-bank-remove:before {\n  content: \"\\FD8E\";\n}\n\n.mdi-bank-transfer:before {\n  content: \"\\FA26\";\n}\n\n.mdi-bank-transfer-in:before {\n  content: \"\\FA27\";\n}\n\n.mdi-bank-transfer-out:before {\n  content: \"\\FA28\";\n}\n\n.mdi-barcode:before {\n  content: \"\\F071\";\n}\n\n.mdi-barcode-scan:before {\n  content: \"\\F072\";\n}\n\n.mdi-barley:before {\n  content: \"\\F073\";\n}\n\n.mdi-barley-off:before {\n  content: \"\\FB39\";\n}\n\n.mdi-barn:before {\n  content: \"\\FB3A\";\n}\n\n.mdi-barrel:before {\n  content: \"\\F074\";\n}\n\n.mdi-baseball:before {\n  content: \"\\F851\";\n}\n\n.mdi-baseball-bat:before {\n  content: \"\\F852\";\n}\n\n.mdi-basecamp:before {\n  content: \"\\F075\";\n}\n\n.mdi-basket:before {\n  content: \"\\F076\";\n}\n\n.mdi-basket-fill:before {\n  content: \"\\F077\";\n}\n\n.mdi-basket-unfill:before {\n  content: \"\\F078\";\n}\n\n.mdi-basketball:before {\n  content: \"\\F805\";\n}\n\n.mdi-basketball-hoop:before {\n  content: \"\\FC17\";\n}\n\n.mdi-basketball-hoop-outline:before {\n  content: \"\\FC18\";\n}\n\n.mdi-bat:before {\n  content: \"\\FB3B\";\n}\n\n.mdi-battery:before {\n  content: \"\\F079\";\n}\n\n.mdi-battery-10:before {\n  content: \"\\F07A\";\n}\n\n.mdi-battery-10-bluetooth:before {\n  content: \"\\F93D\";\n}\n\n.mdi-battery-20:before {\n  content: \"\\F07B\";\n}\n\n.mdi-battery-20-bluetooth:before {\n  content: \"\\F93E\";\n}\n\n.mdi-battery-30:before {\n  content: \"\\F07C\";\n}\n\n.mdi-battery-30-bluetooth:before {\n  content: \"\\F93F\";\n}\n\n.mdi-battery-40:before {\n  content: \"\\F07D\";\n}\n\n.mdi-battery-40-bluetooth:before {\n  content: \"\\F940\";\n}\n\n.mdi-battery-50:before {\n  content: \"\\F07E\";\n}\n\n.mdi-battery-50-bluetooth:before {\n  content: \"\\F941\";\n}\n\n.mdi-battery-60:before {\n  content: \"\\F07F\";\n}\n\n.mdi-battery-60-bluetooth:before {\n  content: \"\\F942\";\n}\n\n.mdi-battery-70:before {\n  content: \"\\F080\";\n}\n\n.mdi-battery-70-bluetooth:before {\n  content: \"\\F943\";\n}\n\n.mdi-battery-80:before {\n  content: \"\\F081\";\n}\n\n.mdi-battery-80-bluetooth:before {\n  content: \"\\F944\";\n}\n\n.mdi-battery-90:before {\n  content: \"\\F082\";\n}\n\n.mdi-battery-90-bluetooth:before {\n  content: \"\\F945\";\n}\n\n.mdi-battery-alert:before {\n  content: \"\\F083\";\n}\n\n.mdi-battery-alert-bluetooth:before {\n  content: \"\\F946\";\n}\n\n.mdi-battery-bluetooth:before {\n  content: \"\\F947\";\n}\n\n.mdi-battery-bluetooth-variant:before {\n  content: \"\\F948\";\n}\n\n.mdi-battery-charging:before {\n  content: \"\\F084\";\n}\n\n.mdi-battery-charging-10:before {\n  content: \"\\F89B\";\n}\n\n.mdi-battery-charging-100:before {\n  content: \"\\F085\";\n}\n\n.mdi-battery-charging-20:before {\n  content: \"\\F086\";\n}\n\n.mdi-battery-charging-30:before {\n  content: \"\\F087\";\n}\n\n.mdi-battery-charging-40:before {\n  content: \"\\F088\";\n}\n\n.mdi-battery-charging-50:before {\n  content: \"\\F89C\";\n}\n\n.mdi-battery-charging-60:before {\n  content: \"\\F089\";\n}\n\n.mdi-battery-charging-70:before {\n  content: \"\\F89D\";\n}\n\n.mdi-battery-charging-80:before {\n  content: \"\\F08A\";\n}\n\n.mdi-battery-charging-90:before {\n  content: \"\\F08B\";\n}\n\n.mdi-battery-charging-outline:before {\n  content: \"\\F89E\";\n}\n\n.mdi-battery-charging-wireless:before {\n  content: \"\\F806\";\n}\n\n.mdi-battery-charging-wireless-10:before {\n  content: \"\\F807\";\n}\n\n.mdi-battery-charging-wireless-20:before {\n  content: \"\\F808\";\n}\n\n.mdi-battery-charging-wireless-30:before {\n  content: \"\\F809\";\n}\n\n.mdi-battery-charging-wireless-40:before {\n  content: \"\\F80A\";\n}\n\n.mdi-battery-charging-wireless-50:before {\n  content: \"\\F80B\";\n}\n\n.mdi-battery-charging-wireless-60:before {\n  content: \"\\F80C\";\n}\n\n.mdi-battery-charging-wireless-70:before {\n  content: \"\\F80D\";\n}\n\n.mdi-battery-charging-wireless-80:before {\n  content: \"\\F80E\";\n}\n\n.mdi-battery-charging-wireless-90:before {\n  content: \"\\F80F\";\n}\n\n.mdi-battery-charging-wireless-alert:before {\n  content: \"\\F810\";\n}\n\n.mdi-battery-charging-wireless-outline:before {\n  content: \"\\F811\";\n}\n\n.mdi-battery-minus:before {\n  content: \"\\F08C\";\n}\n\n.mdi-battery-negative:before {\n  content: \"\\F08D\";\n}\n\n.mdi-battery-outline:before {\n  content: \"\\F08E\";\n}\n\n.mdi-battery-plus:before {\n  content: \"\\F08F\";\n}\n\n.mdi-battery-positive:before {\n  content: \"\\F090\";\n}\n\n.mdi-battery-unknown:before {\n  content: \"\\F091\";\n}\n\n.mdi-battery-unknown-bluetooth:before {\n  content: \"\\F949\";\n}\n\n.mdi-battlenet:before {\n  content: \"\\FB3C\";\n}\n\n.mdi-beach:before {\n  content: \"\\F092\";\n}\n\n.mdi-beaker:before {\n  content: \"\\FCC6\";\n}\n\n.mdi-beaker-outline:before {\n  content: \"\\F68F\";\n}\n\n.mdi-beats:before {\n  content: \"\\F097\";\n}\n\n.mdi-bed-empty:before {\n  content: \"\\F89F\";\n}\n\n.mdi-beer:before {\n  content: \"\\F098\";\n}\n\n.mdi-behance:before {\n  content: \"\\F099\";\n}\n\n.mdi-bell:before {\n  content: \"\\F09A\";\n}\n\n.mdi-bell-alert:before {\n  content: \"\\FD35\";\n}\n\n.mdi-bell-circle:before {\n  content: \"\\FD36\";\n}\n\n.mdi-bell-circle-outline:before {\n  content: \"\\FD37\";\n}\n\n.mdi-bell-off:before {\n  content: \"\\F09B\";\n}\n\n.mdi-bell-off-outline:before {\n  content: \"\\FA90\";\n}\n\n.mdi-bell-outline:before {\n  content: \"\\F09C\";\n}\n\n.mdi-bell-plus:before {\n  content: \"\\F09D\";\n}\n\n.mdi-bell-plus-outline:before {\n  content: \"\\FA91\";\n}\n\n.mdi-bell-ring:before {\n  content: \"\\F09E\";\n}\n\n.mdi-bell-ring-outline:before {\n  content: \"\\F09F\";\n}\n\n.mdi-bell-sleep:before {\n  content: \"\\F0A0\";\n}\n\n.mdi-bell-sleep-outline:before {\n  content: \"\\FA92\";\n}\n\n.mdi-beta:before {\n  content: \"\\F0A1\";\n}\n\n.mdi-betamax:before {\n  content: \"\\F9CA\";\n}\n\n.mdi-biathlon:before {\n  content: \"\\FDF7\";\n}\n\n.mdi-bible:before {\n  content: \"\\F0A2\";\n}\n\n.mdi-bike:before {\n  content: \"\\F0A3\";\n}\n\n.mdi-billiards:before {\n  content: \"\\FB3D\";\n}\n\n.mdi-billiards-rack:before {\n  content: \"\\FB3E\";\n}\n\n.mdi-bing:before {\n  content: \"\\F0A4\";\n}\n\n.mdi-binoculars:before {\n  content: \"\\F0A5\";\n}\n\n.mdi-bio:before {\n  content: \"\\F0A6\";\n}\n\n.mdi-biohazard:before {\n  content: \"\\F0A7\";\n}\n\n.mdi-bitbucket:before {\n  content: \"\\F0A8\";\n}\n\n.mdi-bitcoin:before {\n  content: \"\\F812\";\n}\n\n.mdi-black-mesa:before {\n  content: \"\\F0A9\";\n}\n\n.mdi-blackberry:before {\n  content: \"\\F0AA\";\n}\n\n.mdi-blender:before {\n  content: \"\\FCC7\";\n}\n\n.mdi-blender-software:before {\n  content: \"\\F0AB\";\n}\n\n.mdi-blinds:before {\n  content: \"\\F0AC\";\n}\n\n.mdi-block-helper:before {\n  content: \"\\F0AD\";\n}\n\n.mdi-blogger:before {\n  content: \"\\F0AE\";\n}\n\n.mdi-blood-bag:before {\n  content: \"\\FCC8\";\n}\n\n.mdi-bluetooth:before {\n  content: \"\\F0AF\";\n}\n\n.mdi-bluetooth-audio:before {\n  content: \"\\F0B0\";\n}\n\n.mdi-bluetooth-connect:before {\n  content: \"\\F0B1\";\n}\n\n.mdi-bluetooth-off:before {\n  content: \"\\F0B2\";\n}\n\n.mdi-bluetooth-settings:before {\n  content: \"\\F0B3\";\n}\n\n.mdi-bluetooth-transfer:before {\n  content: \"\\F0B4\";\n}\n\n.mdi-blur:before {\n  content: \"\\F0B5\";\n}\n\n.mdi-blur-linear:before {\n  content: \"\\F0B6\";\n}\n\n.mdi-blur-off:before {\n  content: \"\\F0B7\";\n}\n\n.mdi-blur-radial:before {\n  content: \"\\F0B8\";\n}\n\n.mdi-bolnisi-cross:before {\n  content: \"\\FCC9\";\n}\n\n.mdi-bolt:before {\n  content: \"\\FD8F\";\n}\n\n.mdi-bomb:before {\n  content: \"\\F690\";\n}\n\n.mdi-bomb-off:before {\n  content: \"\\F6C4\";\n}\n\n.mdi-bone:before {\n  content: \"\\F0B9\";\n}\n\n.mdi-book:before {\n  content: \"\\F0BA\";\n}\n\n.mdi-book-lock:before {\n  content: \"\\F799\";\n}\n\n.mdi-book-lock-open:before {\n  content: \"\\F79A\";\n}\n\n.mdi-book-minus:before {\n  content: \"\\F5D9\";\n}\n\n.mdi-book-multiple:before {\n  content: \"\\F0BB\";\n}\n\n.mdi-book-multiple-minus:before {\n  content: \"\\FA93\";\n}\n\n.mdi-book-multiple-plus:before {\n  content: \"\\FA94\";\n}\n\n.mdi-book-multiple-remove:before {\n  content: \"\\FA95\";\n}\n\n.mdi-book-multiple-variant:before {\n  content: \"\\F0BC\";\n}\n\n.mdi-book-open:before {\n  content: \"\\F0BD\";\n}\n\n.mdi-book-open-outline:before {\n  content: \"\\FB3F\";\n}\n\n.mdi-book-open-page-variant:before {\n  content: \"\\F5DA\";\n}\n\n.mdi-book-open-variant:before {\n  content: \"\\F0BE\";\n}\n\n.mdi-book-outline:before {\n  content: \"\\FB40\";\n}\n\n.mdi-book-plus:before {\n  content: \"\\F5DB\";\n}\n\n.mdi-book-remove:before {\n  content: \"\\FA96\";\n}\n\n.mdi-book-variant:before {\n  content: \"\\F0BF\";\n}\n\n.mdi-bookmark:before {\n  content: \"\\F0C0\";\n}\n\n.mdi-bookmark-check:before {\n  content: \"\\F0C1\";\n}\n\n.mdi-bookmark-minus:before {\n  content: \"\\F9CB\";\n}\n\n.mdi-bookmark-minus-outline:before {\n  content: \"\\F9CC\";\n}\n\n.mdi-bookmark-multiple:before {\n  content: \"\\FDF8\";\n}\n\n.mdi-bookmark-multiple-outline:before {\n  content: \"\\FDF9\";\n}\n\n.mdi-bookmark-music:before {\n  content: \"\\F0C2\";\n}\n\n.mdi-bookmark-off:before {\n  content: \"\\F9CD\";\n}\n\n.mdi-bookmark-off-outline:before {\n  content: \"\\F9CE\";\n}\n\n.mdi-bookmark-outline:before {\n  content: \"\\F0C3\";\n}\n\n.mdi-bookmark-plus:before {\n  content: \"\\F0C5\";\n}\n\n.mdi-bookmark-plus-outline:before {\n  content: \"\\F0C4\";\n}\n\n.mdi-bookmark-remove:before {\n  content: \"\\F0C6\";\n}\n\n.mdi-boombox:before {\n  content: \"\\F5DC\";\n}\n\n.mdi-bootstrap:before {\n  content: \"\\F6C5\";\n}\n\n.mdi-border-all:before {\n  content: \"\\F0C7\";\n}\n\n.mdi-border-all-variant:before {\n  content: \"\\F8A0\";\n}\n\n.mdi-border-bottom:before {\n  content: \"\\F0C8\";\n}\n\n.mdi-border-bottom-variant:before {\n  content: \"\\F8A1\";\n}\n\n.mdi-border-color:before {\n  content: \"\\F0C9\";\n}\n\n.mdi-border-horizontal:before {\n  content: \"\\F0CA\";\n}\n\n.mdi-border-inside:before {\n  content: \"\\F0CB\";\n}\n\n.mdi-border-left:before {\n  content: \"\\F0CC\";\n}\n\n.mdi-border-left-variant:before {\n  content: \"\\F8A2\";\n}\n\n.mdi-border-none:before {\n  content: \"\\F0CD\";\n}\n\n.mdi-border-none-variant:before {\n  content: \"\\F8A3\";\n}\n\n.mdi-border-outside:before {\n  content: \"\\F0CE\";\n}\n\n.mdi-border-right:before {\n  content: \"\\F0CF\";\n}\n\n.mdi-border-right-variant:before {\n  content: \"\\F8A4\";\n}\n\n.mdi-border-style:before {\n  content: \"\\F0D0\";\n}\n\n.mdi-border-top:before {\n  content: \"\\F0D1\";\n}\n\n.mdi-border-top-variant:before {\n  content: \"\\F8A5\";\n}\n\n.mdi-border-vertical:before {\n  content: \"\\F0D2\";\n}\n\n.mdi-bottle-wine:before {\n  content: \"\\F853\";\n}\n\n.mdi-bow-tie:before {\n  content: \"\\F677\";\n}\n\n.mdi-bowl:before {\n  content: \"\\F617\";\n}\n\n.mdi-bowling:before {\n  content: \"\\F0D3\";\n}\n\n.mdi-box:before {\n  content: \"\\F0D4\";\n}\n\n.mdi-box-cutter:before {\n  content: \"\\F0D5\";\n}\n\n.mdi-box-shadow:before {\n  content: \"\\F637\";\n}\n\n.mdi-boxing-glove:before {\n  content: \"\\FB41\";\n}\n\n.mdi-braille:before {\n  content: \"\\F9CF\";\n}\n\n.mdi-brain:before {\n  content: \"\\F9D0\";\n}\n\n.mdi-bread-slice:before {\n  content: \"\\FCCA\";\n}\n\n.mdi-bread-slice-outline:before {\n  content: \"\\FCCB\";\n}\n\n.mdi-bridge:before {\n  content: \"\\F618\";\n}\n\n.mdi-briefcase:before {\n  content: \"\\F0D6\";\n}\n\n.mdi-briefcase-account:before {\n  content: \"\\FCCC\";\n}\n\n.mdi-briefcase-account-outline:before {\n  content: \"\\FCCD\";\n}\n\n.mdi-briefcase-check:before {\n  content: \"\\F0D7\";\n}\n\n.mdi-briefcase-download:before {\n  content: \"\\F0D8\";\n}\n\n.mdi-briefcase-download-outline:before {\n  content: \"\\FC19\";\n}\n\n.mdi-briefcase-edit:before {\n  content: \"\\FA97\";\n}\n\n.mdi-briefcase-edit-outline:before {\n  content: \"\\FC1A\";\n}\n\n.mdi-briefcase-minus:before {\n  content: \"\\FA29\";\n}\n\n.mdi-briefcase-minus-outline:before {\n  content: \"\\FC1B\";\n}\n\n.mdi-briefcase-outline:before {\n  content: \"\\F813\";\n}\n\n.mdi-briefcase-plus:before {\n  content: \"\\FA2A\";\n}\n\n.mdi-briefcase-plus-outline:before {\n  content: \"\\FC1C\";\n}\n\n.mdi-briefcase-remove:before {\n  content: \"\\FA2B\";\n}\n\n.mdi-briefcase-remove-outline:before {\n  content: \"\\FC1D\";\n}\n\n.mdi-briefcase-search:before {\n  content: \"\\FA2C\";\n}\n\n.mdi-briefcase-search-outline:before {\n  content: \"\\FC1E\";\n}\n\n.mdi-briefcase-upload:before {\n  content: \"\\F0D9\";\n}\n\n.mdi-briefcase-upload-outline:before {\n  content: \"\\FC1F\";\n}\n\n.mdi-brightness-1:before {\n  content: \"\\F0DA\";\n}\n\n.mdi-brightness-2:before {\n  content: \"\\F0DB\";\n}\n\n.mdi-brightness-3:before {\n  content: \"\\F0DC\";\n}\n\n.mdi-brightness-4:before {\n  content: \"\\F0DD\";\n}\n\n.mdi-brightness-5:before {\n  content: \"\\F0DE\";\n}\n\n.mdi-brightness-6:before {\n  content: \"\\F0DF\";\n}\n\n.mdi-brightness-7:before {\n  content: \"\\F0E0\";\n}\n\n.mdi-brightness-auto:before {\n  content: \"\\F0E1\";\n}\n\n.mdi-brightness-percent:before {\n  content: \"\\FCCE\";\n}\n\n.mdi-broom:before {\n  content: \"\\F0E2\";\n}\n\n.mdi-brush:before {\n  content: \"\\F0E3\";\n}\n\n.mdi-buddhism:before {\n  content: \"\\F94A\";\n}\n\n.mdi-buffer:before {\n  content: \"\\F619\";\n}\n\n.mdi-bug:before {\n  content: \"\\F0E4\";\n}\n\n.mdi-bug-check:before {\n  content: \"\\FA2D\";\n}\n\n.mdi-bug-check-outline:before {\n  content: \"\\FA2E\";\n}\n\n.mdi-bug-outline:before {\n  content: \"\\FA2F\";\n}\n\n.mdi-bugle:before {\n  content: \"\\FD90\";\n}\n\n.mdi-bulldozer:before {\n  content: \"\\FB07\";\n}\n\n.mdi-bullet:before {\n  content: \"\\FCCF\";\n}\n\n.mdi-bulletin-board:before {\n  content: \"\\F0E5\";\n}\n\n.mdi-bullhorn:before {\n  content: \"\\F0E6\";\n}\n\n.mdi-bullhorn-outline:before {\n  content: \"\\FB08\";\n}\n\n.mdi-bullseye:before {\n  content: \"\\F5DD\";\n}\n\n.mdi-bullseye-arrow:before {\n  content: \"\\F8C8\";\n}\n\n.mdi-bus:before {\n  content: \"\\F0E7\";\n}\n\n.mdi-bus-alert:before {\n  content: \"\\FA98\";\n}\n\n.mdi-bus-articulated-end:before {\n  content: \"\\F79B\";\n}\n\n.mdi-bus-articulated-front:before {\n  content: \"\\F79C\";\n}\n\n.mdi-bus-clock:before {\n  content: \"\\F8C9\";\n}\n\n.mdi-bus-double-decker:before {\n  content: \"\\F79D\";\n}\n\n.mdi-bus-school:before {\n  content: \"\\F79E\";\n}\n\n.mdi-bus-side:before {\n  content: \"\\F79F\";\n}\n\n.mdi-cached:before {\n  content: \"\\F0E8\";\n}\n\n.mdi-cactus:before {\n  content: \"\\FD91\";\n}\n\n.mdi-cake:before {\n  content: \"\\F0E9\";\n}\n\n.mdi-cake-layered:before {\n  content: \"\\F0EA\";\n}\n\n.mdi-cake-variant:before {\n  content: \"\\F0EB\";\n}\n\n.mdi-calculator:before {\n  content: \"\\F0EC\";\n}\n\n.mdi-calculator-variant:before {\n  content: \"\\FA99\";\n}\n\n.mdi-calendar:before {\n  content: \"\\F0ED\";\n}\n\n.mdi-calendar-alert:before {\n  content: \"\\FA30\";\n}\n\n.mdi-calendar-blank:before {\n  content: \"\\F0EE\";\n}\n\n.mdi-calendar-blank-outline:before {\n  content: \"\\FB42\";\n}\n\n.mdi-calendar-check:before {\n  content: \"\\F0EF\";\n}\n\n.mdi-calendar-check-outline:before {\n  content: \"\\FC20\";\n}\n\n.mdi-calendar-clock:before {\n  content: \"\\F0F0\";\n}\n\n.mdi-calendar-edit:before {\n  content: \"\\F8A6\";\n}\n\n.mdi-calendar-export:before {\n  content: \"\\FB09\";\n}\n\n.mdi-calendar-heart:before {\n  content: \"\\F9D1\";\n}\n\n.mdi-calendar-import:before {\n  content: \"\\FB0A\";\n}\n\n.mdi-calendar-minus:before {\n  content: \"\\FD38\";\n}\n\n.mdi-calendar-month:before {\n  content: \"\\FDFA\";\n}\n\n.mdi-calendar-month-outline:before {\n  content: \"\\FDFB\";\n}\n\n.mdi-calendar-multiple:before {\n  content: \"\\F0F1\";\n}\n\n.mdi-calendar-multiple-check:before {\n  content: \"\\F0F2\";\n}\n\n.mdi-calendar-multiselect:before {\n  content: \"\\FA31\";\n}\n\n.mdi-calendar-outline:before {\n  content: \"\\FB43\";\n}\n\n.mdi-calendar-plus:before {\n  content: \"\\F0F3\";\n}\n\n.mdi-calendar-question:before {\n  content: \"\\F691\";\n}\n\n.mdi-calendar-range:before {\n  content: \"\\F678\";\n}\n\n.mdi-calendar-range-outline:before {\n  content: \"\\FB44\";\n}\n\n.mdi-calendar-remove:before {\n  content: \"\\F0F4\";\n}\n\n.mdi-calendar-remove-outline:before {\n  content: \"\\FC21\";\n}\n\n.mdi-calendar-search:before {\n  content: \"\\F94B\";\n}\n\n.mdi-calendar-star:before {\n  content: \"\\F9D2\";\n}\n\n.mdi-calendar-text:before {\n  content: \"\\F0F5\";\n}\n\n.mdi-calendar-text-outline:before {\n  content: \"\\FC22\";\n}\n\n.mdi-calendar-today:before {\n  content: \"\\F0F6\";\n}\n\n.mdi-calendar-week:before {\n  content: \"\\FA32\";\n}\n\n.mdi-calendar-week-begin:before {\n  content: \"\\FA33\";\n}\n\n.mdi-call-made:before {\n  content: \"\\F0F7\";\n}\n\n.mdi-call-merge:before {\n  content: \"\\F0F8\";\n}\n\n.mdi-call-missed:before {\n  content: \"\\F0F9\";\n}\n\n.mdi-call-received:before {\n  content: \"\\F0FA\";\n}\n\n.mdi-call-split:before {\n  content: \"\\F0FB\";\n}\n\n.mdi-camcorder:before {\n  content: \"\\F0FC\";\n}\n\n.mdi-camcorder-box:before {\n  content: \"\\F0FD\";\n}\n\n.mdi-camcorder-box-off:before {\n  content: \"\\F0FE\";\n}\n\n.mdi-camcorder-off:before {\n  content: \"\\F0FF\";\n}\n\n.mdi-camera:before {\n  content: \"\\F100\";\n}\n\n.mdi-camera-account:before {\n  content: \"\\F8CA\";\n}\n\n.mdi-camera-burst:before {\n  content: \"\\F692\";\n}\n\n.mdi-camera-control:before {\n  content: \"\\FB45\";\n}\n\n.mdi-camera-enhance:before {\n  content: \"\\F101\";\n}\n\n.mdi-camera-enhance-outline:before {\n  content: \"\\FB46\";\n}\n\n.mdi-camera-front:before {\n  content: \"\\F102\";\n}\n\n.mdi-camera-front-variant:before {\n  content: \"\\F103\";\n}\n\n.mdi-camera-gopro:before {\n  content: \"\\F7A0\";\n}\n\n.mdi-camera-image:before {\n  content: \"\\F8CB\";\n}\n\n.mdi-camera-iris:before {\n  content: \"\\F104\";\n}\n\n.mdi-camera-metering-center:before {\n  content: \"\\F7A1\";\n}\n\n.mdi-camera-metering-matrix:before {\n  content: \"\\F7A2\";\n}\n\n.mdi-camera-metering-partial:before {\n  content: \"\\F7A3\";\n}\n\n.mdi-camera-metering-spot:before {\n  content: \"\\F7A4\";\n}\n\n.mdi-camera-off:before {\n  content: \"\\F5DF\";\n}\n\n.mdi-camera-outline:before {\n  content: \"\\FD39\";\n}\n\n.mdi-camera-party-mode:before {\n  content: \"\\F105\";\n}\n\n.mdi-camera-rear:before {\n  content: \"\\F106\";\n}\n\n.mdi-camera-rear-variant:before {\n  content: \"\\F107\";\n}\n\n.mdi-camera-retake:before {\n  content: \"\\FDFC\";\n}\n\n.mdi-camera-retake-outline:before {\n  content: \"\\FDFD\";\n}\n\n.mdi-camera-switch:before {\n  content: \"\\F108\";\n}\n\n.mdi-camera-timer:before {\n  content: \"\\F109\";\n}\n\n.mdi-camera-wireless:before {\n  content: \"\\FD92\";\n}\n\n.mdi-camera-wireless-outline:before {\n  content: \"\\FD93\";\n}\n\n.mdi-cancel:before {\n  content: \"\\F739\";\n}\n\n.mdi-candle:before {\n  content: \"\\F5E2\";\n}\n\n.mdi-candycane:before {\n  content: \"\\F10A\";\n}\n\n.mdi-cannabis:before {\n  content: \"\\F7A5\";\n}\n\n.mdi-caps-lock:before {\n  content: \"\\FA9A\";\n}\n\n.mdi-car:before {\n  content: \"\\F10B\";\n}\n\n.mdi-car-back:before {\n  content: \"\\FDFE\";\n}\n\n.mdi-car-battery:before {\n  content: \"\\F10C\";\n}\n\n.mdi-car-brake-abs:before {\n  content: \"\\FC23\";\n}\n\n.mdi-car-brake-alert:before {\n  content: \"\\FC24\";\n}\n\n.mdi-car-brake-hold:before {\n  content: \"\\FD3A\";\n}\n\n.mdi-car-brake-parking:before {\n  content: \"\\FD3B\";\n}\n\n.mdi-car-connected:before {\n  content: \"\\F10D\";\n}\n\n.mdi-car-convertible:before {\n  content: \"\\F7A6\";\n}\n\n.mdi-car-cruise-control:before {\n  content: \"\\FD3C\";\n}\n\n.mdi-car-defrost-front:before {\n  content: \"\\FD3D\";\n}\n\n.mdi-car-defrost-rear:before {\n  content: \"\\FD3E\";\n}\n\n.mdi-car-door:before {\n  content: \"\\FB47\";\n}\n\n.mdi-car-electric:before {\n  content: \"\\FB48\";\n}\n\n.mdi-car-esp:before {\n  content: \"\\FC25\";\n}\n\n.mdi-car-estate:before {\n  content: \"\\F7A7\";\n}\n\n.mdi-car-hatchback:before {\n  content: \"\\F7A8\";\n}\n\n.mdi-car-key:before {\n  content: \"\\FB49\";\n}\n\n.mdi-car-light-dimmed:before {\n  content: \"\\FC26\";\n}\n\n.mdi-car-light-fog:before {\n  content: \"\\FC27\";\n}\n\n.mdi-car-light-high:before {\n  content: \"\\FC28\";\n}\n\n.mdi-car-limousine:before {\n  content: \"\\F8CC\";\n}\n\n.mdi-car-multiple:before {\n  content: \"\\FB4A\";\n}\n\n.mdi-car-off:before {\n  content: \"\\FDFF\";\n}\n\n.mdi-car-parking-lights:before {\n  content: \"\\FD3F\";\n}\n\n.mdi-car-pickup:before {\n  content: \"\\F7A9\";\n}\n\n.mdi-car-side:before {\n  content: \"\\F7AA\";\n}\n\n.mdi-car-sports:before {\n  content: \"\\F7AB\";\n}\n\n.mdi-car-tire-alert:before {\n  content: \"\\FC29\";\n}\n\n.mdi-car-traction-control:before {\n  content: \"\\FD40\";\n}\n\n.mdi-car-wash:before {\n  content: \"\\F10E\";\n}\n\n.mdi-caravan:before {\n  content: \"\\F7AC\";\n}\n\n.mdi-card:before {\n  content: \"\\FB4B\";\n}\n\n.mdi-card-bulleted:before {\n  content: \"\\FB4C\";\n}\n\n.mdi-card-bulleted-off:before {\n  content: \"\\FB4D\";\n}\n\n.mdi-card-bulleted-off-outline:before {\n  content: \"\\FB4E\";\n}\n\n.mdi-card-bulleted-outline:before {\n  content: \"\\FB4F\";\n}\n\n.mdi-card-bulleted-settings:before {\n  content: \"\\FB50\";\n}\n\n.mdi-card-bulleted-settings-outline:before {\n  content: \"\\FB51\";\n}\n\n.mdi-card-outline:before {\n  content: \"\\FB52\";\n}\n\n.mdi-card-text:before {\n  content: \"\\FB53\";\n}\n\n.mdi-card-text-outline:before {\n  content: \"\\FB54\";\n}\n\n.mdi-cards:before {\n  content: \"\\F638\";\n}\n\n.mdi-cards-club:before {\n  content: \"\\F8CD\";\n}\n\n.mdi-cards-diamond:before {\n  content: \"\\F8CE\";\n}\n\n.mdi-cards-heart:before {\n  content: \"\\F8CF\";\n}\n\n.mdi-cards-outline:before {\n  content: \"\\F639\";\n}\n\n.mdi-cards-playing-outline:before {\n  content: \"\\F63A\";\n}\n\n.mdi-cards-spade:before {\n  content: \"\\F8D0\";\n}\n\n.mdi-cards-variant:before {\n  content: \"\\F6C6\";\n}\n\n.mdi-carrot:before {\n  content: \"\\F10F\";\n}\n\n.mdi-carry-on-bag-check:before {\n  content: \"\\FD41\";\n}\n\n.mdi-cart:before {\n  content: \"\\F110\";\n}\n\n.mdi-cart-arrow-down:before {\n  content: \"\\FD42\";\n}\n\n.mdi-cart-arrow-right:before {\n  content: \"\\FC2A\";\n}\n\n.mdi-cart-arrow-up:before {\n  content: \"\\FD43\";\n}\n\n.mdi-cart-minus:before {\n  content: \"\\FD44\";\n}\n\n.mdi-cart-off:before {\n  content: \"\\F66B\";\n}\n\n.mdi-cart-outline:before {\n  content: \"\\F111\";\n}\n\n.mdi-cart-plus:before {\n  content: \"\\F112\";\n}\n\n.mdi-cart-remove:before {\n  content: \"\\FD45\";\n}\n\n.mdi-case-sensitive-alt:before {\n  content: \"\\F113\";\n}\n\n.mdi-cash:before {\n  content: \"\\F114\";\n}\n\n.mdi-cash-100:before {\n  content: \"\\F115\";\n}\n\n.mdi-cash-marker:before {\n  content: \"\\FD94\";\n}\n\n.mdi-cash-multiple:before {\n  content: \"\\F116\";\n}\n\n.mdi-cash-refund:before {\n  content: \"\\FA9B\";\n}\n\n.mdi-cash-register:before {\n  content: \"\\FCD0\";\n}\n\n.mdi-cash-usd:before {\n  content: \"\\F117\";\n}\n\n.mdi-cassette:before {\n  content: \"\\F9D3\";\n}\n\n.mdi-cast:before {\n  content: \"\\F118\";\n}\n\n.mdi-cast-connected:before {\n  content: \"\\F119\";\n}\n\n.mdi-cast-education:before {\n  content: \"\\FE6D\";\n}\n\n.mdi-cast-off:before {\n  content: \"\\F789\";\n}\n\n.mdi-castle:before {\n  content: \"\\F11A\";\n}\n\n.mdi-cat:before {\n  content: \"\\F11B\";\n}\n\n.mdi-cctv:before {\n  content: \"\\F7AD\";\n}\n\n.mdi-ceiling-light:before {\n  content: \"\\F768\";\n}\n\n.mdi-cellphone:before {\n  content: \"\\F11C\";\n}\n\n.mdi-cellphone-android:before {\n  content: \"\\F11D\";\n}\n\n.mdi-cellphone-arrow-down:before {\n  content: \"\\F9D4\";\n}\n\n.mdi-cellphone-basic:before {\n  content: \"\\F11E\";\n}\n\n.mdi-cellphone-dock:before {\n  content: \"\\F11F\";\n}\n\n.mdi-cellphone-erase:before {\n  content: \"\\F94C\";\n}\n\n.mdi-cellphone-iphone:before {\n  content: \"\\F120\";\n}\n\n.mdi-cellphone-key:before {\n  content: \"\\F94D\";\n}\n\n.mdi-cellphone-link:before {\n  content: \"\\F121\";\n}\n\n.mdi-cellphone-link-off:before {\n  content: \"\\F122\";\n}\n\n.mdi-cellphone-lock:before {\n  content: \"\\F94E\";\n}\n\n.mdi-cellphone-message:before {\n  content: \"\\F8D2\";\n}\n\n.mdi-cellphone-off:before {\n  content: \"\\F94F\";\n}\n\n.mdi-cellphone-screenshot:before {\n  content: \"\\FA34\";\n}\n\n.mdi-cellphone-settings:before {\n  content: \"\\F123\";\n}\n\n.mdi-cellphone-settings-variant:before {\n  content: \"\\F950\";\n}\n\n.mdi-cellphone-sound:before {\n  content: \"\\F951\";\n}\n\n.mdi-cellphone-text:before {\n  content: \"\\F8D1\";\n}\n\n.mdi-cellphone-wireless:before {\n  content: \"\\F814\";\n}\n\n.mdi-celtic-cross:before {\n  content: \"\\FCD1\";\n}\n\n.mdi-certificate:before {\n  content: \"\\F124\";\n}\n\n.mdi-chair-school:before {\n  content: \"\\F125\";\n}\n\n.mdi-charity:before {\n  content: \"\\FC2B\";\n}\n\n.mdi-chart-arc:before {\n  content: \"\\F126\";\n}\n\n.mdi-chart-areaspline:before {\n  content: \"\\F127\";\n}\n\n.mdi-chart-bar:before {\n  content: \"\\F128\";\n}\n\n.mdi-chart-bar-stacked:before {\n  content: \"\\F769\";\n}\n\n.mdi-chart-bell-curve:before {\n  content: \"\\FC2C\";\n}\n\n.mdi-chart-bubble:before {\n  content: \"\\F5E3\";\n}\n\n.mdi-chart-donut:before {\n  content: \"\\F7AE\";\n}\n\n.mdi-chart-donut-variant:before {\n  content: \"\\F7AF\";\n}\n\n.mdi-chart-gantt:before {\n  content: \"\\F66C\";\n}\n\n.mdi-chart-histogram:before {\n  content: \"\\F129\";\n}\n\n.mdi-chart-line:before {\n  content: \"\\F12A\";\n}\n\n.mdi-chart-line-stacked:before {\n  content: \"\\F76A\";\n}\n\n.mdi-chart-line-variant:before {\n  content: \"\\F7B0\";\n}\n\n.mdi-chart-multiline:before {\n  content: \"\\F8D3\";\n}\n\n.mdi-chart-pie:before {\n  content: \"\\F12B\";\n}\n\n.mdi-chart-scatterplot-hexbin:before {\n  content: \"\\F66D\";\n}\n\n.mdi-chart-timeline:before {\n  content: \"\\F66E\";\n}\n\n.mdi-chat:before {\n  content: \"\\FB55\";\n}\n\n.mdi-chat-alert:before {\n  content: \"\\FB56\";\n}\n\n.mdi-chat-processing:before {\n  content: \"\\FB57\";\n}\n\n.mdi-check:before {\n  content: \"\\F12C\";\n}\n\n.mdi-check-all:before {\n  content: \"\\F12D\";\n}\n\n.mdi-check-bold:before {\n  content: \"\\FE6E\";\n}\n\n.mdi-check-box-multiple-outline:before {\n  content: \"\\FC2D\";\n}\n\n.mdi-check-box-outline:before {\n  content: \"\\FC2E\";\n}\n\n.mdi-check-circle:before {\n  content: \"\\F5E0\";\n}\n\n.mdi-check-circle-outline:before {\n  content: \"\\F5E1\";\n}\n\n.mdi-check-decagram:before {\n  content: \"\\F790\";\n}\n\n.mdi-check-network:before {\n  content: \"\\FC2F\";\n}\n\n.mdi-check-network-outline:before {\n  content: \"\\FC30\";\n}\n\n.mdi-check-outline:before {\n  content: \"\\F854\";\n}\n\n.mdi-check-underline:before {\n  content: \"\\FE70\";\n}\n\n.mdi-check-underline-circle:before {\n  content: \"\\FE71\";\n}\n\n.mdi-check-underline-circle-outline:before {\n  content: \"\\FE72\";\n}\n\n.mdi-checkbook:before {\n  content: \"\\FA9C\";\n}\n\n.mdi-checkbox-blank:before {\n  content: \"\\F12E\";\n}\n\n.mdi-checkbox-blank-circle:before {\n  content: \"\\F12F\";\n}\n\n.mdi-checkbox-blank-circle-outline:before {\n  content: \"\\F130\";\n}\n\n.mdi-checkbox-blank-outline:before {\n  content: \"\\F131\";\n}\n\n.mdi-checkbox-intermediate:before {\n  content: \"\\F855\";\n}\n\n.mdi-checkbox-marked:before {\n  content: \"\\F132\";\n}\n\n.mdi-checkbox-marked-circle:before {\n  content: \"\\F133\";\n}\n\n.mdi-checkbox-marked-circle-outline:before {\n  content: \"\\F134\";\n}\n\n.mdi-checkbox-marked-outline:before {\n  content: \"\\F135\";\n}\n\n.mdi-checkbox-multiple-blank:before {\n  content: \"\\F136\";\n}\n\n.mdi-checkbox-multiple-blank-circle:before {\n  content: \"\\F63B\";\n}\n\n.mdi-checkbox-multiple-blank-circle-outline:before {\n  content: \"\\F63C\";\n}\n\n.mdi-checkbox-multiple-blank-outline:before {\n  content: \"\\F137\";\n}\n\n.mdi-checkbox-multiple-marked:before {\n  content: \"\\F138\";\n}\n\n.mdi-checkbox-multiple-marked-circle:before {\n  content: \"\\F63D\";\n}\n\n.mdi-checkbox-multiple-marked-circle-outline:before {\n  content: \"\\F63E\";\n}\n\n.mdi-checkbox-multiple-marked-outline:before {\n  content: \"\\F139\";\n}\n\n.mdi-checkerboard:before {\n  content: \"\\F13A\";\n}\n\n.mdi-chef-hat:before {\n  content: \"\\FB58\";\n}\n\n.mdi-chemical-weapon:before {\n  content: \"\\F13B\";\n}\n\n.mdi-chess-bishop:before {\n  content: \"\\F85B\";\n}\n\n.mdi-chess-king:before {\n  content: \"\\F856\";\n}\n\n.mdi-chess-knight:before {\n  content: \"\\F857\";\n}\n\n.mdi-chess-pawn:before {\n  content: \"\\F858\";\n}\n\n.mdi-chess-queen:before {\n  content: \"\\F859\";\n}\n\n.mdi-chess-rook:before {\n  content: \"\\F85A\";\n}\n\n.mdi-chevron-double-down:before {\n  content: \"\\F13C\";\n}\n\n.mdi-chevron-double-left:before {\n  content: \"\\F13D\";\n}\n\n.mdi-chevron-double-right:before {\n  content: \"\\F13E\";\n}\n\n.mdi-chevron-double-up:before {\n  content: \"\\F13F\";\n}\n\n.mdi-chevron-down:before {\n  content: \"\\F140\";\n}\n\n.mdi-chevron-down-box:before {\n  content: \"\\F9D5\";\n}\n\n.mdi-chevron-down-box-outline:before {\n  content: \"\\F9D6\";\n}\n\n.mdi-chevron-down-circle:before {\n  content: \"\\FB0B\";\n}\n\n.mdi-chevron-down-circle-outline:before {\n  content: \"\\FB0C\";\n}\n\n.mdi-chevron-left:before {\n  content: \"\\F141\";\n}\n\n.mdi-chevron-left-box:before {\n  content: \"\\F9D7\";\n}\n\n.mdi-chevron-left-box-outline:before {\n  content: \"\\F9D8\";\n}\n\n.mdi-chevron-left-circle:before {\n  content: \"\\FB0D\";\n}\n\n.mdi-chevron-left-circle-outline:before {\n  content: \"\\FB0E\";\n}\n\n.mdi-chevron-right:before {\n  content: \"\\F142\";\n}\n\n.mdi-chevron-right-box:before {\n  content: \"\\F9D9\";\n}\n\n.mdi-chevron-right-box-outline:before {\n  content: \"\\F9DA\";\n}\n\n.mdi-chevron-right-circle:before {\n  content: \"\\FB0F\";\n}\n\n.mdi-chevron-right-circle-outline:before {\n  content: \"\\FB10\";\n}\n\n.mdi-chevron-triple-down:before {\n  content: \"\\FD95\";\n}\n\n.mdi-chevron-triple-left:before {\n  content: \"\\FD96\";\n}\n\n.mdi-chevron-triple-right:before {\n  content: \"\\FD97\";\n}\n\n.mdi-chevron-triple-up:before {\n  content: \"\\FD98\";\n}\n\n.mdi-chevron-up:before {\n  content: \"\\F143\";\n}\n\n.mdi-chevron-up-box:before {\n  content: \"\\F9DB\";\n}\n\n.mdi-chevron-up-box-outline:before {\n  content: \"\\F9DC\";\n}\n\n.mdi-chevron-up-circle:before {\n  content: \"\\FB11\";\n}\n\n.mdi-chevron-up-circle-outline:before {\n  content: \"\\FB12\";\n}\n\n.mdi-chili-hot:before {\n  content: \"\\F7B1\";\n}\n\n.mdi-chili-medium:before {\n  content: \"\\F7B2\";\n}\n\n.mdi-chili-mild:before {\n  content: \"\\F7B3\";\n}\n\n.mdi-chip:before {\n  content: \"\\F61A\";\n}\n\n.mdi-christianity:before {\n  content: \"\\F952\";\n}\n\n.mdi-christianity-outline:before {\n  content: \"\\FCD2\";\n}\n\n.mdi-church:before {\n  content: \"\\F144\";\n}\n\n.mdi-circle:before {\n  content: \"\\F764\";\n}\n\n.mdi-circle-edit-outline:before {\n  content: \"\\F8D4\";\n}\n\n.mdi-circle-medium:before {\n  content: \"\\F9DD\";\n}\n\n.mdi-circle-outline:before {\n  content: \"\\F765\";\n}\n\n.mdi-circle-slice-1:before {\n  content: \"\\FA9D\";\n}\n\n.mdi-circle-slice-2:before {\n  content: \"\\FA9E\";\n}\n\n.mdi-circle-slice-3:before {\n  content: \"\\FA9F\";\n}\n\n.mdi-circle-slice-4:before {\n  content: \"\\FAA0\";\n}\n\n.mdi-circle-slice-5:before {\n  content: \"\\FAA1\";\n}\n\n.mdi-circle-slice-6:before {\n  content: \"\\FAA2\";\n}\n\n.mdi-circle-slice-7:before {\n  content: \"\\FAA3\";\n}\n\n.mdi-circle-slice-8:before {\n  content: \"\\FAA4\";\n}\n\n.mdi-circle-small:before {\n  content: \"\\F9DE\";\n}\n\n.mdi-circular-saw:before {\n  content: \"\\FE73\";\n}\n\n.mdi-cisco-webex:before {\n  content: \"\\F145\";\n}\n\n.mdi-city:before {\n  content: \"\\F146\";\n}\n\n.mdi-city-variant:before {\n  content: \"\\FA35\";\n}\n\n.mdi-city-variant-outline:before {\n  content: \"\\FA36\";\n}\n\n.mdi-clipboard:before {\n  content: \"\\F147\";\n}\n\n.mdi-clipboard-account:before {\n  content: \"\\F148\";\n}\n\n.mdi-clipboard-account-outline:before {\n  content: \"\\FC31\";\n}\n\n.mdi-clipboard-alert:before {\n  content: \"\\F149\";\n}\n\n.mdi-clipboard-alert-outline:before {\n  content: \"\\FCD3\";\n}\n\n.mdi-clipboard-arrow-down:before {\n  content: \"\\F14A\";\n}\n\n.mdi-clipboard-arrow-down-outline:before {\n  content: \"\\FC32\";\n}\n\n.mdi-clipboard-arrow-left:before {\n  content: \"\\F14B\";\n}\n\n.mdi-clipboard-arrow-left-outline:before {\n  content: \"\\FCD4\";\n}\n\n.mdi-clipboard-arrow-right:before {\n  content: \"\\FCD5\";\n}\n\n.mdi-clipboard-arrow-right-outline:before {\n  content: \"\\FCD6\";\n}\n\n.mdi-clipboard-arrow-up:before {\n  content: \"\\FC33\";\n}\n\n.mdi-clipboard-arrow-up-outline:before {\n  content: \"\\FC34\";\n}\n\n.mdi-clipboard-check:before {\n  content: \"\\F14C\";\n}\n\n.mdi-clipboard-check-outline:before {\n  content: \"\\F8A7\";\n}\n\n.mdi-clipboard-flow:before {\n  content: \"\\F6C7\";\n}\n\n.mdi-clipboard-outline:before {\n  content: \"\\F14D\";\n}\n\n.mdi-clipboard-play:before {\n  content: \"\\FC35\";\n}\n\n.mdi-clipboard-play-outline:before {\n  content: \"\\FC36\";\n}\n\n.mdi-clipboard-plus:before {\n  content: \"\\F750\";\n}\n\n.mdi-clipboard-pulse:before {\n  content: \"\\F85C\";\n}\n\n.mdi-clipboard-pulse-outline:before {\n  content: \"\\F85D\";\n}\n\n.mdi-clipboard-text:before {\n  content: \"\\F14E\";\n}\n\n.mdi-clipboard-text-outline:before {\n  content: \"\\FA37\";\n}\n\n.mdi-clipboard-text-play:before {\n  content: \"\\FC37\";\n}\n\n.mdi-clipboard-text-play-outline:before {\n  content: \"\\FC38\";\n}\n\n.mdi-clippy:before {\n  content: \"\\F14F\";\n}\n\n.mdi-clock:before {\n  content: \"\\F953\";\n}\n\n.mdi-clock-alert:before {\n  content: \"\\F954\";\n}\n\n.mdi-clock-alert-outline:before {\n  content: \"\\F5CE\";\n}\n\n.mdi-clock-end:before {\n  content: \"\\F151\";\n}\n\n.mdi-clock-fast:before {\n  content: \"\\F152\";\n}\n\n.mdi-clock-in:before {\n  content: \"\\F153\";\n}\n\n.mdi-clock-out:before {\n  content: \"\\F154\";\n}\n\n.mdi-clock-outline:before {\n  content: \"\\F150\";\n}\n\n.mdi-clock-start:before {\n  content: \"\\F155\";\n}\n\n.mdi-close:before {\n  content: \"\\F156\";\n}\n\n.mdi-close-box:before {\n  content: \"\\F157\";\n}\n\n.mdi-close-box-multiple:before {\n  content: \"\\FC39\";\n}\n\n.mdi-close-box-multiple-outline:before {\n  content: \"\\FC3A\";\n}\n\n.mdi-close-box-outline:before {\n  content: \"\\F158\";\n}\n\n.mdi-close-circle:before {\n  content: \"\\F159\";\n}\n\n.mdi-close-circle-outline:before {\n  content: \"\\F15A\";\n}\n\n.mdi-close-network:before {\n  content: \"\\F15B\";\n}\n\n.mdi-close-network-outline:before {\n  content: \"\\FC3B\";\n}\n\n.mdi-close-octagon:before {\n  content: \"\\F15C\";\n}\n\n.mdi-close-octagon-outline:before {\n  content: \"\\F15D\";\n}\n\n.mdi-close-outline:before {\n  content: \"\\F6C8\";\n}\n\n.mdi-closed-caption:before {\n  content: \"\\F15E\";\n}\n\n.mdi-closed-caption-outline:before {\n  content: \"\\FD99\";\n}\n\n.mdi-cloud:before {\n  content: \"\\F15F\";\n}\n\n.mdi-cloud-alert:before {\n  content: \"\\F9DF\";\n}\n\n.mdi-cloud-braces:before {\n  content: \"\\F7B4\";\n}\n\n.mdi-cloud-check:before {\n  content: \"\\F160\";\n}\n\n.mdi-cloud-circle:before {\n  content: \"\\F161\";\n}\n\n.mdi-cloud-download:before {\n  content: \"\\F162\";\n}\n\n.mdi-cloud-download-outline:before {\n  content: \"\\FB59\";\n}\n\n.mdi-cloud-off-outline:before {\n  content: \"\\F164\";\n}\n\n.mdi-cloud-outline:before {\n  content: \"\\F163\";\n}\n\n.mdi-cloud-print:before {\n  content: \"\\F165\";\n}\n\n.mdi-cloud-print-outline:before {\n  content: \"\\F166\";\n}\n\n.mdi-cloud-question:before {\n  content: \"\\FA38\";\n}\n\n.mdi-cloud-search:before {\n  content: \"\\F955\";\n}\n\n.mdi-cloud-search-outline:before {\n  content: \"\\F956\";\n}\n\n.mdi-cloud-sync:before {\n  content: \"\\F63F\";\n}\n\n.mdi-cloud-tags:before {\n  content: \"\\F7B5\";\n}\n\n.mdi-cloud-upload:before {\n  content: \"\\F167\";\n}\n\n.mdi-cloud-upload-outline:before {\n  content: \"\\FB5A\";\n}\n\n.mdi-clover:before {\n  content: \"\\F815\";\n}\n\n.mdi-code-array:before {\n  content: \"\\F168\";\n}\n\n.mdi-code-braces:before {\n  content: \"\\F169\";\n}\n\n.mdi-code-brackets:before {\n  content: \"\\F16A\";\n}\n\n.mdi-code-equal:before {\n  content: \"\\F16B\";\n}\n\n.mdi-code-greater-than:before {\n  content: \"\\F16C\";\n}\n\n.mdi-code-greater-than-or-equal:before {\n  content: \"\\F16D\";\n}\n\n.mdi-code-less-than:before {\n  content: \"\\F16E\";\n}\n\n.mdi-code-less-than-or-equal:before {\n  content: \"\\F16F\";\n}\n\n.mdi-code-not-equal:before {\n  content: \"\\F170\";\n}\n\n.mdi-code-not-equal-variant:before {\n  content: \"\\F171\";\n}\n\n.mdi-code-parentheses:before {\n  content: \"\\F172\";\n}\n\n.mdi-code-string:before {\n  content: \"\\F173\";\n}\n\n.mdi-code-tags:before {\n  content: \"\\F174\";\n}\n\n.mdi-code-tags-check:before {\n  content: \"\\F693\";\n}\n\n.mdi-codepen:before {\n  content: \"\\F175\";\n}\n\n.mdi-coffee:before {\n  content: \"\\F176\";\n}\n\n.mdi-coffee-outline:before {\n  content: \"\\F6C9\";\n}\n\n.mdi-coffee-to-go:before {\n  content: \"\\F177\";\n}\n\n.mdi-coffin:before {\n  content: \"\\FB5B\";\n}\n\n.mdi-cogs:before {\n  content: \"\\F8D5\";\n}\n\n.mdi-coin:before {\n  content: \"\\F178\";\n}\n\n.mdi-coins:before {\n  content: \"\\F694\";\n}\n\n.mdi-collage:before {\n  content: \"\\F640\";\n}\n\n.mdi-collapse-all:before {\n  content: \"\\FAA5\";\n}\n\n.mdi-collapse-all-outline:before {\n  content: \"\\FAA6\";\n}\n\n.mdi-color-helper:before {\n  content: \"\\F179\";\n}\n\n.mdi-comma:before {\n  content: \"\\FE74\";\n}\n\n.mdi-comma-box:before {\n  content: \"\\FE75\";\n}\n\n.mdi-comma-box-outline:before {\n  content: \"\\FE76\";\n}\n\n.mdi-comma-circle:before {\n  content: \"\\FE77\";\n}\n\n.mdi-comma-circle-outline:before {\n  content: \"\\FE78\";\n}\n\n.mdi-comment:before {\n  content: \"\\F17A\";\n}\n\n.mdi-comment-account:before {\n  content: \"\\F17B\";\n}\n\n.mdi-comment-account-outline:before {\n  content: \"\\F17C\";\n}\n\n.mdi-comment-alert:before {\n  content: \"\\F17D\";\n}\n\n.mdi-comment-alert-outline:before {\n  content: \"\\F17E\";\n}\n\n.mdi-comment-arrow-left:before {\n  content: \"\\F9E0\";\n}\n\n.mdi-comment-arrow-left-outline:before {\n  content: \"\\F9E1\";\n}\n\n.mdi-comment-arrow-right:before {\n  content: \"\\F9E2\";\n}\n\n.mdi-comment-arrow-right-outline:before {\n  content: \"\\F9E3\";\n}\n\n.mdi-comment-check:before {\n  content: \"\\F17F\";\n}\n\n.mdi-comment-check-outline:before {\n  content: \"\\F180\";\n}\n\n.mdi-comment-eye:before {\n  content: \"\\FA39\";\n}\n\n.mdi-comment-eye-outline:before {\n  content: \"\\FA3A\";\n}\n\n.mdi-comment-multiple:before {\n  content: \"\\F85E\";\n}\n\n.mdi-comment-multiple-outline:before {\n  content: \"\\F181\";\n}\n\n.mdi-comment-outline:before {\n  content: \"\\F182\";\n}\n\n.mdi-comment-plus:before {\n  content: \"\\F9E4\";\n}\n\n.mdi-comment-plus-outline:before {\n  content: \"\\F183\";\n}\n\n.mdi-comment-processing:before {\n  content: \"\\F184\";\n}\n\n.mdi-comment-processing-outline:before {\n  content: \"\\F185\";\n}\n\n.mdi-comment-question:before {\n  content: \"\\F816\";\n}\n\n.mdi-comment-question-outline:before {\n  content: \"\\F186\";\n}\n\n.mdi-comment-remove:before {\n  content: \"\\F5DE\";\n}\n\n.mdi-comment-remove-outline:before {\n  content: \"\\F187\";\n}\n\n.mdi-comment-search:before {\n  content: \"\\FA3B\";\n}\n\n.mdi-comment-search-outline:before {\n  content: \"\\FA3C\";\n}\n\n.mdi-comment-text:before {\n  content: \"\\F188\";\n}\n\n.mdi-comment-text-multiple:before {\n  content: \"\\F85F\";\n}\n\n.mdi-comment-text-multiple-outline:before {\n  content: \"\\F860\";\n}\n\n.mdi-comment-text-outline:before {\n  content: \"\\F189\";\n}\n\n.mdi-compare:before {\n  content: \"\\F18A\";\n}\n\n.mdi-compass:before {\n  content: \"\\F18B\";\n}\n\n.mdi-compass-off:before {\n  content: \"\\FB5C\";\n}\n\n.mdi-compass-off-outline:before {\n  content: \"\\FB5D\";\n}\n\n.mdi-compass-outline:before {\n  content: \"\\F18C\";\n}\n\n.mdi-console:before {\n  content: \"\\F18D\";\n}\n\n.mdi-console-line:before {\n  content: \"\\F7B6\";\n}\n\n.mdi-console-network:before {\n  content: \"\\F8A8\";\n}\n\n.mdi-console-network-outline:before {\n  content: \"\\FC3C\";\n}\n\n.mdi-contact-mail:before {\n  content: \"\\F18E\";\n}\n\n.mdi-contactless-payment:before {\n  content: \"\\FD46\";\n}\n\n.mdi-contacts:before {\n  content: \"\\F6CA\";\n}\n\n.mdi-contain:before {\n  content: \"\\FA3D\";\n}\n\n.mdi-contain-end:before {\n  content: \"\\FA3E\";\n}\n\n.mdi-contain-start:before {\n  content: \"\\FA3F\";\n}\n\n.mdi-content-copy:before {\n  content: \"\\F18F\";\n}\n\n.mdi-content-cut:before {\n  content: \"\\F190\";\n}\n\n.mdi-content-duplicate:before {\n  content: \"\\F191\";\n}\n\n.mdi-content-paste:before {\n  content: \"\\F192\";\n}\n\n.mdi-content-save:before {\n  content: \"\\F193\";\n}\n\n.mdi-content-save-all:before {\n  content: \"\\F194\";\n}\n\n.mdi-content-save-edit:before {\n  content: \"\\FCD7\";\n}\n\n.mdi-content-save-edit-outline:before {\n  content: \"\\FCD8\";\n}\n\n.mdi-content-save-move:before {\n  content: \"\\FE79\";\n}\n\n.mdi-content-save-move-outline:before {\n  content: \"\\FE7A\";\n}\n\n.mdi-content-save-outline:before {\n  content: \"\\F817\";\n}\n\n.mdi-content-save-settings:before {\n  content: \"\\F61B\";\n}\n\n.mdi-content-save-settings-outline:before {\n  content: \"\\FB13\";\n}\n\n.mdi-contrast:before {\n  content: \"\\F195\";\n}\n\n.mdi-contrast-box:before {\n  content: \"\\F196\";\n}\n\n.mdi-contrast-circle:before {\n  content: \"\\F197\";\n}\n\n.mdi-controller-classic:before {\n  content: \"\\FB5E\";\n}\n\n.mdi-controller-classic-outline:before {\n  content: \"\\FB5F\";\n}\n\n.mdi-cookie:before {\n  content: \"\\F198\";\n}\n\n.mdi-copyright:before {\n  content: \"\\F5E6\";\n}\n\n.mdi-cordova:before {\n  content: \"\\F957\";\n}\n\n.mdi-corn:before {\n  content: \"\\F7B7\";\n}\n\n.mdi-counter:before {\n  content: \"\\F199\";\n}\n\n.mdi-cow:before {\n  content: \"\\F19A\";\n}\n\n.mdi-crane:before {\n  content: \"\\F861\";\n}\n\n.mdi-creation:before {\n  content: \"\\F1C9\";\n}\n\n.mdi-creative-commons:before {\n  content: \"\\FD47\";\n}\n\n.mdi-credit-card:before {\n  content: \"\\F19B\";\n}\n\n.mdi-credit-card-marker:before {\n  content: \"\\FD9A\";\n}\n\n.mdi-credit-card-multiple:before {\n  content: \"\\F19C\";\n}\n\n.mdi-credit-card-off:before {\n  content: \"\\F5E4\";\n}\n\n.mdi-credit-card-plus:before {\n  content: \"\\F675\";\n}\n\n.mdi-credit-card-refund:before {\n  content: \"\\FAA7\";\n}\n\n.mdi-credit-card-scan:before {\n  content: \"\\F19D\";\n}\n\n.mdi-credit-card-settings:before {\n  content: \"\\F8D6\";\n}\n\n.mdi-credit-card-wireless:before {\n  content: \"\\FD48\";\n}\n\n.mdi-cricket:before {\n  content: \"\\FD49\";\n}\n\n.mdi-crop:before {\n  content: \"\\F19E\";\n}\n\n.mdi-crop-free:before {\n  content: \"\\F19F\";\n}\n\n.mdi-crop-landscape:before {\n  content: \"\\F1A0\";\n}\n\n.mdi-crop-portrait:before {\n  content: \"\\F1A1\";\n}\n\n.mdi-crop-rotate:before {\n  content: \"\\F695\";\n}\n\n.mdi-crop-square:before {\n  content: \"\\F1A2\";\n}\n\n.mdi-crosshairs:before {\n  content: \"\\F1A3\";\n}\n\n.mdi-crosshairs-gps:before {\n  content: \"\\F1A4\";\n}\n\n.mdi-crown:before {\n  content: \"\\F1A5\";\n}\n\n.mdi-cryengine:before {\n  content: \"\\F958\";\n}\n\n.mdi-crystal-ball:before {\n  content: \"\\FB14\";\n}\n\n.mdi-cube:before {\n  content: \"\\F1A6\";\n}\n\n.mdi-cube-outline:before {\n  content: \"\\F1A7\";\n}\n\n.mdi-cube-scan:before {\n  content: \"\\FB60\";\n}\n\n.mdi-cube-send:before {\n  content: \"\\F1A8\";\n}\n\n.mdi-cube-unfolded:before {\n  content: \"\\F1A9\";\n}\n\n.mdi-cup:before {\n  content: \"\\F1AA\";\n}\n\n.mdi-cup-off:before {\n  content: \"\\F5E5\";\n}\n\n.mdi-cup-water:before {\n  content: \"\\F1AB\";\n}\n\n.mdi-cupcake:before {\n  content: \"\\F959\";\n}\n\n.mdi-curling:before {\n  content: \"\\F862\";\n}\n\n.mdi-currency-bdt:before {\n  content: \"\\F863\";\n}\n\n.mdi-currency-brl:before {\n  content: \"\\FB61\";\n}\n\n.mdi-currency-btc:before {\n  content: \"\\F1AC\";\n}\n\n.mdi-currency-chf:before {\n  content: \"\\F7B8\";\n}\n\n.mdi-currency-cny:before {\n  content: \"\\F7B9\";\n}\n\n.mdi-currency-eth:before {\n  content: \"\\F7BA\";\n}\n\n.mdi-currency-eur:before {\n  content: \"\\F1AD\";\n}\n\n.mdi-currency-gbp:before {\n  content: \"\\F1AE\";\n}\n\n.mdi-currency-ils:before {\n  content: \"\\FC3D\";\n}\n\n.mdi-currency-inr:before {\n  content: \"\\F1AF\";\n}\n\n.mdi-currency-jpy:before {\n  content: \"\\F7BB\";\n}\n\n.mdi-currency-krw:before {\n  content: \"\\F7BC\";\n}\n\n.mdi-currency-kzt:before {\n  content: \"\\F864\";\n}\n\n.mdi-currency-ngn:before {\n  content: \"\\F1B0\";\n}\n\n.mdi-currency-php:before {\n  content: \"\\F9E5\";\n}\n\n.mdi-currency-rub:before {\n  content: \"\\F1B1\";\n}\n\n.mdi-currency-sign:before {\n  content: \"\\F7BD\";\n}\n\n.mdi-currency-try:before {\n  content: \"\\F1B2\";\n}\n\n.mdi-currency-twd:before {\n  content: \"\\F7BE\";\n}\n\n.mdi-currency-usd:before {\n  content: \"\\F1B3\";\n}\n\n.mdi-currency-usd-off:before {\n  content: \"\\F679\";\n}\n\n.mdi-current-ac:before {\n  content: \"\\F95A\";\n}\n\n.mdi-current-dc:before {\n  content: \"\\F95B\";\n}\n\n.mdi-cursor-default:before {\n  content: \"\\F1B4\";\n}\n\n.mdi-cursor-default-click:before {\n  content: \"\\FCD9\";\n}\n\n.mdi-cursor-default-click-outline:before {\n  content: \"\\FCDA\";\n}\n\n.mdi-cursor-default-outline:before {\n  content: \"\\F1B5\";\n}\n\n.mdi-cursor-move:before {\n  content: \"\\F1B6\";\n}\n\n.mdi-cursor-pointer:before {\n  content: \"\\F1B7\";\n}\n\n.mdi-cursor-text:before {\n  content: \"\\F5E7\";\n}\n\n.mdi-database:before {\n  content: \"\\F1B8\";\n}\n\n.mdi-database-check:before {\n  content: \"\\FAA8\";\n}\n\n.mdi-database-edit:before {\n  content: \"\\FB62\";\n}\n\n.mdi-database-export:before {\n  content: \"\\F95D\";\n}\n\n.mdi-database-import:before {\n  content: \"\\F95C\";\n}\n\n.mdi-database-lock:before {\n  content: \"\\FAA9\";\n}\n\n.mdi-database-minus:before {\n  content: \"\\F1B9\";\n}\n\n.mdi-database-plus:before {\n  content: \"\\F1BA\";\n}\n\n.mdi-database-refresh:before {\n  content: \"\\FCDB\";\n}\n\n.mdi-database-remove:before {\n  content: \"\\FCDC\";\n}\n\n.mdi-database-search:before {\n  content: \"\\F865\";\n}\n\n.mdi-database-settings:before {\n  content: \"\\FCDD\";\n}\n\n.mdi-death-star:before {\n  content: \"\\F8D7\";\n}\n\n.mdi-death-star-variant:before {\n  content: \"\\F8D8\";\n}\n\n.mdi-deathly-hallows:before {\n  content: \"\\FB63\";\n}\n\n.mdi-debian:before {\n  content: \"\\F8D9\";\n}\n\n.mdi-debug-step-into:before {\n  content: \"\\F1BB\";\n}\n\n.mdi-debug-step-out:before {\n  content: \"\\F1BC\";\n}\n\n.mdi-debug-step-over:before {\n  content: \"\\F1BD\";\n}\n\n.mdi-decagram:before {\n  content: \"\\F76B\";\n}\n\n.mdi-decagram-outline:before {\n  content: \"\\F76C\";\n}\n\n.mdi-decimal-decrease:before {\n  content: \"\\F1BE\";\n}\n\n.mdi-decimal-increase:before {\n  content: \"\\F1BF\";\n}\n\n.mdi-delete:before {\n  content: \"\\F1C0\";\n}\n\n.mdi-delete-circle:before {\n  content: \"\\F682\";\n}\n\n.mdi-delete-circle-outline:before {\n  content: \"\\FB64\";\n}\n\n.mdi-delete-empty:before {\n  content: \"\\F6CB\";\n}\n\n.mdi-delete-forever:before {\n  content: \"\\F5E8\";\n}\n\n.mdi-delete-forever-outline:before {\n  content: \"\\FB65\";\n}\n\n.mdi-delete-outline:before {\n  content: \"\\F9E6\";\n}\n\n.mdi-delete-restore:before {\n  content: \"\\F818\";\n}\n\n.mdi-delete-sweep:before {\n  content: \"\\F5E9\";\n}\n\n.mdi-delete-sweep-outline:before {\n  content: \"\\FC3E\";\n}\n\n.mdi-delete-variant:before {\n  content: \"\\F1C1\";\n}\n\n.mdi-delta:before {\n  content: \"\\F1C2\";\n}\n\n.mdi-desk-lamp:before {\n  content: \"\\F95E\";\n}\n\n.mdi-deskphone:before {\n  content: \"\\F1C3\";\n}\n\n.mdi-desktop-classic:before {\n  content: \"\\F7BF\";\n}\n\n.mdi-desktop-mac:before {\n  content: \"\\F1C4\";\n}\n\n.mdi-desktop-mac-dashboard:before {\n  content: \"\\F9E7\";\n}\n\n.mdi-desktop-tower:before {\n  content: \"\\F1C5\";\n}\n\n.mdi-desktop-tower-monitor:before {\n  content: \"\\FAAA\";\n}\n\n.mdi-details:before {\n  content: \"\\F1C6\";\n}\n\n.mdi-dev-to:before {\n  content: \"\\FD4A\";\n}\n\n.mdi-developer-board:before {\n  content: \"\\F696\";\n}\n\n.mdi-deviantart:before {\n  content: \"\\F1C7\";\n}\n\n.mdi-dialpad:before {\n  content: \"\\F61C\";\n}\n\n.mdi-diameter:before {\n  content: \"\\FC3F\";\n}\n\n.mdi-diameter-outline:before {\n  content: \"\\FC40\";\n}\n\n.mdi-diameter-variant:before {\n  content: \"\\FC41\";\n}\n\n.mdi-diamond:before {\n  content: \"\\FB66\";\n}\n\n.mdi-diamond-outline:before {\n  content: \"\\FB67\";\n}\n\n.mdi-diamond-stone:before {\n  content: \"\\F1C8\";\n}\n\n.mdi-dice-1:before {\n  content: \"\\F1CA\";\n}\n\n.mdi-dice-2:before {\n  content: \"\\F1CB\";\n}\n\n.mdi-dice-3:before {\n  content: \"\\F1CC\";\n}\n\n.mdi-dice-4:before {\n  content: \"\\F1CD\";\n}\n\n.mdi-dice-5:before {\n  content: \"\\F1CE\";\n}\n\n.mdi-dice-6:before {\n  content: \"\\F1CF\";\n}\n\n.mdi-dice-d10:before {\n  content: \"\\F76E\";\n}\n\n.mdi-dice-d12:before {\n  content: \"\\F866\";\n}\n\n.mdi-dice-d20:before {\n  content: \"\\F5EA\";\n}\n\n.mdi-dice-d4:before {\n  content: \"\\F5EB\";\n}\n\n.mdi-dice-d6:before {\n  content: \"\\F5EC\";\n}\n\n.mdi-dice-d8:before {\n  content: \"\\F5ED\";\n}\n\n.mdi-dice-multiple:before {\n  content: \"\\F76D\";\n}\n\n.mdi-dictionary:before {\n  content: \"\\F61D\";\n}\n\n.mdi-dip-switch:before {\n  content: \"\\F7C0\";\n}\n\n.mdi-directions:before {\n  content: \"\\F1D0\";\n}\n\n.mdi-directions-fork:before {\n  content: \"\\F641\";\n}\n\n.mdi-disc:before {\n  content: \"\\F5EE\";\n}\n\n.mdi-disc-alert:before {\n  content: \"\\F1D1\";\n}\n\n.mdi-disc-player:before {\n  content: \"\\F95F\";\n}\n\n.mdi-discord:before {\n  content: \"\\F66F\";\n}\n\n.mdi-dishwasher:before {\n  content: \"\\FAAB\";\n}\n\n.mdi-disqus:before {\n  content: \"\\F1D2\";\n}\n\n.mdi-disqus-outline:before {\n  content: \"\\F1D3\";\n}\n\n.mdi-diving-flippers:before {\n  content: \"\\FD9B\";\n}\n\n.mdi-diving-helmet:before {\n  content: \"\\FD9C\";\n}\n\n.mdi-diving-scuba:before {\n  content: \"\\FD9D\";\n}\n\n.mdi-diving-scuba-flag:before {\n  content: \"\\FD9E\";\n}\n\n.mdi-diving-scuba-tank:before {\n  content: \"\\FD9F\";\n}\n\n.mdi-diving-scuba-tank-multiple:before {\n  content: \"\\FDA0\";\n}\n\n.mdi-diving-snorkel:before {\n  content: \"\\FDA1\";\n}\n\n.mdi-division:before {\n  content: \"\\F1D4\";\n}\n\n.mdi-division-box:before {\n  content: \"\\F1D5\";\n}\n\n.mdi-dlna:before {\n  content: \"\\FA40\";\n}\n\n.mdi-dna:before {\n  content: \"\\F683\";\n}\n\n.mdi-dns:before {\n  content: \"\\F1D6\";\n}\n\n.mdi-dns-outline:before {\n  content: \"\\FB68\";\n}\n\n.mdi-do-not-disturb:before {\n  content: \"\\F697\";\n}\n\n.mdi-do-not-disturb-off:before {\n  content: \"\\F698\";\n}\n\n.mdi-docker:before {\n  content: \"\\F867\";\n}\n\n.mdi-doctor:before {\n  content: \"\\FA41\";\n}\n\n.mdi-dog:before {\n  content: \"\\FA42\";\n}\n\n.mdi-dog-service:before {\n  content: \"\\FAAC\";\n}\n\n.mdi-dog-side:before {\n  content: \"\\FA43\";\n}\n\n.mdi-dolby:before {\n  content: \"\\F6B2\";\n}\n\n.mdi-domain:before {\n  content: \"\\F1D7\";\n}\n\n.mdi-domain-off:before {\n  content: \"\\FD4B\";\n}\n\n.mdi-donkey:before {\n  content: \"\\F7C1\";\n}\n\n.mdi-door:before {\n  content: \"\\F819\";\n}\n\n.mdi-door-closed:before {\n  content: \"\\F81A\";\n}\n\n.mdi-door-open:before {\n  content: \"\\F81B\";\n}\n\n.mdi-doorbell-video:before {\n  content: \"\\F868\";\n}\n\n.mdi-dot-net:before {\n  content: \"\\FAAD\";\n}\n\n.mdi-dots-horizontal:before {\n  content: \"\\F1D8\";\n}\n\n.mdi-dots-horizontal-circle:before {\n  content: \"\\F7C2\";\n}\n\n.mdi-dots-horizontal-circle-outline:before {\n  content: \"\\FB69\";\n}\n\n.mdi-dots-vertical:before {\n  content: \"\\F1D9\";\n}\n\n.mdi-dots-vertical-circle:before {\n  content: \"\\F7C3\";\n}\n\n.mdi-dots-vertical-circle-outline:before {\n  content: \"\\FB6A\";\n}\n\n.mdi-douban:before {\n  content: \"\\F699\";\n}\n\n.mdi-download:before {\n  content: \"\\F1DA\";\n}\n\n.mdi-download-multiple:before {\n  content: \"\\F9E8\";\n}\n\n.mdi-download-network:before {\n  content: \"\\F6F3\";\n}\n\n.mdi-download-network-outline:before {\n  content: \"\\FC42\";\n}\n\n.mdi-download-outline:before {\n  content: \"\\FB6B\";\n}\n\n.mdi-drag:before {\n  content: \"\\F1DB\";\n}\n\n.mdi-drag-horizontal:before {\n  content: \"\\F1DC\";\n}\n\n.mdi-drag-variant:before {\n  content: \"\\FB6C\";\n}\n\n.mdi-drag-vertical:before {\n  content: \"\\F1DD\";\n}\n\n.mdi-drama-masks:before {\n  content: \"\\FCDE\";\n}\n\n.mdi-drawing:before {\n  content: \"\\F1DE\";\n}\n\n.mdi-drawing-box:before {\n  content: \"\\F1DF\";\n}\n\n.mdi-dribbble:before {\n  content: \"\\F1E0\";\n}\n\n.mdi-dribbble-box:before {\n  content: \"\\F1E1\";\n}\n\n.mdi-drone:before {\n  content: \"\\F1E2\";\n}\n\n.mdi-dropbox:before {\n  content: \"\\F1E3\";\n}\n\n.mdi-drupal:before {\n  content: \"\\F1E4\";\n}\n\n.mdi-duck:before {\n  content: \"\\F1E5\";\n}\n\n.mdi-dumbbell:before {\n  content: \"\\F1E6\";\n}\n\n.mdi-dump-truck:before {\n  content: \"\\FC43\";\n}\n\n.mdi-ear-hearing:before {\n  content: \"\\F7C4\";\n}\n\n.mdi-ear-hearing-off:before {\n  content: \"\\FA44\";\n}\n\n.mdi-earth:before {\n  content: \"\\F1E7\";\n}\n\n.mdi-earth-box:before {\n  content: \"\\F6CC\";\n}\n\n.mdi-earth-box-off:before {\n  content: \"\\F6CD\";\n}\n\n.mdi-earth-off:before {\n  content: \"\\F1E8\";\n}\n\n.mdi-edge:before {\n  content: \"\\F1E9\";\n}\n\n.mdi-egg:before {\n  content: \"\\FAAE\";\n}\n\n.mdi-egg-easter:before {\n  content: \"\\FAAF\";\n}\n\n.mdi-eight-track:before {\n  content: \"\\F9E9\";\n}\n\n.mdi-eject:before {\n  content: \"\\F1EA\";\n}\n\n.mdi-eject-outline:before {\n  content: \"\\FB6D\";\n}\n\n.mdi-elephant:before {\n  content: \"\\F7C5\";\n}\n\n.mdi-elevation-decline:before {\n  content: \"\\F1EB\";\n}\n\n.mdi-elevation-rise:before {\n  content: \"\\F1EC\";\n}\n\n.mdi-elevator:before {\n  content: \"\\F1ED\";\n}\n\n.mdi-email:before {\n  content: \"\\F1EE\";\n}\n\n.mdi-email-alert:before {\n  content: \"\\F6CE\";\n}\n\n.mdi-email-box:before {\n  content: \"\\FCDF\";\n}\n\n.mdi-email-check:before {\n  content: \"\\FAB0\";\n}\n\n.mdi-email-check-outline:before {\n  content: \"\\FAB1\";\n}\n\n.mdi-email-lock:before {\n  content: \"\\F1F1\";\n}\n\n.mdi-email-mark-as-unread:before {\n  content: \"\\FB6E\";\n}\n\n.mdi-email-open:before {\n  content: \"\\F1EF\";\n}\n\n.mdi-email-open-outline:before {\n  content: \"\\F5EF\";\n}\n\n.mdi-email-outline:before {\n  content: \"\\F1F0\";\n}\n\n.mdi-email-plus:before {\n  content: \"\\F9EA\";\n}\n\n.mdi-email-plus-outline:before {\n  content: \"\\F9EB\";\n}\n\n.mdi-email-search:before {\n  content: \"\\F960\";\n}\n\n.mdi-email-search-outline:before {\n  content: \"\\F961\";\n}\n\n.mdi-email-variant:before {\n  content: \"\\F5F0\";\n}\n\n.mdi-ember:before {\n  content: \"\\FB15\";\n}\n\n.mdi-emby:before {\n  content: \"\\F6B3\";\n}\n\n.mdi-emoticon:before {\n  content: \"\\FC44\";\n}\n\n.mdi-emoticon-angry:before {\n  content: \"\\FC45\";\n}\n\n.mdi-emoticon-angry-outline:before {\n  content: \"\\FC46\";\n}\n\n.mdi-emoticon-cool:before {\n  content: \"\\FC47\";\n}\n\n.mdi-emoticon-cool-outline:before {\n  content: \"\\F1F3\";\n}\n\n.mdi-emoticon-cry:before {\n  content: \"\\FC48\";\n}\n\n.mdi-emoticon-cry-outline:before {\n  content: \"\\FC49\";\n}\n\n.mdi-emoticon-dead:before {\n  content: \"\\FC4A\";\n}\n\n.mdi-emoticon-dead-outline:before {\n  content: \"\\F69A\";\n}\n\n.mdi-emoticon-devil:before {\n  content: \"\\FC4B\";\n}\n\n.mdi-emoticon-devil-outline:before {\n  content: \"\\F1F4\";\n}\n\n.mdi-emoticon-excited:before {\n  content: \"\\FC4C\";\n}\n\n.mdi-emoticon-excited-outline:before {\n  content: \"\\F69B\";\n}\n\n.mdi-emoticon-happy:before {\n  content: \"\\FC4D\";\n}\n\n.mdi-emoticon-happy-outline:before {\n  content: \"\\F1F5\";\n}\n\n.mdi-emoticon-kiss:before {\n  content: \"\\FC4E\";\n}\n\n.mdi-emoticon-kiss-outline:before {\n  content: \"\\FC4F\";\n}\n\n.mdi-emoticon-neutral:before {\n  content: \"\\FC50\";\n}\n\n.mdi-emoticon-neutral-outline:before {\n  content: \"\\F1F6\";\n}\n\n.mdi-emoticon-outline:before {\n  content: \"\\F1F2\";\n}\n\n.mdi-emoticon-poop:before {\n  content: \"\\F1F7\";\n}\n\n.mdi-emoticon-poop-outline:before {\n  content: \"\\FC51\";\n}\n\n.mdi-emoticon-sad:before {\n  content: \"\\FC52\";\n}\n\n.mdi-emoticon-sad-outline:before {\n  content: \"\\F1F8\";\n}\n\n.mdi-emoticon-tongue:before {\n  content: \"\\F1F9\";\n}\n\n.mdi-emoticon-tongue-outline:before {\n  content: \"\\FC53\";\n}\n\n.mdi-emoticon-wink:before {\n  content: \"\\FC54\";\n}\n\n.mdi-emoticon-wink-outline:before {\n  content: \"\\FC55\";\n}\n\n.mdi-engine:before {\n  content: \"\\F1FA\";\n}\n\n.mdi-engine-off:before {\n  content: \"\\FA45\";\n}\n\n.mdi-engine-off-outline:before {\n  content: \"\\FA46\";\n}\n\n.mdi-engine-outline:before {\n  content: \"\\F1FB\";\n}\n\n.mdi-equal:before {\n  content: \"\\F1FC\";\n}\n\n.mdi-equal-box:before {\n  content: \"\\F1FD\";\n}\n\n.mdi-eraser:before {\n  content: \"\\F1FE\";\n}\n\n.mdi-eraser-variant:before {\n  content: \"\\F642\";\n}\n\n.mdi-escalator:before {\n  content: \"\\F1FF\";\n}\n\n.mdi-eslint:before {\n  content: \"\\FC56\";\n}\n\n.mdi-et:before {\n  content: \"\\FAB2\";\n}\n\n.mdi-ethereum:before {\n  content: \"\\F869\";\n}\n\n.mdi-ethernet:before {\n  content: \"\\F200\";\n}\n\n.mdi-ethernet-cable:before {\n  content: \"\\F201\";\n}\n\n.mdi-ethernet-cable-off:before {\n  content: \"\\F202\";\n}\n\n.mdi-etsy:before {\n  content: \"\\F203\";\n}\n\n.mdi-ev-station:before {\n  content: \"\\F5F1\";\n}\n\n.mdi-eventbrite:before {\n  content: \"\\F7C6\";\n}\n\n.mdi-evernote:before {\n  content: \"\\F204\";\n}\n\n.mdi-exclamation:before {\n  content: \"\\F205\";\n}\n\n.mdi-exit-run:before {\n  content: \"\\FA47\";\n}\n\n.mdi-exit-to-app:before {\n  content: \"\\F206\";\n}\n\n.mdi-expand-all:before {\n  content: \"\\FAB3\";\n}\n\n.mdi-expand-all-outline:before {\n  content: \"\\FAB4\";\n}\n\n.mdi-exponent:before {\n  content: \"\\F962\";\n}\n\n.mdi-exponent-box:before {\n  content: \"\\F963\";\n}\n\n.mdi-export:before {\n  content: \"\\F207\";\n}\n\n.mdi-export-variant:before {\n  content: \"\\FB6F\";\n}\n\n.mdi-eye:before {\n  content: \"\\F208\";\n}\n\n.mdi-eye-check:before {\n  content: \"\\FCE0\";\n}\n\n.mdi-eye-check-outline:before {\n  content: \"\\FCE1\";\n}\n\n.mdi-eye-circle:before {\n  content: \"\\FB70\";\n}\n\n.mdi-eye-circle-outline:before {\n  content: \"\\FB71\";\n}\n\n.mdi-eye-off:before {\n  content: \"\\F209\";\n}\n\n.mdi-eye-off-outline:before {\n  content: \"\\F6D0\";\n}\n\n.mdi-eye-outline:before {\n  content: \"\\F6CF\";\n}\n\n.mdi-eye-plus:before {\n  content: \"\\F86A\";\n}\n\n.mdi-eye-plus-outline:before {\n  content: \"\\F86B\";\n}\n\n.mdi-eye-settings:before {\n  content: \"\\F86C\";\n}\n\n.mdi-eye-settings-outline:before {\n  content: \"\\F86D\";\n}\n\n.mdi-eyedropper:before {\n  content: \"\\F20A\";\n}\n\n.mdi-eyedropper-variant:before {\n  content: \"\\F20B\";\n}\n\n.mdi-face:before {\n  content: \"\\F643\";\n}\n\n.mdi-face-agent:before {\n  content: \"\\FD4C\";\n}\n\n.mdi-face-outline:before {\n  content: \"\\FB72\";\n}\n\n.mdi-face-profile:before {\n  content: \"\\F644\";\n}\n\n.mdi-face-recognition:before {\n  content: \"\\FC57\";\n}\n\n.mdi-facebook:before {\n  content: \"\\F20C\";\n}\n\n.mdi-facebook-box:before {\n  content: \"\\F20D\";\n}\n\n.mdi-facebook-messenger:before {\n  content: \"\\F20E\";\n}\n\n.mdi-facebook-workplace:before {\n  content: \"\\FB16\";\n}\n\n.mdi-factory:before {\n  content: \"\\F20F\";\n}\n\n.mdi-fan:before {\n  content: \"\\F210\";\n}\n\n.mdi-fan-off:before {\n  content: \"\\F81C\";\n}\n\n.mdi-fast-forward:before {\n  content: \"\\F211\";\n}\n\n.mdi-fast-forward-10:before {\n  content: \"\\FD4D\";\n}\n\n.mdi-fast-forward-30:before {\n  content: \"\\FCE2\";\n}\n\n.mdi-fast-forward-outline:before {\n  content: \"\\F6D1\";\n}\n\n.mdi-fax:before {\n  content: \"\\F212\";\n}\n\n.mdi-feather:before {\n  content: \"\\F6D2\";\n}\n\n.mdi-feature-search:before {\n  content: \"\\FA48\";\n}\n\n.mdi-feature-search-outline:before {\n  content: \"\\FA49\";\n}\n\n.mdi-fedora:before {\n  content: \"\\F8DA\";\n}\n\n.mdi-ferry:before {\n  content: \"\\F213\";\n}\n\n.mdi-file:before {\n  content: \"\\F214\";\n}\n\n.mdi-file-account:before {\n  content: \"\\F73A\";\n}\n\n.mdi-file-alert:before {\n  content: \"\\FA4A\";\n}\n\n.mdi-file-alert-outline:before {\n  content: \"\\FA4B\";\n}\n\n.mdi-file-cabinet:before {\n  content: \"\\FAB5\";\n}\n\n.mdi-file-cancel:before {\n  content: \"\\FDA2\";\n}\n\n.mdi-file-cancel-outline:before {\n  content: \"\\FDA3\";\n}\n\n.mdi-file-chart:before {\n  content: \"\\F215\";\n}\n\n.mdi-file-check:before {\n  content: \"\\F216\";\n}\n\n.mdi-file-check-outline:before {\n  content: \"\\FE7B\";\n}\n\n.mdi-file-cloud:before {\n  content: \"\\F217\";\n}\n\n.mdi-file-compare:before {\n  content: \"\\F8A9\";\n}\n\n.mdi-file-delimited:before {\n  content: \"\\F218\";\n}\n\n.mdi-file-document:before {\n  content: \"\\F219\";\n}\n\n.mdi-file-document-box:before {\n  content: \"\\F21A\";\n}\n\n.mdi-file-document-box-multiple:before {\n  content: \"\\FAB6\";\n}\n\n.mdi-file-document-box-multiple-outline:before {\n  content: \"\\FAB7\";\n}\n\n.mdi-file-document-box-outline:before {\n  content: \"\\F9EC\";\n}\n\n.mdi-file-document-edit:before {\n  content: \"\\FDA4\";\n}\n\n.mdi-file-document-edit-outline:before {\n  content: \"\\FDA5\";\n}\n\n.mdi-file-document-outline:before {\n  content: \"\\F9ED\";\n}\n\n.mdi-file-download:before {\n  content: \"\\F964\";\n}\n\n.mdi-file-download-outline:before {\n  content: \"\\F965\";\n}\n\n.mdi-file-excel:before {\n  content: \"\\F21B\";\n}\n\n.mdi-file-excel-box:before {\n  content: \"\\F21C\";\n}\n\n.mdi-file-export:before {\n  content: \"\\F21D\";\n}\n\n.mdi-file-eye:before {\n  content: \"\\FDA6\";\n}\n\n.mdi-file-eye-outline:before {\n  content: \"\\FDA7\";\n}\n\n.mdi-file-find:before {\n  content: \"\\F21E\";\n}\n\n.mdi-file-find-outline:before {\n  content: \"\\FB73\";\n}\n\n.mdi-file-hidden:before {\n  content: \"\\F613\";\n}\n\n.mdi-file-image:before {\n  content: \"\\F21F\";\n}\n\n.mdi-file-import:before {\n  content: \"\\F220\";\n}\n\n.mdi-file-lock:before {\n  content: \"\\F221\";\n}\n\n.mdi-file-move:before {\n  content: \"\\FAB8\";\n}\n\n.mdi-file-multiple:before {\n  content: \"\\F222\";\n}\n\n.mdi-file-music:before {\n  content: \"\\F223\";\n}\n\n.mdi-file-music-outline:before {\n  content: \"\\FE7C\";\n}\n\n.mdi-file-outline:before {\n  content: \"\\F224\";\n}\n\n.mdi-file-pdf:before {\n  content: \"\\F225\";\n}\n\n.mdi-file-pdf-box:before {\n  content: \"\\F226\";\n}\n\n.mdi-file-pdf-outline:before {\n  content: \"\\FE7D\";\n}\n\n.mdi-file-percent:before {\n  content: \"\\F81D\";\n}\n\n.mdi-file-plus:before {\n  content: \"\\F751\";\n}\n\n.mdi-file-powerpoint:before {\n  content: \"\\F227\";\n}\n\n.mdi-file-powerpoint-box:before {\n  content: \"\\F228\";\n}\n\n.mdi-file-presentation-box:before {\n  content: \"\\F229\";\n}\n\n.mdi-file-question:before {\n  content: \"\\F86E\";\n}\n\n.mdi-file-remove:before {\n  content: \"\\FB74\";\n}\n\n.mdi-file-replace:before {\n  content: \"\\FB17\";\n}\n\n.mdi-file-replace-outline:before {\n  content: \"\\FB18\";\n}\n\n.mdi-file-restore:before {\n  content: \"\\F670\";\n}\n\n.mdi-file-search:before {\n  content: \"\\FC58\";\n}\n\n.mdi-file-search-outline:before {\n  content: \"\\FC59\";\n}\n\n.mdi-file-send:before {\n  content: \"\\F22A\";\n}\n\n.mdi-file-table:before {\n  content: \"\\FC5A\";\n}\n\n.mdi-file-table-outline:before {\n  content: \"\\FC5B\";\n}\n\n.mdi-file-tree:before {\n  content: \"\\F645\";\n}\n\n.mdi-file-undo:before {\n  content: \"\\F8DB\";\n}\n\n.mdi-file-upload:before {\n  content: \"\\FA4C\";\n}\n\n.mdi-file-upload-outline:before {\n  content: \"\\FA4D\";\n}\n\n.mdi-file-video:before {\n  content: \"\\F22B\";\n}\n\n.mdi-file-video-outline:before {\n  content: \"\\FE10\";\n}\n\n.mdi-file-word:before {\n  content: \"\\F22C\";\n}\n\n.mdi-file-word-box:before {\n  content: \"\\F22D\";\n}\n\n.mdi-file-xml:before {\n  content: \"\\F22E\";\n}\n\n.mdi-film:before {\n  content: \"\\F22F\";\n}\n\n.mdi-filmstrip:before {\n  content: \"\\F230\";\n}\n\n.mdi-filmstrip-off:before {\n  content: \"\\F231\";\n}\n\n.mdi-filter:before {\n  content: \"\\F232\";\n}\n\n.mdi-filter-outline:before {\n  content: \"\\F233\";\n}\n\n.mdi-filter-remove:before {\n  content: \"\\F234\";\n}\n\n.mdi-filter-remove-outline:before {\n  content: \"\\F235\";\n}\n\n.mdi-filter-variant:before {\n  content: \"\\F236\";\n}\n\n.mdi-finance:before {\n  content: \"\\F81E\";\n}\n\n.mdi-find-replace:before {\n  content: \"\\F6D3\";\n}\n\n.mdi-fingerprint:before {\n  content: \"\\F237\";\n}\n\n.mdi-fire:before {\n  content: \"\\F238\";\n}\n\n.mdi-fire-truck:before {\n  content: \"\\F8AA\";\n}\n\n.mdi-firebase:before {\n  content: \"\\F966\";\n}\n\n.mdi-firefox:before {\n  content: \"\\F239\";\n}\n\n.mdi-fireplace:before {\n  content: \"\\FE11\";\n}\n\n.mdi-fireplace-off:before {\n  content: \"\\FE12\";\n}\n\n.mdi-firework:before {\n  content: \"\\FE13\";\n}\n\n.mdi-fish:before {\n  content: \"\\F23A\";\n}\n\n.mdi-flag:before {\n  content: \"\\F23B\";\n}\n\n.mdi-flag-checkered:before {\n  content: \"\\F23C\";\n}\n\n.mdi-flag-minus:before {\n  content: \"\\FB75\";\n}\n\n.mdi-flag-outline:before {\n  content: \"\\F23D\";\n}\n\n.mdi-flag-plus:before {\n  content: \"\\FB76\";\n}\n\n.mdi-flag-remove:before {\n  content: \"\\FB77\";\n}\n\n.mdi-flag-triangle:before {\n  content: \"\\F23F\";\n}\n\n.mdi-flag-variant:before {\n  content: \"\\F240\";\n}\n\n.mdi-flag-variant-outline:before {\n  content: \"\\F23E\";\n}\n\n.mdi-flare:before {\n  content: \"\\FD4E\";\n}\n\n.mdi-flash:before {\n  content: \"\\F241\";\n}\n\n.mdi-flash-auto:before {\n  content: \"\\F242\";\n}\n\n.mdi-flash-circle:before {\n  content: \"\\F81F\";\n}\n\n.mdi-flash-off:before {\n  content: \"\\F243\";\n}\n\n.mdi-flash-outline:before {\n  content: \"\\F6D4\";\n}\n\n.mdi-flash-red-eye:before {\n  content: \"\\F67A\";\n}\n\n.mdi-flashlight:before {\n  content: \"\\F244\";\n}\n\n.mdi-flashlight-off:before {\n  content: \"\\F245\";\n}\n\n.mdi-flask:before {\n  content: \"\\F093\";\n}\n\n.mdi-flask-empty:before {\n  content: \"\\F094\";\n}\n\n.mdi-flask-empty-outline:before {\n  content: \"\\F095\";\n}\n\n.mdi-flask-outline:before {\n  content: \"\\F096\";\n}\n\n.mdi-flattr:before {\n  content: \"\\F246\";\n}\n\n.mdi-flickr:before {\n  content: \"\\FCE3\";\n}\n\n.mdi-flip-to-back:before {\n  content: \"\\F247\";\n}\n\n.mdi-flip-to-front:before {\n  content: \"\\F248\";\n}\n\n.mdi-floor-lamp:before {\n  content: \"\\F8DC\";\n}\n\n.mdi-floor-plan:before {\n  content: \"\\F820\";\n}\n\n.mdi-floppy:before {\n  content: \"\\F249\";\n}\n\n.mdi-floppy-variant:before {\n  content: \"\\F9EE\";\n}\n\n.mdi-flower:before {\n  content: \"\\F24A\";\n}\n\n.mdi-flower-outline:before {\n  content: \"\\F9EF\";\n}\n\n.mdi-flower-poppy:before {\n  content: \"\\FCE4\";\n}\n\n.mdi-flower-tulip:before {\n  content: \"\\F9F0\";\n}\n\n.mdi-flower-tulip-outline:before {\n  content: \"\\F9F1\";\n}\n\n.mdi-folder:before {\n  content: \"\\F24B\";\n}\n\n.mdi-folder-account:before {\n  content: \"\\F24C\";\n}\n\n.mdi-folder-account-outline:before {\n  content: \"\\FB78\";\n}\n\n.mdi-folder-alert:before {\n  content: \"\\FDA8\";\n}\n\n.mdi-folder-alert-outline:before {\n  content: \"\\FDA9\";\n}\n\n.mdi-folder-clock:before {\n  content: \"\\FAB9\";\n}\n\n.mdi-folder-clock-outline:before {\n  content: \"\\FABA\";\n}\n\n.mdi-folder-download:before {\n  content: \"\\F24D\";\n}\n\n.mdi-folder-edit:before {\n  content: \"\\F8DD\";\n}\n\n.mdi-folder-edit-outline:before {\n  content: \"\\FDAA\";\n}\n\n.mdi-folder-google-drive:before {\n  content: \"\\F24E\";\n}\n\n.mdi-folder-image:before {\n  content: \"\\F24F\";\n}\n\n.mdi-folder-key:before {\n  content: \"\\F8AB\";\n}\n\n.mdi-folder-key-network:before {\n  content: \"\\F8AC\";\n}\n\n.mdi-folder-key-network-outline:before {\n  content: \"\\FC5C\";\n}\n\n.mdi-folder-lock:before {\n  content: \"\\F250\";\n}\n\n.mdi-folder-lock-open:before {\n  content: \"\\F251\";\n}\n\n.mdi-folder-move:before {\n  content: \"\\F252\";\n}\n\n.mdi-folder-multiple:before {\n  content: \"\\F253\";\n}\n\n.mdi-folder-multiple-image:before {\n  content: \"\\F254\";\n}\n\n.mdi-folder-multiple-outline:before {\n  content: \"\\F255\";\n}\n\n.mdi-folder-network:before {\n  content: \"\\F86F\";\n}\n\n.mdi-folder-network-outline:before {\n  content: \"\\FC5D\";\n}\n\n.mdi-folder-open:before {\n  content: \"\\F76F\";\n}\n\n.mdi-folder-open-outline:before {\n  content: \"\\FDAB\";\n}\n\n.mdi-folder-outline:before {\n  content: \"\\F256\";\n}\n\n.mdi-folder-plus:before {\n  content: \"\\F257\";\n}\n\n.mdi-folder-plus-outline:before {\n  content: \"\\FB79\";\n}\n\n.mdi-folder-pound:before {\n  content: \"\\FCE5\";\n}\n\n.mdi-folder-pound-outline:before {\n  content: \"\\FCE6\";\n}\n\n.mdi-folder-remove:before {\n  content: \"\\F258\";\n}\n\n.mdi-folder-remove-outline:before {\n  content: \"\\FB7A\";\n}\n\n.mdi-folder-search:before {\n  content: \"\\F967\";\n}\n\n.mdi-folder-search-outline:before {\n  content: \"\\F968\";\n}\n\n.mdi-folder-star:before {\n  content: \"\\F69C\";\n}\n\n.mdi-folder-star-outline:before {\n  content: \"\\FB7B\";\n}\n\n.mdi-folder-sync:before {\n  content: \"\\FCE7\";\n}\n\n.mdi-folder-sync-outline:before {\n  content: \"\\FCE8\";\n}\n\n.mdi-folder-text:before {\n  content: \"\\FC5E\";\n}\n\n.mdi-folder-text-outline:before {\n  content: \"\\FC5F\";\n}\n\n.mdi-folder-upload:before {\n  content: \"\\F259\";\n}\n\n.mdi-font-awesome:before {\n  content: \"\\F03A\";\n}\n\n.mdi-food:before {\n  content: \"\\F25A\";\n}\n\n.mdi-food-apple:before {\n  content: \"\\F25B\";\n}\n\n.mdi-food-apple-outline:before {\n  content: \"\\FC60\";\n}\n\n.mdi-food-croissant:before {\n  content: \"\\F7C7\";\n}\n\n.mdi-food-fork-drink:before {\n  content: \"\\F5F2\";\n}\n\n.mdi-food-off:before {\n  content: \"\\F5F3\";\n}\n\n.mdi-food-variant:before {\n  content: \"\\F25C\";\n}\n\n.mdi-football:before {\n  content: \"\\F25D\";\n}\n\n.mdi-football-australian:before {\n  content: \"\\F25E\";\n}\n\n.mdi-football-helmet:before {\n  content: \"\\F25F\";\n}\n\n.mdi-forklift:before {\n  content: \"\\F7C8\";\n}\n\n.mdi-format-align-bottom:before {\n  content: \"\\F752\";\n}\n\n.mdi-format-align-center:before {\n  content: \"\\F260\";\n}\n\n.mdi-format-align-justify:before {\n  content: \"\\F261\";\n}\n\n.mdi-format-align-left:before {\n  content: \"\\F262\";\n}\n\n.mdi-format-align-middle:before {\n  content: \"\\F753\";\n}\n\n.mdi-format-align-right:before {\n  content: \"\\F263\";\n}\n\n.mdi-format-align-top:before {\n  content: \"\\F754\";\n}\n\n.mdi-format-annotation-minus:before {\n  content: \"\\FABB\";\n}\n\n.mdi-format-annotation-plus:before {\n  content: \"\\F646\";\n}\n\n.mdi-format-bold:before {\n  content: \"\\F264\";\n}\n\n.mdi-format-clear:before {\n  content: \"\\F265\";\n}\n\n.mdi-format-color-fill:before {\n  content: \"\\F266\";\n}\n\n.mdi-format-color-highlight:before {\n  content: \"\\FE14\";\n}\n\n.mdi-format-color-text:before {\n  content: \"\\F69D\";\n}\n\n.mdi-format-columns:before {\n  content: \"\\F8DE\";\n}\n\n.mdi-format-float-center:before {\n  content: \"\\F267\";\n}\n\n.mdi-format-float-left:before {\n  content: \"\\F268\";\n}\n\n.mdi-format-float-none:before {\n  content: \"\\F269\";\n}\n\n.mdi-format-float-right:before {\n  content: \"\\F26A\";\n}\n\n.mdi-format-font:before {\n  content: \"\\F6D5\";\n}\n\n.mdi-format-font-size-decrease:before {\n  content: \"\\F9F2\";\n}\n\n.mdi-format-font-size-increase:before {\n  content: \"\\F9F3\";\n}\n\n.mdi-format-header-1:before {\n  content: \"\\F26B\";\n}\n\n.mdi-format-header-2:before {\n  content: \"\\F26C\";\n}\n\n.mdi-format-header-3:before {\n  content: \"\\F26D\";\n}\n\n.mdi-format-header-4:before {\n  content: \"\\F26E\";\n}\n\n.mdi-format-header-5:before {\n  content: \"\\F26F\";\n}\n\n.mdi-format-header-6:before {\n  content: \"\\F270\";\n}\n\n.mdi-format-header-decrease:before {\n  content: \"\\F271\";\n}\n\n.mdi-format-header-equal:before {\n  content: \"\\F272\";\n}\n\n.mdi-format-header-increase:before {\n  content: \"\\F273\";\n}\n\n.mdi-format-header-pound:before {\n  content: \"\\F274\";\n}\n\n.mdi-format-horizontal-align-center:before {\n  content: \"\\F61E\";\n}\n\n.mdi-format-horizontal-align-left:before {\n  content: \"\\F61F\";\n}\n\n.mdi-format-horizontal-align-right:before {\n  content: \"\\F620\";\n}\n\n.mdi-format-indent-decrease:before {\n  content: \"\\F275\";\n}\n\n.mdi-format-indent-increase:before {\n  content: \"\\F276\";\n}\n\n.mdi-format-italic:before {\n  content: \"\\F277\";\n}\n\n.mdi-format-letter-case:before {\n  content: \"\\FB19\";\n}\n\n.mdi-format-letter-case-lower:before {\n  content: \"\\FB1A\";\n}\n\n.mdi-format-letter-case-upper:before {\n  content: \"\\FB1B\";\n}\n\n.mdi-format-line-spacing:before {\n  content: \"\\F278\";\n}\n\n.mdi-format-line-style:before {\n  content: \"\\F5C8\";\n}\n\n.mdi-format-line-weight:before {\n  content: \"\\F5C9\";\n}\n\n.mdi-format-list-bulleted:before {\n  content: \"\\F279\";\n}\n\n.mdi-format-list-bulleted-square:before {\n  content: \"\\FDAC\";\n}\n\n.mdi-format-list-bulleted-type:before {\n  content: \"\\F27A\";\n}\n\n.mdi-format-list-checkbox:before {\n  content: \"\\F969\";\n}\n\n.mdi-format-list-checks:before {\n  content: \"\\F755\";\n}\n\n.mdi-format-list-numbered:before {\n  content: \"\\F27B\";\n}\n\n.mdi-format-list-numbered-rtl:before {\n  content: \"\\FCE9\";\n}\n\n.mdi-format-page-break:before {\n  content: \"\\F6D6\";\n}\n\n.mdi-format-paint:before {\n  content: \"\\F27C\";\n}\n\n.mdi-format-paragraph:before {\n  content: \"\\F27D\";\n}\n\n.mdi-format-pilcrow:before {\n  content: \"\\F6D7\";\n}\n\n.mdi-format-quote-close:before {\n  content: \"\\F27E\";\n}\n\n.mdi-format-quote-open:before {\n  content: \"\\F756\";\n}\n\n.mdi-format-rotate-90:before {\n  content: \"\\F6A9\";\n}\n\n.mdi-format-section:before {\n  content: \"\\F69E\";\n}\n\n.mdi-format-size:before {\n  content: \"\\F27F\";\n}\n\n.mdi-format-strikethrough:before {\n  content: \"\\F280\";\n}\n\n.mdi-format-strikethrough-variant:before {\n  content: \"\\F281\";\n}\n\n.mdi-format-subscript:before {\n  content: \"\\F282\";\n}\n\n.mdi-format-superscript:before {\n  content: \"\\F283\";\n}\n\n.mdi-format-text:before {\n  content: \"\\F284\";\n}\n\n.mdi-format-text-rotation-down:before {\n  content: \"\\FD4F\";\n}\n\n.mdi-format-text-rotation-none:before {\n  content: \"\\FD50\";\n}\n\n.mdi-format-text-variant:before {\n  content: \"\\FE15\";\n}\n\n.mdi-format-text-wrapping-clip:before {\n  content: \"\\FCEA\";\n}\n\n.mdi-format-text-wrapping-overflow:before {\n  content: \"\\FCEB\";\n}\n\n.mdi-format-text-wrapping-wrap:before {\n  content: \"\\FCEC\";\n}\n\n.mdi-format-textbox:before {\n  content: \"\\FCED\";\n}\n\n.mdi-format-textdirection-l-to-r:before {\n  content: \"\\F285\";\n}\n\n.mdi-format-textdirection-r-to-l:before {\n  content: \"\\F286\";\n}\n\n.mdi-format-title:before {\n  content: \"\\F5F4\";\n}\n\n.mdi-format-underline:before {\n  content: \"\\F287\";\n}\n\n.mdi-format-vertical-align-bottom:before {\n  content: \"\\F621\";\n}\n\n.mdi-format-vertical-align-center:before {\n  content: \"\\F622\";\n}\n\n.mdi-format-vertical-align-top:before {\n  content: \"\\F623\";\n}\n\n.mdi-format-wrap-inline:before {\n  content: \"\\F288\";\n}\n\n.mdi-format-wrap-square:before {\n  content: \"\\F289\";\n}\n\n.mdi-format-wrap-tight:before {\n  content: \"\\F28A\";\n}\n\n.mdi-format-wrap-top-bottom:before {\n  content: \"\\F28B\";\n}\n\n.mdi-forum:before {\n  content: \"\\F28C\";\n}\n\n.mdi-forum-outline:before {\n  content: \"\\F821\";\n}\n\n.mdi-forward:before {\n  content: \"\\F28D\";\n}\n\n.mdi-forwardburger:before {\n  content: \"\\FD51\";\n}\n\n.mdi-fountain:before {\n  content: \"\\F96A\";\n}\n\n.mdi-fountain-pen:before {\n  content: \"\\FCEE\";\n}\n\n.mdi-fountain-pen-tip:before {\n  content: \"\\FCEF\";\n}\n\n.mdi-foursquare:before {\n  content: \"\\F28E\";\n}\n\n.mdi-freebsd:before {\n  content: \"\\F8DF\";\n}\n\n.mdi-fridge:before {\n  content: \"\\F290\";\n}\n\n.mdi-fridge-bottom:before {\n  content: \"\\F292\";\n}\n\n.mdi-fridge-outline:before {\n  content: \"\\F28F\";\n}\n\n.mdi-fridge-top:before {\n  content: \"\\F291\";\n}\n\n.mdi-fuel:before {\n  content: \"\\F7C9\";\n}\n\n.mdi-fullscreen:before {\n  content: \"\\F293\";\n}\n\n.mdi-fullscreen-exit:before {\n  content: \"\\F294\";\n}\n\n.mdi-function:before {\n  content: \"\\F295\";\n}\n\n.mdi-function-variant:before {\n  content: \"\\F870\";\n}\n\n.mdi-fuse:before {\n  content: \"\\FC61\";\n}\n\n.mdi-fuse-blade:before {\n  content: \"\\FC62\";\n}\n\n.mdi-gamepad:before {\n  content: \"\\F296\";\n}\n\n.mdi-gamepad-circle:before {\n  content: \"\\FE16\";\n}\n\n.mdi-gamepad-circle-down:before {\n  content: \"\\FE17\";\n}\n\n.mdi-gamepad-circle-left:before {\n  content: \"\\FE18\";\n}\n\n.mdi-gamepad-circle-outline:before {\n  content: \"\\FE19\";\n}\n\n.mdi-gamepad-circle-right:before {\n  content: \"\\FE1A\";\n}\n\n.mdi-gamepad-circle-up:before {\n  content: \"\\FE1B\";\n}\n\n.mdi-gamepad-down:before {\n  content: \"\\FE1C\";\n}\n\n.mdi-gamepad-left:before {\n  content: \"\\FE1D\";\n}\n\n.mdi-gamepad-right:before {\n  content: \"\\FE1E\";\n}\n\n.mdi-gamepad-round:before {\n  content: \"\\FE1F\";\n}\n\n.mdi-gamepad-round-down:before {\n  content: \"\\FE20\";\n}\n\n.mdi-gamepad-round-left:before {\n  content: \"\\FE21\";\n}\n\n.mdi-gamepad-round-outline:before {\n  content: \"\\FE22\";\n}\n\n.mdi-gamepad-round-right:before {\n  content: \"\\FE23\";\n}\n\n.mdi-gamepad-round-up:before {\n  content: \"\\FE24\";\n}\n\n.mdi-gamepad-up:before {\n  content: \"\\FE25\";\n}\n\n.mdi-gamepad-variant:before {\n  content: \"\\F297\";\n}\n\n.mdi-gantry-crane:before {\n  content: \"\\FDAD\";\n}\n\n.mdi-garage:before {\n  content: \"\\F6D8\";\n}\n\n.mdi-garage-alert:before {\n  content: \"\\F871\";\n}\n\n.mdi-garage-open:before {\n  content: \"\\F6D9\";\n}\n\n.mdi-gas-cylinder:before {\n  content: \"\\F647\";\n}\n\n.mdi-gas-station:before {\n  content: \"\\F298\";\n}\n\n.mdi-gate:before {\n  content: \"\\F299\";\n}\n\n.mdi-gate-and:before {\n  content: \"\\F8E0\";\n}\n\n.mdi-gate-nand:before {\n  content: \"\\F8E1\";\n}\n\n.mdi-gate-nor:before {\n  content: \"\\F8E2\";\n}\n\n.mdi-gate-not:before {\n  content: \"\\F8E3\";\n}\n\n.mdi-gate-or:before {\n  content: \"\\F8E4\";\n}\n\n.mdi-gate-xnor:before {\n  content: \"\\F8E5\";\n}\n\n.mdi-gate-xor:before {\n  content: \"\\F8E6\";\n}\n\n.mdi-gatsby:before {\n  content: \"\\FE26\";\n}\n\n.mdi-gauge:before {\n  content: \"\\F29A\";\n}\n\n.mdi-gauge-empty:before {\n  content: \"\\F872\";\n}\n\n.mdi-gauge-full:before {\n  content: \"\\F873\";\n}\n\n.mdi-gauge-low:before {\n  content: \"\\F874\";\n}\n\n.mdi-gavel:before {\n  content: \"\\F29B\";\n}\n\n.mdi-gender-female:before {\n  content: \"\\F29C\";\n}\n\n.mdi-gender-male:before {\n  content: \"\\F29D\";\n}\n\n.mdi-gender-male-female:before {\n  content: \"\\F29E\";\n}\n\n.mdi-gender-transgender:before {\n  content: \"\\F29F\";\n}\n\n.mdi-gentoo:before {\n  content: \"\\F8E7\";\n}\n\n.mdi-gesture:before {\n  content: \"\\F7CA\";\n}\n\n.mdi-gesture-double-tap:before {\n  content: \"\\F73B\";\n}\n\n.mdi-gesture-pinch:before {\n  content: \"\\FABC\";\n}\n\n.mdi-gesture-spread:before {\n  content: \"\\FABD\";\n}\n\n.mdi-gesture-swipe:before {\n  content: \"\\FD52\";\n}\n\n.mdi-gesture-swipe-down:before {\n  content: \"\\F73C\";\n}\n\n.mdi-gesture-swipe-horizontal:before {\n  content: \"\\FABE\";\n}\n\n.mdi-gesture-swipe-left:before {\n  content: \"\\F73D\";\n}\n\n.mdi-gesture-swipe-right:before {\n  content: \"\\F73E\";\n}\n\n.mdi-gesture-swipe-up:before {\n  content: \"\\F73F\";\n}\n\n.mdi-gesture-swipe-vertical:before {\n  content: \"\\FABF\";\n}\n\n.mdi-gesture-tap:before {\n  content: \"\\F740\";\n}\n\n.mdi-gesture-tap-hold:before {\n  content: \"\\FD53\";\n}\n\n.mdi-gesture-two-double-tap:before {\n  content: \"\\F741\";\n}\n\n.mdi-gesture-two-tap:before {\n  content: \"\\F742\";\n}\n\n.mdi-ghost:before {\n  content: \"\\F2A0\";\n}\n\n.mdi-ghost-off:before {\n  content: \"\\F9F4\";\n}\n\n.mdi-gif:before {\n  content: \"\\FD54\";\n}\n\n.mdi-gift:before {\n  content: \"\\FE27\";\n}\n\n.mdi-gift-outline:before {\n  content: \"\\F2A1\";\n}\n\n.mdi-git:before {\n  content: \"\\F2A2\";\n}\n\n.mdi-github-box:before {\n  content: \"\\F2A3\";\n}\n\n.mdi-github-circle:before {\n  content: \"\\F2A4\";\n}\n\n.mdi-github-face:before {\n  content: \"\\F6DA\";\n}\n\n.mdi-gitlab:before {\n  content: \"\\FB7C\";\n}\n\n.mdi-glass-cocktail:before {\n  content: \"\\F356\";\n}\n\n.mdi-glass-flute:before {\n  content: \"\\F2A5\";\n}\n\n.mdi-glass-mug:before {\n  content: \"\\F2A6\";\n}\n\n.mdi-glass-stange:before {\n  content: \"\\F2A7\";\n}\n\n.mdi-glass-tulip:before {\n  content: \"\\F2A8\";\n}\n\n.mdi-glass-wine:before {\n  content: \"\\F875\";\n}\n\n.mdi-glassdoor:before {\n  content: \"\\F2A9\";\n}\n\n.mdi-glasses:before {\n  content: \"\\F2AA\";\n}\n\n.mdi-globe-model:before {\n  content: \"\\F8E8\";\n}\n\n.mdi-gmail:before {\n  content: \"\\F2AB\";\n}\n\n.mdi-gnome:before {\n  content: \"\\F2AC\";\n}\n\n.mdi-go-kart:before {\n  content: \"\\FD55\";\n}\n\n.mdi-go-kart-track:before {\n  content: \"\\FD56\";\n}\n\n.mdi-gog:before {\n  content: \"\\FB7D\";\n}\n\n.mdi-golf:before {\n  content: \"\\F822\";\n}\n\n.mdi-gondola:before {\n  content: \"\\F685\";\n}\n\n.mdi-goodreads:before {\n  content: \"\\FD57\";\n}\n\n.mdi-google:before {\n  content: \"\\F2AD\";\n}\n\n.mdi-google-adwords:before {\n  content: \"\\FC63\";\n}\n\n.mdi-google-allo:before {\n  content: \"\\F801\";\n}\n\n.mdi-google-analytics:before {\n  content: \"\\F7CB\";\n}\n\n.mdi-google-assistant:before {\n  content: \"\\F7CC\";\n}\n\n.mdi-google-cardboard:before {\n  content: \"\\F2AE\";\n}\n\n.mdi-google-chrome:before {\n  content: \"\\F2AF\";\n}\n\n.mdi-google-circles:before {\n  content: \"\\F2B0\";\n}\n\n.mdi-google-circles-communities:before {\n  content: \"\\F2B1\";\n}\n\n.mdi-google-circles-extended:before {\n  content: \"\\F2B2\";\n}\n\n.mdi-google-circles-group:before {\n  content: \"\\F2B3\";\n}\n\n.mdi-google-classroom:before {\n  content: \"\\F2C0\";\n}\n\n.mdi-google-controller:before {\n  content: \"\\F2B4\";\n}\n\n.mdi-google-controller-off:before {\n  content: \"\\F2B5\";\n}\n\n.mdi-google-drive:before {\n  content: \"\\F2B6\";\n}\n\n.mdi-google-earth:before {\n  content: \"\\F2B7\";\n}\n\n.mdi-google-fit:before {\n  content: \"\\F96B\";\n}\n\n.mdi-google-glass:before {\n  content: \"\\F2B8\";\n}\n\n.mdi-google-hangouts:before {\n  content: \"\\F2C9\";\n}\n\n.mdi-google-home:before {\n  content: \"\\F823\";\n}\n\n.mdi-google-keep:before {\n  content: \"\\F6DB\";\n}\n\n.mdi-google-lens:before {\n  content: \"\\F9F5\";\n}\n\n.mdi-google-maps:before {\n  content: \"\\F5F5\";\n}\n\n.mdi-google-nearby:before {\n  content: \"\\F2B9\";\n}\n\n.mdi-google-pages:before {\n  content: \"\\F2BA\";\n}\n\n.mdi-google-photos:before {\n  content: \"\\F6DC\";\n}\n\n.mdi-google-physical-web:before {\n  content: \"\\F2BB\";\n}\n\n.mdi-google-play:before {\n  content: \"\\F2BC\";\n}\n\n.mdi-google-plus:before {\n  content: \"\\F2BD\";\n}\n\n.mdi-google-plus-box:before {\n  content: \"\\F2BE\";\n}\n\n.mdi-google-spreadsheet:before {\n  content: \"\\F9F6\";\n}\n\n.mdi-google-street-view:before {\n  content: \"\\FC64\";\n}\n\n.mdi-google-translate:before {\n  content: \"\\F2BF\";\n}\n\n.mdi-gpu:before {\n  content: \"\\F8AD\";\n}\n\n.mdi-gradient:before {\n  content: \"\\F69F\";\n}\n\n.mdi-grain:before {\n  content: \"\\FD58\";\n}\n\n.mdi-graphql:before {\n  content: \"\\F876\";\n}\n\n.mdi-grave-stone:before {\n  content: \"\\FB7E\";\n}\n\n.mdi-grease-pencil:before {\n  content: \"\\F648\";\n}\n\n.mdi-greater-than:before {\n  content: \"\\F96C\";\n}\n\n.mdi-greater-than-or-equal:before {\n  content: \"\\F96D\";\n}\n\n.mdi-grid:before {\n  content: \"\\F2C1\";\n}\n\n.mdi-grid-large:before {\n  content: \"\\F757\";\n}\n\n.mdi-grid-off:before {\n  content: \"\\F2C2\";\n}\n\n.mdi-grill:before {\n  content: \"\\FE28\";\n}\n\n.mdi-group:before {\n  content: \"\\F2C3\";\n}\n\n.mdi-guitar-acoustic:before {\n  content: \"\\F770\";\n}\n\n.mdi-guitar-electric:before {\n  content: \"\\F2C4\";\n}\n\n.mdi-guitar-pick:before {\n  content: \"\\F2C5\";\n}\n\n.mdi-guitar-pick-outline:before {\n  content: \"\\F2C6\";\n}\n\n.mdi-guy-fawkes-mask:before {\n  content: \"\\F824\";\n}\n\n.mdi-hackernews:before {\n  content: \"\\F624\";\n}\n\n.mdi-hail:before {\n  content: \"\\FAC0\";\n}\n\n.mdi-halloween:before {\n  content: \"\\FB7F\";\n}\n\n.mdi-hamburger:before {\n  content: \"\\F684\";\n}\n\n.mdi-hammer:before {\n  content: \"\\F8E9\";\n}\n\n.mdi-hand:before {\n  content: \"\\FA4E\";\n}\n\n.mdi-hand-left:before {\n  content: \"\\FE29\";\n}\n\n.mdi-hand-okay:before {\n  content: \"\\FA4F\";\n}\n\n.mdi-hand-peace:before {\n  content: \"\\FA50\";\n}\n\n.mdi-hand-peace-variant:before {\n  content: \"\\FA51\";\n}\n\n.mdi-hand-pointing-down:before {\n  content: \"\\FA52\";\n}\n\n.mdi-hand-pointing-left:before {\n  content: \"\\FA53\";\n}\n\n.mdi-hand-pointing-right:before {\n  content: \"\\F2C7\";\n}\n\n.mdi-hand-pointing-up:before {\n  content: \"\\FA54\";\n}\n\n.mdi-hand-right:before {\n  content: \"\\FE2A\";\n}\n\n.mdi-hand-saw:before {\n  content: \"\\FE2B\";\n}\n\n.mdi-hanger:before {\n  content: \"\\F2C8\";\n}\n\n.mdi-hard-hat:before {\n  content: \"\\F96E\";\n}\n\n.mdi-harddisk:before {\n  content: \"\\F2CA\";\n}\n\n.mdi-hat-fedora:before {\n  content: \"\\FB80\";\n}\n\n.mdi-hazard-lights:before {\n  content: \"\\FC65\";\n}\n\n.mdi-hdr:before {\n  content: \"\\FD59\";\n}\n\n.mdi-hdr-off:before {\n  content: \"\\FD5A\";\n}\n\n.mdi-headphones:before {\n  content: \"\\F2CB\";\n}\n\n.mdi-headphones-bluetooth:before {\n  content: \"\\F96F\";\n}\n\n.mdi-headphones-box:before {\n  content: \"\\F2CC\";\n}\n\n.mdi-headphones-off:before {\n  content: \"\\F7CD\";\n}\n\n.mdi-headphones-settings:before {\n  content: \"\\F2CD\";\n}\n\n.mdi-headset:before {\n  content: \"\\F2CE\";\n}\n\n.mdi-headset-dock:before {\n  content: \"\\F2CF\";\n}\n\n.mdi-headset-off:before {\n  content: \"\\F2D0\";\n}\n\n.mdi-heart:before {\n  content: \"\\F2D1\";\n}\n\n.mdi-heart-box:before {\n  content: \"\\F2D2\";\n}\n\n.mdi-heart-box-outline:before {\n  content: \"\\F2D3\";\n}\n\n.mdi-heart-broken:before {\n  content: \"\\F2D4\";\n}\n\n.mdi-heart-broken-outline:before {\n  content: \"\\FCF0\";\n}\n\n.mdi-heart-circle:before {\n  content: \"\\F970\";\n}\n\n.mdi-heart-circle-outline:before {\n  content: \"\\F971\";\n}\n\n.mdi-heart-half:before {\n  content: \"\\F6DE\";\n}\n\n.mdi-heart-half-full:before {\n  content: \"\\F6DD\";\n}\n\n.mdi-heart-half-outline:before {\n  content: \"\\F6DF\";\n}\n\n.mdi-heart-multiple:before {\n  content: \"\\FA55\";\n}\n\n.mdi-heart-multiple-outline:before {\n  content: \"\\FA56\";\n}\n\n.mdi-heart-off:before {\n  content: \"\\F758\";\n}\n\n.mdi-heart-outline:before {\n  content: \"\\F2D5\";\n}\n\n.mdi-heart-pulse:before {\n  content: \"\\F5F6\";\n}\n\n.mdi-helicopter:before {\n  content: \"\\FAC1\";\n}\n\n.mdi-help:before {\n  content: \"\\F2D6\";\n}\n\n.mdi-help-box:before {\n  content: \"\\F78A\";\n}\n\n.mdi-help-circle:before {\n  content: \"\\F2D7\";\n}\n\n.mdi-help-circle-outline:before {\n  content: \"\\F625\";\n}\n\n.mdi-help-network:before {\n  content: \"\\F6F4\";\n}\n\n.mdi-help-network-outline:before {\n  content: \"\\FC66\";\n}\n\n.mdi-help-rhombus:before {\n  content: \"\\FB81\";\n}\n\n.mdi-help-rhombus-outline:before {\n  content: \"\\FB82\";\n}\n\n.mdi-hexagon:before {\n  content: \"\\F2D8\";\n}\n\n.mdi-hexagon-multiple:before {\n  content: \"\\F6E0\";\n}\n\n.mdi-hexagon-outline:before {\n  content: \"\\F2D9\";\n}\n\n.mdi-hexagon-slice-1:before {\n  content: \"\\FAC2\";\n}\n\n.mdi-hexagon-slice-2:before {\n  content: \"\\FAC3\";\n}\n\n.mdi-hexagon-slice-3:before {\n  content: \"\\FAC4\";\n}\n\n.mdi-hexagon-slice-4:before {\n  content: \"\\FAC5\";\n}\n\n.mdi-hexagon-slice-5:before {\n  content: \"\\FAC6\";\n}\n\n.mdi-hexagon-slice-6:before {\n  content: \"\\FAC7\";\n}\n\n.mdi-hexagram:before {\n  content: \"\\FAC8\";\n}\n\n.mdi-hexagram-outline:before {\n  content: \"\\FAC9\";\n}\n\n.mdi-high-definition:before {\n  content: \"\\F7CE\";\n}\n\n.mdi-high-definition-box:before {\n  content: \"\\F877\";\n}\n\n.mdi-highway:before {\n  content: \"\\F5F7\";\n}\n\n.mdi-hiking:before {\n  content: \"\\FD5B\";\n}\n\n.mdi-hinduism:before {\n  content: \"\\F972\";\n}\n\n.mdi-history:before {\n  content: \"\\F2DA\";\n}\n\n.mdi-hockey-puck:before {\n  content: \"\\F878\";\n}\n\n.mdi-hockey-sticks:before {\n  content: \"\\F879\";\n}\n\n.mdi-hololens:before {\n  content: \"\\F2DB\";\n}\n\n.mdi-home:before {\n  content: \"\\F2DC\";\n}\n\n.mdi-home-account:before {\n  content: \"\\F825\";\n}\n\n.mdi-home-alert:before {\n  content: \"\\F87A\";\n}\n\n.mdi-home-assistant:before {\n  content: \"\\F7CF\";\n}\n\n.mdi-home-automation:before {\n  content: \"\\F7D0\";\n}\n\n.mdi-home-circle:before {\n  content: \"\\F7D1\";\n}\n\n.mdi-home-city:before {\n  content: \"\\FCF1\";\n}\n\n.mdi-home-city-outline:before {\n  content: \"\\FCF2\";\n}\n\n.mdi-home-currency-usd:before {\n  content: \"\\F8AE\";\n}\n\n.mdi-home-floor-0:before {\n  content: \"\\FDAE\";\n}\n\n.mdi-home-floor-1:before {\n  content: \"\\FD5C\";\n}\n\n.mdi-home-floor-2:before {\n  content: \"\\FD5D\";\n}\n\n.mdi-home-floor-3:before {\n  content: \"\\FD5E\";\n}\n\n.mdi-home-floor-a:before {\n  content: \"\\FD5F\";\n}\n\n.mdi-home-floor-b:before {\n  content: \"\\FD60\";\n}\n\n.mdi-home-floor-g:before {\n  content: \"\\FD61\";\n}\n\n.mdi-home-floor-l:before {\n  content: \"\\FD62\";\n}\n\n.mdi-home-floor-negative-1:before {\n  content: \"\\FDAF\";\n}\n\n.mdi-home-group:before {\n  content: \"\\FDB0\";\n}\n\n.mdi-home-heart:before {\n  content: \"\\F826\";\n}\n\n.mdi-home-lock:before {\n  content: \"\\F8EA\";\n}\n\n.mdi-home-lock-open:before {\n  content: \"\\F8EB\";\n}\n\n.mdi-home-map-marker:before {\n  content: \"\\F5F8\";\n}\n\n.mdi-home-minus:before {\n  content: \"\\F973\";\n}\n\n.mdi-home-modern:before {\n  content: \"\\F2DD\";\n}\n\n.mdi-home-outline:before {\n  content: \"\\F6A0\";\n}\n\n.mdi-home-plus:before {\n  content: \"\\F974\";\n}\n\n.mdi-home-variant:before {\n  content: \"\\F2DE\";\n}\n\n.mdi-home-variant-outline:before {\n  content: \"\\FB83\";\n}\n\n.mdi-hook:before {\n  content: \"\\F6E1\";\n}\n\n.mdi-hook-off:before {\n  content: \"\\F6E2\";\n}\n\n.mdi-hops:before {\n  content: \"\\F2DF\";\n}\n\n.mdi-horseshoe:before {\n  content: \"\\FA57\";\n}\n\n.mdi-hospital:before {\n  content: \"\\F2E0\";\n}\n\n.mdi-hospital-building:before {\n  content: \"\\F2E1\";\n}\n\n.mdi-hospital-marker:before {\n  content: \"\\F2E2\";\n}\n\n.mdi-hot-tub:before {\n  content: \"\\F827\";\n}\n\n.mdi-hotel:before {\n  content: \"\\F2E3\";\n}\n\n.mdi-houzz:before {\n  content: \"\\F2E4\";\n}\n\n.mdi-houzz-box:before {\n  content: \"\\F2E5\";\n}\n\n.mdi-hubspot:before {\n  content: \"\\FCF3\";\n}\n\n.mdi-hulu:before {\n  content: \"\\F828\";\n}\n\n.mdi-human:before {\n  content: \"\\F2E6\";\n}\n\n.mdi-human-child:before {\n  content: \"\\F2E7\";\n}\n\n.mdi-human-female:before {\n  content: \"\\F649\";\n}\n\n.mdi-human-female-boy:before {\n  content: \"\\FA58\";\n}\n\n.mdi-human-female-female:before {\n  content: \"\\FA59\";\n}\n\n.mdi-human-female-girl:before {\n  content: \"\\FA5A\";\n}\n\n.mdi-human-greeting:before {\n  content: \"\\F64A\";\n}\n\n.mdi-human-handsdown:before {\n  content: \"\\F64B\";\n}\n\n.mdi-human-handsup:before {\n  content: \"\\F64C\";\n}\n\n.mdi-human-male:before {\n  content: \"\\F64D\";\n}\n\n.mdi-human-male-boy:before {\n  content: \"\\FA5B\";\n}\n\n.mdi-human-male-female:before {\n  content: \"\\F2E8\";\n}\n\n.mdi-human-male-girl:before {\n  content: \"\\FA5C\";\n}\n\n.mdi-human-male-male:before {\n  content: \"\\FA5D\";\n}\n\n.mdi-human-pregnant:before {\n  content: \"\\F5CF\";\n}\n\n.mdi-humble-bundle:before {\n  content: \"\\F743\";\n}\n\n.mdi-ice-cream:before {\n  content: \"\\F829\";\n}\n\n.mdi-iframe:before {\n  content: \"\\FC67\";\n}\n\n.mdi-iframe-outline:before {\n  content: \"\\FC68\";\n}\n\n.mdi-image:before {\n  content: \"\\F2E9\";\n}\n\n.mdi-image-album:before {\n  content: \"\\F2EA\";\n}\n\n.mdi-image-area:before {\n  content: \"\\F2EB\";\n}\n\n.mdi-image-area-close:before {\n  content: \"\\F2EC\";\n}\n\n.mdi-image-broken:before {\n  content: \"\\F2ED\";\n}\n\n.mdi-image-broken-variant:before {\n  content: \"\\F2EE\";\n}\n\n.mdi-image-filter:before {\n  content: \"\\F2EF\";\n}\n\n.mdi-image-filter-black-white:before {\n  content: \"\\F2F0\";\n}\n\n.mdi-image-filter-center-focus:before {\n  content: \"\\F2F1\";\n}\n\n.mdi-image-filter-center-focus-weak:before {\n  content: \"\\F2F2\";\n}\n\n.mdi-image-filter-drama:before {\n  content: \"\\F2F3\";\n}\n\n.mdi-image-filter-frames:before {\n  content: \"\\F2F4\";\n}\n\n.mdi-image-filter-hdr:before {\n  content: \"\\F2F5\";\n}\n\n.mdi-image-filter-none:before {\n  content: \"\\F2F6\";\n}\n\n.mdi-image-filter-tilt-shift:before {\n  content: \"\\F2F7\";\n}\n\n.mdi-image-filter-vintage:before {\n  content: \"\\F2F8\";\n}\n\n.mdi-image-frame:before {\n  content: \"\\FE2C\";\n}\n\n.mdi-image-move:before {\n  content: \"\\F9F7\";\n}\n\n.mdi-image-multiple:before {\n  content: \"\\F2F9\";\n}\n\n.mdi-image-off:before {\n  content: \"\\F82A\";\n}\n\n.mdi-image-outline:before {\n  content: \"\\F975\";\n}\n\n.mdi-image-plus:before {\n  content: \"\\F87B\";\n}\n\n.mdi-image-search:before {\n  content: \"\\F976\";\n}\n\n.mdi-image-search-outline:before {\n  content: \"\\F977\";\n}\n\n.mdi-image-size-select-actual:before {\n  content: \"\\FC69\";\n}\n\n.mdi-image-size-select-large:before {\n  content: \"\\FC6A\";\n}\n\n.mdi-image-size-select-small:before {\n  content: \"\\FC6B\";\n}\n\n.mdi-import:before {\n  content: \"\\F2FA\";\n}\n\n.mdi-inbox:before {\n  content: \"\\F686\";\n}\n\n.mdi-inbox-arrow-down:before {\n  content: \"\\F2FB\";\n}\n\n.mdi-inbox-arrow-up:before {\n  content: \"\\F3D1\";\n}\n\n.mdi-inbox-multiple:before {\n  content: \"\\F8AF\";\n}\n\n.mdi-inbox-multiple-outline:before {\n  content: \"\\FB84\";\n}\n\n.mdi-incognito:before {\n  content: \"\\F5F9\";\n}\n\n.mdi-infinity:before {\n  content: \"\\F6E3\";\n}\n\n.mdi-information:before {\n  content: \"\\F2FC\";\n}\n\n.mdi-information-outline:before {\n  content: \"\\F2FD\";\n}\n\n.mdi-information-variant:before {\n  content: \"\\F64E\";\n}\n\n.mdi-instagram:before {\n  content: \"\\F2FE\";\n}\n\n.mdi-instapaper:before {\n  content: \"\\F2FF\";\n}\n\n.mdi-internet-explorer:before {\n  content: \"\\F300\";\n}\n\n.mdi-invert-colors:before {\n  content: \"\\F301\";\n}\n\n.mdi-invert-colors-off:before {\n  content: \"\\FE2D\";\n}\n\n.mdi-ip:before {\n  content: \"\\FA5E\";\n}\n\n.mdi-ip-network:before {\n  content: \"\\FA5F\";\n}\n\n.mdi-ip-network-outline:before {\n  content: \"\\FC6C\";\n}\n\n.mdi-ipod:before {\n  content: \"\\FC6D\";\n}\n\n.mdi-islam:before {\n  content: \"\\F978\";\n}\n\n.mdi-itunes:before {\n  content: \"\\F676\";\n}\n\n.mdi-jabber:before {\n  content: \"\\FDB1\";\n}\n\n.mdi-jeepney:before {\n  content: \"\\F302\";\n}\n\n.mdi-jira:before {\n  content: \"\\F303\";\n}\n\n.mdi-jquery:before {\n  content: \"\\F87C\";\n}\n\n.mdi-jsfiddle:before {\n  content: \"\\F304\";\n}\n\n.mdi-json:before {\n  content: \"\\F626\";\n}\n\n.mdi-judaism:before {\n  content: \"\\F979\";\n}\n\n.mdi-kabaddi:before {\n  content: \"\\FD63\";\n}\n\n.mdi-karate:before {\n  content: \"\\F82B\";\n}\n\n.mdi-keg:before {\n  content: \"\\F305\";\n}\n\n.mdi-kettle:before {\n  content: \"\\F5FA\";\n}\n\n.mdi-key:before {\n  content: \"\\F306\";\n}\n\n.mdi-key-change:before {\n  content: \"\\F307\";\n}\n\n.mdi-key-minus:before {\n  content: \"\\F308\";\n}\n\n.mdi-key-outline:before {\n  content: \"\\FDB2\";\n}\n\n.mdi-key-plus:before {\n  content: \"\\F309\";\n}\n\n.mdi-key-remove:before {\n  content: \"\\F30A\";\n}\n\n.mdi-key-variant:before {\n  content: \"\\F30B\";\n}\n\n.mdi-keyboard:before {\n  content: \"\\F30C\";\n}\n\n.mdi-keyboard-backspace:before {\n  content: \"\\F30D\";\n}\n\n.mdi-keyboard-caps:before {\n  content: \"\\F30E\";\n}\n\n.mdi-keyboard-close:before {\n  content: \"\\F30F\";\n}\n\n.mdi-keyboard-off:before {\n  content: \"\\F310\";\n}\n\n.mdi-keyboard-off-outline:before {\n  content: \"\\FE2E\";\n}\n\n.mdi-keyboard-outline:before {\n  content: \"\\F97A\";\n}\n\n.mdi-keyboard-return:before {\n  content: \"\\F311\";\n}\n\n.mdi-keyboard-settings:before {\n  content: \"\\F9F8\";\n}\n\n.mdi-keyboard-settings-outline:before {\n  content: \"\\F9F9\";\n}\n\n.mdi-keyboard-tab:before {\n  content: \"\\F312\";\n}\n\n.mdi-keyboard-variant:before {\n  content: \"\\F313\";\n}\n\n.mdi-kickstarter:before {\n  content: \"\\F744\";\n}\n\n.mdi-knife:before {\n  content: \"\\F9FA\";\n}\n\n.mdi-knife-military:before {\n  content: \"\\F9FB\";\n}\n\n.mdi-kodi:before {\n  content: \"\\F314\";\n}\n\n.mdi-label:before {\n  content: \"\\F315\";\n}\n\n.mdi-label-off:before {\n  content: \"\\FACA\";\n}\n\n.mdi-label-off-outline:before {\n  content: \"\\FACB\";\n}\n\n.mdi-label-outline:before {\n  content: \"\\F316\";\n}\n\n.mdi-label-variant:before {\n  content: \"\\FACC\";\n}\n\n.mdi-label-variant-outline:before {\n  content: \"\\FACD\";\n}\n\n.mdi-ladybug:before {\n  content: \"\\F82C\";\n}\n\n.mdi-lambda:before {\n  content: \"\\F627\";\n}\n\n.mdi-lamp:before {\n  content: \"\\F6B4\";\n}\n\n.mdi-lan:before {\n  content: \"\\F317\";\n}\n\n.mdi-lan-connect:before {\n  content: \"\\F318\";\n}\n\n.mdi-lan-disconnect:before {\n  content: \"\\F319\";\n}\n\n.mdi-lan-pending:before {\n  content: \"\\F31A\";\n}\n\n.mdi-language-c:before {\n  content: \"\\F671\";\n}\n\n.mdi-language-cpp:before {\n  content: \"\\F672\";\n}\n\n.mdi-language-csharp:before {\n  content: \"\\F31B\";\n}\n\n.mdi-language-css3:before {\n  content: \"\\F31C\";\n}\n\n.mdi-language-go:before {\n  content: \"\\F7D2\";\n}\n\n.mdi-language-haskell:before {\n  content: \"\\FC6E\";\n}\n\n.mdi-language-html5:before {\n  content: \"\\F31D\";\n}\n\n.mdi-language-java:before {\n  content: \"\\FB1C\";\n}\n\n.mdi-language-javascript:before {\n  content: \"\\F31E\";\n}\n\n.mdi-language-lua:before {\n  content: \"\\F8B0\";\n}\n\n.mdi-language-php:before {\n  content: \"\\F31F\";\n}\n\n.mdi-language-python:before {\n  content: \"\\F320\";\n}\n\n.mdi-language-python-text:before {\n  content: \"\\F321\";\n}\n\n.mdi-language-r:before {\n  content: \"\\F7D3\";\n}\n\n.mdi-language-ruby-on-rails:before {\n  content: \"\\FACE\";\n}\n\n.mdi-language-swift:before {\n  content: \"\\F6E4\";\n}\n\n.mdi-language-typescript:before {\n  content: \"\\F6E5\";\n}\n\n.mdi-laptop:before {\n  content: \"\\F322\";\n}\n\n.mdi-laptop-chromebook:before {\n  content: \"\\F323\";\n}\n\n.mdi-laptop-mac:before {\n  content: \"\\F324\";\n}\n\n.mdi-laptop-off:before {\n  content: \"\\F6E6\";\n}\n\n.mdi-laptop-windows:before {\n  content: \"\\F325\";\n}\n\n.mdi-laravel:before {\n  content: \"\\FACF\";\n}\n\n.mdi-lastfm:before {\n  content: \"\\F326\";\n}\n\n.mdi-lastpass:before {\n  content: \"\\F446\";\n}\n\n.mdi-launch:before {\n  content: \"\\F327\";\n}\n\n.mdi-lava-lamp:before {\n  content: \"\\F7D4\";\n}\n\n.mdi-layers:before {\n  content: \"\\F328\";\n}\n\n.mdi-layers-minus:before {\n  content: \"\\FE2F\";\n}\n\n.mdi-layers-off:before {\n  content: \"\\F329\";\n}\n\n.mdi-layers-off-outline:before {\n  content: \"\\F9FC\";\n}\n\n.mdi-layers-outline:before {\n  content: \"\\F9FD\";\n}\n\n.mdi-layers-plus:before {\n  content: \"\\FE30\";\n}\n\n.mdi-layers-remove:before {\n  content: \"\\FE31\";\n}\n\n.mdi-lead-pencil:before {\n  content: \"\\F64F\";\n}\n\n.mdi-leaf:before {\n  content: \"\\F32A\";\n}\n\n.mdi-leaf-maple:before {\n  content: \"\\FC6F\";\n}\n\n.mdi-leak:before {\n  content: \"\\FDB3\";\n}\n\n.mdi-leak-off:before {\n  content: \"\\FDB4\";\n}\n\n.mdi-led-off:before {\n  content: \"\\F32B\";\n}\n\n.mdi-led-on:before {\n  content: \"\\F32C\";\n}\n\n.mdi-led-outline:before {\n  content: \"\\F32D\";\n}\n\n.mdi-led-strip:before {\n  content: \"\\F7D5\";\n}\n\n.mdi-led-variant-off:before {\n  content: \"\\F32E\";\n}\n\n.mdi-led-variant-on:before {\n  content: \"\\F32F\";\n}\n\n.mdi-led-variant-outline:before {\n  content: \"\\F330\";\n}\n\n.mdi-less-than:before {\n  content: \"\\F97B\";\n}\n\n.mdi-less-than-or-equal:before {\n  content: \"\\F97C\";\n}\n\n.mdi-library:before {\n  content: \"\\F331\";\n}\n\n.mdi-library-books:before {\n  content: \"\\F332\";\n}\n\n.mdi-library-movie:before {\n  content: \"\\FCF4\";\n}\n\n.mdi-library-music:before {\n  content: \"\\F333\";\n}\n\n.mdi-library-plus:before {\n  content: \"\\F334\";\n}\n\n.mdi-library-shelves:before {\n  content: \"\\FB85\";\n}\n\n.mdi-library-video:before {\n  content: \"\\FCF5\";\n}\n\n.mdi-lifebuoy:before {\n  content: \"\\F87D\";\n}\n\n.mdi-light-switch:before {\n  content: \"\\F97D\";\n}\n\n.mdi-lightbulb:before {\n  content: \"\\F335\";\n}\n\n.mdi-lightbulb-off:before {\n  content: \"\\FE32\";\n}\n\n.mdi-lightbulb-off-outline:before {\n  content: \"\\FE33\";\n}\n\n.mdi-lightbulb-on:before {\n  content: \"\\F6E7\";\n}\n\n.mdi-lightbulb-on-outline:before {\n  content: \"\\F6E8\";\n}\n\n.mdi-lightbulb-outline:before {\n  content: \"\\F336\";\n}\n\n.mdi-lighthouse:before {\n  content: \"\\F9FE\";\n}\n\n.mdi-lighthouse-on:before {\n  content: \"\\F9FF\";\n}\n\n.mdi-link:before {\n  content: \"\\F337\";\n}\n\n.mdi-link-box:before {\n  content: \"\\FCF6\";\n}\n\n.mdi-link-box-outline:before {\n  content: \"\\FCF7\";\n}\n\n.mdi-link-box-variant:before {\n  content: \"\\FCF8\";\n}\n\n.mdi-link-box-variant-outline:before {\n  content: \"\\FCF9\";\n}\n\n.mdi-link-off:before {\n  content: \"\\F338\";\n}\n\n.mdi-link-plus:before {\n  content: \"\\FC70\";\n}\n\n.mdi-link-variant:before {\n  content: \"\\F339\";\n}\n\n.mdi-link-variant-off:before {\n  content: \"\\F33A\";\n}\n\n.mdi-linkedin:before {\n  content: \"\\F33B\";\n}\n\n.mdi-linkedin-box:before {\n  content: \"\\F33C\";\n}\n\n.mdi-linux:before {\n  content: \"\\F33D\";\n}\n\n.mdi-linux-mint:before {\n  content: \"\\F8EC\";\n}\n\n.mdi-litecoin:before {\n  content: \"\\FA60\";\n}\n\n.mdi-loading:before {\n  content: \"\\F771\";\n}\n\n.mdi-lock:before {\n  content: \"\\F33E\";\n}\n\n.mdi-lock-alert:before {\n  content: \"\\F8ED\";\n}\n\n.mdi-lock-clock:before {\n  content: \"\\F97E\";\n}\n\n.mdi-lock-open:before {\n  content: \"\\F33F\";\n}\n\n.mdi-lock-open-outline:before {\n  content: \"\\F340\";\n}\n\n.mdi-lock-outline:before {\n  content: \"\\F341\";\n}\n\n.mdi-lock-pattern:before {\n  content: \"\\F6E9\";\n}\n\n.mdi-lock-plus:before {\n  content: \"\\F5FB\";\n}\n\n.mdi-lock-question:before {\n  content: \"\\F8EE\";\n}\n\n.mdi-lock-reset:before {\n  content: \"\\F772\";\n}\n\n.mdi-lock-smart:before {\n  content: \"\\F8B1\";\n}\n\n.mdi-locker:before {\n  content: \"\\F7D6\";\n}\n\n.mdi-locker-multiple:before {\n  content: \"\\F7D7\";\n}\n\n.mdi-login:before {\n  content: \"\\F342\";\n}\n\n.mdi-login-variant:before {\n  content: \"\\F5FC\";\n}\n\n.mdi-logout:before {\n  content: \"\\F343\";\n}\n\n.mdi-logout-variant:before {\n  content: \"\\F5FD\";\n}\n\n.mdi-looks:before {\n  content: \"\\F344\";\n}\n\n.mdi-loop:before {\n  content: \"\\F6EA\";\n}\n\n.mdi-loupe:before {\n  content: \"\\F345\";\n}\n\n.mdi-lumx:before {\n  content: \"\\F346\";\n}\n\n.mdi-lyft:before {\n  content: \"\\FB1D\";\n}\n\n.mdi-magnet:before {\n  content: \"\\F347\";\n}\n\n.mdi-magnet-on:before {\n  content: \"\\F348\";\n}\n\n.mdi-magnify:before {\n  content: \"\\F349\";\n}\n\n.mdi-magnify-close:before {\n  content: \"\\F97F\";\n}\n\n.mdi-magnify-minus:before {\n  content: \"\\F34A\";\n}\n\n.mdi-magnify-minus-cursor:before {\n  content: \"\\FA61\";\n}\n\n.mdi-magnify-minus-outline:before {\n  content: \"\\F6EB\";\n}\n\n.mdi-magnify-plus:before {\n  content: \"\\F34B\";\n}\n\n.mdi-magnify-plus-cursor:before {\n  content: \"\\FA62\";\n}\n\n.mdi-magnify-plus-outline:before {\n  content: \"\\F6EC\";\n}\n\n.mdi-mail-ru:before {\n  content: \"\\F34C\";\n}\n\n.mdi-mailbox:before {\n  content: \"\\F6ED\";\n}\n\n.mdi-mailbox-open:before {\n  content: \"\\FD64\";\n}\n\n.mdi-mailbox-open-outline:before {\n  content: \"\\FD65\";\n}\n\n.mdi-mailbox-open-up:before {\n  content: \"\\FD66\";\n}\n\n.mdi-mailbox-open-up-outline:before {\n  content: \"\\FD67\";\n}\n\n.mdi-mailbox-outline:before {\n  content: \"\\FD68\";\n}\n\n.mdi-mailbox-up:before {\n  content: \"\\FD69\";\n}\n\n.mdi-mailbox-up-outline:before {\n  content: \"\\FD6A\";\n}\n\n.mdi-map:before {\n  content: \"\\F34D\";\n}\n\n.mdi-map-clock:before {\n  content: \"\\FCFA\";\n}\n\n.mdi-map-clock-outline:before {\n  content: \"\\FCFB\";\n}\n\n.mdi-map-legend:before {\n  content: \"\\FA00\";\n}\n\n.mdi-map-marker:before {\n  content: \"\\F34E\";\n}\n\n.mdi-map-marker-check:before {\n  content: \"\\FC71\";\n}\n\n.mdi-map-marker-circle:before {\n  content: \"\\F34F\";\n}\n\n.mdi-map-marker-distance:before {\n  content: \"\\F8EF\";\n}\n\n.mdi-map-marker-minus:before {\n  content: \"\\F650\";\n}\n\n.mdi-map-marker-multiple:before {\n  content: \"\\F350\";\n}\n\n.mdi-map-marker-off:before {\n  content: \"\\F351\";\n}\n\n.mdi-map-marker-outline:before {\n  content: \"\\F7D8\";\n}\n\n.mdi-map-marker-path:before {\n  content: \"\\FCFC\";\n}\n\n.mdi-map-marker-plus:before {\n  content: \"\\F651\";\n}\n\n.mdi-map-marker-radius:before {\n  content: \"\\F352\";\n}\n\n.mdi-map-minus:before {\n  content: \"\\F980\";\n}\n\n.mdi-map-outline:before {\n  content: \"\\F981\";\n}\n\n.mdi-map-plus:before {\n  content: \"\\F982\";\n}\n\n.mdi-map-search:before {\n  content: \"\\F983\";\n}\n\n.mdi-map-search-outline:before {\n  content: \"\\F984\";\n}\n\n.mdi-mapbox:before {\n  content: \"\\FB86\";\n}\n\n.mdi-margin:before {\n  content: \"\\F353\";\n}\n\n.mdi-markdown:before {\n  content: \"\\F354\";\n}\n\n.mdi-marker:before {\n  content: \"\\F652\";\n}\n\n.mdi-marker-cancel:before {\n  content: \"\\FDB5\";\n}\n\n.mdi-marker-check:before {\n  content: \"\\F355\";\n}\n\n.mdi-mastodon:before {\n  content: \"\\FAD0\";\n}\n\n.mdi-mastodon-variant:before {\n  content: \"\\FAD1\";\n}\n\n.mdi-material-design:before {\n  content: \"\\F985\";\n}\n\n.mdi-material-ui:before {\n  content: \"\\F357\";\n}\n\n.mdi-math-compass:before {\n  content: \"\\F358\";\n}\n\n.mdi-math-cos:before {\n  content: \"\\FC72\";\n}\n\n.mdi-math-sin:before {\n  content: \"\\FC73\";\n}\n\n.mdi-math-tan:before {\n  content: \"\\FC74\";\n}\n\n.mdi-matrix:before {\n  content: \"\\F628\";\n}\n\n.mdi-maxcdn:before {\n  content: \"\\F359\";\n}\n\n.mdi-medal:before {\n  content: \"\\F986\";\n}\n\n.mdi-medical-bag:before {\n  content: \"\\F6EE\";\n}\n\n.mdi-medium:before {\n  content: \"\\F35A\";\n}\n\n.mdi-meetup:before {\n  content: \"\\FAD2\";\n}\n\n.mdi-memory:before {\n  content: \"\\F35B\";\n}\n\n.mdi-menu:before {\n  content: \"\\F35C\";\n}\n\n.mdi-menu-down:before {\n  content: \"\\F35D\";\n}\n\n.mdi-menu-down-outline:before {\n  content: \"\\F6B5\";\n}\n\n.mdi-menu-left:before {\n  content: \"\\F35E\";\n}\n\n.mdi-menu-left-outline:before {\n  content: \"\\FA01\";\n}\n\n.mdi-menu-open:before {\n  content: \"\\FB87\";\n}\n\n.mdi-menu-right:before {\n  content: \"\\F35F\";\n}\n\n.mdi-menu-right-outline:before {\n  content: \"\\FA02\";\n}\n\n.mdi-menu-swap:before {\n  content: \"\\FA63\";\n}\n\n.mdi-menu-swap-outline:before {\n  content: \"\\FA64\";\n}\n\n.mdi-menu-up:before {\n  content: \"\\F360\";\n}\n\n.mdi-menu-up-outline:before {\n  content: \"\\F6B6\";\n}\n\n.mdi-message:before {\n  content: \"\\F361\";\n}\n\n.mdi-message-alert:before {\n  content: \"\\F362\";\n}\n\n.mdi-message-alert-outline:before {\n  content: \"\\FA03\";\n}\n\n.mdi-message-bulleted:before {\n  content: \"\\F6A1\";\n}\n\n.mdi-message-bulleted-off:before {\n  content: \"\\F6A2\";\n}\n\n.mdi-message-draw:before {\n  content: \"\\F363\";\n}\n\n.mdi-message-image:before {\n  content: \"\\F364\";\n}\n\n.mdi-message-outline:before {\n  content: \"\\F365\";\n}\n\n.mdi-message-plus:before {\n  content: \"\\F653\";\n}\n\n.mdi-message-processing:before {\n  content: \"\\F366\";\n}\n\n.mdi-message-reply:before {\n  content: \"\\F367\";\n}\n\n.mdi-message-reply-text:before {\n  content: \"\\F368\";\n}\n\n.mdi-message-settings:before {\n  content: \"\\F6EF\";\n}\n\n.mdi-message-settings-variant:before {\n  content: \"\\F6F0\";\n}\n\n.mdi-message-text:before {\n  content: \"\\F369\";\n}\n\n.mdi-message-text-outline:before {\n  content: \"\\F36A\";\n}\n\n.mdi-message-video:before {\n  content: \"\\F36B\";\n}\n\n.mdi-meteor:before {\n  content: \"\\F629\";\n}\n\n.mdi-metronome:before {\n  content: \"\\F7D9\";\n}\n\n.mdi-metronome-tick:before {\n  content: \"\\F7DA\";\n}\n\n.mdi-micro-sd:before {\n  content: \"\\F7DB\";\n}\n\n.mdi-microphone:before {\n  content: \"\\F36C\";\n}\n\n.mdi-microphone-minus:before {\n  content: \"\\F8B2\";\n}\n\n.mdi-microphone-off:before {\n  content: \"\\F36D\";\n}\n\n.mdi-microphone-outline:before {\n  content: \"\\F36E\";\n}\n\n.mdi-microphone-plus:before {\n  content: \"\\F8B3\";\n}\n\n.mdi-microphone-settings:before {\n  content: \"\\F36F\";\n}\n\n.mdi-microphone-variant:before {\n  content: \"\\F370\";\n}\n\n.mdi-microphone-variant-off:before {\n  content: \"\\F371\";\n}\n\n.mdi-microscope:before {\n  content: \"\\F654\";\n}\n\n.mdi-microsoft:before {\n  content: \"\\F372\";\n}\n\n.mdi-microsoft-dynamics:before {\n  content: \"\\F987\";\n}\n\n.mdi-microwave:before {\n  content: \"\\FC75\";\n}\n\n.mdi-midi:before {\n  content: \"\\F8F0\";\n}\n\n.mdi-midi-port:before {\n  content: \"\\F8F1\";\n}\n\n.mdi-mine:before {\n  content: \"\\FDB6\";\n}\n\n.mdi-minecraft:before {\n  content: \"\\F373\";\n}\n\n.mdi-mini-sd:before {\n  content: \"\\FA04\";\n}\n\n.mdi-minidisc:before {\n  content: \"\\FA05\";\n}\n\n.mdi-minus:before {\n  content: \"\\F374\";\n}\n\n.mdi-minus-box:before {\n  content: \"\\F375\";\n}\n\n.mdi-minus-box-outline:before {\n  content: \"\\F6F1\";\n}\n\n.mdi-minus-circle:before {\n  content: \"\\F376\";\n}\n\n.mdi-minus-circle-outline:before {\n  content: \"\\F377\";\n}\n\n.mdi-minus-network:before {\n  content: \"\\F378\";\n}\n\n.mdi-minus-network-outline:before {\n  content: \"\\FC76\";\n}\n\n.mdi-mixcloud:before {\n  content: \"\\F62A\";\n}\n\n.mdi-mixed-martial-arts:before {\n  content: \"\\FD6B\";\n}\n\n.mdi-mixed-reality:before {\n  content: \"\\F87E\";\n}\n\n.mdi-mixer:before {\n  content: \"\\F7DC\";\n}\n\n.mdi-molecule:before {\n  content: \"\\FB88\";\n}\n\n.mdi-monitor:before {\n  content: \"\\F379\";\n}\n\n.mdi-monitor-cellphone:before {\n  content: \"\\F988\";\n}\n\n.mdi-monitor-cellphone-star:before {\n  content: \"\\F989\";\n}\n\n.mdi-monitor-dashboard:before {\n  content: \"\\FA06\";\n}\n\n.mdi-monitor-lock:before {\n  content: \"\\FDB7\";\n}\n\n.mdi-monitor-multiple:before {\n  content: \"\\F37A\";\n}\n\n.mdi-monitor-off:before {\n  content: \"\\FD6C\";\n}\n\n.mdi-monitor-screenshot:before {\n  content: \"\\FE34\";\n}\n\n.mdi-monitor-star:before {\n  content: \"\\FDB8\";\n}\n\n.mdi-more:before {\n  content: \"\\F37B\";\n}\n\n.mdi-mother-nurse:before {\n  content: \"\\FCFD\";\n}\n\n.mdi-motion-sensor:before {\n  content: \"\\FD6D\";\n}\n\n.mdi-motorbike:before {\n  content: \"\\F37C\";\n}\n\n.mdi-mouse:before {\n  content: \"\\F37D\";\n}\n\n.mdi-mouse-bluetooth:before {\n  content: \"\\F98A\";\n}\n\n.mdi-mouse-off:before {\n  content: \"\\F37E\";\n}\n\n.mdi-mouse-variant:before {\n  content: \"\\F37F\";\n}\n\n.mdi-mouse-variant-off:before {\n  content: \"\\F380\";\n}\n\n.mdi-move-resize:before {\n  content: \"\\F655\";\n}\n\n.mdi-move-resize-variant:before {\n  content: \"\\F656\";\n}\n\n.mdi-movie:before {\n  content: \"\\F381\";\n}\n\n.mdi-movie-outline:before {\n  content: \"\\FDB9\";\n}\n\n.mdi-movie-roll:before {\n  content: \"\\F7DD\";\n}\n\n.mdi-muffin:before {\n  content: \"\\F98B\";\n}\n\n.mdi-multiplication:before {\n  content: \"\\F382\";\n}\n\n.mdi-multiplication-box:before {\n  content: \"\\F383\";\n}\n\n.mdi-mushroom:before {\n  content: \"\\F7DE\";\n}\n\n.mdi-mushroom-outline:before {\n  content: \"\\F7DF\";\n}\n\n.mdi-music:before {\n  content: \"\\F759\";\n}\n\n.mdi-music-box:before {\n  content: \"\\F384\";\n}\n\n.mdi-music-box-outline:before {\n  content: \"\\F385\";\n}\n\n.mdi-music-circle:before {\n  content: \"\\F386\";\n}\n\n.mdi-music-circle-outline:before {\n  content: \"\\FAD3\";\n}\n\n.mdi-music-note:before {\n  content: \"\\F387\";\n}\n\n.mdi-music-note-bluetooth:before {\n  content: \"\\F5FE\";\n}\n\n.mdi-music-note-bluetooth-off:before {\n  content: \"\\F5FF\";\n}\n\n.mdi-music-note-eighth:before {\n  content: \"\\F388\";\n}\n\n.mdi-music-note-half:before {\n  content: \"\\F389\";\n}\n\n.mdi-music-note-off:before {\n  content: \"\\F38A\";\n}\n\n.mdi-music-note-plus:before {\n  content: \"\\FDBA\";\n}\n\n.mdi-music-note-quarter:before {\n  content: \"\\F38B\";\n}\n\n.mdi-music-note-sixteenth:before {\n  content: \"\\F38C\";\n}\n\n.mdi-music-note-whole:before {\n  content: \"\\F38D\";\n}\n\n.mdi-music-off:before {\n  content: \"\\F75A\";\n}\n\n.mdi-nail:before {\n  content: \"\\FDBB\";\n}\n\n.mdi-nas:before {\n  content: \"\\F8F2\";\n}\n\n.mdi-nativescript:before {\n  content: \"\\F87F\";\n}\n\n.mdi-nature:before {\n  content: \"\\F38E\";\n}\n\n.mdi-nature-people:before {\n  content: \"\\F38F\";\n}\n\n.mdi-navigation:before {\n  content: \"\\F390\";\n}\n\n.mdi-near-me:before {\n  content: \"\\F5CD\";\n}\n\n.mdi-needle:before {\n  content: \"\\F391\";\n}\n\n.mdi-netflix:before {\n  content: \"\\F745\";\n}\n\n.mdi-network:before {\n  content: \"\\F6F2\";\n}\n\n.mdi-network-off:before {\n  content: \"\\FC77\";\n}\n\n.mdi-network-off-outline:before {\n  content: \"\\FC78\";\n}\n\n.mdi-network-outline:before {\n  content: \"\\FC79\";\n}\n\n.mdi-network-strength-1:before {\n  content: \"\\F8F3\";\n}\n\n.mdi-network-strength-1-alert:before {\n  content: \"\\F8F4\";\n}\n\n.mdi-network-strength-2:before {\n  content: \"\\F8F5\";\n}\n\n.mdi-network-strength-2-alert:before {\n  content: \"\\F8F6\";\n}\n\n.mdi-network-strength-3:before {\n  content: \"\\F8F7\";\n}\n\n.mdi-network-strength-3-alert:before {\n  content: \"\\F8F8\";\n}\n\n.mdi-network-strength-4:before {\n  content: \"\\F8F9\";\n}\n\n.mdi-network-strength-4-alert:before {\n  content: \"\\F8FA\";\n}\n\n.mdi-network-strength-off:before {\n  content: \"\\F8FB\";\n}\n\n.mdi-network-strength-off-outline:before {\n  content: \"\\F8FC\";\n}\n\n.mdi-network-strength-outline:before {\n  content: \"\\F8FD\";\n}\n\n.mdi-new-box:before {\n  content: \"\\F394\";\n}\n\n.mdi-newspaper:before {\n  content: \"\\F395\";\n}\n\n.mdi-nfc:before {\n  content: \"\\F396\";\n}\n\n.mdi-nfc-off:before {\n  content: \"\\FE35\";\n}\n\n.mdi-nfc-search-variant:before {\n  content: \"\\FE36\";\n}\n\n.mdi-nfc-tap:before {\n  content: \"\\F397\";\n}\n\n.mdi-nfc-variant:before {\n  content: \"\\F398\";\n}\n\n.mdi-nfc-variant-off:before {\n  content: \"\\FE37\";\n}\n\n.mdi-ninja:before {\n  content: \"\\F773\";\n}\n\n.mdi-nintendo-switch:before {\n  content: \"\\F7E0\";\n}\n\n.mdi-nodejs:before {\n  content: \"\\F399\";\n}\n\n.mdi-not-equal:before {\n  content: \"\\F98C\";\n}\n\n.mdi-not-equal-variant:before {\n  content: \"\\F98D\";\n}\n\n.mdi-note:before {\n  content: \"\\F39A\";\n}\n\n.mdi-note-multiple:before {\n  content: \"\\F6B7\";\n}\n\n.mdi-note-multiple-outline:before {\n  content: \"\\F6B8\";\n}\n\n.mdi-note-outline:before {\n  content: \"\\F39B\";\n}\n\n.mdi-note-plus:before {\n  content: \"\\F39C\";\n}\n\n.mdi-note-plus-outline:before {\n  content: \"\\F39D\";\n}\n\n.mdi-note-text:before {\n  content: \"\\F39E\";\n}\n\n.mdi-notebook:before {\n  content: \"\\F82D\";\n}\n\n.mdi-notebook-multiple:before {\n  content: \"\\FE38\";\n}\n\n.mdi-notification-clear-all:before {\n  content: \"\\F39F\";\n}\n\n.mdi-npm:before {\n  content: \"\\F6F6\";\n}\n\n.mdi-npm-variant:before {\n  content: \"\\F98E\";\n}\n\n.mdi-npm-variant-outline:before {\n  content: \"\\F98F\";\n}\n\n.mdi-nuke:before {\n  content: \"\\F6A3\";\n}\n\n.mdi-null:before {\n  content: \"\\F7E1\";\n}\n\n.mdi-numeric:before {\n  content: \"\\F3A0\";\n}\n\n.mdi-numeric-0:before {\n  content: \"0\";\n}\n\n.mdi-numeric-0-box:before {\n  content: \"\\F3A1\";\n}\n\n.mdi-numeric-0-box-multiple-outline:before {\n  content: \"\\F3A2\";\n}\n\n.mdi-numeric-0-box-outline:before {\n  content: \"\\F3A3\";\n}\n\n.mdi-numeric-0-circle:before {\n  content: \"\\FC7A\";\n}\n\n.mdi-numeric-0-circle-outline:before {\n  content: \"\\FC7B\";\n}\n\n.mdi-numeric-1:before {\n  content: \"1\";\n}\n\n.mdi-numeric-1-box:before {\n  content: \"\\F3A4\";\n}\n\n.mdi-numeric-1-box-multiple-outline:before {\n  content: \"\\F3A5\";\n}\n\n.mdi-numeric-1-box-outline:before {\n  content: \"\\F3A6\";\n}\n\n.mdi-numeric-1-circle:before {\n  content: \"\\FC7C\";\n}\n\n.mdi-numeric-1-circle-outline:before {\n  content: \"\\FC7D\";\n}\n\n.mdi-numeric-2:before {\n  content: \"2\";\n}\n\n.mdi-numeric-2-box:before {\n  content: \"\\F3A7\";\n}\n\n.mdi-numeric-2-box-multiple-outline:before {\n  content: \"\\F3A8\";\n}\n\n.mdi-numeric-2-box-outline:before {\n  content: \"\\F3A9\";\n}\n\n.mdi-numeric-2-circle:before {\n  content: \"\\FC7E\";\n}\n\n.mdi-numeric-2-circle-outline:before {\n  content: \"\\FC7F\";\n}\n\n.mdi-numeric-3:before {\n  content: \"3\";\n}\n\n.mdi-numeric-3-box:before {\n  content: \"\\F3AA\";\n}\n\n.mdi-numeric-3-box-multiple-outline:before {\n  content: \"\\F3AB\";\n}\n\n.mdi-numeric-3-box-outline:before {\n  content: \"\\F3AC\";\n}\n\n.mdi-numeric-3-circle:before {\n  content: \"\\FC80\";\n}\n\n.mdi-numeric-3-circle-outline:before {\n  content: \"\\FC81\";\n}\n\n.mdi-numeric-4:before {\n  content: \"4\";\n}\n\n.mdi-numeric-4-box:before {\n  content: \"\\F3AD\";\n}\n\n.mdi-numeric-4-box-multiple-outline:before {\n  content: \"\\F3AE\";\n}\n\n.mdi-numeric-4-box-outline:before {\n  content: \"\\F3AF\";\n}\n\n.mdi-numeric-4-circle:before {\n  content: \"\\FC82\";\n}\n\n.mdi-numeric-4-circle-outline:before {\n  content: \"\\FC83\";\n}\n\n.mdi-numeric-5:before {\n  content: \"5\";\n}\n\n.mdi-numeric-5-box:before {\n  content: \"\\F3B0\";\n}\n\n.mdi-numeric-5-box-multiple-outline:before {\n  content: \"\\F3B1\";\n}\n\n.mdi-numeric-5-box-outline:before {\n  content: \"\\F3B2\";\n}\n\n.mdi-numeric-5-circle:before {\n  content: \"\\FC84\";\n}\n\n.mdi-numeric-5-circle-outline:before {\n  content: \"\\FC85\";\n}\n\n.mdi-numeric-6:before {\n  content: \"6\";\n}\n\n.mdi-numeric-6-box:before {\n  content: \"\\F3B3\";\n}\n\n.mdi-numeric-6-box-multiple-outline:before {\n  content: \"\\F3B4\";\n}\n\n.mdi-numeric-6-box-outline:before {\n  content: \"\\F3B5\";\n}\n\n.mdi-numeric-6-circle:before {\n  content: \"\\FC86\";\n}\n\n.mdi-numeric-6-circle-outline:before {\n  content: \"\\FC87\";\n}\n\n.mdi-numeric-7:before {\n  content: \"7\";\n}\n\n.mdi-numeric-7-box:before {\n  content: \"\\F3B6\";\n}\n\n.mdi-numeric-7-box-multiple-outline:before {\n  content: \"\\F3B7\";\n}\n\n.mdi-numeric-7-box-outline:before {\n  content: \"\\F3B8\";\n}\n\n.mdi-numeric-7-circle:before {\n  content: \"\\FC88\";\n}\n\n.mdi-numeric-7-circle-outline:before {\n  content: \"\\FC89\";\n}\n\n.mdi-numeric-8:before {\n  content: \"8\";\n}\n\n.mdi-numeric-8-box:before {\n  content: \"\\F3B9\";\n}\n\n.mdi-numeric-8-box-multiple-outline:before {\n  content: \"\\F3BA\";\n}\n\n.mdi-numeric-8-box-outline:before {\n  content: \"\\F3BB\";\n}\n\n.mdi-numeric-8-circle:before {\n  content: \"\\FC8A\";\n}\n\n.mdi-numeric-8-circle-outline:before {\n  content: \"\\FC8B\";\n}\n\n.mdi-numeric-9:before {\n  content: \"9\";\n}\n\n.mdi-numeric-9-box:before {\n  content: \"\\F3BC\";\n}\n\n.mdi-numeric-9-box-multiple-outline:before {\n  content: \"\\F3BD\";\n}\n\n.mdi-numeric-9-box-outline:before {\n  content: \"\\F3BE\";\n}\n\n.mdi-numeric-9-circle:before {\n  content: \"\\FC8C\";\n}\n\n.mdi-numeric-9-circle-outline:before {\n  content: \"\\FC8D\";\n}\n\n.mdi-numeric-9-plus-box:before {\n  content: \"\\F3BF\";\n}\n\n.mdi-numeric-9-plus-box-multiple-outline:before {\n  content: \"\\F3C0\";\n}\n\n.mdi-numeric-9-plus-box-outline:before {\n  content: \"\\F3C1\";\n}\n\n.mdi-numeric-9-plus-circle:before {\n  content: \"\\FC8E\";\n}\n\n.mdi-numeric-9-plus-circle-outline:before {\n  content: \"\\FC8F\";\n}\n\n.mdi-nut:before {\n  content: \"\\F6F7\";\n}\n\n.mdi-nutrition:before {\n  content: \"\\F3C2\";\n}\n\n.mdi-oar:before {\n  content: \"\\F67B\";\n}\n\n.mdi-ocarina:before {\n  content: \"\\FDBC\";\n}\n\n.mdi-octagon:before {\n  content: \"\\F3C3\";\n}\n\n.mdi-octagon-outline:before {\n  content: \"\\F3C4\";\n}\n\n.mdi-octagram:before {\n  content: \"\\F6F8\";\n}\n\n.mdi-octagram-outline:before {\n  content: \"\\F774\";\n}\n\n.mdi-odnoklassniki:before {\n  content: \"\\F3C5\";\n}\n\n.mdi-office:before {\n  content: \"\\F3C6\";\n}\n\n.mdi-office-building:before {\n  content: \"\\F990\";\n}\n\n.mdi-oil:before {\n  content: \"\\F3C7\";\n}\n\n.mdi-oil-temperature:before {\n  content: \"\\F3C8\";\n}\n\n.mdi-omega:before {\n  content: \"\\F3C9\";\n}\n\n.mdi-one-up:before {\n  content: \"\\FB89\";\n}\n\n.mdi-onedrive:before {\n  content: \"\\F3CA\";\n}\n\n.mdi-onenote:before {\n  content: \"\\F746\";\n}\n\n.mdi-onepassword:before {\n  content: \"\\F880\";\n}\n\n.mdi-opacity:before {\n  content: \"\\F5CC\";\n}\n\n.mdi-open-in-app:before {\n  content: \"\\F3CB\";\n}\n\n.mdi-open-in-new:before {\n  content: \"\\F3CC\";\n}\n\n.mdi-open-source-initiative:before {\n  content: \"\\FB8A\";\n}\n\n.mdi-openid:before {\n  content: \"\\F3CD\";\n}\n\n.mdi-opera:before {\n  content: \"\\F3CE\";\n}\n\n.mdi-orbit:before {\n  content: \"\\F018\";\n}\n\n.mdi-origin:before {\n  content: \"\\FB2B\";\n}\n\n.mdi-ornament:before {\n  content: \"\\F3CF\";\n}\n\n.mdi-ornament-variant:before {\n  content: \"\\F3D0\";\n}\n\n.mdi-outlook:before {\n  content: \"\\FCFE\";\n}\n\n.mdi-owl:before {\n  content: \"\\F3D2\";\n}\n\n.mdi-pac-man:before {\n  content: \"\\FB8B\";\n}\n\n.mdi-package:before {\n  content: \"\\F3D3\";\n}\n\n.mdi-package-down:before {\n  content: \"\\F3D4\";\n}\n\n.mdi-package-up:before {\n  content: \"\\F3D5\";\n}\n\n.mdi-package-variant:before {\n  content: \"\\F3D6\";\n}\n\n.mdi-package-variant-closed:before {\n  content: \"\\F3D7\";\n}\n\n.mdi-page-first:before {\n  content: \"\\F600\";\n}\n\n.mdi-page-last:before {\n  content: \"\\F601\";\n}\n\n.mdi-page-layout-body:before {\n  content: \"\\F6F9\";\n}\n\n.mdi-page-layout-footer:before {\n  content: \"\\F6FA\";\n}\n\n.mdi-page-layout-header:before {\n  content: \"\\F6FB\";\n}\n\n.mdi-page-layout-sidebar-left:before {\n  content: \"\\F6FC\";\n}\n\n.mdi-page-layout-sidebar-right:before {\n  content: \"\\F6FD\";\n}\n\n.mdi-page-next:before {\n  content: \"\\FB8C\";\n}\n\n.mdi-page-next-outline:before {\n  content: \"\\FB8D\";\n}\n\n.mdi-page-previous:before {\n  content: \"\\FB8E\";\n}\n\n.mdi-page-previous-outline:before {\n  content: \"\\FB8F\";\n}\n\n.mdi-palette:before {\n  content: \"\\F3D8\";\n}\n\n.mdi-palette-advanced:before {\n  content: \"\\F3D9\";\n}\n\n.mdi-palette-outline:before {\n  content: \"\\FE6C\";\n}\n\n.mdi-palette-swatch:before {\n  content: \"\\F8B4\";\n}\n\n.mdi-pan:before {\n  content: \"\\FB90\";\n}\n\n.mdi-pan-bottom-left:before {\n  content: \"\\FB91\";\n}\n\n.mdi-pan-bottom-right:before {\n  content: \"\\FB92\";\n}\n\n.mdi-pan-down:before {\n  content: \"\\FB93\";\n}\n\n.mdi-pan-horizontal:before {\n  content: \"\\FB94\";\n}\n\n.mdi-pan-left:before {\n  content: \"\\FB95\";\n}\n\n.mdi-pan-right:before {\n  content: \"\\FB96\";\n}\n\n.mdi-pan-top-left:before {\n  content: \"\\FB97\";\n}\n\n.mdi-pan-top-right:before {\n  content: \"\\FB98\";\n}\n\n.mdi-pan-up:before {\n  content: \"\\FB99\";\n}\n\n.mdi-pan-vertical:before {\n  content: \"\\FB9A\";\n}\n\n.mdi-panda:before {\n  content: \"\\F3DA\";\n}\n\n.mdi-pandora:before {\n  content: \"\\F3DB\";\n}\n\n.mdi-panorama:before {\n  content: \"\\F3DC\";\n}\n\n.mdi-panorama-fisheye:before {\n  content: \"\\F3DD\";\n}\n\n.mdi-panorama-horizontal:before {\n  content: \"\\F3DE\";\n}\n\n.mdi-panorama-vertical:before {\n  content: \"\\F3DF\";\n}\n\n.mdi-panorama-wide-angle:before {\n  content: \"\\F3E0\";\n}\n\n.mdi-paper-cut-vertical:before {\n  content: \"\\F3E1\";\n}\n\n.mdi-paperclip:before {\n  content: \"\\F3E2\";\n}\n\n.mdi-parachute:before {\n  content: \"\\FC90\";\n}\n\n.mdi-parachute-outline:before {\n  content: \"\\FC91\";\n}\n\n.mdi-parking:before {\n  content: \"\\F3E3\";\n}\n\n.mdi-passport:before {\n  content: \"\\F7E2\";\n}\n\n.mdi-passport-biometric:before {\n  content: \"\\FDBD\";\n}\n\n.mdi-patreon:before {\n  content: \"\\F881\";\n}\n\n.mdi-pause:before {\n  content: \"\\F3E4\";\n}\n\n.mdi-pause-circle:before {\n  content: \"\\F3E5\";\n}\n\n.mdi-pause-circle-outline:before {\n  content: \"\\F3E6\";\n}\n\n.mdi-pause-octagon:before {\n  content: \"\\F3E7\";\n}\n\n.mdi-pause-octagon-outline:before {\n  content: \"\\F3E8\";\n}\n\n.mdi-paw:before {\n  content: \"\\F3E9\";\n}\n\n.mdi-paw-off:before {\n  content: \"\\F657\";\n}\n\n.mdi-paypal:before {\n  content: \"\\F882\";\n}\n\n.mdi-pdf-box:before {\n  content: \"\\FE39\";\n}\n\n.mdi-peace:before {\n  content: \"\\F883\";\n}\n\n.mdi-pen:before {\n  content: \"\\F3EA\";\n}\n\n.mdi-pen-lock:before {\n  content: \"\\FDBE\";\n}\n\n.mdi-pen-minus:before {\n  content: \"\\FDBF\";\n}\n\n.mdi-pen-off:before {\n  content: \"\\FDC0\";\n}\n\n.mdi-pen-plus:before {\n  content: \"\\FDC1\";\n}\n\n.mdi-pen-remove:before {\n  content: \"\\FDC2\";\n}\n\n.mdi-pencil:before {\n  content: \"\\F3EB\";\n}\n\n.mdi-pencil-box:before {\n  content: \"\\F3EC\";\n}\n\n.mdi-pencil-box-outline:before {\n  content: \"\\F3ED\";\n}\n\n.mdi-pencil-circle:before {\n  content: \"\\F6FE\";\n}\n\n.mdi-pencil-circle-outline:before {\n  content: \"\\F775\";\n}\n\n.mdi-pencil-lock:before {\n  content: \"\\F3EE\";\n}\n\n.mdi-pencil-lock-outline:before {\n  content: \"\\FDC3\";\n}\n\n.mdi-pencil-minus:before {\n  content: \"\\FDC4\";\n}\n\n.mdi-pencil-minus-outline:before {\n  content: \"\\FDC5\";\n}\n\n.mdi-pencil-off:before {\n  content: \"\\F3EF\";\n}\n\n.mdi-pencil-off-outline:before {\n  content: \"\\FDC6\";\n}\n\n.mdi-pencil-outline:before {\n  content: \"\\FC92\";\n}\n\n.mdi-pencil-plus:before {\n  content: \"\\FDC7\";\n}\n\n.mdi-pencil-plus-outline:before {\n  content: \"\\FDC8\";\n}\n\n.mdi-pencil-remove:before {\n  content: \"\\FDC9\";\n}\n\n.mdi-pencil-remove-outline:before {\n  content: \"\\FDCA\";\n}\n\n.mdi-pentagon:before {\n  content: \"\\F6FF\";\n}\n\n.mdi-pentagon-outline:before {\n  content: \"\\F700\";\n}\n\n.mdi-percent:before {\n  content: \"\\F3F0\";\n}\n\n.mdi-periodic-table:before {\n  content: \"\\F8B5\";\n}\n\n.mdi-periodic-table-co2:before {\n  content: \"\\F7E3\";\n}\n\n.mdi-periscope:before {\n  content: \"\\F747\";\n}\n\n.mdi-perspective-less:before {\n  content: \"\\FCFF\";\n}\n\n.mdi-perspective-more:before {\n  content: \"\\FD00\";\n}\n\n.mdi-pharmacy:before {\n  content: \"\\F3F1\";\n}\n\n.mdi-phone:before {\n  content: \"\\F3F2\";\n}\n\n.mdi-phone-bluetooth:before {\n  content: \"\\F3F3\";\n}\n\n.mdi-phone-classic:before {\n  content: \"\\F602\";\n}\n\n.mdi-phone-forward:before {\n  content: \"\\F3F4\";\n}\n\n.mdi-phone-hangup:before {\n  content: \"\\F3F5\";\n}\n\n.mdi-phone-in-talk:before {\n  content: \"\\F3F6\";\n}\n\n.mdi-phone-incoming:before {\n  content: \"\\F3F7\";\n}\n\n.mdi-phone-lock:before {\n  content: \"\\F3F8\";\n}\n\n.mdi-phone-log:before {\n  content: \"\\F3F9\";\n}\n\n.mdi-phone-minus:before {\n  content: \"\\F658\";\n}\n\n.mdi-phone-missed:before {\n  content: \"\\F3FA\";\n}\n\n.mdi-phone-off:before {\n  content: \"\\FDCB\";\n}\n\n.mdi-phone-outgoing:before {\n  content: \"\\F3FB\";\n}\n\n.mdi-phone-outline:before {\n  content: \"\\FDCC\";\n}\n\n.mdi-phone-paused:before {\n  content: \"\\F3FC\";\n}\n\n.mdi-phone-plus:before {\n  content: \"\\F659\";\n}\n\n.mdi-phone-return:before {\n  content: \"\\F82E\";\n}\n\n.mdi-phone-rotate-landscape:before {\n  content: \"\\F884\";\n}\n\n.mdi-phone-rotate-portrait:before {\n  content: \"\\F885\";\n}\n\n.mdi-phone-settings:before {\n  content: \"\\F3FD\";\n}\n\n.mdi-phone-voip:before {\n  content: \"\\F3FE\";\n}\n\n.mdi-pi:before {\n  content: \"\\F3FF\";\n}\n\n.mdi-pi-box:before {\n  content: \"\\F400\";\n}\n\n.mdi-pi-hole:before {\n  content: \"\\FDCD\";\n}\n\n.mdi-piano:before {\n  content: \"\\F67C\";\n}\n\n.mdi-pickaxe:before {\n  content: \"\\F8B6\";\n}\n\n.mdi-picture-in-picture-bottom-right:before {\n  content: \"\\FE3A\";\n}\n\n.mdi-picture-in-picture-bottom-right-outline:before {\n  content: \"\\FE3B\";\n}\n\n.mdi-picture-in-picture-top-right:before {\n  content: \"\\FE3C\";\n}\n\n.mdi-picture-in-picture-top-right-outline:before {\n  content: \"\\FE3D\";\n}\n\n.mdi-pier:before {\n  content: \"\\F886\";\n}\n\n.mdi-pier-crane:before {\n  content: \"\\F887\";\n}\n\n.mdi-pig:before {\n  content: \"\\F401\";\n}\n\n.mdi-pill:before {\n  content: \"\\F402\";\n}\n\n.mdi-pillar:before {\n  content: \"\\F701\";\n}\n\n.mdi-pin:before {\n  content: \"\\F403\";\n}\n\n.mdi-pin-off:before {\n  content: \"\\F404\";\n}\n\n.mdi-pin-off-outline:before {\n  content: \"\\F92F\";\n}\n\n.mdi-pin-outline:before {\n  content: \"\\F930\";\n}\n\n.mdi-pine-tree:before {\n  content: \"\\F405\";\n}\n\n.mdi-pine-tree-box:before {\n  content: \"\\F406\";\n}\n\n.mdi-pinterest:before {\n  content: \"\\F407\";\n}\n\n.mdi-pinterest-box:before {\n  content: \"\\F408\";\n}\n\n.mdi-pinwheel:before {\n  content: \"\\FAD4\";\n}\n\n.mdi-pinwheel-outline:before {\n  content: \"\\FAD5\";\n}\n\n.mdi-pipe:before {\n  content: \"\\F7E4\";\n}\n\n.mdi-pipe-disconnected:before {\n  content: \"\\F7E5\";\n}\n\n.mdi-pipe-leak:before {\n  content: \"\\F888\";\n}\n\n.mdi-pirate:before {\n  content: \"\\FA07\";\n}\n\n.mdi-pistol:before {\n  content: \"\\F702\";\n}\n\n.mdi-piston:before {\n  content: \"\\F889\";\n}\n\n.mdi-pizza:before {\n  content: \"\\F409\";\n}\n\n.mdi-play:before {\n  content: \"\\F40A\";\n}\n\n.mdi-play-box-outline:before {\n  content: \"\\F40B\";\n}\n\n.mdi-play-circle:before {\n  content: \"\\F40C\";\n}\n\n.mdi-play-circle-outline:before {\n  content: \"\\F40D\";\n}\n\n.mdi-play-network:before {\n  content: \"\\F88A\";\n}\n\n.mdi-play-network-outline:before {\n  content: \"\\FC93\";\n}\n\n.mdi-play-pause:before {\n  content: \"\\F40E\";\n}\n\n.mdi-play-protected-content:before {\n  content: \"\\F40F\";\n}\n\n.mdi-play-speed:before {\n  content: \"\\F8FE\";\n}\n\n.mdi-playlist-check:before {\n  content: \"\\F5C7\";\n}\n\n.mdi-playlist-edit:before {\n  content: \"\\F8FF\";\n}\n\n.mdi-playlist-minus:before {\n  content: \"\\F410\";\n}\n\n.mdi-playlist-music:before {\n  content: \"\\FC94\";\n}\n\n.mdi-playlist-music-outline:before {\n  content: \"\\FC95\";\n}\n\n.mdi-playlist-play:before {\n  content: \"\\F411\";\n}\n\n.mdi-playlist-plus:before {\n  content: \"\\F412\";\n}\n\n.mdi-playlist-remove:before {\n  content: \"\\F413\";\n}\n\n.mdi-playlist-star:before {\n  content: \"\\FDCE\";\n}\n\n.mdi-playstation:before {\n  content: \"\\F414\";\n}\n\n.mdi-plex:before {\n  content: \"\\F6B9\";\n}\n\n.mdi-plus:before {\n  content: \"\\F415\";\n}\n\n.mdi-plus-box:before {\n  content: \"\\F416\";\n}\n\n.mdi-plus-box-outline:before {\n  content: \"\\F703\";\n}\n\n.mdi-plus-circle:before {\n  content: \"\\F417\";\n}\n\n.mdi-plus-circle-multiple-outline:before {\n  content: \"\\F418\";\n}\n\n.mdi-plus-circle-outline:before {\n  content: \"\\F419\";\n}\n\n.mdi-plus-minus:before {\n  content: \"\\F991\";\n}\n\n.mdi-plus-minus-box:before {\n  content: \"\\F992\";\n}\n\n.mdi-plus-network:before {\n  content: \"\\F41A\";\n}\n\n.mdi-plus-network-outline:before {\n  content: \"\\FC96\";\n}\n\n.mdi-plus-one:before {\n  content: \"\\F41B\";\n}\n\n.mdi-plus-outline:before {\n  content: \"\\F704\";\n}\n\n.mdi-pocket:before {\n  content: \"\\F41C\";\n}\n\n.mdi-podcast:before {\n  content: \"\\F993\";\n}\n\n.mdi-podium:before {\n  content: \"\\FD01\";\n}\n\n.mdi-podium-bronze:before {\n  content: \"\\FD02\";\n}\n\n.mdi-podium-gold:before {\n  content: \"\\FD03\";\n}\n\n.mdi-podium-silver:before {\n  content: \"\\FD04\";\n}\n\n.mdi-point-of-sale:before {\n  content: \"\\FD6E\";\n}\n\n.mdi-pokeball:before {\n  content: \"\\F41D\";\n}\n\n.mdi-pokemon-go:before {\n  content: \"\\FA08\";\n}\n\n.mdi-poker-chip:before {\n  content: \"\\F82F\";\n}\n\n.mdi-polaroid:before {\n  content: \"\\F41E\";\n}\n\n.mdi-poll:before {\n  content: \"\\F41F\";\n}\n\n.mdi-poll-box:before {\n  content: \"\\F420\";\n}\n\n.mdi-polymer:before {\n  content: \"\\F421\";\n}\n\n.mdi-pool:before {\n  content: \"\\F606\";\n}\n\n.mdi-popcorn:before {\n  content: \"\\F422\";\n}\n\n.mdi-postage-stamp:before {\n  content: \"\\FC97\";\n}\n\n.mdi-pot:before {\n  content: \"\\F65A\";\n}\n\n.mdi-pot-mix:before {\n  content: \"\\F65B\";\n}\n\n.mdi-pound:before {\n  content: \"\\F423\";\n}\n\n.mdi-pound-box:before {\n  content: \"\\F424\";\n}\n\n.mdi-power:before {\n  content: \"\\F425\";\n}\n\n.mdi-power-cycle:before {\n  content: \"\\F900\";\n}\n\n.mdi-power-off:before {\n  content: \"\\F901\";\n}\n\n.mdi-power-on:before {\n  content: \"\\F902\";\n}\n\n.mdi-power-plug:before {\n  content: \"\\F6A4\";\n}\n\n.mdi-power-plug-off:before {\n  content: \"\\F6A5\";\n}\n\n.mdi-power-settings:before {\n  content: \"\\F426\";\n}\n\n.mdi-power-sleep:before {\n  content: \"\\F903\";\n}\n\n.mdi-power-socket:before {\n  content: \"\\F427\";\n}\n\n.mdi-power-socket-au:before {\n  content: \"\\F904\";\n}\n\n.mdi-power-socket-eu:before {\n  content: \"\\F7E6\";\n}\n\n.mdi-power-socket-uk:before {\n  content: \"\\F7E7\";\n}\n\n.mdi-power-socket-us:before {\n  content: \"\\F7E8\";\n}\n\n.mdi-power-standby:before {\n  content: \"\\F905\";\n}\n\n.mdi-powershell:before {\n  content: \"\\FA09\";\n}\n\n.mdi-prescription:before {\n  content: \"\\F705\";\n}\n\n.mdi-presentation:before {\n  content: \"\\F428\";\n}\n\n.mdi-presentation-play:before {\n  content: \"\\F429\";\n}\n\n.mdi-printer:before {\n  content: \"\\F42A\";\n}\n\n.mdi-printer-3d:before {\n  content: \"\\F42B\";\n}\n\n.mdi-printer-3d-nozzle:before {\n  content: \"\\FE3E\";\n}\n\n.mdi-printer-3d-nozzle-outline:before {\n  content: \"\\FE3F\";\n}\n\n.mdi-printer-alert:before {\n  content: \"\\F42C\";\n}\n\n.mdi-printer-off:before {\n  content: \"\\FE40\";\n}\n\n.mdi-printer-settings:before {\n  content: \"\\F706\";\n}\n\n.mdi-printer-wireless:before {\n  content: \"\\FA0A\";\n}\n\n.mdi-priority-high:before {\n  content: \"\\F603\";\n}\n\n.mdi-priority-low:before {\n  content: \"\\F604\";\n}\n\n.mdi-professional-hexagon:before {\n  content: \"\\F42D\";\n}\n\n.mdi-progress-alert:before {\n  content: \"\\FC98\";\n}\n\n.mdi-progress-check:before {\n  content: \"\\F994\";\n}\n\n.mdi-progress-clock:before {\n  content: \"\\F995\";\n}\n\n.mdi-progress-download:before {\n  content: \"\\F996\";\n}\n\n.mdi-progress-upload:before {\n  content: \"\\F997\";\n}\n\n.mdi-progress-wrench:before {\n  content: \"\\FC99\";\n}\n\n.mdi-projector:before {\n  content: \"\\F42E\";\n}\n\n.mdi-projector-screen:before {\n  content: \"\\F42F\";\n}\n\n.mdi-publish:before {\n  content: \"\\F6A6\";\n}\n\n.mdi-pulse:before {\n  content: \"\\F430\";\n}\n\n.mdi-pumpkin:before {\n  content: \"\\FB9B\";\n}\n\n.mdi-puzzle:before {\n  content: \"\\F431\";\n}\n\n.mdi-puzzle-outline:before {\n  content: \"\\FA65\";\n}\n\n.mdi-qi:before {\n  content: \"\\F998\";\n}\n\n.mdi-qqchat:before {\n  content: \"\\F605\";\n}\n\n.mdi-qrcode:before {\n  content: \"\\F432\";\n}\n\n.mdi-qrcode-edit:before {\n  content: \"\\F8B7\";\n}\n\n.mdi-qrcode-scan:before {\n  content: \"\\F433\";\n}\n\n.mdi-quadcopter:before {\n  content: \"\\F434\";\n}\n\n.mdi-quality-high:before {\n  content: \"\\F435\";\n}\n\n.mdi-quality-low:before {\n  content: \"\\FA0B\";\n}\n\n.mdi-quality-medium:before {\n  content: \"\\FA0C\";\n}\n\n.mdi-quicktime:before {\n  content: \"\\F436\";\n}\n\n.mdi-quora:before {\n  content: \"\\FD05\";\n}\n\n.mdi-rabbit:before {\n  content: \"\\F906\";\n}\n\n.mdi-racing-helmet:before {\n  content: \"\\FD6F\";\n}\n\n.mdi-racquetball:before {\n  content: \"\\FD70\";\n}\n\n.mdi-radar:before {\n  content: \"\\F437\";\n}\n\n.mdi-radiator:before {\n  content: \"\\F438\";\n}\n\n.mdi-radiator-disabled:before {\n  content: \"\\FAD6\";\n}\n\n.mdi-radiator-off:before {\n  content: \"\\FAD7\";\n}\n\n.mdi-radio:before {\n  content: \"\\F439\";\n}\n\n.mdi-radio-am:before {\n  content: \"\\FC9A\";\n}\n\n.mdi-radio-fm:before {\n  content: \"\\FC9B\";\n}\n\n.mdi-radio-handheld:before {\n  content: \"\\F43A\";\n}\n\n.mdi-radio-tower:before {\n  content: \"\\F43B\";\n}\n\n.mdi-radioactive:before {\n  content: \"\\F43C\";\n}\n\n.mdi-radiobox-blank:before {\n  content: \"\\F43D\";\n}\n\n.mdi-radiobox-marked:before {\n  content: \"\\F43E\";\n}\n\n.mdi-radius:before {\n  content: \"\\FC9C\";\n}\n\n.mdi-radius-outline:before {\n  content: \"\\FC9D\";\n}\n\n.mdi-raspberry-pi:before {\n  content: \"\\F43F\";\n}\n\n.mdi-ray-end:before {\n  content: \"\\F440\";\n}\n\n.mdi-ray-end-arrow:before {\n  content: \"\\F441\";\n}\n\n.mdi-ray-start:before {\n  content: \"\\F442\";\n}\n\n.mdi-ray-start-arrow:before {\n  content: \"\\F443\";\n}\n\n.mdi-ray-start-end:before {\n  content: \"\\F444\";\n}\n\n.mdi-ray-vertex:before {\n  content: \"\\F445\";\n}\n\n.mdi-react:before {\n  content: \"\\F707\";\n}\n\n.mdi-read:before {\n  content: \"\\F447\";\n}\n\n.mdi-receipt:before {\n  content: \"\\F449\";\n}\n\n.mdi-record:before {\n  content: \"\\F44A\";\n}\n\n.mdi-record-player:before {\n  content: \"\\F999\";\n}\n\n.mdi-record-rec:before {\n  content: \"\\F44B\";\n}\n\n.mdi-rectangle:before {\n  content: \"\\FE41\";\n}\n\n.mdi-rectangle-outline:before {\n  content: \"\\FE42\";\n}\n\n.mdi-recycle:before {\n  content: \"\\F44C\";\n}\n\n.mdi-reddit:before {\n  content: \"\\F44D\";\n}\n\n.mdi-redo:before {\n  content: \"\\F44E\";\n}\n\n.mdi-redo-variant:before {\n  content: \"\\F44F\";\n}\n\n.mdi-reflect-horizontal:before {\n  content: \"\\FA0D\";\n}\n\n.mdi-reflect-vertical:before {\n  content: \"\\FA0E\";\n}\n\n.mdi-refresh:before {\n  content: \"\\F450\";\n}\n\n.mdi-regex:before {\n  content: \"\\F451\";\n}\n\n.mdi-registered-trademark:before {\n  content: \"\\FA66\";\n}\n\n.mdi-relative-scale:before {\n  content: \"\\F452\";\n}\n\n.mdi-reload:before {\n  content: \"\\F453\";\n}\n\n.mdi-reminder:before {\n  content: \"\\F88B\";\n}\n\n.mdi-remote:before {\n  content: \"\\F454\";\n}\n\n.mdi-remote-desktop:before {\n  content: \"\\F8B8\";\n}\n\n.mdi-rename-box:before {\n  content: \"\\F455\";\n}\n\n.mdi-reorder-horizontal:before {\n  content: \"\\F687\";\n}\n\n.mdi-reorder-vertical:before {\n  content: \"\\F688\";\n}\n\n.mdi-repeat:before {\n  content: \"\\F456\";\n}\n\n.mdi-repeat-off:before {\n  content: \"\\F457\";\n}\n\n.mdi-repeat-once:before {\n  content: \"\\F458\";\n}\n\n.mdi-replay:before {\n  content: \"\\F459\";\n}\n\n.mdi-reply:before {\n  content: \"\\F45A\";\n}\n\n.mdi-reply-all:before {\n  content: \"\\F45B\";\n}\n\n.mdi-reproduction:before {\n  content: \"\\F45C\";\n}\n\n.mdi-resistor:before {\n  content: \"\\FB1F\";\n}\n\n.mdi-resistor-nodes:before {\n  content: \"\\FB20\";\n}\n\n.mdi-resize:before {\n  content: \"\\FA67\";\n}\n\n.mdi-resize-bottom-right:before {\n  content: \"\\F45D\";\n}\n\n.mdi-responsive:before {\n  content: \"\\F45E\";\n}\n\n.mdi-restart:before {\n  content: \"\\F708\";\n}\n\n.mdi-restart-off:before {\n  content: \"\\FD71\";\n}\n\n.mdi-restore:before {\n  content: \"\\F99A\";\n}\n\n.mdi-restore-clock:before {\n  content: \"\\F6A7\";\n}\n\n.mdi-rewind:before {\n  content: \"\\F45F\";\n}\n\n.mdi-rewind-10:before {\n  content: \"\\FD06\";\n}\n\n.mdi-rewind-30:before {\n  content: \"\\FD72\";\n}\n\n.mdi-rewind-outline:before {\n  content: \"\\F709\";\n}\n\n.mdi-rhombus:before {\n  content: \"\\F70A\";\n}\n\n.mdi-rhombus-medium:before {\n  content: \"\\FA0F\";\n}\n\n.mdi-rhombus-outline:before {\n  content: \"\\F70B\";\n}\n\n.mdi-rhombus-split:before {\n  content: \"\\FA10\";\n}\n\n.mdi-ribbon:before {\n  content: \"\\F460\";\n}\n\n.mdi-rice:before {\n  content: \"\\F7E9\";\n}\n\n.mdi-ring:before {\n  content: \"\\F7EA\";\n}\n\n.mdi-rivet:before {\n  content: \"\\FE43\";\n}\n\n.mdi-road:before {\n  content: \"\\F461\";\n}\n\n.mdi-road-variant:before {\n  content: \"\\F462\";\n}\n\n.mdi-robot:before {\n  content: \"\\F6A8\";\n}\n\n.mdi-robot-industrial:before {\n  content: \"\\FB21\";\n}\n\n.mdi-robot-vacuum:before {\n  content: \"\\F70C\";\n}\n\n.mdi-robot-vacuum-variant:before {\n  content: \"\\F907\";\n}\n\n.mdi-rocket:before {\n  content: \"\\F463\";\n}\n\n.mdi-roller-skate:before {\n  content: \"\\FD07\";\n}\n\n.mdi-rollerblade:before {\n  content: \"\\FD08\";\n}\n\n.mdi-rollupjs:before {\n  content: \"\\FB9C\";\n}\n\n.mdi-room-service:before {\n  content: \"\\F88C\";\n}\n\n.mdi-room-service-outline:before {\n  content: \"\\FD73\";\n}\n\n.mdi-rotate-3d:before {\n  content: \"\\F464\";\n}\n\n.mdi-rotate-left:before {\n  content: \"\\F465\";\n}\n\n.mdi-rotate-left-variant:before {\n  content: \"\\F466\";\n}\n\n.mdi-rotate-orbit:before {\n  content: \"\\FD74\";\n}\n\n.mdi-rotate-right:before {\n  content: \"\\F467\";\n}\n\n.mdi-rotate-right-variant:before {\n  content: \"\\F468\";\n}\n\n.mdi-rounded-corner:before {\n  content: \"\\F607\";\n}\n\n.mdi-router-wireless:before {\n  content: \"\\F469\";\n}\n\n.mdi-router-wireless-settings:before {\n  content: \"\\FA68\";\n}\n\n.mdi-routes:before {\n  content: \"\\F46A\";\n}\n\n.mdi-rowing:before {\n  content: \"\\F608\";\n}\n\n.mdi-rss:before {\n  content: \"\\F46B\";\n}\n\n.mdi-rss-box:before {\n  content: \"\\F46C\";\n}\n\n.mdi-ruby:before {\n  content: \"\\FD09\";\n}\n\n.mdi-rugby:before {\n  content: \"\\FD75\";\n}\n\n.mdi-ruler:before {\n  content: \"\\F46D\";\n}\n\n.mdi-ruler-square:before {\n  content: \"\\FC9E\";\n}\n\n.mdi-run:before {\n  content: \"\\F70D\";\n}\n\n.mdi-run-fast:before {\n  content: \"\\F46E\";\n}\n\n.mdi-sack:before {\n  content: \"\\FD0A\";\n}\n\n.mdi-sack-percent:before {\n  content: \"\\FD0B\";\n}\n\n.mdi-safe:before {\n  content: \"\\FA69\";\n}\n\n.mdi-safety-goggles:before {\n  content: \"\\FD0C\";\n}\n\n.mdi-sale:before {\n  content: \"\\F46F\";\n}\n\n.mdi-salesforce:before {\n  content: \"\\F88D\";\n}\n\n.mdi-sass:before {\n  content: \"\\F7EB\";\n}\n\n.mdi-satellite:before {\n  content: \"\\F470\";\n}\n\n.mdi-satellite-uplink:before {\n  content: \"\\F908\";\n}\n\n.mdi-satellite-variant:before {\n  content: \"\\F471\";\n}\n\n.mdi-sausage:before {\n  content: \"\\F8B9\";\n}\n\n.mdi-saw-blade:before {\n  content: \"\\FE44\";\n}\n\n.mdi-saxophone:before {\n  content: \"\\F609\";\n}\n\n.mdi-scale:before {\n  content: \"\\F472\";\n}\n\n.mdi-scale-balance:before {\n  content: \"\\F5D1\";\n}\n\n.mdi-scale-bathroom:before {\n  content: \"\\F473\";\n}\n\n.mdi-scanner:before {\n  content: \"\\F6AA\";\n}\n\n.mdi-scanner-off:before {\n  content: \"\\F909\";\n}\n\n.mdi-school:before {\n  content: \"\\F474\";\n}\n\n.mdi-scissors-cutting:before {\n  content: \"\\FA6A\";\n}\n\n.mdi-screen-rotation:before {\n  content: \"\\F475\";\n}\n\n.mdi-screen-rotation-lock:before {\n  content: \"\\F476\";\n}\n\n.mdi-screw-flat-top:before {\n  content: \"\\FDCF\";\n}\n\n.mdi-screw-lag:before {\n  content: \"\\FE54\";\n}\n\n.mdi-screw-machine-flat-top:before {\n  content: \"\\FE55\";\n}\n\n.mdi-screw-machine-round-top:before {\n  content: \"\\FE56\";\n}\n\n.mdi-screw-round-top:before {\n  content: \"\\FE57\";\n}\n\n.mdi-screwdriver:before {\n  content: \"\\F477\";\n}\n\n.mdi-script:before {\n  content: \"\\FB9D\";\n}\n\n.mdi-script-outline:before {\n  content: \"\\F478\";\n}\n\n.mdi-script-text:before {\n  content: \"\\FB9E\";\n}\n\n.mdi-script-text-outline:before {\n  content: \"\\FB9F\";\n}\n\n.mdi-sd:before {\n  content: \"\\F479\";\n}\n\n.mdi-seal:before {\n  content: \"\\F47A\";\n}\n\n.mdi-search-web:before {\n  content: \"\\F70E\";\n}\n\n.mdi-seat:before {\n  content: \"\\FC9F\";\n}\n\n.mdi-seat-flat:before {\n  content: \"\\F47B\";\n}\n\n.mdi-seat-flat-angled:before {\n  content: \"\\F47C\";\n}\n\n.mdi-seat-individual-suite:before {\n  content: \"\\F47D\";\n}\n\n.mdi-seat-legroom-extra:before {\n  content: \"\\F47E\";\n}\n\n.mdi-seat-legroom-normal:before {\n  content: \"\\F47F\";\n}\n\n.mdi-seat-legroom-reduced:before {\n  content: \"\\F480\";\n}\n\n.mdi-seat-outline:before {\n  content: \"\\FCA0\";\n}\n\n.mdi-seat-recline-extra:before {\n  content: \"\\F481\";\n}\n\n.mdi-seat-recline-normal:before {\n  content: \"\\F482\";\n}\n\n.mdi-seatbelt:before {\n  content: \"\\FCA1\";\n}\n\n.mdi-security:before {\n  content: \"\\F483\";\n}\n\n.mdi-security-network:before {\n  content: \"\\F484\";\n}\n\n.mdi-seed:before {\n  content: \"\\FE45\";\n}\n\n.mdi-seed-outline:before {\n  content: \"\\FE46\";\n}\n\n.mdi-select:before {\n  content: \"\\F485\";\n}\n\n.mdi-select-all:before {\n  content: \"\\F486\";\n}\n\n.mdi-select-color:before {\n  content: \"\\FD0D\";\n}\n\n.mdi-select-compare:before {\n  content: \"\\FAD8\";\n}\n\n.mdi-select-drag:before {\n  content: \"\\FA6B\";\n}\n\n.mdi-select-inverse:before {\n  content: \"\\F487\";\n}\n\n.mdi-select-off:before {\n  content: \"\\F488\";\n}\n\n.mdi-selection:before {\n  content: \"\\F489\";\n}\n\n.mdi-selection-drag:before {\n  content: \"\\FA6C\";\n}\n\n.mdi-selection-ellipse:before {\n  content: \"\\FD0E\";\n}\n\n.mdi-selection-off:before {\n  content: \"\\F776\";\n}\n\n.mdi-send:before {\n  content: \"\\F48A\";\n}\n\n.mdi-send-circle:before {\n  content: \"\\FE58\";\n}\n\n.mdi-send-circle-outline:before {\n  content: \"\\FE59\";\n}\n\n.mdi-send-lock:before {\n  content: \"\\F7EC\";\n}\n\n.mdi-serial-port:before {\n  content: \"\\F65C\";\n}\n\n.mdi-server:before {\n  content: \"\\F48B\";\n}\n\n.mdi-server-minus:before {\n  content: \"\\F48C\";\n}\n\n.mdi-server-network:before {\n  content: \"\\F48D\";\n}\n\n.mdi-server-network-off:before {\n  content: \"\\F48E\";\n}\n\n.mdi-server-off:before {\n  content: \"\\F48F\";\n}\n\n.mdi-server-plus:before {\n  content: \"\\F490\";\n}\n\n.mdi-server-remove:before {\n  content: \"\\F491\";\n}\n\n.mdi-server-security:before {\n  content: \"\\F492\";\n}\n\n.mdi-set-all:before {\n  content: \"\\F777\";\n}\n\n.mdi-set-center:before {\n  content: \"\\F778\";\n}\n\n.mdi-set-center-right:before {\n  content: \"\\F779\";\n}\n\n.mdi-set-left:before {\n  content: \"\\F77A\";\n}\n\n.mdi-set-left-center:before {\n  content: \"\\F77B\";\n}\n\n.mdi-set-left-right:before {\n  content: \"\\F77C\";\n}\n\n.mdi-set-none:before {\n  content: \"\\F77D\";\n}\n\n.mdi-set-right:before {\n  content: \"\\F77E\";\n}\n\n.mdi-set-top-box:before {\n  content: \"\\F99E\";\n}\n\n.mdi-settings:before {\n  content: \"\\F493\";\n}\n\n.mdi-settings-box:before {\n  content: \"\\F494\";\n}\n\n.mdi-settings-helper:before {\n  content: \"\\FA6D\";\n}\n\n.mdi-settings-outline:before {\n  content: \"\\F8BA\";\n}\n\n.mdi-shape:before {\n  content: \"\\F830\";\n}\n\n.mdi-shape-circle-plus:before {\n  content: \"\\F65D\";\n}\n\n.mdi-shape-outline:before {\n  content: \"\\F831\";\n}\n\n.mdi-shape-plus:before {\n  content: \"\\F495\";\n}\n\n.mdi-shape-polygon-plus:before {\n  content: \"\\F65E\";\n}\n\n.mdi-shape-rectangle-plus:before {\n  content: \"\\F65F\";\n}\n\n.mdi-shape-square-plus:before {\n  content: \"\\F660\";\n}\n\n.mdi-share:before {\n  content: \"\\F496\";\n}\n\n.mdi-share-outline:before {\n  content: \"\\F931\";\n}\n\n.mdi-share-variant:before {\n  content: \"\\F497\";\n}\n\n.mdi-sheep:before {\n  content: \"\\FCA2\";\n}\n\n.mdi-shield:before {\n  content: \"\\F498\";\n}\n\n.mdi-shield-account:before {\n  content: \"\\F88E\";\n}\n\n.mdi-shield-account-outline:before {\n  content: \"\\FA11\";\n}\n\n.mdi-shield-airplane:before {\n  content: \"\\F6BA\";\n}\n\n.mdi-shield-airplane-outline:before {\n  content: \"\\FCA3\";\n}\n\n.mdi-shield-check:before {\n  content: \"\\F565\";\n}\n\n.mdi-shield-check-outline:before {\n  content: \"\\FCA4\";\n}\n\n.mdi-shield-cross:before {\n  content: \"\\FCA5\";\n}\n\n.mdi-shield-cross-outline:before {\n  content: \"\\FCA6\";\n}\n\n.mdi-shield-half-full:before {\n  content: \"\\F77F\";\n}\n\n.mdi-shield-home:before {\n  content: \"\\F689\";\n}\n\n.mdi-shield-home-outline:before {\n  content: \"\\FCA7\";\n}\n\n.mdi-shield-key:before {\n  content: \"\\FBA0\";\n}\n\n.mdi-shield-key-outline:before {\n  content: \"\\FBA1\";\n}\n\n.mdi-shield-link-variant:before {\n  content: \"\\FD0F\";\n}\n\n.mdi-shield-link-variant-outline:before {\n  content: \"\\FD10\";\n}\n\n.mdi-shield-lock:before {\n  content: \"\\F99C\";\n}\n\n.mdi-shield-lock-outline:before {\n  content: \"\\FCA8\";\n}\n\n.mdi-shield-off:before {\n  content: \"\\F99D\";\n}\n\n.mdi-shield-off-outline:before {\n  content: \"\\F99B\";\n}\n\n.mdi-shield-outline:before {\n  content: \"\\F499\";\n}\n\n.mdi-shield-plus:before {\n  content: \"\\FAD9\";\n}\n\n.mdi-shield-plus-outline:before {\n  content: \"\\FADA\";\n}\n\n.mdi-shield-remove:before {\n  content: \"\\FADB\";\n}\n\n.mdi-shield-remove-outline:before {\n  content: \"\\FADC\";\n}\n\n.mdi-shield-search:before {\n  content: \"\\FD76\";\n}\n\n.mdi-ship-wheel:before {\n  content: \"\\F832\";\n}\n\n.mdi-shoe-formal:before {\n  content: \"\\FB22\";\n}\n\n.mdi-shoe-heel:before {\n  content: \"\\FB23\";\n}\n\n.mdi-shoe-print:before {\n  content: \"\\FE5A\";\n}\n\n.mdi-shopify:before {\n  content: \"\\FADD\";\n}\n\n.mdi-shopping:before {\n  content: \"\\F49A\";\n}\n\n.mdi-shopping-music:before {\n  content: \"\\F49B\";\n}\n\n.mdi-shovel:before {\n  content: \"\\F70F\";\n}\n\n.mdi-shovel-off:before {\n  content: \"\\F710\";\n}\n\n.mdi-shower:before {\n  content: \"\\F99F\";\n}\n\n.mdi-shower-head:before {\n  content: \"\\F9A0\";\n}\n\n.mdi-shredder:before {\n  content: \"\\F49C\";\n}\n\n.mdi-shuffle:before {\n  content: \"\\F49D\";\n}\n\n.mdi-shuffle-disabled:before {\n  content: \"\\F49E\";\n}\n\n.mdi-shuffle-variant:before {\n  content: \"\\F49F\";\n}\n\n.mdi-sigma:before {\n  content: \"\\F4A0\";\n}\n\n.mdi-sigma-lower:before {\n  content: \"\\F62B\";\n}\n\n.mdi-sign-caution:before {\n  content: \"\\F4A1\";\n}\n\n.mdi-sign-direction:before {\n  content: \"\\F780\";\n}\n\n.mdi-sign-text:before {\n  content: \"\\F781\";\n}\n\n.mdi-signal:before {\n  content: \"\\F4A2\";\n}\n\n.mdi-signal-2g:before {\n  content: \"\\F711\";\n}\n\n.mdi-signal-3g:before {\n  content: \"\\F712\";\n}\n\n.mdi-signal-4g:before {\n  content: \"\\F713\";\n}\n\n.mdi-signal-5g:before {\n  content: \"\\FA6E\";\n}\n\n.mdi-signal-cellular-1:before {\n  content: \"\\F8BB\";\n}\n\n.mdi-signal-cellular-2:before {\n  content: \"\\F8BC\";\n}\n\n.mdi-signal-cellular-3:before {\n  content: \"\\F8BD\";\n}\n\n.mdi-signal-cellular-outline:before {\n  content: \"\\F8BE\";\n}\n\n.mdi-signal-distance-variant:before {\n  content: \"\\FE47\";\n}\n\n.mdi-signal-hspa:before {\n  content: \"\\F714\";\n}\n\n.mdi-signal-hspa-plus:before {\n  content: \"\\F715\";\n}\n\n.mdi-signal-off:before {\n  content: \"\\F782\";\n}\n\n.mdi-signal-variant:before {\n  content: \"\\F60A\";\n}\n\n.mdi-signature:before {\n  content: \"\\FE5B\";\n}\n\n.mdi-signature-freehand:before {\n  content: \"\\FE5C\";\n}\n\n.mdi-signature-image:before {\n  content: \"\\FE5D\";\n}\n\n.mdi-signature-text:before {\n  content: \"\\FE5E\";\n}\n\n.mdi-silo:before {\n  content: \"\\FB24\";\n}\n\n.mdi-silverware:before {\n  content: \"\\F4A3\";\n}\n\n.mdi-silverware-fork:before {\n  content: \"\\F4A4\";\n}\n\n.mdi-silverware-fork-knife:before {\n  content: \"\\FA6F\";\n}\n\n.mdi-silverware-spoon:before {\n  content: \"\\F4A5\";\n}\n\n.mdi-silverware-variant:before {\n  content: \"\\F4A6\";\n}\n\n.mdi-sim:before {\n  content: \"\\F4A7\";\n}\n\n.mdi-sim-alert:before {\n  content: \"\\F4A8\";\n}\n\n.mdi-sim-off:before {\n  content: \"\\F4A9\";\n}\n\n.mdi-sina-weibo:before {\n  content: \"\\FADE\";\n}\n\n.mdi-sitemap:before {\n  content: \"\\F4AA\";\n}\n\n.mdi-skate:before {\n  content: \"\\FD11\";\n}\n\n.mdi-skew-less:before {\n  content: \"\\FD12\";\n}\n\n.mdi-skew-more:before {\n  content: \"\\FD13\";\n}\n\n.mdi-skip-backward:before {\n  content: \"\\F4AB\";\n}\n\n.mdi-skip-forward:before {\n  content: \"\\F4AC\";\n}\n\n.mdi-skip-next:before {\n  content: \"\\F4AD\";\n}\n\n.mdi-skip-next-circle:before {\n  content: \"\\F661\";\n}\n\n.mdi-skip-next-circle-outline:before {\n  content: \"\\F662\";\n}\n\n.mdi-skip-previous:before {\n  content: \"\\F4AE\";\n}\n\n.mdi-skip-previous-circle:before {\n  content: \"\\F663\";\n}\n\n.mdi-skip-previous-circle-outline:before {\n  content: \"\\F664\";\n}\n\n.mdi-skull:before {\n  content: \"\\F68B\";\n}\n\n.mdi-skull-crossbones:before {\n  content: \"\\FBA2\";\n}\n\n.mdi-skull-crossbones-outline:before {\n  content: \"\\FBA3\";\n}\n\n.mdi-skull-outline:before {\n  content: \"\\FBA4\";\n}\n\n.mdi-skype:before {\n  content: \"\\F4AF\";\n}\n\n.mdi-skype-business:before {\n  content: \"\\F4B0\";\n}\n\n.mdi-slack:before {\n  content: \"\\F4B1\";\n}\n\n.mdi-slackware:before {\n  content: \"\\F90A\";\n}\n\n.mdi-sleep:before {\n  content: \"\\F4B2\";\n}\n\n.mdi-sleep-off:before {\n  content: \"\\F4B3\";\n}\n\n.mdi-slope-downhill:before {\n  content: \"\\FE5F\";\n}\n\n.mdi-slope-uphill:before {\n  content: \"\\FE60\";\n}\n\n.mdi-smog:before {\n  content: \"\\FA70\";\n}\n\n.mdi-smoke-detector:before {\n  content: \"\\F392\";\n}\n\n.mdi-smoking:before {\n  content: \"\\F4B4\";\n}\n\n.mdi-smoking-off:before {\n  content: \"\\F4B5\";\n}\n\n.mdi-snapchat:before {\n  content: \"\\F4B6\";\n}\n\n.mdi-snowflake:before {\n  content: \"\\F716\";\n}\n\n.mdi-snowman:before {\n  content: \"\\F4B7\";\n}\n\n.mdi-soccer:before {\n  content: \"\\F4B8\";\n}\n\n.mdi-soccer-field:before {\n  content: \"\\F833\";\n}\n\n.mdi-sofa:before {\n  content: \"\\F4B9\";\n}\n\n.mdi-solar-panel:before {\n  content: \"\\FD77\";\n}\n\n.mdi-solar-panel-large:before {\n  content: \"\\FD78\";\n}\n\n.mdi-solar-power:before {\n  content: \"\\FA71\";\n}\n\n.mdi-solid:before {\n  content: \"\\F68C\";\n}\n\n.mdi-sort:before {\n  content: \"\\F4BA\";\n}\n\n.mdi-sort-alphabetical:before {\n  content: \"\\F4BB\";\n}\n\n.mdi-sort-ascending:before {\n  content: \"\\F4BC\";\n}\n\n.mdi-sort-descending:before {\n  content: \"\\F4BD\";\n}\n\n.mdi-sort-numeric:before {\n  content: \"\\F4BE\";\n}\n\n.mdi-sort-variant:before {\n  content: \"\\F4BF\";\n}\n\n.mdi-sort-variant-lock:before {\n  content: \"\\FCA9\";\n}\n\n.mdi-sort-variant-lock-open:before {\n  content: \"\\FCAA\";\n}\n\n.mdi-soundcloud:before {\n  content: \"\\F4C0\";\n}\n\n.mdi-source-branch:before {\n  content: \"\\F62C\";\n}\n\n.mdi-source-commit:before {\n  content: \"\\F717\";\n}\n\n.mdi-source-commit-end:before {\n  content: \"\\F718\";\n}\n\n.mdi-source-commit-end-local:before {\n  content: \"\\F719\";\n}\n\n.mdi-source-commit-local:before {\n  content: \"\\F71A\";\n}\n\n.mdi-source-commit-next-local:before {\n  content: \"\\F71B\";\n}\n\n.mdi-source-commit-start:before {\n  content: \"\\F71C\";\n}\n\n.mdi-source-commit-start-next-local:before {\n  content: \"\\F71D\";\n}\n\n.mdi-source-fork:before {\n  content: \"\\F4C1\";\n}\n\n.mdi-source-merge:before {\n  content: \"\\F62D\";\n}\n\n.mdi-source-pull:before {\n  content: \"\\F4C2\";\n}\n\n.mdi-source-repository:before {\n  content: \"\\FCAB\";\n}\n\n.mdi-source-repository-multiple:before {\n  content: \"\\FCAC\";\n}\n\n.mdi-soy-sauce:before {\n  content: \"\\F7ED\";\n}\n\n.mdi-spa:before {\n  content: \"\\FCAD\";\n}\n\n.mdi-spa-outline:before {\n  content: \"\\FCAE\";\n}\n\n.mdi-space-invaders:before {\n  content: \"\\FBA5\";\n}\n\n.mdi-spade:before {\n  content: \"\\FE48\";\n}\n\n.mdi-speaker:before {\n  content: \"\\F4C3\";\n}\n\n.mdi-speaker-bluetooth:before {\n  content: \"\\F9A1\";\n}\n\n.mdi-speaker-multiple:before {\n  content: \"\\FD14\";\n}\n\n.mdi-speaker-off:before {\n  content: \"\\F4C4\";\n}\n\n.mdi-speaker-wireless:before {\n  content: \"\\F71E\";\n}\n\n.mdi-speedometer:before {\n  content: \"\\F4C5\";\n}\n\n.mdi-spellcheck:before {\n  content: \"\\F4C6\";\n}\n\n.mdi-spider-web:before {\n  content: \"\\FBA6\";\n}\n\n.mdi-spotify:before {\n  content: \"\\F4C7\";\n}\n\n.mdi-spotlight:before {\n  content: \"\\F4C8\";\n}\n\n.mdi-spotlight-beam:before {\n  content: \"\\F4C9\";\n}\n\n.mdi-spray:before {\n  content: \"\\F665\";\n}\n\n.mdi-spray-bottle:before {\n  content: \"\\FADF\";\n}\n\n.mdi-sprout:before {\n  content: \"\\FE49\";\n}\n\n.mdi-sprout-outline:before {\n  content: \"\\FE4A\";\n}\n\n.mdi-square:before {\n  content: \"\\F763\";\n}\n\n.mdi-square-edit-outline:before {\n  content: \"\\F90B\";\n}\n\n.mdi-square-inc:before {\n  content: \"\\F4CA\";\n}\n\n.mdi-square-inc-cash:before {\n  content: \"\\F4CB\";\n}\n\n.mdi-square-medium:before {\n  content: \"\\FA12\";\n}\n\n.mdi-square-medium-outline:before {\n  content: \"\\FA13\";\n}\n\n.mdi-square-outline:before {\n  content: \"\\F762\";\n}\n\n.mdi-square-root:before {\n  content: \"\\F783\";\n}\n\n.mdi-square-root-box:before {\n  content: \"\\F9A2\";\n}\n\n.mdi-square-small:before {\n  content: \"\\FA14\";\n}\n\n.mdi-squeegee:before {\n  content: \"\\FAE0\";\n}\n\n.mdi-ssh:before {\n  content: \"\\F8BF\";\n}\n\n.mdi-stack-exchange:before {\n  content: \"\\F60B\";\n}\n\n.mdi-stack-overflow:before {\n  content: \"\\F4CC\";\n}\n\n.mdi-stadium:before {\n  content: \"\\F71F\";\n}\n\n.mdi-stairs:before {\n  content: \"\\F4CD\";\n}\n\n.mdi-stamper:before {\n  content: \"\\FD15\";\n}\n\n.mdi-standard-definition:before {\n  content: \"\\F7EE\";\n}\n\n.mdi-star:before {\n  content: \"\\F4CE\";\n}\n\n.mdi-star-box:before {\n  content: \"\\FA72\";\n}\n\n.mdi-star-box-outline:before {\n  content: \"\\FA73\";\n}\n\n.mdi-star-circle:before {\n  content: \"\\F4CF\";\n}\n\n.mdi-star-circle-outline:before {\n  content: \"\\F9A3\";\n}\n\n.mdi-star-face:before {\n  content: \"\\F9A4\";\n}\n\n.mdi-star-four-points:before {\n  content: \"\\FAE1\";\n}\n\n.mdi-star-four-points-outline:before {\n  content: \"\\FAE2\";\n}\n\n.mdi-star-half:before {\n  content: \"\\F4D0\";\n}\n\n.mdi-star-off:before {\n  content: \"\\F4D1\";\n}\n\n.mdi-star-outline:before {\n  content: \"\\F4D2\";\n}\n\n.mdi-star-three-points:before {\n  content: \"\\FAE3\";\n}\n\n.mdi-star-three-points-outline:before {\n  content: \"\\FAE4\";\n}\n\n.mdi-steam:before {\n  content: \"\\F4D3\";\n}\n\n.mdi-steam-box:before {\n  content: \"\\F90C\";\n}\n\n.mdi-steering:before {\n  content: \"\\F4D4\";\n}\n\n.mdi-steering-off:before {\n  content: \"\\F90D\";\n}\n\n.mdi-step-backward:before {\n  content: \"\\F4D5\";\n}\n\n.mdi-step-backward-2:before {\n  content: \"\\F4D6\";\n}\n\n.mdi-step-forward:before {\n  content: \"\\F4D7\";\n}\n\n.mdi-step-forward-2:before {\n  content: \"\\F4D8\";\n}\n\n.mdi-stethoscope:before {\n  content: \"\\F4D9\";\n}\n\n.mdi-sticker:before {\n  content: \"\\F5D0\";\n}\n\n.mdi-sticker-emoji:before {\n  content: \"\\F784\";\n}\n\n.mdi-stocking:before {\n  content: \"\\F4DA\";\n}\n\n.mdi-stop:before {\n  content: \"\\F4DB\";\n}\n\n.mdi-stop-circle:before {\n  content: \"\\F666\";\n}\n\n.mdi-stop-circle-outline:before {\n  content: \"\\F667\";\n}\n\n.mdi-store:before {\n  content: \"\\F4DC\";\n}\n\n.mdi-store-24-hour:before {\n  content: \"\\F4DD\";\n}\n\n.mdi-stove:before {\n  content: \"\\F4DE\";\n}\n\n.mdi-strava:before {\n  content: \"\\FB25\";\n}\n\n.mdi-subdirectory-arrow-left:before {\n  content: \"\\F60C\";\n}\n\n.mdi-subdirectory-arrow-right:before {\n  content: \"\\F60D\";\n}\n\n.mdi-subtitles:before {\n  content: \"\\FA15\";\n}\n\n.mdi-subtitles-outline:before {\n  content: \"\\FA16\";\n}\n\n.mdi-subway:before {\n  content: \"\\F6AB\";\n}\n\n.mdi-subway-alert-variant:before {\n  content: \"\\FD79\";\n}\n\n.mdi-subway-variant:before {\n  content: \"\\F4DF\";\n}\n\n.mdi-summit:before {\n  content: \"\\F785\";\n}\n\n.mdi-sunglasses:before {\n  content: \"\\F4E0\";\n}\n\n.mdi-surround-sound:before {\n  content: \"\\F5C5\";\n}\n\n.mdi-surround-sound-2-0:before {\n  content: \"\\F7EF\";\n}\n\n.mdi-surround-sound-3-1:before {\n  content: \"\\F7F0\";\n}\n\n.mdi-surround-sound-5-1:before {\n  content: \"\\F7F1\";\n}\n\n.mdi-surround-sound-7-1:before {\n  content: \"\\F7F2\";\n}\n\n.mdi-svg:before {\n  content: \"\\F720\";\n}\n\n.mdi-swap-horizontal:before {\n  content: \"\\F4E1\";\n}\n\n.mdi-swap-horizontal-bold:before {\n  content: \"\\FBA9\";\n}\n\n.mdi-swap-horizontal-variant:before {\n  content: \"\\F8C0\";\n}\n\n.mdi-swap-vertical:before {\n  content: \"\\F4E2\";\n}\n\n.mdi-swap-vertical-bold:before {\n  content: \"\\FBAA\";\n}\n\n.mdi-swap-vertical-variant:before {\n  content: \"\\F8C1\";\n}\n\n.mdi-swim:before {\n  content: \"\\F4E3\";\n}\n\n.mdi-switch:before {\n  content: \"\\F4E4\";\n}\n\n.mdi-sword:before {\n  content: \"\\F4E5\";\n}\n\n.mdi-sword-cross:before {\n  content: \"\\F786\";\n}\n\n.mdi-symfony:before {\n  content: \"\\FAE5\";\n}\n\n.mdi-sync:before {\n  content: \"\\F4E6\";\n}\n\n.mdi-sync-alert:before {\n  content: \"\\F4E7\";\n}\n\n.mdi-sync-off:before {\n  content: \"\\F4E8\";\n}\n\n.mdi-tab:before {\n  content: \"\\F4E9\";\n}\n\n.mdi-tab-minus:before {\n  content: \"\\FB26\";\n}\n\n.mdi-tab-plus:before {\n  content: \"\\F75B\";\n}\n\n.mdi-tab-remove:before {\n  content: \"\\FB27\";\n}\n\n.mdi-tab-unselected:before {\n  content: \"\\F4EA\";\n}\n\n.mdi-table:before {\n  content: \"\\F4EB\";\n}\n\n.mdi-table-border:before {\n  content: \"\\FA17\";\n}\n\n.mdi-table-column:before {\n  content: \"\\F834\";\n}\n\n.mdi-table-column-plus-after:before {\n  content: \"\\F4EC\";\n}\n\n.mdi-table-column-plus-before:before {\n  content: \"\\F4ED\";\n}\n\n.mdi-table-column-remove:before {\n  content: \"\\F4EE\";\n}\n\n.mdi-table-column-width:before {\n  content: \"\\F4EF\";\n}\n\n.mdi-table-edit:before {\n  content: \"\\F4F0\";\n}\n\n.mdi-table-large:before {\n  content: \"\\F4F1\";\n}\n\n.mdi-table-merge-cells:before {\n  content: \"\\F9A5\";\n}\n\n.mdi-table-of-contents:before {\n  content: \"\\F835\";\n}\n\n.mdi-table-plus:before {\n  content: \"\\FA74\";\n}\n\n.mdi-table-remove:before {\n  content: \"\\FA75\";\n}\n\n.mdi-table-row:before {\n  content: \"\\F836\";\n}\n\n.mdi-table-row-height:before {\n  content: \"\\F4F2\";\n}\n\n.mdi-table-row-plus-after:before {\n  content: \"\\F4F3\";\n}\n\n.mdi-table-row-plus-before:before {\n  content: \"\\F4F4\";\n}\n\n.mdi-table-row-remove:before {\n  content: \"\\F4F5\";\n}\n\n.mdi-table-search:before {\n  content: \"\\F90E\";\n}\n\n.mdi-table-settings:before {\n  content: \"\\F837\";\n}\n\n.mdi-table-tennis:before {\n  content: \"\\FE4B\";\n}\n\n.mdi-tablet:before {\n  content: \"\\F4F6\";\n}\n\n.mdi-tablet-android:before {\n  content: \"\\F4F7\";\n}\n\n.mdi-tablet-cellphone:before {\n  content: \"\\F9A6\";\n}\n\n.mdi-tablet-ipad:before {\n  content: \"\\F4F8\";\n}\n\n.mdi-taco:before {\n  content: \"\\F761\";\n}\n\n.mdi-tag:before {\n  content: \"\\F4F9\";\n}\n\n.mdi-tag-faces:before {\n  content: \"\\F4FA\";\n}\n\n.mdi-tag-heart:before {\n  content: \"\\F68A\";\n}\n\n.mdi-tag-heart-outline:before {\n  content: \"\\FBAB\";\n}\n\n.mdi-tag-minus:before {\n  content: \"\\F90F\";\n}\n\n.mdi-tag-multiple:before {\n  content: \"\\F4FB\";\n}\n\n.mdi-tag-outline:before {\n  content: \"\\F4FC\";\n}\n\n.mdi-tag-plus:before {\n  content: \"\\F721\";\n}\n\n.mdi-tag-remove:before {\n  content: \"\\F722\";\n}\n\n.mdi-tag-text-outline:before {\n  content: \"\\F4FD\";\n}\n\n.mdi-tank:before {\n  content: \"\\FD16\";\n}\n\n.mdi-tape-measure:before {\n  content: \"\\FB28\";\n}\n\n.mdi-target:before {\n  content: \"\\F4FE\";\n}\n\n.mdi-target-account:before {\n  content: \"\\FBAC\";\n}\n\n.mdi-target-variant:before {\n  content: \"\\FA76\";\n}\n\n.mdi-taxi:before {\n  content: \"\\F4FF\";\n}\n\n.mdi-tea:before {\n  content: \"\\FD7A\";\n}\n\n.mdi-tea-outline:before {\n  content: \"\\FD7B\";\n}\n\n.mdi-teach:before {\n  content: \"\\F88F\";\n}\n\n.mdi-teamviewer:before {\n  content: \"\\F500\";\n}\n\n.mdi-telegram:before {\n  content: \"\\F501\";\n}\n\n.mdi-telescope:before {\n  content: \"\\FB29\";\n}\n\n.mdi-television:before {\n  content: \"\\F502\";\n}\n\n.mdi-television-box:before {\n  content: \"\\F838\";\n}\n\n.mdi-television-classic:before {\n  content: \"\\F7F3\";\n}\n\n.mdi-television-classic-off:before {\n  content: \"\\F839\";\n}\n\n.mdi-television-guide:before {\n  content: \"\\F503\";\n}\n\n.mdi-television-off:before {\n  content: \"\\F83A\";\n}\n\n.mdi-temperature-celsius:before {\n  content: \"\\F504\";\n}\n\n.mdi-temperature-fahrenheit:before {\n  content: \"\\F505\";\n}\n\n.mdi-temperature-kelvin:before {\n  content: \"\\F506\";\n}\n\n.mdi-tennis:before {\n  content: \"\\FD7C\";\n}\n\n.mdi-tennis-ball:before {\n  content: \"\\F507\";\n}\n\n.mdi-tent:before {\n  content: \"\\F508\";\n}\n\n.mdi-terrain:before {\n  content: \"\\F509\";\n}\n\n.mdi-test-tube:before {\n  content: \"\\F668\";\n}\n\n.mdi-test-tube-empty:before {\n  content: \"\\F910\";\n}\n\n.mdi-test-tube-off:before {\n  content: \"\\F911\";\n}\n\n.mdi-text:before {\n  content: \"\\F9A7\";\n}\n\n.mdi-text-shadow:before {\n  content: \"\\F669\";\n}\n\n.mdi-text-short:before {\n  content: \"\\F9A8\";\n}\n\n.mdi-text-subject:before {\n  content: \"\\F9A9\";\n}\n\n.mdi-text-to-speech:before {\n  content: \"\\F50A\";\n}\n\n.mdi-text-to-speech-off:before {\n  content: \"\\F50B\";\n}\n\n.mdi-textbox:before {\n  content: \"\\F60E\";\n}\n\n.mdi-textbox-password:before {\n  content: \"\\F7F4\";\n}\n\n.mdi-texture:before {\n  content: \"\\F50C\";\n}\n\n.mdi-theater:before {\n  content: \"\\F50D\";\n}\n\n.mdi-theme-light-dark:before {\n  content: \"\\F50E\";\n}\n\n.mdi-thermometer:before {\n  content: \"\\F50F\";\n}\n\n.mdi-thermometer-alert:before {\n  content: \"\\FE61\";\n}\n\n.mdi-thermometer-chevron-down:before {\n  content: \"\\FE62\";\n}\n\n.mdi-thermometer-chevron-up:before {\n  content: \"\\FE63\";\n}\n\n.mdi-thermometer-lines:before {\n  content: \"\\F510\";\n}\n\n.mdi-thermometer-minus:before {\n  content: \"\\FE64\";\n}\n\n.mdi-thermometer-plus:before {\n  content: \"\\FE65\";\n}\n\n.mdi-thermostat:before {\n  content: \"\\F393\";\n}\n\n.mdi-thermostat-box:before {\n  content: \"\\F890\";\n}\n\n.mdi-thought-bubble:before {\n  content: \"\\F7F5\";\n}\n\n.mdi-thought-bubble-outline:before {\n  content: \"\\F7F6\";\n}\n\n.mdi-thumb-down:before {\n  content: \"\\F511\";\n}\n\n.mdi-thumb-down-outline:before {\n  content: \"\\F512\";\n}\n\n.mdi-thumb-up:before {\n  content: \"\\F513\";\n}\n\n.mdi-thumb-up-outline:before {\n  content: \"\\F514\";\n}\n\n.mdi-thumbs-up-down:before {\n  content: \"\\F515\";\n}\n\n.mdi-ticket:before {\n  content: \"\\F516\";\n}\n\n.mdi-ticket-account:before {\n  content: \"\\F517\";\n}\n\n.mdi-ticket-confirmation:before {\n  content: \"\\F518\";\n}\n\n.mdi-ticket-outline:before {\n  content: \"\\F912\";\n}\n\n.mdi-ticket-percent:before {\n  content: \"\\F723\";\n}\n\n.mdi-tie:before {\n  content: \"\\F519\";\n}\n\n.mdi-tilde:before {\n  content: \"\\F724\";\n}\n\n.mdi-timelapse:before {\n  content: \"\\F51A\";\n}\n\n.mdi-timeline:before {\n  content: \"\\FBAD\";\n}\n\n.mdi-timeline-outline:before {\n  content: \"\\FBAE\";\n}\n\n.mdi-timeline-text:before {\n  content: \"\\FBAF\";\n}\n\n.mdi-timeline-text-outline:before {\n  content: \"\\FBB0\";\n}\n\n.mdi-timer:before {\n  content: \"\\F51B\";\n}\n\n.mdi-timer-10:before {\n  content: \"\\F51C\";\n}\n\n.mdi-timer-3:before {\n  content: \"\\F51D\";\n}\n\n.mdi-timer-off:before {\n  content: \"\\F51E\";\n}\n\n.mdi-timer-sand:before {\n  content: \"\\F51F\";\n}\n\n.mdi-timer-sand-empty:before {\n  content: \"\\F6AC\";\n}\n\n.mdi-timer-sand-full:before {\n  content: \"\\F78B\";\n}\n\n.mdi-timetable:before {\n  content: \"\\F520\";\n}\n\n.mdi-toaster-oven:before {\n  content: \"\\FCAF\";\n}\n\n.mdi-toggle-switch:before {\n  content: \"\\F521\";\n}\n\n.mdi-toggle-switch-off:before {\n  content: \"\\F522\";\n}\n\n.mdi-toggle-switch-off-outline:before {\n  content: \"\\FA18\";\n}\n\n.mdi-toggle-switch-outline:before {\n  content: \"\\FA19\";\n}\n\n.mdi-toilet:before {\n  content: \"\\F9AA\";\n}\n\n.mdi-toolbox:before {\n  content: \"\\F9AB\";\n}\n\n.mdi-toolbox-outline:before {\n  content: \"\\F9AC\";\n}\n\n.mdi-tooltip:before {\n  content: \"\\F523\";\n}\n\n.mdi-tooltip-account:before {\n  content: \"\\F00C\";\n}\n\n.mdi-tooltip-edit:before {\n  content: \"\\F524\";\n}\n\n.mdi-tooltip-image:before {\n  content: \"\\F525\";\n}\n\n.mdi-tooltip-image-outline:before {\n  content: \"\\FBB1\";\n}\n\n.mdi-tooltip-outline:before {\n  content: \"\\F526\";\n}\n\n.mdi-tooltip-plus:before {\n  content: \"\\FBB2\";\n}\n\n.mdi-tooltip-plus-outline:before {\n  content: \"\\F527\";\n}\n\n.mdi-tooltip-text:before {\n  content: \"\\F528\";\n}\n\n.mdi-tooltip-text-outline:before {\n  content: \"\\FBB3\";\n}\n\n.mdi-tooth:before {\n  content: \"\\F8C2\";\n}\n\n.mdi-tooth-outline:before {\n  content: \"\\F529\";\n}\n\n.mdi-tor:before {\n  content: \"\\F52A\";\n}\n\n.mdi-tortoise:before {\n  content: \"\\FD17\";\n}\n\n.mdi-tournament:before {\n  content: \"\\F9AD\";\n}\n\n.mdi-tower-beach:before {\n  content: \"\\F680\";\n}\n\n.mdi-tower-fire:before {\n  content: \"\\F681\";\n}\n\n.mdi-towing:before {\n  content: \"\\F83B\";\n}\n\n.mdi-track-light:before {\n  content: \"\\F913\";\n}\n\n.mdi-trackpad:before {\n  content: \"\\F7F7\";\n}\n\n.mdi-trackpad-lock:before {\n  content: \"\\F932\";\n}\n\n.mdi-tractor:before {\n  content: \"\\F891\";\n}\n\n.mdi-trademark:before {\n  content: \"\\FA77\";\n}\n\n.mdi-traffic-light:before {\n  content: \"\\F52B\";\n}\n\n.mdi-train:before {\n  content: \"\\F52C\";\n}\n\n.mdi-train-car:before {\n  content: \"\\FBB4\";\n}\n\n.mdi-train-variant:before {\n  content: \"\\F8C3\";\n}\n\n.mdi-tram:before {\n  content: \"\\F52D\";\n}\n\n.mdi-transcribe:before {\n  content: \"\\F52E\";\n}\n\n.mdi-transcribe-close:before {\n  content: \"\\F52F\";\n}\n\n.mdi-transfer-down:before {\n  content: \"\\FD7D\";\n}\n\n.mdi-transfer-left:before {\n  content: \"\\FD7E\";\n}\n\n.mdi-transfer-right:before {\n  content: \"\\F530\";\n}\n\n.mdi-transfer-up:before {\n  content: \"\\FD7F\";\n}\n\n.mdi-transit-connection:before {\n  content: \"\\FD18\";\n}\n\n.mdi-transit-connection-variant:before {\n  content: \"\\FD19\";\n}\n\n.mdi-transit-transfer:before {\n  content: \"\\F6AD\";\n}\n\n.mdi-transition:before {\n  content: \"\\F914\";\n}\n\n.mdi-transition-masked:before {\n  content: \"\\F915\";\n}\n\n.mdi-translate:before {\n  content: \"\\F5CA\";\n}\n\n.mdi-translate-off:before {\n  content: \"\\FE66\";\n}\n\n.mdi-transmission-tower:before {\n  content: \"\\FD1A\";\n}\n\n.mdi-trash-can:before {\n  content: \"\\FA78\";\n}\n\n.mdi-trash-can-outline:before {\n  content: \"\\FA79\";\n}\n\n.mdi-treasure-chest:before {\n  content: \"\\F725\";\n}\n\n.mdi-tree:before {\n  content: \"\\F531\";\n}\n\n.mdi-tree-outline:before {\n  content: \"\\FE4C\";\n}\n\n.mdi-trello:before {\n  content: \"\\F532\";\n}\n\n.mdi-trending-down:before {\n  content: \"\\F533\";\n}\n\n.mdi-trending-neutral:before {\n  content: \"\\F534\";\n}\n\n.mdi-trending-up:before {\n  content: \"\\F535\";\n}\n\n.mdi-triangle:before {\n  content: \"\\F536\";\n}\n\n.mdi-triangle-outline:before {\n  content: \"\\F537\";\n}\n\n.mdi-triforce:before {\n  content: \"\\FBB5\";\n}\n\n.mdi-trophy:before {\n  content: \"\\F538\";\n}\n\n.mdi-trophy-award:before {\n  content: \"\\F539\";\n}\n\n.mdi-trophy-broken:before {\n  content: \"\\FD80\";\n}\n\n.mdi-trophy-outline:before {\n  content: \"\\F53A\";\n}\n\n.mdi-trophy-variant:before {\n  content: \"\\F53B\";\n}\n\n.mdi-trophy-variant-outline:before {\n  content: \"\\F53C\";\n}\n\n.mdi-truck:before {\n  content: \"\\F53D\";\n}\n\n.mdi-truck-check:before {\n  content: \"\\FCB0\";\n}\n\n.mdi-truck-delivery:before {\n  content: \"\\F53E\";\n}\n\n.mdi-truck-fast:before {\n  content: \"\\F787\";\n}\n\n.mdi-truck-trailer:before {\n  content: \"\\F726\";\n}\n\n.mdi-tshirt-crew:before {\n  content: \"\\FA7A\";\n}\n\n.mdi-tshirt-crew-outline:before {\n  content: \"\\F53F\";\n}\n\n.mdi-tshirt-v:before {\n  content: \"\\FA7B\";\n}\n\n.mdi-tshirt-v-outline:before {\n  content: \"\\F540\";\n}\n\n.mdi-tumble-dryer:before {\n  content: \"\\F916\";\n}\n\n.mdi-tumblr:before {\n  content: \"\\F541\";\n}\n\n.mdi-tumblr-box:before {\n  content: \"\\F917\";\n}\n\n.mdi-tumblr-reblog:before {\n  content: \"\\F542\";\n}\n\n.mdi-tune:before {\n  content: \"\\F62E\";\n}\n\n.mdi-tune-vertical:before {\n  content: \"\\F66A\";\n}\n\n.mdi-turnstile:before {\n  content: \"\\FCB1\";\n}\n\n.mdi-turnstile-outline:before {\n  content: \"\\FCB2\";\n}\n\n.mdi-turtle:before {\n  content: \"\\FCB3\";\n}\n\n.mdi-twitch:before {\n  content: \"\\F543\";\n}\n\n.mdi-twitter:before {\n  content: \"\\F544\";\n}\n\n.mdi-twitter-box:before {\n  content: \"\\F545\";\n}\n\n.mdi-twitter-circle:before {\n  content: \"\\F546\";\n}\n\n.mdi-twitter-retweet:before {\n  content: \"\\F547\";\n}\n\n.mdi-two-factor-authentication:before {\n  content: \"\\F9AE\";\n}\n\n.mdi-uber:before {\n  content: \"\\F748\";\n}\n\n.mdi-ubisoft:before {\n  content: \"\\FBB6\";\n}\n\n.mdi-ubuntu:before {\n  content: \"\\F548\";\n}\n\n.mdi-ultra-high-definition:before {\n  content: \"\\F7F8\";\n}\n\n.mdi-umbraco:before {\n  content: \"\\F549\";\n}\n\n.mdi-umbrella:before {\n  content: \"\\F54A\";\n}\n\n.mdi-umbrella-closed:before {\n  content: \"\\F9AF\";\n}\n\n.mdi-umbrella-outline:before {\n  content: \"\\F54B\";\n}\n\n.mdi-undo:before {\n  content: \"\\F54C\";\n}\n\n.mdi-undo-variant:before {\n  content: \"\\F54D\";\n}\n\n.mdi-unfold-less-horizontal:before {\n  content: \"\\F54E\";\n}\n\n.mdi-unfold-less-vertical:before {\n  content: \"\\F75F\";\n}\n\n.mdi-unfold-more-horizontal:before {\n  content: \"\\F54F\";\n}\n\n.mdi-unfold-more-vertical:before {\n  content: \"\\F760\";\n}\n\n.mdi-ungroup:before {\n  content: \"\\F550\";\n}\n\n.mdi-unity:before {\n  content: \"\\F6AE\";\n}\n\n.mdi-unreal:before {\n  content: \"\\F9B0\";\n}\n\n.mdi-untappd:before {\n  content: \"\\F551\";\n}\n\n.mdi-update:before {\n  content: \"\\F6AF\";\n}\n\n.mdi-upload:before {\n  content: \"\\F552\";\n}\n\n.mdi-upload-multiple:before {\n  content: \"\\F83C\";\n}\n\n.mdi-upload-network:before {\n  content: \"\\F6F5\";\n}\n\n.mdi-upload-network-outline:before {\n  content: \"\\FCB4\";\n}\n\n.mdi-upload-outline:before {\n  content: \"\\FE67\";\n}\n\n.mdi-usb:before {\n  content: \"\\F553\";\n}\n\n.mdi-van-passenger:before {\n  content: \"\\F7F9\";\n}\n\n.mdi-van-utility:before {\n  content: \"\\F7FA\";\n}\n\n.mdi-vanish:before {\n  content: \"\\F7FB\";\n}\n\n.mdi-variable:before {\n  content: \"\\FAE6\";\n}\n\n.mdi-vector-arrange-above:before {\n  content: \"\\F554\";\n}\n\n.mdi-vector-arrange-below:before {\n  content: \"\\F555\";\n}\n\n.mdi-vector-bezier:before {\n  content: \"\\FAE7\";\n}\n\n.mdi-vector-circle:before {\n  content: \"\\F556\";\n}\n\n.mdi-vector-circle-variant:before {\n  content: \"\\F557\";\n}\n\n.mdi-vector-combine:before {\n  content: \"\\F558\";\n}\n\n.mdi-vector-curve:before {\n  content: \"\\F559\";\n}\n\n.mdi-vector-difference:before {\n  content: \"\\F55A\";\n}\n\n.mdi-vector-difference-ab:before {\n  content: \"\\F55B\";\n}\n\n.mdi-vector-difference-ba:before {\n  content: \"\\F55C\";\n}\n\n.mdi-vector-ellipse:before {\n  content: \"\\F892\";\n}\n\n.mdi-vector-intersection:before {\n  content: \"\\F55D\";\n}\n\n.mdi-vector-line:before {\n  content: \"\\F55E\";\n}\n\n.mdi-vector-point:before {\n  content: \"\\F55F\";\n}\n\n.mdi-vector-polygon:before {\n  content: \"\\F560\";\n}\n\n.mdi-vector-polyline:before {\n  content: \"\\F561\";\n}\n\n.mdi-vector-radius:before {\n  content: \"\\F749\";\n}\n\n.mdi-vector-rectangle:before {\n  content: \"\\F5C6\";\n}\n\n.mdi-vector-selection:before {\n  content: \"\\F562\";\n}\n\n.mdi-vector-square:before {\n  content: \"\\F001\";\n}\n\n.mdi-vector-triangle:before {\n  content: \"\\F563\";\n}\n\n.mdi-vector-union:before {\n  content: \"\\F564\";\n}\n\n.mdi-venmo:before {\n  content: \"\\F578\";\n}\n\n.mdi-vhs:before {\n  content: \"\\FA1A\";\n}\n\n.mdi-vibrate:before {\n  content: \"\\F566\";\n}\n\n.mdi-vibrate-off:before {\n  content: \"\\FCB5\";\n}\n\n.mdi-video:before {\n  content: \"\\F567\";\n}\n\n.mdi-video-3d:before {\n  content: \"\\F7FC\";\n}\n\n.mdi-video-4k-box:before {\n  content: \"\\F83D\";\n}\n\n.mdi-video-account:before {\n  content: \"\\F918\";\n}\n\n.mdi-video-image:before {\n  content: \"\\F919\";\n}\n\n.mdi-video-input-antenna:before {\n  content: \"\\F83E\";\n}\n\n.mdi-video-input-component:before {\n  content: \"\\F83F\";\n}\n\n.mdi-video-input-hdmi:before {\n  content: \"\\F840\";\n}\n\n.mdi-video-input-svideo:before {\n  content: \"\\F841\";\n}\n\n.mdi-video-minus:before {\n  content: \"\\F9B1\";\n}\n\n.mdi-video-off:before {\n  content: \"\\F568\";\n}\n\n.mdi-video-off-outline:before {\n  content: \"\\FBB7\";\n}\n\n.mdi-video-outline:before {\n  content: \"\\FBB8\";\n}\n\n.mdi-video-plus:before {\n  content: \"\\F9B2\";\n}\n\n.mdi-video-stabilization:before {\n  content: \"\\F91A\";\n}\n\n.mdi-video-switch:before {\n  content: \"\\F569\";\n}\n\n.mdi-video-vintage:before {\n  content: \"\\FA1B\";\n}\n\n.mdi-view-agenda:before {\n  content: \"\\F56A\";\n}\n\n.mdi-view-array:before {\n  content: \"\\F56B\";\n}\n\n.mdi-view-carousel:before {\n  content: \"\\F56C\";\n}\n\n.mdi-view-column:before {\n  content: \"\\F56D\";\n}\n\n.mdi-view-comfy:before {\n  content: \"\\FE4D\";\n}\n\n.mdi-view-compact:before {\n  content: \"\\FE4E\";\n}\n\n.mdi-view-compact-outline:before {\n  content: \"\\FE4F\";\n}\n\n.mdi-view-dashboard:before {\n  content: \"\\F56E\";\n}\n\n.mdi-view-dashboard-outline:before {\n  content: \"\\FA1C\";\n}\n\n.mdi-view-dashboard-variant:before {\n  content: \"\\F842\";\n}\n\n.mdi-view-day:before {\n  content: \"\\F56F\";\n}\n\n.mdi-view-grid:before {\n  content: \"\\F570\";\n}\n\n.mdi-view-headline:before {\n  content: \"\\F571\";\n}\n\n.mdi-view-list:before {\n  content: \"\\F572\";\n}\n\n.mdi-view-module:before {\n  content: \"\\F573\";\n}\n\n.mdi-view-parallel:before {\n  content: \"\\F727\";\n}\n\n.mdi-view-quilt:before {\n  content: \"\\F574\";\n}\n\n.mdi-view-sequential:before {\n  content: \"\\F728\";\n}\n\n.mdi-view-split-horizontal:before {\n  content: \"\\FBA7\";\n}\n\n.mdi-view-split-vertical:before {\n  content: \"\\FBA8\";\n}\n\n.mdi-view-stream:before {\n  content: \"\\F575\";\n}\n\n.mdi-view-week:before {\n  content: \"\\F576\";\n}\n\n.mdi-vimeo:before {\n  content: \"\\F577\";\n}\n\n.mdi-violin:before {\n  content: \"\\F60F\";\n}\n\n.mdi-virtual-reality:before {\n  content: \"\\F893\";\n}\n\n.mdi-visual-studio:before {\n  content: \"\\F610\";\n}\n\n.mdi-visual-studio-code:before {\n  content: \"\\FA1D\";\n}\n\n.mdi-vk:before {\n  content: \"\\F579\";\n}\n\n.mdi-vk-box:before {\n  content: \"\\F57A\";\n}\n\n.mdi-vk-circle:before {\n  content: \"\\F57B\";\n}\n\n.mdi-vlc:before {\n  content: \"\\F57C\";\n}\n\n.mdi-voice:before {\n  content: \"\\F5CB\";\n}\n\n.mdi-voicemail:before {\n  content: \"\\F57D\";\n}\n\n.mdi-volleyball:before {\n  content: \"\\F9B3\";\n}\n\n.mdi-volume-high:before {\n  content: \"\\F57E\";\n}\n\n.mdi-volume-low:before {\n  content: \"\\F57F\";\n}\n\n.mdi-volume-medium:before {\n  content: \"\\F580\";\n}\n\n.mdi-volume-minus:before {\n  content: \"\\F75D\";\n}\n\n.mdi-volume-mute:before {\n  content: \"\\F75E\";\n}\n\n.mdi-volume-off:before {\n  content: \"\\F581\";\n}\n\n.mdi-volume-plus:before {\n  content: \"\\F75C\";\n}\n\n.mdi-volume-variant-off:before {\n  content: \"\\FE68\";\n}\n\n.mdi-vote:before {\n  content: \"\\FA1E\";\n}\n\n.mdi-vote-outline:before {\n  content: \"\\FA1F\";\n}\n\n.mdi-vpn:before {\n  content: \"\\F582\";\n}\n\n.mdi-vuejs:before {\n  content: \"\\F843\";\n}\n\n.mdi-vuetify:before {\n  content: \"\\FE50\";\n}\n\n.mdi-walk:before {\n  content: \"\\F583\";\n}\n\n.mdi-wall:before {\n  content: \"\\F7FD\";\n}\n\n.mdi-wall-sconce:before {\n  content: \"\\F91B\";\n}\n\n.mdi-wall-sconce-flat:before {\n  content: \"\\F91C\";\n}\n\n.mdi-wall-sconce-variant:before {\n  content: \"\\F91D\";\n}\n\n.mdi-wallet:before {\n  content: \"\\F584\";\n}\n\n.mdi-wallet-giftcard:before {\n  content: \"\\F585\";\n}\n\n.mdi-wallet-membership:before {\n  content: \"\\F586\";\n}\n\n.mdi-wallet-outline:before {\n  content: \"\\FBB9\";\n}\n\n.mdi-wallet-travel:before {\n  content: \"\\F587\";\n}\n\n.mdi-wallpaper:before {\n  content: \"\\FE69\";\n}\n\n.mdi-wan:before {\n  content: \"\\F588\";\n}\n\n.mdi-washing-machine:before {\n  content: \"\\F729\";\n}\n\n.mdi-watch:before {\n  content: \"\\F589\";\n}\n\n.mdi-watch-export:before {\n  content: \"\\F58A\";\n}\n\n.mdi-watch-export-variant:before {\n  content: \"\\F894\";\n}\n\n.mdi-watch-import:before {\n  content: \"\\F58B\";\n}\n\n.mdi-watch-import-variant:before {\n  content: \"\\F895\";\n}\n\n.mdi-watch-variant:before {\n  content: \"\\F896\";\n}\n\n.mdi-watch-vibrate:before {\n  content: \"\\F6B0\";\n}\n\n.mdi-watch-vibrate-off:before {\n  content: \"\\FCB6\";\n}\n\n.mdi-water:before {\n  content: \"\\F58C\";\n}\n\n.mdi-water-off:before {\n  content: \"\\F58D\";\n}\n\n.mdi-water-outline:before {\n  content: \"\\FE6A\";\n}\n\n.mdi-water-percent:before {\n  content: \"\\F58E\";\n}\n\n.mdi-water-pump:before {\n  content: \"\\F58F\";\n}\n\n.mdi-watermark:before {\n  content: \"\\F612\";\n}\n\n.mdi-waves:before {\n  content: \"\\F78C\";\n}\n\n.mdi-waze:before {\n  content: \"\\FBBA\";\n}\n\n.mdi-weather-cloudy:before {\n  content: \"\\F590\";\n}\n\n.mdi-weather-cloudy-arrow-right:before {\n  content: \"\\FE51\";\n}\n\n.mdi-weather-fog:before {\n  content: \"\\F591\";\n}\n\n.mdi-weather-hail:before {\n  content: \"\\F592\";\n}\n\n.mdi-weather-hurricane:before {\n  content: \"\\F897\";\n}\n\n.mdi-weather-lightning:before {\n  content: \"\\F593\";\n}\n\n.mdi-weather-lightning-rainy:before {\n  content: \"\\F67D\";\n}\n\n.mdi-weather-night:before {\n  content: \"\\F594\";\n}\n\n.mdi-weather-partlycloudy:before {\n  content: \"\\F595\";\n}\n\n.mdi-weather-pouring:before {\n  content: \"\\F596\";\n}\n\n.mdi-weather-rainy:before {\n  content: \"\\F597\";\n}\n\n.mdi-weather-snowy:before {\n  content: \"\\F598\";\n}\n\n.mdi-weather-snowy-rainy:before {\n  content: \"\\F67E\";\n}\n\n.mdi-weather-sunny:before {\n  content: \"\\F599\";\n}\n\n.mdi-weather-sunset:before {\n  content: \"\\F59A\";\n}\n\n.mdi-weather-sunset-down:before {\n  content: \"\\F59B\";\n}\n\n.mdi-weather-sunset-up:before {\n  content: \"\\F59C\";\n}\n\n.mdi-weather-windy:before {\n  content: \"\\F59D\";\n}\n\n.mdi-weather-windy-variant:before {\n  content: \"\\F59E\";\n}\n\n.mdi-web:before {\n  content: \"\\F59F\";\n}\n\n.mdi-webcam:before {\n  content: \"\\F5A0\";\n}\n\n.mdi-webhook:before {\n  content: \"\\F62F\";\n}\n\n.mdi-webpack:before {\n  content: \"\\F72A\";\n}\n\n.mdi-wechat:before {\n  content: \"\\F611\";\n}\n\n.mdi-weight:before {\n  content: \"\\F5A1\";\n}\n\n.mdi-weight-gram:before {\n  content: \"\\FD1B\";\n}\n\n.mdi-weight-kilogram:before {\n  content: \"\\F5A2\";\n}\n\n.mdi-weight-pound:before {\n  content: \"\\F9B4\";\n}\n\n.mdi-whatsapp:before {\n  content: \"\\F5A3\";\n}\n\n.mdi-wheelchair-accessibility:before {\n  content: \"\\F5A4\";\n}\n\n.mdi-whistle:before {\n  content: \"\\F9B5\";\n}\n\n.mdi-white-balance-auto:before {\n  content: \"\\F5A5\";\n}\n\n.mdi-white-balance-incandescent:before {\n  content: \"\\F5A6\";\n}\n\n.mdi-white-balance-iridescent:before {\n  content: \"\\F5A7\";\n}\n\n.mdi-white-balance-sunny:before {\n  content: \"\\F5A8\";\n}\n\n.mdi-widgets:before {\n  content: \"\\F72B\";\n}\n\n.mdi-wifi:before {\n  content: \"\\F5A9\";\n}\n\n.mdi-wifi-off:before {\n  content: \"\\F5AA\";\n}\n\n.mdi-wifi-star:before {\n  content: \"\\FE6B\";\n}\n\n.mdi-wifi-strength-1:before {\n  content: \"\\F91E\";\n}\n\n.mdi-wifi-strength-1-alert:before {\n  content: \"\\F91F\";\n}\n\n.mdi-wifi-strength-1-lock:before {\n  content: \"\\F920\";\n}\n\n.mdi-wifi-strength-2:before {\n  content: \"\\F921\";\n}\n\n.mdi-wifi-strength-2-alert:before {\n  content: \"\\F922\";\n}\n\n.mdi-wifi-strength-2-lock:before {\n  content: \"\\F923\";\n}\n\n.mdi-wifi-strength-3:before {\n  content: \"\\F924\";\n}\n\n.mdi-wifi-strength-3-alert:before {\n  content: \"\\F925\";\n}\n\n.mdi-wifi-strength-3-lock:before {\n  content: \"\\F926\";\n}\n\n.mdi-wifi-strength-4:before {\n  content: \"\\F927\";\n}\n\n.mdi-wifi-strength-4-alert:before {\n  content: \"\\F928\";\n}\n\n.mdi-wifi-strength-4-lock:before {\n  content: \"\\F929\";\n}\n\n.mdi-wifi-strength-alert-outline:before {\n  content: \"\\F92A\";\n}\n\n.mdi-wifi-strength-lock-outline:before {\n  content: \"\\F92B\";\n}\n\n.mdi-wifi-strength-off:before {\n  content: \"\\F92C\";\n}\n\n.mdi-wifi-strength-off-outline:before {\n  content: \"\\F92D\";\n}\n\n.mdi-wifi-strength-outline:before {\n  content: \"\\F92E\";\n}\n\n.mdi-wii:before {\n  content: \"\\F5AB\";\n}\n\n.mdi-wiiu:before {\n  content: \"\\F72C\";\n}\n\n.mdi-wikipedia:before {\n  content: \"\\F5AC\";\n}\n\n.mdi-wind-turbine:before {\n  content: \"\\FD81\";\n}\n\n.mdi-window-close:before {\n  content: \"\\F5AD\";\n}\n\n.mdi-window-closed:before {\n  content: \"\\F5AE\";\n}\n\n.mdi-window-maximize:before {\n  content: \"\\F5AF\";\n}\n\n.mdi-window-minimize:before {\n  content: \"\\F5B0\";\n}\n\n.mdi-window-open:before {\n  content: \"\\F5B1\";\n}\n\n.mdi-window-restore:before {\n  content: \"\\F5B2\";\n}\n\n.mdi-windows:before {\n  content: \"\\F5B3\";\n}\n\n.mdi-windows-classic:before {\n  content: \"\\FA20\";\n}\n\n.mdi-wiper:before {\n  content: \"\\FAE8\";\n}\n\n.mdi-wiper-wash:before {\n  content: \"\\FD82\";\n}\n\n.mdi-wordpress:before {\n  content: \"\\F5B4\";\n}\n\n.mdi-worker:before {\n  content: \"\\F5B5\";\n}\n\n.mdi-wrap:before {\n  content: \"\\F5B6\";\n}\n\n.mdi-wrap-disabled:before {\n  content: \"\\FBBB\";\n}\n\n.mdi-wrench:before {\n  content: \"\\F5B7\";\n}\n\n.mdi-wrench-outline:before {\n  content: \"\\FBBC\";\n}\n\n.mdi-wunderlist:before {\n  content: \"\\F5B8\";\n}\n\n.mdi-xamarin:before {\n  content: \"\\F844\";\n}\n\n.mdi-xamarin-outline:before {\n  content: \"\\F845\";\n}\n\n.mdi-xaml:before {\n  content: \"\\F673\";\n}\n\n.mdi-xbox:before {\n  content: \"\\F5B9\";\n}\n\n.mdi-xbox-controller:before {\n  content: \"\\F5BA\";\n}\n\n.mdi-xbox-controller-battery-alert:before {\n  content: \"\\F74A\";\n}\n\n.mdi-xbox-controller-battery-charging:before {\n  content: \"\\FA21\";\n}\n\n.mdi-xbox-controller-battery-empty:before {\n  content: \"\\F74B\";\n}\n\n.mdi-xbox-controller-battery-full:before {\n  content: \"\\F74C\";\n}\n\n.mdi-xbox-controller-battery-low:before {\n  content: \"\\F74D\";\n}\n\n.mdi-xbox-controller-battery-medium:before {\n  content: \"\\F74E\";\n}\n\n.mdi-xbox-controller-battery-unknown:before {\n  content: \"\\F74F\";\n}\n\n.mdi-xbox-controller-menu:before {\n  content: \"\\FE52\";\n}\n\n.mdi-xbox-controller-off:before {\n  content: \"\\F5BB\";\n}\n\n.mdi-xbox-controller-view:before {\n  content: \"\\FE53\";\n}\n\n.mdi-xda:before {\n  content: \"\\F5BC\";\n}\n\n.mdi-xing:before {\n  content: \"\\F5BD\";\n}\n\n.mdi-xing-box:before {\n  content: \"\\F5BE\";\n}\n\n.mdi-xing-circle:before {\n  content: \"\\F5BF\";\n}\n\n.mdi-xml:before {\n  content: \"\\F5C0\";\n}\n\n.mdi-xmpp:before {\n  content: \"\\F7FE\";\n}\n\n.mdi-yahoo:before {\n  content: \"\\FB2A\";\n}\n\n.mdi-yammer:before {\n  content: \"\\F788\";\n}\n\n.mdi-yeast:before {\n  content: \"\\F5C1\";\n}\n\n.mdi-yelp:before {\n  content: \"\\F5C2\";\n}\n\n.mdi-yin-yang:before {\n  content: \"\\F67F\";\n}\n\n.mdi-youtube:before {\n  content: \"\\F5C3\";\n}\n\n.mdi-youtube-creator-studio:before {\n  content: \"\\F846\";\n}\n\n.mdi-youtube-gaming:before {\n  content: \"\\F847\";\n}\n\n.mdi-youtube-subscription:before {\n  content: \"\\FD1C\";\n}\n\n.mdi-youtube-tv:before {\n  content: \"\\F448\";\n}\n\n.mdi-z-wave:before {\n  content: \"\\FAE9\";\n}\n\n.mdi-zend:before {\n  content: \"\\FAEA\";\n}\n\n.mdi-zigbee:before {\n  content: \"\\FD1D\";\n}\n\n.mdi-zip-box:before {\n  content: \"\\F5C4\";\n}\n\n.mdi-zip-disk:before {\n  content: \"\\FA22\";\n}\n\n.mdi-zodiac-aquarius:before {\n  content: \"\\FA7C\";\n}\n\n.mdi-zodiac-aries:before {\n  content: \"\\FA7D\";\n}\n\n.mdi-zodiac-cancer:before {\n  content: \"\\FA7E\";\n}\n\n.mdi-zodiac-capricorn:before {\n  content: \"\\FA7F\";\n}\n\n.mdi-zodiac-gemini:before {\n  content: \"\\FA80\";\n}\n\n.mdi-zodiac-leo:before {\n  content: \"\\FA81\";\n}\n\n.mdi-zodiac-libra:before {\n  content: \"\\FA82\";\n}\n\n.mdi-zodiac-pisces:before {\n  content: \"\\FA83\";\n}\n\n.mdi-zodiac-sagittarius:before {\n  content: \"\\FA84\";\n}\n\n.mdi-zodiac-scorpio:before {\n  content: \"\\FA85\";\n}\n\n.mdi-zodiac-taurus:before {\n  content: \"\\FA86\";\n}\n\n.mdi-zodiac-virgo:before {\n  content: \"\\FA87\";\n}\n\n.mdi-blank:before {\n  content: \"\\F68C\";\n  visibility: hidden;\n}\n\n.mdi-18px.mdi-set, .mdi-18px.mdi:before {\n  font-size: 18px;\n}\n\n.mdi-24px.mdi-set, .mdi-24px.mdi:before {\n  font-size: 24px;\n}\n\n.mdi-36px.mdi-set, .mdi-36px.mdi:before {\n  font-size: 36px;\n}\n\n.mdi-48px.mdi-set, .mdi-48px.mdi:before {\n  font-size: 48px;\n}\n\n.mdi-dark:before {\n  color: rgba(0, 0, 0, 0.54);\n}\n.mdi-dark.mdi-inactive:before {\n  color: rgba(0, 0, 0, 0.26);\n}\n\n.mdi-light:before {\n  color: white;\n}\n.mdi-light.mdi-inactive:before {\n  color: rgba(255, 255, 255, 0.3);\n}\n\n.mdi-rotate-45 {\n  /*\n  // Not included in production\n  &.mdi-flip-h:before {\n      -webkit-transform: scaleX(-1) rotate(45deg);\n      transform: scaleX(-1) rotate(45deg);\n      filter: FlipH;\n      -ms-filter: \"FlipH\";\n  }\n  &.mdi-flip-v:before {\n      -webkit-transform: scaleY(-1) rotate(45deg);\n      -ms-transform: rotate(45deg);\n      transform: scaleY(-1) rotate(45deg);\n      filter: FlipV;\n      -ms-filter: \"FlipV\";\n  }\n  */\n}\n.mdi-rotate-45:before {\n  -webkit-transform: rotate(45deg);\n  transform: rotate(45deg);\n}\n\n.mdi-rotate-90 {\n  /*\n  // Not included in production\n  &.mdi-flip-h:before {\n      -webkit-transform: scaleX(-1) rotate(90deg);\n      transform: scaleX(-1) rotate(90deg);\n      filter: FlipH;\n      -ms-filter: \"FlipH\";\n  }\n  &.mdi-flip-v:before {\n      -webkit-transform: scaleY(-1) rotate(90deg);\n      -ms-transform: rotate(90deg);\n      transform: scaleY(-1) rotate(90deg);\n      filter: FlipV;\n      -ms-filter: \"FlipV\";\n  }\n  */\n}\n.mdi-rotate-90:before {\n  -webkit-transform: rotate(90deg);\n  transform: rotate(90deg);\n}\n\n.mdi-rotate-135 {\n  /*\n  // Not included in production\n  &.mdi-flip-h:before {\n      -webkit-transform: scaleX(-1) rotate(135deg);\n      transform: scaleX(-1) rotate(135deg);\n      filter: FlipH;\n      -ms-filter: \"FlipH\";\n  }\n  &.mdi-flip-v:before {\n      -webkit-transform: scaleY(-1) rotate(135deg);\n      -ms-transform: rotate(135deg);\n      transform: scaleY(-1) rotate(135deg);\n      filter: FlipV;\n      -ms-filter: \"FlipV\";\n  }\n  */\n}\n.mdi-rotate-135:before {\n  -webkit-transform: rotate(135deg);\n  transform: rotate(135deg);\n}\n\n.mdi-rotate-180 {\n  /*\n  // Not included in production\n  &.mdi-flip-h:before {\n      -webkit-transform: scaleX(-1) rotate(180deg);\n      transform: scaleX(-1) rotate(180deg);\n      filter: FlipH;\n      -ms-filter: \"FlipH\";\n  }\n  &.mdi-flip-v:before {\n      -webkit-transform: scaleY(-1) rotate(180deg);\n      -ms-transform: rotate(180deg);\n      transform: scaleY(-1) rotate(180deg);\n      filter: FlipV;\n      -ms-filter: \"FlipV\";\n  }\n  */\n}\n.mdi-rotate-180:before {\n  -webkit-transform: rotate(180deg);\n  transform: rotate(180deg);\n}\n\n.mdi-rotate-225 {\n  /*\n  // Not included in production\n  &.mdi-flip-h:before {\n      -webkit-transform: scaleX(-1) rotate(225deg);\n      transform: scaleX(-1) rotate(225deg);\n      filter: FlipH;\n      -ms-filter: \"FlipH\";\n  }\n  &.mdi-flip-v:before {\n      -webkit-transform: scaleY(-1) rotate(225deg);\n      -ms-transform: rotate(225deg);\n      transform: scaleY(-1) rotate(225deg);\n      filter: FlipV;\n      -ms-filter: \"FlipV\";\n  }\n  */\n}\n.mdi-rotate-225:before {\n  -webkit-transform: rotate(225deg);\n  transform: rotate(225deg);\n}\n\n.mdi-rotate-270 {\n  /*\n  // Not included in production\n  &.mdi-flip-h:before {\n      -webkit-transform: scaleX(-1) rotate(270deg);\n      transform: scaleX(-1) rotate(270deg);\n      filter: FlipH;\n      -ms-filter: \"FlipH\";\n  }\n  &.mdi-flip-v:before {\n      -webkit-transform: scaleY(-1) rotate(270deg);\n      -ms-transform: rotate(270deg);\n      transform: scaleY(-1) rotate(270deg);\n      filter: FlipV;\n      -ms-filter: \"FlipV\";\n  }\n  */\n}\n.mdi-rotate-270:before {\n  -webkit-transform: rotate(270deg);\n  transform: rotate(270deg);\n}\n\n.mdi-rotate-315 {\n  /*\n  // Not included in production\n  &.mdi-flip-h:before {\n      -webkit-transform: scaleX(-1) rotate(315deg);\n      transform: scaleX(-1) rotate(315deg);\n      filter: FlipH;\n      -ms-filter: \"FlipH\";\n  }\n  &.mdi-flip-v:before {\n      -webkit-transform: scaleY(-1) rotate(315deg);\n      -ms-transform: rotate(315deg);\n      transform: scaleY(-1) rotate(315deg);\n      filter: FlipV;\n      -ms-filter: \"FlipV\";\n  }\n  */\n}\n.mdi-rotate-315:before {\n  -webkit-transform: rotate(315deg);\n  transform: rotate(315deg);\n}\n\n.mdi-flip-h:before {\n  -webkit-transform: scaleX(-1);\n  transform: scaleX(-1);\n  -webkit-filter: FlipH;\n          filter: FlipH;\n  -ms-filter: \"FlipH\";\n}\n\n.mdi-flip-v:before {\n  -webkit-transform: scaleY(-1);\n  transform: scaleY(-1);\n  -webkit-filter: FlipV;\n          filter: FlipV;\n  -ms-filter: \"FlipV\";\n}\n\n.mdi-spin:before {\n  -webkit-animation: mdi-spin 2s infinite linear;\n  animation: mdi-spin 2s infinite linear;\n}\n\n@-webkit-keyframes mdi-spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(359deg);\n    transform: rotate(359deg);\n  }\n}\n@keyframes mdi-spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(359deg);\n    transform: rotate(359deg);\n  }\n}\n", ""]);
+exports.push([module.i, "/* MaterialDesignIcons.com */\n@font-face {\n  font-family: \"Material Design Icons\";\n  src: url(" + escape(__webpack_require__(/*! ../fonts/materialdesignicons-webfont.eot?v=3.7.95 */ "./node_modules/@mdi/font/fonts/materialdesignicons-webfont.eot?v=3.7.95")) + ");\n  src: url(" + escape(__webpack_require__(/*! ../fonts/materialdesignicons-webfont.eot */ "./node_modules/@mdi/font/fonts/materialdesignicons-webfont.eot")) + "?#iefix&v=3.7.95) format(\"embedded-opentype\"), url(" + escape(__webpack_require__(/*! ../fonts/materialdesignicons-webfont.woff2?v=3.7.95 */ "./node_modules/@mdi/font/fonts/materialdesignicons-webfont.woff2?v=3.7.95")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../fonts/materialdesignicons-webfont.woff?v=3.7.95 */ "./node_modules/@mdi/font/fonts/materialdesignicons-webfont.woff?v=3.7.95")) + ") format(\"woff\"), url(" + escape(__webpack_require__(/*! ../fonts/materialdesignicons-webfont.ttf?v=3.7.95 */ "./node_modules/@mdi/font/fonts/materialdesignicons-webfont.ttf?v=3.7.95")) + ") format(\"truetype\");\n  font-weight: normal;\n  font-style: normal;\n}\n.mdi:before,\n.mdi-set {\n  display: inline-block;\n  font: normal normal normal 24px/1 \"Material Design Icons\";\n  font-size: inherit;\n  text-rendering: auto;\n  line-height: inherit;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n\n.mdi-access-point:before {\n  content: \"\\F002\";\n}\n\n.mdi-access-point-network:before {\n  content: \"\\F003\";\n}\n\n.mdi-access-point-network-off:before {\n  content: \"\\FBBD\";\n}\n\n.mdi-account:before {\n  content: \"\\F004\";\n}\n\n.mdi-account-alert:before {\n  content: \"\\F005\";\n}\n\n.mdi-account-alert-outline:before {\n  content: \"\\FB2C\";\n}\n\n.mdi-account-arrow-left:before {\n  content: \"\\FB2D\";\n}\n\n.mdi-account-arrow-left-outline:before {\n  content: \"\\FB2E\";\n}\n\n.mdi-account-arrow-right:before {\n  content: \"\\FB2F\";\n}\n\n.mdi-account-arrow-right-outline:before {\n  content: \"\\FB30\";\n}\n\n.mdi-account-badge:before {\n  content: \"\\FD83\";\n}\n\n.mdi-account-badge-alert:before {\n  content: \"\\FD84\";\n}\n\n.mdi-account-badge-alert-outline:before {\n  content: \"\\FD85\";\n}\n\n.mdi-account-badge-horizontal:before {\n  content: \"\\FDF0\";\n}\n\n.mdi-account-badge-horizontal-outline:before {\n  content: \"\\FDF1\";\n}\n\n.mdi-account-badge-outline:before {\n  content: \"\\FD86\";\n}\n\n.mdi-account-box:before {\n  content: \"\\F006\";\n}\n\n.mdi-account-box-multiple:before {\n  content: \"\\F933\";\n}\n\n.mdi-account-box-outline:before {\n  content: \"\\F007\";\n}\n\n.mdi-account-card-details:before {\n  content: \"\\F5D2\";\n}\n\n.mdi-account-card-details-outline:before {\n  content: \"\\FD87\";\n}\n\n.mdi-account-check:before {\n  content: \"\\F008\";\n}\n\n.mdi-account-check-outline:before {\n  content: \"\\FBBE\";\n}\n\n.mdi-account-child:before {\n  content: \"\\FA88\";\n}\n\n.mdi-account-child-circle:before {\n  content: \"\\FA89\";\n}\n\n.mdi-account-circle:before {\n  content: \"\\F009\";\n}\n\n.mdi-account-circle-outline:before {\n  content: \"\\FB31\";\n}\n\n.mdi-account-clock:before {\n  content: \"\\FB32\";\n}\n\n.mdi-account-clock-outline:before {\n  content: \"\\FB33\";\n}\n\n.mdi-account-convert:before {\n  content: \"\\F00A\";\n}\n\n.mdi-account-details:before {\n  content: \"\\F631\";\n}\n\n.mdi-account-edit:before {\n  content: \"\\F6BB\";\n}\n\n.mdi-account-group:before {\n  content: \"\\F848\";\n}\n\n.mdi-account-group-outline:before {\n  content: \"\\FB34\";\n}\n\n.mdi-account-heart:before {\n  content: \"\\F898\";\n}\n\n.mdi-account-heart-outline:before {\n  content: \"\\FBBF\";\n}\n\n.mdi-account-key:before {\n  content: \"\\F00B\";\n}\n\n.mdi-account-key-outline:before {\n  content: \"\\FBC0\";\n}\n\n.mdi-account-minus:before {\n  content: \"\\F00D\";\n}\n\n.mdi-account-minus-outline:before {\n  content: \"\\FAEB\";\n}\n\n.mdi-account-multiple:before {\n  content: \"\\F00E\";\n}\n\n.mdi-account-multiple-check:before {\n  content: \"\\F8C4\";\n}\n\n.mdi-account-multiple-minus:before {\n  content: \"\\F5D3\";\n}\n\n.mdi-account-multiple-minus-outline:before {\n  content: \"\\FBC1\";\n}\n\n.mdi-account-multiple-outline:before {\n  content: \"\\F00F\";\n}\n\n.mdi-account-multiple-plus:before {\n  content: \"\\F010\";\n}\n\n.mdi-account-multiple-plus-outline:before {\n  content: \"\\F7FF\";\n}\n\n.mdi-account-network:before {\n  content: \"\\F011\";\n}\n\n.mdi-account-network-outline:before {\n  content: \"\\FBC2\";\n}\n\n.mdi-account-off:before {\n  content: \"\\F012\";\n}\n\n.mdi-account-off-outline:before {\n  content: \"\\FBC3\";\n}\n\n.mdi-account-outline:before {\n  content: \"\\F013\";\n}\n\n.mdi-account-plus:before {\n  content: \"\\F014\";\n}\n\n.mdi-account-plus-outline:before {\n  content: \"\\F800\";\n}\n\n.mdi-account-question:before {\n  content: \"\\FB35\";\n}\n\n.mdi-account-question-outline:before {\n  content: \"\\FB36\";\n}\n\n.mdi-account-remove:before {\n  content: \"\\F015\";\n}\n\n.mdi-account-remove-outline:before {\n  content: \"\\FAEC\";\n}\n\n.mdi-account-search:before {\n  content: \"\\F016\";\n}\n\n.mdi-account-search-outline:before {\n  content: \"\\F934\";\n}\n\n.mdi-account-settings:before {\n  content: \"\\F630\";\n}\n\n.mdi-account-star:before {\n  content: \"\\F017\";\n}\n\n.mdi-account-star-outline:before {\n  content: \"\\FBC4\";\n}\n\n.mdi-account-supervisor:before {\n  content: \"\\FA8A\";\n}\n\n.mdi-account-supervisor-circle:before {\n  content: \"\\FA8B\";\n}\n\n.mdi-account-switch:before {\n  content: \"\\F019\";\n}\n\n.mdi-account-tie:before {\n  content: \"\\FCBF\";\n}\n\n.mdi-accusoft:before {\n  content: \"\\F849\";\n}\n\n.mdi-adchoices:before {\n  content: \"\\FD1E\";\n}\n\n.mdi-adjust:before {\n  content: \"\\F01A\";\n}\n\n.mdi-adobe:before {\n  content: \"\\F935\";\n}\n\n.mdi-air-conditioner:before {\n  content: \"\\F01B\";\n}\n\n.mdi-air-filter:before {\n  content: \"\\FD1F\";\n}\n\n.mdi-air-horn:before {\n  content: \"\\FD88\";\n}\n\n.mdi-air-purifier:before {\n  content: \"\\FD20\";\n}\n\n.mdi-airbag:before {\n  content: \"\\FBC5\";\n}\n\n.mdi-airballoon:before {\n  content: \"\\F01C\";\n}\n\n.mdi-airplane:before {\n  content: \"\\F01D\";\n}\n\n.mdi-airplane-landing:before {\n  content: \"\\F5D4\";\n}\n\n.mdi-airplane-off:before {\n  content: \"\\F01E\";\n}\n\n.mdi-airplane-takeoff:before {\n  content: \"\\F5D5\";\n}\n\n.mdi-airplay:before {\n  content: \"\\F01F\";\n}\n\n.mdi-airport:before {\n  content: \"\\F84A\";\n}\n\n.mdi-alarm:before {\n  content: \"\\F020\";\n}\n\n.mdi-alarm-bell:before {\n  content: \"\\F78D\";\n}\n\n.mdi-alarm-check:before {\n  content: \"\\F021\";\n}\n\n.mdi-alarm-light:before {\n  content: \"\\F78E\";\n}\n\n.mdi-alarm-light-outline:before {\n  content: \"\\FBC6\";\n}\n\n.mdi-alarm-multiple:before {\n  content: \"\\F022\";\n}\n\n.mdi-alarm-note:before {\n  content: \"\\FE8E\";\n}\n\n.mdi-alarm-note-off:before {\n  content: \"\\FE8F\";\n}\n\n.mdi-alarm-off:before {\n  content: \"\\F023\";\n}\n\n.mdi-alarm-plus:before {\n  content: \"\\F024\";\n}\n\n.mdi-alarm-snooze:before {\n  content: \"\\F68D\";\n}\n\n.mdi-album:before {\n  content: \"\\F025\";\n}\n\n.mdi-alert:before {\n  content: \"\\F026\";\n}\n\n.mdi-alert-box:before {\n  content: \"\\F027\";\n}\n\n.mdi-alert-box-outline:before {\n  content: \"\\FCC0\";\n}\n\n.mdi-alert-circle:before {\n  content: \"\\F028\";\n}\n\n.mdi-alert-circle-outline:before {\n  content: \"\\F5D6\";\n}\n\n.mdi-alert-decagram:before {\n  content: \"\\F6BC\";\n}\n\n.mdi-alert-decagram-outline:before {\n  content: \"\\FCC1\";\n}\n\n.mdi-alert-octagon:before {\n  content: \"\\F029\";\n}\n\n.mdi-alert-octagon-outline:before {\n  content: \"\\FCC2\";\n}\n\n.mdi-alert-octagram:before {\n  content: \"\\F766\";\n}\n\n.mdi-alert-octagram-outline:before {\n  content: \"\\FCC3\";\n}\n\n.mdi-alert-outline:before {\n  content: \"\\F02A\";\n}\n\n.mdi-alien:before {\n  content: \"\\F899\";\n}\n\n.mdi-all-inclusive:before {\n  content: \"\\F6BD\";\n}\n\n.mdi-alpha:before {\n  content: \"\\F02B\";\n}\n\n.mdi-alpha-a:before {\n  content: \"A\";\n}\n\n.mdi-alpha-a-box:before {\n  content: \"\\FAED\";\n}\n\n.mdi-alpha-a-box-outline:before {\n  content: \"\\FBC7\";\n}\n\n.mdi-alpha-a-circle:before {\n  content: \"\\FBC8\";\n}\n\n.mdi-alpha-a-circle-outline:before {\n  content: \"\\FBC9\";\n}\n\n.mdi-alpha-b:before {\n  content: \"B\";\n}\n\n.mdi-alpha-b-box:before {\n  content: \"\\FAEE\";\n}\n\n.mdi-alpha-b-box-outline:before {\n  content: \"\\FBCA\";\n}\n\n.mdi-alpha-b-circle:before {\n  content: \"\\FBCB\";\n}\n\n.mdi-alpha-b-circle-outline:before {\n  content: \"\\FBCC\";\n}\n\n.mdi-alpha-c:before {\n  content: \"C\";\n}\n\n.mdi-alpha-c-box:before {\n  content: \"\\FAEF\";\n}\n\n.mdi-alpha-c-box-outline:before {\n  content: \"\\FBCD\";\n}\n\n.mdi-alpha-c-circle:before {\n  content: \"\\FBCE\";\n}\n\n.mdi-alpha-c-circle-outline:before {\n  content: \"\\FBCF\";\n}\n\n.mdi-alpha-d:before {\n  content: \"D\";\n}\n\n.mdi-alpha-d-box:before {\n  content: \"\\FAF0\";\n}\n\n.mdi-alpha-d-box-outline:before {\n  content: \"\\FBD0\";\n}\n\n.mdi-alpha-d-circle:before {\n  content: \"\\FBD1\";\n}\n\n.mdi-alpha-d-circle-outline:before {\n  content: \"\\FBD2\";\n}\n\n.mdi-alpha-e:before {\n  content: \"E\";\n}\n\n.mdi-alpha-e-box:before {\n  content: \"\\FAF1\";\n}\n\n.mdi-alpha-e-box-outline:before {\n  content: \"\\FBD3\";\n}\n\n.mdi-alpha-e-circle:before {\n  content: \"\\FBD4\";\n}\n\n.mdi-alpha-e-circle-outline:before {\n  content: \"\\FBD5\";\n}\n\n.mdi-alpha-f:before {\n  content: \"F\";\n}\n\n.mdi-alpha-f-box:before {\n  content: \"\\FAF2\";\n}\n\n.mdi-alpha-f-box-outline:before {\n  content: \"\\FBD6\";\n}\n\n.mdi-alpha-f-circle:before {\n  content: \"\\FBD7\";\n}\n\n.mdi-alpha-f-circle-outline:before {\n  content: \"\\FBD8\";\n}\n\n.mdi-alpha-g:before {\n  content: \"G\";\n}\n\n.mdi-alpha-g-box:before {\n  content: \"\\FAF3\";\n}\n\n.mdi-alpha-g-box-outline:before {\n  content: \"\\FBD9\";\n}\n\n.mdi-alpha-g-circle:before {\n  content: \"\\FBDA\";\n}\n\n.mdi-alpha-g-circle-outline:before {\n  content: \"\\FBDB\";\n}\n\n.mdi-alpha-h:before {\n  content: \"H\";\n}\n\n.mdi-alpha-h-box:before {\n  content: \"\\FAF4\";\n}\n\n.mdi-alpha-h-box-outline:before {\n  content: \"\\FBDC\";\n}\n\n.mdi-alpha-h-circle:before {\n  content: \"\\FBDD\";\n}\n\n.mdi-alpha-h-circle-outline:before {\n  content: \"\\FBDE\";\n}\n\n.mdi-alpha-i:before {\n  content: \"I\";\n}\n\n.mdi-alpha-i-box:before {\n  content: \"\\FAF5\";\n}\n\n.mdi-alpha-i-box-outline:before {\n  content: \"\\FBDF\";\n}\n\n.mdi-alpha-i-circle:before {\n  content: \"\\FBE0\";\n}\n\n.mdi-alpha-i-circle-outline:before {\n  content: \"\\FBE1\";\n}\n\n.mdi-alpha-j:before {\n  content: \"J\";\n}\n\n.mdi-alpha-j-box:before {\n  content: \"\\FAF6\";\n}\n\n.mdi-alpha-j-box-outline:before {\n  content: \"\\FBE2\";\n}\n\n.mdi-alpha-j-circle:before {\n  content: \"\\FBE3\";\n}\n\n.mdi-alpha-j-circle-outline:before {\n  content: \"\\FBE4\";\n}\n\n.mdi-alpha-k:before {\n  content: \"K\";\n}\n\n.mdi-alpha-k-box:before {\n  content: \"\\FAF7\";\n}\n\n.mdi-alpha-k-box-outline:before {\n  content: \"\\FBE5\";\n}\n\n.mdi-alpha-k-circle:before {\n  content: \"\\FBE6\";\n}\n\n.mdi-alpha-k-circle-outline:before {\n  content: \"\\FBE7\";\n}\n\n.mdi-alpha-l:before {\n  content: \"L\";\n}\n\n.mdi-alpha-l-box:before {\n  content: \"\\FAF8\";\n}\n\n.mdi-alpha-l-box-outline:before {\n  content: \"\\FBE8\";\n}\n\n.mdi-alpha-l-circle:before {\n  content: \"\\FBE9\";\n}\n\n.mdi-alpha-l-circle-outline:before {\n  content: \"\\FBEA\";\n}\n\n.mdi-alpha-m:before {\n  content: \"M\";\n}\n\n.mdi-alpha-m-box:before {\n  content: \"\\FAF9\";\n}\n\n.mdi-alpha-m-box-outline:before {\n  content: \"\\FBEB\";\n}\n\n.mdi-alpha-m-circle:before {\n  content: \"\\FBEC\";\n}\n\n.mdi-alpha-m-circle-outline:before {\n  content: \"\\FBED\";\n}\n\n.mdi-alpha-n:before {\n  content: \"N\";\n}\n\n.mdi-alpha-n-box:before {\n  content: \"\\FAFA\";\n}\n\n.mdi-alpha-n-box-outline:before {\n  content: \"\\FBEE\";\n}\n\n.mdi-alpha-n-circle:before {\n  content: \"\\FBEF\";\n}\n\n.mdi-alpha-n-circle-outline:before {\n  content: \"\\FBF0\";\n}\n\n.mdi-alpha-o:before {\n  content: \"O\";\n}\n\n.mdi-alpha-o-box:before {\n  content: \"\\FAFB\";\n}\n\n.mdi-alpha-o-box-outline:before {\n  content: \"\\FBF1\";\n}\n\n.mdi-alpha-o-circle:before {\n  content: \"\\FBF2\";\n}\n\n.mdi-alpha-o-circle-outline:before {\n  content: \"\\FBF3\";\n}\n\n.mdi-alpha-p:before {\n  content: \"P\";\n}\n\n.mdi-alpha-p-box:before {\n  content: \"\\FAFC\";\n}\n\n.mdi-alpha-p-box-outline:before {\n  content: \"\\FBF4\";\n}\n\n.mdi-alpha-p-circle:before {\n  content: \"\\FBF5\";\n}\n\n.mdi-alpha-p-circle-outline:before {\n  content: \"\\FBF6\";\n}\n\n.mdi-alpha-q:before {\n  content: \"Q\";\n}\n\n.mdi-alpha-q-box:before {\n  content: \"\\FAFD\";\n}\n\n.mdi-alpha-q-box-outline:before {\n  content: \"\\FBF7\";\n}\n\n.mdi-alpha-q-circle:before {\n  content: \"\\FBF8\";\n}\n\n.mdi-alpha-q-circle-outline:before {\n  content: \"\\FBF9\";\n}\n\n.mdi-alpha-r:before {\n  content: \"R\";\n}\n\n.mdi-alpha-r-box:before {\n  content: \"\\FAFE\";\n}\n\n.mdi-alpha-r-box-outline:before {\n  content: \"\\FBFA\";\n}\n\n.mdi-alpha-r-circle:before {\n  content: \"\\FBFB\";\n}\n\n.mdi-alpha-r-circle-outline:before {\n  content: \"\\FBFC\";\n}\n\n.mdi-alpha-s:before {\n  content: \"S\";\n}\n\n.mdi-alpha-s-box:before {\n  content: \"\\FAFF\";\n}\n\n.mdi-alpha-s-box-outline:before {\n  content: \"\\FBFD\";\n}\n\n.mdi-alpha-s-circle:before {\n  content: \"\\FBFE\";\n}\n\n.mdi-alpha-s-circle-outline:before {\n  content: \"\\FBFF\";\n}\n\n.mdi-alpha-t:before {\n  content: \"T\";\n}\n\n.mdi-alpha-t-box:before {\n  content: \"\\FB00\";\n}\n\n.mdi-alpha-t-box-outline:before {\n  content: \"\\FC00\";\n}\n\n.mdi-alpha-t-circle:before {\n  content: \"\\FC01\";\n}\n\n.mdi-alpha-t-circle-outline:before {\n  content: \"\\FC02\";\n}\n\n.mdi-alpha-u:before {\n  content: \"U\";\n}\n\n.mdi-alpha-u-box:before {\n  content: \"\\FB01\";\n}\n\n.mdi-alpha-u-box-outline:before {\n  content: \"\\FC03\";\n}\n\n.mdi-alpha-u-circle:before {\n  content: \"\\FC04\";\n}\n\n.mdi-alpha-u-circle-outline:before {\n  content: \"\\FC05\";\n}\n\n.mdi-alpha-v:before {\n  content: \"V\";\n}\n\n.mdi-alpha-v-box:before {\n  content: \"\\FB02\";\n}\n\n.mdi-alpha-v-box-outline:before {\n  content: \"\\FC06\";\n}\n\n.mdi-alpha-v-circle:before {\n  content: \"\\FC07\";\n}\n\n.mdi-alpha-v-circle-outline:before {\n  content: \"\\FC08\";\n}\n\n.mdi-alpha-w:before {\n  content: \"W\";\n}\n\n.mdi-alpha-w-box:before {\n  content: \"\\FB03\";\n}\n\n.mdi-alpha-w-box-outline:before {\n  content: \"\\FC09\";\n}\n\n.mdi-alpha-w-circle:before {\n  content: \"\\FC0A\";\n}\n\n.mdi-alpha-w-circle-outline:before {\n  content: \"\\FC0B\";\n}\n\n.mdi-alpha-x:before {\n  content: \"X\";\n}\n\n.mdi-alpha-x-box:before {\n  content: \"\\FB04\";\n}\n\n.mdi-alpha-x-box-outline:before {\n  content: \"\\FC0C\";\n}\n\n.mdi-alpha-x-circle:before {\n  content: \"\\FC0D\";\n}\n\n.mdi-alpha-x-circle-outline:before {\n  content: \"\\FC0E\";\n}\n\n.mdi-alpha-y:before {\n  content: \"Y\";\n}\n\n.mdi-alpha-y-box:before {\n  content: \"\\FB05\";\n}\n\n.mdi-alpha-y-box-outline:before {\n  content: \"\\FC0F\";\n}\n\n.mdi-alpha-y-circle:before {\n  content: \"\\FC10\";\n}\n\n.mdi-alpha-y-circle-outline:before {\n  content: \"\\FC11\";\n}\n\n.mdi-alpha-z:before {\n  content: \"Z\";\n}\n\n.mdi-alpha-z-box:before {\n  content: \"\\FB06\";\n}\n\n.mdi-alpha-z-box-outline:before {\n  content: \"\\FC12\";\n}\n\n.mdi-alpha-z-circle:before {\n  content: \"\\FC13\";\n}\n\n.mdi-alpha-z-circle-outline:before {\n  content: \"\\FC14\";\n}\n\n.mdi-alphabetical:before {\n  content: \"\\F02C\";\n}\n\n.mdi-altimeter:before {\n  content: \"\\F5D7\";\n}\n\n.mdi-amazon:before {\n  content: \"\\F02D\";\n}\n\n.mdi-amazon-alexa:before {\n  content: \"\\F8C5\";\n}\n\n.mdi-amazon-drive:before {\n  content: \"\\F02E\";\n}\n\n.mdi-ambulance:before {\n  content: \"\\F02F\";\n}\n\n.mdi-ammunition:before {\n  content: \"\\FCC4\";\n}\n\n.mdi-ampersand:before {\n  content: \"\\FA8C\";\n}\n\n.mdi-amplifier:before {\n  content: \"\\F030\";\n}\n\n.mdi-anchor:before {\n  content: \"\\F031\";\n}\n\n.mdi-android:before {\n  content: \"\\F032\";\n}\n\n.mdi-android-auto:before {\n  content: \"\\FA8D\";\n}\n\n.mdi-android-debug-bridge:before {\n  content: \"\\F033\";\n}\n\n.mdi-android-head:before {\n  content: \"\\F78F\";\n}\n\n.mdi-android-messages:before {\n  content: \"\\FD21\";\n}\n\n.mdi-android-studio:before {\n  content: \"\\F034\";\n}\n\n.mdi-angle-acute:before {\n  content: \"\\F936\";\n}\n\n.mdi-angle-obtuse:before {\n  content: \"\\F937\";\n}\n\n.mdi-angle-right:before {\n  content: \"\\F938\";\n}\n\n.mdi-angular:before {\n  content: \"\\F6B1\";\n}\n\n.mdi-angularjs:before {\n  content: \"\\F6BE\";\n}\n\n.mdi-animation:before {\n  content: \"\\F5D8\";\n}\n\n.mdi-animation-outline:before {\n  content: \"\\FA8E\";\n}\n\n.mdi-animation-play:before {\n  content: \"\\F939\";\n}\n\n.mdi-animation-play-outline:before {\n  content: \"\\FA8F\";\n}\n\n.mdi-anvil:before {\n  content: \"\\F89A\";\n}\n\n.mdi-apple:before {\n  content: \"\\F035\";\n}\n\n.mdi-apple-finder:before {\n  content: \"\\F036\";\n}\n\n.mdi-apple-icloud:before {\n  content: \"\\F038\";\n}\n\n.mdi-apple-ios:before {\n  content: \"\\F037\";\n}\n\n.mdi-apple-keyboard-caps:before {\n  content: \"\\F632\";\n}\n\n.mdi-apple-keyboard-command:before {\n  content: \"\\F633\";\n}\n\n.mdi-apple-keyboard-control:before {\n  content: \"\\F634\";\n}\n\n.mdi-apple-keyboard-option:before {\n  content: \"\\F635\";\n}\n\n.mdi-apple-keyboard-shift:before {\n  content: \"\\F636\";\n}\n\n.mdi-apple-safari:before {\n  content: \"\\F039\";\n}\n\n.mdi-application:before {\n  content: \"\\F614\";\n}\n\n.mdi-application-export:before {\n  content: \"\\FD89\";\n}\n\n.mdi-application-import:before {\n  content: \"\\FD8A\";\n}\n\n.mdi-apps:before {\n  content: \"\\F03B\";\n}\n\n.mdi-apps-box:before {\n  content: \"\\FD22\";\n}\n\n.mdi-arch:before {\n  content: \"\\F8C6\";\n}\n\n.mdi-archive:before {\n  content: \"\\F03C\";\n}\n\n.mdi-arrange-bring-forward:before {\n  content: \"\\F03D\";\n}\n\n.mdi-arrange-bring-to-front:before {\n  content: \"\\F03E\";\n}\n\n.mdi-arrange-send-backward:before {\n  content: \"\\F03F\";\n}\n\n.mdi-arrange-send-to-back:before {\n  content: \"\\F040\";\n}\n\n.mdi-arrow-all:before {\n  content: \"\\F041\";\n}\n\n.mdi-arrow-bottom-left:before {\n  content: \"\\F042\";\n}\n\n.mdi-arrow-bottom-left-bold-outline:before {\n  content: \"\\F9B6\";\n}\n\n.mdi-arrow-bottom-left-thick:before {\n  content: \"\\F9B7\";\n}\n\n.mdi-arrow-bottom-right:before {\n  content: \"\\F043\";\n}\n\n.mdi-arrow-bottom-right-bold-outline:before {\n  content: \"\\F9B8\";\n}\n\n.mdi-arrow-bottom-right-thick:before {\n  content: \"\\F9B9\";\n}\n\n.mdi-arrow-collapse:before {\n  content: \"\\F615\";\n}\n\n.mdi-arrow-collapse-all:before {\n  content: \"\\F044\";\n}\n\n.mdi-arrow-collapse-down:before {\n  content: \"\\F791\";\n}\n\n.mdi-arrow-collapse-horizontal:before {\n  content: \"\\F84B\";\n}\n\n.mdi-arrow-collapse-left:before {\n  content: \"\\F792\";\n}\n\n.mdi-arrow-collapse-right:before {\n  content: \"\\F793\";\n}\n\n.mdi-arrow-collapse-up:before {\n  content: \"\\F794\";\n}\n\n.mdi-arrow-collapse-vertical:before {\n  content: \"\\F84C\";\n}\n\n.mdi-arrow-decision:before {\n  content: \"\\F9BA\";\n}\n\n.mdi-arrow-decision-auto:before {\n  content: \"\\F9BB\";\n}\n\n.mdi-arrow-decision-auto-outline:before {\n  content: \"\\F9BC\";\n}\n\n.mdi-arrow-decision-outline:before {\n  content: \"\\F9BD\";\n}\n\n.mdi-arrow-down:before {\n  content: \"\\F045\";\n}\n\n.mdi-arrow-down-bold:before {\n  content: \"\\F72D\";\n}\n\n.mdi-arrow-down-bold-box:before {\n  content: \"\\F72E\";\n}\n\n.mdi-arrow-down-bold-box-outline:before {\n  content: \"\\F72F\";\n}\n\n.mdi-arrow-down-bold-circle:before {\n  content: \"\\F047\";\n}\n\n.mdi-arrow-down-bold-circle-outline:before {\n  content: \"\\F048\";\n}\n\n.mdi-arrow-down-bold-hexagon-outline:before {\n  content: \"\\F049\";\n}\n\n.mdi-arrow-down-bold-outline:before {\n  content: \"\\F9BE\";\n}\n\n.mdi-arrow-down-box:before {\n  content: \"\\F6BF\";\n}\n\n.mdi-arrow-down-circle:before {\n  content: \"\\FCB7\";\n}\n\n.mdi-arrow-down-circle-outline:before {\n  content: \"\\FCB8\";\n}\n\n.mdi-arrow-down-drop-circle:before {\n  content: \"\\F04A\";\n}\n\n.mdi-arrow-down-drop-circle-outline:before {\n  content: \"\\F04B\";\n}\n\n.mdi-arrow-down-thick:before {\n  content: \"\\F046\";\n}\n\n.mdi-arrow-expand:before {\n  content: \"\\F616\";\n}\n\n.mdi-arrow-expand-all:before {\n  content: \"\\F04C\";\n}\n\n.mdi-arrow-expand-down:before {\n  content: \"\\F795\";\n}\n\n.mdi-arrow-expand-horizontal:before {\n  content: \"\\F84D\";\n}\n\n.mdi-arrow-expand-left:before {\n  content: \"\\F796\";\n}\n\n.mdi-arrow-expand-right:before {\n  content: \"\\F797\";\n}\n\n.mdi-arrow-expand-up:before {\n  content: \"\\F798\";\n}\n\n.mdi-arrow-expand-vertical:before {\n  content: \"\\F84E\";\n}\n\n.mdi-arrow-left:before {\n  content: \"\\F04D\";\n}\n\n.mdi-arrow-left-bold:before {\n  content: \"\\F730\";\n}\n\n.mdi-arrow-left-bold-box:before {\n  content: \"\\F731\";\n}\n\n.mdi-arrow-left-bold-box-outline:before {\n  content: \"\\F732\";\n}\n\n.mdi-arrow-left-bold-circle:before {\n  content: \"\\F04F\";\n}\n\n.mdi-arrow-left-bold-circle-outline:before {\n  content: \"\\F050\";\n}\n\n.mdi-arrow-left-bold-hexagon-outline:before {\n  content: \"\\F051\";\n}\n\n.mdi-arrow-left-bold-outline:before {\n  content: \"\\F9BF\";\n}\n\n.mdi-arrow-left-box:before {\n  content: \"\\F6C0\";\n}\n\n.mdi-arrow-left-circle:before {\n  content: \"\\FCB9\";\n}\n\n.mdi-arrow-left-circle-outline:before {\n  content: \"\\FCBA\";\n}\n\n.mdi-arrow-left-drop-circle:before {\n  content: \"\\F052\";\n}\n\n.mdi-arrow-left-drop-circle-outline:before {\n  content: \"\\F053\";\n}\n\n.mdi-arrow-left-right:before {\n  content: \"\\FE90\";\n}\n\n.mdi-arrow-left-right-bold:before {\n  content: \"\\FE91\";\n}\n\n.mdi-arrow-left-right-bold-outline:before {\n  content: \"\\F9C0\";\n}\n\n.mdi-arrow-left-thick:before {\n  content: \"\\F04E\";\n}\n\n.mdi-arrow-right:before {\n  content: \"\\F054\";\n}\n\n.mdi-arrow-right-bold:before {\n  content: \"\\F733\";\n}\n\n.mdi-arrow-right-bold-box:before {\n  content: \"\\F734\";\n}\n\n.mdi-arrow-right-bold-box-outline:before {\n  content: \"\\F735\";\n}\n\n.mdi-arrow-right-bold-circle:before {\n  content: \"\\F056\";\n}\n\n.mdi-arrow-right-bold-circle-outline:before {\n  content: \"\\F057\";\n}\n\n.mdi-arrow-right-bold-hexagon-outline:before {\n  content: \"\\F058\";\n}\n\n.mdi-arrow-right-bold-outline:before {\n  content: \"\\F9C1\";\n}\n\n.mdi-arrow-right-box:before {\n  content: \"\\F6C1\";\n}\n\n.mdi-arrow-right-circle:before {\n  content: \"\\FCBB\";\n}\n\n.mdi-arrow-right-circle-outline:before {\n  content: \"\\FCBC\";\n}\n\n.mdi-arrow-right-drop-circle:before {\n  content: \"\\F059\";\n}\n\n.mdi-arrow-right-drop-circle-outline:before {\n  content: \"\\F05A\";\n}\n\n.mdi-arrow-right-thick:before {\n  content: \"\\F055\";\n}\n\n.mdi-arrow-split-horizontal:before {\n  content: \"\\F93A\";\n}\n\n.mdi-arrow-split-vertical:before {\n  content: \"\\F93B\";\n}\n\n.mdi-arrow-top-left:before {\n  content: \"\\F05B\";\n}\n\n.mdi-arrow-top-left-bold-outline:before {\n  content: \"\\F9C2\";\n}\n\n.mdi-arrow-top-left-bottom-right:before {\n  content: \"\\FE92\";\n}\n\n.mdi-arrow-top-left-bottom-right-bold:before {\n  content: \"\\FE93\";\n}\n\n.mdi-arrow-top-left-thick:before {\n  content: \"\\F9C3\";\n}\n\n.mdi-arrow-top-right:before {\n  content: \"\\F05C\";\n}\n\n.mdi-arrow-top-right-bold-outline:before {\n  content: \"\\F9C4\";\n}\n\n.mdi-arrow-top-right-bottom-left:before {\n  content: \"\\FE94\";\n}\n\n.mdi-arrow-top-right-bottom-left-bold:before {\n  content: \"\\FE95\";\n}\n\n.mdi-arrow-top-right-thick:before {\n  content: \"\\F9C5\";\n}\n\n.mdi-arrow-up:before {\n  content: \"\\F05D\";\n}\n\n.mdi-arrow-up-bold:before {\n  content: \"\\F736\";\n}\n\n.mdi-arrow-up-bold-box:before {\n  content: \"\\F737\";\n}\n\n.mdi-arrow-up-bold-box-outline:before {\n  content: \"\\F738\";\n}\n\n.mdi-arrow-up-bold-circle:before {\n  content: \"\\F05F\";\n}\n\n.mdi-arrow-up-bold-circle-outline:before {\n  content: \"\\F060\";\n}\n\n.mdi-arrow-up-bold-hexagon-outline:before {\n  content: \"\\F061\";\n}\n\n.mdi-arrow-up-bold-outline:before {\n  content: \"\\F9C6\";\n}\n\n.mdi-arrow-up-box:before {\n  content: \"\\F6C2\";\n}\n\n.mdi-arrow-up-circle:before {\n  content: \"\\FCBD\";\n}\n\n.mdi-arrow-up-circle-outline:before {\n  content: \"\\FCBE\";\n}\n\n.mdi-arrow-up-down:before {\n  content: \"\\FE96\";\n}\n\n.mdi-arrow-up-down-bold:before {\n  content: \"\\FE97\";\n}\n\n.mdi-arrow-up-down-bold-outline:before {\n  content: \"\\F9C7\";\n}\n\n.mdi-arrow-up-drop-circle:before {\n  content: \"\\F062\";\n}\n\n.mdi-arrow-up-drop-circle-outline:before {\n  content: \"\\F063\";\n}\n\n.mdi-arrow-up-thick:before {\n  content: \"\\F05E\";\n}\n\n.mdi-artist:before {\n  content: \"\\F802\";\n}\n\n.mdi-artist-outline:before {\n  content: \"\\FCC5\";\n}\n\n.mdi-artstation:before {\n  content: \"\\FB37\";\n}\n\n.mdi-aspect-ratio:before {\n  content: \"\\FA23\";\n}\n\n.mdi-assistant:before {\n  content: \"\\F064\";\n}\n\n.mdi-asterisk:before {\n  content: \"\\F6C3\";\n}\n\n.mdi-at:before {\n  content: \"\\F065\";\n}\n\n.mdi-atlassian:before {\n  content: \"\\F803\";\n}\n\n.mdi-atm:before {\n  content: \"\\FD23\";\n}\n\n.mdi-atom:before {\n  content: \"\\F767\";\n}\n\n.mdi-atom-variant:before {\n  content: \"\\FE98\";\n}\n\n.mdi-attachment:before {\n  content: \"\\F066\";\n}\n\n.mdi-audio-video:before {\n  content: \"\\F93C\";\n}\n\n.mdi-audiobook:before {\n  content: \"\\F067\";\n}\n\n.mdi-augmented-reality:before {\n  content: \"\\F84F\";\n}\n\n.mdi-auto-fix:before {\n  content: \"\\F068\";\n}\n\n.mdi-auto-upload:before {\n  content: \"\\F069\";\n}\n\n.mdi-autorenew:before {\n  content: \"\\F06A\";\n}\n\n.mdi-av-timer:before {\n  content: \"\\F06B\";\n}\n\n.mdi-aws:before {\n  content: \"\\FDF2\";\n}\n\n.mdi-axe:before {\n  content: \"\\F8C7\";\n}\n\n.mdi-axis:before {\n  content: \"\\FD24\";\n}\n\n.mdi-axis-arrow:before {\n  content: \"\\FD25\";\n}\n\n.mdi-axis-arrow-lock:before {\n  content: \"\\FD26\";\n}\n\n.mdi-axis-lock:before {\n  content: \"\\FD27\";\n}\n\n.mdi-axis-x-arrow:before {\n  content: \"\\FD28\";\n}\n\n.mdi-axis-x-arrow-lock:before {\n  content: \"\\FD29\";\n}\n\n.mdi-axis-x-rotate-clockwise:before {\n  content: \"\\FD2A\";\n}\n\n.mdi-axis-x-rotate-counterclockwise:before {\n  content: \"\\FD2B\";\n}\n\n.mdi-axis-x-y-arrow-lock:before {\n  content: \"\\FD2C\";\n}\n\n.mdi-axis-y-arrow:before {\n  content: \"\\FD2D\";\n}\n\n.mdi-axis-y-arrow-lock:before {\n  content: \"\\FD2E\";\n}\n\n.mdi-axis-y-rotate-clockwise:before {\n  content: \"\\FD2F\";\n}\n\n.mdi-axis-y-rotate-counterclockwise:before {\n  content: \"\\FD30\";\n}\n\n.mdi-axis-z-arrow:before {\n  content: \"\\FD31\";\n}\n\n.mdi-axis-z-arrow-lock:before {\n  content: \"\\FD32\";\n}\n\n.mdi-axis-z-rotate-clockwise:before {\n  content: \"\\FD33\";\n}\n\n.mdi-axis-z-rotate-counterclockwise:before {\n  content: \"\\FD34\";\n}\n\n.mdi-azure:before {\n  content: \"\\F804\";\n}\n\n.mdi-babel:before {\n  content: \"\\FA24\";\n}\n\n.mdi-baby:before {\n  content: \"\\F06C\";\n}\n\n.mdi-baby-buggy:before {\n  content: \"\\F68E\";\n}\n\n.mdi-baby-face:before {\n  content: \"\\FE99\";\n}\n\n.mdi-baby-face-outline:before {\n  content: \"\\FE9A\";\n}\n\n.mdi-backburger:before {\n  content: \"\\F06D\";\n}\n\n.mdi-backspace:before {\n  content: \"\\F06E\";\n}\n\n.mdi-backspace-outline:before {\n  content: \"\\FB38\";\n}\n\n.mdi-backspace-reverse:before {\n  content: \"\\FE9B\";\n}\n\n.mdi-backspace-reverse-outline:before {\n  content: \"\\FE9C\";\n}\n\n.mdi-backup-restore:before {\n  content: \"\\F06F\";\n}\n\n.mdi-badminton:before {\n  content: \"\\F850\";\n}\n\n.mdi-bag-personal:before {\n  content: \"\\FDF3\";\n}\n\n.mdi-bag-personal-off:before {\n  content: \"\\FDF4\";\n}\n\n.mdi-bag-personal-off-outline:before {\n  content: \"\\FDF5\";\n}\n\n.mdi-bag-personal-outline:before {\n  content: \"\\FDF6\";\n}\n\n.mdi-balloon:before {\n  content: \"\\FA25\";\n}\n\n.mdi-ballot:before {\n  content: \"\\F9C8\";\n}\n\n.mdi-ballot-outline:before {\n  content: \"\\F9C9\";\n}\n\n.mdi-ballot-recount:before {\n  content: \"\\FC15\";\n}\n\n.mdi-ballot-recount-outline:before {\n  content: \"\\FC16\";\n}\n\n.mdi-bandage:before {\n  content: \"\\FD8B\";\n}\n\n.mdi-bandcamp:before {\n  content: \"\\F674\";\n}\n\n.mdi-bank:before {\n  content: \"\\F070\";\n}\n\n.mdi-bank-minus:before {\n  content: \"\\FD8C\";\n}\n\n.mdi-bank-outline:before {\n  content: \"\\FE9D\";\n}\n\n.mdi-bank-plus:before {\n  content: \"\\FD8D\";\n}\n\n.mdi-bank-remove:before {\n  content: \"\\FD8E\";\n}\n\n.mdi-bank-transfer:before {\n  content: \"\\FA26\";\n}\n\n.mdi-bank-transfer-in:before {\n  content: \"\\FA27\";\n}\n\n.mdi-bank-transfer-out:before {\n  content: \"\\FA28\";\n}\n\n.mdi-barcode:before {\n  content: \"\\F071\";\n}\n\n.mdi-barcode-scan:before {\n  content: \"\\F072\";\n}\n\n.mdi-barley:before {\n  content: \"\\F073\";\n}\n\n.mdi-barley-off:before {\n  content: \"\\FB39\";\n}\n\n.mdi-barn:before {\n  content: \"\\FB3A\";\n}\n\n.mdi-barrel:before {\n  content: \"\\F074\";\n}\n\n.mdi-baseball:before {\n  content: \"\\F851\";\n}\n\n.mdi-baseball-bat:before {\n  content: \"\\F852\";\n}\n\n.mdi-basecamp:before {\n  content: \"\\F075\";\n}\n\n.mdi-basket:before {\n  content: \"\\F076\";\n}\n\n.mdi-basket-fill:before {\n  content: \"\\F077\";\n}\n\n.mdi-basket-unfill:before {\n  content: \"\\F078\";\n}\n\n.mdi-basketball:before {\n  content: \"\\F805\";\n}\n\n.mdi-basketball-hoop:before {\n  content: \"\\FC17\";\n}\n\n.mdi-basketball-hoop-outline:before {\n  content: \"\\FC18\";\n}\n\n.mdi-bat:before {\n  content: \"\\FB3B\";\n}\n\n.mdi-battery:before {\n  content: \"\\F079\";\n}\n\n.mdi-battery-10:before {\n  content: \"\\F07A\";\n}\n\n.mdi-battery-10-bluetooth:before {\n  content: \"\\F93D\";\n}\n\n.mdi-battery-20:before {\n  content: \"\\F07B\";\n}\n\n.mdi-battery-20-bluetooth:before {\n  content: \"\\F93E\";\n}\n\n.mdi-battery-30:before {\n  content: \"\\F07C\";\n}\n\n.mdi-battery-30-bluetooth:before {\n  content: \"\\F93F\";\n}\n\n.mdi-battery-40:before {\n  content: \"\\F07D\";\n}\n\n.mdi-battery-40-bluetooth:before {\n  content: \"\\F940\";\n}\n\n.mdi-battery-50:before {\n  content: \"\\F07E\";\n}\n\n.mdi-battery-50-bluetooth:before {\n  content: \"\\F941\";\n}\n\n.mdi-battery-60:before {\n  content: \"\\F07F\";\n}\n\n.mdi-battery-60-bluetooth:before {\n  content: \"\\F942\";\n}\n\n.mdi-battery-70:before {\n  content: \"\\F080\";\n}\n\n.mdi-battery-70-bluetooth:before {\n  content: \"\\F943\";\n}\n\n.mdi-battery-80:before {\n  content: \"\\F081\";\n}\n\n.mdi-battery-80-bluetooth:before {\n  content: \"\\F944\";\n}\n\n.mdi-battery-90:before {\n  content: \"\\F082\";\n}\n\n.mdi-battery-90-bluetooth:before {\n  content: \"\\F945\";\n}\n\n.mdi-battery-alert:before {\n  content: \"\\F083\";\n}\n\n.mdi-battery-alert-bluetooth:before {\n  content: \"\\F946\";\n}\n\n.mdi-battery-bluetooth:before {\n  content: \"\\F947\";\n}\n\n.mdi-battery-bluetooth-variant:before {\n  content: \"\\F948\";\n}\n\n.mdi-battery-charging:before {\n  content: \"\\F084\";\n}\n\n.mdi-battery-charging-10:before {\n  content: \"\\F89B\";\n}\n\n.mdi-battery-charging-100:before {\n  content: \"\\F085\";\n}\n\n.mdi-battery-charging-20:before {\n  content: \"\\F086\";\n}\n\n.mdi-battery-charging-30:before {\n  content: \"\\F087\";\n}\n\n.mdi-battery-charging-40:before {\n  content: \"\\F088\";\n}\n\n.mdi-battery-charging-50:before {\n  content: \"\\F89C\";\n}\n\n.mdi-battery-charging-60:before {\n  content: \"\\F089\";\n}\n\n.mdi-battery-charging-70:before {\n  content: \"\\F89D\";\n}\n\n.mdi-battery-charging-80:before {\n  content: \"\\F08A\";\n}\n\n.mdi-battery-charging-90:before {\n  content: \"\\F08B\";\n}\n\n.mdi-battery-charging-outline:before {\n  content: \"\\F89E\";\n}\n\n.mdi-battery-charging-wireless:before {\n  content: \"\\F806\";\n}\n\n.mdi-battery-charging-wireless-10:before {\n  content: \"\\F807\";\n}\n\n.mdi-battery-charging-wireless-20:before {\n  content: \"\\F808\";\n}\n\n.mdi-battery-charging-wireless-30:before {\n  content: \"\\F809\";\n}\n\n.mdi-battery-charging-wireless-40:before {\n  content: \"\\F80A\";\n}\n\n.mdi-battery-charging-wireless-50:before {\n  content: \"\\F80B\";\n}\n\n.mdi-battery-charging-wireless-60:before {\n  content: \"\\F80C\";\n}\n\n.mdi-battery-charging-wireless-70:before {\n  content: \"\\F80D\";\n}\n\n.mdi-battery-charging-wireless-80:before {\n  content: \"\\F80E\";\n}\n\n.mdi-battery-charging-wireless-90:before {\n  content: \"\\F80F\";\n}\n\n.mdi-battery-charging-wireless-alert:before {\n  content: \"\\F810\";\n}\n\n.mdi-battery-charging-wireless-outline:before {\n  content: \"\\F811\";\n}\n\n.mdi-battery-minus:before {\n  content: \"\\F08C\";\n}\n\n.mdi-battery-negative:before {\n  content: \"\\F08D\";\n}\n\n.mdi-battery-outline:before {\n  content: \"\\F08E\";\n}\n\n.mdi-battery-plus:before {\n  content: \"\\F08F\";\n}\n\n.mdi-battery-positive:before {\n  content: \"\\F090\";\n}\n\n.mdi-battery-unknown:before {\n  content: \"\\F091\";\n}\n\n.mdi-battery-unknown-bluetooth:before {\n  content: \"\\F949\";\n}\n\n.mdi-battlenet:before {\n  content: \"\\FB3C\";\n}\n\n.mdi-beach:before {\n  content: \"\\F092\";\n}\n\n.mdi-beaker:before {\n  content: \"\\FCC6\";\n}\n\n.mdi-beaker-outline:before {\n  content: \"\\F68F\";\n}\n\n.mdi-beats:before {\n  content: \"\\F097\";\n}\n\n.mdi-bed-empty:before {\n  content: \"\\F89F\";\n}\n\n.mdi-beer:before {\n  content: \"\\F098\";\n}\n\n.mdi-behance:before {\n  content: \"\\F099\";\n}\n\n.mdi-bell:before {\n  content: \"\\F09A\";\n}\n\n.mdi-bell-alert:before {\n  content: \"\\FD35\";\n}\n\n.mdi-bell-alert-outline:before {\n  content: \"\\FE9E\";\n}\n\n.mdi-bell-circle:before {\n  content: \"\\FD36\";\n}\n\n.mdi-bell-circle-outline:before {\n  content: \"\\FD37\";\n}\n\n.mdi-bell-off:before {\n  content: \"\\F09B\";\n}\n\n.mdi-bell-off-outline:before {\n  content: \"\\FA90\";\n}\n\n.mdi-bell-outline:before {\n  content: \"\\F09C\";\n}\n\n.mdi-bell-plus:before {\n  content: \"\\F09D\";\n}\n\n.mdi-bell-plus-outline:before {\n  content: \"\\FA91\";\n}\n\n.mdi-bell-ring:before {\n  content: \"\\F09E\";\n}\n\n.mdi-bell-ring-outline:before {\n  content: \"\\F09F\";\n}\n\n.mdi-bell-sleep:before {\n  content: \"\\F0A0\";\n}\n\n.mdi-bell-sleep-outline:before {\n  content: \"\\FA92\";\n}\n\n.mdi-beta:before {\n  content: \"\\F0A1\";\n}\n\n.mdi-betamax:before {\n  content: \"\\F9CA\";\n}\n\n.mdi-biathlon:before {\n  content: \"\\FDF7\";\n}\n\n.mdi-bible:before {\n  content: \"\\F0A2\";\n}\n\n.mdi-bike:before {\n  content: \"\\F0A3\";\n}\n\n.mdi-billiards:before {\n  content: \"\\FB3D\";\n}\n\n.mdi-billiards-rack:before {\n  content: \"\\FB3E\";\n}\n\n.mdi-bing:before {\n  content: \"\\F0A4\";\n}\n\n.mdi-binoculars:before {\n  content: \"\\F0A5\";\n}\n\n.mdi-bio:before {\n  content: \"\\F0A6\";\n}\n\n.mdi-biohazard:before {\n  content: \"\\F0A7\";\n}\n\n.mdi-bitbucket:before {\n  content: \"\\F0A8\";\n}\n\n.mdi-bitcoin:before {\n  content: \"\\F812\";\n}\n\n.mdi-black-mesa:before {\n  content: \"\\F0A9\";\n}\n\n.mdi-blackberry:before {\n  content: \"\\F0AA\";\n}\n\n.mdi-blender:before {\n  content: \"\\FCC7\";\n}\n\n.mdi-blender-software:before {\n  content: \"\\F0AB\";\n}\n\n.mdi-blinds:before {\n  content: \"\\F0AC\";\n}\n\n.mdi-block-helper:before {\n  content: \"\\F0AD\";\n}\n\n.mdi-blogger:before {\n  content: \"\\F0AE\";\n}\n\n.mdi-blood-bag:before {\n  content: \"\\FCC8\";\n}\n\n.mdi-bluetooth:before {\n  content: \"\\F0AF\";\n}\n\n.mdi-bluetooth-audio:before {\n  content: \"\\F0B0\";\n}\n\n.mdi-bluetooth-connect:before {\n  content: \"\\F0B1\";\n}\n\n.mdi-bluetooth-off:before {\n  content: \"\\F0B2\";\n}\n\n.mdi-bluetooth-settings:before {\n  content: \"\\F0B3\";\n}\n\n.mdi-bluetooth-transfer:before {\n  content: \"\\F0B4\";\n}\n\n.mdi-blur:before {\n  content: \"\\F0B5\";\n}\n\n.mdi-blur-linear:before {\n  content: \"\\F0B6\";\n}\n\n.mdi-blur-off:before {\n  content: \"\\F0B7\";\n}\n\n.mdi-blur-radial:before {\n  content: \"\\F0B8\";\n}\n\n.mdi-bolnisi-cross:before {\n  content: \"\\FCC9\";\n}\n\n.mdi-bolt:before {\n  content: \"\\FD8F\";\n}\n\n.mdi-bomb:before {\n  content: \"\\F690\";\n}\n\n.mdi-bomb-off:before {\n  content: \"\\F6C4\";\n}\n\n.mdi-bone:before {\n  content: \"\\F0B9\";\n}\n\n.mdi-book:before {\n  content: \"\\F0BA\";\n}\n\n.mdi-book-lock:before {\n  content: \"\\F799\";\n}\n\n.mdi-book-lock-open:before {\n  content: \"\\F79A\";\n}\n\n.mdi-book-minus:before {\n  content: \"\\F5D9\";\n}\n\n.mdi-book-multiple:before {\n  content: \"\\F0BB\";\n}\n\n.mdi-book-multiple-minus:before {\n  content: \"\\FA93\";\n}\n\n.mdi-book-multiple-plus:before {\n  content: \"\\FA94\";\n}\n\n.mdi-book-multiple-remove:before {\n  content: \"\\FA95\";\n}\n\n.mdi-book-multiple-variant:before {\n  content: \"\\F0BC\";\n}\n\n.mdi-book-open:before {\n  content: \"\\F0BD\";\n}\n\n.mdi-book-open-outline:before {\n  content: \"\\FB3F\";\n}\n\n.mdi-book-open-page-variant:before {\n  content: \"\\F5DA\";\n}\n\n.mdi-book-open-variant:before {\n  content: \"\\F0BE\";\n}\n\n.mdi-book-outline:before {\n  content: \"\\FB40\";\n}\n\n.mdi-book-play:before {\n  content: \"\\FE9F\";\n}\n\n.mdi-book-play-outline:before {\n  content: \"\\FEA0\";\n}\n\n.mdi-book-plus:before {\n  content: \"\\F5DB\";\n}\n\n.mdi-book-remove:before {\n  content: \"\\FA96\";\n}\n\n.mdi-book-search:before {\n  content: \"\\FEA1\";\n}\n\n.mdi-book-search-outline:before {\n  content: \"\\FEA2\";\n}\n\n.mdi-book-variant:before {\n  content: \"\\F0BF\";\n}\n\n.mdi-bookmark:before {\n  content: \"\\F0C0\";\n}\n\n.mdi-bookmark-check:before {\n  content: \"\\F0C1\";\n}\n\n.mdi-bookmark-minus:before {\n  content: \"\\F9CB\";\n}\n\n.mdi-bookmark-minus-outline:before {\n  content: \"\\F9CC\";\n}\n\n.mdi-bookmark-multiple:before {\n  content: \"\\FDF8\";\n}\n\n.mdi-bookmark-multiple-outline:before {\n  content: \"\\FDF9\";\n}\n\n.mdi-bookmark-music:before {\n  content: \"\\F0C2\";\n}\n\n.mdi-bookmark-off:before {\n  content: \"\\F9CD\";\n}\n\n.mdi-bookmark-off-outline:before {\n  content: \"\\F9CE\";\n}\n\n.mdi-bookmark-outline:before {\n  content: \"\\F0C3\";\n}\n\n.mdi-bookmark-plus:before {\n  content: \"\\F0C5\";\n}\n\n.mdi-bookmark-plus-outline:before {\n  content: \"\\F0C4\";\n}\n\n.mdi-bookmark-remove:before {\n  content: \"\\F0C6\";\n}\n\n.mdi-boom-gate:before {\n  content: \"\\FEA3\";\n}\n\n.mdi-boom-gate-alert:before {\n  content: \"\\FEA4\";\n}\n\n.mdi-boom-gate-alert-outline:before {\n  content: \"\\FEA5\";\n}\n\n.mdi-boom-gate-down:before {\n  content: \"\\FEA6\";\n}\n\n.mdi-boom-gate-down-outline:before {\n  content: \"\\FEA7\";\n}\n\n.mdi-boom-gate-outline:before {\n  content: \"\\FEA8\";\n}\n\n.mdi-boom-gate-up:before {\n  content: \"\\FEA9\";\n}\n\n.mdi-boom-gate-up-outline:before {\n  content: \"\\FEAA\";\n}\n\n.mdi-boombox:before {\n  content: \"\\F5DC\";\n}\n\n.mdi-bootstrap:before {\n  content: \"\\F6C5\";\n}\n\n.mdi-border-all:before {\n  content: \"\\F0C7\";\n}\n\n.mdi-border-all-variant:before {\n  content: \"\\F8A0\";\n}\n\n.mdi-border-bottom:before {\n  content: \"\\F0C8\";\n}\n\n.mdi-border-bottom-variant:before {\n  content: \"\\F8A1\";\n}\n\n.mdi-border-color:before {\n  content: \"\\F0C9\";\n}\n\n.mdi-border-horizontal:before {\n  content: \"\\F0CA\";\n}\n\n.mdi-border-inside:before {\n  content: \"\\F0CB\";\n}\n\n.mdi-border-left:before {\n  content: \"\\F0CC\";\n}\n\n.mdi-border-left-variant:before {\n  content: \"\\F8A2\";\n}\n\n.mdi-border-none:before {\n  content: \"\\F0CD\";\n}\n\n.mdi-border-none-variant:before {\n  content: \"\\F8A3\";\n}\n\n.mdi-border-outside:before {\n  content: \"\\F0CE\";\n}\n\n.mdi-border-right:before {\n  content: \"\\F0CF\";\n}\n\n.mdi-border-right-variant:before {\n  content: \"\\F8A4\";\n}\n\n.mdi-border-style:before {\n  content: \"\\F0D0\";\n}\n\n.mdi-border-top:before {\n  content: \"\\F0D1\";\n}\n\n.mdi-border-top-variant:before {\n  content: \"\\F8A5\";\n}\n\n.mdi-border-vertical:before {\n  content: \"\\F0D2\";\n}\n\n.mdi-bottle-wine:before {\n  content: \"\\F853\";\n}\n\n.mdi-bow-tie:before {\n  content: \"\\F677\";\n}\n\n.mdi-bowl:before {\n  content: \"\\F617\";\n}\n\n.mdi-bowling:before {\n  content: \"\\F0D3\";\n}\n\n.mdi-box:before {\n  content: \"\\F0D4\";\n}\n\n.mdi-box-cutter:before {\n  content: \"\\F0D5\";\n}\n\n.mdi-box-shadow:before {\n  content: \"\\F637\";\n}\n\n.mdi-boxing-glove:before {\n  content: \"\\FB41\";\n}\n\n.mdi-braille:before {\n  content: \"\\F9CF\";\n}\n\n.mdi-brain:before {\n  content: \"\\F9D0\";\n}\n\n.mdi-bread-slice:before {\n  content: \"\\FCCA\";\n}\n\n.mdi-bread-slice-outline:before {\n  content: \"\\FCCB\";\n}\n\n.mdi-bridge:before {\n  content: \"\\F618\";\n}\n\n.mdi-briefcase:before {\n  content: \"\\F0D6\";\n}\n\n.mdi-briefcase-account:before {\n  content: \"\\FCCC\";\n}\n\n.mdi-briefcase-account-outline:before {\n  content: \"\\FCCD\";\n}\n\n.mdi-briefcase-check:before {\n  content: \"\\F0D7\";\n}\n\n.mdi-briefcase-download:before {\n  content: \"\\F0D8\";\n}\n\n.mdi-briefcase-download-outline:before {\n  content: \"\\FC19\";\n}\n\n.mdi-briefcase-edit:before {\n  content: \"\\FA97\";\n}\n\n.mdi-briefcase-edit-outline:before {\n  content: \"\\FC1A\";\n}\n\n.mdi-briefcase-minus:before {\n  content: \"\\FA29\";\n}\n\n.mdi-briefcase-minus-outline:before {\n  content: \"\\FC1B\";\n}\n\n.mdi-briefcase-outline:before {\n  content: \"\\F813\";\n}\n\n.mdi-briefcase-plus:before {\n  content: \"\\FA2A\";\n}\n\n.mdi-briefcase-plus-outline:before {\n  content: \"\\FC1C\";\n}\n\n.mdi-briefcase-remove:before {\n  content: \"\\FA2B\";\n}\n\n.mdi-briefcase-remove-outline:before {\n  content: \"\\FC1D\";\n}\n\n.mdi-briefcase-search:before {\n  content: \"\\FA2C\";\n}\n\n.mdi-briefcase-search-outline:before {\n  content: \"\\FC1E\";\n}\n\n.mdi-briefcase-upload:before {\n  content: \"\\F0D9\";\n}\n\n.mdi-briefcase-upload-outline:before {\n  content: \"\\FC1F\";\n}\n\n.mdi-brightness-1:before {\n  content: \"\\F0DA\";\n}\n\n.mdi-brightness-2:before {\n  content: \"\\F0DB\";\n}\n\n.mdi-brightness-3:before {\n  content: \"\\F0DC\";\n}\n\n.mdi-brightness-4:before {\n  content: \"\\F0DD\";\n}\n\n.mdi-brightness-5:before {\n  content: \"\\F0DE\";\n}\n\n.mdi-brightness-6:before {\n  content: \"\\F0DF\";\n}\n\n.mdi-brightness-7:before {\n  content: \"\\F0E0\";\n}\n\n.mdi-brightness-auto:before {\n  content: \"\\F0E1\";\n}\n\n.mdi-brightness-percent:before {\n  content: \"\\FCCE\";\n}\n\n.mdi-broom:before {\n  content: \"\\F0E2\";\n}\n\n.mdi-brush:before {\n  content: \"\\F0E3\";\n}\n\n.mdi-buddhism:before {\n  content: \"\\F94A\";\n}\n\n.mdi-buffer:before {\n  content: \"\\F619\";\n}\n\n.mdi-bug:before {\n  content: \"\\F0E4\";\n}\n\n.mdi-bug-check:before {\n  content: \"\\FA2D\";\n}\n\n.mdi-bug-check-outline:before {\n  content: \"\\FA2E\";\n}\n\n.mdi-bug-outline:before {\n  content: \"\\FA2F\";\n}\n\n.mdi-bugle:before {\n  content: \"\\FD90\";\n}\n\n.mdi-bulldozer:before {\n  content: \"\\FB07\";\n}\n\n.mdi-bullet:before {\n  content: \"\\FCCF\";\n}\n\n.mdi-bulletin-board:before {\n  content: \"\\F0E5\";\n}\n\n.mdi-bullhorn:before {\n  content: \"\\F0E6\";\n}\n\n.mdi-bullhorn-outline:before {\n  content: \"\\FB08\";\n}\n\n.mdi-bullseye:before {\n  content: \"\\F5DD\";\n}\n\n.mdi-bullseye-arrow:before {\n  content: \"\\F8C8\";\n}\n\n.mdi-bus:before {\n  content: \"\\F0E7\";\n}\n\n.mdi-bus-alert:before {\n  content: \"\\FA98\";\n}\n\n.mdi-bus-articulated-end:before {\n  content: \"\\F79B\";\n}\n\n.mdi-bus-articulated-front:before {\n  content: \"\\F79C\";\n}\n\n.mdi-bus-clock:before {\n  content: \"\\F8C9\";\n}\n\n.mdi-bus-double-decker:before {\n  content: \"\\F79D\";\n}\n\n.mdi-bus-school:before {\n  content: \"\\F79E\";\n}\n\n.mdi-bus-side:before {\n  content: \"\\F79F\";\n}\n\n.mdi-cached:before {\n  content: \"\\F0E8\";\n}\n\n.mdi-cactus:before {\n  content: \"\\FD91\";\n}\n\n.mdi-cake:before {\n  content: \"\\F0E9\";\n}\n\n.mdi-cake-layered:before {\n  content: \"\\F0EA\";\n}\n\n.mdi-cake-variant:before {\n  content: \"\\F0EB\";\n}\n\n.mdi-calculator:before {\n  content: \"\\F0EC\";\n}\n\n.mdi-calculator-variant:before {\n  content: \"\\FA99\";\n}\n\n.mdi-calendar:before {\n  content: \"\\F0ED\";\n}\n\n.mdi-calendar-alert:before {\n  content: \"\\FA30\";\n}\n\n.mdi-calendar-blank:before {\n  content: \"\\F0EE\";\n}\n\n.mdi-calendar-blank-outline:before {\n  content: \"\\FB42\";\n}\n\n.mdi-calendar-check:before {\n  content: \"\\F0EF\";\n}\n\n.mdi-calendar-check-outline:before {\n  content: \"\\FC20\";\n}\n\n.mdi-calendar-clock:before {\n  content: \"\\F0F0\";\n}\n\n.mdi-calendar-edit:before {\n  content: \"\\F8A6\";\n}\n\n.mdi-calendar-export:before {\n  content: \"\\FB09\";\n}\n\n.mdi-calendar-heart:before {\n  content: \"\\F9D1\";\n}\n\n.mdi-calendar-import:before {\n  content: \"\\FB0A\";\n}\n\n.mdi-calendar-minus:before {\n  content: \"\\FD38\";\n}\n\n.mdi-calendar-month:before {\n  content: \"\\FDFA\";\n}\n\n.mdi-calendar-month-outline:before {\n  content: \"\\FDFB\";\n}\n\n.mdi-calendar-multiple:before {\n  content: \"\\F0F1\";\n}\n\n.mdi-calendar-multiple-check:before {\n  content: \"\\F0F2\";\n}\n\n.mdi-calendar-multiselect:before {\n  content: \"\\FA31\";\n}\n\n.mdi-calendar-outline:before {\n  content: \"\\FB43\";\n}\n\n.mdi-calendar-plus:before {\n  content: \"\\F0F3\";\n}\n\n.mdi-calendar-question:before {\n  content: \"\\F691\";\n}\n\n.mdi-calendar-range:before {\n  content: \"\\F678\";\n}\n\n.mdi-calendar-range-outline:before {\n  content: \"\\FB44\";\n}\n\n.mdi-calendar-remove:before {\n  content: \"\\F0F4\";\n}\n\n.mdi-calendar-remove-outline:before {\n  content: \"\\FC21\";\n}\n\n.mdi-calendar-repeat:before {\n  content: \"\\FEAB\";\n}\n\n.mdi-calendar-repeat-outline:before {\n  content: \"\\FEAC\";\n}\n\n.mdi-calendar-search:before {\n  content: \"\\F94B\";\n}\n\n.mdi-calendar-star:before {\n  content: \"\\F9D2\";\n}\n\n.mdi-calendar-text:before {\n  content: \"\\F0F5\";\n}\n\n.mdi-calendar-text-outline:before {\n  content: \"\\FC22\";\n}\n\n.mdi-calendar-today:before {\n  content: \"\\F0F6\";\n}\n\n.mdi-calendar-week:before {\n  content: \"\\FA32\";\n}\n\n.mdi-calendar-week-begin:before {\n  content: \"\\FA33\";\n}\n\n.mdi-call-made:before {\n  content: \"\\F0F7\";\n}\n\n.mdi-call-merge:before {\n  content: \"\\F0F8\";\n}\n\n.mdi-call-missed:before {\n  content: \"\\F0F9\";\n}\n\n.mdi-call-received:before {\n  content: \"\\F0FA\";\n}\n\n.mdi-call-split:before {\n  content: \"\\F0FB\";\n}\n\n.mdi-camcorder:before {\n  content: \"\\F0FC\";\n}\n\n.mdi-camcorder-box:before {\n  content: \"\\F0FD\";\n}\n\n.mdi-camcorder-box-off:before {\n  content: \"\\F0FE\";\n}\n\n.mdi-camcorder-off:before {\n  content: \"\\F0FF\";\n}\n\n.mdi-camera:before {\n  content: \"\\F100\";\n}\n\n.mdi-camera-account:before {\n  content: \"\\F8CA\";\n}\n\n.mdi-camera-burst:before {\n  content: \"\\F692\";\n}\n\n.mdi-camera-control:before {\n  content: \"\\FB45\";\n}\n\n.mdi-camera-enhance:before {\n  content: \"\\F101\";\n}\n\n.mdi-camera-enhance-outline:before {\n  content: \"\\FB46\";\n}\n\n.mdi-camera-front:before {\n  content: \"\\F102\";\n}\n\n.mdi-camera-front-variant:before {\n  content: \"\\F103\";\n}\n\n.mdi-camera-gopro:before {\n  content: \"\\F7A0\";\n}\n\n.mdi-camera-image:before {\n  content: \"\\F8CB\";\n}\n\n.mdi-camera-iris:before {\n  content: \"\\F104\";\n}\n\n.mdi-camera-metering-center:before {\n  content: \"\\F7A1\";\n}\n\n.mdi-camera-metering-matrix:before {\n  content: \"\\F7A2\";\n}\n\n.mdi-camera-metering-partial:before {\n  content: \"\\F7A3\";\n}\n\n.mdi-camera-metering-spot:before {\n  content: \"\\F7A4\";\n}\n\n.mdi-camera-off:before {\n  content: \"\\F5DF\";\n}\n\n.mdi-camera-outline:before {\n  content: \"\\FD39\";\n}\n\n.mdi-camera-party-mode:before {\n  content: \"\\F105\";\n}\n\n.mdi-camera-rear:before {\n  content: \"\\F106\";\n}\n\n.mdi-camera-rear-variant:before {\n  content: \"\\F107\";\n}\n\n.mdi-camera-retake:before {\n  content: \"\\FDFC\";\n}\n\n.mdi-camera-retake-outline:before {\n  content: \"\\FDFD\";\n}\n\n.mdi-camera-switch:before {\n  content: \"\\F108\";\n}\n\n.mdi-camera-timer:before {\n  content: \"\\F109\";\n}\n\n.mdi-camera-wireless:before {\n  content: \"\\FD92\";\n}\n\n.mdi-camera-wireless-outline:before {\n  content: \"\\FD93\";\n}\n\n.mdi-cancel:before {\n  content: \"\\F739\";\n}\n\n.mdi-candle:before {\n  content: \"\\F5E2\";\n}\n\n.mdi-candycane:before {\n  content: \"\\F10A\";\n}\n\n.mdi-cannabis:before {\n  content: \"\\F7A5\";\n}\n\n.mdi-caps-lock:before {\n  content: \"\\FA9A\";\n}\n\n.mdi-car:before {\n  content: \"\\F10B\";\n}\n\n.mdi-car-back:before {\n  content: \"\\FDFE\";\n}\n\n.mdi-car-battery:before {\n  content: \"\\F10C\";\n}\n\n.mdi-car-brake-abs:before {\n  content: \"\\FC23\";\n}\n\n.mdi-car-brake-alert:before {\n  content: \"\\FC24\";\n}\n\n.mdi-car-brake-hold:before {\n  content: \"\\FD3A\";\n}\n\n.mdi-car-brake-parking:before {\n  content: \"\\FD3B\";\n}\n\n.mdi-car-connected:before {\n  content: \"\\F10D\";\n}\n\n.mdi-car-convertible:before {\n  content: \"\\F7A6\";\n}\n\n.mdi-car-cruise-control:before {\n  content: \"\\FD3C\";\n}\n\n.mdi-car-defrost-front:before {\n  content: \"\\FD3D\";\n}\n\n.mdi-car-defrost-rear:before {\n  content: \"\\FD3E\";\n}\n\n.mdi-car-door:before {\n  content: \"\\FB47\";\n}\n\n.mdi-car-electric:before {\n  content: \"\\FB48\";\n}\n\n.mdi-car-esp:before {\n  content: \"\\FC25\";\n}\n\n.mdi-car-estate:before {\n  content: \"\\F7A7\";\n}\n\n.mdi-car-hatchback:before {\n  content: \"\\F7A8\";\n}\n\n.mdi-car-key:before {\n  content: \"\\FB49\";\n}\n\n.mdi-car-light-dimmed:before {\n  content: \"\\FC26\";\n}\n\n.mdi-car-light-fog:before {\n  content: \"\\FC27\";\n}\n\n.mdi-car-light-high:before {\n  content: \"\\FC28\";\n}\n\n.mdi-car-limousine:before {\n  content: \"\\F8CC\";\n}\n\n.mdi-car-multiple:before {\n  content: \"\\FB4A\";\n}\n\n.mdi-car-off:before {\n  content: \"\\FDFF\";\n}\n\n.mdi-car-parking-lights:before {\n  content: \"\\FD3F\";\n}\n\n.mdi-car-pickup:before {\n  content: \"\\F7A9\";\n}\n\n.mdi-car-side:before {\n  content: \"\\F7AA\";\n}\n\n.mdi-car-sports:before {\n  content: \"\\F7AB\";\n}\n\n.mdi-car-tire-alert:before {\n  content: \"\\FC29\";\n}\n\n.mdi-car-traction-control:before {\n  content: \"\\FD40\";\n}\n\n.mdi-car-wash:before {\n  content: \"\\F10E\";\n}\n\n.mdi-caravan:before {\n  content: \"\\F7AC\";\n}\n\n.mdi-card:before {\n  content: \"\\FB4B\";\n}\n\n.mdi-card-bulleted:before {\n  content: \"\\FB4C\";\n}\n\n.mdi-card-bulleted-off:before {\n  content: \"\\FB4D\";\n}\n\n.mdi-card-bulleted-off-outline:before {\n  content: \"\\FB4E\";\n}\n\n.mdi-card-bulleted-outline:before {\n  content: \"\\FB4F\";\n}\n\n.mdi-card-bulleted-settings:before {\n  content: \"\\FB50\";\n}\n\n.mdi-card-bulleted-settings-outline:before {\n  content: \"\\FB51\";\n}\n\n.mdi-card-outline:before {\n  content: \"\\FB52\";\n}\n\n.mdi-card-text:before {\n  content: \"\\FB53\";\n}\n\n.mdi-card-text-outline:before {\n  content: \"\\FB54\";\n}\n\n.mdi-cards:before {\n  content: \"\\F638\";\n}\n\n.mdi-cards-club:before {\n  content: \"\\F8CD\";\n}\n\n.mdi-cards-diamond:before {\n  content: \"\\F8CE\";\n}\n\n.mdi-cards-heart:before {\n  content: \"\\F8CF\";\n}\n\n.mdi-cards-outline:before {\n  content: \"\\F639\";\n}\n\n.mdi-cards-playing-outline:before {\n  content: \"\\F63A\";\n}\n\n.mdi-cards-spade:before {\n  content: \"\\F8D0\";\n}\n\n.mdi-cards-variant:before {\n  content: \"\\F6C6\";\n}\n\n.mdi-carrot:before {\n  content: \"\\F10F\";\n}\n\n.mdi-carry-on-bag-check:before {\n  content: \"\\FD41\";\n}\n\n.mdi-cart:before {\n  content: \"\\F110\";\n}\n\n.mdi-cart-arrow-down:before {\n  content: \"\\FD42\";\n}\n\n.mdi-cart-arrow-right:before {\n  content: \"\\FC2A\";\n}\n\n.mdi-cart-arrow-up:before {\n  content: \"\\FD43\";\n}\n\n.mdi-cart-minus:before {\n  content: \"\\FD44\";\n}\n\n.mdi-cart-off:before {\n  content: \"\\F66B\";\n}\n\n.mdi-cart-outline:before {\n  content: \"\\F111\";\n}\n\n.mdi-cart-plus:before {\n  content: \"\\F112\";\n}\n\n.mdi-cart-remove:before {\n  content: \"\\FD45\";\n}\n\n.mdi-case-sensitive-alt:before {\n  content: \"\\F113\";\n}\n\n.mdi-cash:before {\n  content: \"\\F114\";\n}\n\n.mdi-cash-100:before {\n  content: \"\\F115\";\n}\n\n.mdi-cash-marker:before {\n  content: \"\\FD94\";\n}\n\n.mdi-cash-multiple:before {\n  content: \"\\F116\";\n}\n\n.mdi-cash-refund:before {\n  content: \"\\FA9B\";\n}\n\n.mdi-cash-register:before {\n  content: \"\\FCD0\";\n}\n\n.mdi-cash-usd:before {\n  content: \"\\F117\";\n}\n\n.mdi-cassette:before {\n  content: \"\\F9D3\";\n}\n\n.mdi-cast:before {\n  content: \"\\F118\";\n}\n\n.mdi-cast-connected:before {\n  content: \"\\F119\";\n}\n\n.mdi-cast-education:before {\n  content: \"\\FE6D\";\n}\n\n.mdi-cast-off:before {\n  content: \"\\F789\";\n}\n\n.mdi-castle:before {\n  content: \"\\F11A\";\n}\n\n.mdi-cat:before {\n  content: \"\\F11B\";\n}\n\n.mdi-cctv:before {\n  content: \"\\F7AD\";\n}\n\n.mdi-ceiling-light:before {\n  content: \"\\F768\";\n}\n\n.mdi-cellphone:before {\n  content: \"\\F11C\";\n}\n\n.mdi-cellphone-android:before {\n  content: \"\\F11D\";\n}\n\n.mdi-cellphone-arrow-down:before {\n  content: \"\\F9D4\";\n}\n\n.mdi-cellphone-basic:before {\n  content: \"\\F11E\";\n}\n\n.mdi-cellphone-dock:before {\n  content: \"\\F11F\";\n}\n\n.mdi-cellphone-erase:before {\n  content: \"\\F94C\";\n}\n\n.mdi-cellphone-iphone:before {\n  content: \"\\F120\";\n}\n\n.mdi-cellphone-key:before {\n  content: \"\\F94D\";\n}\n\n.mdi-cellphone-link:before {\n  content: \"\\F121\";\n}\n\n.mdi-cellphone-link-off:before {\n  content: \"\\F122\";\n}\n\n.mdi-cellphone-lock:before {\n  content: \"\\F94E\";\n}\n\n.mdi-cellphone-message:before {\n  content: \"\\F8D2\";\n}\n\n.mdi-cellphone-nfc:before {\n  content: \"\\FEAD\";\n}\n\n.mdi-cellphone-off:before {\n  content: \"\\F94F\";\n}\n\n.mdi-cellphone-screenshot:before {\n  content: \"\\FA34\";\n}\n\n.mdi-cellphone-settings:before {\n  content: \"\\F123\";\n}\n\n.mdi-cellphone-settings-variant:before {\n  content: \"\\F950\";\n}\n\n.mdi-cellphone-sound:before {\n  content: \"\\F951\";\n}\n\n.mdi-cellphone-text:before {\n  content: \"\\F8D1\";\n}\n\n.mdi-cellphone-wireless:before {\n  content: \"\\F814\";\n}\n\n.mdi-celtic-cross:before {\n  content: \"\\FCD1\";\n}\n\n.mdi-certificate:before {\n  content: \"\\F124\";\n}\n\n.mdi-chair-school:before {\n  content: \"\\F125\";\n}\n\n.mdi-charity:before {\n  content: \"\\FC2B\";\n}\n\n.mdi-chart-arc:before {\n  content: \"\\F126\";\n}\n\n.mdi-chart-areaspline:before {\n  content: \"\\F127\";\n}\n\n.mdi-chart-areaspline-variant:before {\n  content: \"\\FEAE\";\n}\n\n.mdi-chart-bar:before {\n  content: \"\\F128\";\n}\n\n.mdi-chart-bar-stacked:before {\n  content: \"\\F769\";\n}\n\n.mdi-chart-bell-curve:before {\n  content: \"\\FC2C\";\n}\n\n.mdi-chart-bubble:before {\n  content: \"\\F5E3\";\n}\n\n.mdi-chart-donut:before {\n  content: \"\\F7AE\";\n}\n\n.mdi-chart-donut-variant:before {\n  content: \"\\F7AF\";\n}\n\n.mdi-chart-gantt:before {\n  content: \"\\F66C\";\n}\n\n.mdi-chart-histogram:before {\n  content: \"\\F129\";\n}\n\n.mdi-chart-line:before {\n  content: \"\\F12A\";\n}\n\n.mdi-chart-line-stacked:before {\n  content: \"\\F76A\";\n}\n\n.mdi-chart-line-variant:before {\n  content: \"\\F7B0\";\n}\n\n.mdi-chart-multiline:before {\n  content: \"\\F8D3\";\n}\n\n.mdi-chart-pie:before {\n  content: \"\\F12B\";\n}\n\n.mdi-chart-scatter-plot:before {\n  content: \"\\FEAF\";\n}\n\n.mdi-chart-scatter-plot-hexbin:before {\n  content: \"\\F66D\";\n}\n\n.mdi-chart-timeline:before {\n  content: \"\\F66E\";\n}\n\n.mdi-chart-timeline-variant:before {\n  content: \"\\FEB0\";\n}\n\n.mdi-chart-tree:before {\n  content: \"\\FEB1\";\n}\n\n.mdi-chat:before {\n  content: \"\\FB55\";\n}\n\n.mdi-chat-alert:before {\n  content: \"\\FB56\";\n}\n\n.mdi-chat-processing:before {\n  content: \"\\FB57\";\n}\n\n.mdi-check:before {\n  content: \"\\F12C\";\n}\n\n.mdi-check-all:before {\n  content: \"\\F12D\";\n}\n\n.mdi-check-bold:before {\n  content: \"\\FE6E\";\n}\n\n.mdi-check-box-multiple-outline:before {\n  content: \"\\FC2D\";\n}\n\n.mdi-check-box-outline:before {\n  content: \"\\FC2E\";\n}\n\n.mdi-check-circle:before {\n  content: \"\\F5E0\";\n}\n\n.mdi-check-circle-outline:before {\n  content: \"\\F5E1\";\n}\n\n.mdi-check-decagram:before {\n  content: \"\\F790\";\n}\n\n.mdi-check-network:before {\n  content: \"\\FC2F\";\n}\n\n.mdi-check-network-outline:before {\n  content: \"\\FC30\";\n}\n\n.mdi-check-outline:before {\n  content: \"\\F854\";\n}\n\n.mdi-check-underline:before {\n  content: \"\\FE70\";\n}\n\n.mdi-check-underline-circle:before {\n  content: \"\\FE71\";\n}\n\n.mdi-check-underline-circle-outline:before {\n  content: \"\\FE72\";\n}\n\n.mdi-checkbook:before {\n  content: \"\\FA9C\";\n}\n\n.mdi-checkbox-blank:before {\n  content: \"\\F12E\";\n}\n\n.mdi-checkbox-blank-circle:before {\n  content: \"\\F12F\";\n}\n\n.mdi-checkbox-blank-circle-outline:before {\n  content: \"\\F130\";\n}\n\n.mdi-checkbox-blank-outline:before {\n  content: \"\\F131\";\n}\n\n.mdi-checkbox-intermediate:before {\n  content: \"\\F855\";\n}\n\n.mdi-checkbox-marked:before {\n  content: \"\\F132\";\n}\n\n.mdi-checkbox-marked-circle:before {\n  content: \"\\F133\";\n}\n\n.mdi-checkbox-marked-circle-outline:before {\n  content: \"\\F134\";\n}\n\n.mdi-checkbox-marked-outline:before {\n  content: \"\\F135\";\n}\n\n.mdi-checkbox-multiple-blank:before {\n  content: \"\\F136\";\n}\n\n.mdi-checkbox-multiple-blank-circle:before {\n  content: \"\\F63B\";\n}\n\n.mdi-checkbox-multiple-blank-circle-outline:before {\n  content: \"\\F63C\";\n}\n\n.mdi-checkbox-multiple-blank-outline:before {\n  content: \"\\F137\";\n}\n\n.mdi-checkbox-multiple-marked:before {\n  content: \"\\F138\";\n}\n\n.mdi-checkbox-multiple-marked-circle:before {\n  content: \"\\F63D\";\n}\n\n.mdi-checkbox-multiple-marked-circle-outline:before {\n  content: \"\\F63E\";\n}\n\n.mdi-checkbox-multiple-marked-outline:before {\n  content: \"\\F139\";\n}\n\n.mdi-checkerboard:before {\n  content: \"\\F13A\";\n}\n\n.mdi-chef-hat:before {\n  content: \"\\FB58\";\n}\n\n.mdi-chemical-weapon:before {\n  content: \"\\F13B\";\n}\n\n.mdi-chess-bishop:before {\n  content: \"\\F85B\";\n}\n\n.mdi-chess-king:before {\n  content: \"\\F856\";\n}\n\n.mdi-chess-knight:before {\n  content: \"\\F857\";\n}\n\n.mdi-chess-pawn:before {\n  content: \"\\F858\";\n}\n\n.mdi-chess-queen:before {\n  content: \"\\F859\";\n}\n\n.mdi-chess-rook:before {\n  content: \"\\F85A\";\n}\n\n.mdi-chevron-double-down:before {\n  content: \"\\F13C\";\n}\n\n.mdi-chevron-double-left:before {\n  content: \"\\F13D\";\n}\n\n.mdi-chevron-double-right:before {\n  content: \"\\F13E\";\n}\n\n.mdi-chevron-double-up:before {\n  content: \"\\F13F\";\n}\n\n.mdi-chevron-down:before {\n  content: \"\\F140\";\n}\n\n.mdi-chevron-down-box:before {\n  content: \"\\F9D5\";\n}\n\n.mdi-chevron-down-box-outline:before {\n  content: \"\\F9D6\";\n}\n\n.mdi-chevron-down-circle:before {\n  content: \"\\FB0B\";\n}\n\n.mdi-chevron-down-circle-outline:before {\n  content: \"\\FB0C\";\n}\n\n.mdi-chevron-left:before {\n  content: \"\\F141\";\n}\n\n.mdi-chevron-left-box:before {\n  content: \"\\F9D7\";\n}\n\n.mdi-chevron-left-box-outline:before {\n  content: \"\\F9D8\";\n}\n\n.mdi-chevron-left-circle:before {\n  content: \"\\FB0D\";\n}\n\n.mdi-chevron-left-circle-outline:before {\n  content: \"\\FB0E\";\n}\n\n.mdi-chevron-right:before {\n  content: \"\\F142\";\n}\n\n.mdi-chevron-right-box:before {\n  content: \"\\F9D9\";\n}\n\n.mdi-chevron-right-box-outline:before {\n  content: \"\\F9DA\";\n}\n\n.mdi-chevron-right-circle:before {\n  content: \"\\FB0F\";\n}\n\n.mdi-chevron-right-circle-outline:before {\n  content: \"\\FB10\";\n}\n\n.mdi-chevron-triple-down:before {\n  content: \"\\FD95\";\n}\n\n.mdi-chevron-triple-left:before {\n  content: \"\\FD96\";\n}\n\n.mdi-chevron-triple-right:before {\n  content: \"\\FD97\";\n}\n\n.mdi-chevron-triple-up:before {\n  content: \"\\FD98\";\n}\n\n.mdi-chevron-up:before {\n  content: \"\\F143\";\n}\n\n.mdi-chevron-up-box:before {\n  content: \"\\F9DB\";\n}\n\n.mdi-chevron-up-box-outline:before {\n  content: \"\\F9DC\";\n}\n\n.mdi-chevron-up-circle:before {\n  content: \"\\FB11\";\n}\n\n.mdi-chevron-up-circle-outline:before {\n  content: \"\\FB12\";\n}\n\n.mdi-chili-hot:before {\n  content: \"\\F7B1\";\n}\n\n.mdi-chili-medium:before {\n  content: \"\\F7B2\";\n}\n\n.mdi-chili-mild:before {\n  content: \"\\F7B3\";\n}\n\n.mdi-chip:before {\n  content: \"\\F61A\";\n}\n\n.mdi-christianity:before {\n  content: \"\\F952\";\n}\n\n.mdi-christianity-outline:before {\n  content: \"\\FCD2\";\n}\n\n.mdi-church:before {\n  content: \"\\F144\";\n}\n\n.mdi-circle:before {\n  content: \"\\F764\";\n}\n\n.mdi-circle-double:before {\n  content: \"\\FEB2\";\n}\n\n.mdi-circle-edit-outline:before {\n  content: \"\\F8D4\";\n}\n\n.mdi-circle-expand:before {\n  content: \"\\FEB3\";\n}\n\n.mdi-circle-medium:before {\n  content: \"\\F9DD\";\n}\n\n.mdi-circle-outline:before {\n  content: \"\\F765\";\n}\n\n.mdi-circle-slice-1:before {\n  content: \"\\FA9D\";\n}\n\n.mdi-circle-slice-2:before {\n  content: \"\\FA9E\";\n}\n\n.mdi-circle-slice-3:before {\n  content: \"\\FA9F\";\n}\n\n.mdi-circle-slice-4:before {\n  content: \"\\FAA0\";\n}\n\n.mdi-circle-slice-5:before {\n  content: \"\\FAA1\";\n}\n\n.mdi-circle-slice-6:before {\n  content: \"\\FAA2\";\n}\n\n.mdi-circle-slice-7:before {\n  content: \"\\FAA3\";\n}\n\n.mdi-circle-slice-8:before {\n  content: \"\\FAA4\";\n}\n\n.mdi-circle-small:before {\n  content: \"\\F9DE\";\n}\n\n.mdi-circular-saw:before {\n  content: \"\\FE73\";\n}\n\n.mdi-cisco-webex:before {\n  content: \"\\F145\";\n}\n\n.mdi-city:before {\n  content: \"\\F146\";\n}\n\n.mdi-city-variant:before {\n  content: \"\\FA35\";\n}\n\n.mdi-city-variant-outline:before {\n  content: \"\\FA36\";\n}\n\n.mdi-clipboard:before {\n  content: \"\\F147\";\n}\n\n.mdi-clipboard-account:before {\n  content: \"\\F148\";\n}\n\n.mdi-clipboard-account-outline:before {\n  content: \"\\FC31\";\n}\n\n.mdi-clipboard-alert:before {\n  content: \"\\F149\";\n}\n\n.mdi-clipboard-alert-outline:before {\n  content: \"\\FCD3\";\n}\n\n.mdi-clipboard-arrow-down:before {\n  content: \"\\F14A\";\n}\n\n.mdi-clipboard-arrow-down-outline:before {\n  content: \"\\FC32\";\n}\n\n.mdi-clipboard-arrow-left:before {\n  content: \"\\F14B\";\n}\n\n.mdi-clipboard-arrow-left-outline:before {\n  content: \"\\FCD4\";\n}\n\n.mdi-clipboard-arrow-right:before {\n  content: \"\\FCD5\";\n}\n\n.mdi-clipboard-arrow-right-outline:before {\n  content: \"\\FCD6\";\n}\n\n.mdi-clipboard-arrow-up:before {\n  content: \"\\FC33\";\n}\n\n.mdi-clipboard-arrow-up-outline:before {\n  content: \"\\FC34\";\n}\n\n.mdi-clipboard-check:before {\n  content: \"\\F14C\";\n}\n\n.mdi-clipboard-check-outline:before {\n  content: \"\\F8A7\";\n}\n\n.mdi-clipboard-flow:before {\n  content: \"\\F6C7\";\n}\n\n.mdi-clipboard-outline:before {\n  content: \"\\F14D\";\n}\n\n.mdi-clipboard-play:before {\n  content: \"\\FC35\";\n}\n\n.mdi-clipboard-play-outline:before {\n  content: \"\\FC36\";\n}\n\n.mdi-clipboard-plus:before {\n  content: \"\\F750\";\n}\n\n.mdi-clipboard-pulse:before {\n  content: \"\\F85C\";\n}\n\n.mdi-clipboard-pulse-outline:before {\n  content: \"\\F85D\";\n}\n\n.mdi-clipboard-text:before {\n  content: \"\\F14E\";\n}\n\n.mdi-clipboard-text-outline:before {\n  content: \"\\FA37\";\n}\n\n.mdi-clipboard-text-play:before {\n  content: \"\\FC37\";\n}\n\n.mdi-clipboard-text-play-outline:before {\n  content: \"\\FC38\";\n}\n\n.mdi-clippy:before {\n  content: \"\\F14F\";\n}\n\n.mdi-clock:before {\n  content: \"\\F953\";\n}\n\n.mdi-clock-alert:before {\n  content: \"\\F954\";\n}\n\n.mdi-clock-alert-outline:before {\n  content: \"\\F5CE\";\n}\n\n.mdi-clock-digital:before {\n  content: \"\\FEB4\";\n}\n\n.mdi-clock-end:before {\n  content: \"\\F151\";\n}\n\n.mdi-clock-fast:before {\n  content: \"\\F152\";\n}\n\n.mdi-clock-in:before {\n  content: \"\\F153\";\n}\n\n.mdi-clock-out:before {\n  content: \"\\F154\";\n}\n\n.mdi-clock-outline:before {\n  content: \"\\F150\";\n}\n\n.mdi-clock-start:before {\n  content: \"\\F155\";\n}\n\n.mdi-close:before {\n  content: \"\\F156\";\n}\n\n.mdi-close-box:before {\n  content: \"\\F157\";\n}\n\n.mdi-close-box-multiple:before {\n  content: \"\\FC39\";\n}\n\n.mdi-close-box-multiple-outline:before {\n  content: \"\\FC3A\";\n}\n\n.mdi-close-box-outline:before {\n  content: \"\\F158\";\n}\n\n.mdi-close-circle:before {\n  content: \"\\F159\";\n}\n\n.mdi-close-circle-outline:before {\n  content: \"\\F15A\";\n}\n\n.mdi-close-network:before {\n  content: \"\\F15B\";\n}\n\n.mdi-close-network-outline:before {\n  content: \"\\FC3B\";\n}\n\n.mdi-close-octagon:before {\n  content: \"\\F15C\";\n}\n\n.mdi-close-octagon-outline:before {\n  content: \"\\F15D\";\n}\n\n.mdi-close-outline:before {\n  content: \"\\F6C8\";\n}\n\n.mdi-closed-caption:before {\n  content: \"\\F15E\";\n}\n\n.mdi-closed-caption-outline:before {\n  content: \"\\FD99\";\n}\n\n.mdi-cloud:before {\n  content: \"\\F15F\";\n}\n\n.mdi-cloud-alert:before {\n  content: \"\\F9DF\";\n}\n\n.mdi-cloud-braces:before {\n  content: \"\\F7B4\";\n}\n\n.mdi-cloud-check:before {\n  content: \"\\F160\";\n}\n\n.mdi-cloud-circle:before {\n  content: \"\\F161\";\n}\n\n.mdi-cloud-download:before {\n  content: \"\\F162\";\n}\n\n.mdi-cloud-download-outline:before {\n  content: \"\\FB59\";\n}\n\n.mdi-cloud-off-outline:before {\n  content: \"\\F164\";\n}\n\n.mdi-cloud-outline:before {\n  content: \"\\F163\";\n}\n\n.mdi-cloud-print:before {\n  content: \"\\F165\";\n}\n\n.mdi-cloud-print-outline:before {\n  content: \"\\F166\";\n}\n\n.mdi-cloud-question:before {\n  content: \"\\FA38\";\n}\n\n.mdi-cloud-search:before {\n  content: \"\\F955\";\n}\n\n.mdi-cloud-search-outline:before {\n  content: \"\\F956\";\n}\n\n.mdi-cloud-sync:before {\n  content: \"\\F63F\";\n}\n\n.mdi-cloud-tags:before {\n  content: \"\\F7B5\";\n}\n\n.mdi-cloud-upload:before {\n  content: \"\\F167\";\n}\n\n.mdi-cloud-upload-outline:before {\n  content: \"\\FB5A\";\n}\n\n.mdi-clover:before {\n  content: \"\\F815\";\n}\n\n.mdi-code-array:before {\n  content: \"\\F168\";\n}\n\n.mdi-code-braces:before {\n  content: \"\\F169\";\n}\n\n.mdi-code-brackets:before {\n  content: \"\\F16A\";\n}\n\n.mdi-code-equal:before {\n  content: \"\\F16B\";\n}\n\n.mdi-code-greater-than:before {\n  content: \"\\F16C\";\n}\n\n.mdi-code-greater-than-or-equal:before {\n  content: \"\\F16D\";\n}\n\n.mdi-code-less-than:before {\n  content: \"\\F16E\";\n}\n\n.mdi-code-less-than-or-equal:before {\n  content: \"\\F16F\";\n}\n\n.mdi-code-not-equal:before {\n  content: \"\\F170\";\n}\n\n.mdi-code-not-equal-variant:before {\n  content: \"\\F171\";\n}\n\n.mdi-code-parentheses:before {\n  content: \"\\F172\";\n}\n\n.mdi-code-string:before {\n  content: \"\\F173\";\n}\n\n.mdi-code-tags:before {\n  content: \"\\F174\";\n}\n\n.mdi-code-tags-check:before {\n  content: \"\\F693\";\n}\n\n.mdi-codepen:before {\n  content: \"\\F175\";\n}\n\n.mdi-coffee:before {\n  content: \"\\F176\";\n}\n\n.mdi-coffee-outline:before {\n  content: \"\\F6C9\";\n}\n\n.mdi-coffee-to-go:before {\n  content: \"\\F177\";\n}\n\n.mdi-coffin:before {\n  content: \"\\FB5B\";\n}\n\n.mdi-cogs:before {\n  content: \"\\F8D5\";\n}\n\n.mdi-coin:before {\n  content: \"\\F178\";\n}\n\n.mdi-coins:before {\n  content: \"\\F694\";\n}\n\n.mdi-collage:before {\n  content: \"\\F640\";\n}\n\n.mdi-collapse-all:before {\n  content: \"\\FAA5\";\n}\n\n.mdi-collapse-all-outline:before {\n  content: \"\\FAA6\";\n}\n\n.mdi-color-helper:before {\n  content: \"\\F179\";\n}\n\n.mdi-comma:before {\n  content: \"\\FE74\";\n}\n\n.mdi-comma-box:before {\n  content: \"\\FE75\";\n}\n\n.mdi-comma-box-outline:before {\n  content: \"\\FE76\";\n}\n\n.mdi-comma-circle:before {\n  content: \"\\FE77\";\n}\n\n.mdi-comma-circle-outline:before {\n  content: \"\\FE78\";\n}\n\n.mdi-comment:before {\n  content: \"\\F17A\";\n}\n\n.mdi-comment-account:before {\n  content: \"\\F17B\";\n}\n\n.mdi-comment-account-outline:before {\n  content: \"\\F17C\";\n}\n\n.mdi-comment-alert:before {\n  content: \"\\F17D\";\n}\n\n.mdi-comment-alert-outline:before {\n  content: \"\\F17E\";\n}\n\n.mdi-comment-arrow-left:before {\n  content: \"\\F9E0\";\n}\n\n.mdi-comment-arrow-left-outline:before {\n  content: \"\\F9E1\";\n}\n\n.mdi-comment-arrow-right:before {\n  content: \"\\F9E2\";\n}\n\n.mdi-comment-arrow-right-outline:before {\n  content: \"\\F9E3\";\n}\n\n.mdi-comment-check:before {\n  content: \"\\F17F\";\n}\n\n.mdi-comment-check-outline:before {\n  content: \"\\F180\";\n}\n\n.mdi-comment-eye:before {\n  content: \"\\FA39\";\n}\n\n.mdi-comment-eye-outline:before {\n  content: \"\\FA3A\";\n}\n\n.mdi-comment-multiple:before {\n  content: \"\\F85E\";\n}\n\n.mdi-comment-multiple-outline:before {\n  content: \"\\F181\";\n}\n\n.mdi-comment-outline:before {\n  content: \"\\F182\";\n}\n\n.mdi-comment-plus:before {\n  content: \"\\F9E4\";\n}\n\n.mdi-comment-plus-outline:before {\n  content: \"\\F183\";\n}\n\n.mdi-comment-processing:before {\n  content: \"\\F184\";\n}\n\n.mdi-comment-processing-outline:before {\n  content: \"\\F185\";\n}\n\n.mdi-comment-question:before {\n  content: \"\\F816\";\n}\n\n.mdi-comment-question-outline:before {\n  content: \"\\F186\";\n}\n\n.mdi-comment-remove:before {\n  content: \"\\F5DE\";\n}\n\n.mdi-comment-remove-outline:before {\n  content: \"\\F187\";\n}\n\n.mdi-comment-search:before {\n  content: \"\\FA3B\";\n}\n\n.mdi-comment-search-outline:before {\n  content: \"\\FA3C\";\n}\n\n.mdi-comment-text:before {\n  content: \"\\F188\";\n}\n\n.mdi-comment-text-multiple:before {\n  content: \"\\F85F\";\n}\n\n.mdi-comment-text-multiple-outline:before {\n  content: \"\\F860\";\n}\n\n.mdi-comment-text-outline:before {\n  content: \"\\F189\";\n}\n\n.mdi-compare:before {\n  content: \"\\F18A\";\n}\n\n.mdi-compass:before {\n  content: \"\\F18B\";\n}\n\n.mdi-compass-off:before {\n  content: \"\\FB5C\";\n}\n\n.mdi-compass-off-outline:before {\n  content: \"\\FB5D\";\n}\n\n.mdi-compass-outline:before {\n  content: \"\\F18C\";\n}\n\n.mdi-console:before {\n  content: \"\\F18D\";\n}\n\n.mdi-console-line:before {\n  content: \"\\F7B6\";\n}\n\n.mdi-console-network:before {\n  content: \"\\F8A8\";\n}\n\n.mdi-console-network-outline:before {\n  content: \"\\FC3C\";\n}\n\n.mdi-contact-mail:before {\n  content: \"\\F18E\";\n}\n\n.mdi-contact-mail-outline:before {\n  content: \"\\FEB5\";\n}\n\n.mdi-contact-phone:before {\n  content: \"\\FEB6\";\n}\n\n.mdi-contact-phone-outline:before {\n  content: \"\\FEB7\";\n}\n\n.mdi-contactless-payment:before {\n  content: \"\\FD46\";\n}\n\n.mdi-contacts:before {\n  content: \"\\F6CA\";\n}\n\n.mdi-contain:before {\n  content: \"\\FA3D\";\n}\n\n.mdi-contain-end:before {\n  content: \"\\FA3E\";\n}\n\n.mdi-contain-start:before {\n  content: \"\\FA3F\";\n}\n\n.mdi-content-copy:before {\n  content: \"\\F18F\";\n}\n\n.mdi-content-cut:before {\n  content: \"\\F190\";\n}\n\n.mdi-content-duplicate:before {\n  content: \"\\F191\";\n}\n\n.mdi-content-paste:before {\n  content: \"\\F192\";\n}\n\n.mdi-content-save:before {\n  content: \"\\F193\";\n}\n\n.mdi-content-save-all:before {\n  content: \"\\F194\";\n}\n\n.mdi-content-save-edit:before {\n  content: \"\\FCD7\";\n}\n\n.mdi-content-save-edit-outline:before {\n  content: \"\\FCD8\";\n}\n\n.mdi-content-save-move:before {\n  content: \"\\FE79\";\n}\n\n.mdi-content-save-move-outline:before {\n  content: \"\\FE7A\";\n}\n\n.mdi-content-save-outline:before {\n  content: \"\\F817\";\n}\n\n.mdi-content-save-settings:before {\n  content: \"\\F61B\";\n}\n\n.mdi-content-save-settings-outline:before {\n  content: \"\\FB13\";\n}\n\n.mdi-contrast:before {\n  content: \"\\F195\";\n}\n\n.mdi-contrast-box:before {\n  content: \"\\F196\";\n}\n\n.mdi-contrast-circle:before {\n  content: \"\\F197\";\n}\n\n.mdi-controller-classic:before {\n  content: \"\\FB5E\";\n}\n\n.mdi-controller-classic-outline:before {\n  content: \"\\FB5F\";\n}\n\n.mdi-cookie:before {\n  content: \"\\F198\";\n}\n\n.mdi-copyright:before {\n  content: \"\\F5E6\";\n}\n\n.mdi-cordova:before {\n  content: \"\\F957\";\n}\n\n.mdi-corn:before {\n  content: \"\\F7B7\";\n}\n\n.mdi-counter:before {\n  content: \"\\F199\";\n}\n\n.mdi-cow:before {\n  content: \"\\F19A\";\n}\n\n.mdi-cowboy:before {\n  content: \"\\FEB8\";\n}\n\n.mdi-crane:before {\n  content: \"\\F861\";\n}\n\n.mdi-creation:before {\n  content: \"\\F1C9\";\n}\n\n.mdi-creative-commons:before {\n  content: \"\\FD47\";\n}\n\n.mdi-credit-card:before {\n  content: \"\\F19B\";\n}\n\n.mdi-credit-card-marker:before {\n  content: \"\\FD9A\";\n}\n\n.mdi-credit-card-multiple:before {\n  content: \"\\F19C\";\n}\n\n.mdi-credit-card-off:before {\n  content: \"\\F5E4\";\n}\n\n.mdi-credit-card-plus:before {\n  content: \"\\F675\";\n}\n\n.mdi-credit-card-refund:before {\n  content: \"\\FAA7\";\n}\n\n.mdi-credit-card-scan:before {\n  content: \"\\F19D\";\n}\n\n.mdi-credit-card-settings:before {\n  content: \"\\F8D6\";\n}\n\n.mdi-credit-card-wireless:before {\n  content: \"\\FD48\";\n}\n\n.mdi-cricket:before {\n  content: \"\\FD49\";\n}\n\n.mdi-crop:before {\n  content: \"\\F19E\";\n}\n\n.mdi-crop-free:before {\n  content: \"\\F19F\";\n}\n\n.mdi-crop-landscape:before {\n  content: \"\\F1A0\";\n}\n\n.mdi-crop-portrait:before {\n  content: \"\\F1A1\";\n}\n\n.mdi-crop-rotate:before {\n  content: \"\\F695\";\n}\n\n.mdi-crop-square:before {\n  content: \"\\F1A2\";\n}\n\n.mdi-crosshairs:before {\n  content: \"\\F1A3\";\n}\n\n.mdi-crosshairs-gps:before {\n  content: \"\\F1A4\";\n}\n\n.mdi-crown:before {\n  content: \"\\F1A5\";\n}\n\n.mdi-cryengine:before {\n  content: \"\\F958\";\n}\n\n.mdi-crystal-ball:before {\n  content: \"\\FB14\";\n}\n\n.mdi-cube:before {\n  content: \"\\F1A6\";\n}\n\n.mdi-cube-outline:before {\n  content: \"\\F1A7\";\n}\n\n.mdi-cube-scan:before {\n  content: \"\\FB60\";\n}\n\n.mdi-cube-send:before {\n  content: \"\\F1A8\";\n}\n\n.mdi-cube-unfolded:before {\n  content: \"\\F1A9\";\n}\n\n.mdi-cup:before {\n  content: \"\\F1AA\";\n}\n\n.mdi-cup-off:before {\n  content: \"\\F5E5\";\n}\n\n.mdi-cup-water:before {\n  content: \"\\F1AB\";\n}\n\n.mdi-cupcake:before {\n  content: \"\\F959\";\n}\n\n.mdi-curling:before {\n  content: \"\\F862\";\n}\n\n.mdi-currency-bdt:before {\n  content: \"\\F863\";\n}\n\n.mdi-currency-brl:before {\n  content: \"\\FB61\";\n}\n\n.mdi-currency-btc:before {\n  content: \"\\F1AC\";\n}\n\n.mdi-currency-chf:before {\n  content: \"\\F7B8\";\n}\n\n.mdi-currency-cny:before {\n  content: \"\\F7B9\";\n}\n\n.mdi-currency-eth:before {\n  content: \"\\F7BA\";\n}\n\n.mdi-currency-eur:before {\n  content: \"\\F1AD\";\n}\n\n.mdi-currency-gbp:before {\n  content: \"\\F1AE\";\n}\n\n.mdi-currency-ils:before {\n  content: \"\\FC3D\";\n}\n\n.mdi-currency-inr:before {\n  content: \"\\F1AF\";\n}\n\n.mdi-currency-jpy:before {\n  content: \"\\F7BB\";\n}\n\n.mdi-currency-krw:before {\n  content: \"\\F7BC\";\n}\n\n.mdi-currency-kzt:before {\n  content: \"\\F864\";\n}\n\n.mdi-currency-ngn:before {\n  content: \"\\F1B0\";\n}\n\n.mdi-currency-php:before {\n  content: \"\\F9E5\";\n}\n\n.mdi-currency-rial:before {\n  content: \"\\FEB9\";\n}\n\n.mdi-currency-rub:before {\n  content: \"\\F1B1\";\n}\n\n.mdi-currency-sign:before {\n  content: \"\\F7BD\";\n}\n\n.mdi-currency-try:before {\n  content: \"\\F1B2\";\n}\n\n.mdi-currency-twd:before {\n  content: \"\\F7BE\";\n}\n\n.mdi-currency-usd:before {\n  content: \"\\F1B3\";\n}\n\n.mdi-currency-usd-off:before {\n  content: \"\\F679\";\n}\n\n.mdi-current-ac:before {\n  content: \"\\F95A\";\n}\n\n.mdi-current-dc:before {\n  content: \"\\F95B\";\n}\n\n.mdi-cursor-default:before {\n  content: \"\\F1B4\";\n}\n\n.mdi-cursor-default-click:before {\n  content: \"\\FCD9\";\n}\n\n.mdi-cursor-default-click-outline:before {\n  content: \"\\FCDA\";\n}\n\n.mdi-cursor-default-outline:before {\n  content: \"\\F1B5\";\n}\n\n.mdi-cursor-move:before {\n  content: \"\\F1B6\";\n}\n\n.mdi-cursor-pointer:before {\n  content: \"\\F1B7\";\n}\n\n.mdi-cursor-text:before {\n  content: \"\\F5E7\";\n}\n\n.mdi-database:before {\n  content: \"\\F1B8\";\n}\n\n.mdi-database-check:before {\n  content: \"\\FAA8\";\n}\n\n.mdi-database-edit:before {\n  content: \"\\FB62\";\n}\n\n.mdi-database-export:before {\n  content: \"\\F95D\";\n}\n\n.mdi-database-import:before {\n  content: \"\\F95C\";\n}\n\n.mdi-database-lock:before {\n  content: \"\\FAA9\";\n}\n\n.mdi-database-minus:before {\n  content: \"\\F1B9\";\n}\n\n.mdi-database-plus:before {\n  content: \"\\F1BA\";\n}\n\n.mdi-database-refresh:before {\n  content: \"\\FCDB\";\n}\n\n.mdi-database-remove:before {\n  content: \"\\FCDC\";\n}\n\n.mdi-database-search:before {\n  content: \"\\F865\";\n}\n\n.mdi-database-settings:before {\n  content: \"\\FCDD\";\n}\n\n.mdi-death-star:before {\n  content: \"\\F8D7\";\n}\n\n.mdi-death-star-variant:before {\n  content: \"\\F8D8\";\n}\n\n.mdi-deathly-hallows:before {\n  content: \"\\FB63\";\n}\n\n.mdi-debian:before {\n  content: \"\\F8D9\";\n}\n\n.mdi-debug-step-into:before {\n  content: \"\\F1BB\";\n}\n\n.mdi-debug-step-out:before {\n  content: \"\\F1BC\";\n}\n\n.mdi-debug-step-over:before {\n  content: \"\\F1BD\";\n}\n\n.mdi-decagram:before {\n  content: \"\\F76B\";\n}\n\n.mdi-decagram-outline:before {\n  content: \"\\F76C\";\n}\n\n.mdi-decimal-decrease:before {\n  content: \"\\F1BE\";\n}\n\n.mdi-decimal-increase:before {\n  content: \"\\F1BF\";\n}\n\n.mdi-delete:before {\n  content: \"\\F1C0\";\n}\n\n.mdi-delete-circle:before {\n  content: \"\\F682\";\n}\n\n.mdi-delete-circle-outline:before {\n  content: \"\\FB64\";\n}\n\n.mdi-delete-empty:before {\n  content: \"\\F6CB\";\n}\n\n.mdi-delete-empty-outline:before {\n  content: \"\\FEBA\";\n}\n\n.mdi-delete-forever:before {\n  content: \"\\F5E8\";\n}\n\n.mdi-delete-forever-outline:before {\n  content: \"\\FB65\";\n}\n\n.mdi-delete-outline:before {\n  content: \"\\F9E6\";\n}\n\n.mdi-delete-restore:before {\n  content: \"\\F818\";\n}\n\n.mdi-delete-sweep:before {\n  content: \"\\F5E9\";\n}\n\n.mdi-delete-sweep-outline:before {\n  content: \"\\FC3E\";\n}\n\n.mdi-delete-variant:before {\n  content: \"\\F1C1\";\n}\n\n.mdi-delta:before {\n  content: \"\\F1C2\";\n}\n\n.mdi-desk-lamp:before {\n  content: \"\\F95E\";\n}\n\n.mdi-deskphone:before {\n  content: \"\\F1C3\";\n}\n\n.mdi-desktop-classic:before {\n  content: \"\\F7BF\";\n}\n\n.mdi-desktop-mac:before {\n  content: \"\\F1C4\";\n}\n\n.mdi-desktop-mac-dashboard:before {\n  content: \"\\F9E7\";\n}\n\n.mdi-desktop-tower:before {\n  content: \"\\F1C5\";\n}\n\n.mdi-desktop-tower-monitor:before {\n  content: \"\\FAAA\";\n}\n\n.mdi-details:before {\n  content: \"\\F1C6\";\n}\n\n.mdi-dev-to:before {\n  content: \"\\FD4A\";\n}\n\n.mdi-developer-board:before {\n  content: \"\\F696\";\n}\n\n.mdi-deviantart:before {\n  content: \"\\F1C7\";\n}\n\n.mdi-dialpad:before {\n  content: \"\\F61C\";\n}\n\n.mdi-diameter:before {\n  content: \"\\FC3F\";\n}\n\n.mdi-diameter-outline:before {\n  content: \"\\FC40\";\n}\n\n.mdi-diameter-variant:before {\n  content: \"\\FC41\";\n}\n\n.mdi-diamond:before {\n  content: \"\\FB66\";\n}\n\n.mdi-diamond-outline:before {\n  content: \"\\FB67\";\n}\n\n.mdi-diamond-stone:before {\n  content: \"\\F1C8\";\n}\n\n.mdi-dice-1:before {\n  content: \"\\F1CA\";\n}\n\n.mdi-dice-2:before {\n  content: \"\\F1CB\";\n}\n\n.mdi-dice-3:before {\n  content: \"\\F1CC\";\n}\n\n.mdi-dice-4:before {\n  content: \"\\F1CD\";\n}\n\n.mdi-dice-5:before {\n  content: \"\\F1CE\";\n}\n\n.mdi-dice-6:before {\n  content: \"\\F1CF\";\n}\n\n.mdi-dice-d10:before {\n  content: \"\\F76E\";\n}\n\n.mdi-dice-d12:before {\n  content: \"\\F866\";\n}\n\n.mdi-dice-d20:before {\n  content: \"\\F5EA\";\n}\n\n.mdi-dice-d4:before {\n  content: \"\\F5EB\";\n}\n\n.mdi-dice-d6:before {\n  content: \"\\F5EC\";\n}\n\n.mdi-dice-d8:before {\n  content: \"\\F5ED\";\n}\n\n.mdi-dice-multiple:before {\n  content: \"\\F76D\";\n}\n\n.mdi-dictionary:before {\n  content: \"\\F61D\";\n}\n\n.mdi-dip-switch:before {\n  content: \"\\F7C0\";\n}\n\n.mdi-directions:before {\n  content: \"\\F1D0\";\n}\n\n.mdi-directions-fork:before {\n  content: \"\\F641\";\n}\n\n.mdi-disc:before {\n  content: \"\\F5EE\";\n}\n\n.mdi-disc-alert:before {\n  content: \"\\F1D1\";\n}\n\n.mdi-disc-player:before {\n  content: \"\\F95F\";\n}\n\n.mdi-discord:before {\n  content: \"\\F66F\";\n}\n\n.mdi-dishwasher:before {\n  content: \"\\FAAB\";\n}\n\n.mdi-disqus:before {\n  content: \"\\F1D2\";\n}\n\n.mdi-disqus-outline:before {\n  content: \"\\F1D3\";\n}\n\n.mdi-diving-flippers:before {\n  content: \"\\FD9B\";\n}\n\n.mdi-diving-helmet:before {\n  content: \"\\FD9C\";\n}\n\n.mdi-diving-scuba:before {\n  content: \"\\FD9D\";\n}\n\n.mdi-diving-scuba-flag:before {\n  content: \"\\FD9E\";\n}\n\n.mdi-diving-scuba-tank:before {\n  content: \"\\FD9F\";\n}\n\n.mdi-diving-scuba-tank-multiple:before {\n  content: \"\\FDA0\";\n}\n\n.mdi-diving-snorkel:before {\n  content: \"\\FDA1\";\n}\n\n.mdi-division:before {\n  content: \"\\F1D4\";\n}\n\n.mdi-division-box:before {\n  content: \"\\F1D5\";\n}\n\n.mdi-dlna:before {\n  content: \"\\FA40\";\n}\n\n.mdi-dna:before {\n  content: \"\\F683\";\n}\n\n.mdi-dns:before {\n  content: \"\\F1D6\";\n}\n\n.mdi-dns-outline:before {\n  content: \"\\FB68\";\n}\n\n.mdi-do-not-disturb:before {\n  content: \"\\F697\";\n}\n\n.mdi-do-not-disturb-off:before {\n  content: \"\\F698\";\n}\n\n.mdi-docker:before {\n  content: \"\\F867\";\n}\n\n.mdi-doctor:before {\n  content: \"\\FA41\";\n}\n\n.mdi-dog:before {\n  content: \"\\FA42\";\n}\n\n.mdi-dog-service:before {\n  content: \"\\FAAC\";\n}\n\n.mdi-dog-side:before {\n  content: \"\\FA43\";\n}\n\n.mdi-dolby:before {\n  content: \"\\F6B2\";\n}\n\n.mdi-dolly:before {\n  content: \"\\FEBB\";\n}\n\n.mdi-domain:before {\n  content: \"\\F1D7\";\n}\n\n.mdi-domain-off:before {\n  content: \"\\FD4B\";\n}\n\n.mdi-donkey:before {\n  content: \"\\F7C1\";\n}\n\n.mdi-door:before {\n  content: \"\\F819\";\n}\n\n.mdi-door-closed:before {\n  content: \"\\F81A\";\n}\n\n.mdi-door-open:before {\n  content: \"\\F81B\";\n}\n\n.mdi-doorbell-video:before {\n  content: \"\\F868\";\n}\n\n.mdi-dot-net:before {\n  content: \"\\FAAD\";\n}\n\n.mdi-dots-horizontal:before {\n  content: \"\\F1D8\";\n}\n\n.mdi-dots-horizontal-circle:before {\n  content: \"\\F7C2\";\n}\n\n.mdi-dots-horizontal-circle-outline:before {\n  content: \"\\FB69\";\n}\n\n.mdi-dots-vertical:before {\n  content: \"\\F1D9\";\n}\n\n.mdi-dots-vertical-circle:before {\n  content: \"\\F7C3\";\n}\n\n.mdi-dots-vertical-circle-outline:before {\n  content: \"\\FB6A\";\n}\n\n.mdi-douban:before {\n  content: \"\\F699\";\n}\n\n.mdi-download:before {\n  content: \"\\F1DA\";\n}\n\n.mdi-download-multiple:before {\n  content: \"\\F9E8\";\n}\n\n.mdi-download-network:before {\n  content: \"\\F6F3\";\n}\n\n.mdi-download-network-outline:before {\n  content: \"\\FC42\";\n}\n\n.mdi-download-outline:before {\n  content: \"\\FB6B\";\n}\n\n.mdi-drag:before {\n  content: \"\\F1DB\";\n}\n\n.mdi-drag-horizontal:before {\n  content: \"\\F1DC\";\n}\n\n.mdi-drag-variant:before {\n  content: \"\\FB6C\";\n}\n\n.mdi-drag-vertical:before {\n  content: \"\\F1DD\";\n}\n\n.mdi-drama-masks:before {\n  content: \"\\FCDE\";\n}\n\n.mdi-drawing:before {\n  content: \"\\F1DE\";\n}\n\n.mdi-drawing-box:before {\n  content: \"\\F1DF\";\n}\n\n.mdi-dribbble:before {\n  content: \"\\F1E0\";\n}\n\n.mdi-dribbble-box:before {\n  content: \"\\F1E1\";\n}\n\n.mdi-drone:before {\n  content: \"\\F1E2\";\n}\n\n.mdi-dropbox:before {\n  content: \"\\F1E3\";\n}\n\n.mdi-drupal:before {\n  content: \"\\F1E4\";\n}\n\n.mdi-duck:before {\n  content: \"\\F1E5\";\n}\n\n.mdi-dumbbell:before {\n  content: \"\\F1E6\";\n}\n\n.mdi-dump-truck:before {\n  content: \"\\FC43\";\n}\n\n.mdi-ear-hearing:before {\n  content: \"\\F7C4\";\n}\n\n.mdi-ear-hearing-off:before {\n  content: \"\\FA44\";\n}\n\n.mdi-earth:before {\n  content: \"\\F1E7\";\n}\n\n.mdi-earth-box:before {\n  content: \"\\F6CC\";\n}\n\n.mdi-earth-box-off:before {\n  content: \"\\F6CD\";\n}\n\n.mdi-earth-off:before {\n  content: \"\\F1E8\";\n}\n\n.mdi-edge:before {\n  content: \"\\F1E9\";\n}\n\n.mdi-egg:before {\n  content: \"\\FAAE\";\n}\n\n.mdi-egg-easter:before {\n  content: \"\\FAAF\";\n}\n\n.mdi-eight-track:before {\n  content: \"\\F9E9\";\n}\n\n.mdi-eject:before {\n  content: \"\\F1EA\";\n}\n\n.mdi-eject-outline:before {\n  content: \"\\FB6D\";\n}\n\n.mdi-electric-switch:before {\n  content: \"\\FEBC\";\n}\n\n.mdi-elephant:before {\n  content: \"\\F7C5\";\n}\n\n.mdi-elevation-decline:before {\n  content: \"\\F1EB\";\n}\n\n.mdi-elevation-rise:before {\n  content: \"\\F1EC\";\n}\n\n.mdi-elevator:before {\n  content: \"\\F1ED\";\n}\n\n.mdi-ellipse:before {\n  content: \"\\FEBD\";\n}\n\n.mdi-ellipse-outline:before {\n  content: \"\\FEBE\";\n}\n\n.mdi-email:before {\n  content: \"\\F1EE\";\n}\n\n.mdi-email-alert:before {\n  content: \"\\F6CE\";\n}\n\n.mdi-email-box:before {\n  content: \"\\FCDF\";\n}\n\n.mdi-email-check:before {\n  content: \"\\FAB0\";\n}\n\n.mdi-email-check-outline:before {\n  content: \"\\FAB1\";\n}\n\n.mdi-email-lock:before {\n  content: \"\\F1F1\";\n}\n\n.mdi-email-mark-as-unread:before {\n  content: \"\\FB6E\";\n}\n\n.mdi-email-open:before {\n  content: \"\\F1EF\";\n}\n\n.mdi-email-open-outline:before {\n  content: \"\\F5EF\";\n}\n\n.mdi-email-outline:before {\n  content: \"\\F1F0\";\n}\n\n.mdi-email-plus:before {\n  content: \"\\F9EA\";\n}\n\n.mdi-email-plus-outline:before {\n  content: \"\\F9EB\";\n}\n\n.mdi-email-search:before {\n  content: \"\\F960\";\n}\n\n.mdi-email-search-outline:before {\n  content: \"\\F961\";\n}\n\n.mdi-email-variant:before {\n  content: \"\\F5F0\";\n}\n\n.mdi-ember:before {\n  content: \"\\FB15\";\n}\n\n.mdi-emby:before {\n  content: \"\\F6B3\";\n}\n\n.mdi-emoticon:before {\n  content: \"\\FC44\";\n}\n\n.mdi-emoticon-angry:before {\n  content: \"\\FC45\";\n}\n\n.mdi-emoticon-angry-outline:before {\n  content: \"\\FC46\";\n}\n\n.mdi-emoticon-cool:before {\n  content: \"\\FC47\";\n}\n\n.mdi-emoticon-cool-outline:before {\n  content: \"\\F1F3\";\n}\n\n.mdi-emoticon-cry:before {\n  content: \"\\FC48\";\n}\n\n.mdi-emoticon-cry-outline:before {\n  content: \"\\FC49\";\n}\n\n.mdi-emoticon-dead:before {\n  content: \"\\FC4A\";\n}\n\n.mdi-emoticon-dead-outline:before {\n  content: \"\\F69A\";\n}\n\n.mdi-emoticon-devil:before {\n  content: \"\\FC4B\";\n}\n\n.mdi-emoticon-devil-outline:before {\n  content: \"\\F1F4\";\n}\n\n.mdi-emoticon-excited:before {\n  content: \"\\FC4C\";\n}\n\n.mdi-emoticon-excited-outline:before {\n  content: \"\\F69B\";\n}\n\n.mdi-emoticon-happy:before {\n  content: \"\\FC4D\";\n}\n\n.mdi-emoticon-happy-outline:before {\n  content: \"\\F1F5\";\n}\n\n.mdi-emoticon-kiss:before {\n  content: \"\\FC4E\";\n}\n\n.mdi-emoticon-kiss-outline:before {\n  content: \"\\FC4F\";\n}\n\n.mdi-emoticon-neutral:before {\n  content: \"\\FC50\";\n}\n\n.mdi-emoticon-neutral-outline:before {\n  content: \"\\F1F6\";\n}\n\n.mdi-emoticon-outline:before {\n  content: \"\\F1F2\";\n}\n\n.mdi-emoticon-poop:before {\n  content: \"\\F1F7\";\n}\n\n.mdi-emoticon-poop-outline:before {\n  content: \"\\FC51\";\n}\n\n.mdi-emoticon-sad:before {\n  content: \"\\FC52\";\n}\n\n.mdi-emoticon-sad-outline:before {\n  content: \"\\F1F8\";\n}\n\n.mdi-emoticon-tongue:before {\n  content: \"\\F1F9\";\n}\n\n.mdi-emoticon-tongue-outline:before {\n  content: \"\\FC53\";\n}\n\n.mdi-emoticon-wink:before {\n  content: \"\\FC54\";\n}\n\n.mdi-emoticon-wink-outline:before {\n  content: \"\\FC55\";\n}\n\n.mdi-engine:before {\n  content: \"\\F1FA\";\n}\n\n.mdi-engine-off:before {\n  content: \"\\FA45\";\n}\n\n.mdi-engine-off-outline:before {\n  content: \"\\FA46\";\n}\n\n.mdi-engine-outline:before {\n  content: \"\\F1FB\";\n}\n\n.mdi-equal:before {\n  content: \"\\F1FC\";\n}\n\n.mdi-equal-box:before {\n  content: \"\\F1FD\";\n}\n\n.mdi-equalizer:before {\n  content: \"\\FEBF\";\n}\n\n.mdi-equalizer-outline:before {\n  content: \"\\FEC0\";\n}\n\n.mdi-eraser:before {\n  content: \"\\F1FE\";\n}\n\n.mdi-eraser-variant:before {\n  content: \"\\F642\";\n}\n\n.mdi-escalator:before {\n  content: \"\\F1FF\";\n}\n\n.mdi-eslint:before {\n  content: \"\\FC56\";\n}\n\n.mdi-et:before {\n  content: \"\\FAB2\";\n}\n\n.mdi-ethereum:before {\n  content: \"\\F869\";\n}\n\n.mdi-ethernet:before {\n  content: \"\\F200\";\n}\n\n.mdi-ethernet-cable:before {\n  content: \"\\F201\";\n}\n\n.mdi-ethernet-cable-off:before {\n  content: \"\\F202\";\n}\n\n.mdi-etsy:before {\n  content: \"\\F203\";\n}\n\n.mdi-ev-station:before {\n  content: \"\\F5F1\";\n}\n\n.mdi-eventbrite:before {\n  content: \"\\F7C6\";\n}\n\n.mdi-evernote:before {\n  content: \"\\F204\";\n}\n\n.mdi-exclamation:before {\n  content: \"\\F205\";\n}\n\n.mdi-exit-run:before {\n  content: \"\\FA47\";\n}\n\n.mdi-exit-to-app:before {\n  content: \"\\F206\";\n}\n\n.mdi-expand-all:before {\n  content: \"\\FAB3\";\n}\n\n.mdi-expand-all-outline:before {\n  content: \"\\FAB4\";\n}\n\n.mdi-exponent:before {\n  content: \"\\F962\";\n}\n\n.mdi-exponent-box:before {\n  content: \"\\F963\";\n}\n\n.mdi-export:before {\n  content: \"\\F207\";\n}\n\n.mdi-export-variant:before {\n  content: \"\\FB6F\";\n}\n\n.mdi-eye:before {\n  content: \"\\F208\";\n}\n\n.mdi-eye-check:before {\n  content: \"\\FCE0\";\n}\n\n.mdi-eye-check-outline:before {\n  content: \"\\FCE1\";\n}\n\n.mdi-eye-circle:before {\n  content: \"\\FB70\";\n}\n\n.mdi-eye-circle-outline:before {\n  content: \"\\FB71\";\n}\n\n.mdi-eye-off:before {\n  content: \"\\F209\";\n}\n\n.mdi-eye-off-outline:before {\n  content: \"\\F6D0\";\n}\n\n.mdi-eye-outline:before {\n  content: \"\\F6CF\";\n}\n\n.mdi-eye-plus:before {\n  content: \"\\F86A\";\n}\n\n.mdi-eye-plus-outline:before {\n  content: \"\\F86B\";\n}\n\n.mdi-eye-settings:before {\n  content: \"\\F86C\";\n}\n\n.mdi-eye-settings-outline:before {\n  content: \"\\F86D\";\n}\n\n.mdi-eyedropper:before {\n  content: \"\\F20A\";\n}\n\n.mdi-eyedropper-variant:before {\n  content: \"\\F20B\";\n}\n\n.mdi-face:before {\n  content: \"\\F643\";\n}\n\n.mdi-face-agent:before {\n  content: \"\\FD4C\";\n}\n\n.mdi-face-outline:before {\n  content: \"\\FB72\";\n}\n\n.mdi-face-profile:before {\n  content: \"\\F644\";\n}\n\n.mdi-face-recognition:before {\n  content: \"\\FC57\";\n}\n\n.mdi-facebook:before {\n  content: \"\\F20C\";\n}\n\n.mdi-facebook-box:before {\n  content: \"\\F20D\";\n}\n\n.mdi-facebook-messenger:before {\n  content: \"\\F20E\";\n}\n\n.mdi-facebook-workplace:before {\n  content: \"\\FB16\";\n}\n\n.mdi-factory:before {\n  content: \"\\F20F\";\n}\n\n.mdi-fan:before {\n  content: \"\\F210\";\n}\n\n.mdi-fan-off:before {\n  content: \"\\F81C\";\n}\n\n.mdi-fast-forward:before {\n  content: \"\\F211\";\n}\n\n.mdi-fast-forward-10:before {\n  content: \"\\FD4D\";\n}\n\n.mdi-fast-forward-30:before {\n  content: \"\\FCE2\";\n}\n\n.mdi-fast-forward-outline:before {\n  content: \"\\F6D1\";\n}\n\n.mdi-fax:before {\n  content: \"\\F212\";\n}\n\n.mdi-feather:before {\n  content: \"\\F6D2\";\n}\n\n.mdi-feature-search:before {\n  content: \"\\FA48\";\n}\n\n.mdi-feature-search-outline:before {\n  content: \"\\FA49\";\n}\n\n.mdi-fedora:before {\n  content: \"\\F8DA\";\n}\n\n.mdi-ferris-wheel:before {\n  content: \"\\FEC1\";\n}\n\n.mdi-ferry:before {\n  content: \"\\F213\";\n}\n\n.mdi-file:before {\n  content: \"\\F214\";\n}\n\n.mdi-file-account:before {\n  content: \"\\F73A\";\n}\n\n.mdi-file-alert:before {\n  content: \"\\FA4A\";\n}\n\n.mdi-file-alert-outline:before {\n  content: \"\\FA4B\";\n}\n\n.mdi-file-cabinet:before {\n  content: \"\\FAB5\";\n}\n\n.mdi-file-cancel:before {\n  content: \"\\FDA2\";\n}\n\n.mdi-file-cancel-outline:before {\n  content: \"\\FDA3\";\n}\n\n.mdi-file-chart:before {\n  content: \"\\F215\";\n}\n\n.mdi-file-check:before {\n  content: \"\\F216\";\n}\n\n.mdi-file-check-outline:before {\n  content: \"\\FE7B\";\n}\n\n.mdi-file-cloud:before {\n  content: \"\\F217\";\n}\n\n.mdi-file-compare:before {\n  content: \"\\F8A9\";\n}\n\n.mdi-file-delimited:before {\n  content: \"\\F218\";\n}\n\n.mdi-file-delimited-outline:before {\n  content: \"\\FEC2\";\n}\n\n.mdi-file-document:before {\n  content: \"\\F219\";\n}\n\n.mdi-file-document-box:before {\n  content: \"\\F21A\";\n}\n\n.mdi-file-document-box-check:before {\n  content: \"\\FEC3\";\n}\n\n.mdi-file-document-box-check-outline:before {\n  content: \"\\FEC4\";\n}\n\n.mdi-file-document-box-minus:before {\n  content: \"\\FEC5\";\n}\n\n.mdi-file-document-box-minus-outline:before {\n  content: \"\\FEC6\";\n}\n\n.mdi-file-document-box-multiple:before {\n  content: \"\\FAB6\";\n}\n\n.mdi-file-document-box-multiple-outline:before {\n  content: \"\\FAB7\";\n}\n\n.mdi-file-document-box-outline:before {\n  content: \"\\F9EC\";\n}\n\n.mdi-file-document-box-plus:before {\n  content: \"\\FEC7\";\n}\n\n.mdi-file-document-box-plus-outline:before {\n  content: \"\\FEC8\";\n}\n\n.mdi-file-document-box-remove:before {\n  content: \"\\FEC9\";\n}\n\n.mdi-file-document-box-remove-outline:before {\n  content: \"\\FECA\";\n}\n\n.mdi-file-document-box-search:before {\n  content: \"\\FECB\";\n}\n\n.mdi-file-document-box-search-outline:before {\n  content: \"\\FECC\";\n}\n\n.mdi-file-document-edit:before {\n  content: \"\\FDA4\";\n}\n\n.mdi-file-document-edit-outline:before {\n  content: \"\\FDA5\";\n}\n\n.mdi-file-document-outline:before {\n  content: \"\\F9ED\";\n}\n\n.mdi-file-download:before {\n  content: \"\\F964\";\n}\n\n.mdi-file-download-outline:before {\n  content: \"\\F965\";\n}\n\n.mdi-file-excel:before {\n  content: \"\\F21B\";\n}\n\n.mdi-file-excel-box:before {\n  content: \"\\F21C\";\n}\n\n.mdi-file-export:before {\n  content: \"\\F21D\";\n}\n\n.mdi-file-eye:before {\n  content: \"\\FDA6\";\n}\n\n.mdi-file-eye-outline:before {\n  content: \"\\FDA7\";\n}\n\n.mdi-file-find:before {\n  content: \"\\F21E\";\n}\n\n.mdi-file-find-outline:before {\n  content: \"\\FB73\";\n}\n\n.mdi-file-hidden:before {\n  content: \"\\F613\";\n}\n\n.mdi-file-image:before {\n  content: \"\\F21F\";\n}\n\n.mdi-file-image-outline:before {\n  content: \"\\FECD\";\n}\n\n.mdi-file-import:before {\n  content: \"\\F220\";\n}\n\n.mdi-file-lock:before {\n  content: \"\\F221\";\n}\n\n.mdi-file-move:before {\n  content: \"\\FAB8\";\n}\n\n.mdi-file-multiple:before {\n  content: \"\\F222\";\n}\n\n.mdi-file-music:before {\n  content: \"\\F223\";\n}\n\n.mdi-file-music-outline:before {\n  content: \"\\FE7C\";\n}\n\n.mdi-file-outline:before {\n  content: \"\\F224\";\n}\n\n.mdi-file-pdf:before {\n  content: \"\\F225\";\n}\n\n.mdi-file-pdf-box:before {\n  content: \"\\F226\";\n}\n\n.mdi-file-pdf-outline:before {\n  content: \"\\FE7D\";\n}\n\n.mdi-file-percent:before {\n  content: \"\\F81D\";\n}\n\n.mdi-file-plus:before {\n  content: \"\\F751\";\n}\n\n.mdi-file-powerpoint:before {\n  content: \"\\F227\";\n}\n\n.mdi-file-powerpoint-box:before {\n  content: \"\\F228\";\n}\n\n.mdi-file-presentation-box:before {\n  content: \"\\F229\";\n}\n\n.mdi-file-question:before {\n  content: \"\\F86E\";\n}\n\n.mdi-file-remove:before {\n  content: \"\\FB74\";\n}\n\n.mdi-file-replace:before {\n  content: \"\\FB17\";\n}\n\n.mdi-file-replace-outline:before {\n  content: \"\\FB18\";\n}\n\n.mdi-file-restore:before {\n  content: \"\\F670\";\n}\n\n.mdi-file-search:before {\n  content: \"\\FC58\";\n}\n\n.mdi-file-search-outline:before {\n  content: \"\\FC59\";\n}\n\n.mdi-file-send:before {\n  content: \"\\F22A\";\n}\n\n.mdi-file-table:before {\n  content: \"\\FC5A\";\n}\n\n.mdi-file-table-outline:before {\n  content: \"\\FC5B\";\n}\n\n.mdi-file-tree:before {\n  content: \"\\F645\";\n}\n\n.mdi-file-undo:before {\n  content: \"\\F8DB\";\n}\n\n.mdi-file-upload:before {\n  content: \"\\FA4C\";\n}\n\n.mdi-file-upload-outline:before {\n  content: \"\\FA4D\";\n}\n\n.mdi-file-video:before {\n  content: \"\\F22B\";\n}\n\n.mdi-file-video-outline:before {\n  content: \"\\FE10\";\n}\n\n.mdi-file-word:before {\n  content: \"\\F22C\";\n}\n\n.mdi-file-word-box:before {\n  content: \"\\F22D\";\n}\n\n.mdi-file-xml:before {\n  content: \"\\F22E\";\n}\n\n.mdi-film:before {\n  content: \"\\F22F\";\n}\n\n.mdi-filmstrip:before {\n  content: \"\\F230\";\n}\n\n.mdi-filmstrip-off:before {\n  content: \"\\F231\";\n}\n\n.mdi-filter:before {\n  content: \"\\F232\";\n}\n\n.mdi-filter-outline:before {\n  content: \"\\F233\";\n}\n\n.mdi-filter-remove:before {\n  content: \"\\F234\";\n}\n\n.mdi-filter-remove-outline:before {\n  content: \"\\F235\";\n}\n\n.mdi-filter-variant:before {\n  content: \"\\F236\";\n}\n\n.mdi-finance:before {\n  content: \"\\F81E\";\n}\n\n.mdi-find-replace:before {\n  content: \"\\F6D3\";\n}\n\n.mdi-fingerprint:before {\n  content: \"\\F237\";\n}\n\n.mdi-fingerprint-off:before {\n  content: \"\\FECE\";\n}\n\n.mdi-fire:before {\n  content: \"\\F238\";\n}\n\n.mdi-fire-truck:before {\n  content: \"\\F8AA\";\n}\n\n.mdi-firebase:before {\n  content: \"\\F966\";\n}\n\n.mdi-firefox:before {\n  content: \"\\F239\";\n}\n\n.mdi-fireplace:before {\n  content: \"\\FE11\";\n}\n\n.mdi-fireplace-off:before {\n  content: \"\\FE12\";\n}\n\n.mdi-firework:before {\n  content: \"\\FE13\";\n}\n\n.mdi-fish:before {\n  content: \"\\F23A\";\n}\n\n.mdi-flag:before {\n  content: \"\\F23B\";\n}\n\n.mdi-flag-checkered:before {\n  content: \"\\F23C\";\n}\n\n.mdi-flag-minus:before {\n  content: \"\\FB75\";\n}\n\n.mdi-flag-outline:before {\n  content: \"\\F23D\";\n}\n\n.mdi-flag-plus:before {\n  content: \"\\FB76\";\n}\n\n.mdi-flag-remove:before {\n  content: \"\\FB77\";\n}\n\n.mdi-flag-triangle:before {\n  content: \"\\F23F\";\n}\n\n.mdi-flag-variant:before {\n  content: \"\\F240\";\n}\n\n.mdi-flag-variant-outline:before {\n  content: \"\\F23E\";\n}\n\n.mdi-flare:before {\n  content: \"\\FD4E\";\n}\n\n.mdi-flash:before {\n  content: \"\\F241\";\n}\n\n.mdi-flash-auto:before {\n  content: \"\\F242\";\n}\n\n.mdi-flash-circle:before {\n  content: \"\\F81F\";\n}\n\n.mdi-flash-off:before {\n  content: \"\\F243\";\n}\n\n.mdi-flash-outline:before {\n  content: \"\\F6D4\";\n}\n\n.mdi-flash-red-eye:before {\n  content: \"\\F67A\";\n}\n\n.mdi-flashlight:before {\n  content: \"\\F244\";\n}\n\n.mdi-flashlight-off:before {\n  content: \"\\F245\";\n}\n\n.mdi-flask:before {\n  content: \"\\F093\";\n}\n\n.mdi-flask-empty:before {\n  content: \"\\F094\";\n}\n\n.mdi-flask-empty-outline:before {\n  content: \"\\F095\";\n}\n\n.mdi-flask-outline:before {\n  content: \"\\F096\";\n}\n\n.mdi-flattr:before {\n  content: \"\\F246\";\n}\n\n.mdi-flickr:before {\n  content: \"\\FCE3\";\n}\n\n.mdi-flip-to-back:before {\n  content: \"\\F247\";\n}\n\n.mdi-flip-to-front:before {\n  content: \"\\F248\";\n}\n\n.mdi-floor-lamp:before {\n  content: \"\\F8DC\";\n}\n\n.mdi-floor-plan:before {\n  content: \"\\F820\";\n}\n\n.mdi-floppy:before {\n  content: \"\\F249\";\n}\n\n.mdi-floppy-variant:before {\n  content: \"\\F9EE\";\n}\n\n.mdi-flower:before {\n  content: \"\\F24A\";\n}\n\n.mdi-flower-outline:before {\n  content: \"\\F9EF\";\n}\n\n.mdi-flower-poppy:before {\n  content: \"\\FCE4\";\n}\n\n.mdi-flower-tulip:before {\n  content: \"\\F9F0\";\n}\n\n.mdi-flower-tulip-outline:before {\n  content: \"\\F9F1\";\n}\n\n.mdi-folder:before {\n  content: \"\\F24B\";\n}\n\n.mdi-folder-account:before {\n  content: \"\\F24C\";\n}\n\n.mdi-folder-account-outline:before {\n  content: \"\\FB78\";\n}\n\n.mdi-folder-alert:before {\n  content: \"\\FDA8\";\n}\n\n.mdi-folder-alert-outline:before {\n  content: \"\\FDA9\";\n}\n\n.mdi-folder-clock:before {\n  content: \"\\FAB9\";\n}\n\n.mdi-folder-clock-outline:before {\n  content: \"\\FABA\";\n}\n\n.mdi-folder-download:before {\n  content: \"\\F24D\";\n}\n\n.mdi-folder-edit:before {\n  content: \"\\F8DD\";\n}\n\n.mdi-folder-edit-outline:before {\n  content: \"\\FDAA\";\n}\n\n.mdi-folder-google-drive:before {\n  content: \"\\F24E\";\n}\n\n.mdi-folder-image:before {\n  content: \"\\F24F\";\n}\n\n.mdi-folder-key:before {\n  content: \"\\F8AB\";\n}\n\n.mdi-folder-key-network:before {\n  content: \"\\F8AC\";\n}\n\n.mdi-folder-key-network-outline:before {\n  content: \"\\FC5C\";\n}\n\n.mdi-folder-lock:before {\n  content: \"\\F250\";\n}\n\n.mdi-folder-lock-open:before {\n  content: \"\\F251\";\n}\n\n.mdi-folder-move:before {\n  content: \"\\F252\";\n}\n\n.mdi-folder-multiple:before {\n  content: \"\\F253\";\n}\n\n.mdi-folder-multiple-image:before {\n  content: \"\\F254\";\n}\n\n.mdi-folder-multiple-outline:before {\n  content: \"\\F255\";\n}\n\n.mdi-folder-network:before {\n  content: \"\\F86F\";\n}\n\n.mdi-folder-network-outline:before {\n  content: \"\\FC5D\";\n}\n\n.mdi-folder-open:before {\n  content: \"\\F76F\";\n}\n\n.mdi-folder-open-outline:before {\n  content: \"\\FDAB\";\n}\n\n.mdi-folder-outline:before {\n  content: \"\\F256\";\n}\n\n.mdi-folder-plus:before {\n  content: \"\\F257\";\n}\n\n.mdi-folder-plus-outline:before {\n  content: \"\\FB79\";\n}\n\n.mdi-folder-pound:before {\n  content: \"\\FCE5\";\n}\n\n.mdi-folder-pound-outline:before {\n  content: \"\\FCE6\";\n}\n\n.mdi-folder-remove:before {\n  content: \"\\F258\";\n}\n\n.mdi-folder-remove-outline:before {\n  content: \"\\FB7A\";\n}\n\n.mdi-folder-search:before {\n  content: \"\\F967\";\n}\n\n.mdi-folder-search-outline:before {\n  content: \"\\F968\";\n}\n\n.mdi-folder-star:before {\n  content: \"\\F69C\";\n}\n\n.mdi-folder-star-outline:before {\n  content: \"\\FB7B\";\n}\n\n.mdi-folder-sync:before {\n  content: \"\\FCE7\";\n}\n\n.mdi-folder-sync-outline:before {\n  content: \"\\FCE8\";\n}\n\n.mdi-folder-text:before {\n  content: \"\\FC5E\";\n}\n\n.mdi-folder-text-outline:before {\n  content: \"\\FC5F\";\n}\n\n.mdi-folder-upload:before {\n  content: \"\\F259\";\n}\n\n.mdi-font-awesome:before {\n  content: \"\\F03A\";\n}\n\n.mdi-food:before {\n  content: \"\\F25A\";\n}\n\n.mdi-food-apple:before {\n  content: \"\\F25B\";\n}\n\n.mdi-food-apple-outline:before {\n  content: \"\\FC60\";\n}\n\n.mdi-food-croissant:before {\n  content: \"\\F7C7\";\n}\n\n.mdi-food-fork-drink:before {\n  content: \"\\F5F2\";\n}\n\n.mdi-food-off:before {\n  content: \"\\F5F3\";\n}\n\n.mdi-food-variant:before {\n  content: \"\\F25C\";\n}\n\n.mdi-football:before {\n  content: \"\\F25D\";\n}\n\n.mdi-football-australian:before {\n  content: \"\\F25E\";\n}\n\n.mdi-football-helmet:before {\n  content: \"\\F25F\";\n}\n\n.mdi-forklift:before {\n  content: \"\\F7C8\";\n}\n\n.mdi-format-align-bottom:before {\n  content: \"\\F752\";\n}\n\n.mdi-format-align-center:before {\n  content: \"\\F260\";\n}\n\n.mdi-format-align-justify:before {\n  content: \"\\F261\";\n}\n\n.mdi-format-align-left:before {\n  content: \"\\F262\";\n}\n\n.mdi-format-align-middle:before {\n  content: \"\\F753\";\n}\n\n.mdi-format-align-right:before {\n  content: \"\\F263\";\n}\n\n.mdi-format-align-top:before {\n  content: \"\\F754\";\n}\n\n.mdi-format-annotation-minus:before {\n  content: \"\\FABB\";\n}\n\n.mdi-format-annotation-plus:before {\n  content: \"\\F646\";\n}\n\n.mdi-format-bold:before {\n  content: \"\\F264\";\n}\n\n.mdi-format-clear:before {\n  content: \"\\F265\";\n}\n\n.mdi-format-color-fill:before {\n  content: \"\\F266\";\n}\n\n.mdi-format-color-highlight:before {\n  content: \"\\FE14\";\n}\n\n.mdi-format-color-text:before {\n  content: \"\\F69D\";\n}\n\n.mdi-format-columns:before {\n  content: \"\\F8DE\";\n}\n\n.mdi-format-float-center:before {\n  content: \"\\F267\";\n}\n\n.mdi-format-float-left:before {\n  content: \"\\F268\";\n}\n\n.mdi-format-float-none:before {\n  content: \"\\F269\";\n}\n\n.mdi-format-float-right:before {\n  content: \"\\F26A\";\n}\n\n.mdi-format-font:before {\n  content: \"\\F6D5\";\n}\n\n.mdi-format-font-size-decrease:before {\n  content: \"\\F9F2\";\n}\n\n.mdi-format-font-size-increase:before {\n  content: \"\\F9F3\";\n}\n\n.mdi-format-header-1:before {\n  content: \"\\F26B\";\n}\n\n.mdi-format-header-2:before {\n  content: \"\\F26C\";\n}\n\n.mdi-format-header-3:before {\n  content: \"\\F26D\";\n}\n\n.mdi-format-header-4:before {\n  content: \"\\F26E\";\n}\n\n.mdi-format-header-5:before {\n  content: \"\\F26F\";\n}\n\n.mdi-format-header-6:before {\n  content: \"\\F270\";\n}\n\n.mdi-format-header-decrease:before {\n  content: \"\\F271\";\n}\n\n.mdi-format-header-equal:before {\n  content: \"\\F272\";\n}\n\n.mdi-format-header-increase:before {\n  content: \"\\F273\";\n}\n\n.mdi-format-header-pound:before {\n  content: \"\\F274\";\n}\n\n.mdi-format-horizontal-align-center:before {\n  content: \"\\F61E\";\n}\n\n.mdi-format-horizontal-align-left:before {\n  content: \"\\F61F\";\n}\n\n.mdi-format-horizontal-align-right:before {\n  content: \"\\F620\";\n}\n\n.mdi-format-indent-decrease:before {\n  content: \"\\F275\";\n}\n\n.mdi-format-indent-increase:before {\n  content: \"\\F276\";\n}\n\n.mdi-format-italic:before {\n  content: \"\\F277\";\n}\n\n.mdi-format-letter-case:before {\n  content: \"\\FB19\";\n}\n\n.mdi-format-letter-case-lower:before {\n  content: \"\\FB1A\";\n}\n\n.mdi-format-letter-case-upper:before {\n  content: \"\\FB1B\";\n}\n\n.mdi-format-line-spacing:before {\n  content: \"\\F278\";\n}\n\n.mdi-format-line-style:before {\n  content: \"\\F5C8\";\n}\n\n.mdi-format-line-weight:before {\n  content: \"\\F5C9\";\n}\n\n.mdi-format-list-bulleted:before {\n  content: \"\\F279\";\n}\n\n.mdi-format-list-bulleted-square:before {\n  content: \"\\FDAC\";\n}\n\n.mdi-format-list-bulleted-type:before {\n  content: \"\\F27A\";\n}\n\n.mdi-format-list-checkbox:before {\n  content: \"\\F969\";\n}\n\n.mdi-format-list-checks:before {\n  content: \"\\F755\";\n}\n\n.mdi-format-list-numbered:before {\n  content: \"\\F27B\";\n}\n\n.mdi-format-list-numbered-rtl:before {\n  content: \"\\FCE9\";\n}\n\n.mdi-format-list-triangle:before {\n  content: \"\\FECF\";\n}\n\n.mdi-format-overline:before {\n  content: \"\\FED0\";\n}\n\n.mdi-format-page-break:before {\n  content: \"\\F6D6\";\n}\n\n.mdi-format-paint:before {\n  content: \"\\F27C\";\n}\n\n.mdi-format-paragraph:before {\n  content: \"\\F27D\";\n}\n\n.mdi-format-pilcrow:before {\n  content: \"\\F6D7\";\n}\n\n.mdi-format-quote-close:before {\n  content: \"\\F27E\";\n}\n\n.mdi-format-quote-open:before {\n  content: \"\\F756\";\n}\n\n.mdi-format-rotate-90:before {\n  content: \"\\F6A9\";\n}\n\n.mdi-format-section:before {\n  content: \"\\F69E\";\n}\n\n.mdi-format-size:before {\n  content: \"\\F27F\";\n}\n\n.mdi-format-strikethrough:before {\n  content: \"\\F280\";\n}\n\n.mdi-format-strikethrough-variant:before {\n  content: \"\\F281\";\n}\n\n.mdi-format-subscript:before {\n  content: \"\\F282\";\n}\n\n.mdi-format-superscript:before {\n  content: \"\\F283\";\n}\n\n.mdi-format-text:before {\n  content: \"\\F284\";\n}\n\n.mdi-format-text-rotation-down:before {\n  content: \"\\FD4F\";\n}\n\n.mdi-format-text-rotation-none:before {\n  content: \"\\FD50\";\n}\n\n.mdi-format-text-variant:before {\n  content: \"\\FE15\";\n}\n\n.mdi-format-text-wrapping-clip:before {\n  content: \"\\FCEA\";\n}\n\n.mdi-format-text-wrapping-overflow:before {\n  content: \"\\FCEB\";\n}\n\n.mdi-format-text-wrapping-wrap:before {\n  content: \"\\FCEC\";\n}\n\n.mdi-format-textbox:before {\n  content: \"\\FCED\";\n}\n\n.mdi-format-textdirection-l-to-r:before {\n  content: \"\\F285\";\n}\n\n.mdi-format-textdirection-r-to-l:before {\n  content: \"\\F286\";\n}\n\n.mdi-format-title:before {\n  content: \"\\F5F4\";\n}\n\n.mdi-format-underline:before {\n  content: \"\\F287\";\n}\n\n.mdi-format-vertical-align-bottom:before {\n  content: \"\\F621\";\n}\n\n.mdi-format-vertical-align-center:before {\n  content: \"\\F622\";\n}\n\n.mdi-format-vertical-align-top:before {\n  content: \"\\F623\";\n}\n\n.mdi-format-wrap-inline:before {\n  content: \"\\F288\";\n}\n\n.mdi-format-wrap-square:before {\n  content: \"\\F289\";\n}\n\n.mdi-format-wrap-tight:before {\n  content: \"\\F28A\";\n}\n\n.mdi-format-wrap-top-bottom:before {\n  content: \"\\F28B\";\n}\n\n.mdi-forum:before {\n  content: \"\\F28C\";\n}\n\n.mdi-forum-outline:before {\n  content: \"\\F821\";\n}\n\n.mdi-forward:before {\n  content: \"\\F28D\";\n}\n\n.mdi-forwardburger:before {\n  content: \"\\FD51\";\n}\n\n.mdi-fountain:before {\n  content: \"\\F96A\";\n}\n\n.mdi-fountain-pen:before {\n  content: \"\\FCEE\";\n}\n\n.mdi-fountain-pen-tip:before {\n  content: \"\\FCEF\";\n}\n\n.mdi-foursquare:before {\n  content: \"\\F28E\";\n}\n\n.mdi-freebsd:before {\n  content: \"\\F8DF\";\n}\n\n.mdi-frequently-asked-questions:before {\n  content: \"\\FED1\";\n}\n\n.mdi-fridge:before {\n  content: \"\\F290\";\n}\n\n.mdi-fridge-bottom:before {\n  content: \"\\F292\";\n}\n\n.mdi-fridge-outline:before {\n  content: \"\\F28F\";\n}\n\n.mdi-fridge-top:before {\n  content: \"\\F291\";\n}\n\n.mdi-fuel:before {\n  content: \"\\F7C9\";\n}\n\n.mdi-fullscreen:before {\n  content: \"\\F293\";\n}\n\n.mdi-fullscreen-exit:before {\n  content: \"\\F294\";\n}\n\n.mdi-function:before {\n  content: \"\\F295\";\n}\n\n.mdi-function-variant:before {\n  content: \"\\F870\";\n}\n\n.mdi-fuse:before {\n  content: \"\\FC61\";\n}\n\n.mdi-fuse-blade:before {\n  content: \"\\FC62\";\n}\n\n.mdi-gamepad:before {\n  content: \"\\F296\";\n}\n\n.mdi-gamepad-circle:before {\n  content: \"\\FE16\";\n}\n\n.mdi-gamepad-circle-down:before {\n  content: \"\\FE17\";\n}\n\n.mdi-gamepad-circle-left:before {\n  content: \"\\FE18\";\n}\n\n.mdi-gamepad-circle-outline:before {\n  content: \"\\FE19\";\n}\n\n.mdi-gamepad-circle-right:before {\n  content: \"\\FE1A\";\n}\n\n.mdi-gamepad-circle-up:before {\n  content: \"\\FE1B\";\n}\n\n.mdi-gamepad-down:before {\n  content: \"\\FE1C\";\n}\n\n.mdi-gamepad-left:before {\n  content: \"\\FE1D\";\n}\n\n.mdi-gamepad-right:before {\n  content: \"\\FE1E\";\n}\n\n.mdi-gamepad-round:before {\n  content: \"\\FE1F\";\n}\n\n.mdi-gamepad-round-down:before {\n  content: \"\\FE7E\";\n}\n\n.mdi-gamepad-round-left:before {\n  content: \"\\FE7F\";\n}\n\n.mdi-gamepad-round-outline:before {\n  content: \"\\FE80\";\n}\n\n.mdi-gamepad-round-right:before {\n  content: \"\\FE81\";\n}\n\n.mdi-gamepad-round-up:before {\n  content: \"\\FE82\";\n}\n\n.mdi-gamepad-square:before {\n  content: \"\\FED2\";\n}\n\n.mdi-gamepad-square-outline:before {\n  content: \"\\FED3\";\n}\n\n.mdi-gamepad-up:before {\n  content: \"\\FE83\";\n}\n\n.mdi-gamepad-variant:before {\n  content: \"\\F297\";\n}\n\n.mdi-gamepad-variant-outline:before {\n  content: \"\\FED4\";\n}\n\n.mdi-gantry-crane:before {\n  content: \"\\FDAD\";\n}\n\n.mdi-garage:before {\n  content: \"\\F6D8\";\n}\n\n.mdi-garage-alert:before {\n  content: \"\\F871\";\n}\n\n.mdi-garage-open:before {\n  content: \"\\F6D9\";\n}\n\n.mdi-gas-cylinder:before {\n  content: \"\\F647\";\n}\n\n.mdi-gas-station:before {\n  content: \"\\F298\";\n}\n\n.mdi-gas-station-outline:before {\n  content: \"\\FED5\";\n}\n\n.mdi-gate:before {\n  content: \"\\F299\";\n}\n\n.mdi-gate-and:before {\n  content: \"\\F8E0\";\n}\n\n.mdi-gate-nand:before {\n  content: \"\\F8E1\";\n}\n\n.mdi-gate-nor:before {\n  content: \"\\F8E2\";\n}\n\n.mdi-gate-not:before {\n  content: \"\\F8E3\";\n}\n\n.mdi-gate-or:before {\n  content: \"\\F8E4\";\n}\n\n.mdi-gate-xnor:before {\n  content: \"\\F8E5\";\n}\n\n.mdi-gate-xor:before {\n  content: \"\\F8E6\";\n}\n\n.mdi-gatsby:before {\n  content: \"\\FE84\";\n}\n\n.mdi-gauge:before {\n  content: \"\\F29A\";\n}\n\n.mdi-gauge-empty:before {\n  content: \"\\F872\";\n}\n\n.mdi-gauge-full:before {\n  content: \"\\F873\";\n}\n\n.mdi-gauge-low:before {\n  content: \"\\F874\";\n}\n\n.mdi-gavel:before {\n  content: \"\\F29B\";\n}\n\n.mdi-gender-female:before {\n  content: \"\\F29C\";\n}\n\n.mdi-gender-male:before {\n  content: \"\\F29D\";\n}\n\n.mdi-gender-male-female:before {\n  content: \"\\F29E\";\n}\n\n.mdi-gender-transgender:before {\n  content: \"\\F29F\";\n}\n\n.mdi-gentoo:before {\n  content: \"\\F8E7\";\n}\n\n.mdi-gesture:before {\n  content: \"\\F7CA\";\n}\n\n.mdi-gesture-double-tap:before {\n  content: \"\\F73B\";\n}\n\n.mdi-gesture-pinch:before {\n  content: \"\\FABC\";\n}\n\n.mdi-gesture-spread:before {\n  content: \"\\FABD\";\n}\n\n.mdi-gesture-swipe:before {\n  content: \"\\FD52\";\n}\n\n.mdi-gesture-swipe-down:before {\n  content: \"\\F73C\";\n}\n\n.mdi-gesture-swipe-horizontal:before {\n  content: \"\\FABE\";\n}\n\n.mdi-gesture-swipe-left:before {\n  content: \"\\F73D\";\n}\n\n.mdi-gesture-swipe-right:before {\n  content: \"\\F73E\";\n}\n\n.mdi-gesture-swipe-up:before {\n  content: \"\\F73F\";\n}\n\n.mdi-gesture-swipe-vertical:before {\n  content: \"\\FABF\";\n}\n\n.mdi-gesture-tap:before {\n  content: \"\\F740\";\n}\n\n.mdi-gesture-tap-hold:before {\n  content: \"\\FD53\";\n}\n\n.mdi-gesture-two-double-tap:before {\n  content: \"\\F741\";\n}\n\n.mdi-gesture-two-tap:before {\n  content: \"\\F742\";\n}\n\n.mdi-ghost:before {\n  content: \"\\F2A0\";\n}\n\n.mdi-ghost-off:before {\n  content: \"\\F9F4\";\n}\n\n.mdi-gif:before {\n  content: \"\\FD54\";\n}\n\n.mdi-gift:before {\n  content: \"\\FE85\";\n}\n\n.mdi-gift-outline:before {\n  content: \"\\F2A1\";\n}\n\n.mdi-git:before {\n  content: \"\\F2A2\";\n}\n\n.mdi-github-box:before {\n  content: \"\\F2A3\";\n}\n\n.mdi-github-circle:before {\n  content: \"\\F2A4\";\n}\n\n.mdi-github-face:before {\n  content: \"\\F6DA\";\n}\n\n.mdi-gitlab:before {\n  content: \"\\FB7C\";\n}\n\n.mdi-glass-cocktail:before {\n  content: \"\\F356\";\n}\n\n.mdi-glass-flute:before {\n  content: \"\\F2A5\";\n}\n\n.mdi-glass-mug:before {\n  content: \"\\F2A6\";\n}\n\n.mdi-glass-stange:before {\n  content: \"\\F2A7\";\n}\n\n.mdi-glass-tulip:before {\n  content: \"\\F2A8\";\n}\n\n.mdi-glass-wine:before {\n  content: \"\\F875\";\n}\n\n.mdi-glassdoor:before {\n  content: \"\\F2A9\";\n}\n\n.mdi-glasses:before {\n  content: \"\\F2AA\";\n}\n\n.mdi-globe-model:before {\n  content: \"\\F8E8\";\n}\n\n.mdi-gmail:before {\n  content: \"\\F2AB\";\n}\n\n.mdi-gnome:before {\n  content: \"\\F2AC\";\n}\n\n.mdi-go-kart:before {\n  content: \"\\FD55\";\n}\n\n.mdi-go-kart-track:before {\n  content: \"\\FD56\";\n}\n\n.mdi-gog:before {\n  content: \"\\FB7D\";\n}\n\n.mdi-golf:before {\n  content: \"\\F822\";\n}\n\n.mdi-gondola:before {\n  content: \"\\F685\";\n}\n\n.mdi-goodreads:before {\n  content: \"\\FD57\";\n}\n\n.mdi-google:before {\n  content: \"\\F2AD\";\n}\n\n.mdi-google-adwords:before {\n  content: \"\\FC63\";\n}\n\n.mdi-google-allo:before {\n  content: \"\\F801\";\n}\n\n.mdi-google-analytics:before {\n  content: \"\\F7CB\";\n}\n\n.mdi-google-assistant:before {\n  content: \"\\F7CC\";\n}\n\n.mdi-google-cardboard:before {\n  content: \"\\F2AE\";\n}\n\n.mdi-google-chrome:before {\n  content: \"\\F2AF\";\n}\n\n.mdi-google-circles:before {\n  content: \"\\F2B0\";\n}\n\n.mdi-google-circles-communities:before {\n  content: \"\\F2B1\";\n}\n\n.mdi-google-circles-extended:before {\n  content: \"\\F2B2\";\n}\n\n.mdi-google-circles-group:before {\n  content: \"\\F2B3\";\n}\n\n.mdi-google-classroom:before {\n  content: \"\\F2C0\";\n}\n\n.mdi-google-controller:before {\n  content: \"\\F2B4\";\n}\n\n.mdi-google-controller-off:before {\n  content: \"\\F2B5\";\n}\n\n.mdi-google-drive:before {\n  content: \"\\F2B6\";\n}\n\n.mdi-google-earth:before {\n  content: \"\\F2B7\";\n}\n\n.mdi-google-fit:before {\n  content: \"\\F96B\";\n}\n\n.mdi-google-glass:before {\n  content: \"\\F2B8\";\n}\n\n.mdi-google-hangouts:before {\n  content: \"\\F2C9\";\n}\n\n.mdi-google-home:before {\n  content: \"\\F823\";\n}\n\n.mdi-google-keep:before {\n  content: \"\\F6DB\";\n}\n\n.mdi-google-lens:before {\n  content: \"\\F9F5\";\n}\n\n.mdi-google-maps:before {\n  content: \"\\F5F5\";\n}\n\n.mdi-google-nearby:before {\n  content: \"\\F2B9\";\n}\n\n.mdi-google-pages:before {\n  content: \"\\F2BA\";\n}\n\n.mdi-google-photos:before {\n  content: \"\\F6DC\";\n}\n\n.mdi-google-physical-web:before {\n  content: \"\\F2BB\";\n}\n\n.mdi-google-play:before {\n  content: \"\\F2BC\";\n}\n\n.mdi-google-plus:before {\n  content: \"\\F2BD\";\n}\n\n.mdi-google-plus-box:before {\n  content: \"\\F2BE\";\n}\n\n.mdi-google-podcast:before {\n  content: \"\\FED6\";\n}\n\n.mdi-google-spreadsheet:before {\n  content: \"\\F9F6\";\n}\n\n.mdi-google-street-view:before {\n  content: \"\\FC64\";\n}\n\n.mdi-google-translate:before {\n  content: \"\\F2BF\";\n}\n\n.mdi-gpu:before {\n  content: \"\\F8AD\";\n}\n\n.mdi-gradient:before {\n  content: \"\\F69F\";\n}\n\n.mdi-grain:before {\n  content: \"\\FD58\";\n}\n\n.mdi-graphql:before {\n  content: \"\\F876\";\n}\n\n.mdi-grave-stone:before {\n  content: \"\\FB7E\";\n}\n\n.mdi-grease-pencil:before {\n  content: \"\\F648\";\n}\n\n.mdi-greater-than:before {\n  content: \"\\F96C\";\n}\n\n.mdi-greater-than-or-equal:before {\n  content: \"\\F96D\";\n}\n\n.mdi-grid:before {\n  content: \"\\F2C1\";\n}\n\n.mdi-grid-large:before {\n  content: \"\\F757\";\n}\n\n.mdi-grid-off:before {\n  content: \"\\F2C2\";\n}\n\n.mdi-grill:before {\n  content: \"\\FE86\";\n}\n\n.mdi-group:before {\n  content: \"\\F2C3\";\n}\n\n.mdi-guitar-acoustic:before {\n  content: \"\\F770\";\n}\n\n.mdi-guitar-electric:before {\n  content: \"\\F2C4\";\n}\n\n.mdi-guitar-pick:before {\n  content: \"\\F2C5\";\n}\n\n.mdi-guitar-pick-outline:before {\n  content: \"\\F2C6\";\n}\n\n.mdi-guy-fawkes-mask:before {\n  content: \"\\F824\";\n}\n\n.mdi-hackernews:before {\n  content: \"\\F624\";\n}\n\n.mdi-hail:before {\n  content: \"\\FAC0\";\n}\n\n.mdi-halloween:before {\n  content: \"\\FB7F\";\n}\n\n.mdi-hamburger:before {\n  content: \"\\F684\";\n}\n\n.mdi-hammer:before {\n  content: \"\\F8E9\";\n}\n\n.mdi-hand:before {\n  content: \"\\FA4E\";\n}\n\n.mdi-hand-left:before {\n  content: \"\\FE87\";\n}\n\n.mdi-hand-okay:before {\n  content: \"\\FA4F\";\n}\n\n.mdi-hand-peace:before {\n  content: \"\\FA50\";\n}\n\n.mdi-hand-peace-variant:before {\n  content: \"\\FA51\";\n}\n\n.mdi-hand-pointing-down:before {\n  content: \"\\FA52\";\n}\n\n.mdi-hand-pointing-left:before {\n  content: \"\\FA53\";\n}\n\n.mdi-hand-pointing-right:before {\n  content: \"\\F2C7\";\n}\n\n.mdi-hand-pointing-up:before {\n  content: \"\\FA54\";\n}\n\n.mdi-hand-right:before {\n  content: \"\\FE88\";\n}\n\n.mdi-hand-saw:before {\n  content: \"\\FE89\";\n}\n\n.mdi-hanger:before {\n  content: \"\\F2C8\";\n}\n\n.mdi-hard-hat:before {\n  content: \"\\F96E\";\n}\n\n.mdi-harddisk:before {\n  content: \"\\F2CA\";\n}\n\n.mdi-hat-fedora:before {\n  content: \"\\FB80\";\n}\n\n.mdi-hazard-lights:before {\n  content: \"\\FC65\";\n}\n\n.mdi-hdr:before {\n  content: \"\\FD59\";\n}\n\n.mdi-hdr-off:before {\n  content: \"\\FD5A\";\n}\n\n.mdi-headphones:before {\n  content: \"\\F2CB\";\n}\n\n.mdi-headphones-bluetooth:before {\n  content: \"\\F96F\";\n}\n\n.mdi-headphones-box:before {\n  content: \"\\F2CC\";\n}\n\n.mdi-headphones-off:before {\n  content: \"\\F7CD\";\n}\n\n.mdi-headphones-settings:before {\n  content: \"\\F2CD\";\n}\n\n.mdi-headset:before {\n  content: \"\\F2CE\";\n}\n\n.mdi-headset-dock:before {\n  content: \"\\F2CF\";\n}\n\n.mdi-headset-off:before {\n  content: \"\\F2D0\";\n}\n\n.mdi-heart:before {\n  content: \"\\F2D1\";\n}\n\n.mdi-heart-box:before {\n  content: \"\\F2D2\";\n}\n\n.mdi-heart-box-outline:before {\n  content: \"\\F2D3\";\n}\n\n.mdi-heart-broken:before {\n  content: \"\\F2D4\";\n}\n\n.mdi-heart-broken-outline:before {\n  content: \"\\FCF0\";\n}\n\n.mdi-heart-circle:before {\n  content: \"\\F970\";\n}\n\n.mdi-heart-circle-outline:before {\n  content: \"\\F971\";\n}\n\n.mdi-heart-half:before {\n  content: \"\\F6DE\";\n}\n\n.mdi-heart-half-full:before {\n  content: \"\\F6DD\";\n}\n\n.mdi-heart-half-outline:before {\n  content: \"\\F6DF\";\n}\n\n.mdi-heart-multiple:before {\n  content: \"\\FA55\";\n}\n\n.mdi-heart-multiple-outline:before {\n  content: \"\\FA56\";\n}\n\n.mdi-heart-off:before {\n  content: \"\\F758\";\n}\n\n.mdi-heart-outline:before {\n  content: \"\\F2D5\";\n}\n\n.mdi-heart-pulse:before {\n  content: \"\\F5F6\";\n}\n\n.mdi-helicopter:before {\n  content: \"\\FAC1\";\n}\n\n.mdi-help:before {\n  content: \"\\F2D6\";\n}\n\n.mdi-help-box:before {\n  content: \"\\F78A\";\n}\n\n.mdi-help-circle:before {\n  content: \"\\F2D7\";\n}\n\n.mdi-help-circle-outline:before {\n  content: \"\\F625\";\n}\n\n.mdi-help-network:before {\n  content: \"\\F6F4\";\n}\n\n.mdi-help-network-outline:before {\n  content: \"\\FC66\";\n}\n\n.mdi-help-rhombus:before {\n  content: \"\\FB81\";\n}\n\n.mdi-help-rhombus-outline:before {\n  content: \"\\FB82\";\n}\n\n.mdi-hexagon:before {\n  content: \"\\F2D8\";\n}\n\n.mdi-hexagon-multiple:before {\n  content: \"\\F6E0\";\n}\n\n.mdi-hexagon-outline:before {\n  content: \"\\F2D9\";\n}\n\n.mdi-hexagon-slice-1:before {\n  content: \"\\FAC2\";\n}\n\n.mdi-hexagon-slice-2:before {\n  content: \"\\FAC3\";\n}\n\n.mdi-hexagon-slice-3:before {\n  content: \"\\FAC4\";\n}\n\n.mdi-hexagon-slice-4:before {\n  content: \"\\FAC5\";\n}\n\n.mdi-hexagon-slice-5:before {\n  content: \"\\FAC6\";\n}\n\n.mdi-hexagon-slice-6:before {\n  content: \"\\FAC7\";\n}\n\n.mdi-hexagram:before {\n  content: \"\\FAC8\";\n}\n\n.mdi-hexagram-outline:before {\n  content: \"\\FAC9\";\n}\n\n.mdi-high-definition:before {\n  content: \"\\F7CE\";\n}\n\n.mdi-high-definition-box:before {\n  content: \"\\F877\";\n}\n\n.mdi-highway:before {\n  content: \"\\F5F7\";\n}\n\n.mdi-hiking:before {\n  content: \"\\FD5B\";\n}\n\n.mdi-hinduism:before {\n  content: \"\\F972\";\n}\n\n.mdi-history:before {\n  content: \"\\F2DA\";\n}\n\n.mdi-hockey-puck:before {\n  content: \"\\F878\";\n}\n\n.mdi-hockey-sticks:before {\n  content: \"\\F879\";\n}\n\n.mdi-hololens:before {\n  content: \"\\F2DB\";\n}\n\n.mdi-home:before {\n  content: \"\\F2DC\";\n}\n\n.mdi-home-account:before {\n  content: \"\\F825\";\n}\n\n.mdi-home-alert:before {\n  content: \"\\F87A\";\n}\n\n.mdi-home-analytics:before {\n  content: \"\\FED7\";\n}\n\n.mdi-home-assistant:before {\n  content: \"\\F7CF\";\n}\n\n.mdi-home-automation:before {\n  content: \"\\F7D0\";\n}\n\n.mdi-home-circle:before {\n  content: \"\\F7D1\";\n}\n\n.mdi-home-city:before {\n  content: \"\\FCF1\";\n}\n\n.mdi-home-city-outline:before {\n  content: \"\\FCF2\";\n}\n\n.mdi-home-currency-usd:before {\n  content: \"\\F8AE\";\n}\n\n.mdi-home-floor-0:before {\n  content: \"\\FDAE\";\n}\n\n.mdi-home-floor-1:before {\n  content: \"\\FD5C\";\n}\n\n.mdi-home-floor-2:before {\n  content: \"\\FD5D\";\n}\n\n.mdi-home-floor-3:before {\n  content: \"\\FD5E\";\n}\n\n.mdi-home-floor-a:before {\n  content: \"\\FD5F\";\n}\n\n.mdi-home-floor-b:before {\n  content: \"\\FD60\";\n}\n\n.mdi-home-floor-g:before {\n  content: \"\\FD61\";\n}\n\n.mdi-home-floor-l:before {\n  content: \"\\FD62\";\n}\n\n.mdi-home-floor-negative-1:before {\n  content: \"\\FDAF\";\n}\n\n.mdi-home-group:before {\n  content: \"\\FDB0\";\n}\n\n.mdi-home-heart:before {\n  content: \"\\F826\";\n}\n\n.mdi-home-lock:before {\n  content: \"\\F8EA\";\n}\n\n.mdi-home-lock-open:before {\n  content: \"\\F8EB\";\n}\n\n.mdi-home-map-marker:before {\n  content: \"\\F5F8\";\n}\n\n.mdi-home-minus:before {\n  content: \"\\F973\";\n}\n\n.mdi-home-modern:before {\n  content: \"\\F2DD\";\n}\n\n.mdi-home-outline:before {\n  content: \"\\F6A0\";\n}\n\n.mdi-home-plus:before {\n  content: \"\\F974\";\n}\n\n.mdi-home-variant:before {\n  content: \"\\F2DE\";\n}\n\n.mdi-home-variant-outline:before {\n  content: \"\\FB83\";\n}\n\n.mdi-hook:before {\n  content: \"\\F6E1\";\n}\n\n.mdi-hook-off:before {\n  content: \"\\F6E2\";\n}\n\n.mdi-hops:before {\n  content: \"\\F2DF\";\n}\n\n.mdi-horseshoe:before {\n  content: \"\\FA57\";\n}\n\n.mdi-hospital:before {\n  content: \"\\F2E0\";\n}\n\n.mdi-hospital-building:before {\n  content: \"\\F2E1\";\n}\n\n.mdi-hospital-marker:before {\n  content: \"\\F2E2\";\n}\n\n.mdi-hot-tub:before {\n  content: \"\\F827\";\n}\n\n.mdi-hotel:before {\n  content: \"\\F2E3\";\n}\n\n.mdi-houzz:before {\n  content: \"\\F2E4\";\n}\n\n.mdi-houzz-box:before {\n  content: \"\\F2E5\";\n}\n\n.mdi-hubspot:before {\n  content: \"\\FCF3\";\n}\n\n.mdi-hulu:before {\n  content: \"\\F828\";\n}\n\n.mdi-human:before {\n  content: \"\\F2E6\";\n}\n\n.mdi-human-child:before {\n  content: \"\\F2E7\";\n}\n\n.mdi-human-female:before {\n  content: \"\\F649\";\n}\n\n.mdi-human-female-boy:before {\n  content: \"\\FA58\";\n}\n\n.mdi-human-female-female:before {\n  content: \"\\FA59\";\n}\n\n.mdi-human-female-girl:before {\n  content: \"\\FA5A\";\n}\n\n.mdi-human-greeting:before {\n  content: \"\\F64A\";\n}\n\n.mdi-human-handsdown:before {\n  content: \"\\F64B\";\n}\n\n.mdi-human-handsup:before {\n  content: \"\\F64C\";\n}\n\n.mdi-human-male:before {\n  content: \"\\F64D\";\n}\n\n.mdi-human-male-boy:before {\n  content: \"\\FA5B\";\n}\n\n.mdi-human-male-female:before {\n  content: \"\\F2E8\";\n}\n\n.mdi-human-male-girl:before {\n  content: \"\\FA5C\";\n}\n\n.mdi-human-male-male:before {\n  content: \"\\FA5D\";\n}\n\n.mdi-human-pregnant:before {\n  content: \"\\F5CF\";\n}\n\n.mdi-humble-bundle:before {\n  content: \"\\F743\";\n}\n\n.mdi-ice-cream:before {\n  content: \"\\F829\";\n}\n\n.mdi-iframe:before {\n  content: \"\\FC67\";\n}\n\n.mdi-iframe-outline:before {\n  content: \"\\FC68\";\n}\n\n.mdi-image:before {\n  content: \"\\F2E9\";\n}\n\n.mdi-image-album:before {\n  content: \"\\F2EA\";\n}\n\n.mdi-image-area:before {\n  content: \"\\F2EB\";\n}\n\n.mdi-image-area-close:before {\n  content: \"\\F2EC\";\n}\n\n.mdi-image-broken:before {\n  content: \"\\F2ED\";\n}\n\n.mdi-image-broken-variant:before {\n  content: \"\\F2EE\";\n}\n\n.mdi-image-filter:before {\n  content: \"\\F2EF\";\n}\n\n.mdi-image-filter-black-white:before {\n  content: \"\\F2F0\";\n}\n\n.mdi-image-filter-center-focus:before {\n  content: \"\\F2F1\";\n}\n\n.mdi-image-filter-center-focus-weak:before {\n  content: \"\\F2F2\";\n}\n\n.mdi-image-filter-drama:before {\n  content: \"\\F2F3\";\n}\n\n.mdi-image-filter-frames:before {\n  content: \"\\F2F4\";\n}\n\n.mdi-image-filter-hdr:before {\n  content: \"\\F2F5\";\n}\n\n.mdi-image-filter-none:before {\n  content: \"\\F2F6\";\n}\n\n.mdi-image-filter-tilt-shift:before {\n  content: \"\\F2F7\";\n}\n\n.mdi-image-filter-vintage:before {\n  content: \"\\F2F8\";\n}\n\n.mdi-image-frame:before {\n  content: \"\\FE8A\";\n}\n\n.mdi-image-move:before {\n  content: \"\\F9F7\";\n}\n\n.mdi-image-multiple:before {\n  content: \"\\F2F9\";\n}\n\n.mdi-image-off:before {\n  content: \"\\F82A\";\n}\n\n.mdi-image-outline:before {\n  content: \"\\F975\";\n}\n\n.mdi-image-plus:before {\n  content: \"\\F87B\";\n}\n\n.mdi-image-search:before {\n  content: \"\\F976\";\n}\n\n.mdi-image-search-outline:before {\n  content: \"\\F977\";\n}\n\n.mdi-image-size-select-actual:before {\n  content: \"\\FC69\";\n}\n\n.mdi-image-size-select-large:before {\n  content: \"\\FC6A\";\n}\n\n.mdi-image-size-select-small:before {\n  content: \"\\FC6B\";\n}\n\n.mdi-import:before {\n  content: \"\\F2FA\";\n}\n\n.mdi-inbox:before {\n  content: \"\\F686\";\n}\n\n.mdi-inbox-arrow-down:before {\n  content: \"\\F2FB\";\n}\n\n.mdi-inbox-arrow-up:before {\n  content: \"\\F3D1\";\n}\n\n.mdi-inbox-multiple:before {\n  content: \"\\F8AF\";\n}\n\n.mdi-inbox-multiple-outline:before {\n  content: \"\\FB84\";\n}\n\n.mdi-incognito:before {\n  content: \"\\F5F9\";\n}\n\n.mdi-infinity:before {\n  content: \"\\F6E3\";\n}\n\n.mdi-information:before {\n  content: \"\\F2FC\";\n}\n\n.mdi-information-outline:before {\n  content: \"\\F2FD\";\n}\n\n.mdi-information-variant:before {\n  content: \"\\F64E\";\n}\n\n.mdi-instagram:before {\n  content: \"\\F2FE\";\n}\n\n.mdi-instapaper:before {\n  content: \"\\F2FF\";\n}\n\n.mdi-internet-explorer:before {\n  content: \"\\F300\";\n}\n\n.mdi-invert-colors:before {\n  content: \"\\F301\";\n}\n\n.mdi-invert-colors-off:before {\n  content: \"\\FE8B\";\n}\n\n.mdi-ip:before {\n  content: \"\\FA5E\";\n}\n\n.mdi-ip-network:before {\n  content: \"\\FA5F\";\n}\n\n.mdi-ip-network-outline:before {\n  content: \"\\FC6C\";\n}\n\n.mdi-ipod:before {\n  content: \"\\FC6D\";\n}\n\n.mdi-islam:before {\n  content: \"\\F978\";\n}\n\n.mdi-itunes:before {\n  content: \"\\F676\";\n}\n\n.mdi-jabber:before {\n  content: \"\\FDB1\";\n}\n\n.mdi-jeepney:before {\n  content: \"\\F302\";\n}\n\n.mdi-jira:before {\n  content: \"\\F303\";\n}\n\n.mdi-jquery:before {\n  content: \"\\F87C\";\n}\n\n.mdi-jsfiddle:before {\n  content: \"\\F304\";\n}\n\n.mdi-json:before {\n  content: \"\\F626\";\n}\n\n.mdi-judaism:before {\n  content: \"\\F979\";\n}\n\n.mdi-kabaddi:before {\n  content: \"\\FD63\";\n}\n\n.mdi-karate:before {\n  content: \"\\F82B\";\n}\n\n.mdi-keg:before {\n  content: \"\\F305\";\n}\n\n.mdi-kettle:before {\n  content: \"\\F5FA\";\n}\n\n.mdi-key:before {\n  content: \"\\F306\";\n}\n\n.mdi-key-change:before {\n  content: \"\\F307\";\n}\n\n.mdi-key-minus:before {\n  content: \"\\F308\";\n}\n\n.mdi-key-outline:before {\n  content: \"\\FDB2\";\n}\n\n.mdi-key-plus:before {\n  content: \"\\F309\";\n}\n\n.mdi-key-remove:before {\n  content: \"\\F30A\";\n}\n\n.mdi-key-variant:before {\n  content: \"\\F30B\";\n}\n\n.mdi-keyboard:before {\n  content: \"\\F30C\";\n}\n\n.mdi-keyboard-backspace:before {\n  content: \"\\F30D\";\n}\n\n.mdi-keyboard-caps:before {\n  content: \"\\F30E\";\n}\n\n.mdi-keyboard-close:before {\n  content: \"\\F30F\";\n}\n\n.mdi-keyboard-off:before {\n  content: \"\\F310\";\n}\n\n.mdi-keyboard-off-outline:before {\n  content: \"\\FE8C\";\n}\n\n.mdi-keyboard-outline:before {\n  content: \"\\F97A\";\n}\n\n.mdi-keyboard-return:before {\n  content: \"\\F311\";\n}\n\n.mdi-keyboard-settings:before {\n  content: \"\\F9F8\";\n}\n\n.mdi-keyboard-settings-outline:before {\n  content: \"\\F9F9\";\n}\n\n.mdi-keyboard-tab:before {\n  content: \"\\F312\";\n}\n\n.mdi-keyboard-variant:before {\n  content: \"\\F313\";\n}\n\n.mdi-kickstarter:before {\n  content: \"\\F744\";\n}\n\n.mdi-knife:before {\n  content: \"\\F9FA\";\n}\n\n.mdi-knife-military:before {\n  content: \"\\F9FB\";\n}\n\n.mdi-kodi:before {\n  content: \"\\F314\";\n}\n\n.mdi-label:before {\n  content: \"\\F315\";\n}\n\n.mdi-label-off:before {\n  content: \"\\FACA\";\n}\n\n.mdi-label-off-outline:before {\n  content: \"\\FACB\";\n}\n\n.mdi-label-outline:before {\n  content: \"\\F316\";\n}\n\n.mdi-label-variant:before {\n  content: \"\\FACC\";\n}\n\n.mdi-label-variant-outline:before {\n  content: \"\\FACD\";\n}\n\n.mdi-ladybug:before {\n  content: \"\\F82C\";\n}\n\n.mdi-lambda:before {\n  content: \"\\F627\";\n}\n\n.mdi-lamp:before {\n  content: \"\\F6B4\";\n}\n\n.mdi-lan:before {\n  content: \"\\F317\";\n}\n\n.mdi-lan-connect:before {\n  content: \"\\F318\";\n}\n\n.mdi-lan-disconnect:before {\n  content: \"\\F319\";\n}\n\n.mdi-lan-pending:before {\n  content: \"\\F31A\";\n}\n\n.mdi-language-c:before {\n  content: \"\\F671\";\n}\n\n.mdi-language-cpp:before {\n  content: \"\\F672\";\n}\n\n.mdi-language-csharp:before {\n  content: \"\\F31B\";\n}\n\n.mdi-language-css3:before {\n  content: \"\\F31C\";\n}\n\n.mdi-language-go:before {\n  content: \"\\F7D2\";\n}\n\n.mdi-language-haskell:before {\n  content: \"\\FC6E\";\n}\n\n.mdi-language-html5:before {\n  content: \"\\F31D\";\n}\n\n.mdi-language-java:before {\n  content: \"\\FB1C\";\n}\n\n.mdi-language-javascript:before {\n  content: \"\\F31E\";\n}\n\n.mdi-language-lua:before {\n  content: \"\\F8B0\";\n}\n\n.mdi-language-php:before {\n  content: \"\\F31F\";\n}\n\n.mdi-language-python:before {\n  content: \"\\F320\";\n}\n\n.mdi-language-python-text:before {\n  content: \"\\F321\";\n}\n\n.mdi-language-r:before {\n  content: \"\\F7D3\";\n}\n\n.mdi-language-ruby-on-rails:before {\n  content: \"\\FACE\";\n}\n\n.mdi-language-swift:before {\n  content: \"\\F6E4\";\n}\n\n.mdi-language-typescript:before {\n  content: \"\\F6E5\";\n}\n\n.mdi-laptop:before {\n  content: \"\\F322\";\n}\n\n.mdi-laptop-chromebook:before {\n  content: \"\\F323\";\n}\n\n.mdi-laptop-mac:before {\n  content: \"\\F324\";\n}\n\n.mdi-laptop-off:before {\n  content: \"\\F6E6\";\n}\n\n.mdi-laptop-windows:before {\n  content: \"\\F325\";\n}\n\n.mdi-laravel:before {\n  content: \"\\FACF\";\n}\n\n.mdi-lastfm:before {\n  content: \"\\F326\";\n}\n\n.mdi-lastpass:before {\n  content: \"\\F446\";\n}\n\n.mdi-launch:before {\n  content: \"\\F327\";\n}\n\n.mdi-lava-lamp:before {\n  content: \"\\F7D4\";\n}\n\n.mdi-layers:before {\n  content: \"\\F328\";\n}\n\n.mdi-layers-minus:before {\n  content: \"\\FE8D\";\n}\n\n.mdi-layers-off:before {\n  content: \"\\F329\";\n}\n\n.mdi-layers-off-outline:before {\n  content: \"\\F9FC\";\n}\n\n.mdi-layers-outline:before {\n  content: \"\\F9FD\";\n}\n\n.mdi-layers-plus:before {\n  content: \"\\FE30\";\n}\n\n.mdi-layers-remove:before {\n  content: \"\\FE31\";\n}\n\n.mdi-lead-pencil:before {\n  content: \"\\F64F\";\n}\n\n.mdi-leaf:before {\n  content: \"\\F32A\";\n}\n\n.mdi-leaf-maple:before {\n  content: \"\\FC6F\";\n}\n\n.mdi-leak:before {\n  content: \"\\FDB3\";\n}\n\n.mdi-leak-off:before {\n  content: \"\\FDB4\";\n}\n\n.mdi-led-off:before {\n  content: \"\\F32B\";\n}\n\n.mdi-led-on:before {\n  content: \"\\F32C\";\n}\n\n.mdi-led-outline:before {\n  content: \"\\F32D\";\n}\n\n.mdi-led-strip:before {\n  content: \"\\F7D5\";\n}\n\n.mdi-led-variant-off:before {\n  content: \"\\F32E\";\n}\n\n.mdi-led-variant-on:before {\n  content: \"\\F32F\";\n}\n\n.mdi-led-variant-outline:before {\n  content: \"\\F330\";\n}\n\n.mdi-less-than:before {\n  content: \"\\F97B\";\n}\n\n.mdi-less-than-or-equal:before {\n  content: \"\\F97C\";\n}\n\n.mdi-library:before {\n  content: \"\\F331\";\n}\n\n.mdi-library-books:before {\n  content: \"\\F332\";\n}\n\n.mdi-library-movie:before {\n  content: \"\\FCF4\";\n}\n\n.mdi-library-music:before {\n  content: \"\\F333\";\n}\n\n.mdi-library-plus:before {\n  content: \"\\F334\";\n}\n\n.mdi-library-shelves:before {\n  content: \"\\FB85\";\n}\n\n.mdi-library-video:before {\n  content: \"\\FCF5\";\n}\n\n.mdi-lifebuoy:before {\n  content: \"\\F87D\";\n}\n\n.mdi-light-switch:before {\n  content: \"\\F97D\";\n}\n\n.mdi-lightbulb:before {\n  content: \"\\F335\";\n}\n\n.mdi-lightbulb-off:before {\n  content: \"\\FE32\";\n}\n\n.mdi-lightbulb-off-outline:before {\n  content: \"\\FE33\";\n}\n\n.mdi-lightbulb-on:before {\n  content: \"\\F6E7\";\n}\n\n.mdi-lightbulb-on-outline:before {\n  content: \"\\F6E8\";\n}\n\n.mdi-lightbulb-outline:before {\n  content: \"\\F336\";\n}\n\n.mdi-lighthouse:before {\n  content: \"\\F9FE\";\n}\n\n.mdi-lighthouse-on:before {\n  content: \"\\F9FF\";\n}\n\n.mdi-link:before {\n  content: \"\\F337\";\n}\n\n.mdi-link-box:before {\n  content: \"\\FCF6\";\n}\n\n.mdi-link-box-outline:before {\n  content: \"\\FCF7\";\n}\n\n.mdi-link-box-variant:before {\n  content: \"\\FCF8\";\n}\n\n.mdi-link-box-variant-outline:before {\n  content: \"\\FCF9\";\n}\n\n.mdi-link-off:before {\n  content: \"\\F338\";\n}\n\n.mdi-link-plus:before {\n  content: \"\\FC70\";\n}\n\n.mdi-link-variant:before {\n  content: \"\\F339\";\n}\n\n.mdi-link-variant-off:before {\n  content: \"\\F33A\";\n}\n\n.mdi-linkedin:before {\n  content: \"\\F33B\";\n}\n\n.mdi-linkedin-box:before {\n  content: \"\\F33C\";\n}\n\n.mdi-linux:before {\n  content: \"\\F33D\";\n}\n\n.mdi-linux-mint:before {\n  content: \"\\F8EC\";\n}\n\n.mdi-litecoin:before {\n  content: \"\\FA60\";\n}\n\n.mdi-loading:before {\n  content: \"\\F771\";\n}\n\n.mdi-lock:before {\n  content: \"\\F33E\";\n}\n\n.mdi-lock-alert:before {\n  content: \"\\F8ED\";\n}\n\n.mdi-lock-clock:before {\n  content: \"\\F97E\";\n}\n\n.mdi-lock-open:before {\n  content: \"\\F33F\";\n}\n\n.mdi-lock-open-outline:before {\n  content: \"\\F340\";\n}\n\n.mdi-lock-outline:before {\n  content: \"\\F341\";\n}\n\n.mdi-lock-pattern:before {\n  content: \"\\F6E9\";\n}\n\n.mdi-lock-plus:before {\n  content: \"\\F5FB\";\n}\n\n.mdi-lock-question:before {\n  content: \"\\F8EE\";\n}\n\n.mdi-lock-reset:before {\n  content: \"\\F772\";\n}\n\n.mdi-lock-smart:before {\n  content: \"\\F8B1\";\n}\n\n.mdi-locker:before {\n  content: \"\\F7D6\";\n}\n\n.mdi-locker-multiple:before {\n  content: \"\\F7D7\";\n}\n\n.mdi-login:before {\n  content: \"\\F342\";\n}\n\n.mdi-login-variant:before {\n  content: \"\\F5FC\";\n}\n\n.mdi-logout:before {\n  content: \"\\F343\";\n}\n\n.mdi-logout-variant:before {\n  content: \"\\F5FD\";\n}\n\n.mdi-looks:before {\n  content: \"\\F344\";\n}\n\n.mdi-loop:before {\n  content: \"\\F6EA\";\n}\n\n.mdi-loupe:before {\n  content: \"\\F345\";\n}\n\n.mdi-lumx:before {\n  content: \"\\F346\";\n}\n\n.mdi-lyft:before {\n  content: \"\\FB1D\";\n}\n\n.mdi-magnet:before {\n  content: \"\\F347\";\n}\n\n.mdi-magnet-on:before {\n  content: \"\\F348\";\n}\n\n.mdi-magnify:before {\n  content: \"\\F349\";\n}\n\n.mdi-magnify-close:before {\n  content: \"\\F97F\";\n}\n\n.mdi-magnify-minus:before {\n  content: \"\\F34A\";\n}\n\n.mdi-magnify-minus-cursor:before {\n  content: \"\\FA61\";\n}\n\n.mdi-magnify-minus-outline:before {\n  content: \"\\F6EB\";\n}\n\n.mdi-magnify-plus:before {\n  content: \"\\F34B\";\n}\n\n.mdi-magnify-plus-cursor:before {\n  content: \"\\FA62\";\n}\n\n.mdi-magnify-plus-outline:before {\n  content: \"\\F6EC\";\n}\n\n.mdi-mail:before {\n  content: \"\\FED8\";\n}\n\n.mdi-mail-ru:before {\n  content: \"\\F34C\";\n}\n\n.mdi-mailbox:before {\n  content: \"\\F6ED\";\n}\n\n.mdi-mailbox-open:before {\n  content: \"\\FD64\";\n}\n\n.mdi-mailbox-open-outline:before {\n  content: \"\\FD65\";\n}\n\n.mdi-mailbox-open-up:before {\n  content: \"\\FD66\";\n}\n\n.mdi-mailbox-open-up-outline:before {\n  content: \"\\FD67\";\n}\n\n.mdi-mailbox-outline:before {\n  content: \"\\FD68\";\n}\n\n.mdi-mailbox-up:before {\n  content: \"\\FD69\";\n}\n\n.mdi-mailbox-up-outline:before {\n  content: \"\\FD6A\";\n}\n\n.mdi-map:before {\n  content: \"\\F34D\";\n}\n\n.mdi-map-check:before {\n  content: \"\\FED9\";\n}\n\n.mdi-map-check-outline:before {\n  content: \"\\FEDA\";\n}\n\n.mdi-map-clock:before {\n  content: \"\\FCFA\";\n}\n\n.mdi-map-clock-outline:before {\n  content: \"\\FCFB\";\n}\n\n.mdi-map-legend:before {\n  content: \"\\FA00\";\n}\n\n.mdi-map-marker:before {\n  content: \"\\F34E\";\n}\n\n.mdi-map-marker-check:before {\n  content: \"\\FC71\";\n}\n\n.mdi-map-marker-circle:before {\n  content: \"\\F34F\";\n}\n\n.mdi-map-marker-distance:before {\n  content: \"\\F8EF\";\n}\n\n.mdi-map-marker-minus:before {\n  content: \"\\F650\";\n}\n\n.mdi-map-marker-multiple:before {\n  content: \"\\F350\";\n}\n\n.mdi-map-marker-off:before {\n  content: \"\\F351\";\n}\n\n.mdi-map-marker-outline:before {\n  content: \"\\F7D8\";\n}\n\n.mdi-map-marker-path:before {\n  content: \"\\FCFC\";\n}\n\n.mdi-map-marker-plus:before {\n  content: \"\\F651\";\n}\n\n.mdi-map-marker-radius:before {\n  content: \"\\F352\";\n}\n\n.mdi-map-minus:before {\n  content: \"\\F980\";\n}\n\n.mdi-map-outline:before {\n  content: \"\\F981\";\n}\n\n.mdi-map-plus:before {\n  content: \"\\F982\";\n}\n\n.mdi-map-search:before {\n  content: \"\\F983\";\n}\n\n.mdi-map-search-outline:before {\n  content: \"\\F984\";\n}\n\n.mdi-mapbox:before {\n  content: \"\\FB86\";\n}\n\n.mdi-margin:before {\n  content: \"\\F353\";\n}\n\n.mdi-markdown:before {\n  content: \"\\F354\";\n}\n\n.mdi-marker:before {\n  content: \"\\F652\";\n}\n\n.mdi-marker-cancel:before {\n  content: \"\\FDB5\";\n}\n\n.mdi-marker-check:before {\n  content: \"\\F355\";\n}\n\n.mdi-mastodon:before {\n  content: \"\\FAD0\";\n}\n\n.mdi-mastodon-variant:before {\n  content: \"\\FAD1\";\n}\n\n.mdi-material-design:before {\n  content: \"\\F985\";\n}\n\n.mdi-material-ui:before {\n  content: \"\\F357\";\n}\n\n.mdi-math-compass:before {\n  content: \"\\F358\";\n}\n\n.mdi-math-cos:before {\n  content: \"\\FC72\";\n}\n\n.mdi-math-sin:before {\n  content: \"\\FC73\";\n}\n\n.mdi-math-tan:before {\n  content: \"\\FC74\";\n}\n\n.mdi-matrix:before {\n  content: \"\\F628\";\n}\n\n.mdi-maxcdn:before {\n  content: \"\\F359\";\n}\n\n.mdi-medal:before {\n  content: \"\\F986\";\n}\n\n.mdi-medical-bag:before {\n  content: \"\\F6EE\";\n}\n\n.mdi-medium:before {\n  content: \"\\F35A\";\n}\n\n.mdi-meetup:before {\n  content: \"\\FAD2\";\n}\n\n.mdi-memory:before {\n  content: \"\\F35B\";\n}\n\n.mdi-menu:before {\n  content: \"\\F35C\";\n}\n\n.mdi-menu-down:before {\n  content: \"\\F35D\";\n}\n\n.mdi-menu-down-outline:before {\n  content: \"\\F6B5\";\n}\n\n.mdi-menu-left:before {\n  content: \"\\F35E\";\n}\n\n.mdi-menu-left-outline:before {\n  content: \"\\FA01\";\n}\n\n.mdi-menu-open:before {\n  content: \"\\FB87\";\n}\n\n.mdi-menu-right:before {\n  content: \"\\F35F\";\n}\n\n.mdi-menu-right-outline:before {\n  content: \"\\FA02\";\n}\n\n.mdi-menu-swap:before {\n  content: \"\\FA63\";\n}\n\n.mdi-menu-swap-outline:before {\n  content: \"\\FA64\";\n}\n\n.mdi-menu-up:before {\n  content: \"\\F360\";\n}\n\n.mdi-menu-up-outline:before {\n  content: \"\\F6B6\";\n}\n\n.mdi-message:before {\n  content: \"\\F361\";\n}\n\n.mdi-message-alert:before {\n  content: \"\\F362\";\n}\n\n.mdi-message-alert-outline:before {\n  content: \"\\FA03\";\n}\n\n.mdi-message-bulleted:before {\n  content: \"\\F6A1\";\n}\n\n.mdi-message-bulleted-off:before {\n  content: \"\\F6A2\";\n}\n\n.mdi-message-draw:before {\n  content: \"\\F363\";\n}\n\n.mdi-message-image:before {\n  content: \"\\F364\";\n}\n\n.mdi-message-outline:before {\n  content: \"\\F365\";\n}\n\n.mdi-message-plus:before {\n  content: \"\\F653\";\n}\n\n.mdi-message-processing:before {\n  content: \"\\F366\";\n}\n\n.mdi-message-reply:before {\n  content: \"\\F367\";\n}\n\n.mdi-message-reply-text:before {\n  content: \"\\F368\";\n}\n\n.mdi-message-settings:before {\n  content: \"\\F6EF\";\n}\n\n.mdi-message-settings-variant:before {\n  content: \"\\F6F0\";\n}\n\n.mdi-message-text:before {\n  content: \"\\F369\";\n}\n\n.mdi-message-text-outline:before {\n  content: \"\\F36A\";\n}\n\n.mdi-message-video:before {\n  content: \"\\F36B\";\n}\n\n.mdi-meteor:before {\n  content: \"\\F629\";\n}\n\n.mdi-metronome:before {\n  content: \"\\F7D9\";\n}\n\n.mdi-metronome-tick:before {\n  content: \"\\F7DA\";\n}\n\n.mdi-micro-sd:before {\n  content: \"\\F7DB\";\n}\n\n.mdi-microphone:before {\n  content: \"\\F36C\";\n}\n\n.mdi-microphone-minus:before {\n  content: \"\\F8B2\";\n}\n\n.mdi-microphone-off:before {\n  content: \"\\F36D\";\n}\n\n.mdi-microphone-outline:before {\n  content: \"\\F36E\";\n}\n\n.mdi-microphone-plus:before {\n  content: \"\\F8B3\";\n}\n\n.mdi-microphone-settings:before {\n  content: \"\\F36F\";\n}\n\n.mdi-microphone-variant:before {\n  content: \"\\F370\";\n}\n\n.mdi-microphone-variant-off:before {\n  content: \"\\F371\";\n}\n\n.mdi-microscope:before {\n  content: \"\\F654\";\n}\n\n.mdi-microsoft:before {\n  content: \"\\F372\";\n}\n\n.mdi-microsoft-dynamics:before {\n  content: \"\\F987\";\n}\n\n.mdi-microwave:before {\n  content: \"\\FC75\";\n}\n\n.mdi-midi:before {\n  content: \"\\F8F0\";\n}\n\n.mdi-midi-port:before {\n  content: \"\\F8F1\";\n}\n\n.mdi-mine:before {\n  content: \"\\FDB6\";\n}\n\n.mdi-minecraft:before {\n  content: \"\\F373\";\n}\n\n.mdi-mini-sd:before {\n  content: \"\\FA04\";\n}\n\n.mdi-minidisc:before {\n  content: \"\\FA05\";\n}\n\n.mdi-minus:before {\n  content: \"\\F374\";\n}\n\n.mdi-minus-box:before {\n  content: \"\\F375\";\n}\n\n.mdi-minus-box-outline:before {\n  content: \"\\F6F1\";\n}\n\n.mdi-minus-circle:before {\n  content: \"\\F376\";\n}\n\n.mdi-minus-circle-outline:before {\n  content: \"\\F377\";\n}\n\n.mdi-minus-network:before {\n  content: \"\\F378\";\n}\n\n.mdi-minus-network-outline:before {\n  content: \"\\FC76\";\n}\n\n.mdi-mixcloud:before {\n  content: \"\\F62A\";\n}\n\n.mdi-mixed-martial-arts:before {\n  content: \"\\FD6B\";\n}\n\n.mdi-mixed-reality:before {\n  content: \"\\F87E\";\n}\n\n.mdi-mixer:before {\n  content: \"\\F7DC\";\n}\n\n.mdi-molecule:before {\n  content: \"\\FB88\";\n}\n\n.mdi-monitor:before {\n  content: \"\\F379\";\n}\n\n.mdi-monitor-cellphone:before {\n  content: \"\\F988\";\n}\n\n.mdi-monitor-cellphone-star:before {\n  content: \"\\F989\";\n}\n\n.mdi-monitor-dashboard:before {\n  content: \"\\FA06\";\n}\n\n.mdi-monitor-lock:before {\n  content: \"\\FDB7\";\n}\n\n.mdi-monitor-multiple:before {\n  content: \"\\F37A\";\n}\n\n.mdi-monitor-off:before {\n  content: \"\\FD6C\";\n}\n\n.mdi-monitor-screenshot:before {\n  content: \"\\FE34\";\n}\n\n.mdi-monitor-star:before {\n  content: \"\\FDB8\";\n}\n\n.mdi-more:before {\n  content: \"\\F37B\";\n}\n\n.mdi-mother-nurse:before {\n  content: \"\\FCFD\";\n}\n\n.mdi-motion-sensor:before {\n  content: \"\\FD6D\";\n}\n\n.mdi-motorbike:before {\n  content: \"\\F37C\";\n}\n\n.mdi-mouse:before {\n  content: \"\\F37D\";\n}\n\n.mdi-mouse-bluetooth:before {\n  content: \"\\F98A\";\n}\n\n.mdi-mouse-off:before {\n  content: \"\\F37E\";\n}\n\n.mdi-mouse-variant:before {\n  content: \"\\F37F\";\n}\n\n.mdi-mouse-variant-off:before {\n  content: \"\\F380\";\n}\n\n.mdi-move-resize:before {\n  content: \"\\F655\";\n}\n\n.mdi-move-resize-variant:before {\n  content: \"\\F656\";\n}\n\n.mdi-movie:before {\n  content: \"\\F381\";\n}\n\n.mdi-movie-outline:before {\n  content: \"\\FDB9\";\n}\n\n.mdi-movie-roll:before {\n  content: \"\\F7DD\";\n}\n\n.mdi-muffin:before {\n  content: \"\\F98B\";\n}\n\n.mdi-multiplication:before {\n  content: \"\\F382\";\n}\n\n.mdi-multiplication-box:before {\n  content: \"\\F383\";\n}\n\n.mdi-mushroom:before {\n  content: \"\\F7DE\";\n}\n\n.mdi-mushroom-outline:before {\n  content: \"\\F7DF\";\n}\n\n.mdi-music:before {\n  content: \"\\F759\";\n}\n\n.mdi-music-box:before {\n  content: \"\\F384\";\n}\n\n.mdi-music-box-outline:before {\n  content: \"\\F385\";\n}\n\n.mdi-music-circle:before {\n  content: \"\\F386\";\n}\n\n.mdi-music-circle-outline:before {\n  content: \"\\FAD3\";\n}\n\n.mdi-music-note:before {\n  content: \"\\F387\";\n}\n\n.mdi-music-note-bluetooth:before {\n  content: \"\\F5FE\";\n}\n\n.mdi-music-note-bluetooth-off:before {\n  content: \"\\F5FF\";\n}\n\n.mdi-music-note-eighth:before {\n  content: \"\\F388\";\n}\n\n.mdi-music-note-half:before {\n  content: \"\\F389\";\n}\n\n.mdi-music-note-off:before {\n  content: \"\\F38A\";\n}\n\n.mdi-music-note-plus:before {\n  content: \"\\FDBA\";\n}\n\n.mdi-music-note-quarter:before {\n  content: \"\\F38B\";\n}\n\n.mdi-music-note-sixteenth:before {\n  content: \"\\F38C\";\n}\n\n.mdi-music-note-whole:before {\n  content: \"\\F38D\";\n}\n\n.mdi-music-off:before {\n  content: \"\\F75A\";\n}\n\n.mdi-nail:before {\n  content: \"\\FDBB\";\n}\n\n.mdi-nas:before {\n  content: \"\\F8F2\";\n}\n\n.mdi-nativescript:before {\n  content: \"\\F87F\";\n}\n\n.mdi-nature:before {\n  content: \"\\F38E\";\n}\n\n.mdi-nature-people:before {\n  content: \"\\F38F\";\n}\n\n.mdi-navigation:before {\n  content: \"\\F390\";\n}\n\n.mdi-near-me:before {\n  content: \"\\F5CD\";\n}\n\n.mdi-needle:before {\n  content: \"\\F391\";\n}\n\n.mdi-netflix:before {\n  content: \"\\F745\";\n}\n\n.mdi-network:before {\n  content: \"\\F6F2\";\n}\n\n.mdi-network-off:before {\n  content: \"\\FC77\";\n}\n\n.mdi-network-off-outline:before {\n  content: \"\\FC78\";\n}\n\n.mdi-network-outline:before {\n  content: \"\\FC79\";\n}\n\n.mdi-network-strength-1:before {\n  content: \"\\F8F3\";\n}\n\n.mdi-network-strength-1-alert:before {\n  content: \"\\F8F4\";\n}\n\n.mdi-network-strength-2:before {\n  content: \"\\F8F5\";\n}\n\n.mdi-network-strength-2-alert:before {\n  content: \"\\F8F6\";\n}\n\n.mdi-network-strength-3:before {\n  content: \"\\F8F7\";\n}\n\n.mdi-network-strength-3-alert:before {\n  content: \"\\F8F8\";\n}\n\n.mdi-network-strength-4:before {\n  content: \"\\F8F9\";\n}\n\n.mdi-network-strength-4-alert:before {\n  content: \"\\F8FA\";\n}\n\n.mdi-network-strength-off:before {\n  content: \"\\F8FB\";\n}\n\n.mdi-network-strength-off-outline:before {\n  content: \"\\F8FC\";\n}\n\n.mdi-network-strength-outline:before {\n  content: \"\\F8FD\";\n}\n\n.mdi-new-box:before {\n  content: \"\\F394\";\n}\n\n.mdi-newspaper:before {\n  content: \"\\F395\";\n}\n\n.mdi-nfc:before {\n  content: \"\\F396\";\n}\n\n.mdi-nfc-off:before {\n  content: \"\\FE35\";\n}\n\n.mdi-nfc-search-variant:before {\n  content: \"\\FE36\";\n}\n\n.mdi-nfc-tap:before {\n  content: \"\\F397\";\n}\n\n.mdi-nfc-variant:before {\n  content: \"\\F398\";\n}\n\n.mdi-nfc-variant-off:before {\n  content: \"\\FE37\";\n}\n\n.mdi-ninja:before {\n  content: \"\\F773\";\n}\n\n.mdi-nintendo-switch:before {\n  content: \"\\F7E0\";\n}\n\n.mdi-nodejs:before {\n  content: \"\\F399\";\n}\n\n.mdi-not-equal:before {\n  content: \"\\F98C\";\n}\n\n.mdi-not-equal-variant:before {\n  content: \"\\F98D\";\n}\n\n.mdi-note:before {\n  content: \"\\F39A\";\n}\n\n.mdi-note-circle:before {\n  content: \"\\FEDB\";\n}\n\n.mdi-note-multiple:before {\n  content: \"\\F6B7\";\n}\n\n.mdi-note-multiple-outline:before {\n  content: \"\\F6B8\";\n}\n\n.mdi-note-outline:before {\n  content: \"\\F39B\";\n}\n\n.mdi-note-plus:before {\n  content: \"\\F39C\";\n}\n\n.mdi-note-plus-outline:before {\n  content: \"\\F39D\";\n}\n\n.mdi-note-text:before {\n  content: \"\\F39E\";\n}\n\n.mdi-notebook:before {\n  content: \"\\F82D\";\n}\n\n.mdi-notebook-multiple:before {\n  content: \"\\FE38\";\n}\n\n.mdi-notebook-outline:before {\n  content: \"\\FEDC\";\n}\n\n.mdi-notification-clear-all:before {\n  content: \"\\F39F\";\n}\n\n.mdi-npm:before {\n  content: \"\\F6F6\";\n}\n\n.mdi-npm-variant:before {\n  content: \"\\F98E\";\n}\n\n.mdi-npm-variant-outline:before {\n  content: \"\\F98F\";\n}\n\n.mdi-nuke:before {\n  content: \"\\F6A3\";\n}\n\n.mdi-null:before {\n  content: \"\\F7E1\";\n}\n\n.mdi-numeric:before {\n  content: \"\\F3A0\";\n}\n\n.mdi-numeric-0:before {\n  content: \"0\";\n}\n\n.mdi-numeric-0-box:before {\n  content: \"\\F3A1\";\n}\n\n.mdi-numeric-0-box-multiple-outline:before {\n  content: \"\\F3A2\";\n}\n\n.mdi-numeric-0-box-outline:before {\n  content: \"\\F3A3\";\n}\n\n.mdi-numeric-0-circle:before {\n  content: \"\\FC7A\";\n}\n\n.mdi-numeric-0-circle-outline:before {\n  content: \"\\FC7B\";\n}\n\n.mdi-numeric-1:before {\n  content: \"1\";\n}\n\n.mdi-numeric-1-box:before {\n  content: \"\\F3A4\";\n}\n\n.mdi-numeric-1-box-multiple-outline:before {\n  content: \"\\F3A5\";\n}\n\n.mdi-numeric-1-box-outline:before {\n  content: \"\\F3A6\";\n}\n\n.mdi-numeric-1-circle:before {\n  content: \"\\FC7C\";\n}\n\n.mdi-numeric-1-circle-outline:before {\n  content: \"\\FC7D\";\n}\n\n.mdi-numeric-2:before {\n  content: \"2\";\n}\n\n.mdi-numeric-2-box:before {\n  content: \"\\F3A7\";\n}\n\n.mdi-numeric-2-box-multiple-outline:before {\n  content: \"\\F3A8\";\n}\n\n.mdi-numeric-2-box-outline:before {\n  content: \"\\F3A9\";\n}\n\n.mdi-numeric-2-circle:before {\n  content: \"\\FC7E\";\n}\n\n.mdi-numeric-2-circle-outline:before {\n  content: \"\\FC7F\";\n}\n\n.mdi-numeric-3:before {\n  content: \"3\";\n}\n\n.mdi-numeric-3-box:before {\n  content: \"\\F3AA\";\n}\n\n.mdi-numeric-3-box-multiple-outline:before {\n  content: \"\\F3AB\";\n}\n\n.mdi-numeric-3-box-outline:before {\n  content: \"\\F3AC\";\n}\n\n.mdi-numeric-3-circle:before {\n  content: \"\\FC80\";\n}\n\n.mdi-numeric-3-circle-outline:before {\n  content: \"\\FC81\";\n}\n\n.mdi-numeric-4:before {\n  content: \"4\";\n}\n\n.mdi-numeric-4-box:before {\n  content: \"\\F3AD\";\n}\n\n.mdi-numeric-4-box-multiple-outline:before {\n  content: \"\\F3AE\";\n}\n\n.mdi-numeric-4-box-outline:before {\n  content: \"\\F3AF\";\n}\n\n.mdi-numeric-4-circle:before {\n  content: \"\\FC82\";\n}\n\n.mdi-numeric-4-circle-outline:before {\n  content: \"\\FC83\";\n}\n\n.mdi-numeric-5:before {\n  content: \"5\";\n}\n\n.mdi-numeric-5-box:before {\n  content: \"\\F3B0\";\n}\n\n.mdi-numeric-5-box-multiple-outline:before {\n  content: \"\\F3B1\";\n}\n\n.mdi-numeric-5-box-outline:before {\n  content: \"\\F3B2\";\n}\n\n.mdi-numeric-5-circle:before {\n  content: \"\\FC84\";\n}\n\n.mdi-numeric-5-circle-outline:before {\n  content: \"\\FC85\";\n}\n\n.mdi-numeric-6:before {\n  content: \"6\";\n}\n\n.mdi-numeric-6-box:before {\n  content: \"\\F3B3\";\n}\n\n.mdi-numeric-6-box-multiple-outline:before {\n  content: \"\\F3B4\";\n}\n\n.mdi-numeric-6-box-outline:before {\n  content: \"\\F3B5\";\n}\n\n.mdi-numeric-6-circle:before {\n  content: \"\\FC86\";\n}\n\n.mdi-numeric-6-circle-outline:before {\n  content: \"\\FC87\";\n}\n\n.mdi-numeric-7:before {\n  content: \"7\";\n}\n\n.mdi-numeric-7-box:before {\n  content: \"\\F3B6\";\n}\n\n.mdi-numeric-7-box-multiple-outline:before {\n  content: \"\\F3B7\";\n}\n\n.mdi-numeric-7-box-outline:before {\n  content: \"\\F3B8\";\n}\n\n.mdi-numeric-7-circle:before {\n  content: \"\\FC88\";\n}\n\n.mdi-numeric-7-circle-outline:before {\n  content: \"\\FC89\";\n}\n\n.mdi-numeric-8:before {\n  content: \"8\";\n}\n\n.mdi-numeric-8-box:before {\n  content: \"\\F3B9\";\n}\n\n.mdi-numeric-8-box-multiple-outline:before {\n  content: \"\\F3BA\";\n}\n\n.mdi-numeric-8-box-outline:before {\n  content: \"\\F3BB\";\n}\n\n.mdi-numeric-8-circle:before {\n  content: \"\\FC8A\";\n}\n\n.mdi-numeric-8-circle-outline:before {\n  content: \"\\FC8B\";\n}\n\n.mdi-numeric-9:before {\n  content: \"9\";\n}\n\n.mdi-numeric-9-box:before {\n  content: \"\\F3BC\";\n}\n\n.mdi-numeric-9-box-multiple-outline:before {\n  content: \"\\F3BD\";\n}\n\n.mdi-numeric-9-box-outline:before {\n  content: \"\\F3BE\";\n}\n\n.mdi-numeric-9-circle:before {\n  content: \"\\FC8C\";\n}\n\n.mdi-numeric-9-circle-outline:before {\n  content: \"\\FC8D\";\n}\n\n.mdi-numeric-9-plus-box:before {\n  content: \"\\F3BF\";\n}\n\n.mdi-numeric-9-plus-box-multiple-outline:before {\n  content: \"\\F3C0\";\n}\n\n.mdi-numeric-9-plus-box-outline:before {\n  content: \"\\F3C1\";\n}\n\n.mdi-numeric-9-plus-circle:before {\n  content: \"\\FC8E\";\n}\n\n.mdi-numeric-9-plus-circle-outline:before {\n  content: \"\\FC8F\";\n}\n\n.mdi-nut:before {\n  content: \"\\F6F7\";\n}\n\n.mdi-nutrition:before {\n  content: \"\\F3C2\";\n}\n\n.mdi-oar:before {\n  content: \"\\F67B\";\n}\n\n.mdi-ocarina:before {\n  content: \"\\FDBC\";\n}\n\n.mdi-octagon:before {\n  content: \"\\F3C3\";\n}\n\n.mdi-octagon-outline:before {\n  content: \"\\F3C4\";\n}\n\n.mdi-octagram:before {\n  content: \"\\F6F8\";\n}\n\n.mdi-octagram-outline:before {\n  content: \"\\F774\";\n}\n\n.mdi-odnoklassniki:before {\n  content: \"\\F3C5\";\n}\n\n.mdi-office:before {\n  content: \"\\F3C6\";\n}\n\n.mdi-office-building:before {\n  content: \"\\F990\";\n}\n\n.mdi-oil:before {\n  content: \"\\F3C7\";\n}\n\n.mdi-oil-temperature:before {\n  content: \"\\F3C8\";\n}\n\n.mdi-omega:before {\n  content: \"\\F3C9\";\n}\n\n.mdi-one-up:before {\n  content: \"\\FB89\";\n}\n\n.mdi-onedrive:before {\n  content: \"\\F3CA\";\n}\n\n.mdi-onenote:before {\n  content: \"\\F746\";\n}\n\n.mdi-onepassword:before {\n  content: \"\\F880\";\n}\n\n.mdi-opacity:before {\n  content: \"\\F5CC\";\n}\n\n.mdi-open-in-app:before {\n  content: \"\\F3CB\";\n}\n\n.mdi-open-in-new:before {\n  content: \"\\F3CC\";\n}\n\n.mdi-open-source-initiative:before {\n  content: \"\\FB8A\";\n}\n\n.mdi-openid:before {\n  content: \"\\F3CD\";\n}\n\n.mdi-opera:before {\n  content: \"\\F3CE\";\n}\n\n.mdi-orbit:before {\n  content: \"\\F018\";\n}\n\n.mdi-origin:before {\n  content: \"\\FB2B\";\n}\n\n.mdi-ornament:before {\n  content: \"\\F3CF\";\n}\n\n.mdi-ornament-variant:before {\n  content: \"\\F3D0\";\n}\n\n.mdi-outlook:before {\n  content: \"\\FCFE\";\n}\n\n.mdi-owl:before {\n  content: \"\\F3D2\";\n}\n\n.mdi-pac-man:before {\n  content: \"\\FB8B\";\n}\n\n.mdi-package:before {\n  content: \"\\F3D3\";\n}\n\n.mdi-package-down:before {\n  content: \"\\F3D4\";\n}\n\n.mdi-package-up:before {\n  content: \"\\F3D5\";\n}\n\n.mdi-package-variant:before {\n  content: \"\\F3D6\";\n}\n\n.mdi-package-variant-closed:before {\n  content: \"\\F3D7\";\n}\n\n.mdi-page-first:before {\n  content: \"\\F600\";\n}\n\n.mdi-page-last:before {\n  content: \"\\F601\";\n}\n\n.mdi-page-layout-body:before {\n  content: \"\\F6F9\";\n}\n\n.mdi-page-layout-footer:before {\n  content: \"\\F6FA\";\n}\n\n.mdi-page-layout-header:before {\n  content: \"\\F6FB\";\n}\n\n.mdi-page-layout-sidebar-left:before {\n  content: \"\\F6FC\";\n}\n\n.mdi-page-layout-sidebar-right:before {\n  content: \"\\F6FD\";\n}\n\n.mdi-page-next:before {\n  content: \"\\FB8C\";\n}\n\n.mdi-page-next-outline:before {\n  content: \"\\FB8D\";\n}\n\n.mdi-page-previous:before {\n  content: \"\\FB8E\";\n}\n\n.mdi-page-previous-outline:before {\n  content: \"\\FB8F\";\n}\n\n.mdi-palette:before {\n  content: \"\\F3D8\";\n}\n\n.mdi-palette-advanced:before {\n  content: \"\\F3D9\";\n}\n\n.mdi-palette-outline:before {\n  content: \"\\FE6C\";\n}\n\n.mdi-palette-swatch:before {\n  content: \"\\F8B4\";\n}\n\n.mdi-pan:before {\n  content: \"\\FB90\";\n}\n\n.mdi-pan-bottom-left:before {\n  content: \"\\FB91\";\n}\n\n.mdi-pan-bottom-right:before {\n  content: \"\\FB92\";\n}\n\n.mdi-pan-down:before {\n  content: \"\\FB93\";\n}\n\n.mdi-pan-horizontal:before {\n  content: \"\\FB94\";\n}\n\n.mdi-pan-left:before {\n  content: \"\\FB95\";\n}\n\n.mdi-pan-right:before {\n  content: \"\\FB96\";\n}\n\n.mdi-pan-top-left:before {\n  content: \"\\FB97\";\n}\n\n.mdi-pan-top-right:before {\n  content: \"\\FB98\";\n}\n\n.mdi-pan-up:before {\n  content: \"\\FB99\";\n}\n\n.mdi-pan-vertical:before {\n  content: \"\\FB9A\";\n}\n\n.mdi-panda:before {\n  content: \"\\F3DA\";\n}\n\n.mdi-pandora:before {\n  content: \"\\F3DB\";\n}\n\n.mdi-panorama:before {\n  content: \"\\F3DC\";\n}\n\n.mdi-panorama-fisheye:before {\n  content: \"\\F3DD\";\n}\n\n.mdi-panorama-horizontal:before {\n  content: \"\\F3DE\";\n}\n\n.mdi-panorama-vertical:before {\n  content: \"\\F3DF\";\n}\n\n.mdi-panorama-wide-angle:before {\n  content: \"\\F3E0\";\n}\n\n.mdi-paper-cut-vertical:before {\n  content: \"\\F3E1\";\n}\n\n.mdi-paperclip:before {\n  content: \"\\F3E2\";\n}\n\n.mdi-parachute:before {\n  content: \"\\FC90\";\n}\n\n.mdi-parachute-outline:before {\n  content: \"\\FC91\";\n}\n\n.mdi-parking:before {\n  content: \"\\F3E3\";\n}\n\n.mdi-passport:before {\n  content: \"\\F7E2\";\n}\n\n.mdi-passport-biometric:before {\n  content: \"\\FDBD\";\n}\n\n.mdi-patreon:before {\n  content: \"\\F881\";\n}\n\n.mdi-pause:before {\n  content: \"\\F3E4\";\n}\n\n.mdi-pause-circle:before {\n  content: \"\\F3E5\";\n}\n\n.mdi-pause-circle-outline:before {\n  content: \"\\F3E6\";\n}\n\n.mdi-pause-octagon:before {\n  content: \"\\F3E7\";\n}\n\n.mdi-pause-octagon-outline:before {\n  content: \"\\F3E8\";\n}\n\n.mdi-paw:before {\n  content: \"\\F3E9\";\n}\n\n.mdi-paw-off:before {\n  content: \"\\F657\";\n}\n\n.mdi-paypal:before {\n  content: \"\\F882\";\n}\n\n.mdi-pdf-box:before {\n  content: \"\\FE39\";\n}\n\n.mdi-peace:before {\n  content: \"\\F883\";\n}\n\n.mdi-pen:before {\n  content: \"\\F3EA\";\n}\n\n.mdi-pen-lock:before {\n  content: \"\\FDBE\";\n}\n\n.mdi-pen-minus:before {\n  content: \"\\FDBF\";\n}\n\n.mdi-pen-off:before {\n  content: \"\\FDC0\";\n}\n\n.mdi-pen-plus:before {\n  content: \"\\FDC1\";\n}\n\n.mdi-pen-remove:before {\n  content: \"\\FDC2\";\n}\n\n.mdi-pencil:before {\n  content: \"\\F3EB\";\n}\n\n.mdi-pencil-box:before {\n  content: \"\\F3EC\";\n}\n\n.mdi-pencil-box-outline:before {\n  content: \"\\F3ED\";\n}\n\n.mdi-pencil-circle:before {\n  content: \"\\F6FE\";\n}\n\n.mdi-pencil-circle-outline:before {\n  content: \"\\F775\";\n}\n\n.mdi-pencil-lock:before {\n  content: \"\\F3EE\";\n}\n\n.mdi-pencil-lock-outline:before {\n  content: \"\\FDC3\";\n}\n\n.mdi-pencil-minus:before {\n  content: \"\\FDC4\";\n}\n\n.mdi-pencil-minus-outline:before {\n  content: \"\\FDC5\";\n}\n\n.mdi-pencil-off:before {\n  content: \"\\F3EF\";\n}\n\n.mdi-pencil-off-outline:before {\n  content: \"\\FDC6\";\n}\n\n.mdi-pencil-outline:before {\n  content: \"\\FC92\";\n}\n\n.mdi-pencil-plus:before {\n  content: \"\\FDC7\";\n}\n\n.mdi-pencil-plus-outline:before {\n  content: \"\\FDC8\";\n}\n\n.mdi-pencil-remove:before {\n  content: \"\\FDC9\";\n}\n\n.mdi-pencil-remove-outline:before {\n  content: \"\\FDCA\";\n}\n\n.mdi-penguin:before {\n  content: \"\\FEDD\";\n}\n\n.mdi-pentagon:before {\n  content: \"\\F6FF\";\n}\n\n.mdi-pentagon-outline:before {\n  content: \"\\F700\";\n}\n\n.mdi-percent:before {\n  content: \"\\F3F0\";\n}\n\n.mdi-periodic-table:before {\n  content: \"\\F8B5\";\n}\n\n.mdi-periodic-table-co2:before {\n  content: \"\\F7E3\";\n}\n\n.mdi-periscope:before {\n  content: \"\\F747\";\n}\n\n.mdi-perspective-less:before {\n  content: \"\\FCFF\";\n}\n\n.mdi-perspective-more:before {\n  content: \"\\FD00\";\n}\n\n.mdi-pharmacy:before {\n  content: \"\\F3F1\";\n}\n\n.mdi-phone:before {\n  content: \"\\F3F2\";\n}\n\n.mdi-phone-bluetooth:before {\n  content: \"\\F3F3\";\n}\n\n.mdi-phone-classic:before {\n  content: \"\\F602\";\n}\n\n.mdi-phone-forward:before {\n  content: \"\\F3F4\";\n}\n\n.mdi-phone-hangup:before {\n  content: \"\\F3F5\";\n}\n\n.mdi-phone-in-talk:before {\n  content: \"\\F3F6\";\n}\n\n.mdi-phone-incoming:before {\n  content: \"\\F3F7\";\n}\n\n.mdi-phone-lock:before {\n  content: \"\\F3F8\";\n}\n\n.mdi-phone-log:before {\n  content: \"\\F3F9\";\n}\n\n.mdi-phone-minus:before {\n  content: \"\\F658\";\n}\n\n.mdi-phone-missed:before {\n  content: \"\\F3FA\";\n}\n\n.mdi-phone-off:before {\n  content: \"\\FDCB\";\n}\n\n.mdi-phone-outgoing:before {\n  content: \"\\F3FB\";\n}\n\n.mdi-phone-outline:before {\n  content: \"\\FDCC\";\n}\n\n.mdi-phone-paused:before {\n  content: \"\\F3FC\";\n}\n\n.mdi-phone-plus:before {\n  content: \"\\F659\";\n}\n\n.mdi-phone-return:before {\n  content: \"\\F82E\";\n}\n\n.mdi-phone-rotate-landscape:before {\n  content: \"\\F884\";\n}\n\n.mdi-phone-rotate-portrait:before {\n  content: \"\\F885\";\n}\n\n.mdi-phone-settings:before {\n  content: \"\\F3FD\";\n}\n\n.mdi-phone-voip:before {\n  content: \"\\F3FE\";\n}\n\n.mdi-pi:before {\n  content: \"\\F3FF\";\n}\n\n.mdi-pi-box:before {\n  content: \"\\F400\";\n}\n\n.mdi-pi-hole:before {\n  content: \"\\FDCD\";\n}\n\n.mdi-piano:before {\n  content: \"\\F67C\";\n}\n\n.mdi-pickaxe:before {\n  content: \"\\F8B6\";\n}\n\n.mdi-picture-in-picture-bottom-right:before {\n  content: \"\\FE3A\";\n}\n\n.mdi-picture-in-picture-bottom-right-outline:before {\n  content: \"\\FE3B\";\n}\n\n.mdi-picture-in-picture-top-right:before {\n  content: \"\\FE3C\";\n}\n\n.mdi-picture-in-picture-top-right-outline:before {\n  content: \"\\FE3D\";\n}\n\n.mdi-pier:before {\n  content: \"\\F886\";\n}\n\n.mdi-pier-crane:before {\n  content: \"\\F887\";\n}\n\n.mdi-pig:before {\n  content: \"\\F401\";\n}\n\n.mdi-pill:before {\n  content: \"\\F402\";\n}\n\n.mdi-pillar:before {\n  content: \"\\F701\";\n}\n\n.mdi-pin:before {\n  content: \"\\F403\";\n}\n\n.mdi-pin-off:before {\n  content: \"\\F404\";\n}\n\n.mdi-pin-off-outline:before {\n  content: \"\\F92F\";\n}\n\n.mdi-pin-outline:before {\n  content: \"\\F930\";\n}\n\n.mdi-pine-tree:before {\n  content: \"\\F405\";\n}\n\n.mdi-pine-tree-box:before {\n  content: \"\\F406\";\n}\n\n.mdi-pinterest:before {\n  content: \"\\F407\";\n}\n\n.mdi-pinterest-box:before {\n  content: \"\\F408\";\n}\n\n.mdi-pinwheel:before {\n  content: \"\\FAD4\";\n}\n\n.mdi-pinwheel-outline:before {\n  content: \"\\FAD5\";\n}\n\n.mdi-pipe:before {\n  content: \"\\F7E4\";\n}\n\n.mdi-pipe-disconnected:before {\n  content: \"\\F7E5\";\n}\n\n.mdi-pipe-leak:before {\n  content: \"\\F888\";\n}\n\n.mdi-pirate:before {\n  content: \"\\FA07\";\n}\n\n.mdi-pistol:before {\n  content: \"\\F702\";\n}\n\n.mdi-piston:before {\n  content: \"\\F889\";\n}\n\n.mdi-pizza:before {\n  content: \"\\F409\";\n}\n\n.mdi-play:before {\n  content: \"\\F40A\";\n}\n\n.mdi-play-box-outline:before {\n  content: \"\\F40B\";\n}\n\n.mdi-play-circle:before {\n  content: \"\\F40C\";\n}\n\n.mdi-play-circle-outline:before {\n  content: \"\\F40D\";\n}\n\n.mdi-play-network:before {\n  content: \"\\F88A\";\n}\n\n.mdi-play-network-outline:before {\n  content: \"\\FC93\";\n}\n\n.mdi-play-pause:before {\n  content: \"\\F40E\";\n}\n\n.mdi-play-protected-content:before {\n  content: \"\\F40F\";\n}\n\n.mdi-play-speed:before {\n  content: \"\\F8FE\";\n}\n\n.mdi-playlist-check:before {\n  content: \"\\F5C7\";\n}\n\n.mdi-playlist-edit:before {\n  content: \"\\F8FF\";\n}\n\n.mdi-playlist-minus:before {\n  content: \"\\F410\";\n}\n\n.mdi-playlist-music:before {\n  content: \"\\FC94\";\n}\n\n.mdi-playlist-music-outline:before {\n  content: \"\\FC95\";\n}\n\n.mdi-playlist-play:before {\n  content: \"\\F411\";\n}\n\n.mdi-playlist-plus:before {\n  content: \"\\F412\";\n}\n\n.mdi-playlist-remove:before {\n  content: \"\\F413\";\n}\n\n.mdi-playlist-star:before {\n  content: \"\\FDCE\";\n}\n\n.mdi-playstation:before {\n  content: \"\\F414\";\n}\n\n.mdi-plex:before {\n  content: \"\\F6B9\";\n}\n\n.mdi-plus:before {\n  content: \"\\F415\";\n}\n\n.mdi-plus-box:before {\n  content: \"\\F416\";\n}\n\n.mdi-plus-box-outline:before {\n  content: \"\\F703\";\n}\n\n.mdi-plus-circle:before {\n  content: \"\\F417\";\n}\n\n.mdi-plus-circle-multiple-outline:before {\n  content: \"\\F418\";\n}\n\n.mdi-plus-circle-outline:before {\n  content: \"\\F419\";\n}\n\n.mdi-plus-minus:before {\n  content: \"\\F991\";\n}\n\n.mdi-plus-minus-box:before {\n  content: \"\\F992\";\n}\n\n.mdi-plus-network:before {\n  content: \"\\F41A\";\n}\n\n.mdi-plus-network-outline:before {\n  content: \"\\FC96\";\n}\n\n.mdi-plus-one:before {\n  content: \"\\F41B\";\n}\n\n.mdi-plus-outline:before {\n  content: \"\\F704\";\n}\n\n.mdi-pocket:before {\n  content: \"\\F41C\";\n}\n\n.mdi-podcast:before {\n  content: \"\\F993\";\n}\n\n.mdi-podium:before {\n  content: \"\\FD01\";\n}\n\n.mdi-podium-bronze:before {\n  content: \"\\FD02\";\n}\n\n.mdi-podium-gold:before {\n  content: \"\\FD03\";\n}\n\n.mdi-podium-silver:before {\n  content: \"\\FD04\";\n}\n\n.mdi-point-of-sale:before {\n  content: \"\\FD6E\";\n}\n\n.mdi-pokeball:before {\n  content: \"\\F41D\";\n}\n\n.mdi-pokemon-go:before {\n  content: \"\\FA08\";\n}\n\n.mdi-poker-chip:before {\n  content: \"\\F82F\";\n}\n\n.mdi-polaroid:before {\n  content: \"\\F41E\";\n}\n\n.mdi-poll:before {\n  content: \"\\F41F\";\n}\n\n.mdi-poll-box:before {\n  content: \"\\F420\";\n}\n\n.mdi-polymer:before {\n  content: \"\\F421\";\n}\n\n.mdi-pool:before {\n  content: \"\\F606\";\n}\n\n.mdi-popcorn:before {\n  content: \"\\F422\";\n}\n\n.mdi-postage-stamp:before {\n  content: \"\\FC97\";\n}\n\n.mdi-pot:before {\n  content: \"\\F65A\";\n}\n\n.mdi-pot-mix:before {\n  content: \"\\F65B\";\n}\n\n.mdi-pound:before {\n  content: \"\\F423\";\n}\n\n.mdi-pound-box:before {\n  content: \"\\F424\";\n}\n\n.mdi-power:before {\n  content: \"\\F425\";\n}\n\n.mdi-power-cycle:before {\n  content: \"\\F900\";\n}\n\n.mdi-power-off:before {\n  content: \"\\F901\";\n}\n\n.mdi-power-on:before {\n  content: \"\\F902\";\n}\n\n.mdi-power-plug:before {\n  content: \"\\F6A4\";\n}\n\n.mdi-power-plug-off:before {\n  content: \"\\F6A5\";\n}\n\n.mdi-power-settings:before {\n  content: \"\\F426\";\n}\n\n.mdi-power-sleep:before {\n  content: \"\\F903\";\n}\n\n.mdi-power-socket:before {\n  content: \"\\F427\";\n}\n\n.mdi-power-socket-au:before {\n  content: \"\\F904\";\n}\n\n.mdi-power-socket-eu:before {\n  content: \"\\F7E6\";\n}\n\n.mdi-power-socket-uk:before {\n  content: \"\\F7E7\";\n}\n\n.mdi-power-socket-us:before {\n  content: \"\\F7E8\";\n}\n\n.mdi-power-standby:before {\n  content: \"\\F905\";\n}\n\n.mdi-powershell:before {\n  content: \"\\FA09\";\n}\n\n.mdi-prescription:before {\n  content: \"\\F705\";\n}\n\n.mdi-presentation:before {\n  content: \"\\F428\";\n}\n\n.mdi-presentation-play:before {\n  content: \"\\F429\";\n}\n\n.mdi-printer:before {\n  content: \"\\F42A\";\n}\n\n.mdi-printer-3d:before {\n  content: \"\\F42B\";\n}\n\n.mdi-printer-3d-nozzle:before {\n  content: \"\\FE3E\";\n}\n\n.mdi-printer-3d-nozzle-outline:before {\n  content: \"\\FE3F\";\n}\n\n.mdi-printer-alert:before {\n  content: \"\\F42C\";\n}\n\n.mdi-printer-off:before {\n  content: \"\\FE40\";\n}\n\n.mdi-printer-settings:before {\n  content: \"\\F706\";\n}\n\n.mdi-printer-wireless:before {\n  content: \"\\FA0A\";\n}\n\n.mdi-priority-high:before {\n  content: \"\\F603\";\n}\n\n.mdi-priority-low:before {\n  content: \"\\F604\";\n}\n\n.mdi-professional-hexagon:before {\n  content: \"\\F42D\";\n}\n\n.mdi-progress-alert:before {\n  content: \"\\FC98\";\n}\n\n.mdi-progress-check:before {\n  content: \"\\F994\";\n}\n\n.mdi-progress-clock:before {\n  content: \"\\F995\";\n}\n\n.mdi-progress-download:before {\n  content: \"\\F996\";\n}\n\n.mdi-progress-upload:before {\n  content: \"\\F997\";\n}\n\n.mdi-progress-wrench:before {\n  content: \"\\FC99\";\n}\n\n.mdi-projector:before {\n  content: \"\\F42E\";\n}\n\n.mdi-projector-screen:before {\n  content: \"\\F42F\";\n}\n\n.mdi-publish:before {\n  content: \"\\F6A6\";\n}\n\n.mdi-pulse:before {\n  content: \"\\F430\";\n}\n\n.mdi-pumpkin:before {\n  content: \"\\FB9B\";\n}\n\n.mdi-puzzle:before {\n  content: \"\\F431\";\n}\n\n.mdi-puzzle-outline:before {\n  content: \"\\FA65\";\n}\n\n.mdi-qi:before {\n  content: \"\\F998\";\n}\n\n.mdi-qqchat:before {\n  content: \"\\F605\";\n}\n\n.mdi-qrcode:before {\n  content: \"\\F432\";\n}\n\n.mdi-qrcode-edit:before {\n  content: \"\\F8B7\";\n}\n\n.mdi-qrcode-scan:before {\n  content: \"\\F433\";\n}\n\n.mdi-quadcopter:before {\n  content: \"\\F434\";\n}\n\n.mdi-quality-high:before {\n  content: \"\\F435\";\n}\n\n.mdi-quality-low:before {\n  content: \"\\FA0B\";\n}\n\n.mdi-quality-medium:before {\n  content: \"\\FA0C\";\n}\n\n.mdi-quicktime:before {\n  content: \"\\F436\";\n}\n\n.mdi-quora:before {\n  content: \"\\FD05\";\n}\n\n.mdi-rabbit:before {\n  content: \"\\F906\";\n}\n\n.mdi-racing-helmet:before {\n  content: \"\\FD6F\";\n}\n\n.mdi-racquetball:before {\n  content: \"\\FD70\";\n}\n\n.mdi-radar:before {\n  content: \"\\F437\";\n}\n\n.mdi-radiator:before {\n  content: \"\\F438\";\n}\n\n.mdi-radiator-disabled:before {\n  content: \"\\FAD6\";\n}\n\n.mdi-radiator-off:before {\n  content: \"\\FAD7\";\n}\n\n.mdi-radio:before {\n  content: \"\\F439\";\n}\n\n.mdi-radio-am:before {\n  content: \"\\FC9A\";\n}\n\n.mdi-radio-fm:before {\n  content: \"\\FC9B\";\n}\n\n.mdi-radio-handheld:before {\n  content: \"\\F43A\";\n}\n\n.mdi-radio-tower:before {\n  content: \"\\F43B\";\n}\n\n.mdi-radioactive:before {\n  content: \"\\F43C\";\n}\n\n.mdi-radioactive-off:before {\n  content: \"\\FEDE\";\n}\n\n.mdi-radiobox-blank:before {\n  content: \"\\F43D\";\n}\n\n.mdi-radiobox-marked:before {\n  content: \"\\F43E\";\n}\n\n.mdi-radius:before {\n  content: \"\\FC9C\";\n}\n\n.mdi-radius-outline:before {\n  content: \"\\FC9D\";\n}\n\n.mdi-raspberry-pi:before {\n  content: \"\\F43F\";\n}\n\n.mdi-ray-end:before {\n  content: \"\\F440\";\n}\n\n.mdi-ray-end-arrow:before {\n  content: \"\\F441\";\n}\n\n.mdi-ray-start:before {\n  content: \"\\F442\";\n}\n\n.mdi-ray-start-arrow:before {\n  content: \"\\F443\";\n}\n\n.mdi-ray-start-end:before {\n  content: \"\\F444\";\n}\n\n.mdi-ray-vertex:before {\n  content: \"\\F445\";\n}\n\n.mdi-react:before {\n  content: \"\\F707\";\n}\n\n.mdi-read:before {\n  content: \"\\F447\";\n}\n\n.mdi-receipt:before {\n  content: \"\\F449\";\n}\n\n.mdi-record:before {\n  content: \"\\F44A\";\n}\n\n.mdi-record-circle:before {\n  content: \"\\FEDF\";\n}\n\n.mdi-record-circle-outline:before {\n  content: \"\\FEE0\";\n}\n\n.mdi-record-player:before {\n  content: \"\\F999\";\n}\n\n.mdi-record-rec:before {\n  content: \"\\F44B\";\n}\n\n.mdi-rectangle:before {\n  content: \"\\FE41\";\n}\n\n.mdi-rectangle-outline:before {\n  content: \"\\FE42\";\n}\n\n.mdi-recycle:before {\n  content: \"\\F44C\";\n}\n\n.mdi-reddit:before {\n  content: \"\\F44D\";\n}\n\n.mdi-redo:before {\n  content: \"\\F44E\";\n}\n\n.mdi-redo-variant:before {\n  content: \"\\F44F\";\n}\n\n.mdi-reflect-horizontal:before {\n  content: \"\\FA0D\";\n}\n\n.mdi-reflect-vertical:before {\n  content: \"\\FA0E\";\n}\n\n.mdi-refresh:before {\n  content: \"\\F450\";\n}\n\n.mdi-regex:before {\n  content: \"\\F451\";\n}\n\n.mdi-registered-trademark:before {\n  content: \"\\FA66\";\n}\n\n.mdi-relative-scale:before {\n  content: \"\\F452\";\n}\n\n.mdi-reload:before {\n  content: \"\\F453\";\n}\n\n.mdi-reminder:before {\n  content: \"\\F88B\";\n}\n\n.mdi-remote:before {\n  content: \"\\F454\";\n}\n\n.mdi-remote-desktop:before {\n  content: \"\\F8B8\";\n}\n\n.mdi-remote-off:before {\n  content: \"\\FEE1\";\n}\n\n.mdi-remote-tv:before {\n  content: \"\\FEE2\";\n}\n\n.mdi-remote-tv-off:before {\n  content: \"\\FEE3\";\n}\n\n.mdi-rename-box:before {\n  content: \"\\F455\";\n}\n\n.mdi-reorder-horizontal:before {\n  content: \"\\F687\";\n}\n\n.mdi-reorder-vertical:before {\n  content: \"\\F688\";\n}\n\n.mdi-repeat:before {\n  content: \"\\F456\";\n}\n\n.mdi-repeat-off:before {\n  content: \"\\F457\";\n}\n\n.mdi-repeat-once:before {\n  content: \"\\F458\";\n}\n\n.mdi-replay:before {\n  content: \"\\F459\";\n}\n\n.mdi-reply:before {\n  content: \"\\F45A\";\n}\n\n.mdi-reply-all:before {\n  content: \"\\F45B\";\n}\n\n.mdi-reproduction:before {\n  content: \"\\F45C\";\n}\n\n.mdi-resistor:before {\n  content: \"\\FB1F\";\n}\n\n.mdi-resistor-nodes:before {\n  content: \"\\FB20\";\n}\n\n.mdi-resize:before {\n  content: \"\\FA67\";\n}\n\n.mdi-resize-bottom-right:before {\n  content: \"\\F45D\";\n}\n\n.mdi-responsive:before {\n  content: \"\\F45E\";\n}\n\n.mdi-restart:before {\n  content: \"\\F708\";\n}\n\n.mdi-restart-off:before {\n  content: \"\\FD71\";\n}\n\n.mdi-restore:before {\n  content: \"\\F99A\";\n}\n\n.mdi-restore-clock:before {\n  content: \"\\F6A7\";\n}\n\n.mdi-rewind:before {\n  content: \"\\F45F\";\n}\n\n.mdi-rewind-10:before {\n  content: \"\\FD06\";\n}\n\n.mdi-rewind-30:before {\n  content: \"\\FD72\";\n}\n\n.mdi-rewind-outline:before {\n  content: \"\\F709\";\n}\n\n.mdi-rhombus:before {\n  content: \"\\F70A\";\n}\n\n.mdi-rhombus-medium:before {\n  content: \"\\FA0F\";\n}\n\n.mdi-rhombus-outline:before {\n  content: \"\\F70B\";\n}\n\n.mdi-rhombus-split:before {\n  content: \"\\FA10\";\n}\n\n.mdi-ribbon:before {\n  content: \"\\F460\";\n}\n\n.mdi-rice:before {\n  content: \"\\F7E9\";\n}\n\n.mdi-ring:before {\n  content: \"\\F7EA\";\n}\n\n.mdi-rivet:before {\n  content: \"\\FE43\";\n}\n\n.mdi-road:before {\n  content: \"\\F461\";\n}\n\n.mdi-road-variant:before {\n  content: \"\\F462\";\n}\n\n.mdi-robot:before {\n  content: \"\\F6A8\";\n}\n\n.mdi-robot-industrial:before {\n  content: \"\\FB21\";\n}\n\n.mdi-robot-vacuum:before {\n  content: \"\\F70C\";\n}\n\n.mdi-robot-vacuum-variant:before {\n  content: \"\\F907\";\n}\n\n.mdi-rocket:before {\n  content: \"\\F463\";\n}\n\n.mdi-roller-skate:before {\n  content: \"\\FD07\";\n}\n\n.mdi-rollerblade:before {\n  content: \"\\FD08\";\n}\n\n.mdi-rollupjs:before {\n  content: \"\\FB9C\";\n}\n\n.mdi-room-service:before {\n  content: \"\\F88C\";\n}\n\n.mdi-room-service-outline:before {\n  content: \"\\FD73\";\n}\n\n.mdi-rotate-3d:before {\n  content: \"\\FEE4\";\n}\n\n.mdi-rotate-3d-variant:before {\n  content: \"\\F464\";\n}\n\n.mdi-rotate-left:before {\n  content: \"\\F465\";\n}\n\n.mdi-rotate-left-variant:before {\n  content: \"\\F466\";\n}\n\n.mdi-rotate-orbit:before {\n  content: \"\\FD74\";\n}\n\n.mdi-rotate-right:before {\n  content: \"\\F467\";\n}\n\n.mdi-rotate-right-variant:before {\n  content: \"\\F468\";\n}\n\n.mdi-rounded-corner:before {\n  content: \"\\F607\";\n}\n\n.mdi-router-wireless:before {\n  content: \"\\F469\";\n}\n\n.mdi-router-wireless-settings:before {\n  content: \"\\FA68\";\n}\n\n.mdi-routes:before {\n  content: \"\\F46A\";\n}\n\n.mdi-rowing:before {\n  content: \"\\F608\";\n}\n\n.mdi-rss:before {\n  content: \"\\F46B\";\n}\n\n.mdi-rss-box:before {\n  content: \"\\F46C\";\n}\n\n.mdi-ruby:before {\n  content: \"\\FD09\";\n}\n\n.mdi-rugby:before {\n  content: \"\\FD75\";\n}\n\n.mdi-ruler:before {\n  content: \"\\F46D\";\n}\n\n.mdi-ruler-square:before {\n  content: \"\\FC9E\";\n}\n\n.mdi-run:before {\n  content: \"\\F70D\";\n}\n\n.mdi-run-fast:before {\n  content: \"\\F46E\";\n}\n\n.mdi-sack:before {\n  content: \"\\FD0A\";\n}\n\n.mdi-sack-percent:before {\n  content: \"\\FD0B\";\n}\n\n.mdi-safe:before {\n  content: \"\\FA69\";\n}\n\n.mdi-safety-goggles:before {\n  content: \"\\FD0C\";\n}\n\n.mdi-sailing:before {\n  content: \"\\FEE5\";\n}\n\n.mdi-sale:before {\n  content: \"\\F46F\";\n}\n\n.mdi-salesforce:before {\n  content: \"\\F88D\";\n}\n\n.mdi-sass:before {\n  content: \"\\F7EB\";\n}\n\n.mdi-satellite:before {\n  content: \"\\F470\";\n}\n\n.mdi-satellite-uplink:before {\n  content: \"\\F908\";\n}\n\n.mdi-satellite-variant:before {\n  content: \"\\F471\";\n}\n\n.mdi-sausage:before {\n  content: \"\\F8B9\";\n}\n\n.mdi-saw-blade:before {\n  content: \"\\FE44\";\n}\n\n.mdi-saxophone:before {\n  content: \"\\F609\";\n}\n\n.mdi-scale:before {\n  content: \"\\F472\";\n}\n\n.mdi-scale-balance:before {\n  content: \"\\F5D1\";\n}\n\n.mdi-scale-bathroom:before {\n  content: \"\\F473\";\n}\n\n.mdi-scanner:before {\n  content: \"\\F6AA\";\n}\n\n.mdi-scanner-off:before {\n  content: \"\\F909\";\n}\n\n.mdi-scatter-plot:before {\n  content: \"\\FEE6\";\n}\n\n.mdi-scatter-plot-outline:before {\n  content: \"\\FEE7\";\n}\n\n.mdi-school:before {\n  content: \"\\F474\";\n}\n\n.mdi-scissors-cutting:before {\n  content: \"\\FA6A\";\n}\n\n.mdi-screen-rotation:before {\n  content: \"\\F475\";\n}\n\n.mdi-screen-rotation-lock:before {\n  content: \"\\F476\";\n}\n\n.mdi-screw-flat-top:before {\n  content: \"\\FDCF\";\n}\n\n.mdi-screw-lag:before {\n  content: \"\\FE54\";\n}\n\n.mdi-screw-machine-flat-top:before {\n  content: \"\\FE55\";\n}\n\n.mdi-screw-machine-round-top:before {\n  content: \"\\FE56\";\n}\n\n.mdi-screw-round-top:before {\n  content: \"\\FE57\";\n}\n\n.mdi-screwdriver:before {\n  content: \"\\F477\";\n}\n\n.mdi-script:before {\n  content: \"\\FB9D\";\n}\n\n.mdi-script-outline:before {\n  content: \"\\F478\";\n}\n\n.mdi-script-text:before {\n  content: \"\\FB9E\";\n}\n\n.mdi-script-text-outline:before {\n  content: \"\\FB9F\";\n}\n\n.mdi-sd:before {\n  content: \"\\F479\";\n}\n\n.mdi-seal:before {\n  content: \"\\F47A\";\n}\n\n.mdi-search-web:before {\n  content: \"\\F70E\";\n}\n\n.mdi-seat:before {\n  content: \"\\FC9F\";\n}\n\n.mdi-seat-flat:before {\n  content: \"\\F47B\";\n}\n\n.mdi-seat-flat-angled:before {\n  content: \"\\F47C\";\n}\n\n.mdi-seat-individual-suite:before {\n  content: \"\\F47D\";\n}\n\n.mdi-seat-legroom-extra:before {\n  content: \"\\F47E\";\n}\n\n.mdi-seat-legroom-normal:before {\n  content: \"\\F47F\";\n}\n\n.mdi-seat-legroom-reduced:before {\n  content: \"\\F480\";\n}\n\n.mdi-seat-outline:before {\n  content: \"\\FCA0\";\n}\n\n.mdi-seat-recline-extra:before {\n  content: \"\\F481\";\n}\n\n.mdi-seat-recline-normal:before {\n  content: \"\\F482\";\n}\n\n.mdi-seatbelt:before {\n  content: \"\\FCA1\";\n}\n\n.mdi-security:before {\n  content: \"\\F483\";\n}\n\n.mdi-security-network:before {\n  content: \"\\F484\";\n}\n\n.mdi-seed:before {\n  content: \"\\FE45\";\n}\n\n.mdi-seed-outline:before {\n  content: \"\\FE46\";\n}\n\n.mdi-segment:before {\n  content: \"\\FEE8\";\n}\n\n.mdi-select:before {\n  content: \"\\F485\";\n}\n\n.mdi-select-all:before {\n  content: \"\\F486\";\n}\n\n.mdi-select-color:before {\n  content: \"\\FD0D\";\n}\n\n.mdi-select-compare:before {\n  content: \"\\FAD8\";\n}\n\n.mdi-select-drag:before {\n  content: \"\\FA6B\";\n}\n\n.mdi-select-inverse:before {\n  content: \"\\F487\";\n}\n\n.mdi-select-off:before {\n  content: \"\\F488\";\n}\n\n.mdi-selection:before {\n  content: \"\\F489\";\n}\n\n.mdi-selection-drag:before {\n  content: \"\\FA6C\";\n}\n\n.mdi-selection-ellipse:before {\n  content: \"\\FD0E\";\n}\n\n.mdi-selection-off:before {\n  content: \"\\F776\";\n}\n\n.mdi-send:before {\n  content: \"\\F48A\";\n}\n\n.mdi-send-circle:before {\n  content: \"\\FE58\";\n}\n\n.mdi-send-circle-outline:before {\n  content: \"\\FE59\";\n}\n\n.mdi-send-lock:before {\n  content: \"\\F7EC\";\n}\n\n.mdi-serial-port:before {\n  content: \"\\F65C\";\n}\n\n.mdi-server:before {\n  content: \"\\F48B\";\n}\n\n.mdi-server-minus:before {\n  content: \"\\F48C\";\n}\n\n.mdi-server-network:before {\n  content: \"\\F48D\";\n}\n\n.mdi-server-network-off:before {\n  content: \"\\F48E\";\n}\n\n.mdi-server-off:before {\n  content: \"\\F48F\";\n}\n\n.mdi-server-plus:before {\n  content: \"\\F490\";\n}\n\n.mdi-server-remove:before {\n  content: \"\\F491\";\n}\n\n.mdi-server-security:before {\n  content: \"\\F492\";\n}\n\n.mdi-set-all:before {\n  content: \"\\F777\";\n}\n\n.mdi-set-center:before {\n  content: \"\\F778\";\n}\n\n.mdi-set-center-right:before {\n  content: \"\\F779\";\n}\n\n.mdi-set-left:before {\n  content: \"\\F77A\";\n}\n\n.mdi-set-left-center:before {\n  content: \"\\F77B\";\n}\n\n.mdi-set-left-right:before {\n  content: \"\\F77C\";\n}\n\n.mdi-set-none:before {\n  content: \"\\F77D\";\n}\n\n.mdi-set-right:before {\n  content: \"\\F77E\";\n}\n\n.mdi-set-top-box:before {\n  content: \"\\F99E\";\n}\n\n.mdi-settings:before {\n  content: \"\\F493\";\n}\n\n.mdi-settings-box:before {\n  content: \"\\F494\";\n}\n\n.mdi-settings-helper:before {\n  content: \"\\FA6D\";\n}\n\n.mdi-settings-outline:before {\n  content: \"\\F8BA\";\n}\n\n.mdi-shape:before {\n  content: \"\\F830\";\n}\n\n.mdi-shape-circle-plus:before {\n  content: \"\\F65D\";\n}\n\n.mdi-shape-outline:before {\n  content: \"\\F831\";\n}\n\n.mdi-shape-plus:before {\n  content: \"\\F495\";\n}\n\n.mdi-shape-polygon-plus:before {\n  content: \"\\F65E\";\n}\n\n.mdi-shape-rectangle-plus:before {\n  content: \"\\F65F\";\n}\n\n.mdi-shape-square-plus:before {\n  content: \"\\F660\";\n}\n\n.mdi-share:before {\n  content: \"\\F496\";\n}\n\n.mdi-share-outline:before {\n  content: \"\\F931\";\n}\n\n.mdi-share-variant:before {\n  content: \"\\F497\";\n}\n\n.mdi-sheep:before {\n  content: \"\\FCA2\";\n}\n\n.mdi-shield:before {\n  content: \"\\F498\";\n}\n\n.mdi-shield-account:before {\n  content: \"\\F88E\";\n}\n\n.mdi-shield-account-outline:before {\n  content: \"\\FA11\";\n}\n\n.mdi-shield-airplane:before {\n  content: \"\\F6BA\";\n}\n\n.mdi-shield-airplane-outline:before {\n  content: \"\\FCA3\";\n}\n\n.mdi-shield-alert:before {\n  content: \"\\FEE9\";\n}\n\n.mdi-shield-alert-outline:before {\n  content: \"\\FEEA\";\n}\n\n.mdi-shield-check:before {\n  content: \"\\F565\";\n}\n\n.mdi-shield-check-outline:before {\n  content: \"\\FCA4\";\n}\n\n.mdi-shield-cross:before {\n  content: \"\\FCA5\";\n}\n\n.mdi-shield-cross-outline:before {\n  content: \"\\FCA6\";\n}\n\n.mdi-shield-half-full:before {\n  content: \"\\F77F\";\n}\n\n.mdi-shield-home:before {\n  content: \"\\F689\";\n}\n\n.mdi-shield-home-outline:before {\n  content: \"\\FCA7\";\n}\n\n.mdi-shield-key:before {\n  content: \"\\FBA0\";\n}\n\n.mdi-shield-key-outline:before {\n  content: \"\\FBA1\";\n}\n\n.mdi-shield-link-variant:before {\n  content: \"\\FD0F\";\n}\n\n.mdi-shield-link-variant-outline:before {\n  content: \"\\FD10\";\n}\n\n.mdi-shield-lock:before {\n  content: \"\\F99C\";\n}\n\n.mdi-shield-lock-outline:before {\n  content: \"\\FCA8\";\n}\n\n.mdi-shield-off:before {\n  content: \"\\F99D\";\n}\n\n.mdi-shield-off-outline:before {\n  content: \"\\F99B\";\n}\n\n.mdi-shield-outline:before {\n  content: \"\\F499\";\n}\n\n.mdi-shield-plus:before {\n  content: \"\\FAD9\";\n}\n\n.mdi-shield-plus-outline:before {\n  content: \"\\FADA\";\n}\n\n.mdi-shield-remove:before {\n  content: \"\\FADB\";\n}\n\n.mdi-shield-remove-outline:before {\n  content: \"\\FADC\";\n}\n\n.mdi-shield-search:before {\n  content: \"\\FD76\";\n}\n\n.mdi-ship-wheel:before {\n  content: \"\\F832\";\n}\n\n.mdi-shoe-formal:before {\n  content: \"\\FB22\";\n}\n\n.mdi-shoe-heel:before {\n  content: \"\\FB23\";\n}\n\n.mdi-shoe-print:before {\n  content: \"\\FE5A\";\n}\n\n.mdi-shopify:before {\n  content: \"\\FADD\";\n}\n\n.mdi-shopping:before {\n  content: \"\\F49A\";\n}\n\n.mdi-shopping-music:before {\n  content: \"\\F49B\";\n}\n\n.mdi-shovel:before {\n  content: \"\\F70F\";\n}\n\n.mdi-shovel-off:before {\n  content: \"\\F710\";\n}\n\n.mdi-shower:before {\n  content: \"\\F99F\";\n}\n\n.mdi-shower-head:before {\n  content: \"\\F9A0\";\n}\n\n.mdi-shredder:before {\n  content: \"\\F49C\";\n}\n\n.mdi-shuffle:before {\n  content: \"\\F49D\";\n}\n\n.mdi-shuffle-disabled:before {\n  content: \"\\F49E\";\n}\n\n.mdi-shuffle-variant:before {\n  content: \"\\F49F\";\n}\n\n.mdi-sigma:before {\n  content: \"\\F4A0\";\n}\n\n.mdi-sigma-lower:before {\n  content: \"\\F62B\";\n}\n\n.mdi-sign-caution:before {\n  content: \"\\F4A1\";\n}\n\n.mdi-sign-direction:before {\n  content: \"\\F780\";\n}\n\n.mdi-sign-text:before {\n  content: \"\\F781\";\n}\n\n.mdi-signal:before {\n  content: \"\\F4A2\";\n}\n\n.mdi-signal-2g:before {\n  content: \"\\F711\";\n}\n\n.mdi-signal-3g:before {\n  content: \"\\F712\";\n}\n\n.mdi-signal-4g:before {\n  content: \"\\F713\";\n}\n\n.mdi-signal-5g:before {\n  content: \"\\FA6E\";\n}\n\n.mdi-signal-cellular-1:before {\n  content: \"\\F8BB\";\n}\n\n.mdi-signal-cellular-2:before {\n  content: \"\\F8BC\";\n}\n\n.mdi-signal-cellular-3:before {\n  content: \"\\F8BD\";\n}\n\n.mdi-signal-cellular-outline:before {\n  content: \"\\F8BE\";\n}\n\n.mdi-signal-distance-variant:before {\n  content: \"\\FE47\";\n}\n\n.mdi-signal-hspa:before {\n  content: \"\\F714\";\n}\n\n.mdi-signal-hspa-plus:before {\n  content: \"\\F715\";\n}\n\n.mdi-signal-off:before {\n  content: \"\\F782\";\n}\n\n.mdi-signal-variant:before {\n  content: \"\\F60A\";\n}\n\n.mdi-signature:before {\n  content: \"\\FE5B\";\n}\n\n.mdi-signature-freehand:before {\n  content: \"\\FE5C\";\n}\n\n.mdi-signature-image:before {\n  content: \"\\FE5D\";\n}\n\n.mdi-signature-text:before {\n  content: \"\\FE5E\";\n}\n\n.mdi-silo:before {\n  content: \"\\FB24\";\n}\n\n.mdi-silverware:before {\n  content: \"\\F4A3\";\n}\n\n.mdi-silverware-fork:before {\n  content: \"\\F4A4\";\n}\n\n.mdi-silverware-fork-knife:before {\n  content: \"\\FA6F\";\n}\n\n.mdi-silverware-spoon:before {\n  content: \"\\F4A5\";\n}\n\n.mdi-silverware-variant:before {\n  content: \"\\F4A6\";\n}\n\n.mdi-sim:before {\n  content: \"\\F4A7\";\n}\n\n.mdi-sim-alert:before {\n  content: \"\\F4A8\";\n}\n\n.mdi-sim-off:before {\n  content: \"\\F4A9\";\n}\n\n.mdi-sina-weibo:before {\n  content: \"\\FADE\";\n}\n\n.mdi-sitemap:before {\n  content: \"\\F4AA\";\n}\n\n.mdi-skate:before {\n  content: \"\\FD11\";\n}\n\n.mdi-skew-less:before {\n  content: \"\\FD12\";\n}\n\n.mdi-skew-more:before {\n  content: \"\\FD13\";\n}\n\n.mdi-skip-backward:before {\n  content: \"\\F4AB\";\n}\n\n.mdi-skip-forward:before {\n  content: \"\\F4AC\";\n}\n\n.mdi-skip-next:before {\n  content: \"\\F4AD\";\n}\n\n.mdi-skip-next-circle:before {\n  content: \"\\F661\";\n}\n\n.mdi-skip-next-circle-outline:before {\n  content: \"\\F662\";\n}\n\n.mdi-skip-previous:before {\n  content: \"\\F4AE\";\n}\n\n.mdi-skip-previous-circle:before {\n  content: \"\\F663\";\n}\n\n.mdi-skip-previous-circle-outline:before {\n  content: \"\\F664\";\n}\n\n.mdi-skull:before {\n  content: \"\\F68B\";\n}\n\n.mdi-skull-crossbones:before {\n  content: \"\\FBA2\";\n}\n\n.mdi-skull-crossbones-outline:before {\n  content: \"\\FBA3\";\n}\n\n.mdi-skull-outline:before {\n  content: \"\\FBA4\";\n}\n\n.mdi-skype:before {\n  content: \"\\F4AF\";\n}\n\n.mdi-skype-business:before {\n  content: \"\\F4B0\";\n}\n\n.mdi-slack:before {\n  content: \"\\F4B1\";\n}\n\n.mdi-slackware:before {\n  content: \"\\F90A\";\n}\n\n.mdi-sleep:before {\n  content: \"\\F4B2\";\n}\n\n.mdi-sleep-off:before {\n  content: \"\\F4B3\";\n}\n\n.mdi-slope-downhill:before {\n  content: \"\\FE5F\";\n}\n\n.mdi-slope-uphill:before {\n  content: \"\\FE60\";\n}\n\n.mdi-smog:before {\n  content: \"\\FA70\";\n}\n\n.mdi-smoke-detector:before {\n  content: \"\\F392\";\n}\n\n.mdi-smoking:before {\n  content: \"\\F4B4\";\n}\n\n.mdi-smoking-off:before {\n  content: \"\\F4B5\";\n}\n\n.mdi-snapchat:before {\n  content: \"\\F4B6\";\n}\n\n.mdi-snowflake:before {\n  content: \"\\F716\";\n}\n\n.mdi-snowman:before {\n  content: \"\\F4B7\";\n}\n\n.mdi-soccer:before {\n  content: \"\\F4B8\";\n}\n\n.mdi-soccer-field:before {\n  content: \"\\F833\";\n}\n\n.mdi-sofa:before {\n  content: \"\\F4B9\";\n}\n\n.mdi-solar-panel:before {\n  content: \"\\FD77\";\n}\n\n.mdi-solar-panel-large:before {\n  content: \"\\FD78\";\n}\n\n.mdi-solar-power:before {\n  content: \"\\FA71\";\n}\n\n.mdi-solid:before {\n  content: \"\\F68C\";\n}\n\n.mdi-sort:before {\n  content: \"\\F4BA\";\n}\n\n.mdi-sort-alphabetical:before {\n  content: \"\\F4BB\";\n}\n\n.mdi-sort-ascending:before {\n  content: \"\\F4BC\";\n}\n\n.mdi-sort-descending:before {\n  content: \"\\F4BD\";\n}\n\n.mdi-sort-numeric:before {\n  content: \"\\F4BE\";\n}\n\n.mdi-sort-variant:before {\n  content: \"\\F4BF\";\n}\n\n.mdi-sort-variant-lock:before {\n  content: \"\\FCA9\";\n}\n\n.mdi-sort-variant-lock-open:before {\n  content: \"\\FCAA\";\n}\n\n.mdi-soundcloud:before {\n  content: \"\\F4C0\";\n}\n\n.mdi-source-branch:before {\n  content: \"\\F62C\";\n}\n\n.mdi-source-commit:before {\n  content: \"\\F717\";\n}\n\n.mdi-source-commit-end:before {\n  content: \"\\F718\";\n}\n\n.mdi-source-commit-end-local:before {\n  content: \"\\F719\";\n}\n\n.mdi-source-commit-local:before {\n  content: \"\\F71A\";\n}\n\n.mdi-source-commit-next-local:before {\n  content: \"\\F71B\";\n}\n\n.mdi-source-commit-start:before {\n  content: \"\\F71C\";\n}\n\n.mdi-source-commit-start-next-local:before {\n  content: \"\\F71D\";\n}\n\n.mdi-source-fork:before {\n  content: \"\\F4C1\";\n}\n\n.mdi-source-merge:before {\n  content: \"\\F62D\";\n}\n\n.mdi-source-pull:before {\n  content: \"\\F4C2\";\n}\n\n.mdi-source-repository:before {\n  content: \"\\FCAB\";\n}\n\n.mdi-source-repository-multiple:before {\n  content: \"\\FCAC\";\n}\n\n.mdi-soy-sauce:before {\n  content: \"\\F7ED\";\n}\n\n.mdi-spa:before {\n  content: \"\\FCAD\";\n}\n\n.mdi-spa-outline:before {\n  content: \"\\FCAE\";\n}\n\n.mdi-space-invaders:before {\n  content: \"\\FBA5\";\n}\n\n.mdi-spade:before {\n  content: \"\\FE48\";\n}\n\n.mdi-speaker:before {\n  content: \"\\F4C3\";\n}\n\n.mdi-speaker-bluetooth:before {\n  content: \"\\F9A1\";\n}\n\n.mdi-speaker-multiple:before {\n  content: \"\\FD14\";\n}\n\n.mdi-speaker-off:before {\n  content: \"\\F4C4\";\n}\n\n.mdi-speaker-wireless:before {\n  content: \"\\F71E\";\n}\n\n.mdi-speedometer:before {\n  content: \"\\F4C5\";\n}\n\n.mdi-spellcheck:before {\n  content: \"\\F4C6\";\n}\n\n.mdi-spider-web:before {\n  content: \"\\FBA6\";\n}\n\n.mdi-spotify:before {\n  content: \"\\F4C7\";\n}\n\n.mdi-spotlight:before {\n  content: \"\\F4C8\";\n}\n\n.mdi-spotlight-beam:before {\n  content: \"\\F4C9\";\n}\n\n.mdi-spray:before {\n  content: \"\\F665\";\n}\n\n.mdi-spray-bottle:before {\n  content: \"\\FADF\";\n}\n\n.mdi-sprout:before {\n  content: \"\\FE49\";\n}\n\n.mdi-sprout-outline:before {\n  content: \"\\FE4A\";\n}\n\n.mdi-square:before {\n  content: \"\\F763\";\n}\n\n.mdi-square-edit-outline:before {\n  content: \"\\F90B\";\n}\n\n.mdi-square-inc:before {\n  content: \"\\F4CA\";\n}\n\n.mdi-square-inc-cash:before {\n  content: \"\\F4CB\";\n}\n\n.mdi-square-medium:before {\n  content: \"\\FA12\";\n}\n\n.mdi-square-medium-outline:before {\n  content: \"\\FA13\";\n}\n\n.mdi-square-outline:before {\n  content: \"\\F762\";\n}\n\n.mdi-square-root:before {\n  content: \"\\F783\";\n}\n\n.mdi-square-root-box:before {\n  content: \"\\F9A2\";\n}\n\n.mdi-square-small:before {\n  content: \"\\FA14\";\n}\n\n.mdi-squeegee:before {\n  content: \"\\FAE0\";\n}\n\n.mdi-ssh:before {\n  content: \"\\F8BF\";\n}\n\n.mdi-stack-exchange:before {\n  content: \"\\F60B\";\n}\n\n.mdi-stack-overflow:before {\n  content: \"\\F4CC\";\n}\n\n.mdi-stadium:before {\n  content: \"\\F71F\";\n}\n\n.mdi-stairs:before {\n  content: \"\\F4CD\";\n}\n\n.mdi-stamper:before {\n  content: \"\\FD15\";\n}\n\n.mdi-standard-definition:before {\n  content: \"\\F7EE\";\n}\n\n.mdi-star:before {\n  content: \"\\F4CE\";\n}\n\n.mdi-star-box:before {\n  content: \"\\FA72\";\n}\n\n.mdi-star-box-outline:before {\n  content: \"\\FA73\";\n}\n\n.mdi-star-circle:before {\n  content: \"\\F4CF\";\n}\n\n.mdi-star-circle-outline:before {\n  content: \"\\F9A3\";\n}\n\n.mdi-star-face:before {\n  content: \"\\F9A4\";\n}\n\n.mdi-star-four-points:before {\n  content: \"\\FAE1\";\n}\n\n.mdi-star-four-points-outline:before {\n  content: \"\\FAE2\";\n}\n\n.mdi-star-half:before {\n  content: \"\\F4D0\";\n}\n\n.mdi-star-off:before {\n  content: \"\\F4D1\";\n}\n\n.mdi-star-outline:before {\n  content: \"\\F4D2\";\n}\n\n.mdi-star-three-points:before {\n  content: \"\\FAE3\";\n}\n\n.mdi-star-three-points-outline:before {\n  content: \"\\FAE4\";\n}\n\n.mdi-steam:before {\n  content: \"\\F4D3\";\n}\n\n.mdi-steam-box:before {\n  content: \"\\F90C\";\n}\n\n.mdi-steering:before {\n  content: \"\\F4D4\";\n}\n\n.mdi-steering-off:before {\n  content: \"\\F90D\";\n}\n\n.mdi-step-backward:before {\n  content: \"\\F4D5\";\n}\n\n.mdi-step-backward-2:before {\n  content: \"\\F4D6\";\n}\n\n.mdi-step-forward:before {\n  content: \"\\F4D7\";\n}\n\n.mdi-step-forward-2:before {\n  content: \"\\F4D8\";\n}\n\n.mdi-stethoscope:before {\n  content: \"\\F4D9\";\n}\n\n.mdi-sticker:before {\n  content: \"\\F5D0\";\n}\n\n.mdi-sticker-emoji:before {\n  content: \"\\F784\";\n}\n\n.mdi-stocking:before {\n  content: \"\\F4DA\";\n}\n\n.mdi-stop:before {\n  content: \"\\F4DB\";\n}\n\n.mdi-stop-circle:before {\n  content: \"\\F666\";\n}\n\n.mdi-stop-circle-outline:before {\n  content: \"\\F667\";\n}\n\n.mdi-store:before {\n  content: \"\\F4DC\";\n}\n\n.mdi-store-24-hour:before {\n  content: \"\\F4DD\";\n}\n\n.mdi-stove:before {\n  content: \"\\F4DE\";\n}\n\n.mdi-strava:before {\n  content: \"\\FB25\";\n}\n\n.mdi-subdirectory-arrow-left:before {\n  content: \"\\F60C\";\n}\n\n.mdi-subdirectory-arrow-right:before {\n  content: \"\\F60D\";\n}\n\n.mdi-subtitles:before {\n  content: \"\\FA15\";\n}\n\n.mdi-subtitles-outline:before {\n  content: \"\\FA16\";\n}\n\n.mdi-subway:before {\n  content: \"\\F6AB\";\n}\n\n.mdi-subway-alert-variant:before {\n  content: \"\\FD79\";\n}\n\n.mdi-subway-variant:before {\n  content: \"\\F4DF\";\n}\n\n.mdi-summit:before {\n  content: \"\\F785\";\n}\n\n.mdi-sunglasses:before {\n  content: \"\\F4E0\";\n}\n\n.mdi-surround-sound:before {\n  content: \"\\F5C5\";\n}\n\n.mdi-surround-sound-2-0:before {\n  content: \"\\F7EF\";\n}\n\n.mdi-surround-sound-3-1:before {\n  content: \"\\F7F0\";\n}\n\n.mdi-surround-sound-5-1:before {\n  content: \"\\F7F1\";\n}\n\n.mdi-surround-sound-7-1:before {\n  content: \"\\F7F2\";\n}\n\n.mdi-svg:before {\n  content: \"\\F720\";\n}\n\n.mdi-swap-horizontal:before {\n  content: \"\\F4E1\";\n}\n\n.mdi-swap-horizontal-bold:before {\n  content: \"\\FBA9\";\n}\n\n.mdi-swap-horizontal-variant:before {\n  content: \"\\F8C0\";\n}\n\n.mdi-swap-vertical:before {\n  content: \"\\F4E2\";\n}\n\n.mdi-swap-vertical-bold:before {\n  content: \"\\FBAA\";\n}\n\n.mdi-swap-vertical-variant:before {\n  content: \"\\F8C1\";\n}\n\n.mdi-swim:before {\n  content: \"\\F4E3\";\n}\n\n.mdi-switch:before {\n  content: \"\\F4E4\";\n}\n\n.mdi-sword:before {\n  content: \"\\F4E5\";\n}\n\n.mdi-sword-cross:before {\n  content: \"\\F786\";\n}\n\n.mdi-symfony:before {\n  content: \"\\FAE5\";\n}\n\n.mdi-sync:before {\n  content: \"\\F4E6\";\n}\n\n.mdi-sync-alert:before {\n  content: \"\\F4E7\";\n}\n\n.mdi-sync-off:before {\n  content: \"\\F4E8\";\n}\n\n.mdi-tab:before {\n  content: \"\\F4E9\";\n}\n\n.mdi-tab-minus:before {\n  content: \"\\FB26\";\n}\n\n.mdi-tab-plus:before {\n  content: \"\\F75B\";\n}\n\n.mdi-tab-remove:before {\n  content: \"\\FB27\";\n}\n\n.mdi-tab-unselected:before {\n  content: \"\\F4EA\";\n}\n\n.mdi-table:before {\n  content: \"\\F4EB\";\n}\n\n.mdi-table-border:before {\n  content: \"\\FA17\";\n}\n\n.mdi-table-column:before {\n  content: \"\\F834\";\n}\n\n.mdi-table-column-plus-after:before {\n  content: \"\\F4EC\";\n}\n\n.mdi-table-column-plus-before:before {\n  content: \"\\F4ED\";\n}\n\n.mdi-table-column-remove:before {\n  content: \"\\F4EE\";\n}\n\n.mdi-table-column-width:before {\n  content: \"\\F4EF\";\n}\n\n.mdi-table-edit:before {\n  content: \"\\F4F0\";\n}\n\n.mdi-table-large:before {\n  content: \"\\F4F1\";\n}\n\n.mdi-table-merge-cells:before {\n  content: \"\\F9A5\";\n}\n\n.mdi-table-of-contents:before {\n  content: \"\\F835\";\n}\n\n.mdi-table-plus:before {\n  content: \"\\FA74\";\n}\n\n.mdi-table-remove:before {\n  content: \"\\FA75\";\n}\n\n.mdi-table-row:before {\n  content: \"\\F836\";\n}\n\n.mdi-table-row-height:before {\n  content: \"\\F4F2\";\n}\n\n.mdi-table-row-plus-after:before {\n  content: \"\\F4F3\";\n}\n\n.mdi-table-row-plus-before:before {\n  content: \"\\F4F4\";\n}\n\n.mdi-table-row-remove:before {\n  content: \"\\F4F5\";\n}\n\n.mdi-table-search:before {\n  content: \"\\F90E\";\n}\n\n.mdi-table-settings:before {\n  content: \"\\F837\";\n}\n\n.mdi-table-tennis:before {\n  content: \"\\FE4B\";\n}\n\n.mdi-tablet:before {\n  content: \"\\F4F6\";\n}\n\n.mdi-tablet-android:before {\n  content: \"\\F4F7\";\n}\n\n.mdi-tablet-cellphone:before {\n  content: \"\\F9A6\";\n}\n\n.mdi-tablet-dashboard:before {\n  content: \"\\FEEB\";\n}\n\n.mdi-tablet-ipad:before {\n  content: \"\\F4F8\";\n}\n\n.mdi-taco:before {\n  content: \"\\F761\";\n}\n\n.mdi-tag:before {\n  content: \"\\F4F9\";\n}\n\n.mdi-tag-faces:before {\n  content: \"\\F4FA\";\n}\n\n.mdi-tag-heart:before {\n  content: \"\\F68A\";\n}\n\n.mdi-tag-heart-outline:before {\n  content: \"\\FBAB\";\n}\n\n.mdi-tag-minus:before {\n  content: \"\\F90F\";\n}\n\n.mdi-tag-multiple:before {\n  content: \"\\F4FB\";\n}\n\n.mdi-tag-outline:before {\n  content: \"\\F4FC\";\n}\n\n.mdi-tag-plus:before {\n  content: \"\\F721\";\n}\n\n.mdi-tag-remove:before {\n  content: \"\\F722\";\n}\n\n.mdi-tag-text-outline:before {\n  content: \"\\F4FD\";\n}\n\n.mdi-tank:before {\n  content: \"\\FD16\";\n}\n\n.mdi-tape-measure:before {\n  content: \"\\FB28\";\n}\n\n.mdi-target:before {\n  content: \"\\F4FE\";\n}\n\n.mdi-target-account:before {\n  content: \"\\FBAC\";\n}\n\n.mdi-target-variant:before {\n  content: \"\\FA76\";\n}\n\n.mdi-taxi:before {\n  content: \"\\F4FF\";\n}\n\n.mdi-tea:before {\n  content: \"\\FD7A\";\n}\n\n.mdi-tea-outline:before {\n  content: \"\\FD7B\";\n}\n\n.mdi-teach:before {\n  content: \"\\F88F\";\n}\n\n.mdi-teamviewer:before {\n  content: \"\\F500\";\n}\n\n.mdi-telegram:before {\n  content: \"\\F501\";\n}\n\n.mdi-telescope:before {\n  content: \"\\FB29\";\n}\n\n.mdi-television:before {\n  content: \"\\F502\";\n}\n\n.mdi-television-box:before {\n  content: \"\\F838\";\n}\n\n.mdi-television-classic:before {\n  content: \"\\F7F3\";\n}\n\n.mdi-television-classic-off:before {\n  content: \"\\F839\";\n}\n\n.mdi-television-guide:before {\n  content: \"\\F503\";\n}\n\n.mdi-television-off:before {\n  content: \"\\F83A\";\n}\n\n.mdi-television-play:before {\n  content: \"\\FEEC\";\n}\n\n.mdi-temperature-celsius:before {\n  content: \"\\F504\";\n}\n\n.mdi-temperature-fahrenheit:before {\n  content: \"\\F505\";\n}\n\n.mdi-temperature-kelvin:before {\n  content: \"\\F506\";\n}\n\n.mdi-tennis:before {\n  content: \"\\FD7C\";\n}\n\n.mdi-tennis-ball:before {\n  content: \"\\F507\";\n}\n\n.mdi-tent:before {\n  content: \"\\F508\";\n}\n\n.mdi-terrain:before {\n  content: \"\\F509\";\n}\n\n.mdi-test-tube:before {\n  content: \"\\F668\";\n}\n\n.mdi-test-tube-empty:before {\n  content: \"\\F910\";\n}\n\n.mdi-test-tube-off:before {\n  content: \"\\F911\";\n}\n\n.mdi-text:before {\n  content: \"\\F9A7\";\n}\n\n.mdi-text-shadow:before {\n  content: \"\\F669\";\n}\n\n.mdi-text-short:before {\n  content: \"\\F9A8\";\n}\n\n.mdi-text-subject:before {\n  content: \"\\F9A9\";\n}\n\n.mdi-text-to-speech:before {\n  content: \"\\F50A\";\n}\n\n.mdi-text-to-speech-off:before {\n  content: \"\\F50B\";\n}\n\n.mdi-textbox:before {\n  content: \"\\F60E\";\n}\n\n.mdi-textbox-password:before {\n  content: \"\\F7F4\";\n}\n\n.mdi-texture:before {\n  content: \"\\F50C\";\n}\n\n.mdi-theater:before {\n  content: \"\\F50D\";\n}\n\n.mdi-theme-light-dark:before {\n  content: \"\\F50E\";\n}\n\n.mdi-thermometer:before {\n  content: \"\\F50F\";\n}\n\n.mdi-thermometer-alert:before {\n  content: \"\\FE61\";\n}\n\n.mdi-thermometer-chevron-down:before {\n  content: \"\\FE62\";\n}\n\n.mdi-thermometer-chevron-up:before {\n  content: \"\\FE63\";\n}\n\n.mdi-thermometer-lines:before {\n  content: \"\\F510\";\n}\n\n.mdi-thermometer-minus:before {\n  content: \"\\FE64\";\n}\n\n.mdi-thermometer-plus:before {\n  content: \"\\FE65\";\n}\n\n.mdi-thermostat:before {\n  content: \"\\F393\";\n}\n\n.mdi-thermostat-box:before {\n  content: \"\\F890\";\n}\n\n.mdi-thought-bubble:before {\n  content: \"\\F7F5\";\n}\n\n.mdi-thought-bubble-outline:before {\n  content: \"\\F7F6\";\n}\n\n.mdi-thumb-down:before {\n  content: \"\\F511\";\n}\n\n.mdi-thumb-down-outline:before {\n  content: \"\\F512\";\n}\n\n.mdi-thumb-up:before {\n  content: \"\\F513\";\n}\n\n.mdi-thumb-up-outline:before {\n  content: \"\\F514\";\n}\n\n.mdi-thumbs-up-down:before {\n  content: \"\\F515\";\n}\n\n.mdi-ticket:before {\n  content: \"\\F516\";\n}\n\n.mdi-ticket-account:before {\n  content: \"\\F517\";\n}\n\n.mdi-ticket-confirmation:before {\n  content: \"\\F518\";\n}\n\n.mdi-ticket-outline:before {\n  content: \"\\F912\";\n}\n\n.mdi-ticket-percent:before {\n  content: \"\\F723\";\n}\n\n.mdi-tie:before {\n  content: \"\\F519\";\n}\n\n.mdi-tilde:before {\n  content: \"\\F724\";\n}\n\n.mdi-timelapse:before {\n  content: \"\\F51A\";\n}\n\n.mdi-timeline:before {\n  content: \"\\FBAD\";\n}\n\n.mdi-timeline-outline:before {\n  content: \"\\FBAE\";\n}\n\n.mdi-timeline-text:before {\n  content: \"\\FBAF\";\n}\n\n.mdi-timeline-text-outline:before {\n  content: \"\\FBB0\";\n}\n\n.mdi-timer:before {\n  content: \"\\F51B\";\n}\n\n.mdi-timer-10:before {\n  content: \"\\F51C\";\n}\n\n.mdi-timer-3:before {\n  content: \"\\F51D\";\n}\n\n.mdi-timer-off:before {\n  content: \"\\F51E\";\n}\n\n.mdi-timer-sand:before {\n  content: \"\\F51F\";\n}\n\n.mdi-timer-sand-empty:before {\n  content: \"\\F6AC\";\n}\n\n.mdi-timer-sand-full:before {\n  content: \"\\F78B\";\n}\n\n.mdi-timetable:before {\n  content: \"\\F520\";\n}\n\n.mdi-toaster-oven:before {\n  content: \"\\FCAF\";\n}\n\n.mdi-toggle-switch:before {\n  content: \"\\F521\";\n}\n\n.mdi-toggle-switch-off:before {\n  content: \"\\F522\";\n}\n\n.mdi-toggle-switch-off-outline:before {\n  content: \"\\FA18\";\n}\n\n.mdi-toggle-switch-outline:before {\n  content: \"\\FA19\";\n}\n\n.mdi-toilet:before {\n  content: \"\\F9AA\";\n}\n\n.mdi-toolbox:before {\n  content: \"\\F9AB\";\n}\n\n.mdi-toolbox-outline:before {\n  content: \"\\F9AC\";\n}\n\n.mdi-tooltip:before {\n  content: \"\\F523\";\n}\n\n.mdi-tooltip-account:before {\n  content: \"\\F00C\";\n}\n\n.mdi-tooltip-edit:before {\n  content: \"\\F524\";\n}\n\n.mdi-tooltip-image:before {\n  content: \"\\F525\";\n}\n\n.mdi-tooltip-image-outline:before {\n  content: \"\\FBB1\";\n}\n\n.mdi-tooltip-outline:before {\n  content: \"\\F526\";\n}\n\n.mdi-tooltip-plus:before {\n  content: \"\\FBB2\";\n}\n\n.mdi-tooltip-plus-outline:before {\n  content: \"\\F527\";\n}\n\n.mdi-tooltip-text:before {\n  content: \"\\F528\";\n}\n\n.mdi-tooltip-text-outline:before {\n  content: \"\\FBB3\";\n}\n\n.mdi-tooth:before {\n  content: \"\\F8C2\";\n}\n\n.mdi-tooth-outline:before {\n  content: \"\\F529\";\n}\n\n.mdi-tor:before {\n  content: \"\\F52A\";\n}\n\n.mdi-tortoise:before {\n  content: \"\\FD17\";\n}\n\n.mdi-tournament:before {\n  content: \"\\F9AD\";\n}\n\n.mdi-tower-beach:before {\n  content: \"\\F680\";\n}\n\n.mdi-tower-fire:before {\n  content: \"\\F681\";\n}\n\n.mdi-towing:before {\n  content: \"\\F83B\";\n}\n\n.mdi-track-light:before {\n  content: \"\\F913\";\n}\n\n.mdi-trackpad:before {\n  content: \"\\F7F7\";\n}\n\n.mdi-trackpad-lock:before {\n  content: \"\\F932\";\n}\n\n.mdi-tractor:before {\n  content: \"\\F891\";\n}\n\n.mdi-trademark:before {\n  content: \"\\FA77\";\n}\n\n.mdi-traffic-light:before {\n  content: \"\\F52B\";\n}\n\n.mdi-train:before {\n  content: \"\\F52C\";\n}\n\n.mdi-train-car:before {\n  content: \"\\FBB4\";\n}\n\n.mdi-train-variant:before {\n  content: \"\\F8C3\";\n}\n\n.mdi-tram:before {\n  content: \"\\F52D\";\n}\n\n.mdi-transcribe:before {\n  content: \"\\F52E\";\n}\n\n.mdi-transcribe-close:before {\n  content: \"\\F52F\";\n}\n\n.mdi-transfer-down:before {\n  content: \"\\FD7D\";\n}\n\n.mdi-transfer-left:before {\n  content: \"\\FD7E\";\n}\n\n.mdi-transfer-right:before {\n  content: \"\\F530\";\n}\n\n.mdi-transfer-up:before {\n  content: \"\\FD7F\";\n}\n\n.mdi-transit-connection:before {\n  content: \"\\FD18\";\n}\n\n.mdi-transit-connection-variant:before {\n  content: \"\\FD19\";\n}\n\n.mdi-transit-transfer:before {\n  content: \"\\F6AD\";\n}\n\n.mdi-transition:before {\n  content: \"\\F914\";\n}\n\n.mdi-transition-masked:before {\n  content: \"\\F915\";\n}\n\n.mdi-translate:before {\n  content: \"\\F5CA\";\n}\n\n.mdi-translate-off:before {\n  content: \"\\FE66\";\n}\n\n.mdi-transmission-tower:before {\n  content: \"\\FD1A\";\n}\n\n.mdi-trash-can:before {\n  content: \"\\FA78\";\n}\n\n.mdi-trash-can-outline:before {\n  content: \"\\FA79\";\n}\n\n.mdi-treasure-chest:before {\n  content: \"\\F725\";\n}\n\n.mdi-tree:before {\n  content: \"\\F531\";\n}\n\n.mdi-tree-outline:before {\n  content: \"\\FE4C\";\n}\n\n.mdi-trello:before {\n  content: \"\\F532\";\n}\n\n.mdi-trending-down:before {\n  content: \"\\F533\";\n}\n\n.mdi-trending-neutral:before {\n  content: \"\\F534\";\n}\n\n.mdi-trending-up:before {\n  content: \"\\F535\";\n}\n\n.mdi-triangle:before {\n  content: \"\\F536\";\n}\n\n.mdi-triangle-outline:before {\n  content: \"\\F537\";\n}\n\n.mdi-triforce:before {\n  content: \"\\FBB5\";\n}\n\n.mdi-trophy:before {\n  content: \"\\F538\";\n}\n\n.mdi-trophy-award:before {\n  content: \"\\F539\";\n}\n\n.mdi-trophy-broken:before {\n  content: \"\\FD80\";\n}\n\n.mdi-trophy-outline:before {\n  content: \"\\F53A\";\n}\n\n.mdi-trophy-variant:before {\n  content: \"\\F53B\";\n}\n\n.mdi-trophy-variant-outline:before {\n  content: \"\\F53C\";\n}\n\n.mdi-truck:before {\n  content: \"\\F53D\";\n}\n\n.mdi-truck-check:before {\n  content: \"\\FCB0\";\n}\n\n.mdi-truck-delivery:before {\n  content: \"\\F53E\";\n}\n\n.mdi-truck-fast:before {\n  content: \"\\F787\";\n}\n\n.mdi-truck-trailer:before {\n  content: \"\\F726\";\n}\n\n.mdi-tshirt-crew:before {\n  content: \"\\FA7A\";\n}\n\n.mdi-tshirt-crew-outline:before {\n  content: \"\\F53F\";\n}\n\n.mdi-tshirt-v:before {\n  content: \"\\FA7B\";\n}\n\n.mdi-tshirt-v-outline:before {\n  content: \"\\F540\";\n}\n\n.mdi-tumble-dryer:before {\n  content: \"\\F916\";\n}\n\n.mdi-tumblr:before {\n  content: \"\\F541\";\n}\n\n.mdi-tumblr-box:before {\n  content: \"\\F917\";\n}\n\n.mdi-tumblr-reblog:before {\n  content: \"\\F542\";\n}\n\n.mdi-tune:before {\n  content: \"\\F62E\";\n}\n\n.mdi-tune-vertical:before {\n  content: \"\\F66A\";\n}\n\n.mdi-turnstile:before {\n  content: \"\\FCB1\";\n}\n\n.mdi-turnstile-outline:before {\n  content: \"\\FCB2\";\n}\n\n.mdi-turtle:before {\n  content: \"\\FCB3\";\n}\n\n.mdi-twitch:before {\n  content: \"\\F543\";\n}\n\n.mdi-twitter:before {\n  content: \"\\F544\";\n}\n\n.mdi-twitter-box:before {\n  content: \"\\F545\";\n}\n\n.mdi-twitter-circle:before {\n  content: \"\\F546\";\n}\n\n.mdi-twitter-retweet:before {\n  content: \"\\F547\";\n}\n\n.mdi-two-factor-authentication:before {\n  content: \"\\F9AE\";\n}\n\n.mdi-uber:before {\n  content: \"\\F748\";\n}\n\n.mdi-ubisoft:before {\n  content: \"\\FBB6\";\n}\n\n.mdi-ubuntu:before {\n  content: \"\\F548\";\n}\n\n.mdi-ultra-high-definition:before {\n  content: \"\\F7F8\";\n}\n\n.mdi-umbraco:before {\n  content: \"\\F549\";\n}\n\n.mdi-umbrella:before {\n  content: \"\\F54A\";\n}\n\n.mdi-umbrella-closed:before {\n  content: \"\\F9AF\";\n}\n\n.mdi-umbrella-outline:before {\n  content: \"\\F54B\";\n}\n\n.mdi-undo:before {\n  content: \"\\F54C\";\n}\n\n.mdi-undo-variant:before {\n  content: \"\\F54D\";\n}\n\n.mdi-unfold-less-horizontal:before {\n  content: \"\\F54E\";\n}\n\n.mdi-unfold-less-vertical:before {\n  content: \"\\F75F\";\n}\n\n.mdi-unfold-more-horizontal:before {\n  content: \"\\F54F\";\n}\n\n.mdi-unfold-more-vertical:before {\n  content: \"\\F760\";\n}\n\n.mdi-ungroup:before {\n  content: \"\\F550\";\n}\n\n.mdi-unicode:before {\n  content: \"\\FEED\";\n}\n\n.mdi-unity:before {\n  content: \"\\F6AE\";\n}\n\n.mdi-unreal:before {\n  content: \"\\F9B0\";\n}\n\n.mdi-untappd:before {\n  content: \"\\F551\";\n}\n\n.mdi-update:before {\n  content: \"\\F6AF\";\n}\n\n.mdi-upload:before {\n  content: \"\\F552\";\n}\n\n.mdi-upload-multiple:before {\n  content: \"\\F83C\";\n}\n\n.mdi-upload-network:before {\n  content: \"\\F6F5\";\n}\n\n.mdi-upload-network-outline:before {\n  content: \"\\FCB4\";\n}\n\n.mdi-upload-outline:before {\n  content: \"\\FE67\";\n}\n\n.mdi-usb:before {\n  content: \"\\F553\";\n}\n\n.mdi-van-passenger:before {\n  content: \"\\F7F9\";\n}\n\n.mdi-van-utility:before {\n  content: \"\\F7FA\";\n}\n\n.mdi-vanish:before {\n  content: \"\\F7FB\";\n}\n\n.mdi-variable:before {\n  content: \"\\FAE6\";\n}\n\n.mdi-vector-arrange-above:before {\n  content: \"\\F554\";\n}\n\n.mdi-vector-arrange-below:before {\n  content: \"\\F555\";\n}\n\n.mdi-vector-bezier:before {\n  content: \"\\FAE7\";\n}\n\n.mdi-vector-circle:before {\n  content: \"\\F556\";\n}\n\n.mdi-vector-circle-variant:before {\n  content: \"\\F557\";\n}\n\n.mdi-vector-combine:before {\n  content: \"\\F558\";\n}\n\n.mdi-vector-curve:before {\n  content: \"\\F559\";\n}\n\n.mdi-vector-difference:before {\n  content: \"\\F55A\";\n}\n\n.mdi-vector-difference-ab:before {\n  content: \"\\F55B\";\n}\n\n.mdi-vector-difference-ba:before {\n  content: \"\\F55C\";\n}\n\n.mdi-vector-ellipse:before {\n  content: \"\\F892\";\n}\n\n.mdi-vector-intersection:before {\n  content: \"\\F55D\";\n}\n\n.mdi-vector-line:before {\n  content: \"\\F55E\";\n}\n\n.mdi-vector-point:before {\n  content: \"\\F55F\";\n}\n\n.mdi-vector-polygon:before {\n  content: \"\\F560\";\n}\n\n.mdi-vector-polyline:before {\n  content: \"\\F561\";\n}\n\n.mdi-vector-radius:before {\n  content: \"\\F749\";\n}\n\n.mdi-vector-rectangle:before {\n  content: \"\\F5C6\";\n}\n\n.mdi-vector-selection:before {\n  content: \"\\F562\";\n}\n\n.mdi-vector-square:before {\n  content: \"\\F001\";\n}\n\n.mdi-vector-triangle:before {\n  content: \"\\F563\";\n}\n\n.mdi-vector-union:before {\n  content: \"\\F564\";\n}\n\n.mdi-venmo:before {\n  content: \"\\F578\";\n}\n\n.mdi-vhs:before {\n  content: \"\\FA1A\";\n}\n\n.mdi-vibrate:before {\n  content: \"\\F566\";\n}\n\n.mdi-vibrate-off:before {\n  content: \"\\FCB5\";\n}\n\n.mdi-video:before {\n  content: \"\\F567\";\n}\n\n.mdi-video-3d:before {\n  content: \"\\F7FC\";\n}\n\n.mdi-video-3d-variant:before {\n  content: \"\\FEEE\";\n}\n\n.mdi-video-4k-box:before {\n  content: \"\\F83D\";\n}\n\n.mdi-video-account:before {\n  content: \"\\F918\";\n}\n\n.mdi-video-image:before {\n  content: \"\\F919\";\n}\n\n.mdi-video-input-antenna:before {\n  content: \"\\F83E\";\n}\n\n.mdi-video-input-component:before {\n  content: \"\\F83F\";\n}\n\n.mdi-video-input-hdmi:before {\n  content: \"\\F840\";\n}\n\n.mdi-video-input-svideo:before {\n  content: \"\\F841\";\n}\n\n.mdi-video-minus:before {\n  content: \"\\F9B1\";\n}\n\n.mdi-video-off:before {\n  content: \"\\F568\";\n}\n\n.mdi-video-off-outline:before {\n  content: \"\\FBB7\";\n}\n\n.mdi-video-outline:before {\n  content: \"\\FBB8\";\n}\n\n.mdi-video-plus:before {\n  content: \"\\F9B2\";\n}\n\n.mdi-video-stabilization:before {\n  content: \"\\F91A\";\n}\n\n.mdi-video-switch:before {\n  content: \"\\F569\";\n}\n\n.mdi-video-vintage:before {\n  content: \"\\FA1B\";\n}\n\n.mdi-video-wireless:before {\n  content: \"\\FEEF\";\n}\n\n.mdi-video-wireless-outline:before {\n  content: \"\\FEF0\";\n}\n\n.mdi-view-agenda:before {\n  content: \"\\F56A\";\n}\n\n.mdi-view-array:before {\n  content: \"\\F56B\";\n}\n\n.mdi-view-carousel:before {\n  content: \"\\F56C\";\n}\n\n.mdi-view-column:before {\n  content: \"\\F56D\";\n}\n\n.mdi-view-comfy:before {\n  content: \"\\FE4D\";\n}\n\n.mdi-view-compact:before {\n  content: \"\\FE4E\";\n}\n\n.mdi-view-compact-outline:before {\n  content: \"\\FE4F\";\n}\n\n.mdi-view-dashboard:before {\n  content: \"\\F56E\";\n}\n\n.mdi-view-dashboard-outline:before {\n  content: \"\\FA1C\";\n}\n\n.mdi-view-dashboard-variant:before {\n  content: \"\\F842\";\n}\n\n.mdi-view-day:before {\n  content: \"\\F56F\";\n}\n\n.mdi-view-grid:before {\n  content: \"\\F570\";\n}\n\n.mdi-view-headline:before {\n  content: \"\\F571\";\n}\n\n.mdi-view-list:before {\n  content: \"\\F572\";\n}\n\n.mdi-view-module:before {\n  content: \"\\F573\";\n}\n\n.mdi-view-parallel:before {\n  content: \"\\F727\";\n}\n\n.mdi-view-quilt:before {\n  content: \"\\F574\";\n}\n\n.mdi-view-sequential:before {\n  content: \"\\F728\";\n}\n\n.mdi-view-split-horizontal:before {\n  content: \"\\FBA7\";\n}\n\n.mdi-view-split-vertical:before {\n  content: \"\\FBA8\";\n}\n\n.mdi-view-stream:before {\n  content: \"\\F575\";\n}\n\n.mdi-view-week:before {\n  content: \"\\F576\";\n}\n\n.mdi-vimeo:before {\n  content: \"\\F577\";\n}\n\n.mdi-violin:before {\n  content: \"\\F60F\";\n}\n\n.mdi-virtual-reality:before {\n  content: \"\\F893\";\n}\n\n.mdi-visual-studio:before {\n  content: \"\\F610\";\n}\n\n.mdi-visual-studio-code:before {\n  content: \"\\FA1D\";\n}\n\n.mdi-vk:before {\n  content: \"\\F579\";\n}\n\n.mdi-vk-box:before {\n  content: \"\\F57A\";\n}\n\n.mdi-vk-circle:before {\n  content: \"\\F57B\";\n}\n\n.mdi-vlc:before {\n  content: \"\\F57C\";\n}\n\n.mdi-voice:before {\n  content: \"\\F5CB\";\n}\n\n.mdi-voice-off:before {\n  content: \"\\FEF1\";\n}\n\n.mdi-voicemail:before {\n  content: \"\\F57D\";\n}\n\n.mdi-volleyball:before {\n  content: \"\\F9B3\";\n}\n\n.mdi-volume-high:before {\n  content: \"\\F57E\";\n}\n\n.mdi-volume-low:before {\n  content: \"\\F57F\";\n}\n\n.mdi-volume-medium:before {\n  content: \"\\F580\";\n}\n\n.mdi-volume-minus:before {\n  content: \"\\F75D\";\n}\n\n.mdi-volume-mute:before {\n  content: \"\\F75E\";\n}\n\n.mdi-volume-off:before {\n  content: \"\\F581\";\n}\n\n.mdi-volume-plus:before {\n  content: \"\\F75C\";\n}\n\n.mdi-volume-variant-off:before {\n  content: \"\\FE68\";\n}\n\n.mdi-vote:before {\n  content: \"\\FA1E\";\n}\n\n.mdi-vote-outline:before {\n  content: \"\\FA1F\";\n}\n\n.mdi-vpn:before {\n  content: \"\\F582\";\n}\n\n.mdi-vuejs:before {\n  content: \"\\F843\";\n}\n\n.mdi-vuetify:before {\n  content: \"\\FE50\";\n}\n\n.mdi-walk:before {\n  content: \"\\F583\";\n}\n\n.mdi-wall:before {\n  content: \"\\F7FD\";\n}\n\n.mdi-wall-sconce:before {\n  content: \"\\F91B\";\n}\n\n.mdi-wall-sconce-flat:before {\n  content: \"\\F91C\";\n}\n\n.mdi-wall-sconce-variant:before {\n  content: \"\\F91D\";\n}\n\n.mdi-wallet:before {\n  content: \"\\F584\";\n}\n\n.mdi-wallet-giftcard:before {\n  content: \"\\F585\";\n}\n\n.mdi-wallet-membership:before {\n  content: \"\\F586\";\n}\n\n.mdi-wallet-outline:before {\n  content: \"\\FBB9\";\n}\n\n.mdi-wallet-travel:before {\n  content: \"\\F587\";\n}\n\n.mdi-wallpaper:before {\n  content: \"\\FE69\";\n}\n\n.mdi-wan:before {\n  content: \"\\F588\";\n}\n\n.mdi-washing-machine:before {\n  content: \"\\F729\";\n}\n\n.mdi-watch:before {\n  content: \"\\F589\";\n}\n\n.mdi-watch-export:before {\n  content: \"\\F58A\";\n}\n\n.mdi-watch-export-variant:before {\n  content: \"\\F894\";\n}\n\n.mdi-watch-import:before {\n  content: \"\\F58B\";\n}\n\n.mdi-watch-import-variant:before {\n  content: \"\\F895\";\n}\n\n.mdi-watch-variant:before {\n  content: \"\\F896\";\n}\n\n.mdi-watch-vibrate:before {\n  content: \"\\F6B0\";\n}\n\n.mdi-watch-vibrate-off:before {\n  content: \"\\FCB6\";\n}\n\n.mdi-water:before {\n  content: \"\\F58C\";\n}\n\n.mdi-water-off:before {\n  content: \"\\F58D\";\n}\n\n.mdi-water-outline:before {\n  content: \"\\FE6A\";\n}\n\n.mdi-water-percent:before {\n  content: \"\\F58E\";\n}\n\n.mdi-water-pump:before {\n  content: \"\\F58F\";\n}\n\n.mdi-watermark:before {\n  content: \"\\F612\";\n}\n\n.mdi-waves:before {\n  content: \"\\F78C\";\n}\n\n.mdi-waze:before {\n  content: \"\\FBBA\";\n}\n\n.mdi-weather-cloudy:before {\n  content: \"\\F590\";\n}\n\n.mdi-weather-cloudy-arrow-right:before {\n  content: \"\\FE51\";\n}\n\n.mdi-weather-fog:before {\n  content: \"\\F591\";\n}\n\n.mdi-weather-hail:before {\n  content: \"\\F592\";\n}\n\n.mdi-weather-hurricane:before {\n  content: \"\\F897\";\n}\n\n.mdi-weather-lightning:before {\n  content: \"\\F593\";\n}\n\n.mdi-weather-lightning-rainy:before {\n  content: \"\\F67D\";\n}\n\n.mdi-weather-night:before {\n  content: \"\\F594\";\n}\n\n.mdi-weather-partlycloudy:before {\n  content: \"\\F595\";\n}\n\n.mdi-weather-pouring:before {\n  content: \"\\F596\";\n}\n\n.mdi-weather-rainy:before {\n  content: \"\\F597\";\n}\n\n.mdi-weather-snowy:before {\n  content: \"\\F598\";\n}\n\n.mdi-weather-snowy-rainy:before {\n  content: \"\\F67E\";\n}\n\n.mdi-weather-sunny:before {\n  content: \"\\F599\";\n}\n\n.mdi-weather-sunset:before {\n  content: \"\\F59A\";\n}\n\n.mdi-weather-sunset-down:before {\n  content: \"\\F59B\";\n}\n\n.mdi-weather-sunset-up:before {\n  content: \"\\F59C\";\n}\n\n.mdi-weather-windy:before {\n  content: \"\\F59D\";\n}\n\n.mdi-weather-windy-variant:before {\n  content: \"\\F59E\";\n}\n\n.mdi-web:before {\n  content: \"\\F59F\";\n}\n\n.mdi-webcam:before {\n  content: \"\\F5A0\";\n}\n\n.mdi-webhook:before {\n  content: \"\\F62F\";\n}\n\n.mdi-webpack:before {\n  content: \"\\F72A\";\n}\n\n.mdi-wechat:before {\n  content: \"\\F611\";\n}\n\n.mdi-weight:before {\n  content: \"\\F5A1\";\n}\n\n.mdi-weight-gram:before {\n  content: \"\\FD1B\";\n}\n\n.mdi-weight-kilogram:before {\n  content: \"\\F5A2\";\n}\n\n.mdi-weight-pound:before {\n  content: \"\\F9B4\";\n}\n\n.mdi-whatsapp:before {\n  content: \"\\F5A3\";\n}\n\n.mdi-wheelchair-accessibility:before {\n  content: \"\\F5A4\";\n}\n\n.mdi-whistle:before {\n  content: \"\\F9B5\";\n}\n\n.mdi-white-balance-auto:before {\n  content: \"\\F5A5\";\n}\n\n.mdi-white-balance-incandescent:before {\n  content: \"\\F5A6\";\n}\n\n.mdi-white-balance-iridescent:before {\n  content: \"\\F5A7\";\n}\n\n.mdi-white-balance-sunny:before {\n  content: \"\\F5A8\";\n}\n\n.mdi-widgets:before {\n  content: \"\\F72B\";\n}\n\n.mdi-wifi:before {\n  content: \"\\F5A9\";\n}\n\n.mdi-wifi-off:before {\n  content: \"\\F5AA\";\n}\n\n.mdi-wifi-star:before {\n  content: \"\\FE6B\";\n}\n\n.mdi-wifi-strength-1:before {\n  content: \"\\F91E\";\n}\n\n.mdi-wifi-strength-1-alert:before {\n  content: \"\\F91F\";\n}\n\n.mdi-wifi-strength-1-lock:before {\n  content: \"\\F920\";\n}\n\n.mdi-wifi-strength-2:before {\n  content: \"\\F921\";\n}\n\n.mdi-wifi-strength-2-alert:before {\n  content: \"\\F922\";\n}\n\n.mdi-wifi-strength-2-lock:before {\n  content: \"\\F923\";\n}\n\n.mdi-wifi-strength-3:before {\n  content: \"\\F924\";\n}\n\n.mdi-wifi-strength-3-alert:before {\n  content: \"\\F925\";\n}\n\n.mdi-wifi-strength-3-lock:before {\n  content: \"\\F926\";\n}\n\n.mdi-wifi-strength-4:before {\n  content: \"\\F927\";\n}\n\n.mdi-wifi-strength-4-alert:before {\n  content: \"\\F928\";\n}\n\n.mdi-wifi-strength-4-lock:before {\n  content: \"\\F929\";\n}\n\n.mdi-wifi-strength-alert-outline:before {\n  content: \"\\F92A\";\n}\n\n.mdi-wifi-strength-lock-outline:before {\n  content: \"\\F92B\";\n}\n\n.mdi-wifi-strength-off:before {\n  content: \"\\F92C\";\n}\n\n.mdi-wifi-strength-off-outline:before {\n  content: \"\\F92D\";\n}\n\n.mdi-wifi-strength-outline:before {\n  content: \"\\F92E\";\n}\n\n.mdi-wii:before {\n  content: \"\\F5AB\";\n}\n\n.mdi-wiiu:before {\n  content: \"\\F72C\";\n}\n\n.mdi-wikipedia:before {\n  content: \"\\F5AC\";\n}\n\n.mdi-wind-turbine:before {\n  content: \"\\FD81\";\n}\n\n.mdi-window-close:before {\n  content: \"\\F5AD\";\n}\n\n.mdi-window-closed:before {\n  content: \"\\F5AE\";\n}\n\n.mdi-window-maximize:before {\n  content: \"\\F5AF\";\n}\n\n.mdi-window-minimize:before {\n  content: \"\\F5B0\";\n}\n\n.mdi-window-open:before {\n  content: \"\\F5B1\";\n}\n\n.mdi-window-restore:before {\n  content: \"\\F5B2\";\n}\n\n.mdi-windows:before {\n  content: \"\\F5B3\";\n}\n\n.mdi-windows-classic:before {\n  content: \"\\FA20\";\n}\n\n.mdi-wiper:before {\n  content: \"\\FAE8\";\n}\n\n.mdi-wiper-wash:before {\n  content: \"\\FD82\";\n}\n\n.mdi-wordpress:before {\n  content: \"\\F5B4\";\n}\n\n.mdi-worker:before {\n  content: \"\\F5B5\";\n}\n\n.mdi-wrap:before {\n  content: \"\\F5B6\";\n}\n\n.mdi-wrap-disabled:before {\n  content: \"\\FBBB\";\n}\n\n.mdi-wrench:before {\n  content: \"\\F5B7\";\n}\n\n.mdi-wrench-outline:before {\n  content: \"\\FBBC\";\n}\n\n.mdi-wunderlist:before {\n  content: \"\\F5B8\";\n}\n\n.mdi-xamarin:before {\n  content: \"\\F844\";\n}\n\n.mdi-xamarin-outline:before {\n  content: \"\\F845\";\n}\n\n.mdi-xaml:before {\n  content: \"\\F673\";\n}\n\n.mdi-xbox:before {\n  content: \"\\F5B9\";\n}\n\n.mdi-xbox-controller:before {\n  content: \"\\F5BA\";\n}\n\n.mdi-xbox-controller-battery-alert:before {\n  content: \"\\F74A\";\n}\n\n.mdi-xbox-controller-battery-charging:before {\n  content: \"\\FA21\";\n}\n\n.mdi-xbox-controller-battery-empty:before {\n  content: \"\\F74B\";\n}\n\n.mdi-xbox-controller-battery-full:before {\n  content: \"\\F74C\";\n}\n\n.mdi-xbox-controller-battery-low:before {\n  content: \"\\F74D\";\n}\n\n.mdi-xbox-controller-battery-medium:before {\n  content: \"\\F74E\";\n}\n\n.mdi-xbox-controller-battery-unknown:before {\n  content: \"\\F74F\";\n}\n\n.mdi-xbox-controller-menu:before {\n  content: \"\\FE52\";\n}\n\n.mdi-xbox-controller-off:before {\n  content: \"\\F5BB\";\n}\n\n.mdi-xbox-controller-view:before {\n  content: \"\\FE53\";\n}\n\n.mdi-xda:before {\n  content: \"\\F5BC\";\n}\n\n.mdi-xing:before {\n  content: \"\\F5BD\";\n}\n\n.mdi-xing-box:before {\n  content: \"\\F5BE\";\n}\n\n.mdi-xing-circle:before {\n  content: \"\\F5BF\";\n}\n\n.mdi-xml:before {\n  content: \"\\F5C0\";\n}\n\n.mdi-xmpp:before {\n  content: \"\\F7FE\";\n}\n\n.mdi-yahoo:before {\n  content: \"\\FB2A\";\n}\n\n.mdi-yammer:before {\n  content: \"\\F788\";\n}\n\n.mdi-yeast:before {\n  content: \"\\F5C1\";\n}\n\n.mdi-yelp:before {\n  content: \"\\F5C2\";\n}\n\n.mdi-yin-yang:before {\n  content: \"\\F67F\";\n}\n\n.mdi-youtube:before {\n  content: \"\\F5C3\";\n}\n\n.mdi-youtube-creator-studio:before {\n  content: \"\\F846\";\n}\n\n.mdi-youtube-gaming:before {\n  content: \"\\F847\";\n}\n\n.mdi-youtube-subscription:before {\n  content: \"\\FD1C\";\n}\n\n.mdi-youtube-tv:before {\n  content: \"\\F448\";\n}\n\n.mdi-z-wave:before {\n  content: \"\\FAE9\";\n}\n\n.mdi-zend:before {\n  content: \"\\FAEA\";\n}\n\n.mdi-zigbee:before {\n  content: \"\\FD1D\";\n}\n\n.mdi-zip-box:before {\n  content: \"\\F5C4\";\n}\n\n.mdi-zip-disk:before {\n  content: \"\\FA22\";\n}\n\n.mdi-zodiac-aquarius:before {\n  content: \"\\FA7C\";\n}\n\n.mdi-zodiac-aries:before {\n  content: \"\\FA7D\";\n}\n\n.mdi-zodiac-cancer:before {\n  content: \"\\FA7E\";\n}\n\n.mdi-zodiac-capricorn:before {\n  content: \"\\FA7F\";\n}\n\n.mdi-zodiac-gemini:before {\n  content: \"\\FA80\";\n}\n\n.mdi-zodiac-leo:before {\n  content: \"\\FA81\";\n}\n\n.mdi-zodiac-libra:before {\n  content: \"\\FA82\";\n}\n\n.mdi-zodiac-pisces:before {\n  content: \"\\FA83\";\n}\n\n.mdi-zodiac-sagittarius:before {\n  content: \"\\FA84\";\n}\n\n.mdi-zodiac-scorpio:before {\n  content: \"\\FA85\";\n}\n\n.mdi-zodiac-taurus:before {\n  content: \"\\FA86\";\n}\n\n.mdi-zodiac-virgo:before {\n  content: \"\\FA87\";\n}\n\n.mdi-blank:before {\n  content: \"\\F68C\";\n  visibility: hidden;\n}\n\n.mdi-18px.mdi-set, .mdi-18px.mdi:before {\n  font-size: 18px;\n}\n\n.mdi-24px.mdi-set, .mdi-24px.mdi:before {\n  font-size: 24px;\n}\n\n.mdi-36px.mdi-set, .mdi-36px.mdi:before {\n  font-size: 36px;\n}\n\n.mdi-48px.mdi-set, .mdi-48px.mdi:before {\n  font-size: 48px;\n}\n\n.mdi-dark:before {\n  color: rgba(0, 0, 0, 0.54);\n}\n.mdi-dark.mdi-inactive:before {\n  color: rgba(0, 0, 0, 0.26);\n}\n\n.mdi-light:before {\n  color: white;\n}\n.mdi-light.mdi-inactive:before {\n  color: rgba(255, 255, 255, 0.3);\n}\n\n.mdi-rotate-45 {\n  /*\n  // Not included in production\n  &.mdi-flip-h:before {\n      -webkit-transform: scaleX(-1) rotate(45deg);\n      transform: scaleX(-1) rotate(45deg);\n      filter: FlipH;\n      -ms-filter: \"FlipH\";\n  }\n  &.mdi-flip-v:before {\n      -webkit-transform: scaleY(-1) rotate(45deg);\n      -ms-transform: rotate(45deg);\n      transform: scaleY(-1) rotate(45deg);\n      filter: FlipV;\n      -ms-filter: \"FlipV\";\n  }\n  */\n}\n.mdi-rotate-45:before {\n  -webkit-transform: rotate(45deg);\n  transform: rotate(45deg);\n}\n\n.mdi-rotate-90 {\n  /*\n  // Not included in production\n  &.mdi-flip-h:before {\n      -webkit-transform: scaleX(-1) rotate(90deg);\n      transform: scaleX(-1) rotate(90deg);\n      filter: FlipH;\n      -ms-filter: \"FlipH\";\n  }\n  &.mdi-flip-v:before {\n      -webkit-transform: scaleY(-1) rotate(90deg);\n      -ms-transform: rotate(90deg);\n      transform: scaleY(-1) rotate(90deg);\n      filter: FlipV;\n      -ms-filter: \"FlipV\";\n  }\n  */\n}\n.mdi-rotate-90:before {\n  -webkit-transform: rotate(90deg);\n  transform: rotate(90deg);\n}\n\n.mdi-rotate-135 {\n  /*\n  // Not included in production\n  &.mdi-flip-h:before {\n      -webkit-transform: scaleX(-1) rotate(135deg);\n      transform: scaleX(-1) rotate(135deg);\n      filter: FlipH;\n      -ms-filter: \"FlipH\";\n  }\n  &.mdi-flip-v:before {\n      -webkit-transform: scaleY(-1) rotate(135deg);\n      -ms-transform: rotate(135deg);\n      transform: scaleY(-1) rotate(135deg);\n      filter: FlipV;\n      -ms-filter: \"FlipV\";\n  }\n  */\n}\n.mdi-rotate-135:before {\n  -webkit-transform: rotate(135deg);\n  transform: rotate(135deg);\n}\n\n.mdi-rotate-180 {\n  /*\n  // Not included in production\n  &.mdi-flip-h:before {\n      -webkit-transform: scaleX(-1) rotate(180deg);\n      transform: scaleX(-1) rotate(180deg);\n      filter: FlipH;\n      -ms-filter: \"FlipH\";\n  }\n  &.mdi-flip-v:before {\n      -webkit-transform: scaleY(-1) rotate(180deg);\n      -ms-transform: rotate(180deg);\n      transform: scaleY(-1) rotate(180deg);\n      filter: FlipV;\n      -ms-filter: \"FlipV\";\n  }\n  */\n}\n.mdi-rotate-180:before {\n  -webkit-transform: rotate(180deg);\n  transform: rotate(180deg);\n}\n\n.mdi-rotate-225 {\n  /*\n  // Not included in production\n  &.mdi-flip-h:before {\n      -webkit-transform: scaleX(-1) rotate(225deg);\n      transform: scaleX(-1) rotate(225deg);\n      filter: FlipH;\n      -ms-filter: \"FlipH\";\n  }\n  &.mdi-flip-v:before {\n      -webkit-transform: scaleY(-1) rotate(225deg);\n      -ms-transform: rotate(225deg);\n      transform: scaleY(-1) rotate(225deg);\n      filter: FlipV;\n      -ms-filter: \"FlipV\";\n  }\n  */\n}\n.mdi-rotate-225:before {\n  -webkit-transform: rotate(225deg);\n  transform: rotate(225deg);\n}\n\n.mdi-rotate-270 {\n  /*\n  // Not included in production\n  &.mdi-flip-h:before {\n      -webkit-transform: scaleX(-1) rotate(270deg);\n      transform: scaleX(-1) rotate(270deg);\n      filter: FlipH;\n      -ms-filter: \"FlipH\";\n  }\n  &.mdi-flip-v:before {\n      -webkit-transform: scaleY(-1) rotate(270deg);\n      -ms-transform: rotate(270deg);\n      transform: scaleY(-1) rotate(270deg);\n      filter: FlipV;\n      -ms-filter: \"FlipV\";\n  }\n  */\n}\n.mdi-rotate-270:before {\n  -webkit-transform: rotate(270deg);\n  transform: rotate(270deg);\n}\n\n.mdi-rotate-315 {\n  /*\n  // Not included in production\n  &.mdi-flip-h:before {\n      -webkit-transform: scaleX(-1) rotate(315deg);\n      transform: scaleX(-1) rotate(315deg);\n      filter: FlipH;\n      -ms-filter: \"FlipH\";\n  }\n  &.mdi-flip-v:before {\n      -webkit-transform: scaleY(-1) rotate(315deg);\n      -ms-transform: rotate(315deg);\n      transform: scaleY(-1) rotate(315deg);\n      filter: FlipV;\n      -ms-filter: \"FlipV\";\n  }\n  */\n}\n.mdi-rotate-315:before {\n  -webkit-transform: rotate(315deg);\n  transform: rotate(315deg);\n}\n\n.mdi-flip-h:before {\n  -webkit-transform: scaleX(-1);\n  transform: scaleX(-1);\n  -webkit-filter: FlipH;\n          filter: FlipH;\n  -ms-filter: \"FlipH\";\n}\n\n.mdi-flip-v:before {\n  -webkit-transform: scaleY(-1);\n  transform: scaleY(-1);\n  -webkit-filter: FlipV;\n          filter: FlipV;\n  -ms-filter: \"FlipV\";\n}\n\n.mdi-spin:before {\n  -webkit-animation: mdi-spin 2s infinite linear;\n  animation: mdi-spin 2s infinite linear;\n}\n\n@-webkit-keyframes mdi-spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(359deg);\n    transform: rotate(359deg);\n  }\n}\n@keyframes mdi-spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(359deg);\n    transform: rotate(359deg);\n  }\n}\n", ""]);
 
 // exports
 
@@ -15172,6 +15162,133 @@ module.exports = function escape(url) {
 
     return url
 }
+
+
+/***/ }),
+
+/***/ "./node_modules/deepmerge/dist/umd.js":
+/*!********************************************!*\
+  !*** ./node_modules/deepmerge/dist/umd.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+(function (global, factory) {
+	 true ? module.exports = factory() :
+	undefined;
+}(this, function () { 'use strict';
+
+	var isMergeableObject = function isMergeableObject(value) {
+		return isNonNullObject(value)
+			&& !isSpecial(value)
+	};
+
+	function isNonNullObject(value) {
+		return !!value && typeof value === 'object'
+	}
+
+	function isSpecial(value) {
+		var stringValue = Object.prototype.toString.call(value);
+
+		return stringValue === '[object RegExp]'
+			|| stringValue === '[object Date]'
+			|| isReactElement(value)
+	}
+
+	// see https://github.com/facebook/react/blob/b5ac963fb791d1298e7f396236383bc955f916c1/src/isomorphic/classic/element/ReactElement.js#L21-L25
+	var canUseSymbol = typeof Symbol === 'function' && Symbol.for;
+	var REACT_ELEMENT_TYPE = canUseSymbol ? Symbol.for('react.element') : 0xeac7;
+
+	function isReactElement(value) {
+		return value.$$typeof === REACT_ELEMENT_TYPE
+	}
+
+	function emptyTarget(val) {
+		return Array.isArray(val) ? [] : {}
+	}
+
+	function cloneUnlessOtherwiseSpecified(value, options) {
+		return (options.clone !== false && options.isMergeableObject(value))
+			? deepmerge(emptyTarget(value), value, options)
+			: value
+	}
+
+	function defaultArrayMerge(target, source, options) {
+		return target.concat(source).map(function(element) {
+			return cloneUnlessOtherwiseSpecified(element, options)
+		})
+	}
+
+	function getMergeFunction(key, options) {
+		if (!options.customMerge) {
+			return deepmerge
+		}
+		var customMerge = options.customMerge(key);
+		return typeof customMerge === 'function' ? customMerge : deepmerge
+	}
+
+	function getEnumerableOwnPropertySymbols(target) {
+		return Object.getOwnPropertySymbols
+			? Object.getOwnPropertySymbols(target).filter(function(symbol) {
+				return target.propertyIsEnumerable(symbol)
+			})
+			: []
+	}
+
+	function getKeys(target) {
+		return Object.keys(target).concat(getEnumerableOwnPropertySymbols(target))
+	}
+
+	function mergeObject(target, source, options) {
+		var destination = {};
+		if (options.isMergeableObject(target)) {
+			getKeys(target).forEach(function(key) {
+				destination[key] = cloneUnlessOtherwiseSpecified(target[key], options);
+			});
+		}
+		getKeys(source).forEach(function(key) {
+			if (!options.isMergeableObject(source[key]) || !target[key]) {
+				destination[key] = cloneUnlessOtherwiseSpecified(source[key], options);
+			} else {
+				destination[key] = getMergeFunction(key, options)(target[key], source[key], options);
+			}
+		});
+		return destination
+	}
+
+	function deepmerge(target, source, options) {
+		options = options || {};
+		options.arrayMerge = options.arrayMerge || defaultArrayMerge;
+		options.isMergeableObject = options.isMergeableObject || isMergeableObject;
+
+		var sourceIsArray = Array.isArray(source);
+		var targetIsArray = Array.isArray(target);
+		var sourceAndTargetTypesMatch = sourceIsArray === targetIsArray;
+
+		if (!sourceAndTargetTypesMatch) {
+			return cloneUnlessOtherwiseSpecified(source, options)
+		} else if (sourceIsArray) {
+			return options.arrayMerge(target, source, options)
+		} else {
+			return mergeObject(target, source, options)
+		}
+	}
+
+	deepmerge.all = function deepmergeAll(array, options) {
+		if (!Array.isArray(array)) {
+			throw new Error('first argument should be an array')
+		}
+
+		return array.reduce(function(prev, next) {
+			return deepmerge(prev, next, options)
+		}, {})
+	};
+
+	var deepmerge_1 = deepmerge;
+
+	return deepmerge_1;
+
+}));
 
 
 /***/ }),
@@ -17147,7 +17264,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "version", function() { return version; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "withValidation", function() { return withValidation; });
 /**
-  * vee-validate v2.2.9
+  * vee-validate v2.2.11
   * (c) 2019 Abdelrahman Awad
   * @license MIT
   */
@@ -17176,7 +17293,7 @@ var isNaN$1 = function (value) {
   }
 
   // eslint-disable-next-line
-  return value === value;
+  return typeof(value) === 'number' && value !== value;
 };
 
 /**
@@ -17930,6 +18047,10 @@ Dictionary.prototype.setMessage = function setMessage (locale, key, message) {
       attributes: {}
     };
   }
+    
+  if (!this.container[locale].messages) {
+    this.container[locale].messages = {};
+  }
 
   this.container[locale].messages[key] = message;
 };
@@ -18566,6 +18687,20 @@ function normalizeSlots (slots, ctx) {
     return arr.concat(slots[key]);
   }, []);
 }
+function createRenderless (h, children) {
+  // Only render the first item of the node.
+  if (Array.isArray(children) && children[0]) {
+    return children[0];
+  }
+
+  // a single node.
+  if (children) {
+    return children;
+  }
+
+  // No slots, render nothing.
+  return h();
+}
 
 /**
  * Generates the options required to construct a field.
@@ -18991,7 +19126,7 @@ var prototypeAccessors$1 = { validator: { configurable: true },isRequired: { con
 
 prototypeAccessors$1.validator.get = function () {
   if (!this.vm || !this.vm.$validator) {
-    return { validate: function () {} };
+    return { validate: function () { return Promise.resolve(true); } };
   }
 
   return this.vm.$validator;
@@ -19119,6 +19254,8 @@ Field.prototype.isWaitingFor = function isWaitingFor (promise) {
  * Updates the field with changed data.
  */
 Field.prototype.update = function update (options) {
+    var this$1 = this;
+
   this.targetOf = options.targetOf || null;
   this.immediate = options.immediate || this.immediate || false;
   this.persist = options.persist || this.persist || false;
@@ -19150,6 +19287,13 @@ Field.prototype.update = function update (options) {
   // update required flag flags
   if (options.rules !== undefined) {
     this.flags.required = this.isRequired;
+  }
+
+  if (Object.keys(options.rules || {}).length === 0 && this.updated) {
+    var resetFlag = this.flags.validated;
+    this.validator.validate(("#" + (this.id))).then(function () {
+      this$1.flags.validated = resetFlag;
+    });
   }
 
   // validate if it was validated before and field was updated and there was a rules mutation.
@@ -21335,7 +21479,7 @@ var messages = {
     if ( ref === void 0 ) ref = [];
     var decimals = ref[0]; if ( decimals === void 0 ) decimals = '*';
 
-    return ("The " + field + " field must be numeric and may contain " + (!decimals || decimals === '*' ? '' : decimals) + " decimal points.");
+    return ("The " + field + " field must be numeric and may contain" + (!decimals || decimals === '*' ? '' : decimals) + " decimal points.");
 },
   digits: function (field, ref) {
     var length = ref[0];
@@ -27503,6 +27647,10 @@ var ValidationProvider = {
     tag: {
       type: String,
       default: 'span'
+    },
+    slim: {
+      type: Boolean,
+      default: false
     }
   },
   watch: {
@@ -27592,7 +27740,7 @@ var ValidationProvider = {
     /* istanbul ignore next */
     if (!isCallable(slot)) {
       if (true) {
-        warn('ValidationProvider expects a scoped slot. Did you forget to add "slot-scope" to your slot?');
+        warn('ValidationProvider expects a scoped slot. Did you forget to add "v-slot" to your slot?');
       }
 
       return h(this.tag, this.$slots.default);
@@ -27604,7 +27752,7 @@ var ValidationProvider = {
       addListeners.call(this$1, input);
     });
 
-    return h(this.tag, nodes);
+    return this.slim ? createRenderless(h, nodes) : h(this.tag, nodes);
   },
   beforeDestroy: function beforeDestroy () {
     // cleanup reference.
@@ -27958,12 +28106,17 @@ var ValidationObserver = {
     tag: {
       type: String,
       default: 'span'
+    },
+    slim: {
+      type: Boolean,
+      default: false
     }
   },
   data: function () { return ({
     vid: ("obs_" + (OBSERVER_COUNTER++)),
     refs: {},
     observers: [],
+    persistedStore: {}
   }); },
   computed: {
     ctx: function ctx () {
@@ -27989,7 +28142,14 @@ var ValidationObserver = {
         reset: function () { return this$1.reset(); }
       };
 
-      return values(this.refs).concat( this.observers ).reduce(function (acc, provider) {
+      return values(this.refs).concat( Object.keys(this.persistedStore).map(function (key) {
+          return {
+            vid: key,
+            flags: this$1.persistedStore[key].flags,
+            messages: this$1.persistedStore[key].errors
+          };
+        }),
+        this.observers ).reduce(function (acc, provider) {
         Object.keys(flagMergingStrategy).forEach(function (flag) {
           var flags = provider.flags || provider.ctx;
           if (!(flag in acc)) {
@@ -28029,16 +28189,12 @@ var ValidationObserver = {
     }
   },
   render: function render (h) {
-    var slots = this.$scopedSlots.default;
-    this._persistedStore = this._persistedStore || {};
-    if (!isCallable(slots)) {
-      return h(this.tag, this.$slots.default);
+    var slots = this.$slots.default || this.$scopedSlots.default || [];
+    if (isCallable(slots)) {
+      slots = slots(this.ctx);
     }
 
-    return h(this.tag, {
-      on: this.$listeners,
-      attrs: this.$attrs
-    }, slots(this.ctx));
+    return this.slim ? createRenderless(h, slots) : h(this.tag, { on: this.$listeners, attrs: this.$attrs }, slots);
   },
   methods: {
     subscribe: function subscribe (subscriber, kind) {
@@ -28051,7 +28207,7 @@ var ValidationObserver = {
       }
 
       this.refs = Object.assign({}, this.refs, ( obj = {}, obj[subscriber.vid] = subscriber, obj ));
-      if (subscriber.persist && this._persistedStore[subscriber.vid]) {
+      if (subscriber.persist && this.persistedStore[subscriber.vid]) {
         this.restoreProviderState(subscriber);
       }
     },
@@ -28076,15 +28232,22 @@ var ValidationObserver = {
       )).then(function (results) { return results.every(function (r) { return r; }); });
     },
     reset: function reset () {
+      var this$1 = this;
+
+      Object.keys(this.persistedStore).forEach(function (key) {
+        this$1.$delete(this$1.persistedStore, key);
+      });
       return values(this.refs).concat( this.observers).forEach(function (ref) { return ref.reset(); });
     },
     restoreProviderState: function restoreProviderState (provider) {
-      var state = this._persistedStore[provider.vid];
+      var state = this.persistedStore[provider.vid];
       provider.setFlags(state.flags);
       provider.applyResult(state);
-      delete this._persistedStore[provider.vid];
+      this.$delete(this.persistedStore, provider.vid);
     },
     removeProvider: function removeProvider (vid) {
+      var obj;
+
       var provider = this.refs[vid];
       // save it for the next time.
       if (provider && provider.persist) {
@@ -28095,11 +28258,11 @@ var ValidationObserver = {
           }
         }
 
-        this._persistedStore[vid] = {
-          flags: provider.flags,
-          errors: provider.messages,
-          failedRules: provider.failedRules
-        };
+        this.persistedStore = assign({}, this.persistedStore, ( obj = {}, obj[vid] = {
+            flags: provider.flags,
+            errors: provider.messages,
+            failedRules: provider.failedRules
+          }, obj ));
       }
 
       this.$delete(this.refs, vid);
@@ -28168,7 +28331,7 @@ function withValidation (component, ctxToProps) {
   return hoc;
 }
 
-var version = '2.2.9';
+var version = '2.2.11';
 
 Object.keys(Rules).forEach(function (rule) {
   Validator.extend(rule, Rules[rule].validate, assign({}, Rules[rule].options, { paramNames: Rules[rule].paramNames }));
@@ -33274,1356 +33437,1316 @@ function normalizeComponent (
 
 /***/ }),
 
-/***/ "./node_modules/vue-meta/lib/vue-meta.js":
-/*!***********************************************!*\
-  !*** ./node_modules/vue-meta/lib/vue-meta.js ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./node_modules/vue-meta/dist/vue-meta.esm.js":
+/*!****************************************************!*\
+  !*** ./node_modules/vue-meta/dist/vue-meta.esm.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global) {/**
- * vue-meta v1.6.0
- * (c) 2019 Declan de Wet & Sébastien Chopin (@Atinux)
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var deepmerge__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! deepmerge */ "./node_modules/deepmerge/dist/umd.js");
+/* harmony import */ var deepmerge__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(deepmerge__WEBPACK_IMPORTED_MODULE_0__);
+/**
+ * vue-meta v2.0.4
+ * (c) 2019
+ * - Declan de Wet
+ * - Sébastien Chopin (@Atinux)
+  * - All the amazing contributors
  * @license MIT
  */
-(function (global, factory) {
-	 true ? module.exports = factory() :
-	undefined;
-}(this, function () { 'use strict';
-
-	/*
-	object-assign
-	(c) Sindre Sorhus
-	@license MIT
-	*/
-	/* eslint-disable no-unused-vars */
-	var getOwnPropertySymbols = Object.getOwnPropertySymbols;
-	var hasOwnProperty = Object.prototype.hasOwnProperty;
-	var propIsEnumerable = Object.prototype.propertyIsEnumerable;
-
-	function toObject(val) {
-		if (val === null || val === undefined) {
-			throw new TypeError('Object.assign cannot be called with null or undefined');
-		}
-
-		return Object(val);
-	}
-
-	function shouldUseNative() {
-		try {
-			if (!Object.assign) {
-				return false;
-			}
-
-			// Detect buggy property enumeration order in older V8 versions.
-
-			// https://bugs.chromium.org/p/v8/issues/detail?id=4118
-			var test1 = new String('abc');  // eslint-disable-line no-new-wrappers
-			test1[5] = 'de';
-			if (Object.getOwnPropertyNames(test1)[0] === '5') {
-				return false;
-			}
-
-			// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-			var test2 = {};
-			for (var i = 0; i < 10; i++) {
-				test2['_' + String.fromCharCode(i)] = i;
-			}
-			var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
-				return test2[n];
-			});
-			if (order2.join('') !== '0123456789') {
-				return false;
-			}
-
-			// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-			var test3 = {};
-			'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
-				test3[letter] = letter;
-			});
-			if (Object.keys(Object.assign({}, test3)).join('') !==
-					'abcdefghijklmnopqrst') {
-				return false;
-			}
-
-			return true;
-		} catch (err) {
-			// We don't expect any of the above to throw, but better to be safe.
-			return false;
-		}
-	}
-
-	var objectAssign = shouldUseNative() ? Object.assign : function (target, source) {
-		var arguments$1 = arguments;
-
-		var from;
-		var to = toObject(target);
-		var symbols;
-
-		for (var s = 1; s < arguments.length; s++) {
-			from = Object(arguments$1[s]);
-
-			for (var key in from) {
-				if (hasOwnProperty.call(from, key)) {
-					to[key] = from[key];
-				}
-			}
-
-			if (getOwnPropertySymbols) {
-				symbols = getOwnPropertySymbols(from);
-				for (var i = 0; i < symbols.length; i++) {
-					if (propIsEnumerable.call(from, symbols[i])) {
-						to[symbols[i]] = from[symbols[i]];
-					}
-				}
-			}
-		}
-
-		return to;
-	};
-
-	var commonjsGlobal = typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
-
-	function createCommonjsModule(fn, module) {
-		return module = { exports: {} }, fn(module, module.exports), module.exports;
-	}
-
-	var umd = createCommonjsModule(function (module, exports) {
-	(function (global, factory) {
-		module.exports = factory();
-	}(commonjsGlobal, (function () {
-	var isMergeableObject = function isMergeableObject(value) {
-		return isNonNullObject(value)
-			&& !isSpecial(value)
-	};
-
-	function isNonNullObject(value) {
-		return !!value && typeof value === 'object'
-	}
-
-	function isSpecial(value) {
-		var stringValue = Object.prototype.toString.call(value);
-
-		return stringValue === '[object RegExp]'
-			|| stringValue === '[object Date]'
-			|| isReactElement(value)
-	}
-
-	// see https://github.com/facebook/react/blob/b5ac963fb791d1298e7f396236383bc955f916c1/src/isomorphic/classic/element/ReactElement.js#L21-L25
-	var canUseSymbol = typeof Symbol === 'function' && Symbol.for;
-	var REACT_ELEMENT_TYPE = canUseSymbol ? Symbol.for('react.element') : 0xeac7;
-
-	function isReactElement(value) {
-		return value.$$typeof === REACT_ELEMENT_TYPE
-	}
-
-	function emptyTarget(val) {
-		return Array.isArray(val) ? [] : {}
-	}
-
-	function cloneUnlessOtherwiseSpecified(value, options) {
-		return (options.clone !== false && options.isMergeableObject(value))
-			? deepmerge(emptyTarget(value), value, options)
-			: value
-	}
-
-	function defaultArrayMerge(target, source, options) {
-		return target.concat(source).map(function(element) {
-			return cloneUnlessOtherwiseSpecified(element, options)
-		})
-	}
-
-	function getMergeFunction(key, options) {
-		if (!options.customMerge) {
-			return deepmerge
-		}
-		var customMerge = options.customMerge(key);
-		return typeof customMerge === 'function' ? customMerge : deepmerge
-	}
-
-	function mergeObject(target, source, options) {
-		var destination = {};
-		if (options.isMergeableObject(target)) {
-			Object.keys(target).forEach(function(key) {
-				destination[key] = cloneUnlessOtherwiseSpecified(target[key], options);
-			});
-		}
-		Object.keys(source).forEach(function(key) {
-			if (!options.isMergeableObject(source[key]) || !target[key]) {
-				destination[key] = cloneUnlessOtherwiseSpecified(source[key], options);
-			} else {
-				destination[key] = getMergeFunction(key, options)(target[key], source[key], options);
-			}
-		});
-		return destination
-	}
-
-	function deepmerge(target, source, options) {
-		options = options || {};
-		options.arrayMerge = options.arrayMerge || defaultArrayMerge;
-		options.isMergeableObject = options.isMergeableObject || isMergeableObject;
-
-		var sourceIsArray = Array.isArray(source);
-		var targetIsArray = Array.isArray(target);
-		var sourceAndTargetTypesMatch = sourceIsArray === targetIsArray;
-
-		if (!sourceAndTargetTypesMatch) {
-			return cloneUnlessOtherwiseSpecified(source, options)
-		} else if (sourceIsArray) {
-			return options.arrayMerge(target, source, options)
-		} else {
-			return mergeObject(target, source, options)
-		}
-	}
-
-	deepmerge.all = function deepmergeAll(array, options) {
-		if (!Array.isArray(array)) {
-			throw new Error('first argument should be an array')
-		}
-
-		return array.reduce(function(prev, next) {
-			return deepmerge(prev, next, options)
-		}, {})
-	};
-
-	var deepmerge_1 = deepmerge;
-
-	return deepmerge_1;
-
-	})));
-	});
-
-	/**
-	 * lodash (Custom Build) <https://lodash.com/>
-	 * Build: `lodash modularize exports="npm" -o ./`
-	 * Copyright jQuery Foundation and other contributors <https://jquery.org/>
-	 * Released under MIT license <https://lodash.com/license>
-	 * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
-	 * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
-	 */
-
-	/** `Object#toString` result references. */
-	var objectTag = '[object Object]';
-
-	/**
-	 * Checks if `value` is a host object in IE < 9.
-	 *
-	 * @private
-	 * @param {*} value The value to check.
-	 * @returns {boolean} Returns `true` if `value` is a host object, else `false`.
-	 */
-	function isHostObject(value) {
-	  // Many host objects are `Object` objects that can coerce to strings
-	  // despite having improperly defined `toString` methods.
-	  var result = false;
-	  if (value != null && typeof value.toString != 'function') {
-	    try {
-	      result = !!(value + '');
-	    } catch (e) {}
-	  }
-	  return result;
-	}
-
-	/**
-	 * Creates a unary function that invokes `func` with its argument transformed.
-	 *
-	 * @private
-	 * @param {Function} func The function to wrap.
-	 * @param {Function} transform The argument transform.
-	 * @returns {Function} Returns the new function.
-	 */
-	function overArg(func, transform) {
-	  return function(arg) {
-	    return func(transform(arg));
-	  };
-	}
-
-	/** Used for built-in method references. */
-	var funcProto = Function.prototype,
-	    objectProto = Object.prototype;
-
-	/** Used to resolve the decompiled source of functions. */
-	var funcToString = funcProto.toString;
-
-	/** Used to check objects for own properties. */
-	var hasOwnProperty$1 = objectProto.hasOwnProperty;
-
-	/** Used to infer the `Object` constructor. */
-	var objectCtorString = funcToString.call(Object);
-
-	/**
-	 * Used to resolve the
-	 * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
-	 * of values.
-	 */
-	var objectToString = objectProto.toString;
-
-	/** Built-in value references. */
-	var getPrototype = overArg(Object.getPrototypeOf, Object);
-
-	/**
-	 * Checks if `value` is object-like. A value is object-like if it's not `null`
-	 * and has a `typeof` result of "object".
-	 *
-	 * @static
-	 * @memberOf _
-	 * @since 4.0.0
-	 * @category Lang
-	 * @param {*} value The value to check.
-	 * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
-	 * @example
-	 *
-	 * _.isObjectLike({});
-	 * // => true
-	 *
-	 * _.isObjectLike([1, 2, 3]);
-	 * // => true
-	 *
-	 * _.isObjectLike(_.noop);
-	 * // => false
-	 *
-	 * _.isObjectLike(null);
-	 * // => false
-	 */
-	function isObjectLike(value) {
-	  return !!value && typeof value == 'object';
-	}
-
-	/**
-	 * Checks if `value` is a plain object, that is, an object created by the
-	 * `Object` constructor or one with a `[[Prototype]]` of `null`.
-	 *
-	 * @static
-	 * @memberOf _
-	 * @since 0.8.0
-	 * @category Lang
-	 * @param {*} value The value to check.
-	 * @returns {boolean} Returns `true` if `value` is a plain object, else `false`.
-	 * @example
-	 *
-	 * function Foo() {
-	 *   this.a = 1;
-	 * }
-	 *
-	 * _.isPlainObject(new Foo);
-	 * // => false
-	 *
-	 * _.isPlainObject([1, 2, 3]);
-	 * // => false
-	 *
-	 * _.isPlainObject({ 'x': 0, 'y': 0 });
-	 * // => true
-	 *
-	 * _.isPlainObject(Object.create(null));
-	 * // => true
-	 */
-	function isPlainObject(value) {
-	  if (!isObjectLike(value) ||
-	      objectToString.call(value) != objectTag || isHostObject(value)) {
-	    return false;
-	  }
-	  var proto = getPrototype(value);
-	  if (proto === null) {
-	    return true;
-	  }
-	  var Ctor = hasOwnProperty$1.call(proto, 'constructor') && proto.constructor;
-	  return (typeof Ctor == 'function' &&
-	    Ctor instanceof Ctor && funcToString.call(Ctor) == objectCtorString);
-	}
-
-	var lodash_isplainobject = isPlainObject;
-
-	/**
-	 * checks if passed argument is an array
-	 * @param  {any}  arr - the object to check
-	 * @return {Boolean} - true if `arr` is an array
-	 */
-	function isArray (arr) {
-	  return Array.isArray
-	    ? Array.isArray(arr)
-	    : Object.prototype.toString.call(arr) === '[object Array]'
-	}
-
-	function uniqBy (inputArray, predicate) {
-	  return inputArray
-	    .filter(function (x, i, arr) { return i === arr.length - 1
-	      ? true
-	      : predicate(x) !== predicate(arr[i + 1]); }
-	    )
-	}
-
-	/**
-	 * lodash (Custom Build) <https://lodash.com/>
-	 * Build: `lodash modularize exports="npm" -o ./`
-	 * Copyright jQuery Foundation and other contributors <https://jquery.org/>
-	 * Released under MIT license <https://lodash.com/license>
-	 * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
-	 * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
-	 */
-
-	/** Used as references for various `Number` constants. */
-	var INFINITY = 1 / 0;
-
-	/** `Object#toString` result references. */
-	var symbolTag = '[object Symbol]';
-
-	/** Detect free variable `global` from Node.js. */
-	var freeGlobal = typeof commonjsGlobal == 'object' && commonjsGlobal && commonjsGlobal.Object === Object && commonjsGlobal;
-
-	/** Detect free variable `self`. */
-	var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
-
-	/** Used as a reference to the global object. */
-	var root = freeGlobal || freeSelf || Function('return this')();
-
-	/** Used for built-in method references. */
-	var objectProto$1 = Object.prototype;
-
-	/** Used to generate unique IDs. */
-	var idCounter = 0;
-
-	/**
-	 * Used to resolve the
-	 * [`toStringTag`](http://ecma-international.org/ecma-262/6.0/#sec-object.prototype.tostring)
-	 * of values.
-	 */
-	var objectToString$1 = objectProto$1.toString;
-
-	/** Built-in value references. */
-	var Symbol$1 = root.Symbol;
-
-	/** Used to convert symbols to primitives and strings. */
-	var symbolProto = Symbol$1 ? Symbol$1.prototype : undefined,
-	    symbolToString = symbolProto ? symbolProto.toString : undefined;
-
-	/**
-	 * The base implementation of `_.toString` which doesn't convert nullish
-	 * values to empty strings.
-	 *
-	 * @private
-	 * @param {*} value The value to process.
-	 * @returns {string} Returns the string.
-	 */
-	function baseToString(value) {
-	  // Exit early for strings to avoid a performance hit in some environments.
-	  if (typeof value == 'string') {
-	    return value;
-	  }
-	  if (isSymbol(value)) {
-	    return symbolToString ? symbolToString.call(value) : '';
-	  }
-	  var result = (value + '');
-	  return (result == '0' && (1 / value) == -INFINITY) ? '-0' : result;
-	}
-
-	/**
-	 * Checks if `value` is object-like. A value is object-like if it's not `null`
-	 * and has a `typeof` result of "object".
-	 *
-	 * @static
-	 * @memberOf _
-	 * @since 4.0.0
-	 * @category Lang
-	 * @param {*} value The value to check.
-	 * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
-	 * @example
-	 *
-	 * _.isObjectLike({});
-	 * // => true
-	 *
-	 * _.isObjectLike([1, 2, 3]);
-	 * // => true
-	 *
-	 * _.isObjectLike(_.noop);
-	 * // => false
-	 *
-	 * _.isObjectLike(null);
-	 * // => false
-	 */
-	function isObjectLike$1(value) {
-	  return !!value && typeof value == 'object';
-	}
-
-	/**
-	 * Checks if `value` is classified as a `Symbol` primitive or object.
-	 *
-	 * @static
-	 * @memberOf _
-	 * @since 4.0.0
-	 * @category Lang
-	 * @param {*} value The value to check.
-	 * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
-	 * @example
-	 *
-	 * _.isSymbol(Symbol.iterator);
-	 * // => true
-	 *
-	 * _.isSymbol('abc');
-	 * // => false
-	 */
-	function isSymbol(value) {
-	  return typeof value == 'symbol' ||
-	    (isObjectLike$1(value) && objectToString$1.call(value) == symbolTag);
-	}
-
-	/**
-	 * Converts `value` to a string. An empty string is returned for `null`
-	 * and `undefined` values. The sign of `-0` is preserved.
-	 *
-	 * @static
-	 * @memberOf _
-	 * @since 4.0.0
-	 * @category Lang
-	 * @param {*} value The value to process.
-	 * @returns {string} Returns the string.
-	 * @example
-	 *
-	 * _.toString(null);
-	 * // => ''
-	 *
-	 * _.toString(-0);
-	 * // => '-0'
-	 *
-	 * _.toString([1, 2, 3]);
-	 * // => '1,2,3'
-	 */
-	function toString(value) {
-	  return value == null ? '' : baseToString(value);
-	}
-
-	/**
-	 * Generates a unique ID. If `prefix` is given, the ID is appended to it.
-	 *
-	 * @static
-	 * @since 0.1.0
-	 * @memberOf _
-	 * @category Util
-	 * @param {string} [prefix=''] The value to prefix the ID with.
-	 * @returns {string} Returns the unique ID.
-	 * @example
-	 *
-	 * _.uniqueId('contact_');
-	 * // => 'contact_104'
-	 *
-	 * _.uniqueId();
-	 * // => '105'
-	 */
-	function uniqueId(prefix) {
-	  var id = ++idCounter;
-	  return toString(prefix) + id;
-	}
-
-	var lodash_uniqueid = uniqueId;
-
-	/**
-	 * Returns the `opts.option` $option value of the given `opts.component`.
-	 * If methods are encountered, they will be bound to the component context.
-	 * If `opts.deep` is true, will recursively merge all child component
-	 * `opts.option` $option values into the returned result.
-	 *
-	 * @param  {Object} opts - options
-	 * @param  {Object} opts.component - Vue component to fetch option data from
-	 * @param  {String} opts.option - what option to look for
-	 * @param  {Boolean} opts.deep - look for data in child components as well?
-	 * @param  {Function} opts.arrayMerge - how should arrays be merged?
-	 * @param  {Object} [result={}] - result so far
-	 * @return {Object} result - final aggregated result
-	 */
-	function getComponentOption (opts, result) {
-	  if ( result === void 0 ) result = {};
-
-	  var component = opts.component;
-	  var option = opts.option;
-	  var deep = opts.deep;
-	  var arrayMerge = opts.arrayMerge;
-	  var metaTemplateKeyName = opts.metaTemplateKeyName;
-	  var tagIDKeyName = opts.tagIDKeyName;
-	  var contentKeyName = opts.contentKeyName;
-	  var $options = component.$options;
-
-	  if (component._inactive) { return result }
-
-	  // only collect option data if it exists
-	  if (typeof $options[option] !== 'undefined' && $options[option] !== null) {
-	    var data = $options[option];
-
-	    // if option is a function, replace it with it's result
-	    if (typeof data === 'function') {
-	      data = data.call(component);
-	    }
-
-	    if (typeof data === 'object') {
-	      // merge with existing options
-	      result = umd(result, data, { arrayMerge: arrayMerge });
-	    } else {
-	      result = data;
-	    }
-	  }
-
-	  // collect & aggregate child options if deep = true
-	  if (deep && component.$children.length) {
-	    component.$children.forEach(function (childComponent) {
-	      result = getComponentOption({
-	        component: childComponent,
-	        option: option,
-	        deep: deep,
-	        arrayMerge: arrayMerge
-	      }, result);
-	    });
-	  }
-	  if (metaTemplateKeyName && result.hasOwnProperty('meta')) {
-	    result.meta = Object.keys(result.meta).map(function (metaKey) {
-	      var metaObject = result.meta[metaKey];
-	      if (!metaObject.hasOwnProperty(metaTemplateKeyName) || !metaObject.hasOwnProperty(contentKeyName) || typeof metaObject[metaTemplateKeyName] === 'undefined') {
-	        return result.meta[metaKey]
-	      }
-
-	      var template = metaObject[metaTemplateKeyName];
-	      delete metaObject[metaTemplateKeyName];
-
-	      if (template) {
-	        metaObject.content = typeof template === 'function' ? template(metaObject.content) : template.replace(/%s/g, metaObject.content);
-	      }
-
-	      return metaObject
-	    });
-	    result.meta = uniqBy(
-	      result.meta,
-	      function (metaObject) { return metaObject.hasOwnProperty(tagIDKeyName) ? metaObject[tagIDKeyName] : lodash_uniqueid(); }
-	    );
-	  }
-	  return result
-	}
-
-	var escapeHTML = function (str) { return typeof window === 'undefined'
-	  // server-side escape sequence
-	  ? String(str)
-	    .replace(/&/g, '&amp;')
-	    .replace(/</g, '&lt;')
-	    .replace(/>/g, '&gt;')
-	    .replace(/"/g, '&quot;')
-	    .replace(/'/g, '&#x27;')
-	  // client-side escape sequence
-	  : String(str)
-	    .replace(/&/g, '\u0026')
-	    .replace(/</g, '\u003c')
-	    .replace(/>/g, '\u003e')
-	    .replace(/"/g, '\u0022')
-	    .replace(/'/g, '\u0027'); };
-
-	function _getMetaInfo (options) {
-	  if ( options === void 0 ) options = {};
-
-	  var keyName = options.keyName;
-	  var tagIDKeyName = options.tagIDKeyName;
-	  var metaTemplateKeyName = options.metaTemplateKeyName;
-	  var contentKeyName = options.contentKeyName;
-	  /**
-	   * Returns the correct meta info for the given component
-	   * (child components will overwrite parent meta info)
-	   *
-	   * @param  {Object} component - the Vue instance to get meta info from
-	   * @return {Object} - returned meta info
-	   */
-	  return function getMetaInfo (component) {
-	    // set some sane defaults
-	    var defaultInfo = {
-	      title: '',
-	      titleChunk: '',
-	      titleTemplate: '%s',
-	      htmlAttrs: {},
-	      bodyAttrs: {},
-	      headAttrs: {},
-	      meta: [],
-	      base: [],
-	      link: [],
-	      style: [],
-	      script: [],
-	      noscript: [],
-	      __dangerouslyDisableSanitizers: [],
-	      __dangerouslyDisableSanitizersByTagID: {}
-	    };
-
-	    // collect & aggregate all metaInfo $options
-	    var info = getComponentOption({
-	      component: component,
-	      option: keyName,
-	      deep: true,
-	      metaTemplateKeyName: metaTemplateKeyName,
-	      tagIDKeyName: tagIDKeyName,
-	      contentKeyName: contentKeyName,
-	      arrayMerge: function arrayMerge (target, source) {
-	        // we concat the arrays without merging objects contained in,
-	        // but we check for a `vmid` property on each object in the array
-	        // using an O(1) lookup associative array exploit
-	        // note the use of "for in" - we are looping through arrays here, not
-	        // plain objects
-	        var destination = [];
-	        for (var targetIndex in target) {
-	          var targetItem = target[targetIndex];
-	          var shared = false;
-	          for (var sourceIndex in source) {
-	            var sourceItem = source[sourceIndex];
-	            if (targetItem[tagIDKeyName] && targetItem[tagIDKeyName] === sourceItem[tagIDKeyName]) {
-	              var targetTemplate = targetItem[metaTemplateKeyName];
-	              var sourceTemplate = sourceItem[metaTemplateKeyName];
-	              if (targetTemplate && !sourceTemplate) {
-	                sourceItem[contentKeyName] = applyTemplate(component)(targetTemplate)(sourceItem[contentKeyName]);
-	              }
-	              // If template defined in child but content in parent
-	              if (targetTemplate && sourceTemplate && !sourceItem[contentKeyName]) {
-	                sourceItem[contentKeyName] = applyTemplate(component)(sourceTemplate)(targetItem[contentKeyName]);
-	                delete sourceItem[metaTemplateKeyName];
-	              }
-	              shared = true;
-	              break
-	            }
-	          }
-
-	          if (!shared) {
-	            destination.push(targetItem);
-	          }
-	        }
-
-	        return destination.concat(source)
-	      }
-	    });
-
-	    // Remove all "template" tags from meta
-
-	    // backup the title chunk in case user wants access to it
-	    if (info.title) {
-	      info.titleChunk = info.title;
-	    }
-
-	    // replace title with populated template
-	    if (info.titleTemplate) {
-	      info.title = applyTemplate(component)(info.titleTemplate)(info.titleChunk || '');
-	    }
-
-	    // convert base tag to an array so it can be handled the same way
-	    // as the other tags
-	    if (info.base) {
-	      info.base = Object.keys(info.base).length ? [info.base] : [];
-	    }
-
-	    var ref = info.__dangerouslyDisableSanitizers;
-	    var refByTagID = info.__dangerouslyDisableSanitizersByTagID;
-
-	    // sanitizes potentially dangerous characters
-	    var escape = function (info) { return Object.keys(info).reduce(function (escaped, key) {
-	      var isDisabled = ref && ref.indexOf(key) > -1;
-	      var tagID = info[tagIDKeyName];
-	      if (!isDisabled && tagID) {
-	        isDisabled = refByTagID && refByTagID[tagID] && refByTagID[tagID].indexOf(key) > -1;
-	      }
-	      var val = info[key];
-	      escaped[key] = val;
-	      if (key === '__dangerouslyDisableSanitizers' || key === '__dangerouslyDisableSanitizersByTagID') {
-	        return escaped
-	      }
-	      if (!isDisabled) {
-	        if (typeof val === 'string') {
-	          escaped[key] = escapeHTML(val);
-	        } else if (lodash_isplainobject(val)) {
-	          escaped[key] = escape(val);
-	        } else if (isArray(val)) {
-	          escaped[key] = val.map(escape);
-	        } else {
-	          escaped[key] = val;
-	        }
-	      } else {
-	        escaped[key] = val;
-	      }
-
-	      return escaped
-	    }, {}); };
-
-	    // merge with defaults
-	    info = umd(defaultInfo, info);
-
-	    // begin sanitization
-	    info = escape(info);
-
-	    return info
-	  }
-	}
-
-	var applyTemplate = function (component) { return function (template) { return function (chunk) { return typeof template === 'function' ? template.call(component, chunk) : template.replace(/%s/g, chunk); }; }; };
-
-	function _titleGenerator (options) {
-	  if ( options === void 0 ) options = {};
-
-	  var attribute = options.attribute;
-
-	  /**
-	   * Generates title output for the server
-	   *
-	   * @param  {'title'} type - the string "title"
-	   * @param  {String} data - the title text
-	   * @return {Object} - the title generator
-	   */
-	  return function titleGenerator (type, data) {
-	    return {
-	      text: function text () {
-	        return String(data).trim() ? ("<" + type + " " + attribute + "=\"true\">" + data + "</" + type + ">") : ''
-	      }
-	    }
-	  }
-	}
-
-	function _attrsGenerator (options) {
-	  if ( options === void 0 ) options = {};
-
-	  var attribute = options.attribute;
-
-	  /**
-	   * Generates tag attributes for use on the server.
-	   *
-	   * @param  {('bodyAttrs'|'htmlAttrs'|'headAttrs')} type - the type of attributes to generate
-	   * @param  {Object} data - the attributes to generate
-	   * @return {Object} - the attribute generator
-	   */
-	  return function attrsGenerator (type, data) {
-	    return {
-	      text: function text () {
-	        var attributeStr = '';
-	        var watchedAttrs = [];
-	        for (var attr in data) {
-	          if (data.hasOwnProperty(attr)) {
-	            watchedAttrs.push(attr);
-	            attributeStr += (typeof data[attr] !== 'undefined'
-	                ? (attr + "=\"" + (data[attr]) + "\"")
-	                : attr) + " ";
-	          }
-	        }
-	        attributeStr += attribute + "=\"" + (watchedAttrs.join(',')) + "\"";
-	        return attributeStr.trim()
-	      }
-	    }
-	  }
-	}
-
-	function _tagGenerator (options) {
-	  if ( options === void 0 ) options = {};
-
-	  var attribute = options.attribute;
-
-	  /**
-	   * Generates meta, base, link, style, script, noscript tags for use on the server
-	   *
-	   * @param  {('meta'|'base'|'link'|'style'|'script'|'noscript')} the name of the tag
-	   * @param  {(Array<Object>|Object)} tags - an array of tag objects or a single object in case of base
-	   * @return {Object} - the tag generator
-	   */
-	  return function tagGenerator (type, tags) {
-	    return {
-	      text: function text (ref) {
-	        if ( ref === void 0 ) ref = {};
-	        var body = ref.body; if ( body === void 0 ) body = false;
-
-	        // build a string containing all tags of this type
-	        return tags.reduce(function (tagsStr, tag) {
-	          if (Object.keys(tag).length === 0) { return tagsStr } // Bail on empty tag object
-	          if (!!tag.body !== body) { return tagsStr }
-	          // build a string containing all attributes of this tag
-	          var attrs = Object.keys(tag).reduce(function (attrsStr, attr) {
-	            switch (attr) {
-	              // these attributes are treated as children on the tag
-	              case 'innerHTML':
-	              case 'cssText':
-	              case 'once':
-	                return attrsStr
-	              // these form the attribute list for this tag
-	              default:
-	                if ([options.tagIDKeyName, 'body'].indexOf(attr) !== -1) {
-	                  return (attrsStr + " data-" + attr + "=\"" + (tag[attr]) + "\"")
-	                }
-	                return typeof tag[attr] === 'undefined'
-	                  ? (attrsStr + " " + attr)
-	                  : (attrsStr + " " + attr + "=\"" + (tag[attr]) + "\"")
-	            }
-	          }, '').trim();
-
-	          // grab child content from one of these attributes, if possible
-	          var content = tag.innerHTML || tag.cssText || '';
-
-	          // generate tag exactly without any other redundant attribute
-	          var observeTag = tag.once
-	            ? ''
-	            : (attribute + "=\"true\" ");
-
-	          // these tags have no end tag
-	          var hasEndTag = ['base', 'meta', 'link'].indexOf(type) === -1;
-
-	          // these tag types will have content inserted
-	          var hasContent = hasEndTag && ['noscript', 'script', 'style'].indexOf(type) > -1;
-
-	          // the final string for this specific tag
-	          return !hasContent
-	            ? (tagsStr + "<" + type + " " + observeTag + attrs + (hasEndTag ? '/' : '') + ">")
-	            : (tagsStr + "<" + type + " " + observeTag + attrs + ">" + content + "</" + type + ">")
-	        }, '')
-	      }
-	    }
-	  }
-	}
-
-	function _generateServerInjector (options) {
-	  if ( options === void 0 ) options = {};
-
-	  /**
-	   * Converts a meta info property to one that can be stringified on the server
-	   *
-	   * @param  {String} type - the type of data to convert
-	   * @param  {(String|Object|Array<Object>)} data - the data value
-	   * @return {Object} - the new injector
-	   */
-	  return function generateServerInjector (type, data) {
-	    switch (type) {
-	      case 'title':
-	        return _titleGenerator(options)(type, data)
-	      case 'htmlAttrs':
-	      case 'bodyAttrs':
-	      case 'headAttrs':
-	        return _attrsGenerator(options)(type, data)
-	      default:
-	        return _tagGenerator(options)(type, data)
-	    }
-	  }
-	}
-
-	function _inject (options) {
-	  if ( options === void 0 ) options = {};
-
-	  /**
-	   * Converts the state of the meta info object such that each item
-	   * can be compiled to a tag string on the server
-	   *
-	   * @this {Object} - Vue instance - ideally the root component
-	   * @return {Object} - server meta info with `toString` methods
-	   */
-	  return function inject () {
-	    // get meta info with sensible defaults
-	    var info = _getMetaInfo(options)(this.$root);
-
-	    // generate server injectors
-	    for (var key in info) {
-	      if (info.hasOwnProperty(key) && key !== 'titleTemplate' && key !== 'titleChunk') {
-	        info[key] = _generateServerInjector(options)(key, info[key]);
-	      }
-	    }
-
-	    return info
-	  }
-	}
-
-	function _updateTitle () {
-	  /**
-	   * Updates the document title
-	   *
-	   * @param  {String} title - the new title of the document
-	   */
-	  return function updateTitle (title) {
-	    if ( title === void 0 ) title = document.title;
-
-	    document.title = title;
-	  }
-	}
-
-	function _updateTagAttributes (options) {
-	  if ( options === void 0 ) options = {};
-
-	  var attribute = options.attribute;
-
-	  /**
-	   * Updates the document's html tag attributes
-	   *
-	   * @param  {Object} attrs - the new document html attributes
-	   * @param  {HTMLElement} tag - the HTMLElement tag to update with new attrs
-	   */
-	  return function updateTagAttributes (attrs, tag) {
-	    var vueMetaAttrString = tag.getAttribute(attribute);
-	    var vueMetaAttrs = vueMetaAttrString ? vueMetaAttrString.split(',') : [];
-	    var toRemove = [].concat(vueMetaAttrs);
-	    for (var attr in attrs) {
-	      if (attrs.hasOwnProperty(attr)) {
-	        var val = attrs[attr] || '';
-	        tag.setAttribute(attr, val);
-	        if (vueMetaAttrs.indexOf(attr) === -1) {
-	          vueMetaAttrs.push(attr);
-	        }
-	        var saveIndex = toRemove.indexOf(attr);
-	        if (saveIndex !== -1) {
-	          toRemove.splice(saveIndex, 1);
-	        }
-	      }
-	    }
-	    var i = toRemove.length - 1;
-	    for (; i >= 0; i--) {
-	      tag.removeAttribute(toRemove[i]);
-	    }
-	    if (vueMetaAttrs.length === toRemove.length) {
-	      tag.removeAttribute(attribute);
-	    } else {
-	      tag.setAttribute(attribute, vueMetaAttrs.join(','));
-	    }
-	  }
-	}
-
-	// borrow the slice method
-	var toArray = Function.prototype.call.bind(Array.prototype.slice);
-
-	function _updateTags (options) {
-	  if ( options === void 0 ) options = {};
-
-	  var attribute = options.attribute;
-
-	  /**
-	   * Updates meta tags inside <head> and <body> on the client. Borrowed from `react-helmet`:
-	   * https://github.com/nfl/react-helmet/blob/004d448f8de5f823d10f838b02317521180f34da/src/Helmet.js#L195-L245
-	   *
-	   * @param  {('meta'|'base'|'link'|'style'|'script'|'noscript')} type - the name of the tag
-	   * @param  {(Array<Object>|Object)} tags - an array of tag objects or a single object in case of base
-	   * @return {Object} - a representation of what tags changed
-	   */
-	  return function updateTags (type, tags, headTag, bodyTag) {
-	    var oldHeadTags = toArray(headTag.querySelectorAll((type + "[" + attribute + "]")));
-	    var oldBodyTags = toArray(bodyTag.querySelectorAll((type + "[" + attribute + "][data-body=\"true\"]")));
-	    var newTags = [];
-	    var indexToDelete;
-
-	    if (tags.length > 1) {
-	      // remove duplicates that could have been found by merging tags
-	      // which include a mixin with metaInfo and that mixin is used
-	      // by multiple components on the same page
-	      var found = [];
-	      tags = tags.map(function (x) {
-	        var k = JSON.stringify(x);
-	        if (found.indexOf(k) < 0) {
-	          found.push(k);
-	          return x
-	        }
-	      }).filter(function (x) { return x; });
-	    }
-
-	    if (tags && tags.length) {
-	      tags.forEach(function (tag) {
-	        var newElement = document.createElement(type);
-	        var oldTags = tag.body !== true ? oldHeadTags : oldBodyTags;
-
-	        for (var attr in tag) {
-	          if (tag.hasOwnProperty(attr)) {
-	            if (attr === 'innerHTML') {
-	              newElement.innerHTML = tag.innerHTML;
-	            } else if (attr === 'cssText') {
-	              if (newElement.styleSheet) {
-	                newElement.styleSheet.cssText = tag.cssText;
-	              } else {
-	                newElement.appendChild(document.createTextNode(tag.cssText));
-	              }
-	            } else if ([options.tagIDKeyName, 'body'].indexOf(attr) !== -1) {
-	              var _attr = "data-" + attr;
-	              var value = (typeof tag[attr] === 'undefined') ? '' : tag[attr];
-	              newElement.setAttribute(_attr, value);
-	            } else {
-	              var value$1 = (typeof tag[attr] === 'undefined') ? '' : tag[attr];
-	              newElement.setAttribute(attr, value$1);
-	            }
-	          }
-	        }
-
-	        newElement.setAttribute(attribute, 'true');
-
-	        // Remove a duplicate tag from domTagstoRemove, so it isn't cleared.
-	        if (oldTags.some(function (existingTag, index) {
-	          indexToDelete = index;
-	          return newElement.isEqualNode(existingTag)
-	        })) {
-	          oldTags.splice(indexToDelete, 1);
-	        } else {
-	          newTags.push(newElement);
-	        }
-	      });
-	    }
-	    var oldTags = oldHeadTags.concat(oldBodyTags);
-	    oldTags.forEach(function (tag) { return tag.parentNode.removeChild(tag); });
-	    newTags.forEach(function (tag) {
-	      if (tag.getAttribute('data-body') === 'true') {
-	        bodyTag.appendChild(tag);
-	      } else {
-	        headTag.appendChild(tag);
-	      }
-	    });
-
-	    return { oldTags: oldTags, newTags: newTags }
-	  }
-	}
-
-	function _updateClientMetaInfo (options) {
-	  if ( options === void 0 ) options = {};
-
-	  var ssrAttribute = options.ssrAttribute;
-
-	  /**
-	   * Performs client-side updates when new meta info is received
-	   *
-	   * @param  {Object} newInfo - the meta info to update to
-	   */
-	  return function updateClientMetaInfo (newInfo) {
-	    var htmlTag = document.getElementsByTagName('html')[0];
-	    // if this is not a server render, then update
-	    if (htmlTag.getAttribute(ssrAttribute) === null) {
-	      // initialize tracked changes
-	      var addedTags = {};
-	      var removedTags = {};
-
-	      Object.keys(newInfo).forEach(function (key) {
-	        switch (key) {
-	          // update the title
-	          case 'title':
-	            _updateTitle(options)(newInfo.title);
-	            break
-	          // update attributes
-	          case 'htmlAttrs':
-	            _updateTagAttributes(options)(newInfo[key], htmlTag);
-	            break
-	          case 'bodyAttrs':
-	            _updateTagAttributes(options)(newInfo[key], document.getElementsByTagName('body')[0]);
-	            break
-	          case 'headAttrs':
-	            _updateTagAttributes(options)(newInfo[key], document.getElementsByTagName('head')[0]);
-	            break
-	          // ignore these
-	          case 'titleChunk':
-	          case 'titleTemplate':
-	          case 'changed':
-	          case '__dangerouslyDisableSanitizers':
-	            break
-	          // catch-all update tags
-	          default:
-	            var headTag = document.getElementsByTagName('head')[0];
-	            var bodyTag = document.getElementsByTagName('body')[0];
-	            var ref = _updateTags(options)(key, newInfo[key], headTag, bodyTag);
-	        var oldTags = ref.oldTags;
-	        var newTags = ref.newTags;
-	            if (newTags.length) {
-	              addedTags[key] = newTags;
-	              removedTags[key] = oldTags;
-	            }
-	        }
-	      });
-
-	      // emit "event" with new info
-	      if (typeof newInfo.changed === 'function') {
-	        newInfo.changed.call(this, newInfo, addedTags, removedTags);
-	      }
-	    } else {
-	      // remove the server render attribute so we can update on changes
-	      htmlTag.removeAttribute(ssrAttribute);
-	    }
-	  }
-	}
-
-	function _refresh (options) {
-	  if ( options === void 0 ) options = {};
-
-	  /**
-	   * When called, will update the current meta info with new meta info.
-	   * Useful when updating meta info as the result of an asynchronous
-	   * action that resolves after the initial render takes place.
-	   *
-	   * Credit to [Sébastien Chopin](https://github.com/Atinux) for the suggestion
-	   * to implement this method.
-	   *
-	   * @return {Object} - new meta info
-	   */
-	  return function refresh () {
-	    var info = _getMetaInfo(options)(this.$root);
-	    _updateClientMetaInfo(options).call(this, info);
-	    return info
-	  }
-	}
-
-	function _$meta (options) {
-	  if ( options === void 0 ) options = {};
-
-	  /**
-	   * Returns an injector for server-side rendering.
-	   * @this {Object} - the Vue instance (a root component)
-	   * @return {Object} - injector
-	   */
-	  return function $meta () {
-	    return {
-	      inject: _inject(options).bind(this),
-	      refresh: _refresh(options).bind(this)
-	    }
-	  }
-	}
-
-	// fallback to timers if rAF not present
-	var stopUpdate = (typeof window !== 'undefined' ? window.cancelAnimationFrame : null) || clearTimeout;
-	var startUpdate = (typeof window !== 'undefined' ? window.requestAnimationFrame : null) || (function (cb) { return setTimeout(cb, 0); });
-
-	/**
-	 * Performs a batched update. Uses requestAnimationFrame to prevent
-	 * calling a function too many times in quick succession.
-	 * You need to pass it an ID (which can initially be `null`),
-	 * but be sure to overwrite that ID with the return value of batchUpdate.
-	 *
-	 * @param  {(null|Number)} id - the ID of this update
-	 * @param  {Function} callback - the update to perform
-	 * @return {Number} id - a new ID
-	 */
-	function batchUpdate (id, callback) {
-	  stopUpdate(id);
-	  return startUpdate(function () {
-	    id = null;
-	    callback();
-	  })
-	}
-
-	/**
-	 * These are constant variables used throughout the application.
-	 */
-
-	// This is the name of the component option that contains all the information that
-	// gets converted to the various meta tags & attributes for the page.
-	var VUE_META_KEY_NAME = 'metaInfo';
-
-	// This is the attribute vue-meta augments on elements to know which it should
-	// manage and which it should ignore.
-	var VUE_META_ATTRIBUTE = 'data-vue-meta';
-
-	// This is the attribute that goes on the `html` tag to inform `vue-meta`
-	// that the server has already generated the meta tags for the initial render.
-	var VUE_META_SERVER_RENDERED_ATTRIBUTE = 'data-vue-meta-server-rendered';
-
-	// This is the property that tells vue-meta to overwrite (instead of append)
-	// an item in a tag list. For example, if you have two `meta` tag list items
-	// that both have `vmid` of "description", then vue-meta will overwrite the
-	// shallowest one with the deepest one.
-	var VUE_META_TAG_LIST_ID_KEY_NAME = 'vmid';
-
-	// This is the key name for possible meta templates
-	var VUE_META_TEMPLATE_KEY_NAME = 'template';
-
-	// This is the key name for the content-holding property
-	var VUE_META_CONTENT_KEY = 'content';
-
-	// automatic install
-	if (typeof window !== 'undefined' && typeof window.Vue !== 'undefined') {
-	  Vue.use(VueMeta);
-	}
-
-	/**
-	 * Plugin install function.
-	 * @param {Function} Vue - the Vue constructor.
-	 */
-	function VueMeta (Vue, options) {
-	  if ( options === void 0 ) options = {};
-
-	  // set some default options
-	  var defaultOptions = {
-	    keyName: VUE_META_KEY_NAME,
-	    contentKeyName: VUE_META_CONTENT_KEY,
-	    metaTemplateKeyName: VUE_META_TEMPLATE_KEY_NAME,
-	    attribute: VUE_META_ATTRIBUTE,
-	    ssrAttribute: VUE_META_SERVER_RENDERED_ATTRIBUTE,
-	    tagIDKeyName: VUE_META_TAG_LIST_ID_KEY_NAME
-	  };
-	  // combine options
-	  options = objectAssign(defaultOptions, options);
-
-	  // bind the $meta method to this component instance
-	  Vue.prototype.$meta = _$meta(options);
-
-	  // store an id to keep track of DOM updates
-	  var batchID = null;
-
-	  // watch for client side component updates
-	  Vue.mixin({
-	    beforeCreate: function beforeCreate () {
-	      // Add a marker to know if it uses metaInfo
-	      // _vnode is used to know that it's attached to a real component
-	      // useful if we use some mixin to add some meta tags (like nuxt-i18n)
-	      if (typeof this.$options[options.keyName] !== 'undefined') {
-	        this._hasMetaInfo = true;
-	      }
-	      // coerce function-style metaInfo to a computed prop so we can observe
-	      // it on creation
-	      if (typeof this.$options[options.keyName] === 'function') {
-	        if (typeof this.$options.computed === 'undefined') {
-	          this.$options.computed = {};
-	        }
-	        this.$options.computed.$metaInfo = this.$options[options.keyName];
-	      }
-	    },
-	    created: function created () {
-	      var this$1 = this;
-
-	      // if computed $metaInfo exists, watch it for updates & trigger a refresh
-	      // when it changes (i.e. automatically handle async actions that affect metaInfo)
-	      // credit for this suggestion goes to [Sébastien Chopin](https://github.com/Atinux)
-	      if (!this.$isServer && this.$metaInfo) {
-	        this.$watch('$metaInfo', function () {
-	          // batch potential DOM updates to prevent extraneous re-rendering
-	          batchID = batchUpdate(batchID, function () { return this$1.$meta().refresh(); });
-	        });
-	      }
-	    },
-	    activated: function activated () {
-	      var this$1 = this;
-
-	      if (this._hasMetaInfo) {
-	        // batch potential DOM updates to prevent extraneous re-rendering
-	        batchID = batchUpdate(batchID, function () { return this$1.$meta().refresh(); });
-	      }
-	    },
-	    deactivated: function deactivated () {
-	      var this$1 = this;
-
-	      if (this._hasMetaInfo) {
-	        // batch potential DOM updates to prevent extraneous re-rendering
-	        batchID = batchUpdate(batchID, function () { return this$1.$meta().refresh(); });
-	      }
-	    },
-	    beforeMount: function beforeMount () {
-	      var this$1 = this;
-
-	      // batch potential DOM updates to prevent extraneous re-rendering
-	      if (this._hasMetaInfo) {
-	        batchID = batchUpdate(batchID, function () { return this$1.$meta().refresh(); });
-	      }
-	    },
-	    destroyed: function destroyed () {
-	      var this$1 = this;
-
-	      // do not trigger refresh on the server side
-	      if (this.$isServer) { return }
-	      // re-render meta data when returning from a child component to parent
-	      if (this._hasMetaInfo) {
-	        // Wait that element is hidden before refreshing meta tags (to support animations)
-	        var interval = setInterval(function () {
-	          if (this$1.$el && this$1.$el.offsetParent !== null) { return }
-	          clearInterval(interval);
-	          if (!this$1.$parent) { return }
-	          batchID = batchUpdate(batchID, function () { return this$1.$meta().refresh(); });
-	        }, 50);
-	      }
-	    }
-	  });
-	}
-
-	var version = "1.6.0";
-
-	VueMeta.version = version;
-
-	return VueMeta;
-
-}));
-
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+
+
+
+var version = "2.0.4";
+
+// store an id to keep track of DOM updates
+var batchId = null;
+
+function triggerUpdate(vm, hookName) {
+  // if an update was triggered during initialization or when an update was triggered by the
+  // metaInfo watcher, set initialized to null
+  // then we keep falsy value but know we need to run a triggerUpdate after initialization
+  if (!vm.$root._vueMeta.initialized && (vm.$root._vueMeta.initializing || hookName === 'watcher')) {
+    vm.$root._vueMeta.initialized = null;
+  }
+
+  if (vm.$root._vueMeta.initialized && !vm.$root._vueMeta.paused) {
+    // batch potential DOM updates to prevent extraneous re-rendering
+    batchUpdate(function () { return vm.$meta().refresh(); });
+  }
+}
+
+/**
+ * Performs a batched update.
+ *
+ * @param  {(null|Number)} id - the ID of this update
+ * @param  {Function} callback - the update to perform
+ * @return {Number} id - a new ID
+ */
+function batchUpdate(callback, timeout) {
+  if ( timeout === void 0 ) timeout = 10;
+
+  clearTimeout(batchId);
+
+  batchId = setTimeout(function () {
+    callback();
+  }, timeout);
+
+  return batchId
+}
+
+/**
+ * checks if passed argument is an array
+ * @param  {any}  arg - the object to check
+ * @return {Boolean} - true if `arg` is an array
+ */
+function isArray(arg) {
+  return Array.isArray(arg)
+}
+
+function isUndefined(arg) {
+  return typeof arg === 'undefined'
+}
+
+function isObject(arg) {
+  return typeof arg === 'object'
+}
+
+function isFunction(arg) {
+  return typeof arg === 'function'
+}
+
+function isString(arg) {
+  return typeof arg === 'string'
+}
+
+function ensureIsArray(arg, key) {
+  if (!key || !isObject(arg)) {
+    return isArray(arg) ? arg : []
+  }
+
+  if (!isArray(arg[key])) {
+    arg[key] = [];
+  }
+  return arg
+}
+
+function ensuredPush(object, key, el) {
+  ensureIsArray(object, key);
+
+  object[key].push(el);
+}
+
+// Vue $root instance has a _vueMeta object property, otherwise its a boolean true
+function hasMetaInfo(vm) {
+  if ( vm === void 0 ) vm = this;
+
+  return vm && (vm._vueMeta === true || isObject(vm._vueMeta))
+}
+
+// a component is in a metaInfo branch when itself has meta info or one of its (grand-)children has
+function inMetaInfoBranch(vm) {
+  if ( vm === void 0 ) vm = this;
+
+  return vm && !isUndefined(vm._vueMeta)
+}
+
+function addNavGuards(vm) {
+  // return when nav guards already added or no router exists
+  if (vm.$root._vueMeta.navGuards || !vm.$root.$router) {
+    /* istanbul ignore next */
+    return
+  }
+
+  vm.$root._vueMeta.navGuards = true;
+
+  var $router = vm.$root.$router;
+  var $meta = vm.$root.$meta();
+
+  $router.beforeEach(function (to, from, next) {
+    $meta.pause();
+    next();
+  });
+
+  $router.afterEach(function () {
+    var ref = $meta.resume();
+    var metaInfo = ref.metaInfo;
+    if (metaInfo && metaInfo.afterNavigation && isFunction(metaInfo.afterNavigation)) {
+      metaInfo.afterNavigation(metaInfo);
+    }
+  });
+}
+
+var appId = 1;
+
+function createMixin(Vue, options) {
+  // for which Vue lifecycle hooks should the metaInfo be refreshed
+  var updateOnLifecycleHook = ['activated', 'deactivated', 'beforeMount'];
+
+  // watch for client side component updates
+  return {
+    beforeCreate: function beforeCreate() {
+      var this$1 = this;
+
+      Object.defineProperty(this, '_hasMetaInfo', {
+        configurable: true,
+        get: function get() {
+          // Show deprecation warning once when devtools enabled
+          if (Vue.config.devtools && !this.$root._vueMeta.hasMetaInfoDeprecationWarningShown) {
+            console.warn('VueMeta DeprecationWarning: _hasMetaInfo has been deprecated and will be removed in a future version. Please use hasMetaInfo(vm) instead'); // eslint-disable-line no-console
+            this.$root._vueMeta.hasMetaInfoDeprecationWarningShown = true;
+          }
+          return hasMetaInfo(this)
+        }
+      });
+
+      // Add a marker to know if it uses metaInfo
+      // _vnode is used to know that it's attached to a real component
+      // useful if we use some mixin to add some meta tags (like nuxt-i18n)
+      if (!isUndefined(this.$options[options.keyName]) && this.$options[options.keyName] !== null) {
+        if (!this.$root._vueMeta) {
+          this.$root._vueMeta = { appId: appId };
+          appId++;
+        }
+
+        // to speed up updates we keep track of branches which have a component with vue-meta info defined
+        // if _vueMeta = true it has info, if _vueMeta = false a child has info
+        if (!this._vueMeta) {
+          this._vueMeta = true;
+
+          var p = this.$parent;
+          while (p && p !== this.$root) {
+            if (isUndefined(p._vueMeta)) {
+              p._vueMeta = false;
+            }
+            p = p.$parent;
+          }
+        }
+
+        // coerce function-style metaInfo to a computed prop so we can observe
+        // it on creation
+        if (isFunction(this.$options[options.keyName])) {
+          if (!this.$options.computed) {
+            this.$options.computed = {};
+          }
+          this.$options.computed.$metaInfo = this.$options[options.keyName];
+
+          if (!this.$isServer) {
+            // if computed $metaInfo exists, watch it for updates & trigger a refresh
+            // when it changes (i.e. automatically handle async actions that affect metaInfo)
+            // credit for this suggestion goes to [Sébastien Chopin](https://github.com/Atinux)
+            ensuredPush(this.$options, 'created', function () {
+              this$1.$watch('$metaInfo', function () {
+                triggerUpdate(this, 'watcher');
+              });
+            });
+          }
+        }
+
+        // force an initial refresh on page load and prevent other lifecycleHooks
+        // to triggerUpdate until this initial refresh is finished
+        // this is to make sure that when a page is opened in an inactive tab which
+        // has throttled rAF/timers we still immediately set the page title
+        if (isUndefined(this.$root._vueMeta.initialized)) {
+          this.$root._vueMeta.initialized = this.$isServer;
+
+          if (!this.$root._vueMeta.initialized) {
+            ensuredPush(this.$options, 'beforeMount', function () {
+              // if this Vue-app was server rendered, set the appId to 'ssr'
+              // only one SSR app per page is supported
+              if (this$1.$root.$el && this$1.$root.$el.hasAttribute('data-server-rendered')) {
+                this$1.$root._vueMeta.appId = 'ssr';
+              }
+            });
+
+            // we use the mounted hook here as on page load
+            ensuredPush(this.$options, 'mounted', function () {
+              if (!this$1.$root._vueMeta.initialized) {
+                // used in triggerUpdate to check if a change was triggered
+                // during initialization
+                this$1.$root._vueMeta.initializing = true;
+
+                // refresh meta in nextTick so all child components have loaded
+                this$1.$nextTick(function () {
+                  var this$1 = this;
+
+                  var ref = this.$root.$meta().refresh();
+                  var tags = ref.tags;
+                  var metaInfo = ref.metaInfo;
+
+                  // After ssr hydration (identifier by tags === false) check
+                  // if initialized was set to null in triggerUpdate. That'd mean
+                  // that during initilazation changes where triggered which need
+                  // to be applied OR a metaInfo watcher was triggered before the
+                  // current hook was called
+                  // (during initialization all changes are blocked)
+                  if (tags === false && this.$root._vueMeta.initialized === null) {
+                    this.$nextTick(function () { return triggerUpdate(this$1, 'initializing'); });
+                  }
+
+                  this.$root._vueMeta.initialized = true;
+                  delete this.$root._vueMeta.initializing;
+
+                  // add the navigation guards if they havent been added yet
+                  // they are needed for the afterNavigation callback
+                  if (!options.refreshOnceOnNavigation && metaInfo.afterNavigation) {
+                    addNavGuards(this);
+                  }
+                });
+              }
+            });
+
+            // add the navigation guards if requested
+            if (options.refreshOnceOnNavigation) {
+              addNavGuards(this);
+            }
+          }
+        }
+
+        // do not trigger refresh on the server side
+        if (!this.$isServer) {
+          // no need to add this hooks on server side
+          updateOnLifecycleHook.forEach(function (lifecycleHook) {
+            ensuredPush(this$1.$options, lifecycleHook, function () { return triggerUpdate(this$1, lifecycleHook); });
+          });
+
+          // re-render meta data when returning from a child component to parent
+          ensuredPush(this.$options, 'destroyed', function () {
+            // Wait that element is hidden before refreshing meta tags (to support animations)
+            var interval = setInterval(function () {
+              if (this$1.$el && this$1.$el.offsetParent !== null) {
+                /* istanbul ignore next line */
+                return
+              }
+
+              clearInterval(interval);
+
+              if (!this$1.$parent) {
+                /* istanbul ignore next line */
+                return
+              }
+
+              triggerUpdate(this$1, 'destroyed');
+            }, 50);
+          });
+        }
+      }
+    }
+  }
+}
+
+/**
+ * These are constant variables used throughout the application.
+ */
+
+// set some sane defaults
+var defaultInfo = {
+  title: undefined,
+  titleChunk: '',
+  titleTemplate: '%s',
+  htmlAttrs: {},
+  bodyAttrs: {},
+  headAttrs: {},
+  base: [],
+  link: [],
+  meta: [],
+  style: [],
+  script: [],
+  noscript: [],
+  __dangerouslyDisableSanitizers: [],
+  __dangerouslyDisableSanitizersByTagID: {}
+};
+
+// This is the name of the component option that contains all the information that
+// gets converted to the various meta tags & attributes for the page.
+var keyName = 'metaInfo';
+
+// This is the attribute vue-meta arguments on elements to know which it should
+// manage and which it should ignore.
+var attribute = 'data-vue-meta';
+
+// This is the attribute that goes on the `html` tag to inform `vue-meta`
+// that the server has already generated the meta tags for the initial render.
+var ssrAttribute = 'data-vue-meta-server-rendered';
+
+// This is the property that tells vue-meta to overwrite (instead of append)
+// an item in a tag list. For example, if you have two `meta` tag list items
+// that both have `vmid` of "description", then vue-meta will overwrite the
+// shallowest one with the deepest one.
+var tagIDKeyName = 'vmid';
+
+// This is the key name for possible meta templates
+var metaTemplateKeyName = 'template';
+
+// This is the key name for the content-holding property
+var contentKeyName = 'content';
+
+var defaultOptions = {
+  keyName: keyName,
+  attribute: attribute,
+  ssrAttribute: ssrAttribute,
+  tagIDKeyName: tagIDKeyName,
+  contentKeyName: contentKeyName,
+  metaTemplateKeyName: metaTemplateKeyName
+};
+
+// List of metaInfo property keys which are configuration options (and dont generate html)
+var metaInfoOptionKeys = [
+  'titleChunk',
+  'titleTemplate',
+  'changed',
+  '__dangerouslyDisableSanitizers',
+  '__dangerouslyDisableSanitizersByTagID'
+];
+
+// The metaInfo property keys which are used to disable escaping
+var disableOptionKeys = [
+  '__dangerouslyDisableSanitizers',
+  '__dangerouslyDisableSanitizersByTagID'
+];
+
+// List of metaInfo property keys which only generates attributes and no tags
+var metaInfoAttributeKeys = [
+  'htmlAttrs',
+  'headAttrs',
+  'bodyAttrs'
+];
+
+// HTML elements which dont have a head tag (shortened to our needs)
+// see: https://www.w3.org/TR/html52/document-metadata.html
+var tagsWithoutEndTag = ['base', 'meta', 'link'];
+
+// HTML elements which can have inner content (shortened to our needs)
+var tagsWithInnerContent = ['noscript', 'script', 'style'];
+
+// Attributes which are inserted as childNodes instead of HTMLAttribute
+var tagAttributeAsInnerContent = ['innerHTML', 'cssText'];
+
+// from: https://github.com/kangax/html-minifier/blob/gh-pages/src/htmlminifier.js#L202
+var booleanHtmlAttributes = [
+  'allowfullscreen',
+  'amp',
+  'async',
+  'autofocus',
+  'autoplay',
+  'checked',
+  'compact',
+  'controls',
+  'declare',
+  'default',
+  'defaultchecked',
+  'defaultmuted',
+  'defaultselected',
+  'defer',
+  'disabled',
+  'enabled',
+  'formnovalidate',
+  'hidden',
+  'indeterminate',
+  'inert',
+  'ismap',
+  'itemscope',
+  'loop',
+  'multiple',
+  'muted',
+  'nohref',
+  'noresize',
+  'noshade',
+  'novalidate',
+  'nowrap',
+  'open',
+  'pauseonexit',
+  'readonly',
+  'required',
+  'reversed',
+  'scoped',
+  'seamless',
+  'selected',
+  'sortable',
+  'truespeed',
+  'typemustmatch',
+  'visible'
+];
+
+function setOptions(options) {
+  // combine options
+  options = isObject(options) ? options : {};
+
+  for (var key in defaultOptions) {
+    if (!options[key]) {
+      options[key] = defaultOptions[key];
+    }
+  }
+
+  return options
+}
+
+function getOptions(options) {
+  var optionsCopy = {};
+  for (var key in options) {
+    optionsCopy[key] = options[key];
+  }
+  return optionsCopy
+}
+
+function pause(refresh) {
+  if ( refresh === void 0 ) refresh = true;
+
+  this.$root._vueMeta.paused = true;
+
+  return function () { return resume(refresh); }
+}
+
+function resume(refresh) {
+  if ( refresh === void 0 ) refresh = true;
+
+  this.$root._vueMeta.paused = false;
+
+  if (refresh) {
+    return this.$root.$meta().refresh()
+  }
+}
+
+function applyTemplate(ref, headObject, template, chunk) {
+  var component = ref.component;
+  var metaTemplateKeyName = ref.metaTemplateKeyName;
+  var contentKeyName = ref.contentKeyName;
+
+  if (isUndefined(template)) {
+    template = headObject[metaTemplateKeyName];
+    delete headObject[metaTemplateKeyName];
+  }
+
+  // return early if no template defined
+  if (!template) {
+    return false
+  }
+
+  if (isUndefined(chunk)) {
+    chunk = headObject[contentKeyName];
+  }
+
+  headObject[contentKeyName] = isFunction(template)
+    ? template.call(component, chunk)
+    : template.replace(/%s/g, chunk);
+
+  return true
+}
+
+/*
+ * To reduce build size, this file provides simple polyfills without
+ * overly excessive type checking and without modifying
+ * the global Array.prototype
+ * The polyfills are automatically removed in the commonjs build
+ * Also, only files in client/ & shared/ should use these functions
+ * files in server/ still use normal js function
+ */
+
+function findIndex(array, predicate) {
+  var arguments$1 = arguments;
+
+  if ( !Array.prototype.findIndex) {
+    // idx needs to be a Number, for..in returns string
+    for (var idx = 0; idx < array.length; idx++) {
+      if (predicate.call(arguments$1[2], array[idx], idx, array)) {
+        return idx
+      }
+    }
+    return -1
+  }
+  return array.findIndex(predicate, arguments[2])
+}
+
+function toArray(arg) {
+  if ( !Array.from) {
+    return Array.prototype.slice.call(arg)
+  }
+  return Array.from(arg)
+}
+
+function includes(array, value) {
+  if ( !Array.prototype.includes) {
+    for (var idx in array) {
+      if (array[idx] === value) {
+        return true
+      }
+    }
+
+    return false
+  }
+  return array.includes(value)
+}
+
+var serverSequences = [
+  [/&/g, '&amp;'],
+  [/</g, '&lt;'],
+  [/>/g, '&gt;'],
+  [/"/g, '&quot;'],
+  [/'/g, '&#x27;']
+];
+
+var clientSequences = [
+  [/&/g, '\u0026'],
+  [/</g, '\u003c'],
+  [/>/g, '\u003e'],
+  [/"/g, '\u0022'],
+  [/'/g, '\u0027']
+];
+
+// sanitizes potentially dangerous characters
+function escape(info, options, escapeOptions) {
+  var tagIDKeyName = options.tagIDKeyName;
+  var doEscape = escapeOptions.doEscape; if ( doEscape === void 0 ) doEscape = function (v) { return v; };
+  var escaped = {};
+
+  for (var key in info) {
+    var value = info[key];
+
+    // no need to escape configuration options
+    if (includes(metaInfoOptionKeys, key)) {
+      escaped[key] = value;
+      continue
+    }
+
+    var disableKey = disableOptionKeys[0];
+    if (escapeOptions[disableKey] && includes(escapeOptions[disableKey], key)) {
+      // this info[key] doesnt need to escaped if the option is listed in __dangerouslyDisableSanitizers
+      escaped[key] = value;
+      continue
+    }
+
+    var tagId = info[tagIDKeyName];
+    if (tagId) {
+      disableKey = disableOptionKeys[1];
+
+      // keys which are listed in __dangerouslyDisableSanitizersByTagID for the current vmid do not need to be escaped
+      if (escapeOptions[disableKey] && escapeOptions[disableKey][tagId] && includes(escapeOptions[disableKey][tagId], key)) {
+        escaped[key] = value;
+        continue
+      }
+    }
+
+    if (isString(value)) {
+      escaped[key] = doEscape(value);
+    } else if (isArray(value)) {
+      escaped[key] = value.map(function (v) {
+        return isObject(v)
+          ? escape(v, options, escapeOptions)
+          : doEscape(v)
+      });
+    } else if (isObject(value)) {
+      escaped[key] = escape(value, options, escapeOptions);
+    } else {
+      escaped[key] = value;
+    }
+  }
+
+  return escaped
+}
+
+function arrayMerge(ref, target, source) {
+  var component = ref.component;
+  var tagIDKeyName = ref.tagIDKeyName;
+  var metaTemplateKeyName = ref.metaTemplateKeyName;
+  var contentKeyName = ref.contentKeyName;
+
+  // we concat the arrays without merging objects contained in,
+  // but we check for a `vmid` property on each object in the array
+  // using an O(1) lookup associative array exploit
+  var destination = [];
+
+  target.forEach(function (targetItem, targetIndex) {
+    // no tagID so no need to check for duplicity
+    if (!targetItem[tagIDKeyName]) {
+      destination.push(targetItem);
+      return
+    }
+
+    var sourceIndex = findIndex(source, function (item) { return item[tagIDKeyName] === targetItem[tagIDKeyName]; });
+    var sourceItem = source[sourceIndex];
+
+    // source doesnt contain any duplicate vmid's, we can keep targetItem
+    if (sourceIndex === -1) {
+      destination.push(targetItem);
+      return
+    }
+
+    // when sourceItem explictly defines contentKeyName or innerHTML as undefined, its
+    // an indication that we need to skip the default behaviour or child has preference over parent
+    // which means we keep the targetItem and ignore/remove the sourceItem
+    if ((sourceItem.hasOwnProperty(contentKeyName) && sourceItem[contentKeyName] === undefined) ||
+      (sourceItem.hasOwnProperty('innerHTML') && sourceItem.innerHTML === undefined)) {
+      destination.push(targetItem);
+      // remove current index from source array so its not concatenated to destination below
+      source.splice(sourceIndex, 1);
+      return
+    }
+
+    // we now know that targetItem is a duplicate and we should ignore it in favor of sourceItem
+
+    // if source specifies null as content then ignore both the target as the source
+    if (sourceItem[contentKeyName] === null || sourceItem.innerHTML === null) {
+      // remove current index from source array so its not concatenated to destination below
+      source.splice(sourceIndex, 1);
+      return
+    }
+
+    // now we only need to check if the target has a template to combine it with the source
+    var targetTemplate = targetItem[metaTemplateKeyName];
+    if (!targetTemplate) {
+      return
+    }
+
+    var sourceTemplate = sourceItem[metaTemplateKeyName];
+
+    if (!sourceTemplate) {
+      // use parent template and child content
+      applyTemplate({ component: component, metaTemplateKeyName: metaTemplateKeyName, contentKeyName: contentKeyName }, sourceItem, targetTemplate);
+    } else if (!sourceItem[contentKeyName]) {
+      // use child template and parent content
+      applyTemplate({ component: component, metaTemplateKeyName: metaTemplateKeyName, contentKeyName: contentKeyName }, sourceItem, undefined, targetItem[contentKeyName]);
+    }
+  });
+
+  return destination.concat(source)
+}
+
+function merge(target, source, options) {
+  if ( options === void 0 ) options = {};
+
+  // remove properties explicitly set to false so child components can
+  // optionally _not_ overwrite the parents content
+  // (for array properties this is checked in arrayMerge)
+  if (source.hasOwnProperty('title') && source.title === undefined) {
+    delete source.title;
+  }
+
+  metaInfoAttributeKeys.forEach(function (attrKey) {
+    if (!source[attrKey]) {
+      return
+    }
+
+    for (var key in source[attrKey]) {
+      if (source[attrKey].hasOwnProperty(key) && source[attrKey][key] === undefined) {
+        if (booleanHtmlAttributes.includes(key)) {
+          // eslint-disable-next-line no-console
+          console.warn('VueMeta: Please note that since v2 the value undefined is not used to indicate boolean attributes anymore, see migration guide for details');
+        }
+        delete source[attrKey][key];
+      }
+    }
+  });
+
+  return deepmerge__WEBPACK_IMPORTED_MODULE_0___default()(target, source, {
+    arrayMerge: function (t, s) { return arrayMerge(options, t, s); }
+  })
+}
+
+/**
+ * Returns the `opts.option` $option value of the given `opts.component`.
+ * If methods are encountered, they will be bound to the component context.
+ * If `opts.deep` is true, will recursively merge all child component
+ * `opts.option` $option values into the returned result.
+ *
+ * @param  {Object} opts - options
+ * @param  {Object} opts.component - Vue component to fetch option data from
+ * @param  {Boolean} opts.deep - look for data in child components as well?
+ * @param  {Function} opts.arrayMerge - how should arrays be merged?
+ * @param  {String} opts.keyName - the name of the option to look for
+ * @param  {Object} [result={}] - result so far
+ * @return {Object} result - final aggregated result
+ */
+function getComponentOption(options, component, result) {
+  if ( options === void 0 ) options = {};
+  if ( result === void 0 ) result = {};
+
+  var keyName = options.keyName;
+  var metaTemplateKeyName = options.metaTemplateKeyName;
+  var tagIDKeyName = options.tagIDKeyName;
+  var $options = component.$options;
+  var $children = component.$children;
+
+  if (component._inactive) {
+    return result
+  }
+
+  // only collect option data if it exists
+  if ($options[keyName]) {
+    var data = $options[keyName];
+
+    // if option is a function, replace it with it's result
+    if (isFunction(data)) {
+      data = data.call(component);
+    }
+
+    // ignore data if its not an object, then we keep our previous result
+    if (!isObject(data)) {
+      return result
+    }
+
+    // merge with existing options
+    result = merge(result, data, options);
+  }
+
+  // collect & aggregate child options if deep = true
+  if ($children.length) {
+    $children.forEach(function (childComponent) {
+      // check if the childComponent is in a branch
+      // return otherwise so we dont walk all component branches unnecessarily
+      if (!inMetaInfoBranch(childComponent)) {
+        return
+      }
+
+      result = getComponentOption(options, childComponent, result);
+    });
+  }
+
+  if (metaTemplateKeyName && result.meta) {
+    // apply templates if needed
+    result.meta.forEach(function (metaObject) { return applyTemplate(options, metaObject); });
+
+    // remove meta items with duplicate vmid's
+    result.meta = result.meta.filter(function (metaItem, index, arr) {
+      return (
+        // keep meta item if it doesnt has a vmid
+        !metaItem.hasOwnProperty(tagIDKeyName) ||
+        // or if it's the first item in the array with this vmid
+        index === findIndex(arr, function (item) { return item[tagIDKeyName] === metaItem[tagIDKeyName]; })
+      )
+    });
+  }
+
+  return result
+}
+
+/**
+ * Returns the correct meta info for the given component
+ * (child components will overwrite parent meta info)
+ *
+ * @param  {Object} component - the Vue instance to get meta info from
+ * @return {Object} - returned meta info
+ */
+function getMetaInfo(options, component, escapeSequences) {
+  if ( options === void 0 ) options = {};
+  if ( escapeSequences === void 0 ) escapeSequences = [];
+
+  // collect & aggregate all metaInfo $options
+  var info = getComponentOption(options, component, defaultInfo);
+
+  // Remove all "template" tags from meta
+
+  // backup the title chunk in case user wants access to it
+  if (info.title) {
+    info.titleChunk = info.title;
+  }
+
+  // replace title with populated template
+  if (info.titleTemplate && info.titleTemplate !== '%s') {
+    applyTemplate({ component: component, contentKeyName: 'title' }, info, info.titleTemplate, info.titleChunk || '');
+  }
+
+  // convert base tag to an array so it can be handled the same way
+  // as the other tags
+  if (info.base) {
+    info.base = Object.keys(info.base).length ? [info.base] : [];
+  }
+
+  var escapeOptions = {
+    doEscape: function (value) { return escapeSequences.reduce(function (val, ref) {
+      var v = ref[0];
+      var r = ref[1];
+
+      return val.replace(v, r);
+      }, value); }
+  };
+
+  disableOptionKeys.forEach(function (disableKey, index) {
+    if (index === 0) {
+      ensureIsArray(info, disableKey);
+    } else if (index === 1) {
+      for (var key in info[disableKey]) {
+        ensureIsArray(info[disableKey], key);
+      }
+    }
+
+    escapeOptions[disableKey] = info[disableKey];
+  });
+
+  // begin sanitization
+  info = escape(info, options, escapeOptions);
+
+  return info
+}
+
+/**
+ * Updates the document's html tag attributes
+ *
+ * @param  {Object} attrs - the new document html attributes
+ * @param  {HTMLElement} tag - the HTMLElement tag to update with new attrs
+ */
+function updateAttribute(ref, attrs, tag) {
+  if ( ref === void 0 ) ref = {};
+  var attribute = ref.attribute;
+
+  var vueMetaAttrString = tag.getAttribute(attribute);
+  var vueMetaAttrs = vueMetaAttrString ? vueMetaAttrString.split(',') : [];
+  var toRemove = toArray(vueMetaAttrs);
+
+  var keepIndexes = [];
+  for (var attr in attrs) {
+    if (attrs.hasOwnProperty(attr)) {
+      var value = includes(booleanHtmlAttributes, attr)
+        ? ''
+        : isArray(attrs[attr]) ? attrs[attr].join(' ') : attrs[attr];
+
+      tag.setAttribute(attr, value || '');
+
+      if (!includes(vueMetaAttrs, attr)) {
+        vueMetaAttrs.push(attr);
+      }
+
+      // filter below wont ever check -1
+      keepIndexes.push(toRemove.indexOf(attr));
+    }
+  }
+
+  var removedAttributesCount = toRemove
+    .filter(function (el, index) { return !includes(keepIndexes, index); })
+    .reduce(function (acc, attr) {
+      tag.removeAttribute(attr);
+      return acc + 1
+    }, 0);
+
+  if (vueMetaAttrs.length === removedAttributesCount) {
+    tag.removeAttribute(attribute);
+  } else {
+    tag.setAttribute(attribute, (vueMetaAttrs.sort()).join(','));
+  }
+}
+
+/**
+ * Updates the document title
+ *
+ * @param  {String} title - the new title of the document
+ */
+function updateTitle(title) {
+  if (title === undefined) {
+    return
+  }
+
+  document.title = title;
+}
+
+/**
+ * Updates meta tags inside <head> and <body> on the client. Borrowed from `react-helmet`:
+ * https://github.com/nfl/react-helmet/blob/004d448f8de5f823d10f838b02317521180f34da/src/Helmet.js#L195-L245
+ *
+ * @param  {('meta'|'base'|'link'|'style'|'script'|'noscript')} type - the name of the tag
+ * @param  {(Array<Object>|Object)} tags - an array of tag objects or a single object in case of base
+ * @return {Object} - a representation of what tags changed
+ */
+function updateTag(appId, ref, type, tags, headTag, bodyTag) {
+  if ( ref === void 0 ) ref = {};
+  var attribute = ref.attribute;
+  var tagIDKeyName = ref.tagIDKeyName;
+
+  var oldHeadTags = toArray(headTag.querySelectorAll((type + "[" + attribute + "=\"" + appId + "\"], " + type + "[data-" + tagIDKeyName + "]")));
+  var oldBodyTags = toArray(bodyTag.querySelectorAll((type + "[" + attribute + "=\"" + appId + "\"][data-body=\"true\"], " + type + "[data-" + tagIDKeyName + "][data-body=\"true\"]")));
+  var dataAttributes = [tagIDKeyName, 'body'];
+  var newTags = [];
+
+  if (tags.length > 1) {
+    // remove duplicates that could have been found by merging tags
+    // which include a mixin with metaInfo and that mixin is used
+    // by multiple components on the same page
+    var found = [];
+    tags = tags.filter(function (x) {
+      var k = JSON.stringify(x);
+      var res = !includes(found, k);
+      found.push(k);
+      return res
+    });
+  }
+
+  if (tags.length) {
+    tags.forEach(function (tag) {
+      var newElement = document.createElement(type);
+
+      newElement.setAttribute(attribute, appId);
+
+      var oldTags = tag.body !== true ? oldHeadTags : oldBodyTags;
+
+      for (var attr in tag) {
+        if (tag.hasOwnProperty(attr)) {
+          if (attr === 'innerHTML') {
+            newElement.innerHTML = tag.innerHTML;
+          } else if (attr === 'cssText') {
+            if (newElement.styleSheet) {
+              /* istanbul ignore next */
+              newElement.styleSheet.cssText = tag.cssText;
+            } else {
+              newElement.appendChild(document.createTextNode(tag.cssText));
+            }
+          } else {
+            var _attr = includes(dataAttributes, attr)
+              ? ("data-" + attr)
+              : attr;
+            var value = isUndefined(tag[attr]) || includes(booleanHtmlAttributes, attr) ? '' : tag[attr];
+            newElement.setAttribute(_attr, value);
+          }
+        }
+      }
+
+      // Remove a duplicate tag from domTagstoRemove, so it isn't cleared.
+      var indexToDelete;
+      var hasEqualElement = oldTags.some(function (existingTag, index) {
+        indexToDelete = index;
+        return newElement.isEqualNode(existingTag)
+      });
+
+      if (hasEqualElement && (indexToDelete || indexToDelete === 0)) {
+        oldTags.splice(indexToDelete, 1);
+      } else {
+        newTags.push(newElement);
+      }
+    });
+  }
+
+  var oldTags = oldHeadTags.concat(oldBodyTags);
+  oldTags.forEach(function (tag) { return tag.parentNode.removeChild(tag); });
+  newTags.forEach(function (tag) {
+    if (tag.getAttribute('data-body') === 'true') {
+      bodyTag.appendChild(tag);
+    } else {
+      headTag.appendChild(tag);
+    }
+  });
+
+  return { oldTags: oldTags, newTags: newTags }
+}
+
+function getTag(tags, tag) {
+  if (!tags[tag]) {
+    tags[tag] = document.getElementsByTagName(tag)[0];
+  }
+
+  return tags[tag]
+}
+
+/**
+ * Performs client-side updates when new meta info is received
+ *
+ * @param  {Object} newInfo - the meta info to update to
+ */
+function updateClientMetaInfo(appId, options, newInfo) {
+  if ( options === void 0 ) options = {};
+
+  var ssrAttribute = options.ssrAttribute;
+
+  // only cache tags for current update
+  var tags = {};
+
+  var htmlTag = getTag(tags, 'html');
+
+  // if this is a server render, then dont update
+  if (appId === 'ssr' && htmlTag.hasAttribute(ssrAttribute)) {
+    // remove the server render attribute so we can update on (next) changes
+    htmlTag.removeAttribute(ssrAttribute);
+    return false
+  }
+
+  // initialize tracked changes
+  var addedTags = {};
+  var removedTags = {};
+
+  for (var type in newInfo) {
+    // ignore these
+    if (includes(metaInfoOptionKeys, type)) {
+      continue
+    }
+
+    if (type === 'title') {
+      // update the title
+      updateTitle(newInfo.title);
+      continue
+    }
+
+    if (includes(metaInfoAttributeKeys, type)) {
+      var tagName = type.substr(0, 4);
+      updateAttribute(options, newInfo[type], getTag(tags, tagName));
+      continue
+    }
+
+    // tags should always be an array, ignore if it isnt
+    if (!isArray(newInfo[type])) {
+      continue
+    }
+
+    var ref = updateTag(
+      appId,
+      options,
+      type,
+      newInfo[type],
+      getTag(tags, 'head'),
+      getTag(tags, 'body')
+    );
+    var oldTags = ref.oldTags;
+    var newTags = ref.newTags;
+
+    if (newTags.length) {
+      addedTags[type] = newTags;
+      removedTags[type] = oldTags;
+    }
+  }
+
+  return { addedTags: addedTags, removedTags: removedTags }
+}
+
+function _refresh(options) {
+  if ( options === void 0 ) options = {};
+
+  /**
+   * When called, will update the current meta info with new meta info.
+   * Useful when updating meta info as the result of an asynchronous
+   * action that resolves after the initial render takes place.
+   *
+   * Credit to [Sébastien Chopin](https://github.com/Atinux) for the suggestion
+   * to implement this method.
+   *
+   * @return {Object} - new meta info
+   */
+  return function refresh() {
+    var metaInfo = getMetaInfo(options, this.$root, clientSequences);
+
+    var appId = this.$root._vueMeta.appId;
+    var tags = updateClientMetaInfo(appId, options, metaInfo);
+    // emit "event" with new info
+    if (tags && isFunction(metaInfo.changed)) {
+      metaInfo.changed(metaInfo, tags.addedTags, tags.removedTags);
+    }
+
+    return { vm: this, metaInfo: metaInfo, tags: tags }
+  }
+}
+
+/**
+ * Generates tag attributes for use on the server.
+ *
+ * @param  {('bodyAttrs'|'htmlAttrs'|'headAttrs')} type - the type of attributes to generate
+ * @param  {Object} data - the attributes to generate
+ * @return {Object} - the attribute generator
+ */
+function attributeGenerator(ref, type, data) {
+  if ( ref === void 0 ) ref = {};
+  var attribute = ref.attribute;
+
+  return {
+    text: function text() {
+      var attributeStr = '';
+      var watchedAttrs = [];
+
+      for (var attr in data) {
+        if (data.hasOwnProperty(attr)) {
+          watchedAttrs.push(attr);
+
+          attributeStr += isUndefined(data[attr]) || booleanHtmlAttributes.includes(attr)
+            ? attr
+            : (attr + "=\"" + (isArray(data[attr]) ? data[attr].join(' ') : data[attr]) + "\"");
+
+          attributeStr += ' ';
+        }
+      }
+
+      attributeStr += attribute + "=\"" + ((watchedAttrs.sort()).join(',')) + "\"";
+      return attributeStr
+    }
+  }
+}
+
+/**
+ * Generates title output for the server
+ *
+ * @param  {'title'} type - the string "title"
+ * @param  {String} data - the title text
+ * @return {Object} - the title generator
+ */
+function titleGenerator(appId, ref, type, data) {
+  if ( ref === void 0 ) ref = {};
+  var attribute = ref.attribute;
+
+  return {
+    text: function text() {
+      return ("<" + type + ">" + data + "</" + type + ">")
+    }
+  }
+}
+
+/**
+ * Generates meta, base, link, style, script, noscript tags for use on the server
+ *
+ * @param  {('meta'|'base'|'link'|'style'|'script'|'noscript')} the name of the tag
+ * @param  {(Array<Object>|Object)} tags - an array of tag objects or a single object in case of base
+ * @return {Object} - the tag generator
+ */
+function tagGenerator(appId, ref, type, tags) {
+  if ( ref === void 0 ) ref = {};
+  var attribute = ref.attribute;
+  var tagIDKeyName = ref.tagIDKeyName;
+
+  return {
+    text: function text(ref) {
+      if ( ref === void 0 ) ref = {};
+      var body = ref.body; if ( body === void 0 ) body = false;
+
+      // build a string containing all tags of this type
+      return tags.reduce(function (tagsStr, tag) {
+        var tagKeys = Object.keys(tag);
+
+        if (tagKeys.length === 0) {
+          return tagsStr // Bail on empty tag object
+        }
+
+        if (Boolean(tag.body) !== body) {
+          return tagsStr
+        }
+
+        // build a string containing all attributes of this tag
+        var attrs = tagKeys.reduce(function (attrsStr, attr) {
+          // these attributes are treated as children on the tag
+          if (tagAttributeAsInnerContent.includes(attr) || attr === 'once') {
+            return attrsStr
+          }
+
+          // these form the attribute list for this tag
+          var prefix = '';
+          if ([tagIDKeyName, 'body'].includes(attr)) {
+            prefix = 'data-';
+          }
+
+          return isUndefined(tag[attr]) || booleanHtmlAttributes.includes(attr)
+            ? (attrsStr + " " + prefix + attr)
+            : (attrsStr + " " + prefix + attr + "=\"" + (tag[attr]) + "\"")
+        }, '');
+
+        // grab child content from one of these attributes, if possible
+        var content = tag.innerHTML || tag.cssText || '';
+
+        // generate tag exactly without any other redundant attribute
+        var observeTag = tag.once
+          ? ''
+          : (attribute + "=\"" + appId + "\"");
+
+        // these tags have no end tag
+        var hasEndTag = !tagsWithoutEndTag.includes(type);
+
+        // these tag types will have content inserted
+        var hasContent = hasEndTag && tagsWithInnerContent.includes(type);
+
+        // the final string for this specific tag
+        return !hasContent
+          ? (tagsStr + "<" + type + " " + observeTag + attrs + (hasEndTag ? '/' : '') + ">")
+          : (tagsStr + "<" + type + " " + observeTag + attrs + ">" + content + "</" + type + ">")
+      }, '')
+    }
+  }
+}
+
+/**
+ * Converts a meta info property to one that can be stringified on the server
+ *
+ * @param  {String} type - the type of data to convert
+ * @param  {(String|Object|Array<Object>)} data - the data value
+ * @return {Object} - the new injector
+ */
+
+function generateServerInjector(appId, options, type, data) {
+  if (type === 'title') {
+    return titleGenerator(appId, options, type, data)
+  }
+
+  if (metaInfoAttributeKeys.includes(type)) {
+    return attributeGenerator(options, type, data)
+  }
+
+  return tagGenerator(appId, options, type, data)
+}
+
+function _inject(options) {
+  if ( options === void 0 ) options = {};
+
+  /**
+   * Converts the state of the meta info object such that each item
+   * can be compiled to a tag string on the server
+   *
+   * @this {Object} - Vue instance - ideally the root component
+   * @return {Object} - server meta info with `toString` methods
+   */
+  return function inject() {
+    // get meta info with sensible defaults
+    var metaInfo = getMetaInfo(options, this.$root, serverSequences);
+
+    // generate server injectors
+    for (var key in metaInfo) {
+      if (!metaInfoOptionKeys.includes(key) && metaInfo.hasOwnProperty(key)) {
+        metaInfo[key] = generateServerInjector('ssr', options, key, metaInfo[key]);
+      }
+    }
+
+    return metaInfo
+  }
+}
+
+function _$meta(options) {
+  if ( options === void 0 ) options = {};
+
+  var _refresh$1 = _refresh(options);
+  var _inject$1 = _inject(options);
+
+  /**
+   * Returns an injector for server-side rendering.
+   * @this {Object} - the Vue instance (a root component)
+   * @return {Object} - injector
+   */
+  return function $meta() {
+    return {
+      getOptions: function () { return getOptions(options); },
+      refresh: _refresh$1.bind(this),
+      inject: _inject$1.bind(this),
+      pause: pause.bind(this),
+      resume: resume.bind(this)
+    }
+  }
+}
+
+/**
+ * Plugin install function.
+ * @param {Function} Vue - the Vue constructor.
+ */
+function install(Vue, options) {
+  if ( options === void 0 ) options = {};
+
+  if (Vue.__vuemeta_installed) {
+    return
+  }
+  Vue.__vuemeta_installed = true;
+
+  options = setOptions(options);
+
+  Vue.prototype.$meta = _$meta(options);
+
+  Vue.mixin(createMixin(Vue, options));
+}
+
+var index = {
+  version: version,
+  install: install,
+  hasMetaInfo: hasMetaInfo
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (index);
+
 
 /***/ }),
 
@@ -34637,7 +34760,7 @@ function normalizeComponent (
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /*!
-  * vue-router v3.0.6
+  * vue-router v3.0.7
   * (c) 2019 Evan You
   * @license MIT
   */
@@ -36025,10 +36148,8 @@ function createMatcher (
         }
       }
 
-      if (record) {
-        location.path = fillParams(record.path, location.params, ("named route \"" + name + "\""));
-        return _createRoute(record, location, redirectedFrom)
-      }
+      location.path = fillParams(record.path, location.params, ("named route \"" + name + "\""));
+      return _createRoute(record, location, redirectedFrom)
     } else if (location.path) {
       location.params = {};
       for (var i = 0; i < pathList.length; i++) {
@@ -36183,7 +36304,12 @@ var positionStore = Object.create(null);
 function setupScroll () {
   // Fix for #1585 for Firefox
   // Fix for #2195 Add optional third attribute to workaround a bug in safari https://bugs.webkit.org/show_bug.cgi?id=182678
-  window.history.replaceState({ key: getStateKey() }, '', window.location.href.replace(window.location.origin, ''));
+  // Fix for #2774 Support for apps loaded from Windows file shares not mapped to network drives: replaced location.origin with
+  // window.location.protocol + '//' + window.location.host
+  // location.host contains the port and location.hostname doesn't
+  var protocolAndPath = window.location.protocol + '//' + window.location.host;
+  var absolutePath = window.location.href.replace(protocolAndPath, '');
+  window.history.replaceState({ key: getStateKey() }, '', absolutePath);
   window.addEventListener('popstate', function (e) {
     saveScrollPosition();
     if (e.state && e.state.key) {
@@ -36755,7 +36881,6 @@ function bindEnterGuard (
 ) {
   return function routeEnterGuard (to, from, next) {
     return guard(to, from, function (cb) {
-      next(cb);
       if (typeof cb === 'function') {
         cbs.push(function () {
           // #750
@@ -36766,6 +36891,7 @@ function bindEnterGuard (
           poll(cb, match.instances, key, isValid);
         });
       }
+      next(cb);
     })
   }
 }
@@ -37300,7 +37426,7 @@ function createHref (base, fullPath, mode) {
 }
 
 VueRouter.install = install;
-VueRouter.version = '3.0.6';
+VueRouter.version = '3.0.7';
 
 if (inBrowser && window.Vue) {
   window.Vue.use(VueRouter);
@@ -55585,8 +55711,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             this.$emit('keydown', e);
         },
         onFocusin: function onFocusin(e) {
-            var _event = event,
-                target = _event.target;
+            var target = e.target;
 
             if (
             // It isn't the document or the dialog body
@@ -68375,7 +68500,7 @@ var Vuetify = {
         })(opts.components);
     },
 
-    version: '1.5.14'
+    version: '1.5.15'
 };
 function checkVueVersion(Vue, requiredVue) {
     var vueDep = requiredVue || '^2.5.18';
@@ -74350,7 +74475,7 @@ function createRange(length) {
 function getZIndex(el) {
     if (!el || el.nodeType !== Node.ELEMENT_NODE) return 0;
     var index = +window.getComputedStyle(el).getPropertyValue('z-index');
-    if (isNaN(index)) return getZIndex(el.parentNode);
+    if (!index) return getZIndex(el.parentNode);
     return index;
 }
 var tagsToReplace = {
@@ -79290,8 +79415,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ~/store */ "./resources/js/store/index.js");
-/* harmony import */ var vue_meta__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-meta */ "./node_modules/vue-meta/lib/vue-meta.js");
-/* harmony import */ var vue_meta__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vue_meta__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var vue_meta__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-meta */ "./node_modules/vue-meta/dist/vue-meta.esm.js");
 /* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./routes */ "./resources/js/router/routes.js");
 /* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
 /* harmony import */ var vuex_router_sync__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vuex-router-sync */ "./node_modules/vuex-router-sync/index.js");
@@ -79328,7 +79452,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
-vue__WEBPACK_IMPORTED_MODULE_1___default.a.use(vue_meta__WEBPACK_IMPORTED_MODULE_3___default.a);
+vue__WEBPACK_IMPORTED_MODULE_1___default.a.use(vue_meta__WEBPACK_IMPORTED_MODULE_3__["default"]);
 vue__WEBPACK_IMPORTED_MODULE_1___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_5__["default"]); // The middleware for every page of the application.
 
 var globalMiddleware = ['locale', 'settings']; // Load middleware modules dynamically.

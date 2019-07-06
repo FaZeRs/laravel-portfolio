@@ -707,15 +707,36 @@ render._withStripped = true
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
 var defer = function defer() {
   var state = false; // Resolved or not
+
   var callbacks = [];
+
   var resolve = function resolve(val) {
     if (state) {
       return;
     }
 
     state = true;
+
     for (var i = 0, len = callbacks.length; i < len; i++) {
       callbacks[i](val);
     }
@@ -726,6 +747,7 @@ var defer = function defer() {
       callbacks.push(cb);
       return;
     }
+
     cb();
   };
 
@@ -733,7 +755,6 @@ var defer = function defer() {
     resolved: function resolved() {
       return state;
     },
-
     resolve: resolve,
     promise: {
       then: then
@@ -744,7 +765,6 @@ var defer = function defer() {
 
 function createRecaptcha() {
   var deferred = defer();
-
   return {
     notify: function notify() {
       deferred.resolve();
@@ -789,26 +809,11 @@ function createRecaptcha() {
     }
   };
 }
-
 var recaptcha = createRecaptcha();
 
 if (typeof window !== 'undefined') {
   window.vueRecaptchaApiLoaded = recaptcha.notify;
 }
-
-var _extends = Object.assign || function (target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i];
-
-    for (var key in source) {
-      if (Object.prototype.hasOwnProperty.call(source, key)) {
-        target[key] = source[key];
-      }
-    }
-  }
-
-  return target;
-};
 
 var VueRecaptcha = {
   name: 'VueRecaptcha',
@@ -831,23 +836,50 @@ var VueRecaptcha = {
     },
     tabindex: {
       type: String
+    },
+    loadRecaptchaScript: {
+      type: Boolean,
+      "default": false
+    },
+    recaptchaScriptId: {
+      type: String,
+      "default": '__RECAPTCHA_SCRIPT'
+    },
+    recaptchaHost: {
+      type: String,
+      "default": 'www.google.com'
+    }
+  },
+  beforeMount: function beforeMount() {
+    if (this.loadRecaptchaScript) {
+      if (!document.getElementById(this.recaptchaScriptId)) {
+        // Note: vueRecaptchaApiLoaded load callback name is per the latest documentation
+        var script = document.createElement('script');
+        script.id = this.recaptchaScriptId;
+        script.src = "https://" + this.recaptchaHost + "/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit";
+        script.async = true;
+        script.defer = true;
+        document.head.appendChild(script);
+      }
     }
   },
   mounted: function mounted() {
     var _this = this;
 
     recaptcha.checkRecaptchaLoad();
+
     var opts = _extends({}, this.$props, {
       callback: this.emitVerify,
       'expired-callback': this.emitExpired
     });
-    var container = this.$slots.default ? this.$el.children[0] : this.$el;
+
+    var container = this.$slots["default"] ? this.$el.children[0] : this.$el;
     recaptcha.render(container, opts, function (id) {
       _this.$widgetId = id;
+
       _this.$emit('render', id);
     });
   },
-
   methods: {
     reset: function reset() {
       recaptcha.reset(this.$widgetId);
@@ -863,7 +895,7 @@ var VueRecaptcha = {
     }
   },
   render: function render(h) {
-    return h('div', {}, this.$slots.default);
+    return h('div', {}, this.$slots["default"]);
   }
 };
 
