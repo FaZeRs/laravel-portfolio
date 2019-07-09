@@ -39,7 +39,7 @@
     "lodash": "^4.17.11",
     "promise": "^8.0.3",
     "v-img": "^0.2.0",
-    "vee-validate": "^2.2.11",
+    "vee-validate": "^2.2.12",
     "vue": "^2.6.10",
     "vue-axios": "^2.1.4",
     "vue-cookie-law": "^1.10.0",
