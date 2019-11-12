@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use Laravel\Horizon\Horizon;
 use Illuminate\Support\Facades\Gate;
+use Laravel\Horizon\Horizon;
 use Laravel\Horizon\HorizonApplicationServiceProvider;
 use Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException;
 

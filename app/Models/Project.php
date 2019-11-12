@@ -3,13 +3,13 @@
 namespace App\Models;
 
 use App\Filters\Filterable;
-use Illuminate\Support\Str;
 use Backpack\CRUD\CrudTrait;
-use Prologue\Alerts\Facades\Alert;
-use Intervention\Image\Facades\Image;
+use Backpack\CRUD\ModelTraits\SpatieTranslatable\HasTranslations;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
-use Backpack\CRUD\ModelTraits\SpatieTranslatable\HasTranslations;
+use Illuminate\Support\Str;
+use Intervention\Image\Facades\Image;
+use Prologue\Alerts\Facades\Alert;
 
 class Project extends Model
 {

@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\CategoryRequest as StoreRequest;
 // VALIDATION: change the requests to match your own file names if you need form validation
-use Backpack\CRUD\app\Http\Controllers\CrudController;
 use App\Http\Requests\CategoryRequest as UpdateRequest;
+use Backpack\CRUD\app\Http\Controllers\CrudController;
 
 class CategoryCrudController extends CrudController
 {

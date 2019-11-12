@@ -2,12 +2,12 @@
 
 namespace Tests\Feature;
 
-use App\Models\Tag;
-use Tests\TestCase;
-use App\Models\Project;
 use App\Models\Category;
-use Illuminate\Foundation\Testing\WithFaker;
+use App\Models\Project;
+use App\Models\Tag;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
+use Tests\TestCase;
 
 class ProjectTest extends TestCase
 {

@@ -3,8 +3,8 @@
 namespace App\Models;
 
 use Backpack\CRUD\CrudTrait;
-use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\ModelTraits\SpatieTranslatable\HasTranslations;
+use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
