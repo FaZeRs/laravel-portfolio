@@ -24,7 +24,7 @@ class ExperienceResource extends JsonResource
             'from'       => Carbon::parse($this->from)->format('M Y'),
             'to'         => Carbon::parse($this->to)->format('M Y'),
             'ongoing'    => $this->ongoing,
-            'logo'       => Storage::url($this->logo),
+            'logo'       => $this->logo ? Storage::url($this->logo) : null,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ];

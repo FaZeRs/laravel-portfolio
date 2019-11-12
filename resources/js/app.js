@@ -1,14 +1,10 @@
-import 'babel-polyfill'
+import "@babel/polyfill";
 import Vue from 'vue'
-import Vuetify from 'vuetify/lib'
-import 'vuetify/src/stylus/app.styl'
-import '@mdi/font/css/materialdesignicons.css'
-
+import vuetify from '~/plugins/vuetify'
 import store from '~/store'
 import router from '~/router'
 import i18n from '~/plugins/i18n'
 import App from '~/components/App'
-import VeeValidate from 'vee-validate'
 import VueImg from 'v-img'
 
 import '~/components'
@@ -19,14 +15,11 @@ Vue.config.productionTip = false
 
 ApiService.init()
 
-Vue.use(Vuetify, {
-  iconfont: 'mdi'
-})
-Vue.use(VeeValidate)
 Vue.use(VueImg)
 
 /* eslint-disable no-new */
 new Vue({
+  vuetify,
   i18n,
   store,
   router,

@@ -24,7 +24,7 @@ class ProjectResource extends JsonResource
             'visible'     => $this->visible,
             'order'       => $this->order,
             'status'      => $this->status,
-            'image'       => Storage::url($this->image),
+            'image'       => $this->image ? Storage::url($this->image) : null,
             'tags'        => TagResource::collection($this->whenLoaded('tags')),
             'links'       => LinkResource::collection($this->whenLoaded('links')),
             'created_at'  => $this->created_at,

@@ -2,10 +2,10 @@
   <section>
     <v-container grid-list-md>
       <v-layout align-center>
-        <v-flex class="text-xs-center" xs12>
+        <v-flex class="text-center" xs12>
           <h2 class="section-title mb-5">{{ $t('education') }}</h2>
-          <v-layout row wrap class="text-xs-left">
-            <v-flex v-for="school in education" :key="school.id" xs12 sm6 d-flex>
+          <v-layout row wrap class="text-left">
+            <v-flex v-for="school in education" :key="school.id" xs12 sm6>
               <v-hover>
                 <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 1}`">
                   <div class="edu-block">
@@ -13,11 +13,11 @@
                       <span v-if="school.ongoing">{{ school.from }} - {{ $t('present') }}</span>
                       <span v-else>{{ school.from }} - {{ school.to }}</span>
                     </div>
-                    <div class="pl-5">
+                    <div class="pl-12">
                       <h4 class="block-title title">
                         {{ school.qualification }}
                       </h4>
-                      <h5 class="mb-4 mt-3 subheading">
+                      <h5 class="mb-4 mt-3 subtitle-1">
                         {{ school.organisation }}
                       </h5>
                     </div>
@@ -29,10 +29,10 @@
         </v-flex>
       </v-layout>
       <v-layout align-center class="mt-5 mb-5">
-        <v-flex class="text-xs-center" xs12>
+        <v-flex class="text-center" xs12>
           <h2 class="section-title mb-5">{{ $t('experience') }}</h2>
-          <v-layout row wrap class="text-xs-left">
-            <v-flex v-for="job in experience" :key="job.id" xs12 sm6 d-flex >
+          <v-layout row wrap class="text-left">
+            <v-flex v-for="job in experience" :key="job.id" xs12 sm6>
               <v-hover>
                 <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 1}`">
                   <div class="work-exp-block">

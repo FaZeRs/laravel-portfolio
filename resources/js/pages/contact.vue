@@ -2,9 +2,9 @@
   <section>
     <v-container grid-list-md>
       <v-layout align-center>
-        <v-flex class="text-xs-center" xs12>
+        <v-flex class="text-center" xs12>
           <h2 class="section-title mb-5">{{ $t('get_in_touch') }}</h2>
-          <v-layout row wrap justify-space-around class="text-xs-left">
+          <v-layout row wrap justify-space-around class="text-left">
             <v-flex xs12 md6>
               <contact-form/>
             </v-flex>
@@ -20,22 +20,22 @@
                       </div>
                     </div>
                     <div class="social mt-4">
-                      <v-btn v-if="settings.facebook.value" color="#3b5998" dark small fab :href="facebook" target="_blank">
+                      <v-btn v-if="settings.facebook.value" color="#3b5998" dark small fab :href="settings.facebook.value" target="_blank">
                         <v-icon>mdi-facebook</v-icon>
                       </v-btn>
-                      <v-btn v-if="settings.twitter.value" color="#55acee" dark small fab :href="twitter" target="_blank">
+                      <v-btn v-if="settings.twitter.value" color="#55acee" dark small fab :href="settings.twitter.value" target="_blank">
                         <v-icon>mdi-twitter</v-icon>
                       </v-btn>
-                      <v-btn v-if="settings.linkedin.value" color="#1985bc" dark small fab :href="linkedin" target="_blank">
+                      <v-btn v-if="settings.linkedin.value" color="#1985bc" dark small fab :href="settings.linkedin.value" target="_blank">
                         <v-icon>mdi-linkedin</v-icon>
                       </v-btn>
-                      <v-btn v-if="settings.github.value" color="#222" dark small fab :href="github" target="_blank">
+                      <v-btn v-if="settings.github.value" color="#222" dark small fab :href="settings.github.value" target="_blank">
                         <v-icon>mdi-github-circle</v-icon>
                       </v-btn>
-                      <v-btn v-if="settings.gitlab.value" color="#fca326" dark small fab :href="gitlab" target="_blank">
+                      <v-btn v-if="settings.gitlab.value" color="#fca326" dark small fab :href="settings.gitlab.value" target="_blank">
                         <v-icon>mdi-gitlab</v-icon>
                       </v-btn>
-                      <v-btn v-if="settings.bitbucket.value" color="#205081" dark small fab :href="bitbucket" target="_blank">
+                      <v-btn v-if="settings.bitbucket.value" color="#205081" dark small fab :href="settings.bitbucket.value" target="_blank">
                         <v-icon>mdi-bitbucket</v-icon>
                       </v-btn>
                     </div>

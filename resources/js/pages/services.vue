@@ -2,10 +2,10 @@
   <section>
     <v-container grid-list-md>
       <v-layout>
-        <v-flex class="text-xs-center" xs12>
+        <v-flex class="text-center" xs12>
           <h2 class="section-title mb-5">{{ $t('what_i_do') }}</h2>
           <v-layout wrap justify-space-around>
-            <v-flex xs12 sm4 d-flex>
+            <v-flex xs12 sm4>
               <v-hover>
                 <v-card class="pa-3" slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
                   <v-img :src="webDevelopment" :alt="$t('web_development')" :lazy-src="webDevelopment" height="75" aspect-ratio="1" contain></v-img>
@@ -15,7 +15,7 @@
                 </v-card>
               </v-hover>
             </v-flex>
-            <v-flex xs12 sm4 d-flex>
+            <v-flex xs12 sm4>
               <v-hover>
                 <v-card class="pa-3" slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
                   <v-img :src="seoOptimization" :alt="$t('seo_optimization')" :lazy-src="seoOptimization" height="75" aspect-ratio="1" contain></v-img>
@@ -25,7 +25,7 @@
                 </v-card>
               </v-hover>
             </v-flex>
-            <v-flex xs12 sm4 d-flex>
+            <v-flex xs12 sm4>
               <v-hover>
                 <v-card class="pa-3" slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
                   <v-img :src="serverManagement" :alt="$t('server_management')" :lazy-src="serverManagement" height="75" aspect-ratio="1" contain></v-img>
@@ -39,7 +39,7 @@
         </v-flex>
       </v-layout>
       <v-layout class="mt-5 mb-5 pa-5">
-        <v-flex class="text-xs-center" xs12>
+        <v-flex class="text-center" xs12>
           <h2 class="section-title mb-5">{{ $t('how_i_work') }}</h2>
           <v-layout row fill-height align-center wrap>
             <v-flex xs12 sm5>

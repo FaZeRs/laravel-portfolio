@@ -2,12 +2,12 @@
   <section>
     <v-container grid-list-md>
       <v-layout align-center>
-        <v-flex class="text-xs-center" xs12>
+        <v-flex class="text-center" xs12>
           <h2 class="section-title mb-5">{{ $t('my_work') }}</h2>
           <v-layout row wrap class="mb-2">
-            <v-flex xs12 sm12 text-xs-center>
-              <v-btn small @click="filter(0)">{{ $t('All') }}</v-btn>
-              <v-btn v-for="category in categories" :key="category.id" small @click="filter(category.id)">
+            <v-flex xs12 sm12 text-center>
+              <v-btn small class="ma-2" @click="filter(0)">{{ $t('All') }}</v-btn>
+              <v-btn v-for="category in categories" :key="category.id" small class="ma-2" @click="filter(category.id)">
                 {{ category.title }}
               </v-btn>
             </v-flex>
@@ -16,12 +16,12 @@
             <v-flex v-for="project in projects" :key="project.id" :class="[project.category.title]" xs12 sm6 md4>
               <v-hover>
                 <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
-                  <v-img v-img="{src: project.image}" :src="project.image" :alt="project.title"
+                  <v-img v-if="project.image" v-img="{src: project.image}" :src="project.image" :alt="project.title"
                          :lazy-src="project.image" height="200" contain></v-img>
                   <v-card-title primary-title class="justify-center">
                     <div>
                       <h3 class="headline">{{ project.title }}</h3>
-                      <span v-for="tag in project.tags" :key="tag.id" class="text-xs-center">
+                      <span v-for="tag in project.tags" :key="tag.id" class="text-center">
                         <v-chip :color="tag.color" dark>{{ tag.title }}</v-chip>
                       </span>
                     </div>

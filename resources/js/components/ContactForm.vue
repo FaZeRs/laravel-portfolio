@@ -1,38 +1,59 @@
 <template>
+  <ValidationObserver ref="observer" v-slot="{ invalid, validated, passes }">
   <v-form>
-    <v-alert v-model="successful" dismissible outline transition="scale-transition" type="success">
+    <v-alert v-model="successful" dismissible outlined transition="scale-transition" type="success">
       {{ $t('contact_success') }}
     </v-alert>
-    <v-alert v-model="error" dismissible outline transition="scale-transition" type="error">
+    <v-alert v-model="error" dismissible outlined transition="scale-transition" type="error">
       {{ $t('contact_error') }}
     </v-alert>
     <v-layout row wrap>
-      <v-flex xs12 sm6>
-        <v-text-field v-validate="'required'" :label="$t('name')" v-model="contact.name" :error-messages="errors.collect('name')" data-vv-name="name" required/>
-      </v-flex>
-      <v-flex xs12 sm6>
-        <v-text-field v-validate="'required|email'" :label="$t('email')" v-model="contact.email" :error-messages="errors.collect('email')" data-vv-name="email" required/>
-      </v-flex>
-      <v-flex xs12>
-        <v-textarea v-validate="'required'" :label="$t('message')" v-model="contact.message" :error-messages="errors.collect('message')" data-vv-name="message"/>
-      </v-flex>
-      <vue-recaptcha v-if="sitekey" ref="recaptcha" :sitekey="sitekey" size="invisible" @verify="onCaptchaVerified" @expired="onCaptchaExpired"/>
-      <v-btn @click="submit">{{ $t('send_message') }}</v-btn>
-      <v-btn @click="clear">{{ $t('clear') }}</v-btn>
+        <v-flex xs12 sm6>
+          <ValidationProvider
+            :name="$t('name')"
+            rules="required"
+            v-slot="{ errors, valid }"
+          >
+            <v-text-field :label="$t('name')" v-model="contact.name" :error-messages="errors" :success="valid" required/>
+          </ValidationProvider>
+        </v-flex>
+        <v-flex xs12 sm6>
+          <ValidationProvider
+            :name="$t('email')"
+            rules="required|email"
+            v-slot="{ errors, valid }"
+          >
+            <v-text-field :label="$t('email')" v-model="contact.email" :error-messages="errors" :success="valid" required/>
+          </ValidationProvider>
+        </v-flex>
+        <v-flex xs12>
+          <ValidationProvider
+            :name="$t('message')"
+            rules="required"
+            v-slot="{ errors, valid }"
+          >
+            <v-textarea :label="$t('message')" v-model="contact.message" :error-messages="errors" :success="valid" required/>
+          </ValidationProvider>
+        </v-flex>
+        <vue-recaptcha v-if="sitekey" ref="recaptcha" :sitekey="sitekey" size="invisible" @verify="onCaptchaVerified" @expired="onCaptchaExpired"/>
+        <v-btn class="ma-2" @click="passes(submit)" :loading="loading" :disabled="invalid || !validated || loading">{{ $t('send_message') }}</v-btn>
+        <v-btn class="ma-2" @click="clear">{{ $t('clear') }}</v-btn>
     </v-layout>
   </v-form>
+  </ValidationObserver>
 </template>
 
 <script>
 import VueRecaptcha from 'vue-recaptcha'
 import { SEND_CONTACT } from "~/store/actions.type";
+import { ValidationObserver, ValidationProvider, localize, extend } from 'vee-validate';
+import { required, email } from 'vee-validate/dist/rules';
 
 export default {
-  $_veeValidate: {
-    validator: 'new'
-  },
   components: {
-    VueRecaptcha
+    VueRecaptcha,
+    ValidationObserver,
+    ValidationProvider
   },
   data: () => ({
     contact: {
@@ -42,13 +63,14 @@ export default {
     },
     successful: false,
     error: false,
-    sitekey: window.config.googleReCaptcha
+    sitekey: window.config.googleReCaptcha,
+    loading: false,
   }),
   mounted () {
-    this.$validator.localize(this.$i18n.locale, this.dictionary)
+    localize(this.$i18n.locale, this.dictionary)
   },
   created () {
-    this.$validator.localize('lv', {
+    localize('lv', {
       messages: {
         email: (field) => `Laukam ${field} jābūt derīgai e-pasta adresei.`,
         required: (field) => `Lauks ${field} ir obligāts.`
@@ -60,19 +82,24 @@ export default {
       }
     })
 
-    this.$validator.localize(this.$i18n.locale)
+    localize(this.$i18n.locale)
+
+    extend('required', required);
+    extend('email', email);
   },
   methods: {
-    submit () {
-      this.$validator.validateAll().then((result) => {
-        if (result) {
-            if(this.$refs.recaptcha) {
+    async submit () {
+      this.loading = true
+      const isValid = await this.$refs.observer.validate();
+      if (isValid) {
+          if (this.$refs.recaptcha) {
               this.$refs.recaptcha.execute()
-            } else {
+          } else {
               this.send()
-            }
-        }
-      })
+          }
+      } else {
+        this.loading = false
+      }
     },
     onCaptchaVerified: function () {
       this.send()
@@ -85,17 +112,19 @@ export default {
           this.contact.name = ''
           this.contact.email = ''
           this.contact.message = ''
-          this.$validator.reset()
+          this.$refs.observer.reset();
+          this.loading = false
         })
         .catch(() => {
           this.error = true
+          this.loading = false
         });
     },
-    clear () {
-      this.name = ''
-      this.email = ''
-      this.message = ''
-      this.$validator.reset()
+    async clear() {
+      this.contact.name = this.contact.email = this.contact.message = '';
+      requestAnimationFrame(() => {
+        this.$refs.observer.reset();
+      });
     },
     onCaptchaExpired: function () {
       this.$refs.recaptcha.reset()
