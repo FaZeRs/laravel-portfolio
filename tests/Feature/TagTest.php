@@ -3,9 +3,9 @@
 namespace Tests\Feature;
 
 use App\Models\Tag;
-use Tests\TestCase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
+use Tests\TestCase;
 
 class TagTest extends TestCase
 {

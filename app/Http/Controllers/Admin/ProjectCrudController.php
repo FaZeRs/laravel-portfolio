@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Backpack\CRUD\CrudPanel;
-// VALIDATION: change the requests to match your own file names if you need form validation
 use App\Http\Requests\ProjectRequest as StoreRequest;
+// VALIDATION: change the requests to match your own file names if you need form validation
 use App\Http\Requests\ProjectRequest as UpdateRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
+use Backpack\CRUD\CrudPanel;
 
 class ProjectCrudController extends CrudController
 {
