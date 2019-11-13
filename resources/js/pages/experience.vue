@@ -7,7 +7,7 @@
           <v-layout row wrap class="text-left">
             <v-flex v-for="school in education" :key="school.id" xs12 sm6>
               <v-hover>
-                <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 1}`">
+                <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 1}`" height="100%">
                   <div class="edu-block">
                     <div class="edu-session">
                       <span v-if="school.ongoing">{{ school.from }} - {{ $t('present') }}</span>
@@ -34,7 +34,7 @@
           <v-layout row wrap class="text-left">
             <v-flex v-for="job in experience" :key="job.id" xs12 sm6>
               <v-hover>
-                <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 1}`">
+                <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 1}`" height="100%">
                   <div class="work-exp-block">
                     <div class="working-duration title d-block">
                       <span v-if="job.ongoing">{{ job.from }} - {{ $t('present') }}</span>

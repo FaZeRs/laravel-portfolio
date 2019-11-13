@@ -36,7 +36,7 @@ var lv = {
   i_am: 'Es esmu',
   about_me: 'Par Mani',
   what_i_do: 'Ko es daru?',
-  web_development: 'Mājaslapu Izstrāde',
+  web_development: 'Mājaslapu izstrāde',
   seo_optimization: 'Meklētājprogrammas optimizācija',
   server_management: 'Servera vadība',
   how_i_work: 'Kā es strādāju?',

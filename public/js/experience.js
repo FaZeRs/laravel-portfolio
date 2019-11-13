@@ -158,7 +158,8 @@ var render = function() {
                                     return _c(
                                       "v-card",
                                       {
-                                        class: "elevation-" + (hover ? 12 : 1)
+                                        class: "elevation-" + (hover ? 12 : 1),
+                                        attrs: { height: "100%" }
                                       },
                                       [
                                         _c(
@@ -282,7 +283,8 @@ var render = function() {
                                     return _c(
                                       "v-card",
                                       {
-                                        class: "elevation-" + (hover ? 12 : 1)
+                                        class: "elevation-" + (hover ? 12 : 1),
+                                        attrs: { height: "100%" }
                                       },
                                       [
                                         _c(

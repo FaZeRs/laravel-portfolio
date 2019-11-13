@@ -7,30 +7,30 @@
           <v-layout wrap justify-space-around>
             <v-flex xs12 sm4>
               <v-hover>
-                <v-card class="pa-3" slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
+                <v-card class="pa-3" slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`" height="100%">
                   <v-img :src="webDevelopment" :alt="$t('web_development')" :lazy-src="webDevelopment" height="75" aspect-ratio="1" contain></v-img>
                   <v-card-title primary-title class="justify-center">
-                    <h3 class="headline">{{ $t('web_development') }}</h3>
+                    <h3 class="headline break-normal">{{ $t('web_development') }}</h3>
                   </v-card-title>
                 </v-card>
               </v-hover>
             </v-flex>
             <v-flex xs12 sm4>
               <v-hover>
-                <v-card class="pa-3" slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
+                <v-card class="pa-3" slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`" height="100%">
                   <v-img :src="seoOptimization" :alt="$t('seo_optimization')" :lazy-src="seoOptimization" height="75" aspect-ratio="1" contain></v-img>
                   <v-card-title primary-title class="justify-center">
-                    <h3 class="headline">{{ $t('seo_optimization') }}</h3>
+                    <h3 class="headline break-normal">{{ $t('seo_optimization') }}</h3>
                   </v-card-title>
                 </v-card>
               </v-hover>
             </v-flex>
             <v-flex xs12 sm4>
               <v-hover>
-                <v-card class="pa-3" slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
+                <v-card class="pa-3" slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`" height="100%">
                   <v-img :src="serverManagement" :alt="$t('server_management')" :lazy-src="serverManagement" height="75" aspect-ratio="1" contain></v-img>
                   <v-card-title primary-title class="justify-center">
-                    <h3 class="headline">{{ $t('server_management') }}</h3>
+                    <h3 class="headline break-normal">{{ $t('server_management') }}</h3>
                   </v-card-title>
                 </v-card>
               </v-hover>

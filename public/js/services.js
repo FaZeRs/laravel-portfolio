@@ -188,7 +188,8 @@ var render = function() {
                                     "v-card",
                                     {
                                       staticClass: "pa-3",
-                                      class: "elevation-" + (hover ? 12 : 2)
+                                      class: "elevation-" + (hover ? 12 : 2),
+                                      attrs: { height: "100%" }
                                     },
                                     [
                                       _c("v-img", {
@@ -211,7 +212,10 @@ var render = function() {
                                         [
                                           _c(
                                             "h3",
-                                            { staticClass: "headline" },
+                                            {
+                                              staticClass:
+                                                "headline break-normal"
+                                            },
                                             [
                                               _vm._v(
                                                 _vm._s(
@@ -247,7 +251,8 @@ var render = function() {
                                     "v-card",
                                     {
                                       staticClass: "pa-3",
-                                      class: "elevation-" + (hover ? 12 : 2)
+                                      class: "elevation-" + (hover ? 12 : 2),
+                                      attrs: { height: "100%" }
                                     },
                                     [
                                       _c("v-img", {
@@ -270,7 +275,10 @@ var render = function() {
                                         [
                                           _c(
                                             "h3",
-                                            { staticClass: "headline" },
+                                            {
+                                              staticClass:
+                                                "headline break-normal"
+                                            },
                                             [
                                               _vm._v(
                                                 _vm._s(
@@ -306,7 +314,8 @@ var render = function() {
                                     "v-card",
                                     {
                                       staticClass: "pa-3",
-                                      class: "elevation-" + (hover ? 12 : 2)
+                                      class: "elevation-" + (hover ? 12 : 2),
+                                      attrs: { height: "100%" }
                                     },
                                     [
                                       _c("v-img", {
@@ -329,7 +338,10 @@ var render = function() {
                                         [
                                           _c(
                                             "h3",
-                                            { staticClass: "headline" },
+                                            {
+                                              staticClass:
+                                                "headline break-normal"
+                                            },
                                             [
                                               _vm._v(
                                                 _vm._s(

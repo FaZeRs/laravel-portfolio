@@ -1,11 +1,12 @@
 .work-exp-block {
+  height: 100%;
   position: relative;
   background: #fff;
   @include box-shadow();
   padding: 30px;
   border-radius: 4px;
   overflow: hidden;
-  
+
   .color-text a {
     text-decoration: none;
   }

@@ -92,6 +92,10 @@
   background: #1e61e2;
 }
 
+.break-normal {
+  word-break: normal;
+}
+
 .typelist-skill {
   font-weight: bold;
 }
@@ -202,6 +206,7 @@
 }
 
 .work-exp-block {
+  height: 100%;
   position: relative;
   background: #fff;
   -webkit-box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.1);
