@@ -2,13 +2,13 @@
 
 namespace App\Models;
 
-use Illuminate\Support\Str;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
-use Prologue\Alerts\Facades\Alert;
-use Intervention\Image\Facades\Image;
+use Backpack\CRUD\app\Models\Traits\SpatieTranslatable\HasTranslations;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
-use Backpack\CRUD\app\Models\Traits\SpatieTranslatable\HasTranslations;
+use Illuminate\Support\Str;
+use Intervention\Image\Facades\Image;
+use Prologue\Alerts\Facades\Alert;
 
 class Experience extends Model
 {
