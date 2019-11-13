@@ -2,69 +2,49 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\EducationRequest as StoreRequest;
-// VALIDATION: change the requests to match your own file names if you need form validation
-use App\Http\Requests\EducationRequest as UpdateRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
-use Backpack\CRUD\CrudPanel;
+use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
+use App\Http\Requests\EducationRequest;
 
-/**
- * Class EducationCrudController.
- * @property-read CrudPanel $crud
- */
 class EducationCrudController extends CrudController
 {
+    use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
+
     public function setup()
     {
-        /*
-        |--------------------------------------------------------------------------
-        | CrudPanel Basic Information
-        |--------------------------------------------------------------------------
-        */
-        $this->crud->setModel('App\Models\Education');
-        $this->crud->setRoute(config('backpack.base.route_prefix').'/education');
-        $this->crud->setEntityNameStrings('education', 'education');
+        CRUD::setModel('App\Models\Education');
+        CRUD::setRoute(config('backpack.base.route_prefix').'/education');
+        CRUD::setEntityNameStrings('education', 'education');
+    }
 
-        /*
-        |--------------------------------------------------------------------------
-        | CrudPanel Configuration
-        |--------------------------------------------------------------------------
-        */
-        $this->crud->addColumns([
+    protected function setupListOperation()
+    {
+        CRUD::addColumns([
             ['name' => 'qualification', 'type' => 'text', 'label' => 'Qualification'],
             ['name' => 'organisation', 'type' => 'text', 'label' => 'Organisation'],
             ['name' => 'from', 'type' => 'date', 'label' => 'From', 'format' => 'Y'],
             ['name' => 'to', 'type' => 'date', 'label' => 'To', 'format' => 'Y'],
             ['name' => 'ongoing', 'type' => 'boolean', 'label' => 'Ongoing'],
         ]);
-        $this->crud->addFields([
+    }
+
+    protected function setupCreateOperation()
+    {
+        CRUD::setValidation(EducationRequest::class);
+        CRUD::addFields([
             ['name' => 'qualification', 'type' => 'text', 'label' => 'Qualification'],
             ['name' => 'organisation', 'type' => 'text', 'label' => 'Organisation'],
             ['name' => 'from', 'type' => 'date_picker', 'label' => 'From', 'date_picker_options' => ['format' => 'yyyy', 'viewMode' => 'years', 'minViewMode' => 'years']],
             ['name' => 'to', 'type' => 'date_picker', 'label' => 'To', 'date_picker_options' => ['format' => 'yyyy', 'viewMode' => 'years', 'minViewMode' => 'years']],
             ['name' => 'ongoing', 'type' => 'checkbox', 'label' => 'Ongoing'],
         ]);
-
-        // add asterisk for fields that are required in EducationRequest
-        $this->crud->setRequiredFields(StoreRequest::class, 'create');
-        $this->crud->setRequiredFields(UpdateRequest::class, 'edit');
     }
 
-    public function store(StoreRequest $request)
+    protected function setupUpdateOperation()
     {
-        // your additional operations before save here
-        $redirect_location = parent::storeCrud($request);
-        // your additional operations after save here
-        // use $this->data['entry'] or $this->crud->entry
-        return $redirect_location;
-    }
-
-    public function update(UpdateRequest $request)
-    {
-        // your additional operations before save here
-        $redirect_location = parent::updateCrud($request);
-        // your additional operations after save here
-        // use $this->data['entry'] or $this->crud->entry
-        return $redirect_location;
+        $this->setupCreateOperation();
     }
 }

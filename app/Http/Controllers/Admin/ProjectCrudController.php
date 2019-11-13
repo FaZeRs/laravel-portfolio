@@ -2,37 +2,36 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\ProjectRequest as StoreRequest;
-// VALIDATION: change the requests to match your own file names if you need form validation
-use App\Http\Requests\ProjectRequest as UpdateRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
-use Backpack\CRUD\CrudPanel;
+use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
+use App\Http\Requests\ProjectRequest;
 
 class ProjectCrudController extends CrudController
 {
+    use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
+
     public function setup()
     {
-        /*
-        |--------------------------------------------------------------------------
-        | CrudPanel Basic Information
-        |--------------------------------------------------------------------------
-        */
-        $this->crud->setModel('App\Models\Project');
-        $this->crud->setRoute(config('backpack.base.route_prefix').'/project');
-        $this->crud->setEntityNameStrings('project', 'projects');
+        CRUD::setModel('App\Models\Project');
+        CRUD::setRoute(config('backpack.base.route_prefix').'/project');
+        CRUD::setEntityNameStrings('project', 'projects');
+    }
 
-        /*
-        |--------------------------------------------------------------------------
-        | CrudPanel Configuration
-        |--------------------------------------------------------------------------
-        */
-
-        // TODO: remove setFromDb() and manually define Fields and Columns
-        //$this->crud->setFromDb();
-        $this->crud->addColumns([
+    protected function setupListOperation()
+    {
+        CRUD::addColumns([
             ['name' => 'title', 'type' => 'text', 'label' => 'Title'],
+            ['name' => 'category.title', 'type' => 'text', 'label' => 'Category'],
         ]);
-        $this->crud->addFields([
+    }
+
+    protected function setupCreateOperation()
+    {
+        CRUD::setValidation(ProjectRequest::class);
+        CRUD::addFields([
             ['name' => 'title', 'type' => 'text', 'label' => 'Title'],
             [
                 'name'      => 'category_id',
@@ -46,7 +45,7 @@ class ProjectCrudController extends CrudController
                 'name' => 'image', 'type' => 'image', 'upload' => true, 'crop' => false, 'aspect_ratio' => 1,
                 'disk' => 'public',
             ],
-            ['name' => 'description', 'type' => 'summernote', 'label' => 'Description'],
+            ['name' => 'description', 'type' => 'simplemde', 'label' => 'Description'],
             ['name' => 'status', 'type' => 'enum', 'label', 'Status'],
             ['name' => 'visible', 'type' => 'checkbox', 'label' => 'Visible', 'default' => true],
             ['name' => 'order', 'type' => 'number', 'label' => 'Order'],
@@ -61,10 +60,10 @@ class ProjectCrudController extends CrudController
                 'select_all' => true,
             ],
         ]);
-        $this->crud->addField([
+        CRUD::addField([
             'name' => 'slug', 'type' => 'text', 'label' => 'Slug', 'attributes' => ['disabled' => 'disabled'],
         ], 'update')->afterField('title');
-        $this->crud->addField([
+        CRUD::addField([
             'name'            => 'links',
             'label'           => 'Links',
             'type'            => 'table',
@@ -77,27 +76,10 @@ class ProjectCrudController extends CrudController
             'max'             => 5,
             'min'             => 0,
         ], 'update')->afterField('order');
-
-        // add asterisk for fields that are required in ProjectCrudControllerRequest
-        $this->crud->setRequiredFields(StoreRequest::class, 'create');
-        $this->crud->setRequiredFields(UpdateRequest::class, 'edit');
     }
 
-    public function store(StoreRequest $request)
+    protected function setupUpdateOperation()
     {
-        // your additional operations before save here
-        $redirect_location = parent::storeCrud($request);
-        // your additional operations after save here
-        // use $this->data['entry'] or $this->crud->entry
-        return $redirect_location;
-    }
-
-    public function update(UpdateRequest $request)
-    {
-        // your additional operations before save here
-        $redirect_location = parent::updateCrud($request);
-        // your additional operations after save here
-        // use $this->data['entry'] or $this->crud->entry
-        return $redirect_location;
+        $this->setupCreateOperation();
     }
 }

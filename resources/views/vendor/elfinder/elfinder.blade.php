@@ -1,4 +1,4 @@
-@extends('backpack::layout')
+@extends('backpack::layouts.top_left')
 
 @section('after_scripts')
     <!-- jQuery and jQuery UI (REQUIRED) -->
@@ -9,7 +9,7 @@
     <!-- elFinder CSS (REQUIRED) -->
     <link rel="stylesheet" type="text/css" href="<?= asset($dir.'/css/elfinder.min.css') ?>">
     <!-- <link rel="stylesheet" type="text/css" href="<?= asset($dir.'/css/theme.css') ?>"> -->
-    <link rel="stylesheet" type="text/css" href="<?= asset('vendor/backpack/elfinder/elfinder.backpack.theme.css') ?>">
+    <link rel="stylesheet" type="text/css" href="<?= asset('packages/backpack/base/css/elfinder.backpack.theme.css') ?>">
 
     <!-- elFinder JS (REQUIRED) -->
     <script src="<?= asset($dir.'/js/elfinder.min.js') ?>"></script>
@@ -32,21 +32,22 @@
                 customData: {
                     _token: '<?= csrf_token() ?>'
                 },
-                url : '<?= route("elfinder.connector") ?>'  // connector URL
+                url : '<?= route('elfinder.connector') ?>'  // connector URL
             });
         });
     </script>
 @endsection
 
+@php
+  $breadcrumbs = [
+    trans('backpack::crud.admin') => url(config('backpack.base.route_prefix'), 'dashboard'),
+    'File Manager' => false,
+  ];
+@endphp
+
 @section('header')
-    <section class="content-header">
-      <h1>
-        {{ trans('backpack::crud.file_manager') }}
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="{{ url(config('backpack.base.route_prefix')) }}">Admin</a></li>
-        <li class="active">{{ trans('backpack::crud.file_manager') }}</li>
-      </ol>
+    <section class="container-fluid">
+      <h2>File Manager</h2>
     </section>
 @endsection
 

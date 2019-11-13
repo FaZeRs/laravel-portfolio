@@ -2,14 +2,12 @@
 
 namespace App\Models;
 
-use Backpack\Base\app\Models\Traits\InheritsRelationsFromParentModel;
-use Backpack\Base\app\Notifications\ResetPasswordNotification as ResetPasswordNotification;
+use Backpack\CRUD\app\Models\Traits\InheritsRelationsFromParentModel;
+use Backpack\CRUD\app\Notifications\ResetPasswordNotification as ResetPasswordNotification;
 
 class BackpackUser extends User
 {
     use InheritsRelationsFromParentModel;
-
-    protected $table = 'users';
 
     /**
      * Send the password reset notification.

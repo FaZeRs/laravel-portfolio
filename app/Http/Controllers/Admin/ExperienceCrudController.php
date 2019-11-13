@@ -2,42 +2,39 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\ExperienceRequest as StoreRequest;
-// VALIDATION: change the requests to match your own file names if you need form validation
-use App\Http\Requests\ExperienceRequest as UpdateRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
-use Backpack\CRUD\CrudPanel;
+use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
+use App\Http\Requests\ExperienceRequest;
 
-/**
- * Class ExperienceCrudController.
- * @property-read CrudPanel $crud
- */
 class ExperienceCrudController extends CrudController
 {
+    use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
+
     public function setup()
     {
-        /*
-        |--------------------------------------------------------------------------
-        | CrudPanel Basic Information
-        |--------------------------------------------------------------------------
-        */
-        $this->crud->setModel('App\Models\Experience');
-        $this->crud->setRoute(config('backpack.base.route_prefix').'/experience');
-        $this->crud->setEntityNameStrings('experience', 'experiences');
+        CRUD::setModel('App\Models\Experience');
+        CRUD::setRoute(config('backpack.base.route_prefix').'/experience');
+        CRUD::setEntityNameStrings('experience', 'experiences');
+    }
 
-        /*
-        |--------------------------------------------------------------------------
-        | CrudPanel Configuration
-        |--------------------------------------------------------------------------
-        */
-        $this->crud->addColumns([
+    protected function setupListOperation()
+    {
+        CRUD::addColumns([
             ['name' => 'position', 'type' => 'text', 'label' => 'Position'],
             ['name' => 'employer', 'type' => 'text', 'label' => 'Employer'],
             ['name' => 'from', 'type' => 'date', 'label' => 'From', 'format' => 'M-Y'],
             ['name' => 'to', 'type' => 'date', 'label' => 'To', 'format' => 'M-Y'],
             ['name' => 'ongoing', 'type' => 'boolean', 'label' => 'Ongoing'],
         ]);
-        $this->crud->addFields([
+    }
+
+    protected function setupCreateOperation()
+    {
+        CRUD::setValidation(ExperienceRequest::class);
+        CRUD::addFields([
             ['name' => 'position', 'type' => 'text', 'label' => 'Position'],
             ['name' => 'employer', 'type' => 'text', 'label' => 'Employer'],
             ['name' => 'website', 'type' => 'url', 'label' => 'Website'],
@@ -46,27 +43,10 @@ class ExperienceCrudController extends CrudController
             ['name' => 'ongoing', 'type' => 'checkbox', 'label' => 'Ongoing'],
             ['name' => 'logo', 'type' => 'image', 'upload' => true, 'crop' => false, 'aspect_ratio' => 1, 'disk' => 'public'],
         ]);
-
-        // add asterisk for fields that are required in ExperienceRequest
-        $this->crud->setRequiredFields(StoreRequest::class, 'create');
-        $this->crud->setRequiredFields(UpdateRequest::class, 'edit');
     }
 
-    public function store(StoreRequest $request)
+    protected function setupUpdateOperation()
     {
-        // your additional operations before save here
-        $redirect_location = parent::storeCrud($request);
-        // your additional operations after save here
-        // use $this->data['entry'] or $this->crud->entry
-        return $redirect_location;
-    }
-
-    public function update(UpdateRequest $request)
-    {
-        // your additional operations before save here
-        $redirect_location = parent::updateCrud($request);
-        // your additional operations after save here
-        // use $this->data['entry'] or $this->crud->entry
-        return $redirect_location;
+        $this->setupCreateOperation();
     }
 }

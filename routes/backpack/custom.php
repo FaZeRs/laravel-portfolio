@@ -11,9 +11,9 @@ Route::group([
     'middleware' => ['web', config('backpack.base.middleware_key', 'admin')],
     'namespace'  => 'App\Http\Controllers\Admin',
 ], function () {
-    CRUD::resource('category', 'CategoryCrudController');
-    CRUD::resource('tag', 'TagCrudController');
-    CRUD::resource('project', 'ProjectCrudController');
-    CRUD::resource('education', 'EducationCrudController');
-    CRUD::resource('experience', 'ExperienceCrudController');
+    Route::crud('category', 'CategoryCrudController');
+    Route::crud('tag', 'TagCrudController');
+    Route::crud('project', 'ProjectCrudController');
+    Route::crud('education', 'EducationCrudController');
+    Route::crud('experience', 'ExperienceCrudController');
 });

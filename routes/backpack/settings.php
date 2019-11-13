@@ -13,5 +13,5 @@ Route::group([
     'middleware' => ['web', backpack_middleware()],
     'namespace'  => 'App\Http\Controllers\Admin',
 ], function () {
-    CRUD::resource('setting', 'SettingCrudController');
+    Route::crud('setting', 'SettingCrudController');
 });
