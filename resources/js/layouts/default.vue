@@ -4,7 +4,7 @@
       <img style="position: fixed; top: 0; left: 0; border: 0; z-index: 100" src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub">
     </a>
     <nav-bar/>
-    <v-img :src="jumbotronBg" :lazy-src="jumbotronBg" height="400" gradient="to top right, rgba(63,81,181, .7), rgba(25,32,72, .7)">
+    <v-img :src="jumbotronBg" :lazy-src="jumbotronBg" height="400" max-height="400" gradient="to top right, rgba(63,81,181, .7), rgba(25,32,72, .7)">
       <v-container fill-height text-center>
         <v-layout align-center justify-center>
           <v-flex>
