@@ -1,4 +1,6 @@
+sudo: required
 language: php
+dist: trusty
 
 php:
   - 7.2
@@ -7,17 +9,6 @@ php:
 services:
   - mysql
 
-addons:
-  apt:
-    sources:
-      - mysql-5.7-trusty
-    packages:
-      - mysql-server
-
-dist: trusty
-
-sudo: required
-
 branches:
   only:
     - master
@@ -25,19 +16,21 @@ branches:
 
 cache:
   directories:
+    - $HOME/.composer/cache
+    - $HOME/.npm
     - vendor
     - node_modules
 
 before_script:
   - cp .env.travis.example .env
-  - composer self-update
-  - composer install --no-progress --no-interaction --prefer-source --no-suggest
+  - travis_retry composer install --no-progress --no-interaction --prefer-dist --no-suggest
   - php artisan key:generate
   - php artisan migrate
   - php artisan passport:install
 
 before_install:
   - mysql -e 'CREATE DATABASE homestead;'
+  - travis_retry composer self-update && composer --version
 
 script:
   - composer test
