@@ -2,12 +2,12 @@
 
 namespace App\Models;
 
-use Illuminate\Support\Str;
-use Prologue\Alerts\Facades\Alert;
-use Intervention\Image\Facades\Image;
-use Illuminate\Support\Facades\Storage;
-use Backpack\Settings\app\Models\Setting as SettingModel;
 use Backpack\CRUD\app\Models\Traits\SpatieTranslatable\HasTranslations;
+use Backpack\Settings\app\Models\Setting as SettingModel;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
+use Intervention\Image\Facades\Image;
+use Prologue\Alerts\Facades\Alert;
 
 class Setting extends SettingModel
 {
