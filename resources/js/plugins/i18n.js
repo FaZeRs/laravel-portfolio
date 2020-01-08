@@ -1,7 +1,7 @@
 import Vue from 'vue'
-import store from '~/store'
 import VueI18n from 'vue-i18n'
 import Cookies from "js-cookie";
+
 Vue.use(VueI18n)
 
 const i18n = new VueI18n({

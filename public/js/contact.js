@@ -15,6 +15,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _store_actions_type__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ~/store/actions.type */ "./resources/js/store/actions.type.js");
 /* harmony import */ var vee_validate__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vee-validate */ "./node_modules/vee-validate/dist/vee-validate.esm.js");
 /* harmony import */ var vee_validate_dist_rules__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vee-validate/dist/rules */ "./node_modules/vee-validate/dist/rules.js");
+/* harmony import */ var vee_validate_dist_locale_en_json__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vee-validate/dist/locale/en.json */ "./node_modules/vee-validate/dist/locale/en.json");
+var vee_validate_dist_locale_en_json__WEBPACK_IMPORTED_MODULE_5___namespace = /*#__PURE__*/__webpack_require__.t(/*! vee-validate/dist/locale/en.json */ "./node_modules/vee-validate/dist/locale/en.json", 1);
+/* harmony import */ var vee_validate_dist_locale_lv_json__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vee-validate/dist/locale/lv.json */ "./node_modules/vee-validate/dist/locale/lv.json");
+var vee_validate_dist_locale_lv_json__WEBPACK_IMPORTED_MODULE_6___namespace = /*#__PURE__*/__webpack_require__.t(/*! vee-validate/dist/locale/lv.json */ "./node_modules/vee-validate/dist/locale/lv.json", 1);
 
 //
 //
@@ -61,6 +65,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
+
 
 
 
@@ -85,27 +91,23 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   mounted: function mounted() {
-    Object(vee_validate__WEBPACK_IMPORTED_MODULE_3__["localize"])(this.$i18n.locale, this.dictionary);
+    console.log('mounted'); //localize(`${this.$i18n.locale}`, this.$i18n.locale)
   },
   created: function created() {
-    Object(vee_validate__WEBPACK_IMPORTED_MODULE_3__["localize"])('lv', {
-      messages: {
-        email: function email(field) {
-          return "Laukam ".concat(field, " j\u0101b\u016Bt der\u012Bgai e-pasta adresei.");
-        },
-        required: function required(field) {
-          return "Lauks ".concat(field, " ir oblig\u0101ts.");
-        }
-      },
-      attributes: {
-        email: 'e-pasts',
-        name: 'vārds',
-        message: 'vēstule'
-      }
-    });
-    Object(vee_validate__WEBPACK_IMPORTED_MODULE_3__["localize"])(this.$i18n.locale);
+    console.log('created');
     Object(vee_validate__WEBPACK_IMPORTED_MODULE_3__["extend"])('required', vee_validate_dist_rules__WEBPACK_IMPORTED_MODULE_4__["required"]);
-    Object(vee_validate__WEBPACK_IMPORTED_MODULE_3__["extend"])('email', vee_validate_dist_rules__WEBPACK_IMPORTED_MODULE_4__["email"]);
+    Object(vee_validate__WEBPACK_IMPORTED_MODULE_3__["extend"])('email', vee_validate_dist_rules__WEBPACK_IMPORTED_MODULE_4__["email"]); // localize('lv', {
+    //     messages: {
+    //         email: (field) => `Laukam ${field} jābūt derīgai e-pasta adresei.`,
+    //         required: (field) => `Lauks ${field} ir obligāts.`
+    //     },
+    //     attributes: {
+    //         email: 'e-pasts',
+    //         name: 'vārds',
+    //         message: 'vēstule'
+    //     }
+    // })
+    //localize({ en, lv });
   },
   methods: {
     submit: function submit() {

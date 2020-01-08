@@ -42,11 +42,4 @@ class Link extends Model
     {
         return $this->belongsTo(Project::class);
     }
-
-    public function getTitleAttribute($value)
-    {
-        $value = json_decode($value, true);
-
-        return $value[app()->getLocale()];
-    }
 }

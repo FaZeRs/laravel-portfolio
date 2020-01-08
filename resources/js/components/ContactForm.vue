@@ -48,6 +48,8 @@ import VueRecaptcha from 'vue-recaptcha'
 import { SEND_CONTACT } from "~/store/actions.type";
 import { ValidationObserver, ValidationProvider, localize, extend } from 'vee-validate';
 import { required, email } from 'vee-validate/dist/rules';
+import en from 'vee-validate/dist/locale/en.json';
+import lv from 'vee-validate/dist/locale/lv.json';
 
 export default {
   components: {
@@ -67,25 +69,26 @@ export default {
     loading: false,
   }),
   mounted () {
-    localize(this.$i18n.locale, this.dictionary)
+      console.log('mounted')
+    //localize(`${this.$i18n.locale}`, this.$i18n.locale)
   },
   created () {
-    localize('lv', {
-      messages: {
-        email: (field) => `Laukam ${field} jābūt derīgai e-pasta adresei.`,
-        required: (field) => `Lauks ${field} ir obligāts.`
-      },
-      attributes: {
-        email: 'e-pasts',
-        name: 'vārds',
-        message: 'vēstule'
-      }
-    })
-
-    localize(this.$i18n.locale)
-
+      console.log('created')
     extend('required', required);
     extend('email', email);
+      // localize('lv', {
+      //     messages: {
+      //         email: (field) => `Laukam ${field} jābūt derīgai e-pasta adresei.`,
+      //         required: (field) => `Lauks ${field} ir obligāts.`
+      //     },
+      //     attributes: {
+      //         email: 'e-pasts',
+      //         name: 'vārds',
+      //         message: 'vēstule'
+      //     }
+      // })
+      //localize({ en, lv });
+
   },
   methods: {
     async submit () {

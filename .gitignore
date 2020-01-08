@@ -26,3 +26,5 @@ Todo.rtf
 /public/hot
 /public/storage
 /storage/*.key
+/public/vendor
+/public/packages
