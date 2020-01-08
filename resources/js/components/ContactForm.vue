@@ -14,7 +14,7 @@
             rules="required"
             v-slot="{ errors, valid }"
           >
-            <v-text-field :label="$t('name')" v-model="contact.name" :error-messages="errors" :success="valid" required/>
+            <v-text-field :label="$t('fields.name')" v-model="contact.name" :error-messages="errors" :success="valid" required/>
           </ValidationProvider>
         </v-flex>
         <v-flex xs12 sm6>
@@ -23,7 +23,7 @@
             rules="required|email"
             v-slot="{ errors, valid }"
           >
-            <v-text-field :label="$t('email')" v-model="contact.email" :error-messages="errors" :success="valid" required/>
+            <v-text-field :label="$t('fields.email')" v-model="contact.email" :error-messages="errors" :success="valid" required/>
           </ValidationProvider>
         </v-flex>
         <v-flex xs12>
@@ -32,7 +32,7 @@
             rules="required"
             v-slot="{ errors, valid }"
           >
-            <v-textarea :label="$t('message')" v-model="contact.message" :error-messages="errors" :success="valid" required/>
+            <v-textarea :label="$t('fields.message')" v-model="contact.message" :error-messages="errors" :success="valid" required/>
           </ValidationProvider>
         </v-flex>
         <vue-recaptcha v-if="sitekey" ref="recaptcha" :sitekey="sitekey" size="invisible" @verify="onCaptchaVerified" @expired="onCaptchaExpired"/>
@@ -46,10 +46,9 @@
 <script>
 import VueRecaptcha from 'vue-recaptcha'
 import { SEND_CONTACT } from "~/store/actions.type";
-import { ValidationObserver, ValidationProvider, localize, extend } from 'vee-validate';
+import { ValidationObserver, ValidationProvider, extend, configure } from 'vee-validate';
 import { required, email } from 'vee-validate/dist/rules';
-import en from 'vee-validate/dist/locale/en.json';
-import lv from 'vee-validate/dist/locale/lv.json';
+import i18n from "~/plugins/i18n";
 
 export default {
   components: {
@@ -68,27 +67,17 @@ export default {
     sitekey: window.config.googleReCaptcha,
     loading: false,
   }),
-  mounted () {
-      console.log('mounted')
-    //localize(`${this.$i18n.locale}`, this.$i18n.locale)
-  },
   created () {
-      console.log('created')
+    configure({
+      defaultMessage: (field, values) => {
+        // override the field name.
+        values._field_ = i18n.t(`fields.${field}`);
+
+        return i18n.t(`validation.${values._rule_}`, values);
+      }
+    });
     extend('required', required);
     extend('email', email);
-      // localize('lv', {
-      //     messages: {
-      //         email: (field) => `Laukam ${field} jābūt derīgai e-pasta adresei.`,
-      //         required: (field) => `Lauks ${field} ir obligāts.`
-      //     },
-      //     attributes: {
-      //         email: 'e-pasts',
-      //         name: 'vārds',
-      //         message: 'vēstule'
-      //     }
-      // })
-      //localize({ en, lv });
-
   },
   methods: {
     async submit () {

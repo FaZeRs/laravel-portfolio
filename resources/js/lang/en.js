@@ -1,3 +1,5 @@
+import veeValidate from "vee-validate/dist/locale/en.json";
+
 export const en = {
   home: 'Home',
   about: 'About',
@@ -7,15 +9,12 @@ export const en = {
   portfolio: 'Portfolio',
   contact: 'Contact',
   get_in_touch: 'get in touch',
-  name: 'Name',
-  email: 'Email',
-  message: 'Message',
   send_message: 'Send message',
   contact_success: 'Message sent successfully.',
   contact_error: 'Failed to send message. Please try again.',
   contact_information: 'Contact Information',
   my_work: 'My work',
-  all: 'All',
+  All: 'All',
   wordpress: 'Wordpress',
   laravel: 'Laravel',
   open_source: 'Open source',
@@ -36,5 +35,11 @@ export const en = {
   page_not_found: 'Page not found',
   clear: 'clear',
   cookies_message: 'This website uses cookies to ensure you get the best experience on our website.',
-  cookies_button_text: 'Got it!'
+  cookies_button_text: 'Got it!',
+  fields: {
+    name: 'Name',
+    email: 'Email',
+    message: 'Message',
+  },
+  validation: veeValidate.messages
 }

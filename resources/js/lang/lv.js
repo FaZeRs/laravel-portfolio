@@ -1,3 +1,5 @@
+import veeValidate from 'vee-validate/dist/locale/lv.json';
+
 export const lv = {
   home: 'Sākums',
   about: 'Par mani',
@@ -7,15 +9,12 @@ export const lv = {
   portfolio: 'Portfelis',
   contact: 'Kontakti',
   get_in_touch: 'sazināties',
-  name: 'Vārds',
-  email: 'Epasts',
-  message: 'Jūsu teksts šeit...',
   send_message: 'Sūtīt Vēstuli',
   contact_success: 'Vēstule veiksmīgi nosūtīta.',
   contact_error: 'Vēstule netika nosūtīta. Mēģiniet velreiz.',
   contact_information: 'Kontaktinformācija',
   my_work: 'Mani darbi',
-  all: 'Visi',
+  All: 'Visi',
   wordpress: 'Wordpress',
   laravel: 'Laravel',
   spen_source: 'Atvērtais pirmkods',
@@ -36,5 +35,11 @@ export const lv = {
   page_not_found: 'Page not found',
   clear: 'Notīrīt',
   cookies_message: 'Lai nodrošinātu vislabāko interneta lapas darbību, mēs izmantojam sīkdatnes.',
-  cookies_button_text: 'Sapratu!'
+  cookies_button_text: 'Sapratu!',
+  fields: {
+    name: 'Vārds',
+    email: 'Epasts',
+    message: 'Jūsu teksts šeit...',
+  },
+  validation: veeValidate.messages
 }

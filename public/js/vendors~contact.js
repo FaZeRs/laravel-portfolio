@@ -37,7 +37,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "required_if", function() { return required_if; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "size", function() { return size; });
 /**
-  * vee-validate v3.0.11
+  * vee-validate v3.2.1
   * (c) 2019 Abdelrahman Awad
   * @license MIT
   */
@@ -342,27 +342,18 @@ var email = {
     params: params$8
 };
 
-/**
- * Checks if the values are either null or undefined.
- */
-var isNullOrUndefined = function (value) {
+function isNullOrUndefined(value) {
     return value === null || value === undefined;
-};
-var includes = function (collection, item) {
+}
+function isEmptyArray(arr) {
+    return Array.isArray(arr) && arr.length === 0;
+}
+function isCallable(fn) {
+    return typeof fn === 'function';
+}
+
+function includes(collection, item) {
     return collection.indexOf(item) !== -1;
-};
-/**
- * Checks if a function is callable.
- */
-var isCallable = function (func) { return typeof func === 'function'; };
-/* istanbul ignore next */
-function _copyArray(arrayLike) {
-    var array = [];
-    var length = arrayLike.length;
-    for (var i = 0; i < length; i++) {
-        array.push(arrayLike[i]);
-    }
-    return array;
 }
 /**
  * Converts an array-like object to array, provides a simple polyfill for Array.from
@@ -374,9 +365,15 @@ function toArray(arrayLike) {
     /* istanbul ignore next */
     return _copyArray(arrayLike);
 }
-var isEmptyArray = function (arr) {
-    return Array.isArray(arr) && arr.length === 0;
-};
+/* istanbul ignore next */
+function _copyArray(arrayLike) {
+    var array = [];
+    var length = arrayLike.length;
+    for (var i = 0; i < length; i++) {
+        array.push(arrayLike[i]);
+    }
+    return array;
+}
 
 var validate$9 = function (value, options) {
     if (Array.isArray(value)) {
@@ -734,7 +731,7 @@ var size = {
 /*!************************************************************!*\
   !*** ./node_modules/vee-validate/dist/vee-validate.esm.js ***!
   \************************************************************/
-/*! exports provided: ValidationObserver, ValidationProvider, configure, extend, install, localize, setInteractionMode, validate, version, withValidation */
+/*! exports provided: ValidationObserver, ValidationProvider, configure, extend, localeChanged, localize, normalizeRules, setInteractionMode, validate, version, withValidation */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -743,8 +740,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ValidationProvider", function() { return ValidationProvider; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "configure", function() { return configure; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "extend", function() { return extend; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "install", function() { return install; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "localeChanged", function() { return localeChanged; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "localize", function() { return localize; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "normalizeRules", function() { return normalizeRules; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setInteractionMode", function() { return setInteractionMode; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "validate", function() { return validate; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "version", function() { return version; });
@@ -752,7 +750,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
 /**
-  * vee-validate v3.0.11
+  * vee-validate v3.2.1
   * (c) 2019 Abdelrahman Awad
   * @license MIT
   */
@@ -829,45 +827,24 @@ function __spreadArrays() {
     return r;
 }
 
-var isNaN = function (value) {
+function isNaN(value) {
     // NaN is the one value that does not equal itself.
     // eslint-disable-next-line
     return value !== value;
-};
-/**
- * Checks if the values are either null or undefined.
- */
-var isNullOrUndefined = function (value) {
+}
+function isNullOrUndefined(value) {
     return value === null || value === undefined;
-};
-/**
- * Creates the default flags object.
- */
-var createFlags = function () { return ({
-    untouched: true,
-    touched: false,
-    dirty: false,
-    pristine: true,
-    valid: false,
-    invalid: false,
-    validated: false,
-    pending: false,
-    required: false,
-    changed: false
-}); };
-/**
- * Checks if the value is an object.
- */
+}
+function isEmptyArray(arr) {
+    return Array.isArray(arr) && arr.length === 0;
+}
 var isObject = function (obj) {
     return obj !== null && obj && typeof obj === 'object' && !Array.isArray(obj);
 };
-function identity(x) {
-    return x;
-}
 /**
  * Shallow object comparison.
  */
-var isEqual = function (lhs, rhs) {
+function isEqual(lhs, rhs) {
     if (lhs instanceof RegExp && rhs instanceof RegExp) {
         return isEqual(lhs.source, rhs.source) && isEqual(lhs.flags, rhs.flags);
     }
@@ -894,162 +871,21 @@ var isEqual = function (lhs, rhs) {
         return true;
     }
     return lhs === rhs;
-};
-var includes = function (collection, item) {
-    return collection.indexOf(item) !== -1;
-};
-/**
- * Parses a rule string expression.
- */
-var parseRule = function (rule) {
-    var params = [];
-    var name = rule.split(':')[0];
-    if (includes(rule, ':')) {
-        params = rule
-            .split(':')
-            .slice(1)
-            .join(':')
-            .split(',');
-    }
-    return { name: name, params: params };
-};
-/**
- * Debounces a function.
- */
-var debounce = function (fn, wait, token) {
-    if (wait === void 0) { wait = 0; }
-    if (token === void 0) { token = { cancelled: false }; }
-    if (wait === 0) {
-        return fn;
-    }
-    var timeout;
-    return function () {
-        var args = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            args[_i] = arguments[_i];
-        }
-        var later = function () {
-            timeout = undefined;
-            // check if the fn call was cancelled.
-            if (!token.cancelled)
-                fn.apply(void 0, args);
-        };
-        // because we might want to use Node.js setTimout for SSR.
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-};
-/**
- * Emits a warning to the console.
- */
-var warn = function (message) {
-    console.warn("[vee-validate] " + message);
-};
-/**
- * Normalizes the given rules expression.
- */
-var normalizeRules = function (rules) {
-    // if falsy value return an empty object.
-    var acc = {};
-    Object.defineProperty(acc, '_$$isNormalized', {
-        value: true,
-        writable: false,
-        enumerable: false,
-        configurable: false
-    });
-    if (!rules) {
-        return acc;
-    }
-    // Object is already normalized, skip.
-    if (isObject(rules) && rules._$$isNormalized) {
-        return rules;
-    }
-    if (isObject(rules)) {
-        return Object.keys(rules).reduce(function (prev, curr) {
-            var params = [];
-            if (rules[curr] === true) {
-                params = [];
-            }
-            else if (Array.isArray(rules[curr])) {
-                params = rules[curr];
-            }
-            else if (isObject(rules[curr])) {
-                params = rules[curr];
-            }
-            else {
-                params = [rules[curr]];
-            }
-            if (rules[curr] !== false) {
-                prev[curr] = params;
-            }
-            return prev;
-        }, acc);
-    }
-    /* istanbul ignore if */
-    if (typeof rules !== 'string') {
-        warn('rules must be either a string or an object.');
-        return acc;
-    }
-    return rules.split('|').reduce(function (prev, rule) {
-        var parsedRule = parseRule(rule);
-        if (!parsedRule.name) {
-            return prev;
-        }
-        prev[parsedRule.name] = parsedRule.params;
-        return prev;
-    }, acc);
-};
-/**
- * Checks if a function is callable.
- */
-var isCallable = function (func) { return typeof func === 'function'; };
-function computeClassObj(names, flags) {
-    var acc = {};
-    var keys = Object.keys(flags);
-    var length = keys.length;
-    var _loop_1 = function (i) {
-        var flag = keys[i];
-        var className = (names && names[flag]) || flag;
-        var value = flags[flag];
-        if (isNullOrUndefined(value)) {
-            return "continue";
-        }
-        if ((flag === 'valid' || flag === 'invalid') && !flags.validated) {
-            return "continue";
-        }
-        if (typeof className === 'string') {
-            acc[className] = value;
-        }
-        else if (Array.isArray(className)) {
-            className.forEach(function (cls) {
-                acc[cls] = value;
-            });
-        }
-    };
-    for (var i = 0; i < length; i++) {
-        _loop_1(i);
-    }
-    return acc;
 }
-/* istanbul ignore next */
-function _copyArray(arrayLike) {
-    var array = [];
-    var length = arrayLike.length;
-    for (var i = 0; i < length; i++) {
-        array.push(arrayLike[i]);
+// Checks if a given value is not an empty string or null or undefined.
+function isSpecified(val) {
+    if (val === '') {
+        return false;
     }
-    return array;
+    return !isNullOrUndefined(val);
 }
-/**
- * Converts an array-like object to array, provides a simple polyfill for Array.from
- */
-function toArray(arrayLike) {
-    if (isCallable(Array.from)) {
-        return Array.from(arrayLike);
-    }
-    /* istanbul ignore next */
-    return _copyArray(arrayLike);
+function isCallable(fn) {
+    return typeof fn === 'function';
 }
+function isLocator(value) {
+    return isCallable(value) && !!value.__locatorRef;
+}
+
 function findIndex(arrayLike, predicate) {
     var array = Array.isArray(arrayLike) ? arrayLike : toArray(arrayLike);
     if (isCallable(array.findIndex)) {
@@ -1072,6 +908,36 @@ function find(arrayLike, predicate) {
     var idx = findIndex(array, predicate);
     return idx === -1 ? undefined : array[idx];
 }
+function includes(collection, item) {
+    return collection.indexOf(item) !== -1;
+}
+/**
+ * Converts an array-like object to array, provides a simple polyfill for Array.from
+ */
+function toArray(arrayLike) {
+    if (isCallable(Array.from)) {
+        return Array.from(arrayLike);
+    }
+    /* istanbul ignore next */
+    return _copyArray(arrayLike);
+}
+/* istanbul ignore next */
+function _copyArray(arrayLike) {
+    var array = [];
+    var length = arrayLike.length;
+    for (var i = 0; i < length; i++) {
+        array.push(arrayLike[i]);
+    }
+    return array;
+}
+function values(obj) {
+    if (isCallable(Object.values)) {
+        return Object.values(obj);
+    }
+    // fallback to keys()
+    /* istanbul ignore next */
+    return Object.keys(obj).map(function (k) { return obj[k]; });
+}
 function merge(target, source) {
     Object.keys(source).forEach(function (key) {
         if (isObject(source[key])) {
@@ -1085,33 +951,70 @@ function merge(target, source) {
     });
     return target;
 }
-function values(obj) {
-    if (isCallable(Object.values)) {
-        return Object.values(obj);
-    }
-    // fallback to keys()
-    /* istanbul ignore next */
-    return Object.keys(obj).map(function (k) { return obj[k]; });
+
+function createFlags() {
+    return {
+        untouched: true,
+        touched: false,
+        dirty: false,
+        pristine: true,
+        valid: false,
+        invalid: false,
+        validated: false,
+        pending: false,
+        required: false,
+        changed: false,
+        passed: false,
+        failed: false
+    };
 }
-var isEmptyArray = function (arr) {
-    return Array.isArray(arr) && arr.length === 0;
-};
-var interpolate = function (template, values) {
-    return template.replace(/\{([^}]+)\}/g, function (_, p) {
+
+function identity(x) {
+    return x;
+}
+function debounce(fn, wait, token) {
+    if (wait === void 0) { wait = 0; }
+    if (token === void 0) { token = { cancelled: false }; }
+    if (wait === 0) {
+        return fn;
+    }
+    var timeout;
+    return function () {
+        var args = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            args[_i] = arguments[_i];
+        }
+        var later = function () {
+            timeout = undefined;
+            // check if the fn call was cancelled.
+            if (!token.cancelled)
+                fn.apply(void 0, args);
+        };
+        // because we might want to use Node.js setTimout for SSR.
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+/**
+ * Emits a warning to the console
+ */
+function warn(message) {
+    console.warn("[vee-validate] " + message);
+}
+/**
+ * Replaces placeholder values in a string with their actual values
+ */
+function interpolate(template, values) {
+    return template.replace(/{([^}]+)}/g, function (_, p) {
         return p in values ? values[p] : "{" + p + "}";
     });
-};
-// Checks if a given value is not an empty string or null or undefined.
-var isSpecified = function (val) {
-    if (val === '') {
-        return false;
-    }
-    return !isNullOrUndefined(val);
-};
+}
 
 var RULES = {};
 function normalizeSchema(schema) {
-    if (schema.params && schema.params.length) {
+    var _a;
+    if ((_a = schema.params) === null || _a === void 0 ? void 0 : _a.length) {
         schema.params = schema.params.map(function (param) {
             if (typeof param === 'string') {
                 return { name: param };
@@ -1133,38 +1036,13 @@ var RuleContainer = /** @class */ (function () {
         }
         RULES[name] = __assign({ lazy: false, computesRequired: false }, rule);
     };
-    RuleContainer.iterate = function (fn) {
-        var keys = Object.keys(RULES);
-        var length = keys.length;
-        for (var i = 0; i < length; i++) {
-            fn(keys[i], RULES[keys[i]]);
-        }
-    };
     RuleContainer.isLazy = function (name) {
-        return !!(RULES[name] && RULES[name].lazy);
+        var _a;
+        return !!((_a = RULES[name]) === null || _a === void 0 ? void 0 : _a.lazy);
     };
     RuleContainer.isRequireRule = function (name) {
-        return !!(RULES[name] && RULES[name].computesRequired);
-    };
-    RuleContainer.isTargetRule = function (name) {
-        var definition = RuleContainer.getRuleDefinition(name);
-        if (!definition || !definition.params) {
-            return false;
-        }
-        return definition.params.some(function (param) { return !!param.isTarget; });
-    };
-    RuleContainer.getTargetParamNames = function (rule, params) {
-        var definition = RuleContainer.getRuleDefinition(rule);
-        if (Array.isArray(params)) {
-            return params.filter(function (_, idx) {
-                return definition.params && find(definition.params, function (p, i) { return !!p.isTarget && i === idx; });
-            });
-        }
-        return Object.keys(params)
-            .filter(function (key) {
-            return definition.params && find(definition.params, function (p) { return !!p.isTarget && p.name === key; });
-        })
-            .map(function (key) { return params[key]; });
+        var _a;
+        return !!((_a = RULES[name]) === null || _a === void 0 ? void 0 : _a.computesRequired);
     };
     RuleContainer.getRuleDefinition = function (ruleName) {
         return RULES[ruleName];
@@ -1227,40 +1105,206 @@ var configure = function (cfg) {
 };
 
 /**
+ * Normalizes the given rules expression.
+ */
+function normalizeRules(rules) {
+    // if falsy value return an empty object.
+    var acc = {};
+    Object.defineProperty(acc, '_$$isNormalized', {
+        value: true,
+        writable: false,
+        enumerable: false,
+        configurable: false
+    });
+    if (!rules) {
+        return acc;
+    }
+    // Object is already normalized, skip.
+    if (isObject(rules) && rules._$$isNormalized) {
+        return rules;
+    }
+    if (isObject(rules)) {
+        return Object.keys(rules).reduce(function (prev, curr) {
+            var params = [];
+            if (rules[curr] === true) {
+                params = [];
+            }
+            else if (Array.isArray(rules[curr])) {
+                params = rules[curr];
+            }
+            else if (isObject(rules[curr])) {
+                params = rules[curr];
+            }
+            else {
+                params = [rules[curr]];
+            }
+            if (rules[curr] !== false) {
+                prev[curr] = buildParams(curr, params);
+            }
+            return prev;
+        }, acc);
+    }
+    /* istanbul ignore if */
+    if (typeof rules !== 'string') {
+        warn('rules must be either a string or an object.');
+        return acc;
+    }
+    return rules.split('|').reduce(function (prev, rule) {
+        var parsedRule = parseRule(rule);
+        if (!parsedRule.name) {
+            return prev;
+        }
+        prev[parsedRule.name] = buildParams(parsedRule.name, parsedRule.params);
+        return prev;
+    }, acc);
+}
+function buildParams(ruleName, provided) {
+    var ruleSchema = RuleContainer.getRuleDefinition(ruleName);
+    if (!ruleSchema) {
+        return provided;
+    }
+    var params = {};
+    if (!ruleSchema.params && !Array.isArray(provided)) {
+        throw new Error('You provided an object params to a rule that has no defined schema.');
+    }
+    // Rule probably uses an array for their args, keep it as is.
+    if (Array.isArray(provided) && !ruleSchema.params) {
+        return provided;
+    }
+    var definedParams;
+    // collect the params schema.
+    if (!ruleSchema.params || (ruleSchema.params.length < provided.length && Array.isArray(provided))) {
+        var lastDefinedParam_1;
+        // collect any additional parameters in the last item.
+        definedParams = provided.map(function (_, idx) {
+            var _a;
+            var param = (_a = ruleSchema.params) === null || _a === void 0 ? void 0 : _a[idx];
+            lastDefinedParam_1 = param || lastDefinedParam_1;
+            if (!param) {
+                param = lastDefinedParam_1;
+            }
+            return param;
+        });
+    }
+    else {
+        definedParams = ruleSchema.params;
+    }
+    // Match the provided array length with a temporary schema.
+    for (var i = 0; i < definedParams.length; i++) {
+        var options = definedParams[i];
+        var value = options.default;
+        // if the provided is an array, map element value.
+        if (Array.isArray(provided)) {
+            if (i in provided) {
+                value = provided[i];
+            }
+        }
+        else {
+            // If the param exists in the provided object.
+            if (options.name in provided) {
+                value = provided[options.name];
+                // if the provided is the first param value.
+            }
+            else if (definedParams.length === 1) {
+                value = provided;
+            }
+        }
+        // if the param is a target, resolve the target value.
+        if (options.isTarget) {
+            value = createLocator(value, options.cast);
+        }
+        // A target param using interpolation
+        if (typeof value === 'string' && value[0] === '@') {
+            value = createLocator(value.slice(1), options.cast);
+        }
+        // If there is a transformer defined.
+        if (!isLocator(value) && options.cast) {
+            value = options.cast(value);
+        }
+        // already been set, probably multiple values.
+        if (params[options.name]) {
+            params[options.name] = Array.isArray(params[options.name]) ? params[options.name] : [params[options.name]];
+            params[options.name].push(value);
+        }
+        else {
+            // set the value.
+            params[options.name] = value;
+        }
+    }
+    return params;
+}
+/**
+ * Parses a rule string expression.
+ */
+var parseRule = function (rule) {
+    var params = [];
+    var name = rule.split(':')[0];
+    if (includes(rule, ':')) {
+        params = rule
+            .split(':')
+            .slice(1)
+            .join(':')
+            .split(',');
+    }
+    return { name: name, params: params };
+};
+function createLocator(value, castFn) {
+    var locator = function (crossTable) {
+        var val = crossTable[value];
+        return castFn ? castFn(val) : val;
+    };
+    locator.__locatorRef = value;
+    return locator;
+}
+function extractLocators(params) {
+    if (Array.isArray(params)) {
+        return params.filter(isLocator);
+    }
+    return Object.keys(params)
+        .filter(function (key) { return isLocator(params[key]); })
+        .map(function (key) { return params[key]; });
+}
+
+/**
  * Validates a value against the rules.
  */
 function validate(value, rules, options) {
     if (options === void 0) { options = {}; }
+    var _a, _b, _c, _d, _e, _f;
     return __awaiter(this, void 0, void 0, function () {
-        var shouldBail, skipIfEmpty, field, result, errors, ruleMap;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
+        var shouldBail, skipIfEmpty, field, result, errors, failedRules, regenerateMap;
+        return __generator(this, function (_g) {
+            switch (_g.label) {
                 case 0:
-                    shouldBail = options && options.bails;
-                    skipIfEmpty = options && options.skipIfEmpty;
+                    shouldBail = (_a = options) === null || _a === void 0 ? void 0 : _a.bails;
+                    skipIfEmpty = (_b = options) === null || _b === void 0 ? void 0 : _b.skipIfEmpty;
                     field = {
-                        name: (options && options.name) || '{field}',
+                        name: ((_c = options) === null || _c === void 0 ? void 0 : _c.name) || '{field}',
                         rules: normalizeRules(rules),
-                        bails: isNullOrUndefined(shouldBail) ? true : shouldBail,
-                        skipIfEmpty: isNullOrUndefined(skipIfEmpty) ? true : skipIfEmpty,
+                        bails: (shouldBail !== null && shouldBail !== void 0 ? shouldBail : true),
+                        skipIfEmpty: (skipIfEmpty !== null && skipIfEmpty !== void 0 ? skipIfEmpty : true),
                         forceRequired: false,
-                        crossTable: (options && options.values) || {},
-                        names: (options && options.names) || {},
-                        customMessages: (options && options.customMessages) || {}
+                        crossTable: ((_d = options) === null || _d === void 0 ? void 0 : _d.values) || {},
+                        names: ((_e = options) === null || _e === void 0 ? void 0 : _e.names) || {},
+                        customMessages: ((_f = options) === null || _f === void 0 ? void 0 : _f.customMessages) || {}
                     };
                     return [4 /*yield*/, _validate(field, value, options)];
                 case 1:
-                    result = _a.sent();
+                    result = _g.sent();
                     errors = [];
-                    ruleMap = {};
+                    failedRules = {};
+                    regenerateMap = {};
                     result.errors.forEach(function (e) {
-                        errors.push(e.msg);
-                        ruleMap[e.rule] = e.msg;
+                        var msg = e.msg();
+                        errors.push(msg);
+                        failedRules[e.rule] = msg;
+                        regenerateMap[e.rule] = e.msg;
                     });
                     return [2 /*return*/, {
                             valid: result.valid,
                             errors: errors,
-                            failedRules: ruleMap
+                            failedRules: failedRules,
+                            regenerateMap: regenerateMap
                         }];
             }
         });
@@ -1392,7 +1436,7 @@ function _shouldSkip(field, value) {
  */
 function _test(field, value, rule) {
     return __awaiter(this, void 0, void 0, function () {
-        var ruleSchema, params, normalizedValue, result, values;
+        var ruleSchema, normalizedValue, params, result, values_1;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
@@ -1400,26 +1444,25 @@ function _test(field, value, rule) {
                     if (!ruleSchema || !ruleSchema.validate) {
                         throw new Error("No such validator '" + rule.name + "' exists.");
                     }
-                    params = _buildParams(rule.params, ruleSchema.params, field.crossTable);
                     normalizedValue = ruleSchema.castValue ? ruleSchema.castValue(value) : value;
+                    params = fillTargetValues(rule.params, field.crossTable);
                     return [4 /*yield*/, ruleSchema.validate(normalizedValue, params)];
                 case 1:
                     result = _a.sent();
                     if (typeof result === 'string') {
-                        values = __assign(__assign({}, (params || {})), { _field_: field.name, _value_: value, _rule_: rule.name });
+                        values_1 = __assign(__assign({}, (params || {})), { _field_: field.name, _value_: value, _rule_: rule.name });
                         return [2 /*return*/, {
                                 valid: false,
-                                error: { rule: rule.name, msg: interpolate(result, values) }
+                                error: { rule: rule.name, msg: function () { return interpolate(result, values_1); } }
                             }];
                     }
                     if (!isObject(result)) {
-                        result = { valid: result, data: {} };
+                        result = { valid: result };
                     }
                     return [2 /*return*/, {
                             valid: result.valid,
                             required: result.required,
-                            data: result.data || {},
-                            error: result.valid ? undefined : _generateFieldError(field, value, ruleSchema, rule.name, params, result.data)
+                            error: result.valid ? undefined : _generateFieldError(field, value, ruleSchema, rule.name, params)
                         }];
             }
         });
@@ -1428,49 +1471,74 @@ function _test(field, value, rule) {
 /**
  * Generates error messages.
  */
-function _generateFieldError(field, value, ruleSchema, ruleName, params, data) {
-    var values = __assign(__assign(__assign(__assign({}, (params || {})), (data || {})), { _field_: field.name, _value_: value, _rule_: ruleName }), _getTargetNames(field, ruleSchema, ruleName));
-    if (Object.prototype.hasOwnProperty.call(field.customMessages, ruleName) &&
-        typeof field.customMessages[ruleName] === 'string') {
-        return {
-            msg: _normalizeMessage(field.customMessages[ruleName], field.name, values),
-            rule: ruleName
-        };
-    }
-    if (ruleSchema.message) {
-        return {
-            msg: _normalizeMessage(ruleSchema.message, field.name, values),
-            rule: ruleName
-        };
-    }
+function _generateFieldError(field, value, ruleSchema, ruleName, params) {
+    var message = field.customMessages[ruleName] || ruleSchema.message;
+    var ruleTargets = _getRuleTargets(field, ruleSchema, ruleName);
+    var _a = _getUserTargets(field, ruleSchema, ruleName, message), userTargets = _a.userTargets, userMessage = _a.userMessage;
+    var values = __assign(__assign(__assign(__assign({}, (params || {})), { _field_: field.name, _value_: value, _rule_: ruleName }), ruleTargets), userTargets);
     return {
-        msg: _normalizeMessage(getConfig().defaultMessage, field.name, values),
+        msg: function () { return _normalizeMessage(userMessage || getConfig().defaultMessage, field.name, values); },
         rule: ruleName
     };
 }
-function _getTargetNames(field, ruleSchema, ruleName) {
-    if (ruleSchema.params) {
-        var numTargets = ruleSchema.params.filter(function (param) { return param.isTarget; }).length;
-        if (numTargets > 0) {
-            var names = {};
-            for (var index = 0; index < ruleSchema.params.length; index++) {
-                var param = ruleSchema.params[index];
-                if (param.isTarget) {
-                    var key = field.rules[ruleName][index];
-                    var name_1 = field.names[key] || key;
-                    if (numTargets === 1) {
-                        names._target_ = name_1;
-                        break;
-                    }
-                    else {
-                        names["_" + param.name + "Target_"] = name_1;
-                    }
-                }
-            }
-            return names;
-        }
+function _getRuleTargets(field, ruleSchema, ruleName) {
+    var params = ruleSchema.params;
+    if (!params) {
+        return {};
     }
-    return {};
+    var numTargets = params.filter(function (param) { return param.isTarget; }).length;
+    if (numTargets <= 0) {
+        return {};
+    }
+    var names = {};
+    var ruleConfig = field.rules[ruleName];
+    if (!Array.isArray(ruleConfig) && isObject(ruleConfig)) {
+        ruleConfig = params.map(function (param) {
+            return ruleConfig[param.name];
+        });
+    }
+    for (var index = 0; index < params.length; index++) {
+        var param = params[index];
+        var key = ruleConfig[index];
+        if (!isLocator(key)) {
+            continue;
+        }
+        key = key.__locatorRef;
+        var name_1 = field.names[key] || key;
+        names[param.name] = name_1;
+        names["_" + param.name + "_"] = field.crossTable[key];
+    }
+    return names;
+}
+function _getUserTargets(field, ruleSchema, ruleName, userMessage) {
+    var userTargets = {};
+    var rules = field.rules[ruleName];
+    var params = ruleSchema.params || [];
+    // early return if no rules
+    if (!rules) {
+        return {};
+    }
+    // check all rules to convert targets
+    Object.keys(rules).forEach(function (key, index) {
+        // get the rule
+        var rule = rules[key];
+        if (!isLocator(rule)) {
+            return {};
+        }
+        // get associated parameter
+        var param = params[index];
+        if (!param) {
+            return {};
+        }
+        // grab the name of the target
+        var name = rule.__locatorRef;
+        userTargets[param.name] = field.names[name] || name;
+        userTargets["_" + param.name + "_"] = field.crossTable[name];
+    });
+    return {
+        userTargets: userTargets,
+        userMessage: userMessage
+    };
 }
 function _normalizeMessage(template, field, values) {
     if (typeof template === 'function') {
@@ -1478,75 +1546,21 @@ function _normalizeMessage(template, field, values) {
     }
     return interpolate(template, __assign(__assign({}, values), { _field_: field }));
 }
-function _buildParams(provided, defined, crossTable) {
-    var params = {};
-    if (!defined && !Array.isArray(provided)) {
-        throw new Error('You provided an object params to a rule that has no defined schema.');
+function fillTargetValues(params, crossTable) {
+    if (Array.isArray(params)) {
+        return params;
     }
-    // Rule probably uses an array for their args, keep it as is.
-    if (Array.isArray(provided) && !defined) {
-        return provided;
-    }
-    var definedRules;
-    // collect the params schema.
-    if (!defined || (defined.length < provided.length && Array.isArray(provided))) {
-        var lastDefinedParam_1;
-        // collect any additional parameters in the last item.
-        definedRules = provided.map(function (_, idx) {
-            var param = defined && defined[idx];
-            lastDefinedParam_1 = param || lastDefinedParam_1;
-            if (!param) {
-                param = lastDefinedParam_1;
-            }
-            return param;
-        });
-    }
-    else {
-        definedRules = defined;
-    }
-    // Match the provided array length with a temporary schema.
-    for (var i = 0; i < definedRules.length; i++) {
-        var options = definedRules[i];
-        var value = options.default;
-        // if the provided is an array, map element value.
-        if (Array.isArray(provided)) {
-            if (i in provided) {
-                value = provided[i];
-            }
+    var values = {};
+    var normalize = function (value) {
+        if (isLocator(value)) {
+            return value(crossTable);
         }
-        else {
-            // If the param exists in the provided object.
-            if (options.name in provided) {
-                value = provided[options.name];
-                // if the provided is the first param value.
-            }
-            else if (definedRules.length === 1) {
-                value = provided;
-            }
-        }
-        // if the param is a target, resolve the target value.
-        if (options.isTarget) {
-            value = crossTable[value];
-        }
-        // If there is a transformer defined.
-        if (options.cast) {
-            value = options.cast(value);
-        }
-        // already been set, probably multiple values.
-        if (params[options.name]) {
-            params[options.name] = Array.isArray(params[options.name]) ? params[options.name] : [params[options.name]];
-            params[options.name].push(value);
-        }
-        else {
-            // set the value.
-            params[options.name] = value;
-        }
-    }
-    return params;
-}
-
-function install(_, config) {
-    setConfig(config);
+        return value;
+    };
+    Object.keys(params).forEach(function (param) {
+        values[param] = normalize(params[param]);
+    });
+    return values;
 }
 
 var aggressive = function () { return ({
@@ -1586,6 +1600,11 @@ var setInteractionMode = function (mode, implementation) {
     modes[mode] = implementation;
 };
 
+var EVENT_BUS = new vue__WEBPACK_IMPORTED_MODULE_0___default.a();
+function localeChanged() {
+    EVENT_BUS.$emit('change:locale');
+}
+
 var Dictionary = /** @class */ (function () {
     function Dictionary(locale, dictionary) {
         this.container = {};
@@ -1595,87 +1614,47 @@ var Dictionary = /** @class */ (function () {
     Dictionary.prototype.resolve = function (field, rule, values) {
         return this.format(this.locale, field, rule, values);
     };
-    Dictionary.prototype._hasLocale = function (locale) {
-        return !!this.container[locale];
-    };
     Dictionary.prototype.format = function (locale, field, rule, values) {
+        var _a, _b, _c, _d, _e, _f, _g, _h;
         var message;
         // find if specific message for that field was specified.
-        var dict = this.container[locale] && this.container[locale].fields && this.container[locale].fields[field];
-        if (dict && dict[rule]) {
-            message = dict[rule];
-        }
-        if (!message && this._hasLocale(locale) && this._hasMessage(locale, rule)) {
-            message = this.container[locale].messages[rule];
-        }
+        message = ((_c = (_b = (_a = this.container[locale]) === null || _a === void 0 ? void 0 : _a.fields) === null || _b === void 0 ? void 0 : _b[field]) === null || _c === void 0 ? void 0 : _c[rule]) || ((_e = (_d = this.container[locale]) === null || _d === void 0 ? void 0 : _d.messages) === null || _e === void 0 ? void 0 : _e[rule]);
         if (!message) {
-            message = getConfig().defaultMessage;
+            message = '{field} is not valid';
         }
-        if (this._hasName(locale, field)) {
-            field = this.getName(locale, field);
-        }
+        field = (_h = (_g = (_f = this.container[locale]) === null || _f === void 0 ? void 0 : _f.names) === null || _g === void 0 ? void 0 : _g[field], (_h !== null && _h !== void 0 ? _h : field));
         return isCallable(message) ? message(field, values) : interpolate(message, __assign(__assign({}, values), { _field_: field }));
     };
     Dictionary.prototype.merge = function (dictionary) {
         merge(this.container, dictionary);
     };
     Dictionary.prototype.hasRule = function (name) {
-        var locale = this.container[this.locale];
-        if (!locale)
-            return false;
-        return !!(locale.messages && locale.messages[name]);
-    };
-    Dictionary.prototype.getName = function (locale, key) {
-        return this.container[locale].names[key];
-    };
-    Dictionary.prototype._hasMessage = function (locale, key) {
-        return !!(this._hasLocale(locale) && this.container[locale].messages && this.container[locale].messages[key]);
-    };
-    Dictionary.prototype._hasName = function (locale, key) {
-        return !!(this._hasLocale(locale) && this.container[locale].names && this.container[locale].names[key]);
+        var _a, _b;
+        return !!((_b = (_a = this.container[this.locale]) === null || _a === void 0 ? void 0 : _a.messages) === null || _b === void 0 ? void 0 : _b[name]);
     };
     return Dictionary;
 }());
 var DICTIONARY;
-var INSTALLED = false;
-function updateRules() {
-    if (INSTALLED) {
-        return;
-    }
-    RuleContainer.iterate(function (name, schema) {
-        var _a, _b;
-        if (schema.message && !DICTIONARY.hasRule(name)) {
-            DICTIONARY.merge((_a = {},
-                _a[DICTIONARY.locale] = {
-                    messages: (_b = {},
-                        _b[name] = schema.message,
-                        _b)
-                },
-                _a));
-        }
-        extend(name, {
-            message: function (field, values) {
-                return DICTIONARY.resolve(field, name, values || {});
-            }
-        });
-    });
-    INSTALLED = true;
-}
 function localize(locale, dictionary) {
     var _a;
     if (!DICTIONARY) {
         DICTIONARY = new Dictionary('en', {});
+        setConfig({
+            defaultMessage: function (field, values) {
+                var _a;
+                return DICTIONARY.resolve(field, (_a = values) === null || _a === void 0 ? void 0 : _a._rule_, values || {});
+            }
+        });
     }
     if (typeof locale === 'string') {
         DICTIONARY.locale = locale;
         if (dictionary) {
             DICTIONARY.merge((_a = {}, _a[locale] = dictionary, _a));
         }
-        updateRules();
+        localeChanged();
         return;
     }
     DICTIONARY.merge(locale);
-    updateRules();
 }
 
 var isEvent = function (evt) {
@@ -1693,6 +1672,7 @@ var isEvent = function (evt) {
     return false;
 };
 function normalizeEventValue(value) {
+    var _a, _b;
     if (!isEvent(value)) {
         return value;
     }
@@ -1701,7 +1681,7 @@ function normalizeEventValue(value) {
         return toArray(input.files);
     }
     // If the input has a `v-model.number` modifier applied.
-    if (input._vModifiers && input._vModifiers.number) {
+    if ((_a = input._vModifiers) === null || _a === void 0 ? void 0 : _a.number) {
         // as per the spec the v-model.number uses parseFloat
         var valueAsNumber = parseFloat(input.value);
         if (isNaN(valueAsNumber)) {
@@ -1709,7 +1689,7 @@ function normalizeEventValue(value) {
         }
         return valueAsNumber;
     }
-    if (input._vModifiers && input._vModifiers.trim) {
+    if ((_b = input._vModifiers) === null || _b === void 0 ? void 0 : _b.trim) {
         var trimmedValue = typeof input.value === 'string' ? input.value.trim() : input.value;
         return trimmedValue;
     }
@@ -1717,7 +1697,8 @@ function normalizeEventValue(value) {
 }
 
 var isTextInput = function (vnode) {
-    var attrs = (vnode.data && vnode.data.attrs) || vnode.elm;
+    var _a, _b;
+    var attrs = ((_a = vnode.data) === null || _a === void 0 ? void 0 : _a.attrs) || vnode.elm;
     // it will fallback to being a text input per browsers spec.
     if (vnode.tag === 'input' && (!attrs || !attrs.type)) {
         return true;
@@ -1725,7 +1706,7 @@ var isTextInput = function (vnode) {
     if (vnode.tag === 'textarea') {
         return true;
     }
-    return includes(['text', 'password', 'search', 'email', 'tel', 'url', 'number'], attrs && attrs.type);
+    return includes(['text', 'password', 'search', 'email', 'tel', 'url', 'number'], (_b = attrs) === null || _b === void 0 ? void 0 : _b.type);
 };
 // export const isCheckboxOrRadioInput = (vnode: VNode): boolean => {
 //   const attrs = (vnode.data && vnode.data.attrs) || vnode.elm;
@@ -1749,17 +1730,18 @@ function findModel(vnode) {
     return find(vnode.data.directives, function (d) { return d.name === 'model'; });
 }
 function findValue(vnode) {
+    var _a, _b, _c;
     var model = findModel(vnode);
     if (model) {
         return { value: model.value };
     }
     var config = findModelConfig(vnode);
-    var prop = (config && config.prop) || 'value';
-    if (vnode.componentOptions && vnode.componentOptions.propsData && prop in vnode.componentOptions.propsData) {
+    var prop = ((_a = config) === null || _a === void 0 ? void 0 : _a.prop) || 'value';
+    if (((_b = vnode.componentOptions) === null || _b === void 0 ? void 0 : _b.propsData) && prop in vnode.componentOptions.propsData) {
         var propsDataWithValue = vnode.componentOptions.propsData;
         return { value: propsDataWithValue[prop] };
     }
-    if (vnode.data && vnode.data.domProps && 'value' in vnode.data.domProps) {
+    if (((_c = vnode.data) === null || _c === void 0 ? void 0 : _c.domProps) && 'value' in vnode.data.domProps) {
         return { value: vnode.data.domProps.value };
     }
     return undefined;
@@ -1854,13 +1836,14 @@ function addVNodeListener(vnode, eventName, handler) {
 }
 // Determines if `change` should be used over `input` for listeners.
 function getInputEventName(vnode, model) {
+    var _a, _b;
     // Is a component.
     if (vnode.componentOptions) {
         var event_1 = (findModelConfig(vnode) || { event: 'input' }).event;
         return event_1;
     }
     // Lazy Models typically use change event
-    if (model && model.modifiers && model.modifiers.lazy) {
+    if ((_b = (_a = model) === null || _a === void 0 ? void 0 : _a.modifiers) === null || _b === void 0 ? void 0 : _b.lazy) {
         return 'change';
     }
     // is a textual-type input.
@@ -1886,40 +1869,42 @@ function normalizeSlots(slots, ctx) {
     }, acc);
 }
 function resolveTextualRules(vnode) {
-    var attrs = vnode.data && vnode.data.attrs;
+    var _a;
+    var attrs = (_a = vnode.data) === null || _a === void 0 ? void 0 : _a.attrs;
     var rules = {};
     if (!attrs)
         return rules;
-    if (attrs.type === 'email') {
+    if (attrs.type === 'email' && RuleContainer.getRuleDefinition('email')) {
         rules.email = ['multiple' in attrs];
     }
-    if (attrs.pattern) {
+    if (attrs.pattern && RuleContainer.getRuleDefinition('regex')) {
         rules.regex = attrs.pattern;
     }
-    if (attrs.maxlength >= 0) {
+    if (attrs.maxlength >= 0 && RuleContainer.getRuleDefinition('max')) {
         rules.max = attrs.maxlength;
     }
-    if (attrs.minlength >= 0) {
+    if (attrs.minlength >= 0 && RuleContainer.getRuleDefinition('min')) {
         rules.min = attrs.minlength;
     }
     if (attrs.type === 'number') {
-        if (isSpecified(attrs.min)) {
+        if (isSpecified(attrs.min) && RuleContainer.getRuleDefinition('min_value')) {
             rules.min_value = Number(attrs.min);
         }
-        if (isSpecified(attrs.max)) {
+        if (isSpecified(attrs.max) && RuleContainer.getRuleDefinition('max_value')) {
             rules.max_value = Number(attrs.max);
         }
     }
     return rules;
 }
 function resolveRules(vnode) {
-    var htmlTags = ['input', 'select'];
-    var attrs = vnode.data && vnode.data.attrs;
+    var _a;
+    var htmlTags = ['input', 'select', 'textarea'];
+    var attrs = (_a = vnode.data) === null || _a === void 0 ? void 0 : _a.attrs;
     if (!includes(htmlTags, vnode.tag) || !attrs) {
         return {};
     }
     var rules = {};
-    if ('required' in attrs && attrs.required !== false) {
+    if ('required' in attrs && attrs.required !== false && RuleContainer.getRuleDefinition('required')) {
         rules.required = attrs.type === 'checkbox' ? [true] : true;
     }
     if (isTextInput(vnode)) {
@@ -1957,7 +1942,7 @@ function shouldValidate(ctx, value) {
     return false;
 }
 function createValidationCtx(ctx) {
-    return __assign(__assign({}, ctx.flags), { errors: ctx.messages, classes: ctx.classes, failedRules: ctx.failedRules, reset: function () { return ctx.reset(); }, validate: function () {
+    return __assign(__assign({}, ctx.flags), { errors: ctx.errors, classes: ctx.classes, failedRules: ctx.failedRules, reset: function () { return ctx.reset(); }, validate: function () {
             var args = [];
             for (var _i = 0; _i < arguments.length; _i++) {
                 args[_i] = arguments[_i];
@@ -1969,7 +1954,7 @@ function createValidationCtx(ctx) {
             'aria-errormessage': "vee_" + ctx.id
         }, ariaMsg: {
             id: "vee_" + ctx.id,
-            'aria-live': ctx.messages.length ? 'assertive' : 'off'
+            'aria-live': ctx.errors.length ? 'assertive' : 'off'
         } });
 }
 function onRenderUpdate(vm, value) {
@@ -1983,15 +1968,16 @@ function onRenderUpdate(vm, value) {
     if (!validateNow) {
         return;
     }
-    vm.validateSilent().then(vm.immediate || vm.flags.validated ? vm.applyResult : identity);
+    var validate = function () { return vm.validateSilent().then(vm.immediate || vm.flags.validated ? vm.applyResult : identity); };
+    if (vm.initialized) {
+        validate();
+        return;
+    }
+    vm.$once('hook:mounted', function () { return validate(); });
 }
 function computeModeSetting(ctx) {
     var compute = (isCallable(ctx.mode) ? ctx.mode : modes[ctx.mode]);
-    return compute({
-        errors: ctx.messages,
-        value: ctx.value,
-        flags: ctx.flags
-    });
+    return compute(ctx);
 }
 // Creates the common handlers for a validatable context.
 function createCommonHandlers(vm) {
@@ -2035,11 +2021,12 @@ function createCommonHandlers(vm) {
 }
 // Adds all plugin listeners to the vnode.
 function addListeners(vm, node) {
+    var _a;
     var value = findValue(node);
     // cache the input eventName.
     vm._inputEventName = vm._inputEventName || getInputEventName(node, findModel(node));
-    onRenderUpdate(vm, value && value.value);
-    var _a = createCommonHandlers(vm), onInput = _a.onInput, onBlur = _a.onBlur, onValidate = _a.onValidate;
+    onRenderUpdate(vm, (_a = value) === null || _a === void 0 ? void 0 : _a.value);
+    var _b = createCommonHandlers(vm), onInput = _b.onInput, onBlur = _b.onBlur, onValidate = _b.onValidate;
     addVNodeListener(node, vm._inputEventName, onInput);
     addVNodeListener(node, 'blur', onBlur);
     // add the validation listeners.
@@ -2051,15 +2038,15 @@ function addListeners(vm, node) {
 
 var PROVIDER_COUNTER = 0;
 function data() {
-    var messages = [];
+    var errors = [];
     var defaultValues = {
-        messages: messages,
+        errors: errors,
         value: undefined,
         initialized: false,
         initialValue: undefined,
         flags: createFlags(),
         failedRules: {},
-        isDeactivated: false,
+        isActive: true,
         id: ''
     };
     return defaultValues;
@@ -2096,10 +2083,6 @@ var ValidationProvider = vue__WEBPACK_IMPORTED_MODULE_0___default.a.extend({
             default: null
         },
         immediate: {
-            type: Boolean,
-            default: false
-        },
-        persist: {
             type: Boolean,
             default: false
         },
@@ -2146,10 +2129,8 @@ var ValidationProvider = vue__WEBPACK_IMPORTED_MODULE_0___default.a.extend({
     computed: {
         fieldDeps: function () {
             var _this = this;
-            return Object.keys(this.normalizedRules)
-                .filter(RuleContainer.isTargetRule)
-                .reduce(function (acc, rule) {
-                var deps = RuleContainer.getTargetParamNames(rule, _this.normalizedRules[rule]);
+            return Object.keys(this.normalizedRules).reduce(function (acc, rule) {
+                var deps = extractLocators(_this.normalizedRules[rule]).map(function (dep) { return dep.__locatorRef; });
                 acc.push.apply(acc, deps);
                 deps.forEach(function (depName) {
                     watchCrossFieldDep(_this, depName);
@@ -2181,6 +2162,31 @@ var ValidationProvider = vue__WEBPACK_IMPORTED_MODULE_0___default.a.extend({
             return normalizeRules(this.rules);
         }
     },
+    created: function () {
+        var _this = this;
+        var onLocaleChanged = function () {
+            if (!_this.flags.validated) {
+                return;
+            }
+            var regenerateMap = _this._regenerateMap;
+            if (regenerateMap) {
+                var errors_1 = [];
+                var failedRules_1 = {};
+                Object.keys(regenerateMap).forEach(function (rule) {
+                    var msg = regenerateMap[rule]();
+                    errors_1.push(msg);
+                    failedRules_1[rule] = msg;
+                });
+                _this.applyResult({ errors: errors_1, failedRules: failedRules_1, regenerateMap: regenerateMap });
+                return;
+            }
+            _this.validate();
+        };
+        EVENT_BUS.$on('change:locale', onLocaleChanged);
+        this.$on('hook:beforeDestroy', function () {
+            EVENT_BUS.$off('change:locale', onLocaleChanged);
+        });
+    },
     render: function (h) {
         var _this = this;
         this.registerField();
@@ -2188,22 +2194,27 @@ var ValidationProvider = vue__WEBPACK_IMPORTED_MODULE_0___default.a.extend({
         var children = normalizeChildren(this, ctx);
         // Handle single-root slot.
         extractVNodes(children).forEach(function (input) {
-            _this._resolvedRules = getConfig().useConstraintAttrs ? resolveRules(input) : {};
+            // resolved rules are not reactive because it has a new reference each time.
+            // causing infinite render-loops.
+            // So we are comparing them manually to decide if we need to validate or not.
+            var resolved = getConfig().useConstraintAttrs ? resolveRules(input) : {};
+            if (!isEqual(_this._resolvedRules, resolved)) {
+                _this._needsValidation = true;
+            }
+            _this._resolvedRules = resolved;
             addListeners(_this, input);
         });
         return this.slim && children.length <= 1 ? children[0] : h(this.tag, children);
     },
     beforeDestroy: function () {
         // cleanup reference.
-        this.$_veeObserver.unsubscribe(this.id);
+        this.$_veeObserver.unobserve(this.id);
     },
     activated: function () {
-        this.$_veeObserver.subscribe(this);
-        this.isDeactivated = false;
+        this.isActive = true;
     },
     deactivated: function () {
-        this.$_veeObserver.unsubscribe(this.id);
-        this.isDeactivated = true;
+        this.isActive = false;
     },
     methods: {
         setFlags: function (flags) {
@@ -2218,11 +2229,12 @@ var ValidationProvider = vue__WEBPACK_IMPORTED_MODULE_0___default.a.extend({
             this.flags.changed = this.initialValue !== value;
         },
         reset: function () {
-            this.messages = [];
+            this.errors = [];
             this.initialValue = this.value;
             var flags = createFlags();
             flags.required = this.isRequired;
             this.setFlags(flags);
+            this.failedRules = {};
             this.validateSilent();
         },
         validate: function () {
@@ -2261,18 +2273,14 @@ var ValidationProvider = vue__WEBPACK_IMPORTED_MODULE_0___default.a.extend({
                                 enumerable: false,
                                 configurable: false
                             });
-                            return [4 /*yield*/, validate(this.value, rules, {
-                                    name: this.name,
-                                    values: createValuesLookup(this),
-                                    bails: this.bails,
-                                    skipIfEmpty: this.skipIfEmpty,
-                                    isInitial: !this.initialized,
-                                    customMessages: this.customMessages
-                                })];
+                            return [4 /*yield*/, validate(this.value, rules, __assign(__assign({ name: this.name }, createLookup(this)), { bails: this.bails, skipIfEmpty: this.skipIfEmpty, isInitial: !this.initialized, customMessages: this.customMessages }))];
                         case 1:
                             result = _a.sent();
-                            this.setFlags({ pending: false });
-                            this.setFlags({ valid: result.valid, invalid: !result.valid });
+                            this.setFlags({
+                                pending: false,
+                                valid: result.valid,
+                                invalid: !result.valid
+                            });
                             return [2 /*return*/, result];
                     }
                 });
@@ -2282,14 +2290,17 @@ var ValidationProvider = vue__WEBPACK_IMPORTED_MODULE_0___default.a.extend({
             this.applyResult({ errors: errors, failedRules: {} });
         },
         applyResult: function (_a) {
-            var errors = _a.errors, failedRules = _a.failedRules;
-            this.messages = errors;
+            var errors = _a.errors, failedRules = _a.failedRules, regenerateMap = _a.regenerateMap;
+            this.errors = errors;
+            this._regenerateMap = regenerateMap;
             this.failedRules = __assign({}, (failedRules || {}));
             this.setFlags({
                 valid: !errors.length,
-                changed: this.value !== this.initialValue,
+                passed: !errors.length,
                 invalid: !!errors.length,
-                validated: true
+                failed: !!errors.length,
+                validated: true,
+                changed: this.value !== this.initialValue
             });
         },
         registerField: function () {
@@ -2297,14 +2308,46 @@ var ValidationProvider = vue__WEBPACK_IMPORTED_MODULE_0___default.a.extend({
         }
     }
 });
-function createValuesLookup(vm) {
+function computeClassObj(names, flags) {
+    var acc = {};
+    var keys = Object.keys(flags);
+    var length = keys.length;
+    var _loop_1 = function (i) {
+        var flag = keys[i];
+        var className = (names && names[flag]) || flag;
+        var value = flags[flag];
+        if (isNullOrUndefined(value)) {
+            return "continue";
+        }
+        if ((flag === 'valid' || flag === 'invalid') && !flags.validated) {
+            return "continue";
+        }
+        if (typeof className === 'string') {
+            acc[className] = value;
+        }
+        else if (Array.isArray(className)) {
+            className.forEach(function (cls) {
+                acc[cls] = value;
+            });
+        }
+    };
+    for (var i = 0; i < length; i++) {
+        _loop_1(i);
+    }
+    return acc;
+}
+function createLookup(vm) {
     var providers = vm.$_veeObserver.refs;
-    var reduced = {};
+    var reduced = {
+        names: {},
+        values: {}
+    };
     return vm.fieldDeps.reduce(function (acc, depName) {
         if (!providers[depName]) {
             return acc;
         }
-        acc[depName] = providers[depName].value;
+        acc.values[depName] = providers[depName].value;
+        acc.names[depName] = providers[depName].name;
         return acc;
     }, reduced);
 }
@@ -2325,23 +2368,23 @@ function updateRenderingContextRefs(vm) {
     var providedId = extractId(vm);
     var id = vm.id;
     // Nothing has changed.
-    if (vm.isDeactivated || (id === providedId && vm.$_veeObserver.refs[id])) {
+    if (!vm.isActive || (id === providedId && vm.$_veeObserver.refs[id])) {
         return;
     }
     // vid was changed.
     if (id !== providedId && vm.$_veeObserver.refs[id] === vm) {
-        vm.$_veeObserver.unsubscribe(id);
+        vm.$_veeObserver.unobserve(id);
     }
     vm.id = providedId;
-    vm.$_veeObserver.subscribe(vm);
+    vm.$_veeObserver.observe(vm);
 }
 function createObserver() {
     return {
         refs: {},
-        subscribe: function (vm) {
+        observe: function (vm) {
             this.refs[vm.id] = vm;
         },
-        unsubscribe: function (id) {
+        unobserve: function (id) {
             delete this.refs[id];
         }
     };
@@ -2367,43 +2410,44 @@ function watchCrossFieldDep(ctx, depName, withHooks) {
     }
 }
 
-var flagMergingStrategy = {
-    pristine: 'every',
-    dirty: 'some',
-    touched: 'some',
-    untouched: 'every',
-    valid: 'every',
-    invalid: 'some',
-    pending: 'some',
-    validated: 'every',
-    changed: 'some'
-};
-function mergeFlags(lhs, rhs, strategy) {
-    var stratName = flagMergingStrategy[strategy];
-    return [lhs, rhs][stratName](function (f) { return f; });
-}
+var FLAGS_STRATEGIES = [
+    ['pristine', 'every'],
+    ['dirty', 'some'],
+    ['touched', 'some'],
+    ['untouched', 'every'],
+    ['valid', 'every'],
+    ['invalid', 'some'],
+    ['pending', 'some'],
+    ['validated', 'every'],
+    ['changed', 'some'],
+    ['passed', 'every'],
+    ['failed', 'some']
+];
 var OBSERVER_COUNTER = 0;
 function data$1() {
     var refs = {};
-    var refsByName = {};
-    var inactiveRefs = {};
+    var errors = {};
+    var flags = createObserverFlags();
+    var fields = {};
     // FIXME: Not sure of this one can be typed, circular type reference.
     var observers = [];
     return {
         id: '',
         refs: refs,
-        refsByName: refsByName,
         observers: observers,
-        inactiveRefs: inactiveRefs
+        errors: errors,
+        flags: flags,
+        fields: fields
+    };
+}
+function provideSelf() {
+    return {
+        $_veeObserver: this
     };
 }
 var ValidationObserver = vue__WEBPACK_IMPORTED_MODULE_0___default.a.extend({
     name: 'ValidationObserver',
-    provide: function () {
-        return {
-            $_veeObserver: this
-        };
-    },
+    provide: provideSelf,
     inject: {
         $_veeObserver: {
             from: '$_veeObserver',
@@ -2436,94 +2480,49 @@ var ValidationObserver = vue__WEBPACK_IMPORTED_MODULE_0___default.a.extend({
         }
     },
     data: data$1,
-    computed: {
-        ctx: function () {
-            var _this = this;
-            var ctx = {
-                errors: {},
-                passes: function (cb) {
-                    return _this.validate().then(function (result) {
-                        if (result) {
-                            return cb();
-                        }
-                    });
-                },
-                validate: function () {
-                    var args = [];
-                    for (var _i = 0; _i < arguments.length; _i++) {
-                        args[_i] = arguments[_i];
-                    }
-                    return _this.validate.apply(_this, args);
-                },
-                reset: function () { return _this.reset(); }
-            };
-            return __spreadArrays(values(this.refs), Object.keys(this.inactiveRefs).map(function (key) {
-                return {
-                    vid: key,
-                    flags: _this.inactiveRefs[key].flags,
-                    messages: _this.inactiveRefs[key].errors
-                };
-            }), this.observers).reduce(function (acc, provider) {
-                Object.keys(flagMergingStrategy).forEach(function (flag) {
-                    var flags = provider.flags || provider.ctx;
-                    if (!(flag in acc)) {
-                        acc[flag] = flags[flag];
-                        return;
-                    }
-                    acc[flag] = mergeFlags(acc[flag], flags[flag], flag);
-                });
-                acc.errors[provider.id] =
-                    provider.messages ||
-                        values(provider.ctx.errors).reduce(function (errs, obsErrors) {
-                            return errs.concat(obsErrors);
-                        }, []);
-                return acc;
-            }, ctx);
-        }
-    },
     created: function () {
+        var _this = this;
         this.id = this.vid;
-        if (this.$_veeObserver) {
-            this.$_veeObserver.subscribe(this, 'observer');
-        }
+        register(this);
+        var onChange = debounce(function (_a) {
+            var errors = _a.errors, flags = _a.flags, fields = _a.fields;
+            _this.errors = errors;
+            _this.flags = flags;
+            _this.fields = fields;
+        }, 16);
+        this.$watch(computeObserverState, onChange);
     },
     activated: function () {
-        if (this.$_veeObserver) {
-            this.$_veeObserver.subscribe(this, 'observer');
-        }
+        register(this);
     },
     deactivated: function () {
-        if (this.$_veeObserver) {
-            this.$_veeObserver.unsubscribe(this.id, 'observer');
-        }
+        unregister(this);
     },
     beforeDestroy: function () {
-        if (this.$_veeObserver) {
-            this.$_veeObserver.unsubscribe(this.id, 'observer');
-        }
+        unregister(this);
     },
     render: function (h) {
-        var children = normalizeChildren(this, this.ctx);
+        var children = normalizeChildren(this, prepareSlotProps(this));
         return this.slim && children.length <= 1 ? children[0] : h(this.tag, { on: this.$listeners }, children);
     },
     methods: {
-        subscribe: function (subscriber, kind) {
-            var _a, _b;
+        observe: function (subscriber, kind) {
+            var _a;
             if (kind === void 0) { kind = 'provider'; }
             if (kind === 'observer') {
                 this.observers.push(subscriber);
                 return;
             }
             this.refs = __assign(__assign({}, this.refs), (_a = {}, _a[subscriber.id] = subscriber, _a));
-            this.refsByName = __assign(__assign({}, this.refsByName), (_b = {}, _b[subscriber.name] = subscriber, _b));
-            if (subscriber.persist) {
-                this.restoreProviderState(subscriber);
-            }
         },
-        unsubscribe: function (id, kind) {
+        unobserve: function (id, kind) {
             if (kind === void 0) { kind = 'provider'; }
             if (kind === 'provider') {
-                this.removeProvider(id);
+                var provider = this.refs[id];
+                if (!provider) {
+                    return;
+                }
+                this.$delete(this.refs, id);
                 return;
             }
             var idx = findIndex(this.observers, function (o) { return o.id === id; });
@@ -2547,50 +2546,29 @@ var ValidationObserver = vue__WEBPACK_IMPORTED_MODULE_0___default.a.extend({
                 });
             });
         },
-        reset: function () {
-            var _this = this;
-            Object.keys(this.inactiveRefs).forEach(function (key) {
-                _this.$delete(_this.inactiveRefs, key);
-            });
-            return __spreadArrays(values(this.refs), this.observers).forEach(function (ref) { return ref.reset(); });
-        },
-        restoreProviderState: function (provider) {
-            var id = provider.id;
-            var state = this.inactiveRefs[id];
-            if (!state) {
-                return;
-            }
-            provider.setFlags(state.flags);
-            provider.applyResult(state);
-            this.$delete(this.inactiveRefs, provider.id);
-        },
-        removeProvider: function (id) {
-            var provider = this.refs[id];
-            if (!provider) {
-                // FIXME: inactive refs are not being cleaned up.
-                return;
-            }
-            if (provider.persist) {
-                /* istanbul ignore next */
-                if (true) {
-                    if (id.indexOf('_vee_') === 0) {
-                        warn('Please provide a `vid` or a `name` prop when using `persist`, there might be unexpected issues otherwise.');
+        handleSubmit: function (cb) {
+            return __awaiter(this, void 0, void 0, function () {
+                var isValid;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0: return [4 /*yield*/, this.validate()];
+                        case 1:
+                            isValid = _a.sent();
+                            if (!isValid || !cb) {
+                                return [2 /*return*/];
+                            }
+                            return [2 /*return*/, cb()];
                     }
-                }
-                // save it for the next time.
-                this.inactiveRefs[id] = {
-                    flags: provider.flags,
-                    errors: provider.messages,
-                    failedRules: provider.failedRules
-                };
-            }
-            this.$delete(this.refs, id);
-            this.$delete(this.refsByName, provider.name);
+                });
+            });
+        },
+        reset: function () {
+            return __spreadArrays(values(this.refs), this.observers).forEach(function (ref) { return ref.reset(); });
         },
         setErrors: function (errors) {
             var _this = this;
             Object.keys(errors).forEach(function (key) {
-                var provider = _this.refs[key] || _this.refsByName[key];
+                var provider = _this.refs[key];
                 if (!provider)
                     return;
                 provider.setErrors(errors[key] || []);
@@ -2601,9 +2579,51 @@ var ValidationObserver = vue__WEBPACK_IMPORTED_MODULE_0___default.a.extend({
         }
     }
 });
+function unregister(vm) {
+    if (vm.$_veeObserver) {
+        vm.$_veeObserver.unobserve(vm.id, 'observer');
+    }
+}
+function register(vm) {
+    if (vm.$_veeObserver) {
+        vm.$_veeObserver.observe(vm, 'observer');
+    }
+}
+function prepareSlotProps(vm) {
+    return __assign(__assign({}, vm.flags), { errors: vm.errors, fields: vm.fields, validate: vm.validate, passes: vm.handleSubmit, handleSubmit: vm.handleSubmit, reset: vm.reset });
+}
+// Creates a modified version of validation flags
+function createObserverFlags() {
+    return __assign(__assign({}, createFlags()), { valid: true, invalid: false });
+}
+function computeObserverState() {
+    var vms = __spreadArrays(values(this.refs), this.observers);
+    var errors = {};
+    var flags = createObserverFlags();
+    var fields = {};
+    var length = vms.length;
+    for (var i = 0; i < length; i++) {
+        var vm = vms[i];
+        // validation provider
+        if (Array.isArray(vm.errors)) {
+            errors[vm.id] = vm.errors;
+            fields[vm.id] = __assign({ id: vm.id, name: vm.name, failedRules: vm.failedRules }, vm.flags);
+            continue;
+        }
+        // Nested observer, merge errors and fields
+        errors = __assign(__assign({}, errors), vm.errors);
+        fields = __assign(__assign({}, fields), vm.fields);
+    }
+    FLAGS_STRATEGIES.forEach(function (_a) {
+        var flag = _a[0], method = _a[1];
+        flags[flag] = vms[method](function (vm) { return vm.flags[flag]; });
+    });
+    return { errors: errors, flags: flags, fields: fields };
+}
 
 function withValidation(component, mapProps) {
     if (mapProps === void 0) { mapProps = identity; }
+    var _a, _b;
     var options = 'options' in component ? component.options : component;
     var providerOpts = ValidationProvider.options;
     var hoc = {
@@ -2615,17 +2635,18 @@ function withValidation(component, mapProps) {
         beforeDestroy: providerOpts.beforeDestroy,
         inject: providerOpts.inject
     };
-    var eventName = (options.model && options.model.event) || 'input';
+    var eventName = ((_b = (_a = options) === null || _a === void 0 ? void 0 : _a.model) === null || _b === void 0 ? void 0 : _b.event) || 'input';
     hoc.render = function (h) {
         var _a;
+        var _b, _c;
         this.registerField();
         var vctx = createValidationCtx(this);
         var listeners = __assign({}, this.$listeners);
         var model = findModel(this.$vnode);
         this._inputEventName = this._inputEventName || getInputEventName(this.$vnode, model);
         var value = findValue(this.$vnode);
-        onRenderUpdate(this, value && value.value);
-        var _b = createCommonHandlers(this), onInput = _b.onInput, onBlur = _b.onBlur, onValidate = _b.onValidate;
+        onRenderUpdate(this, (_b = value) === null || _b === void 0 ? void 0 : _b.value);
+        var _d = createCommonHandlers(this), onInput = _d.onInput, onBlur = _d.onBlur, onValidate = _d.onValidate;
         mergeVNodeListeners(listeners, eventName, onInput);
         mergeVNodeListeners(listeners, 'blur', onBlur);
         this.normalizedEvents.forEach(function (evt) {
@@ -2634,7 +2655,7 @@ function withValidation(component, mapProps) {
         // Props are any attrs not associated with ValidationProvider Plus the model prop.
         // WARNING: Accidental prop overwrite will probably happen.
         var prop = (findModelConfig(this.$vnode) || { prop: 'value' }).prop;
-        var props = __assign(__assign(__assign({}, this.$attrs), (_a = {}, _a[prop] = model && model.value, _a)), mapProps(vctx));
+        var props = __assign(__assign(__assign({}, this.$attrs), (_a = {}, _a[prop] = (_c = model) === null || _c === void 0 ? void 0 : _c.value, _a)), mapProps(vctx));
         return h(options, {
             attrs: this.$attrs,
             props: props,
@@ -2644,7 +2665,7 @@ function withValidation(component, mapProps) {
     return hoc;
 }
 
-var version = '3.0.11';
+var version = '3.2.1';
 
 
 
@@ -2716,6 +2737,7 @@ var defer = function defer() {
   return deferred;
 };
 
+var ownProp = Object.prototype.hasOwnProperty;
 function createRecaptcha() {
   var deferred = defer();
   return {
@@ -2751,7 +2773,7 @@ function createRecaptcha() {
       });
     },
     checkRecaptchaLoad: function checkRecaptchaLoad() {
-      if (window.hasOwnProperty('grecaptcha') && window.grecaptcha.hasOwnProperty('render')) {
+      if (ownProp.call(window, 'grecaptcha') && ownProp.call(window.grecaptcha, 'render')) {
         this.notify();
       }
     },
@@ -2801,6 +2823,10 @@ var VueRecaptcha = {
     recaptchaHost: {
       type: String,
       "default": 'www.google.com'
+    },
+    language: {
+      type: String,
+      "default": ''
     }
   },
   beforeMount: function beforeMount() {
@@ -2809,7 +2835,7 @@ var VueRecaptcha = {
         // Note: vueRecaptchaApiLoaded load callback name is per the latest documentation
         var script = document.createElement('script');
         script.id = this.recaptchaScriptId;
-        script.src = "https://" + this.recaptchaHost + "/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit";
+        script.src = "https://" + this.recaptchaHost + "/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit&hl=" + this.language;
         script.async = true;
         script.defer = true;
         document.head.appendChild(script);
@@ -2823,7 +2849,8 @@ var VueRecaptcha = {
 
     var opts = _extends({}, this.$props, {
       callback: this.emitVerify,
-      'expired-callback': this.emitExpired
+      'expired-callback': this.emitExpired,
+      'error-callback': this.emitError
     });
 
     var container = this.$slots["default"] ? this.$el.children[0] : this.$el;
@@ -2845,6 +2872,9 @@ var VueRecaptcha = {
     },
     emitExpired: function emitExpired() {
       this.$emit('expired');
+    },
+    emitError: function emitError() {
+      this.$emit('error');
     }
   },
   render: function render(h) {
