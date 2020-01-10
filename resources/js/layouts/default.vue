@@ -8,26 +8,26 @@
       <v-container fill-height text-center>
         <v-layout align-center justify-center>
           <v-flex>
-            <h3 class="white--text font-weight-regular display-3"><span v-html="$t('hello_guys', { name: settings.name.value })"/></h3>
-            <span class="font-weight-regular headline white--text">{{ $t('i_am') }} <span class="typelist-skill">{{ settings.profession.value }}</span></span>
+            <h3 v-if="settings.name"  class="white--text font-weight-regular display-3"><span v-html="$t('hello_guys', { name: settings.name.value })"/></h3>
+            <span v-if="settings.profession" class="font-weight-regular headline white--text">{{ $t('i_am') }} <span class="typelist-skill">{{ settings.profession.value }}</span></span>
             <v-divider class="my-3" dark/>
             <v-layout justify-space-around>
-              <v-btn v-if="settings.facebook.value" :href="settings.facebook.value" target="_blank" outlined fab color="white">
+              <v-btn v-if="settings.facebook" :href="settings.facebook.value" target="_blank" outlined fab color="white">
                 <v-icon class="fa-hover" dark>mdi-facebook</v-icon>
               </v-btn>
-              <v-btn v-if="settings.twitter.value" :href="settings.twitter.value" target="_blank" outlined fab color="white">
+              <v-btn v-if="settings.twitter" :href="settings.twitter.value" target="_blank" outlined fab color="white">
                 <v-icon class="fa-hover" dark>mdi-twitter</v-icon>
               </v-btn>
-              <v-btn v-if="settings.linkedin.value" :href="settings.linkedin.value" target="_blank" outlined fab color="white">
+              <v-btn v-if="settings.linkedin" :href="settings.linkedin.value" target="_blank" outlined fab color="white">
                 <v-icon class="fa-hover" dark>mdi-linkedin</v-icon>
               </v-btn>
-              <v-btn v-if="settings.github.value" :href="settings.github.value" target="_blank" outlined fab color="white">
+              <v-btn v-if="settings.github" :href="settings.github.value" target="_blank" outlined fab color="white">
                 <v-icon class="fa-hover" dark>mdi-github-circle</v-icon>
               </v-btn>
-              <v-btn v-if="settings.gitlab.value" :href="settings.gitlab.value" target="_blank" outlined fab color="white">
+              <v-btn v-if="settings.gitlab" :href="settings.gitlab.value" target="_blank" outlined fab color="white">
                 <v-icon class="fa-hover" dark>mdi-gitlab</v-icon>
               </v-btn>
-              <v-btn v-if="settings.bitbucket.value" :href="settings.bitbucket.value" target="_blank" outlined fab color="white">
+              <v-btn v-if="settings.bitbucket" :href="settings.bitbucket.value" target="_blank" outlined fab color="white">
                 <v-icon class="fa-hover" dark>mdi-bitbucket</v-icon>
               </v-btn>
             </v-layout>
@@ -45,7 +45,7 @@
       <v-layout row wrap align-center>
         <v-flex xs12>
           <div class="text-center">
-            &copy; 2017 - {{ year }} {{ settings.app_name.value }}. {{ $t('all_rights_reserved') }}
+            &copy; 2017 - {{ year }} <span v-if="settings.app_name">{{ settings.app_name.value }}</span>. {{ $t('all_rights_reserved') }}
           </div>
         </v-flex>
       </v-layout>

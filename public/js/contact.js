@@ -91,13 +91,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       loading: false
     };
   },
-  mounted: function mounted() {
-    console.log('mounted');
-    console.log(this.$i18n.locale); //localize(`${this.$i18n.locale}`, this.$i18n.locale)
-  },
   created: function created() {
-    console.log('created'); //localize({ en, lv });
-
     Object(vee_validate__WEBPACK_IMPORTED_MODULE_3__["configure"])({
       defaultMessage: function defaultMessage(field, values) {
         // override the field name.
@@ -106,26 +100,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       }
     });
     Object(vee_validate__WEBPACK_IMPORTED_MODULE_3__["extend"])('required', vee_validate_dist_rules__WEBPACK_IMPORTED_MODULE_4__["required"]);
-    Object(vee_validate__WEBPACK_IMPORTED_MODULE_3__["extend"])('email', vee_validate_dist_rules__WEBPACK_IMPORTED_MODULE_4__["email"]); // localize({
-    //   lv: {
-    //     messages: {
-    //       required: 'Šis lauks ir obligāts.',
-    //       email: 'Jābūt derīgai e-pasta adresei.',
-    //     }
-    //   }
-    // });
-    //   localize('lv', {
-    //       messages: {
-    //           email: (field) => `Laukam ${field} jābūt derīgai e-pasta adresei.`,
-    //           required: (field) => `Lauks ${field} ir obligāts.`
-    //       },
-    //       attributes: {
-    //           email: 'e-pasts',
-    //           name: 'vārds',
-    //           message: 'vēstule'
-    //       }
-    //   })
-    //   localize({ en, lv });
+    Object(vee_validate__WEBPACK_IMPORTED_MODULE_3__["extend"])('email', vee_validate_dist_rules__WEBPACK_IMPORTED_MODULE_4__["email"]);
   },
   methods: {
     submit: function () {
@@ -651,7 +626,7 @@ var render = function() {
                                             "div",
                                             { staticClass: "flex pb-6" },
                                             [
-                                              _vm.settings.contact_email.value
+                                              _vm.settings.contact_email
                                                 ? _c(
                                                     "div",
                                                     { staticClass: "con-text" },
@@ -700,7 +675,7 @@ var render = function() {
                                             "div",
                                             { staticClass: "social mt-4" },
                                             [
-                                              _vm.settings.facebook.value
+                                              _vm.settings.facebook
                                                 ? _c(
                                                     "v-btn",
                                                     {
@@ -724,7 +699,7 @@ var render = function() {
                                                   )
                                                 : _vm._e(),
                                               _vm._v(" "),
-                                              _vm.settings.twitter.value
+                                              _vm.settings.twitter
                                                 ? _c(
                                                     "v-btn",
                                                     {
@@ -748,7 +723,7 @@ var render = function() {
                                                   )
                                                 : _vm._e(),
                                               _vm._v(" "),
-                                              _vm.settings.linkedin.value
+                                              _vm.settings.linkedin
                                                 ? _c(
                                                     "v-btn",
                                                     {
@@ -772,7 +747,7 @@ var render = function() {
                                                   )
                                                 : _vm._e(),
                                               _vm._v(" "),
-                                              _vm.settings.github.value
+                                              _vm.settings.github
                                                 ? _c(
                                                     "v-btn",
                                                     {
@@ -798,7 +773,7 @@ var render = function() {
                                                   )
                                                 : _vm._e(),
                                               _vm._v(" "),
-                                              _vm.settings.gitlab.value
+                                              _vm.settings.gitlab
                                                 ? _c(
                                                     "v-btn",
                                                     {
@@ -822,7 +797,7 @@ var render = function() {
                                                   )
                                                 : _vm._e(),
                                               _vm._v(" "),
-                                              _vm.settings.bitbucket.value
+                                              _vm.settings.bitbucket
                                                 ? _c(
                                                     "v-btn",
                                                     {
