@@ -64,7 +64,7 @@ class Setting extends SettingModel
         $attribute_name = 'value';
         $disk = 'public';
         $destination_path = 'settings';
-        $type = $field['type'];
+        $type = $field['type'] ?? 'default';
 
         switch ($type) {
             case 'image':
