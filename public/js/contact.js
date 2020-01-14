@@ -626,7 +626,8 @@ var render = function() {
                                             "div",
                                             { staticClass: "flex pb-6" },
                                             [
-                                              _vm.settings.contact_email
+                                              _vm.settings.contact_email &&
+                                              _vm.settings.contact_email.value
                                                 ? _c(
                                                     "div",
                                                     { staticClass: "con-text" },
@@ -675,7 +676,8 @@ var render = function() {
                                             "div",
                                             { staticClass: "social mt-4" },
                                             [
-                                              _vm.settings.facebook
+                                              _vm.settings.facebook &&
+                                              _vm.settings.facebook.value
                                                 ? _c(
                                                     "v-btn",
                                                     {
@@ -699,7 +701,8 @@ var render = function() {
                                                   )
                                                 : _vm._e(),
                                               _vm._v(" "),
-                                              _vm.settings.twitter
+                                              _vm.settings.twitter &&
+                                              _vm.settings.twitter.value
                                                 ? _c(
                                                     "v-btn",
                                                     {
@@ -723,7 +726,8 @@ var render = function() {
                                                   )
                                                 : _vm._e(),
                                               _vm._v(" "),
-                                              _vm.settings.linkedin
+                                              _vm.settings.linkedin &&
+                                              _vm.settings.linkedin.value
                                                 ? _c(
                                                     "v-btn",
                                                     {
@@ -747,7 +751,8 @@ var render = function() {
                                                   )
                                                 : _vm._e(),
                                               _vm._v(" "),
-                                              _vm.settings.github
+                                              _vm.settings.github &&
+                                              _vm.settings.github.value
                                                 ? _c(
                                                     "v-btn",
                                                     {
@@ -773,7 +778,8 @@ var render = function() {
                                                   )
                                                 : _vm._e(),
                                               _vm._v(" "),
-                                              _vm.settings.gitlab
+                                              _vm.settings.gitlab &&
+                                              _vm.settings.gitlab.value
                                                 ? _c(
                                                     "v-btn",
                                                     {
@@ -797,7 +803,8 @@ var render = function() {
                                                   )
                                                 : _vm._e(),
                                               _vm._v(" "),
-                                              _vm.settings.bitbucket
+                                              _vm.settings.bitbucket &&
+                                              _vm.settings.bitbucket.value
                                                 ? _c(
                                                     "v-btn",
                                                     {

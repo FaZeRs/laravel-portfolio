@@ -20666,7 +20666,7 @@ var render = function() {
                   _c(
                     "v-flex",
                     [
-                      _vm.settings.name
+                      _vm.settings.name && _vm.settings.name.value
                         ? _c(
                             "h3",
                             {
@@ -20687,7 +20687,7 @@ var render = function() {
                           )
                         : _vm._e(),
                       _vm._v(" "),
-                      _vm.settings.profession
+                      _vm.settings.profession && _vm.settings.profession.value
                         ? _c(
                             "span",
                             {
@@ -20712,7 +20712,7 @@ var render = function() {
                         "v-layout",
                         { attrs: { "justify-space-around": "" } },
                         [
-                          _vm.settings.facebook
+                          _vm.settings.facebook && _vm.settings.facebook.value
                             ? _c(
                                 "v-btn",
                                 {
@@ -20738,7 +20738,7 @@ var render = function() {
                               )
                             : _vm._e(),
                           _vm._v(" "),
-                          _vm.settings.twitter
+                          _vm.settings.twitter && _vm.settings.twitter.value
                             ? _c(
                                 "v-btn",
                                 {
@@ -20764,7 +20764,7 @@ var render = function() {
                               )
                             : _vm._e(),
                           _vm._v(" "),
-                          _vm.settings.linkedin
+                          _vm.settings.linkedin && _vm.settings.linkedin.value
                             ? _c(
                                 "v-btn",
                                 {
@@ -20790,7 +20790,7 @@ var render = function() {
                               )
                             : _vm._e(),
                           _vm._v(" "),
-                          _vm.settings.github
+                          _vm.settings.github && _vm.settings.github.value
                             ? _c(
                                 "v-btn",
                                 {
@@ -20816,7 +20816,7 @@ var render = function() {
                               )
                             : _vm._e(),
                           _vm._v(" "),
-                          _vm.settings.gitlab
+                          _vm.settings.gitlab && _vm.settings.gitlab.value
                             ? _c(
                                 "v-btn",
                                 {
@@ -20842,7 +20842,7 @@ var render = function() {
                               )
                             : _vm._e(),
                           _vm._v(" "),
-                          _vm.settings.bitbucket
+                          _vm.settings.bitbucket && _vm.settings.bitbucket.value
                             ? _c(
                                 "v-btn",
                                 {
@@ -20904,7 +20904,7 @@ var render = function() {
               _c("v-flex", { attrs: { xs12: "" } }, [
                 _c("div", { staticClass: "text-center" }, [
                   _vm._v("\n          © 2017 - " + _vm._s(_vm.year) + " "),
-                  _vm.settings.app_name
+                  _vm.settings.app_name && _vm.settings.app_name.value
                     ? _c("span", [_vm._v(_vm._s(_vm.settings.app_name.value))])
                     : _vm._e(),
                   _vm._v(
