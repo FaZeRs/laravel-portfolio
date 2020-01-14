@@ -20986,7 +20986,7 @@ var render = function() {
                         [
                           _c("img", {
                             attrs: {
-                              src: "storage/" + _vm.settings.photo.value,
+                              src: _vm.settings.photo.value,
                               alt: _vm.settings.name.value
                             }
                           })

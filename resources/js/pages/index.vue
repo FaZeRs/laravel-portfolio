@@ -4,7 +4,7 @@
       <v-layout align-center justify-space-around row wrap>
         <v-flex xs12 md4 class="text-center">
           <v-avatar v-if="settings.photo" size="300px" class="grey lighten-4">
-            <img :src="'storage/' + settings.photo.value" :alt="settings.name.value">
+            <img :src="settings.photo.value" :alt="settings.name.value">
           </v-avatar>
         </v-flex>
         <v-flex xs12 md6 class="text-center">

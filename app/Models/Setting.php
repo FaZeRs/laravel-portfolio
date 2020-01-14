@@ -58,6 +58,19 @@ class Setting extends SettingModel
         return $entry->value;
     }
 
+    public function getValueAttribute($value)
+    {
+        $field = json_decode($this->field, true);
+        $type = $field['type'] ?? 'default';
+
+        switch ($type) {
+            case 'image':
+                return Storage::url($value);
+            default:
+                return $value;
+        }
+    }
+
     public function setValueAttribute($value)
     {
         $field = json_decode($this->field, true);
