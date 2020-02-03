@@ -23,9 +23,6 @@ import { mapGetters } from 'vuex'
 
 export default {
   layout: 'default',
-  data: () => ({
-    jumbotronBg: require('../../img/jumbotron-bg.jpg'),
-  }),
   computed: {
     ...mapGetters([
       'settings'

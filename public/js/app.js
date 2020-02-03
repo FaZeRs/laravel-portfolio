@@ -2635,11 +2635,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   layout: 'default',
-  data: function data() {
-    return {
-      jumbotronBg: __webpack_require__(/*! ../../img/jumbotron-bg.jpg */ "./resources/img/jumbotron-bg.jpg")
-    };
-  },
   computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])(['settings'])),
   metaInfo: function metaInfo() {
     return {
