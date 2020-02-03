@@ -2,13 +2,11 @@
 
 namespace App\Models;
 
-use Backpack\CRUD\app\Models\Traits\CrudTrait;
-use Backpack\CRUD\app\Models\Traits\SpatieTranslatable\HasTranslations;
 use Illuminate\Database\Eloquent\Model;
+use Spatie\Translatable\HasTranslations;
 
 class Education extends Model
 {
-    use CrudTrait;
     use HasTranslations;
 
     /**
@@ -51,5 +49,6 @@ class Education extends Model
         'to',
         'created_at',
         'updated_at',
+        'deleted_at',
     ];
 }

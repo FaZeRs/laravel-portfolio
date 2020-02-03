@@ -33,7 +33,7 @@ class ProjectTest extends TestCase
             ]),
         ];
 
-        $response = $this->json('POST', '/api/projects', $data);
+        $response = $this->json('POST', route('api.projects.store'), $data);
         $response->assertStatus(401);
     }
 
@@ -58,8 +58,8 @@ class ProjectTest extends TestCase
             ]),
         ];
 
-        $response = $this->json('POST', '/api/projects', $data);
-        $response->assertStatus(401);
+        $response = $this->json('POST', route('api.projects.store'), $data);
+        $response->assertStatus(403);
     }
 
     public function test_admin_can_create_a_project()
@@ -85,7 +85,7 @@ class ProjectTest extends TestCase
             'tags'        => $tags->pluck('id'),
         ];
 
-        $response = $this->json('POST', '/api/projects', $data);
+        $response = $this->json('POST', route('api.projects.store'), $data);
         $response->assertSuccessful();
         $response->assertJsonStructure([
             'id',
@@ -109,7 +109,7 @@ class ProjectTest extends TestCase
             'title' => $this->faker->sentence,
         ];
 
-        $response = $this->json('PUT', '/api/projects/'.$project->id, $data);
+        $response = $this->json('PUT', route('api.projects.update', $project), $data);
         $response->assertStatus(401);
     }
 
@@ -123,8 +123,8 @@ class ProjectTest extends TestCase
             'title' => $this->faker->sentence,
         ];
 
-        $response = $this->json('PUT', '/api/projects/'.$project->id, $data);
-        $response->assertStatus(401);
+        $response = $this->json('PUT', route('api.projects.update', $project), $data);
+        $response->assertStatus(403);
     }
 
     public function test_admin_can_edit_a_project()
@@ -138,7 +138,7 @@ class ProjectTest extends TestCase
             'tags'  => $tags->pluck('id'),
         ];
 
-        $response = $this->json('PUT', '/api/projects/'.$project->id, $data);
+        $response = $this->json('PUT', route('api.projects.update', $project), $data);
         $response->assertSuccessful();
         $response->assertJsonStructure([
             'id',
@@ -158,7 +158,7 @@ class ProjectTest extends TestCase
     {
         $project = factory(Project::class)->create();
 
-        $response = $this->json('DELETE', '/api/projects/'.$project->id);
+        $response = $this->json('DELETE', route('api.projects.destroy', $project));
         $response->assertStatus(401);
     }
 
@@ -168,8 +168,8 @@ class ProjectTest extends TestCase
 
         $project = factory(Project::class)->create();
 
-        $response = $this->json('DELETE', '/api/projects/'.$project->id);
-        $response->assertStatus(401);
+        $response = $this->json('DELETE', route('api.projects.destroy', $project));
+        $response->assertStatus(403);
     }
 
     public function test_admin_can_delete_a_project()
@@ -177,14 +177,31 @@ class ProjectTest extends TestCase
         $this->loginAsAdmin();
 
         $project = factory(Project::class)->create();
-        $response = $this->json('DELETE', '/api/projects/'.$project->id);
+        $response = $this->json('DELETE', route('api.projects.destroy', $project));
         $response->assertSuccessful();
+    }
+
+    public function test_admin_can_restore_a_category()
+    {
+        $this->loginAsAdmin();
+        $project = factory(Project::class)->states('softDeleted')->create();
+        $response = $this->json('PUT', route('api.projects.restore', $project));
+        $response->assertSuccessful();
+    }
+
+    public function test_admin_can_delete_permanently_a_category()
+    {
+        $this->loginAsAdmin();
+        $project = factory(Project::class)->states('softDeleted')->create();
+        $response = $this->json('PUT', route('api.projects.delete-permanently', $project));
+        $response->assertSuccessful();
+        $this->assertNull($project->fresh());
     }
 
     public function test_get_projects()
     {
         factory(Project::class, 5)->create();
-        $response = $this->json('GET', '/api/projects');
+        $response = $this->json('GET', route('api.projects.index'));
         $response->assertSuccessful();
         $response->assertJsonStructure([
             '*' => [
@@ -206,7 +223,7 @@ class ProjectTest extends TestCase
     {
         $project = factory(Project::class)->create();
 
-        $response = $this->json('GET', '/api/projects/'.$project->id);
+        $response = $this->json('GET', route('api.projects.show', $project));
         $response->assertSuccessful();
         $response->assertJsonStructure([
             'id',

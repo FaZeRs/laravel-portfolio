@@ -4,15 +4,18 @@ namespace App\Http\Controllers\Api;
 
 use App\Filters\ProjectFilter;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreProjectRequest;
+use App\Http\Requests\UpdateProjectRequest;
 use App\Http\Resources\ProjectResource;
 use App\Models\Project;
 use Illuminate\Http\Request;
 
-class ProjectController extends Controller
+class ProjectsController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('api_admin')->except('index', 'show');
+        $this->middleware('auth:api')->except('index', 'show');
+        $this->authorizeResource(Project::class, 'project');
     }
 
     public function index(ProjectFilter $filter)
@@ -25,9 +28,10 @@ class ProjectController extends Controller
         return new ProjectResource($project);
     }
 
-    public function store(Request $request)
+    public function store(StoreProjectRequest $request)
     {
-        $project = Project::create($request->only('title', 'category_id', 'description', 'visible', 'order', 'status'));
+        $data = $request->validated();
+        $project = Project::create($data);
 
         if ($request->has('tags')) {
             $project->tags()->sync($request->get('tags'));
@@ -36,10 +40,10 @@ class ProjectController extends Controller
         return new ProjectResource($project);
     }
 
-    public function update($id, Request $request)
+    public function update(UpdateProjectRequest $request, Project $project)
     {
-        $project = Project::findOrFail($id);
-        $project->update($request->only('title', 'category_id', 'description', 'visible', 'order', 'status'));
+        $data = $request->validated();
+        $project->update($data);
 
         if ($request->has('tags')) {
             $project->tags()->sync($request->get('tags'));
@@ -52,6 +56,18 @@ class ProjectController extends Controller
     {
         $project->delete();
 
-        return response()->json([], 204);
+        return new ProjectResource($project);
+    }
+
+    public function restore(Project $project)
+    {
+        $project->restore();
+
+        return new ProjectResource($project);
+    }
+
+    public function delete(Project $project)
+    {
+        $project->forceDelete();
     }
 }

@@ -6,9 +6,7 @@
     "type": "project",
     "require": {
         "php": "^7.4",
-        "backpack/crud": "^4.0",
-        "backpack/settings": "^3.0",
-        "barryvdh/laravel-elfinder": "^0.4",
+        "ext-json": "*",
         "bugsnag/bugsnag-laravel": "^2.14",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.2",
@@ -17,17 +15,15 @@
         "laravel/telescope": "^2.0",
         "laravel/tinker": "^2.0",
         "predis/predis": "^1.1",
+        "spatie/laravel-medialibrary": "^7.14",
+        "spatie/laravel-query-builder": "^2.3",
         "spatie/laravel-translatable": "^4.0"
     },
     "require-dev": {
-        "backpack/generators": "^2.0",
-        "beyondcode/laravel-dump-server": "^1.0",
         "facade/ignition": "^1.4",
         "fzaninotto/faker": "^1.7",
-        "laracasts/generators": "dev-master",
         "mockery/mockery": "^1.0",
         "nunomaduro/collision": "^3.0",
-        "nunomaduro/larastan": "^0.5",
         "phpunit/phpunit": "^8.0"
     },
     "config": {

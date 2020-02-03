@@ -2,6 +2,12 @@
 
 namespace App\Providers;
 
+use App\Models\Category;
+use App\Models\Education;
+use App\Models\Experience;
+use App\Models\Project;
+use App\Models\Setting;
+use App\Models\Tag;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Route;
 
@@ -33,6 +39,54 @@ class RouteServiceProvider extends ServiceProvider
         //
 
         parent::boot();
+
+        Route::bind('category', function ($value) {
+            if (Route::currentRouteName() === 'api.categories.restore' || Route::currentRouteName() === 'api.categories.delete-permanently') {
+                return Category::onlyTrashed()->find($value);
+            }
+
+            return Category::find($value);
+        });
+
+        Route::bind('education', function ($value) {
+            if (Route::currentRouteName() === 'api.education.restore' || Route::currentRouteName() === 'api.education.delete-permanently') {
+                return Education::onlyTrashed()->find($value);
+            }
+
+            return Education::find($value);
+        });
+
+        Route::bind('experience', function ($value) {
+            if (Route::currentRouteName() === 'api.experience.restore' || Route::currentRouteName() === 'api.experience.delete-permanently') {
+                return Experience::onlyTrashed()->find($value);
+            }
+
+            return Experience::find($value);
+        });
+
+        Route::bind('project', function ($value) {
+            if (Route::currentRouteName() === 'api.projects.restore' || Route::currentRouteName() === 'api.projects.delete-permanently') {
+                return Project::onlyTrashed()->find($value);
+            }
+
+            return Project::find($value);
+        });
+
+        Route::bind('setting', function ($value) {
+            if (Route::currentRouteName() === 'api.settings.restore' || Route::currentRouteName() === 'api.settings.delete-permanently') {
+                return Setting::onlyTrashed()->find($value);
+            }
+
+            return Setting::find($value);
+        });
+
+        Route::bind('tag', function ($value) {
+            if (Route::currentRouteName() === 'api.tags.restore' || Route::currentRouteName() === 'api.tags.delete-permanently') {
+                return Tag::onlyTrashed()->find($value);
+            }
+
+            return Tag::find($value);
+        });
     }
 
     /**

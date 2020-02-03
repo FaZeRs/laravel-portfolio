@@ -58,4 +58,12 @@ class User extends Authenticatable
         'created_at',
         'updated_at',
     ];
+
+    /**
+     * @return mixed
+     */
+    public function isAdmin()
+    {
+        return $this->is_admin;
+    }
 }

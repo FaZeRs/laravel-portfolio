@@ -2,16 +2,29 @@
 
 namespace App\Models;
 
-use Backpack\CRUD\app\Models\Traits\SpatieTranslatable\HasTranslations;
-use Backpack\Settings\app\Models\Setting as SettingModel;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Intervention\Image\Facades\Image;
-use Prologue\Alerts\Facades\Alert;
+use Spatie\Translatable\HasTranslations;
 
-class Setting extends SettingModel
+class Setting extends Model
 {
     use HasTranslations;
+
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'settings';
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['value'];
 
     /**
      * The attributes that are translatable.
@@ -33,7 +46,7 @@ class Setting extends SettingModel
             $type = $obj->field;
             if ($type == 'image') {
                 if (! Storage::disk('public')->delete($obj->value)) {
-                    Alert::error(trans('backpack::settings.delete_image_file_not_message'))->flash();
+                    //Alert::error(trans('backpack::settings.delete_image_file_not_message'))->flash();
                 }
             }
         });
@@ -44,7 +57,7 @@ class Setting extends SettingModel
      *
      * @param string $key The setting key, as defined in the key db column
      *
-     * @return string The setting value.
+     * @return string|void The setting value.
      */
     public static function get($key)
     {
@@ -100,7 +113,7 @@ class Setting extends SettingModel
                             Storage::disk($disk)->put($destination_path.'/'.$filename, $image->stream());
                             $this->attributes[$attribute_name] = $destination_path.'/'.$filename;
                         } catch (\InvalidArgumentException $argumentException) {
-                            Alert::error($argumentException->getMessage())->flash();
+                            //Alert::error($argumentException->getMessage())->flash();
                             $this->attributes[$attribute_name] = null;
                         }
                     }

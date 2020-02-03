@@ -3,15 +3,17 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreEducationRequest;
+use App\Http\Requests\UpdateEducationRequest;
 use App\Http\Resources\EducationResource;
 use App\Models\Education;
-use Illuminate\Http\Request;
 
 class EducationController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('api_admin')->except('index', 'show');
+        $this->middleware('auth:api')->except('index', 'show');
+        $this->authorizeResource(Education::class, 'education');
     }
 
     public function index()
@@ -24,16 +26,18 @@ class EducationController extends Controller
         return new EducationResource($education);
     }
 
-    public function store(Request $request)
+    public function store(StoreEducationRequest $request)
     {
-        $education = Education::create($request->only('position', 'employer', 'website', 'from', 'to', 'ongoing'));
+        $data = $request->validated();
+        $education = Education::create($data);
 
         return new EducationResource($education);
     }
 
-    public function update(Education $education, Request $request)
+    public function update(UpdateEducationRequest $request, Education $education)
     {
-        $education->update($request->only('position', 'employer', 'website', 'from', 'to', 'ongoing'));
+        $data = $request->validated();
+        $education->update($data);
 
         return new EducationResource($education);
     }
@@ -42,6 +46,18 @@ class EducationController extends Controller
     {
         $education->delete();
 
-        return response()->json([], 204);
+        return new EducationResource($education);
+    }
+
+    public function restore(Education $education)
+    {
+        $education->restore();
+
+        return new EducationResource($education);
+    }
+
+    public function delete(Education $education)
+    {
+        $education->forceDelete();
     }
 }

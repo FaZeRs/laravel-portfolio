@@ -22,7 +22,7 @@ class LinkTest extends TestCase
             'url'        => $this->faker->url,
             'icon'       => $this->faker->word,
         ];
-        $response = $this->json('POST', '/api/links', $data);
+        $response = $this->json('POST', route('api.links.store'), $data);
         $response->assertStatus(401);
     }
 
@@ -36,8 +36,8 @@ class LinkTest extends TestCase
             'url'        => $this->faker->url,
             'icon'       => $this->faker->word,
         ];
-        $response = $this->json('POST', '/api/links', $data);
-        $response->assertStatus(401);
+        $response = $this->json('POST', route('api.links.store'), $data);
+        $response->assertStatus(403);
     }
 
     public function test_admin_can_create_a_link()
@@ -50,7 +50,7 @@ class LinkTest extends TestCase
             'url'        => $this->faker->url,
             'icon'       => $this->faker->word,
         ];
-        $response = $this->json('POST', '/api/links', $data);
+        $response = $this->json('POST', route('api.links.store'), $data);
         $response->assertSuccessful();
         $response->assertJsonStructure([
             'id',
@@ -69,7 +69,7 @@ class LinkTest extends TestCase
         $data = [
             'title' => $this->faker->sentence,
         ];
-        $response = $this->json('PUT', '/api/links/'.$link->id, $data);
+        $response = $this->json('PUT', route('api.links.update', $link), $data);
         $response->assertStatus(401);
     }
 
@@ -80,8 +80,8 @@ class LinkTest extends TestCase
         $data = [
             'title' => $this->faker->sentence,
         ];
-        $response = $this->json('PUT', '/api/links/'.$link->id, $data);
-        $response->assertStatus(401);
+        $response = $this->json('PUT', route('api.links.update', $link), $data);
+        $response->assertStatus(403);
     }
 
     public function test_admin_can_edit_a_link()
@@ -91,7 +91,7 @@ class LinkTest extends TestCase
         $data = [
             'title' => $this->faker->sentence,
         ];
-        $response = $this->json('PUT', '/api/links/'.$link->id, $data);
+        $response = $this->json('PUT', route('api.links.update', $link), $data);
         $response->assertSuccessful();
         $response->assertJsonStructure([
             'id',
@@ -107,7 +107,7 @@ class LinkTest extends TestCase
     public function test_guest_cannot_delete_a_link()
     {
         $link = factory(Link::class)->create();
-        $response = $this->json('DELETE', '/api/links/'.$link->id);
+        $response = $this->json('DELETE', route('api.links.destroy', $link));
         $response->assertStatus(401);
     }
 
@@ -115,22 +115,22 @@ class LinkTest extends TestCase
     {
         $this->loginAsUser();
         $link = factory(Link::class)->create();
-        $response = $this->json('DELETE', '/api/links/'.$link->id);
-        $response->assertStatus(401);
+        $response = $this->json('DELETE', route('api.links.destroy', $link));
+        $response->assertStatus(403);
     }
 
     public function test_admin_can_delete_a_link()
     {
         $this->loginAsAdmin();
         $link = factory(Link::class)->create();
-        $response = $this->json('DELETE', '/api/links/'.$link->id);
+        $response = $this->json('DELETE', route('api.links.destroy', $link));
         $response->assertSuccessful();
     }
 
     public function test_get_links()
     {
         factory(Link::class, 5)->create();
-        $response = $this->json('GET', '/api/links');
+        $response = $this->json('GET', route('api.links.index'));
         $response->assertSuccessful();
         $response->assertJsonStructure([
             '*' => [
@@ -148,7 +148,7 @@ class LinkTest extends TestCase
     public function test_get_link()
     {
         $link = factory(Link::class)->create();
-        $response = $this->json('GET', '/api/links/'.$link->id);
+        $response = $this->json('GET', route('api.links.show', $link));
         $response->assertSuccessful();
         $response->assertJsonStructure([
             'id',

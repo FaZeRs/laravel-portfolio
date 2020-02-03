@@ -19,3 +19,9 @@ $factory->define(Category::class, function (Faker $faker) {
         'title' => $faker->sentence(2),
     ];
 });
+
+$factory->state(Category::class, 'softDeleted', function () {
+    return [
+        'deleted_at' => now(),
+    ];
+});

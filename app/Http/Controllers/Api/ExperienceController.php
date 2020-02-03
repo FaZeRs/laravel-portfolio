@@ -3,15 +3,17 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreExperienceRequest;
+use App\Http\Requests\UpdateCategoryRequest;
 use App\Http\Resources\ExperienceResource;
 use App\Models\Experience;
-use Illuminate\Http\Request;
 
 class ExperienceController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('api_admin')->except('index', 'show');
+        $this->middleware('auth:api')->except('index', 'show');
+        $this->authorizeResource(Experience::class, 'experience');
     }
 
     public function index()
@@ -24,16 +26,18 @@ class ExperienceController extends Controller
         return new ExperienceResource($experience);
     }
 
-    public function store(Request $request)
+    public function store(StoreExperienceRequest $request)
     {
-        $experience = Experience::create($request->only('position', 'employer', 'website', 'from', 'to', 'ongoing'));
+        $data = $request->validated();
+        $experience = Experience::create($data);
 
         return new ExperienceResource($experience);
     }
 
-    public function update(Experience $experience, Request $request)
+    public function update(UpdateCategoryRequest $request, Experience $experience)
     {
-        $experience->update($request->only('position', 'employer', 'website', 'from', 'to', 'ongoing'));
+        $data = $request->validated();
+        $experience->update($data);
 
         return new ExperienceResource($experience);
     }
@@ -42,6 +46,18 @@ class ExperienceController extends Controller
     {
         $experience->delete();
 
-        return response()->json([], 204);
+        return new ExperienceResource($experience);
+    }
+
+    public function restore(Experience $experience)
+    {
+        $experience->restore();
+
+        return new ExperienceResource($experience);
+    }
+
+    public function delete(Experience $experience)
+    {
+        $experience->forceDelete();
     }
 }

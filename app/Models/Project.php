@@ -3,19 +3,18 @@
 namespace App\Models;
 
 use App\Filters\Filterable;
-use Backpack\CRUD\app\Models\Traits\CrudTrait;
-use Backpack\CRUD\app\Models\Traits\SpatieTranslatable\HasTranslations;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Intervention\Image\Facades\Image;
-use Prologue\Alerts\Facades\Alert;
+use Spatie\Translatable\HasTranslations;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Project extends Model
 {
-    use CrudTrait;
     use HasTranslations;
     use Filterable;
+    use SoftDeletes;
 
     /**
      * The table associated with the model.
@@ -65,7 +64,7 @@ class Project extends Model
      *
      * @var array
      */
-    protected $dates = ['created_at', 'updated_at'];
+    protected $dates = ['created_at', 'updated_at', 'deleted_at'];
 
     /**
      * The "booting" method of the model.
@@ -84,7 +83,7 @@ class Project extends Model
         });
         static::deleting(function ($obj) {
             if (! Storage::disk('public')->delete($obj->image)) {
-                Alert::error(trans('backpack::settings.delete_image_file_not_message'))->flash();
+                //Alert::error(trans('backpack::settings.delete_image_file_not_message'))->flash();
             }
         });
     }
@@ -140,7 +139,7 @@ class Project extends Model
                     Storage::disk($disk)->put($destination_path.'/'.$filename, $image->stream());
                     $this->attributes[$attribute_name] = $destination_path.'/'.$filename;
                 } catch (\InvalidArgumentException $argumentException) {
-                    Alert::error($argumentException->getMessage())->flash();
+                    //Alert::error($argumentException->getMessage())->flash();
                     $this->attributes[$attribute_name] = null;
                 }
             }

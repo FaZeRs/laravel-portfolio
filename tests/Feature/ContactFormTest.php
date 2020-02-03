@@ -13,7 +13,7 @@ class ContactFormTest extends TestCase
     {
         Mail::fake();
 
-        $response = $this->json('POST', '/api/contact/send', [
+        $response = $this->json('POST', route('api.contact.send'), [
             'name'    => 'John Doe',
             'email'   => 'john@example.com',
             'message' => 'This is a test message',
@@ -27,7 +27,7 @@ class ContactFormTest extends TestCase
     /** @test */
     public function name_is_required()
     {
-        $response = $this->json('POST', '/api/contact/send', [
+        $response = $this->json('POST', route('api.contact.send'), [
             'email'   => 'john@example.com',
             'message' => 'This is a test message',
         ]);
@@ -39,7 +39,7 @@ class ContactFormTest extends TestCase
     /** @test */
     public function email_is_required()
     {
-        $response = $this->json('POST', '/api/contact/send', [
+        $response = $this->json('POST', route('api.contact.send'), [
             'name'    => 'John Doe',
             'message' => 'This is a test message',
         ]);
@@ -51,7 +51,7 @@ class ContactFormTest extends TestCase
     /** @test */
     public function message_is_required()
     {
-        $response = $this->json('POST', '/api/contact/send', [
+        $response = $this->json('POST', route('api.contact.send'), [
             'name'  => 'John Doe',
             'email' => 'john@example.com',
         ]);

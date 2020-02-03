@@ -7,11 +7,12 @@ use App\Http\Resources\LinkResource;
 use App\Models\Link;
 use Illuminate\Http\Request;
 
-class LinkController extends Controller
+class LinksController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('api_admin')->except('index', 'show');
+        $this->middleware('auth:api')->except('index', 'show');
+        $this->authorizeResource(Link::class, 'link');
     }
 
     public function index()
@@ -42,6 +43,6 @@ class LinkController extends Controller
     {
         $link->delete();
 
-        return response()->json([], 204);
+        return response()->json([]);
     }
 }

@@ -162,7 +162,6 @@ composer test
 * [Vue](https://vuejs.org) - The frontend framework used
 * [Vuetify](https://vuetifyjs.com) - Vue component framework used
 * [Docker](https://www.docker.com/) - PHP development environment
-* [Laravel Backpack](https://backpackforlaravel.com/) - Laravel admin panel
 
 ## Contributing
 

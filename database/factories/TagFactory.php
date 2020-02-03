@@ -20,3 +20,9 @@ $factory->define(Tag::class, function (Faker $faker) {
         'color' => $faker->colorName,
     ];
 });
+
+$factory->state(Tag::class, 'softDeleted', function () {
+    return [
+        'deleted_at' => now(),
+    ];
+});

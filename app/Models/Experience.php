@@ -2,17 +2,14 @@
 
 namespace App\Models;
 
-use Backpack\CRUD\app\Models\Traits\CrudTrait;
-use Backpack\CRUD\app\Models\Traits\SpatieTranslatable\HasTranslations;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Intervention\Image\Facades\Image;
-use Prologue\Alerts\Facades\Alert;
+use Spatie\Translatable\HasTranslations;
 
 class Experience extends Model
 {
-    use CrudTrait;
     use HasTranslations;
 
     /**
@@ -56,6 +53,7 @@ class Experience extends Model
         'to',
         'created_at',
         'updated_at',
+        'deleted_at',
     ];
 
     public static function boot()
@@ -63,7 +61,7 @@ class Experience extends Model
         parent::boot();
         static::deleting(function ($obj) {
             if (! Storage::disk('public')->delete($obj->logo)) {
-                Alert::error(trans('backpack::settings.delete_image_file_not_message'))->flash();
+                //Alert::error(trans('backpack::settings.delete_image_file_not_message'))->flash();
             }
         });
     }
@@ -93,7 +91,7 @@ class Experience extends Model
                     Storage::disk($disk)->put($destination_path.'/'.$filename, $image->stream());
                     $this->attributes[$attribute_name] = $destination_path.'/'.$filename;
                 } catch (\InvalidArgumentException $argumentException) {
-                    Alert::error($argumentException->getMessage())->flash();
+                    //Alert::error($argumentException->getMessage())->flash();
                     $this->attributes[$attribute_name] = null;
                 }
             }
