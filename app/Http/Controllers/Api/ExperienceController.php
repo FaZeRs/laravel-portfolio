@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreExperienceRequest;
-use App\Http\Requests\UpdateCategoryRequest;
+use App\Http\Requests\UpdateExperienceRequest;
 use App\Http\Resources\ExperienceResource;
 use App\Models\Experience;
 
@@ -34,7 +34,7 @@ class ExperienceController extends Controller
         return new ExperienceResource($experience);
     }
 
-    public function update(UpdateCategoryRequest $request, Experience $experience)
+    public function update(UpdateExperienceRequest $request, Experience $experience)
     {
         $data = $request->validated();
         $experience->update($data);

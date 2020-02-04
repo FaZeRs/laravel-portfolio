@@ -27,6 +27,13 @@ class UpdateExperienceRequest extends FormRequest
     public function rules()
     {
         return [
+            'position' => ['string', 'max:191'],
+            'employer' => ['string', 'max:191'],
+            'website' => ['string', 'max:191'],
+            'from' => ['date'],
+            'to' => ['date'],
+            'ongoing' => ['boolean'],
+            'logo' => ['image'],
         ];
     }
 }

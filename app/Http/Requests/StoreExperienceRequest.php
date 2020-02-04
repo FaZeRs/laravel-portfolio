@@ -27,6 +27,13 @@ class StoreExperienceRequest extends FormRequest
     public function rules()
     {
         return [
+            'position' => ['required', 'string', 'max:191'],
+            'employer' => ['required', 'string', 'max:191'],
+            'website' => ['required', 'string', 'max:191'],
+            'from' => ['required', 'date'],
+            'to' => ['nullable', 'date'],
+            'ongoing' => ['boolean'],
+            'logo' => ['nullable', 'image'],
         ];
     }
 }

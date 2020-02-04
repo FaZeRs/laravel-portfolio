@@ -70,6 +70,8 @@ Route::name('api.')->group(function () {
         Route::post('/', [EducationController::class, 'store'])->name('store');
         Route::put('{education}', [EducationController::class, 'update'])->name('update');
         Route::delete('{education}', [EducationController::class, 'destroy'])->name('destroy');
+        Route::put('{education}/restore', [EducationController::class, 'restore'])->name('restore');
+        Route::put('{education}/delete', [EducationController::class, 'delete'])->name('delete-permanently');
     });
 
     Route::prefix('experience')->name('experience.')->group(function () {
@@ -78,6 +80,8 @@ Route::name('api.')->group(function () {
         Route::post('/', [ExperienceController::class, 'store'])->name('store');
         Route::put('{experience}', [ExperienceController::class, 'update'])->name('update');
         Route::delete('{experience}', [ExperienceController::class, 'destroy'])->name('destroy');
+        Route::put('{experience}/restore', [ExperienceController::class, 'restore'])->name('restore');
+        Route::put('{experience}/delete', [ExperienceController::class, 'delete'])->name('delete-permanently');
     });
 
     Route::apiResource('settings', 'SettingController')->only([

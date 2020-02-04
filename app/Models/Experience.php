@@ -7,10 +7,12 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Intervention\Image\Facades\Image;
 use Spatie\Translatable\HasTranslations;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Experience extends Model
 {
     use HasTranslations;
+    use SoftDeletes;
 
     /**
      * The table associated with the model.

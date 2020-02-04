@@ -24,7 +24,7 @@ $factory->define(Project::class, function (Faker $faker) {
             return optional($category)->id ?? factory(Category::class)->create()->id;
         },
         'description' => $faker->paragraph,
-        //'image'       => 'projects/'.$faker->image(storage_path('app/public/projects'), 640, 480, null, false),
+        //'image'       => 'projects/'.$faker->image(storage_path('app/public/projects'), 640, 480, null, false), // todo : fix docker network issues
         'visible'     => $faker->boolean($chanceOfGettingTrue = 80),
         'order'       => $faker->randomDigit,
         'status'      => $faker->randomElement([

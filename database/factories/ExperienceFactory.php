@@ -22,6 +22,12 @@ $factory->define(Experience::class, function (Faker $faker) {
         'from' => $faker->date,
         'to' => $faker->date,
         'ongoing' => $faker->boolean(25),
-        //'logo' => 'experience/'.$faker->image(storage_path('app/public/experience'), 640, 480, 'business', false),
+        //'logo' => 'experience/'.$faker->image(storage_path('app/public/experience'), 640, 480, 'business', false), // todo : fix docker network issues
+    ];
+});
+
+$factory->state(Experience::class, 'softDeleted', function () {
+    return [
+        'deleted_at' => now(),
     ];
 });

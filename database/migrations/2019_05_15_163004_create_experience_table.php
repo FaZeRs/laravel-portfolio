@@ -23,6 +23,7 @@ class CreateExperienceTable extends Migration
             $table->boolean('ongoing')->default(false);
             $table->string('logo')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

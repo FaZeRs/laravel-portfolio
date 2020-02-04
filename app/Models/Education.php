@@ -4,10 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Translatable\HasTranslations;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Education extends Model
 {
     use HasTranslations;
+    use SoftDeletes;
 
     /**
      * The table associated with the model.

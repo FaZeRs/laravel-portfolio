@@ -23,3 +23,9 @@ $factory->define(Education::class, function (Faker $faker) {
         'ongoing' => $faker->boolean(25),
     ];
 });
+
+$factory->state(Education::class, 'softDeleted', function () {
+    return [
+        'deleted_at' => now(),
+    ];
+});
