@@ -17,6 +17,13 @@ ApiService.init()
 
 Vue.use(VueImg)
 
+// axios
+import axios from "./axios"
+Vue.prototype.$http = axios
+
+// API Calls
+import "./http/requests"
+
 /* eslint-disable no-new */
 new Vue({
   vuetify,

@@ -17,6 +17,7 @@ export default new Vuex.Store({
     education,
     experience,
     settings,
-    contact
-  }
+    contact,
+  },
+  strict: process.env.NODE_ENV !== 'production'
 })

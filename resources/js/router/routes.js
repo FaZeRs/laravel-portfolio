@@ -27,6 +27,16 @@ export default [
     component: () => import(/* webpackChunkName: "contact" */ '~/pages/contact')
   },
   {
+    path: '/admin',
+    name: 'admin',
+    component: () => import(/* webpackChunkName: "dashboard" */ '~/pages/admin/Dashboard')
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: () => import(/* webpackChunkName: "login" */ '~/pages/admin/Login')
+  },
+  {
     path: '*',
     component: () => import(/* webpackChunkName: "not-found" */ '~/pages/errors/404')
   }

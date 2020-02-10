@@ -37,8 +37,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "required_if", function() { return required_if; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "size", function() { return size; });
 /**
-  * vee-validate v3.2.1
-  * (c) 2019 Abdelrahman Awad
+  * vee-validate v3.2.3
+  * (c) 2020 Abdelrahman Awad
   * @license MIT
   */
 /**
@@ -750,8 +750,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
 /**
-  * vee-validate v3.2.1
-  * (c) 2019 Abdelrahman Awad
+  * vee-validate v3.2.3
+  * (c) 2020 Abdelrahman Awad
   * @license MIT
   */
 
@@ -1472,9 +1472,10 @@ function _test(field, value, rule) {
  * Generates error messages.
  */
 function _generateFieldError(field, value, ruleSchema, ruleName, params) {
-    var message = field.customMessages[ruleName] || ruleSchema.message;
+    var _a;
+    var message = (_a = field.customMessages[ruleName], (_a !== null && _a !== void 0 ? _a : ruleSchema.message));
     var ruleTargets = _getRuleTargets(field, ruleSchema, ruleName);
-    var _a = _getUserTargets(field, ruleSchema, ruleName, message), userTargets = _a.userTargets, userMessage = _a.userMessage;
+    var _b = _getUserTargets(field, ruleSchema, ruleName, message), userTargets = _b.userTargets, userMessage = _b.userMessage;
     var values = __assign(__assign(__assign(__assign({}, (params || {})), { _field_: field.name, _value_: value, _rule_: ruleName }), ruleTargets), userTargets);
     return {
         msg: function () { return _normalizeMessage(userMessage || getConfig().defaultMessage, field.name, values); },
@@ -1852,6 +1853,9 @@ function getInputEventName(vnode, model) {
     }
     return 'change';
 }
+function isHTMLNode(node) {
+    return includes(['input', 'select', 'textarea'], node.tag);
+}
 // TODO: Type this one properly.
 function normalizeSlots(slots, ctx) {
     var acc = [];
@@ -1968,7 +1972,12 @@ function onRenderUpdate(vm, value) {
     if (!validateNow) {
         return;
     }
-    var validate = function () { return vm.validateSilent().then(vm.immediate || vm.flags.validated ? vm.applyResult : identity); };
+    var validate = function () {
+        if (vm.immediate || vm.flags.validated) {
+            return triggerThreadSafeValidation(vm);
+        }
+        vm.validateSilent();
+    };
     if (vm.initialized) {
         validate();
         return;
@@ -1978,6 +1987,18 @@ function onRenderUpdate(vm, value) {
 function computeModeSetting(ctx) {
     var compute = (isCallable(ctx.mode) ? ctx.mode : modes[ctx.mode]);
     return compute(ctx);
+}
+function triggerThreadSafeValidation(vm) {
+    var pendingPromise = vm.validateSilent();
+    // avoids race conditions between successive validations.
+    vm._pendingValidation = pendingPromise;
+    return pendingPromise.then(function (result) {
+        if (pendingPromise === vm._pendingValidation) {
+            vm.applyResult(result);
+            vm._pendingValidation = undefined;
+        }
+        return result;
+    });
 }
 // Creates the common handlers for a validatable context.
 function createCommonHandlers(vm) {
@@ -2001,15 +2022,10 @@ function createCommonHandlers(vm) {
     if (!onValidate || vm.$veeDebounce !== vm.debounce) {
         onValidate = debounce(function () {
             vm.$nextTick(function () {
-                var pendingPromise = vm.validateSilent();
-                // avoids race conditions between successive validations.
-                vm._pendingValidation = pendingPromise;
-                pendingPromise.then(function (result) {
-                    if (pendingPromise === vm._pendingValidation) {
-                        vm.applyResult(result);
-                        vm._pendingValidation = undefined;
-                    }
-                });
+                if (!vm._pendingReset) {
+                    triggerThreadSafeValidation(vm);
+                }
+                vm._pendingReset = false;
             });
         }, mode.debounce || vm.debounce);
         // Cache the handler so we don't create it each time.
@@ -2039,6 +2055,7 @@ function addListeners(vm, node) {
 var PROVIDER_COUNTER = 0;
 function data() {
     var errors = [];
+    var fieldName = '';
     var defaultValues = {
         errors: errors,
         value: undefined,
@@ -2047,6 +2064,7 @@ function data() {
         flags: createFlags(),
         failedRules: {},
         isActive: true,
+        fieldName: fieldName,
         id: ''
     };
     return defaultValues;
@@ -2194,12 +2212,16 @@ var ValidationProvider = vue__WEBPACK_IMPORTED_MODULE_0___default.a.extend({
         var children = normalizeChildren(this, ctx);
         // Handle single-root slot.
         extractVNodes(children).forEach(function (input) {
+            var _a, _b, _c, _d;
             // resolved rules are not reactive because it has a new reference each time.
             // causing infinite render-loops.
             // So we are comparing them manually to decide if we need to validate or not.
             var resolved = getConfig().useConstraintAttrs ? resolveRules(input) : {};
             if (!isEqual(_this._resolvedRules, resolved)) {
                 _this._needsValidation = true;
+            }
+            if (isHTMLNode(input)) {
+                _this.fieldName = ((_b = (_a = input.data) === null || _a === void 0 ? void 0 : _a.attrs) === null || _b === void 0 ? void 0 : _b.name) || ((_d = (_c = input.data) === null || _c === void 0 ? void 0 : _c.attrs) === null || _d === void 0 ? void 0 : _d.id);
             }
             _this._resolvedRules = resolved;
             addListeners(_this, input);
@@ -2229,6 +2251,7 @@ var ValidationProvider = vue__WEBPACK_IMPORTED_MODULE_0___default.a.extend({
             this.flags.changed = this.initialValue !== value;
         },
         reset: function () {
+            var _this = this;
             this.errors = [];
             this.initialValue = this.value;
             var flags = createFlags();
@@ -2236,6 +2259,11 @@ var ValidationProvider = vue__WEBPACK_IMPORTED_MODULE_0___default.a.extend({
             this.setFlags(flags);
             this.failedRules = {};
             this.validateSilent();
+            this._pendingValidation = undefined;
+            this._pendingReset = true;
+            setTimeout(function () {
+                _this._pendingReset = false;
+            }, this.debounce);
         },
         validate: function () {
             var args = [];
@@ -2243,19 +2271,11 @@ var ValidationProvider = vue__WEBPACK_IMPORTED_MODULE_0___default.a.extend({
                 args[_i] = arguments[_i];
             }
             return __awaiter(this, void 0, void 0, function () {
-                var result;
                 return __generator(this, function (_a) {
-                    switch (_a.label) {
-                        case 0:
-                            if (args.length > 0) {
-                                this.syncValue(args[0]);
-                            }
-                            return [4 /*yield*/, this.validateSilent()];
-                        case 1:
-                            result = _a.sent();
-                            this.applyResult(result);
-                            return [2 /*return*/, result];
+                    if (args.length > 0) {
+                        this.syncValue(args[0]);
                     }
+                    return [2 /*return*/, triggerThreadSafeValidation(this)];
                 });
             });
         },
@@ -2273,7 +2293,7 @@ var ValidationProvider = vue__WEBPACK_IMPORTED_MODULE_0___default.a.extend({
                                 enumerable: false,
                                 configurable: false
                             });
-                            return [4 /*yield*/, validate(this.value, rules, __assign(__assign({ name: this.name }, createLookup(this)), { bails: this.bails, skipIfEmpty: this.skipIfEmpty, isInitial: !this.initialized, customMessages: this.customMessages }))];
+                            return [4 /*yield*/, validate(this.value, rules, __assign(__assign({ name: this.name || this.fieldName }, createLookup(this)), { bails: this.bails, skipIfEmpty: this.skipIfEmpty, isInitial: !this.initialized, customMessages: this.customMessages }))];
                         case 1:
                             result = _a.sent();
                             this.setFlags({
@@ -2360,6 +2380,9 @@ function extractId(vm) {
     }
     if (vm.id) {
         return vm.id;
+    }
+    if (vm.fieldName) {
+        return vm.fieldName;
     }
     PROVIDER_COUNTER++;
     return "_vee_" + PROVIDER_COUNTER;
@@ -2571,7 +2594,9 @@ var ValidationObserver = vue__WEBPACK_IMPORTED_MODULE_0___default.a.extend({
                 var provider = _this.refs[key];
                 if (!provider)
                     return;
-                provider.setErrors(errors[key] || []);
+                var errorArr = errors[key] || [];
+                errorArr = typeof errorArr === 'string' ? [errorArr] : errorArr;
+                provider.setErrors(errorArr);
             });
             this.observers.forEach(function (observer) {
                 observer.setErrors(errors);
@@ -2665,7 +2690,7 @@ function withValidation(component, mapProps) {
     return hoc;
 }
 
-var version = '3.2.1';
+var version = '3.2.3';
 
 
 
