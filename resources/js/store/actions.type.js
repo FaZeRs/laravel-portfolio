@@ -1,7 +1,0 @@
-export const FETCH_PROJECTS = 'fetchProjects'
-export const FETCH_CATEGORIES = 'fetchCategories'
-export const FETCH_EDUCATION = 'fetchEducation'
-export const FETCH_EXPERIENCE = 'fetchExperience'
-export const FETCH_SETTINGS = 'fetchSettings'
-export const SEND_CONTACT = 'sendContact'
-export const CHANGE_LOCALE = 'changeLocale'

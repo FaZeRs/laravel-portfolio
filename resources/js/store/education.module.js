@@ -1,22 +1,18 @@
-import {
-  EducationService
-} from '~/common/api.service'
-import {
-  FETCH_EDUCATION
-} from './actions.type'
-import {
-  SET_EDUCATION
-} from './mutations.type'
+import EducationService from '~/services/education.service'
 
 export const state = {
-  education: [],
+  education: []
+}
+
+export const getters = {
+  education: state => state.education
 }
 
 export const actions = {
-  [FETCH_EDUCATION] (context, params) {
-    return EducationService.query(params)
+  fetchAll ({ commit }, params) {
+    return EducationService.all(params)
       .then(({ data }) => {
-        context.commit(SET_EDUCATION, data)
+        commit('setEducation', data)
         return data
       })
       .catch(error => {
@@ -26,18 +22,13 @@ export const actions = {
 }
 
 export const mutations = {
-  [SET_EDUCATION] (state, education) {
+  setEducation(state, education) {
     state.education = education
   }
 }
 
-export const getters = {
-  education (state) {
-    return state.education
-  },
-}
-
 export default {
+  namespaced: true,
   state,
   actions,
   mutations,

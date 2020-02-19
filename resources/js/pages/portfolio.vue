@@ -43,9 +43,6 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import { FETCH_CATEGORIES, FETCH_PROJECTS } from '~/store/actions.type'
-
 export default {
   layout: 'default',
   metaInfo () {
@@ -61,11 +58,15 @@ export default {
         category
       }
     },
-    ...mapGetters([
-      'categories',
-      'projects',
-      'locale'
-    ])
+    categories() {
+      return this.$store.getters['project/categories'];
+    },
+    projects() {
+      return this.$store.getters['project/projects'];
+    },
+    locale() {
+      return this.$store.getters['lang/locale'];
+    }
   },
   watch: {
     category () {
@@ -84,10 +85,10 @@ export default {
   },
   methods: {
     fetchCategories () {
-      this.$store.dispatch(FETCH_CATEGORIES, {})
+      this.$store.dispatch('project/fetchCategories')
     },
     fetchProjects () {
-      this.$store.dispatch(FETCH_PROJECTS, this.listConfig)
+      this.$store.dispatch('project/fetchProjects', this.listConfig)
     },
     filter: function (category) {
       this.category = category

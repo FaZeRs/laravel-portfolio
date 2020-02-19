@@ -64,12 +64,10 @@ export default {
   components: {
     ContactForm
   },
-  data: () => ({
-  }),
   computed: {
-    ...mapGetters([
-      'settings'
-    ])
+    settings() {
+      return this.$store.getters['settings/settings'];
+    }
   }
 }
 </script>

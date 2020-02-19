@@ -24,6 +24,9 @@
             <directory suffix=".php">./app</directory>
         </whitelist>
     </filter>
+    <listeners>
+        <listener class="NunoMaduro\Collision\Adapters\Phpunit\Listener" />
+    </listeners>
     <php>
         <server name="APP_ENV" value="testing"/>
         <server name="DB_CONNECTION" value="sqlite"/>

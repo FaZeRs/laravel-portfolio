@@ -12,10 +12,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vue_recaptcha__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-recaptcha */ "./node_modules/vue-recaptcha/dist/vue-recaptcha.es.js");
-/* harmony import */ var _store_actions_type__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ~/store/actions.type */ "./resources/js/store/actions.type.js");
-/* harmony import */ var vee_validate__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vee-validate */ "./node_modules/vee-validate/dist/vee-validate.esm.js");
-/* harmony import */ var vee_validate_dist_rules__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vee-validate/dist/rules */ "./node_modules/vee-validate/dist/rules.js");
-/* harmony import */ var _plugins_i18n__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ~/plugins/i18n */ "./resources/js/plugins/i18n.js");
+/* harmony import */ var vee_validate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vee-validate */ "./node_modules/vee-validate/dist/vee-validate.esm.js");
+/* harmony import */ var vee_validate_dist_rules__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vee-validate/dist/rules */ "./node_modules/vee-validate/dist/rules.js");
+/* harmony import */ var _plugins_i18n__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ~/plugins/i18n */ "./resources/js/plugins/i18n.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -71,12 +70,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
-
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     VueRecaptcha: vue_recaptcha__WEBPACK_IMPORTED_MODULE_1__["default"],
-    ValidationObserver: vee_validate__WEBPACK_IMPORTED_MODULE_3__["ValidationObserver"],
-    ValidationProvider: vee_validate__WEBPACK_IMPORTED_MODULE_3__["ValidationProvider"]
+    ValidationObserver: vee_validate__WEBPACK_IMPORTED_MODULE_2__["ValidationObserver"],
+    ValidationProvider: vee_validate__WEBPACK_IMPORTED_MODULE_2__["ValidationProvider"]
   },
   data: function data() {
     return {
@@ -92,15 +90,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     };
   },
   created: function created() {
-    Object(vee_validate__WEBPACK_IMPORTED_MODULE_3__["configure"])({
+    Object(vee_validate__WEBPACK_IMPORTED_MODULE_2__["configure"])({
       defaultMessage: function defaultMessage(field, values) {
         // override the field name.
-        values._field_ = _plugins_i18n__WEBPACK_IMPORTED_MODULE_5__["default"].t("fields.".concat(field));
-        return _plugins_i18n__WEBPACK_IMPORTED_MODULE_5__["default"].t("validation.".concat(values._rule_), values);
+        values._field_ = _plugins_i18n__WEBPACK_IMPORTED_MODULE_4__["default"].t("fields.".concat(field));
+        return _plugins_i18n__WEBPACK_IMPORTED_MODULE_4__["default"].t("validation.".concat(values._rule_), values);
       }
     });
-    Object(vee_validate__WEBPACK_IMPORTED_MODULE_3__["extend"])('required', vee_validate_dist_rules__WEBPACK_IMPORTED_MODULE_4__["required"]);
-    Object(vee_validate__WEBPACK_IMPORTED_MODULE_3__["extend"])('email', vee_validate_dist_rules__WEBPACK_IMPORTED_MODULE_4__["email"]);
+    Object(vee_validate__WEBPACK_IMPORTED_MODULE_2__["extend"])('required', vee_validate_dist_rules__WEBPACK_IMPORTED_MODULE_3__["required"]);
+    Object(vee_validate__WEBPACK_IMPORTED_MODULE_2__["extend"])('email', vee_validate_dist_rules__WEBPACK_IMPORTED_MODULE_3__["email"]);
   },
   methods: {
     submit: function () {
@@ -149,7 +147,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     send: function send() {
       var _this = this;
 
-      this.$store.dispatch(_store_actions_type__WEBPACK_IMPORTED_MODULE_2__["SEND_CONTACT"], this.contact).then(function () {
+      this.$store.dispatch('contact/send', this.contact).then(function () {
         _this.error = false;
         _this.successful = true;
         _this.contact.name = '';
@@ -212,12 +210,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_ContactForm__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ~/components/ContactForm */ "./resources/js/components/ContactForm.vue");
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 //
 //
 //
@@ -282,10 +274,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   components: {
     ContactForm: _components_ContactForm__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
-  data: function data() {
-    return {};
-  },
-  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_1__["mapGetters"])(['settings']))
+  computed: {
+    settings: function settings() {
+      return this.$store.getters['settings/settings'];
+    }
+  }
 });
 
 /***/ }),

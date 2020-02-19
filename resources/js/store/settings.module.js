@@ -1,23 +1,19 @@
-import {
-  SettingsService
-} from '~/common/api.service'
-import {
-  FETCH_SETTINGS
-} from './actions.type'
-import {
-  SET_SETTINGS
-} from './mutations.type'
+import SettingsService from '~/services/settings.service'
 
 export const state = {
-  settings: [],
+  settings: []
+}
+
+export const getters = {
+  settings: state => state.settings
 }
 
 export const actions = {
-  async [FETCH_SETTINGS] (context, params) {
+  async fetchAll ({ commit }, params) {
     try {
-      const { data } = await SettingsService.query(params)
+      const { data } = await SettingsService.all(params)
 
-      context.commit(SET_SETTINGS, { settings: data })
+      commit('setSettings', { settings: data })
     } catch (error) {
       throw new Error(error)
     }
@@ -25,16 +21,13 @@ export const actions = {
 }
 
 export const mutations = {
-  [SET_SETTINGS] (state, { settings }) {
+  setSettings (state, { settings }) {
     state.settings = settings
   }
 }
 
-export const getters = {
-  settings: state => state.settings,
-}
-
 export default {
+  namespaced: true,
   state,
   actions,
   mutations,

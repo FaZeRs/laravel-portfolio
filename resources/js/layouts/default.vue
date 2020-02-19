@@ -59,7 +59,6 @@
 import NavBar from '~/partials/NavBar'
 import BackToTop from '~/components/BackToTop'
 import CookieLaw from 'vue-cookie-law'
-import { mapGetters } from 'vuex'
 
 export default {
   name: 'MainLayout',
@@ -73,9 +72,9 @@ export default {
     jumbotronBg: require('../../img/jumbotron-bg.jpg'),
   }),
   computed: {
-    ...mapGetters([
-      'settings'
-    ])
+    settings() {
+      return this.$store.getters['settings/settings'];
+    }
   }
 }
 </script>

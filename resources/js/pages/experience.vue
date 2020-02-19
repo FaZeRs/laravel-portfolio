@@ -59,21 +59,18 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import { FETCH_EDUCATION, FETCH_EXPERIENCE } from '~/store/actions.type'
-
 export default {
   layout: 'default',
   metaInfo () {
     return {title: this.$t('experience')}
   },
-  data: () => ({
-  }),
   computed: {
-    ...mapGetters([
-      'education',
-      'experience'
-    ])
+    education() {
+      return this.$store.getters['education/education'];
+    },
+    experience() {
+      return this.$store.getters['experience/experience'];
+    }
   },
   mounted () {
     this.fetchEducation()
@@ -81,10 +78,10 @@ export default {
   },
   methods: {
     fetchEducation () {
-      this.$store.dispatch(FETCH_EDUCATION, {})
+      this.$store.dispatch('education/fetchAll')
     },
     fetchExperience () {
-      this.$store.dispatch(FETCH_EXPERIENCE, {})
+      this.$store.dispatch('experience/fetchAll')
     }
   }
 }

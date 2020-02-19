@@ -19,14 +19,12 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-
 export default {
   layout: 'default',
   computed: {
-    ...mapGetters([
-      'settings'
-    ])
+    settings() {
+      return this.$store.getters['settings/settings'];
+    }
   },
   metaInfo () {
     return {title: this.$t('home')}

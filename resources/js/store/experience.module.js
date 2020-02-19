@@ -1,22 +1,18 @@
-import {
-  ExperienceService
-} from '~/common/api.service'
-import {
-  FETCH_EXPERIENCE
-} from './actions.type'
-import {
-  SET_EXPERIENCE,
-} from './mutations.type'
+import ExperienceService from '~/services/experience.service'
 
 export const state = {
-  experience: [],
+  experience: []
+}
+
+export const getters = {
+  experience: state => state.experience
 }
 
 export const actions = {
-  [FETCH_EXPERIENCE] (context, params) {
-    return ExperienceService.query(params)
+  fetchAll ({ commit }, params) {
+    return ExperienceService.all(params)
       .then(({ data }) => {
-        context.commit(SET_EXPERIENCE, data)
+        commit('setExperience', data)
         return data
       })
       .catch(error => {
@@ -26,18 +22,13 @@ export const actions = {
 }
 
 export const mutations = {
-  [SET_EXPERIENCE] (state, experience) {
+  setExperience (state, experience) {
     state.experience = experience
   }
 }
 
-export const getters = {
-  experience (state) {
-    return state.experience
-  }
-}
-
 export default {
+  namespaced: true,
   state,
   actions,
   mutations,

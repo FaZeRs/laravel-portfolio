@@ -1,47 +1,36 @@
-import Vue from 'vue'
+import axios from 'axios'
 import Cookies from 'js-cookie'
 import { loadMessages } from '~/plugins/i18n'
-import store from '~/store'
-import {
-  SET_LOCALE
-} from './mutations.type'
-import {
-  CHANGE_LOCALE,
-  FETCH_SETTINGS
-} from "./actions.type";
 
 const { locale, locales } = window.config
 
-// state
 export const state = {
   locale: Cookies.get('locale') || locale,
   locales: locales
 }
 
-// getters
 export const getters = {
   locale: state => state.locale,
   locales: state => state.locales
 }
 
-// mutations
+export const actions = {
+  changeLocale ({ commit }, locale) {
+    axios.defaults.headers.common['Content-Language'] = locale
+    loadMessages(locale)
+    Cookies.set('locale', locale, { expires: 365 });
+    commit('setLocale', locale)
+  }
+}
+
 export const mutations = {
-  [SET_LOCALE] (state, locale) {
+  setLocale (state, locale) {
     state.locale = locale
   }
 }
 
-// actions
-export const actions = {
-  [CHANGE_LOCALE] (context, locale) {
-    Vue.axios.defaults.headers.common['Content-Language'] = locale
-    loadMessages(locale)
-    Cookies.set('locale', locale, { expires: 365 });
-    context.commit(SET_LOCALE, locale)
-  }
-}
-
 export default {
+  namespaced: true,
   state,
   actions,
   mutations,

@@ -15,9 +15,9 @@ class LoginController extends Controller
 
         if ($user) {
             if (Hash::check($request->get('password'), $user->password)) {
-                $success['token'] = $user->createToken('Portfolio')->accessToken;
+                $token = $user->createToken('Portfolio')->accessToken;
 
-                return response()->json(['success' => $success]);
+                return response()->json(['access_token' => $token, 'user' => $user]);
             }
         }
 

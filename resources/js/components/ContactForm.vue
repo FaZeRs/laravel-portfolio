@@ -45,7 +45,6 @@
 
 <script>
 import VueRecaptcha from 'vue-recaptcha'
-import { SEND_CONTACT } from "~/store/actions.type";
 import { ValidationObserver, ValidationProvider, extend, configure } from 'vee-validate';
 import { required, email } from 'vee-validate/dist/rules';
 import i18n from "~/plugins/i18n";
@@ -97,7 +96,7 @@ export default {
       this.send()
     },
     send () {
-      this.$store.dispatch(SEND_CONTACT, this.contact)
+      this.$store.dispatch('contact/send', this.contact)
         .then(() => {
           this.error = false;
           this.successful = true

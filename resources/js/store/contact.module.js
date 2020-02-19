@@ -1,17 +1,13 @@
-import {
-  ContactService
-} from '~/common/api.service'
-import {
-  SEND_CONTACT
-} from './actions.type'
+import ContactService from '~/services/contact.service'
 
 export const actions = {
-  async [SEND_CONTACT](context, payload) {
+  async send (context, payload) {
     const { data } = await ContactService.send(payload);
     return data;
   },
 }
 
 export default {
+  namespaced: true,
   actions,
 }

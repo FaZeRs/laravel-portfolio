@@ -1,36 +1,31 @@
-import {
-  ProjectsService,
-  CategoriesService
-} from '~/common/api.service'
-import {
-  FETCH_PROJECTS,
-  FETCH_CATEGORIES
-} from './actions.type'
-import {
-  SET_PROJECTS,
-  SET_CATEGORIES
-} from './mutations.type'
+import ProjectsService from '~/services/projects.service'
+import CategoriesService from '~/services/categories.service'
 
 export const state = {
   categories: [],
   projects: []
 }
 
+export const getters = {
+  projects: state => state.projects,
+  categories: state => state.categories
+}
+
 export const actions = {
-  [FETCH_PROJECTS] (context, params) {
-    return ProjectsService.query(params)
+  fetchProjects ({ commit }, params) {
+    return ProjectsService.all(params)
       .then(({ data }) => {
-        context.commit(SET_PROJECTS, data)
+        commit('setProjects', data)
         return data
       })
       .catch(error => {
         throw new Error(error)
       })
   },
-  [FETCH_CATEGORIES] (context, params) {
-    return CategoriesService.query(params)
+  fetchCategories ({ commit }, params) {
+    return CategoriesService.all(params)
       .then(({ data }) => {
-        context.commit(SET_CATEGORIES, data)
+        commit('setCategories', data)
         return data
       })
       .catch(error => {
@@ -40,24 +35,16 @@ export const actions = {
 }
 
 export const mutations = {
-  [SET_PROJECTS] (state, projects) {
+  setProjects (state, projects) {
     state.projects = projects
   },
-  [SET_CATEGORIES] (state, categories) {
+  setCategories (state, categories) {
     state.categories = categories
   }
 }
 
-export const getters = {
-  projects (state) {
-    return state.projects
-  },
-  categories (state) {
-    return state.categories
-  }
-}
-
 export default {
+  namespaced: true,
   state,
   actions,
   mutations,

@@ -15,17 +15,18 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import { CHANGE_LOCALE } from "~/store/actions.type";
-
 export default {
-  computed: mapGetters({
-    locale: 'locale',
-    locales: 'locales'
-  }),
+  computed: {
+    locale() {
+      return this.$store.getters['lang.locale'];
+    },
+    locales() {
+      return this.$store.getters['lang/locales'];
+    }
+  },
   methods: {
     setLocale (locale) {
-      this.$store.dispatch(CHANGE_LOCALE, locale)
+      this.$store.dispatch('lang/changeLocale', locale)
     }
   }
 }
