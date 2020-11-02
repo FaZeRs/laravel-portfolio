@@ -2,14 +2,16 @@
 
 namespace App\Models;
 
-use Backpack\CRUD\app\Models\Traits\CrudTrait;
-use Backpack\CRUD\app\Models\Traits\SpatieTranslatable\HasTranslations;
+use App\Models\Traits\Sluggable;
+use Spatie\Translatable\HasTranslations;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
-    use CrudTrait;
+    use HasFactory;
     use HasTranslations;
+    use Sluggable;
 
     /**
      * The table associated with the model.
@@ -23,14 +25,14 @@ class Category extends Model
      *
      * @var array
      */
-    protected $fillable = ['title'];
+    protected $fillable = ['title', 'slug'];
 
     /**
      * The attributes that are mass translatable.
      *
      * @var array
      */
-    protected $translatable = ['title'];
+    protected $translatable = ['title', 'slug'];
 
     /**
      * Fields that are dates.
