@@ -4,13 +4,13 @@
       <v-layout align-center justify-space-around row wrap>
         <v-flex xs12 md4 class="text-center">
           <v-avatar v-if="settings.photo" size="300px" class="grey lighten-4">
-            <img :src="settings.photo.value" :alt="settings.name.value">
+            <img :src="settings.photo" :alt="settings.name.value">
           </v-avatar>
         </v-flex>
         <v-flex xs12 md6 class="text-center">
           <h2 class="section-title">{{ $t('about_me') }}</h2>
           <p v-if="settings.about_you" class="my-4 subheading text-justify">
-            <span v-html="settings.about_you.value"/>
+            <span v-html="settings.about_you"/>
           </p>
         </v-flex>
       </v-layout>
@@ -24,9 +24,7 @@ import { mapGetters } from 'vuex'
 export default {
   layout: 'default',
   computed: {
-    ...mapGetters([
-      'settings'
-    ])
+    ...mapGetters(['settings']),
   },
   metaInfo () {
     return {title: this.$t('home')}

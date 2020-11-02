@@ -60,7 +60,6 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { FETCH_EDUCATION, FETCH_EXPERIENCE } from '~/store/actions.type'
 
 export default {
   layout: 'default',
@@ -70,10 +69,7 @@ export default {
   data: () => ({
   }),
   computed: {
-    ...mapGetters([
-      'education',
-      'experience'
-    ])
+    ...mapGetters(['education', 'experience'])
   },
   mounted () {
     this.fetchEducation()
@@ -81,10 +77,10 @@ export default {
   },
   methods: {
     fetchEducation () {
-      this.$store.dispatch(FETCH_EDUCATION, {})
+      this.$store.dispatch('fetchEducation')
     },
     fetchExperience () {
-      this.$store.dispatch(FETCH_EXPERIENCE, {})
+      this.$store.dispatch('fetchExperience')
     }
   }
 }

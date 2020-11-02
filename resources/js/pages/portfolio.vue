@@ -6,14 +6,15 @@
           <h2 class="section-title mb-5">{{ $t('my_work') }}</h2>
           <v-layout row wrap class="mb-2">
             <v-flex xs12 sm12 text-center>
-              <v-btn small class="ma-2" @click="filter(0)">{{ $t('All') }}</v-btn>
-              <v-btn v-for="category in categories" :key="category.id" small class="ma-2" @click="filter(category.id)">
+              <v-btn small class="ma-2" @click="changeCategory(null)">{{ $t('All') }}</v-btn>
+              <v-btn v-for="category in categories" :key="category.id" small class="ma-2"
+                     @click="changeCategory(category)">
                 {{ category.title }}
               </v-btn>
             </v-flex>
           </v-layout>
           <v-layout row wrap>
-            <v-flex v-for="project in projects" :key="project.id" :class="[project.category.title]" xs12 sm6 md4>
+            <v-flex v-for="project in projects" :key="project.id" xs12 sm6 md4>
               <v-hover>
                 <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
                   <v-img v-if="project.image" v-img="{src: project.image}" :src="project.image" :alt="project.title"
@@ -43,54 +44,46 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import { FETCH_CATEGORIES, FETCH_PROJECTS } from '~/store/actions.type'
+import {mapGetters} from 'vuex'
 
 export default {
   layout: 'default',
-  metaInfo () {
-    return { title: this.$t('portfolio') }
+  metaInfo() {
+    return {title: this.$t('portfolio')}
   },
   data: () => ({
-    category: 0
+    category: null,
+    projects: [],
   }),
   computed: {
-    listConfig () {
-      const { category } = this
-      return {
-        category
-      }
-    },
-    ...mapGetters([
-      'categories',
-      'projects',
-      'locale'
-    ])
+    ...mapGetters(['categories', 'locale']),
   },
-  watch: {
-    category () {
-      this.fetchProjects()
-    }
-  },
-  mounted () {
+  mounted() {
     this.fetchCategories()
-    this.fetchProjects()
     this.$store.subscribe((mutation, state) => {
-      if(mutation.type === 'setLocale') {
+      if (mutation.type === 'setLocale') {
         this.fetchCategories()
-        this.fetchProjects()
       }
     });
   },
   methods: {
-    fetchCategories () {
-      this.$store.dispatch(FETCH_CATEGORIES, {})
+    fetchCategories() {
+      this.$store.dispatch('fetchCategories').then((response) => {
+        response.map((item) => {
+          this.projects.push(...item.projects)
+        })
+      })
     },
-    fetchProjects () {
-      this.$store.dispatch(FETCH_PROJECTS, this.listConfig)
-    },
-    filter: function (category) {
+    changeCategory: function (category) {
       this.category = category
+      if (category) {
+        this.projects = category.projects
+      } else {
+        this.projects = []
+        this.categories.map((item) => {
+          this.projects.push(...item.projects)
+        })
+      }
     }
   }
 }

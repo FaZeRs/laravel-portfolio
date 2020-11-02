@@ -1,19 +1,17 @@
-import "@babel/polyfill";
 import Vue from 'vue'
 import vuetify from '~/plugins/vuetify'
 import store from '~/store'
 import router from '~/router'
 import i18n from '~/plugins/i18n'
-import App from '~/components/App'
+import axios from 'axios'
+import { Model } from 'vue-api-query'
+import App from './App'
 import VueImg from 'v-img'
-
-import '~/components'
-
-import ApiService from '~/common/api.service'
 
 Vue.config.productionTip = false
 
-ApiService.init()
+axios.defaults.baseURL = process.env.MIX_API_URL
+Model.$http = axios
 
 Vue.use(VueImg)
 

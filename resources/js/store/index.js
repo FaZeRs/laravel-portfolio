@@ -1,18 +1,20 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-import project from './project.module'
-import lang from './lang.module'
-import education from './education.module'
-import experience from './experience.module'
-import settings from './settings.module'
-import contact from './contact.module'
+import category from './category'
+import project from './project'
+import lang from './lang'
+import education from './education'
+import experience from './experience'
+import settings from './settings'
+import contact from './contact'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   modules: {
     lang,
+    category,
     project,
     education,
     experience,

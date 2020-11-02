@@ -64,12 +64,8 @@ export default {
   components: {
     ContactForm
   },
-  data: () => ({
-  }),
   computed: {
-    ...mapGetters([
-      'settings'
-    ])
+    ...mapGetters(['settings']),
   }
 }
 </script>

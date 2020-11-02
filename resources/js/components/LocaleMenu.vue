@@ -16,7 +16,6 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { CHANGE_LOCALE } from "~/store/actions.type";
 
 export default {
   computed: mapGetters({
@@ -25,7 +24,7 @@ export default {
   }),
   methods: {
     setLocale (locale) {
-      this.$store.dispatch(CHANGE_LOCALE, locale)
+      this.$store.dispatch('lang/changeLocale', locale)
     }
   }
 }
