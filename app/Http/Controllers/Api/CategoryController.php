@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\CategoryResource;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Spatie\QueryBuilder\QueryBuilder;
 
 class CategoryController extends Controller
 {
@@ -16,7 +17,10 @@ class CategoryController extends Controller
 
     public function index()
     {
-        return CategoryResource::collection(Category::all());
+        $categories = QueryBuilder::for(Category::class)
+            ->allowedIncludes('projects', 'projects.tags', 'projects.links')
+            ->get();
+        return CategoryResource::collection($categories);
     }
 
     public function show(Category $category)
