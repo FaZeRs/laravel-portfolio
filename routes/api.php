@@ -11,6 +11,8 @@
 |
 */
 
+use App\Http\Controllers\Api\SettingController;
+
 Route::name('api.')->group(function () {
     Route::post('contact/send', 'ContactController@send')->name('contact.send');
 
@@ -24,7 +26,5 @@ Route::name('api.')->group(function () {
     Route::apiResource('links', 'LinkController');
     Route::apiResource('education', 'EducationController');
     Route::apiResource('experience', 'ExperienceController');
-    Route::apiResource('settings', 'SettingController')->only([
-        'index', 'show',
-    ]);
+    Route::get('settings', [SettingController::class, 'index']);
 });
