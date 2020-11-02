@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Mail\Contact;
+namespace App\Mail;
 
-use App\Models\Setting;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
@@ -35,12 +34,12 @@ class SendContact extends Mailable implements ShouldQueue
     /**
      * Build the message.
      *
-     * @return \App\Mail\Contact\SendContact
+     * @return \App\Mail\SendContact
      */
     public function build()
     {
         return $this
-            ->to(Setting::get('contact_email'))
+            ->to(settings('contact_email'))
             ->subject(__('strings.emails.contact.subject', ['app_name' => config('app.name')]))
             ->from($this->request['email'], $this->request['name'])
             ->replyTo($this->request['email'], $this->request['name'])
