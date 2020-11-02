@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Filters\ProjectFilter;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\ProjectResource;
 use App\Models\Project;
 use Illuminate\Http\Request;
+use Spatie\QueryBuilder\AllowedFilter;
+use Spatie\QueryBuilder\QueryBuilder;
 
 class ProjectController extends Controller
 {
@@ -15,9 +16,15 @@ class ProjectController extends Controller
         $this->middleware('api_admin')->except('index', 'show');
     }
 
-    public function index(ProjectFilter $filter)
+    public function index()
     {
-        return ProjectResource::collection(Project::with('tags', 'links')->filter($filter)->get());
+        $projects = QueryBuilder::for(Project::class)
+            ->allowedIncludes('tags', 'links')
+            ->allowedFilters([
+                AllowedFilter::exact('category_id'),
+            ])
+            ->get();
+        return ProjectResource::collection($projects);
     }
 
     public function show(Project $project)
