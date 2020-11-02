@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Hash;
 
 class UserTableSeeder extends Seeder
 {
+    use TruncateTable;
+
     /**
      * Run the database seeds.
      *
@@ -13,7 +15,8 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(User::class)->create([
+        $this->truncate('users');
+        User::factory()->create([
             'name' => 'Admin',
             'email' => 'admin@admin.com',
             'password' => Hash::make('secret'),

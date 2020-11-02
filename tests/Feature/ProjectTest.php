@@ -16,7 +16,7 @@ class ProjectTest extends TestCase
 
     public function test_guest_cannot_create_a_project()
     {
-        $category = factory(Category::class)->create();
+        $category = Category::factory()->create();
         $data = [
             'title'       => $this->faker->sentence,
             'category_id' => $category->id,
@@ -41,7 +41,7 @@ class ProjectTest extends TestCase
     {
         $this->loginAsUser();
 
-        $category = factory(Category::class)->create();
+        $category = Category::factory()->create();
         $data = [
             'title'       => $this->faker->sentence,
             'category_id' => $category->id,
@@ -66,8 +66,8 @@ class ProjectTest extends TestCase
     {
         $this->loginAsAdmin();
 
-        $category = factory(Category::class)->create();
-        $tags = factory(Tag::class, 2)->create();
+        $category = Category::factory()->create();
+        $tags = Tag::factory()->count(2)->create();
         $data = [
             'title'       => $this->faker->sentence,
             'category_id' => $category->id,
@@ -103,7 +103,7 @@ class ProjectTest extends TestCase
 
     public function test_guest_cannot_edit_a_project()
     {
-        $project = factory(Project::class)->create();
+        $project = Project::factory()->create();
 
         $data = [
             'title' => $this->faker->sentence,
@@ -117,7 +117,7 @@ class ProjectTest extends TestCase
     {
         $this->loginAsUser();
 
-        $project = factory(Project::class)->create();
+        $project = Project::factory()->create();
 
         $data = [
             'title' => $this->faker->sentence,
@@ -131,8 +131,8 @@ class ProjectTest extends TestCase
     {
         $this->loginAsAdmin();
 
-        $project = factory(Project::class)->create();
-        $tags = factory(Tag::class, 2)->create();
+        $project = Project::factory()->create();
+        $tags = Tag::factory()->count(2)->create();
         $data = [
             'title' => $this->faker->sentence,
             'tags'  => $tags->pluck('id'),
@@ -156,7 +156,7 @@ class ProjectTest extends TestCase
 
     public function test_guest_cannot_delete_a_project()
     {
-        $project = factory(Project::class)->create();
+        $project = Project::factory()->create();
 
         $response = $this->json('DELETE', '/api/projects/'.$project->id);
         $response->assertStatus(401);
@@ -166,7 +166,7 @@ class ProjectTest extends TestCase
     {
         $this->loginAsUser();
 
-        $project = factory(Project::class)->create();
+        $project = Project::factory()->create();
 
         $response = $this->json('DELETE', '/api/projects/'.$project->id);
         $response->assertStatus(401);
@@ -176,14 +176,14 @@ class ProjectTest extends TestCase
     {
         $this->loginAsAdmin();
 
-        $project = factory(Project::class)->create();
+        $project = Project::factory()->create();
         $response = $this->json('DELETE', '/api/projects/'.$project->id);
         $response->assertSuccessful();
     }
 
     public function test_get_projects()
     {
-        factory(Project::class, 5)->create();
+        Project::factory()->count(5)->create();
         $response = $this->json('GET', '/api/projects');
         $response->assertSuccessful();
         $response->assertJsonStructure([
@@ -204,7 +204,7 @@ class ProjectTest extends TestCase
 
     public function test_get_project()
     {
-        $project = factory(Project::class)->create();
+        $project = Project::factory()->create();
 
         $response = $this->json('GET', '/api/projects/'.$project->id);
         $response->assertSuccessful();
@@ -224,8 +224,8 @@ class ProjectTest extends TestCase
 
     public function test_add_and_remove_tag_from_project()
     {
-        $project = factory(Project::class)->create();
-        $tag = factory(Tag::class)->create();
+        $project = Project::factory()->create();
+        $tag = Tag::factory()->create();
         $project->tags()->attach($tag);
         $this->assertTrue($project->hasTag($tag));
         $project->tags()->detach($tag);

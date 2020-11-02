@@ -2,7 +2,7 @@
 
 namespace Tests\Feature;
 
-use App\Mail\Contact\SendContact;
+use App\Mail\SendContact;
 use Illuminate\Support\Facades\Mail;
 use Tests\TestCase;
 

@@ -1,25 +1,32 @@
 <?php
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
-use App\Models\Education;
-use Faker\Generator as Faker;
+namespace Database\Factories;
 
-/*
-|--------------------------------------------------------------------------
-| Model Factories
-|--------------------------------------------------------------------------
-|
-| This directory should contain each of the model factory definitions for
-| your application. Factories provide a convenient way to generate new
-| model instances for testing / seeding your application's database.
-|
-*/
-$factory->define(Education::class, function (Faker $faker) {
-    return [
-        'qualification' => $faker->sentence(4),
-        'organisation' => $faker->sentence(2),
-        'from' => $faker->date,
-        'to' => $faker->date,
-        'ongoing' => $faker->boolean(25),
-    ];
-});
+use App\Models\Education;
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+class EducationFactory extends Factory
+{
+    /**
+     * The name of the factory's corresponding model.
+     *
+     * @var string
+     */
+    protected $model = Education::class;
+
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition()
+    {
+        return [
+            'qualification' => $this->faker->sentence(4),
+            'organisation' => $this->faker->sentence(2),
+            'from' => $this->faker->date,
+            'to' => $this->faker->date,
+            'ongoing' => $this->faker->boolean(25),
+        ];
+    }
+}

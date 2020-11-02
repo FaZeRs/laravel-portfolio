@@ -58,7 +58,7 @@ class TagTest extends TestCase
 
     public function test_guest_cannot_edit_a_tag()
     {
-        $tag = factory(Tag::class)->create();
+        $tag = Tag::factory()->create();
 
         $data = [
             'title' => $this->faker->sentence,
@@ -72,7 +72,7 @@ class TagTest extends TestCase
     {
         $this->loginAsUser();
 
-        $tag = factory(Tag::class)->create();
+        $tag = Tag::factory()->create();
         $data = [
             'title' => $this->faker->sentence,
         ];
@@ -85,7 +85,7 @@ class TagTest extends TestCase
     {
         $this->loginAsAdmin();
 
-        $tag = factory(Tag::class)->create();
+        $tag = Tag::factory()->create();
         $data = [
             'title' => $this->faker->sentence,
         ];
@@ -103,7 +103,7 @@ class TagTest extends TestCase
 
     public function test_guest_cannot_delete_a_tag()
     {
-        $tag = factory(Tag::class)->create();
+        $tag = Tag::factory()->create();
         $response = $this->json('DELETE', '/api/tags/'.$tag->id);
         $response->assertStatus(401);
     }
@@ -111,7 +111,7 @@ class TagTest extends TestCase
     public function test_user_cannot_delete_a_tag()
     {
         $this->loginAsUser();
-        $tag = factory(Tag::class)->create();
+        $tag = Tag::factory()->create();
         $response = $this->json('DELETE', '/api/tags/'.$tag->id);
         $response->assertStatus(401);
     }
@@ -119,14 +119,14 @@ class TagTest extends TestCase
     public function test_admin_can_delete_a_tag()
     {
         $this->loginAsAdmin();
-        $tag = factory(Tag::class)->create();
+        $tag = Tag::factory()->create();
         $response = $this->json('DELETE', '/api/tags/'.$tag->id);
         $response->assertSuccessful();
     }
 
     public function test_get_tags()
     {
-        factory(Tag::class, 5)->create();
+        Tag::factory()->count(5)->create();
         $response = $this->json('GET', '/api/tags');
         $response->assertSuccessful();
         $response->assertJsonStructure([
@@ -142,7 +142,7 @@ class TagTest extends TestCase
 
     public function test_get_tag()
     {
-        $tag = factory(Tag::class)->create();
+        $tag = Tag::factory()->create();
 
         $response = $this->json('GET', '/api/tags/'.$tag->id);
         $response->assertSuccessful();

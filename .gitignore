@@ -28,3 +28,4 @@ Todo.rtf
 /storage/*.key
 /public/vendor
 /public/packages
+.php_cs.cache

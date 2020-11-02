@@ -5,6 +5,8 @@ use Illuminate\Database\Seeder;
 
 class CategoriesTableSeeder extends Seeder
 {
+    use TruncateTable;
+
     /**
      * Run the database seeds.
      *
@@ -12,6 +14,8 @@ class CategoriesTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Category::class, 3)->create();
+        $this->truncate('categories');
+
+        Category::factory()->count(3)->create();
     }
 }

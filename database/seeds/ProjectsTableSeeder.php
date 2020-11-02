@@ -7,6 +7,8 @@ use Illuminate\Database\Seeder;
 
 class ProjectsTableSeeder extends Seeder
 {
+    use TruncateTable;
+
     /**
      * Run the database seeds.
      *
@@ -14,9 +16,10 @@ class ProjectsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Project::class, 6)->create()->each(function ($project) {
+        $this->truncateMultiple(['projects', 'links']);
+        Project::factory()->count(6)->create()->each(function ($project) {
             $project->tags()->saveMany(Tag::inRandomOrder()->take(3)->get());
-            $project->links()->saveMany(factory(Link::class, 2)->make([
+            $project->links()->saveMany(Link::factory()->count(2)->make([
                 'project_id' => $project->id,
             ]));
         });

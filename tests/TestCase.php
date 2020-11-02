@@ -19,7 +19,7 @@ abstract class TestCase extends BaseTestCase
      */
     protected function createUser($admin = false)
     {
-        $admin = factory(User::class)->create(['is_admin' => $admin]);
+        $admin = User::factory()->create(['is_admin' => $admin]);
 
         return $admin;
     }

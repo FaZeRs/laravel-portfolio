@@ -5,6 +5,8 @@ use Illuminate\Database\Seeder;
 
 class EducationTableSeeder extends Seeder
 {
+    use TruncateTable;
+
     /**
      * Run the database seeds.
      *
@@ -12,6 +14,7 @@ class EducationTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Education::class, 2)->create();
+        $this->truncate('education');
+        Education::factory()->count(2)->create();
     }
 }

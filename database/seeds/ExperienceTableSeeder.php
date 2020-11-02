@@ -5,6 +5,8 @@ use Illuminate\Database\Seeder;
 
 class ExperienceTableSeeder extends Seeder
 {
+    use TruncateTable;
+
     /**
      * Run the database seeds.
      *
@@ -12,6 +14,7 @@ class ExperienceTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Experience::class, 4)->create();
+        $this->truncate('experience');
+        Experience::factory()->count(4)->create();
     }
 }

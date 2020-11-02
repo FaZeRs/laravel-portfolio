@@ -5,6 +5,8 @@ use Illuminate\Database\Seeder;
 
 class TagsTableSeeder extends Seeder
 {
+    use TruncateTable;
+
     /**
      * Run the database seeds.
      *
@@ -12,6 +14,7 @@ class TagsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Tag::class, 6)->create();
+        $this->truncate('tags');
+        Tag::factory()->count(6)->create();
     }
 }

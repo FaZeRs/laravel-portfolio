@@ -54,7 +54,7 @@ class CategoryTest extends TestCase
 
     public function test_guest_cannot_edit_a_category()
     {
-        $category = factory(Category::class)->create();
+        $category = Category::factory()->create();
 
         $data = [
             'title' => $this->faker->name,
@@ -67,7 +67,7 @@ class CategoryTest extends TestCase
     {
         $this->loginAsUser();
 
-        $category = factory(Category::class)->create();
+        $category = Category::factory()->create();
 
         $data = [
             'title' => $this->faker->name,
@@ -80,7 +80,7 @@ class CategoryTest extends TestCase
     {
         $this->loginAsAdmin();
 
-        $category = factory(Category::class)->create();
+        $category = Category::factory()->create();
 
         $data = [
             'title' => $this->faker->name,
@@ -97,7 +97,7 @@ class CategoryTest extends TestCase
 
     public function test_guest_cannot_delete_a_category()
     {
-        $category = factory(Category::class)->create();
+        $category = Category::factory()->create();
 
         $response = $this->json('DELETE', '/api/categories/'.$category->id);
         $response->assertStatus(401);
@@ -107,7 +107,7 @@ class CategoryTest extends TestCase
     {
         $this->loginAsUser();
 
-        $category = factory(Category::class)->create();
+        $category = Category::factory()->create();
 
         $response = $this->json('DELETE', '/api/categories/'.$category->id);
         $response->assertStatus(401);
@@ -117,14 +117,14 @@ class CategoryTest extends TestCase
     {
         $this->loginAsAdmin();
 
-        $category = factory(Category::class)->create();
+        $category = Category::factory()->create();
         $response = $this->json('DELETE', '/api/categories/'.$category->id);
         $response->assertStatus(204);
     }
 
     public function test_get_categories()
     {
-        factory(Category::class, 5)->create();
+        Category::factory()->count(5)->create();
         $response = $this->json('GET', '/api/categories');
         $response->assertStatus(200);
         $response->assertJsonStructure([
@@ -139,7 +139,7 @@ class CategoryTest extends TestCase
 
     public function test_get_category()
     {
-        $category = factory(Category::class)->create();
+        $category = Category::factory()->create();
         $response = $this->json('GET', '/api/categories/'.$category->id);
         $response->assertStatus(200);
         $response->assertJsonStructure([

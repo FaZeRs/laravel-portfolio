@@ -1,27 +1,34 @@
 <?php
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
-use App\Models\Experience;
-use Faker\Generator as Faker;
+namespace Database\Factories;
 
-/*
-|--------------------------------------------------------------------------
-| Model Factories
-|--------------------------------------------------------------------------
-|
-| This directory should contain each of the model factory definitions for
-| your application. Factories provide a convenient way to generate new
-| model instances for testing / seeding your application's database.
-|
-*/
-$factory->define(Experience::class, function (Faker $faker) {
-    return [
-        'position' => $faker->jobTitle,
-        'employer' => $faker->company,
-        'website' => $faker->domainName,
-        'from' => $faker->date,
-        'to' => $faker->date,
-        'ongoing' => $faker->boolean(25),
-        'logo' => 'experience/'.$faker->image(storage_path('app/public/experience'), 640, 480, 'business', false),
-    ];
-});
+use App\Models\Experience;
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+class ExperienceFactory extends Factory
+{
+    /**
+     * The name of the factory's corresponding model.
+     *
+     * @var string
+     */
+    protected $model = Experience::class;
+
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition()
+    {
+        return [
+            'position' => $this->faker->jobTitle,
+            'employer' => $this->faker->company,
+            'website' => $this->faker->domainName,
+            'from' => $this->faker->date,
+            'to' => $this->faker->date,
+            'ongoing' => $this->faker->boolean(25),
+            'logo' => 'experience/'.$this->faker->image(storage_path('app/public/experience'), 640, 480, 'business', false),
+        ];
+    }
+}

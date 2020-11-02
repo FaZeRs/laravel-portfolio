@@ -17,13 +17,11 @@ class PassportTest extends TestCase
 
         $response->assertStatus(200);
         $response->assertJson([
-            'details' => [
-                'id' => $user->id,
-                'name' => $user->name,
-                'email' => $user->email,
-                'created_at' => $user->created_at->toDateTimeString(),
-                'updated_at' => $user->updated_at->toDateTimeString(),
-            ],
+            'id' => $user->id,
+            'name' => $user->name,
+            'email' => $user->email,
+            'created_at' => $user->created_at->toDateTimeString(),
+            'updated_at' => $user->updated_at->toDateTimeString(),
         ]);
     }
 
