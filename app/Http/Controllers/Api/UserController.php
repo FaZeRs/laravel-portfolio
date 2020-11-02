@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\UserResource;
 use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
@@ -15,8 +16,7 @@ class UserController extends Controller
     public function details()
     {
         $user = auth()->user();
-
-        return response()->json(['details' => $user], 200);
+        return new UserResource($user);
     }
 
     public function logout()
