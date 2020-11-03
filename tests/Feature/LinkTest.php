@@ -129,6 +129,7 @@ class LinkTest extends TestCase
 
     public function test_get_links()
     {
+        $this->loginAsAdmin();
         Link::factory()->count(5)->create();
         $response = $this->json('GET', '/api/links');
         $response->assertSuccessful();
@@ -147,6 +148,7 @@ class LinkTest extends TestCase
 
     public function test_get_link()
     {
+        $this->loginAsAdmin();
         $link = Link::factory()->create();
         $response = $this->json('GET', '/api/links/' . $link->id);
         $response->assertSuccessful();

@@ -126,6 +126,7 @@ class TagTest extends TestCase
 
     public function test_get_tags()
     {
+        $this->loginAsAdmin();
         Tag::factory()->count(5)->create();
         $response = $this->json('GET', '/api/tags');
         $response->assertSuccessful();
@@ -142,8 +143,8 @@ class TagTest extends TestCase
 
     public function test_get_tag()
     {
+        $this->loginAsAdmin();
         $tag = Tag::factory()->create();
-
         $response = $this->json('GET', '/api/tags/'.$tag->id);
         $response->assertSuccessful();
         $response->assertJsonStructure([
