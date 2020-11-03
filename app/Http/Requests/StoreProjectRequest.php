@@ -36,7 +36,7 @@ class StoreProjectRequest extends FormRequest
             'status' => ['required', Rule::in(['unknown', 'open', 'scheduled', 'in_development', 'completed', 'cancelled'])],
             'visible' => ['boolean'],
             'order' => ['numeric'],
-            'photos' => []
+            'photos' => [],
         ];
     }
 }
