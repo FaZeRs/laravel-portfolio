@@ -9,6 +9,7 @@ class SettingController extends Controller
     public function index()
     {
         $settings = settings()->all();
+
         return response()->json($settings);
     }
 }

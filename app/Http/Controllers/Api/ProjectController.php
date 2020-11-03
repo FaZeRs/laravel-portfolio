@@ -25,6 +25,7 @@ class ProjectController extends Controller
                 AllowedFilter::exact('category_id'),
             ])
             ->get();
+
         return ProjectResource::collection($projects);
     }
 

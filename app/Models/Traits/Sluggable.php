@@ -49,9 +49,10 @@ trait Sluggable
      */
     public function getSluggableString()
     {
-        if($this->isTranslatableAttribute('title')) {
+        if ($this->isTranslatableAttribute('title')) {
             return $this->getTranslation('title', app()->getLocale());
         }
+
         return $this->getAttribute('title');
     }
 
@@ -62,9 +63,10 @@ trait Sluggable
      */
     public function getSlug()
     {
-        if($this->isTranslatableAttribute($this->getSlugColumnName())) {
+        if ($this->isTranslatableAttribute($this->getSlugColumnName())) {
             return $this->getTranslation($this->getSlugColumnName(), app()->getLocale());
         }
+
         return $this->getAttribute($this->getSlugColumnName());
     }
 
@@ -76,7 +78,7 @@ trait Sluggable
      */
     public function setSlug(string $value)
     {
-        if($this->isTranslatableAttribute($this->getSlugColumnName())) {
+        if ($this->isTranslatableAttribute($this->getSlugColumnName())) {
             $this->setTranslation($this->getSlugColumnName(), app()->getLocale(), $value);
         } else {
             $this->setAttribute($this->getSlugColumnName(), $value);
@@ -100,7 +102,7 @@ trait Sluggable
         }
 
         $locale = app()->getLocale();
-        if($model->isTranslatableAttribute($model->getSlugColumnName())) {
+        if ($model->isTranslatableAttribute($model->getSlugColumnName())) {
             $modelsWithRelatedSlug = $model
                 ->withoutGlobalScopes()
                 ->withTrashed()
@@ -116,7 +118,7 @@ trait Sluggable
 
         $i = 0;
         while ($modelsWithRelatedSlug->contains($attribute, $slug)) {
-            ++$i;
+            $i++;
             $matches = [];
             if (preg_match('/^(.*?)-(\d+)$/', $slug, $matches)) {
                 $nextNum = $matches[2] + $i;
@@ -126,7 +128,7 @@ trait Sluggable
             }
         }
 
-        if($model->isTranslatableAttribute($model->getSlugColumnName())) {
+        if ($model->isTranslatableAttribute($model->getSlugColumnName())) {
             $model = $model
                 ->withoutGlobalScopes()
                 ->where("{$attribute}->{$locale}", $slug)

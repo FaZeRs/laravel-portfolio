@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
-
     public function send(ContactRequest $request)
     {
         $data = $request->validated();

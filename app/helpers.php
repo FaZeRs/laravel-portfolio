@@ -2,7 +2,8 @@
 
 use App\Settings;
 
-function settings($key = null, $default = null) {
+function settings($key = null, $default = null)
+{
     if ($key === null) {
         return app(Settings::class);
     }

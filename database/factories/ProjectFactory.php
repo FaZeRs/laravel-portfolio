@@ -26,6 +26,7 @@ class ProjectFactory extends Factory
     public function definition()
     {
         $category = Category::inRandomOrder()->first();
+
         return [
             'title'       => $this->faker->sentence,
             'category_id' => function () use ($category) {

@@ -69,7 +69,7 @@ class LinkTest extends TestCase
         $data = [
             'title' => $this->faker->sentence,
         ];
-        $response = $this->json('PUT', '/api/links/' . $link->id, $data);
+        $response = $this->json('PUT', '/api/links/'.$link->id, $data);
         $response->assertUnauthorized();
     }
 
@@ -80,7 +80,7 @@ class LinkTest extends TestCase
         $data = [
             'title' => $this->faker->sentence,
         ];
-        $response = $this->json('PUT', '/api/links/' . $link->id, $data);
+        $response = $this->json('PUT', '/api/links/'.$link->id, $data);
         $response->assertUnauthorized();
     }
 
@@ -91,7 +91,7 @@ class LinkTest extends TestCase
         $data = [
             'title' => $this->faker->sentence,
         ];
-        $response = $this->json('PUT', '/api/links/' . $link->id, $data);
+        $response = $this->json('PUT', '/api/links/'.$link->id, $data);
         $response->assertSuccessful();
         $response->assertJsonStructure([
             'id',
@@ -107,7 +107,7 @@ class LinkTest extends TestCase
     public function test_guest_cannot_delete_a_link()
     {
         $link = Link::factory()->create();
-        $response = $this->json('DELETE', '/api/links/' . $link->id);
+        $response = $this->json('DELETE', '/api/links/'.$link->id);
         $response->assertUnauthorized();
     }
 
@@ -115,7 +115,7 @@ class LinkTest extends TestCase
     {
         $this->loginAsUser();
         $link = Link::factory()->create();
-        $response = $this->json('DELETE', '/api/links/' . $link->id);
+        $response = $this->json('DELETE', '/api/links/'.$link->id);
         $response->assertUnauthorized();
     }
 
@@ -123,7 +123,7 @@ class LinkTest extends TestCase
     {
         $this->loginAsAdmin();
         $link = Link::factory()->create();
-        $response = $this->json('DELETE', '/api/links/' . $link->id);
+        $response = $this->json('DELETE', '/api/links/'.$link->id);
         $response->assertSuccessful();
     }
 
@@ -150,7 +150,7 @@ class LinkTest extends TestCase
     {
         $this->loginAsAdmin();
         $link = Link::factory()->create();
-        $response = $this->json('GET', '/api/links/' . $link->id);
+        $response = $this->json('GET', '/api/links/'.$link->id);
         $response->assertSuccessful();
         $response->assertJsonStructure([
             'id',
