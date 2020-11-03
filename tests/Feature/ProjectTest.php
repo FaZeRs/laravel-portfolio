@@ -90,8 +90,8 @@ class ProjectTest extends TestCase
             'tags'        => $tags->pluck('id'),
             'photos' => [
                 0 => $file,
-                1 => $file2
-            ]
+                1 => $file2,
+            ],
         ];
 
         $response = $this->json('POST', '/api/projects', $data);

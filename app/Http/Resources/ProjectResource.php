@@ -19,6 +19,7 @@ class ProjectResource extends JsonResource
         foreach ($this->getMedia('photos') as $media) {
             $photos[] = $media->getUrl();
         }
+
         return [
             'id'          => $this->id,
             'title'       => $this->title,

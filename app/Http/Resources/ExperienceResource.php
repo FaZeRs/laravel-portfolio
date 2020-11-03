@@ -17,6 +17,7 @@ class ExperienceResource extends JsonResource
     public function toArray($request): array
     {
         $logo = $this->getFirstMediaUrl('logo');
+
         return [
             'id'         => $this->id,
             'position'   => $this->position,

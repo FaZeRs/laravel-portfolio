@@ -30,9 +30,10 @@ class ExperienceController extends Controller
         $data = $request->validated();
         unset($data['logo']);
         $experience = Experience::create($data);
-        if($request->has('logo')) {
+        if ($request->has('logo')) {
             $experience->addMediaFromRequest('logo')->toMediaCollection('logo');
         }
+
         return new ExperienceResource($experience);
     }
 
@@ -41,7 +42,7 @@ class ExperienceController extends Controller
         $data = $request->validated();
         unset($data['logo']);
         $experience->update($data);
-        if($request->has('logo')) {
+        if ($request->has('logo')) {
             $experience->addMediaFromRequest('logo')->toMediaCollection('logo');
         }
 
