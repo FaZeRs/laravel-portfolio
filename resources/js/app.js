@@ -11,6 +11,7 @@ import VueImg from 'v-img'
 Vue.config.productionTip = false
 
 axios.defaults.baseURL = process.env.MIX_API_URL
+axios.defaults.withCredentials = true
 Model.$http = axios
 
 Vue.use(VueImg)

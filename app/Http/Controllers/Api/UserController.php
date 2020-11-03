@@ -4,31 +4,24 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\UserResource;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth:api');
+        $this->middleware('auth:sanctum');
     }
 
-    public function details()
+    public function details(Request $request)
     {
-        $user = auth()->user();
-        return new UserResource($user);
+        return new UserResource($request->user());
     }
 
-    public function logout()
+    public function logout(Request $request)
     {
-        $accessToken = auth()->user()->token();
+        $request->user()->currentAccessToken()->delete();
 
-        DB::table('oauth_refresh_tokens')->where('access_token_id', $accessToken->id)->update([
-            'revoked' => true,
-        ]);
-
-        $accessToken->revoke();
-
-        return response()->json(['success' => 'You have successfully logged out'], 200);
+        return response()->json(['success' => 'You have successfully logged out']);
     }
 }

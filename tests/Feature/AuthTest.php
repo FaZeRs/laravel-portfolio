@@ -5,7 +5,7 @@ namespace Tests\Feature;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
-class PassportTest extends TestCase
+class AuthTest extends TestCase
 {
     use RefreshDatabase;
 

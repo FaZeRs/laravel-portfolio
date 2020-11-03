@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\ValidationException;
 
 class LoginController extends Controller
 {
@@ -18,14 +19,13 @@ class LoginController extends Controller
 
         $user = User::where('email', $request->get('email'))->first();
 
-        if ($user) {
-            if (Hash::check($request->get('password'), $user->password)) {
-                $success['token'] = $user->createToken('Portfolio')->accessToken;
-
-                return response()->json(['success' => $success], 200);
-            }
+        if (! $user || ! Hash::check($request->password, $user->password)) {
+            throw ValidationException::withMessages([
+                'email' => ['The provided credentials are incorrect.'],
+            ]);
         }
 
-        return response()->json(['error' => 'These credentials do not match our records.'], 401);
+        $success['token'] = $user->createToken(config('app.name'))->plainTextToken;
+        return response()->json(['success' => $success]);
     }
 }

@@ -4,7 +4,7 @@ namespace Tests;
 
 use App\Models\User;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
-use Laravel\Passport\Passport;
+use Laravel\Sanctum\Sanctum;
 
 abstract class TestCase extends BaseTestCase
 {
@@ -33,7 +33,10 @@ abstract class TestCase extends BaseTestCase
     {
         $admin = $this->createUser(true);
 
-        Passport::actingAs($admin);
+        Sanctum::actingAs(
+            $admin,
+            ['*']
+        );
 
         return $admin;
     }
@@ -47,7 +50,10 @@ abstract class TestCase extends BaseTestCase
     {
         $user = $this->createUser();
 
-        Passport::actingAs($user);
+        Sanctum::actingAs(
+            $user,
+            ['*']
+        );
 
         return $user;
     }
