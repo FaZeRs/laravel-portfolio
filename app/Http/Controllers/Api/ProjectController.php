@@ -13,7 +13,7 @@ class ProjectController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('api_admin')->except('index', 'show');
+        $this->middleware('admin')->except('index', 'show');
     }
 
     public function index()

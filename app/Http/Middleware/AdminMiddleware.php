@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 
-class ApiAdminMiddleware
+class AdminMiddleware
 {
     /**
      * Handle an incoming request. User must be logged in to do admin check.
