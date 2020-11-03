@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-       $this->disableForeignKeys();
+        $this->disableForeignKeys();
 
         $this->call([
             UserTableSeeder::class,

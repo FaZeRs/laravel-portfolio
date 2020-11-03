@@ -21,6 +21,7 @@ class CategoryController extends Controller
         $categories = QueryBuilder::for(Category::class)
             ->allowedIncludes('projects', 'projects.tags', 'projects.links')
             ->get();
+
         return CategoryResource::collection($categories);
     }
 

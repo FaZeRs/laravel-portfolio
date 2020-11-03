@@ -2,12 +2,12 @@
 
 namespace App\Providers;
 
+use App\Settings;
 use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
-use App\Settings;
-use Illuminate\Support\Facades\Cache;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -19,7 +19,7 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton(Settings::class, function () {
-            return Cache::remember('settings', 15, function() {
+            return Cache::remember('settings', 15, function () {
                 return Settings::make(config('settings.path'));
             });
         });

@@ -2,7 +2,7 @@
 
 return [
 
-	'path' => storage_path('app/settings.json'),
+    'path' => storage_path('app/settings.json'),
 
     'defaults' => [
         [
@@ -89,6 +89,6 @@ return [
             'value'       => '',
             'field'       => 'text',
         ],
-    ]
+    ],
 
 ];
