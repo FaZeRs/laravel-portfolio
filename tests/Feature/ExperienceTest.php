@@ -6,6 +6,8 @@ use App\Models\Experience;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
+use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Storage;
 
 class ExperienceTest extends TestCase
 {
@@ -47,7 +49,8 @@ class ExperienceTest extends TestCase
     public function test_admin_can_create_an_experience()
     {
         $this->loginAsAdmin();
-
+        Storage::fake('logos');
+        $file = UploadedFile::fake()->image('logo.jpg');
         $data = [
             'position' => $this->faker->jobTitle,
             'employer' => $this->faker->company,
@@ -55,6 +58,7 @@ class ExperienceTest extends TestCase
             'from' => $this->faker->date,
             'to' => $this->faker->date,
             'ongoing' => $this->faker->boolean(25),
+            'logo' => $file,
         ];
 
         $response = $this->json('POST', route('api.experience.store'), $data);

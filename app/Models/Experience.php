@@ -6,15 +6,17 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Str;
-use Intervention\Image\Facades\Image;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Spatie\Translatable\HasTranslations;
 
-class Experience extends Model
+class Experience extends Model implements HasMedia
 {
     use HasFactory;
     use HasTranslations;
     use SoftDeletes;
+    use InteractsWithMedia;
 
     /**
      * The table associated with the model.
@@ -59,45 +61,19 @@ class Experience extends Model
         'updated_at',
     ];
 
-    public static function boot()
+    public function registerMediaCollections(): void
     {
-        parent::boot();
-        static::deleting(function ($obj) {
-            if (! Storage::disk('public')->delete($obj->logo)) {
-                //Alert::error(trans('backpack::settings.delete_image_file_not_message'))->flash();
-            }
-        });
+        $this
+            ->addMediaCollection('logo')
+            ->singleFile();
     }
 
-    public function setLogoAttribute($value)
+    public function registerMediaConversions(Media $media = null): void
     {
-        $attribute_name = 'logo';
-        $disk = 'public';
-        $destination_path = 'experience';
-
-        if (is_null($value)) {
-            if (Storage::disk($disk)->delete($this->{$attribute_name})) {
-                $this->attributes[$attribute_name] = null;
-            }
-        }
-
-        if (Str::startsWith($value, 'data:image')) {
-            preg_match("/^data:image\/(.*);base64/i", $value, $match);
-            $extension = $match[1];
-            $image = Image::make($value);
-            if (! is_null($image)) {
-                $filename = md5($value.time()).'.'.$extension;
-                try {
-                    if (! is_null($this->attributes[$attribute_name])) {
-                        Storage::disk($disk)->delete($this->attributes[$attribute_name]);
-                    }
-                    Storage::disk($disk)->put($destination_path.'/'.$filename, $image->stream());
-                    $this->attributes[$attribute_name] = $destination_path.'/'.$filename;
-                } catch (\InvalidArgumentException $argumentException) {
-                    //Alert::error($argumentException->getMessage())->flash();
-                    $this->attributes[$attribute_name] = null;
-                }
-            }
-        }
+        $this->addMediaConversion('thumb')
+            ->width(125)
+            ->height(125)
+            ->sharpen(10)
+            ->performOnCollections('logo');
     }
 }

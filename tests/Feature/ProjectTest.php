@@ -7,6 +7,8 @@ use App\Models\Project;
 use App\Models\Tag;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Storage;
 use Tests\TestCase;
 
 class ProjectTest extends TestCase
@@ -68,6 +70,9 @@ class ProjectTest extends TestCase
 
         $category = Category::factory()->create();
         $tags = Tag::factory()->count(2)->create();
+        Storage::fake('photos');
+        $file = UploadedFile::fake()->image('photo.jpg');
+        $file2 = UploadedFile::fake()->image('photo_2.jpg');
         $data = [
             'title'       => $this->faker->sentence,
             'category_id' => $category->id,
@@ -83,6 +88,10 @@ class ProjectTest extends TestCase
                 'cancelled',
             ]),
             'tags'        => $tags->pluck('id'),
+            'photos' => [
+                0 => $file,
+                1 => $file2
+            ]
         ];
 
         $response = $this->json('POST', '/api/projects', $data);
@@ -96,6 +105,7 @@ class ProjectTest extends TestCase
             'visible',
             'order',
             'status',
+            'images',
             'created_at',
             'updated_at',
         ]);

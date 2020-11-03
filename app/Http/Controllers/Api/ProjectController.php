@@ -43,6 +43,14 @@ class ProjectController extends Controller
             $project->tags()->sync($request->get('tags'));
         }
 
+        if($request->has('photos')) {
+            $photos = $request['photos'];
+            $photo_keys = array_map(function($k){ return 'photos.'.$k; }, array_keys($photos));
+            $project->addMultipleMediaFromRequest($photo_keys)->each(function ($fileAdder) {
+                $fileAdder->toMediaCollection('photos');
+            });
+        }
+
         return new ProjectResource($project);
     }
 

@@ -15,6 +15,10 @@ class ProjectResource extends JsonResource
      */
     public function toArray($request): array
     {
+        $photos = [];
+        foreach ($this->getMedia('photos') as $media) {
+            $photos[] = $media->getUrl();
+        }
         return [
             'id'          => $this->id,
             'title'       => $this->title,
@@ -25,7 +29,7 @@ class ProjectResource extends JsonResource
             'visible'     => $this->visible,
             'order'       => $this->order,
             'status'      => $this->status,
-            'image'       => $this->image ? Storage::url($this->image) : null,
+            'images'       => $photos,
             'tags'        => TagResource::collection($this->whenLoaded('tags')),
             'links'       => LinkResource::collection($this->whenLoaded('links')),
             'created_at'  => $this->created_at,

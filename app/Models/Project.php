@@ -6,14 +6,18 @@ use App\Models\Traits\Sluggable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Spatie\Translatable\HasTranslations;
 
-class Project extends Model
+class Project extends Model implements HasMedia
 {
     use HasFactory;
     use HasTranslations;
     use Sluggable;
     use SoftDeletes;
+    use InteractsWithMedia;
 
     /**
      * The table associated with the model.
@@ -90,5 +94,19 @@ class Project extends Model
         return $this->tags()
             ->wherePivot('tag_id', $tag->id)
             ->exists();
+    }
+
+    public function registerMediaCollections(): void
+    {
+        $this->addMediaCollection('photos');
+    }
+
+    public function registerMediaConversions(Media $media = null): void
+    {
+        $this->addMediaConversion('thumb')
+            ->width(381)
+            ->height(200)
+            ->sharpen(10)
+            ->performOnCollections('photos');
     }
 }

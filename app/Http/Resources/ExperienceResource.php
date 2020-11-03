@@ -16,6 +16,7 @@ class ExperienceResource extends JsonResource
      */
     public function toArray($request): array
     {
+        $logo = $this->getFirstMediaUrl('logo');
         return [
             'id'         => $this->id,
             'position'   => $this->position,
@@ -24,7 +25,7 @@ class ExperienceResource extends JsonResource
             'from'       => Carbon::parse($this->from)->format('M Y'),
             'to'         => Carbon::parse($this->to)->format('M Y'),
             'ongoing'    => $this->ongoing,
-            'logo'       => $this->logo ? Storage::url($this->logo) : null,
+            'logo'       => $logo,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ];
