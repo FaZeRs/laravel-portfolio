@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Traits\Sluggable;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\Translatable\HasTranslations;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -12,6 +13,7 @@ class Category extends Model
     use HasFactory;
     use HasTranslations;
     use Sluggable;
+    use SoftDeletes;
 
     /**
      * The table associated with the model.

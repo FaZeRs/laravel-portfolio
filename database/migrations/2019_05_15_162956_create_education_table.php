@@ -21,6 +21,7 @@ class CreateEducationTable extends Migration
             $table->date('to')->nullable();
             $table->boolean('ongoing')->default(false);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
