@@ -3,22 +3,17 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ContactRequest;
 use App\Mail\SendContact;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
 
-    public function send(Request $request): \Illuminate\Http\JsonResponse
+    public function send(ContactRequest $request)
     {
-        $this->validate($request, [
-            'name'    => 'required|string|max:191',
-            'email'   => 'required|email|string|max:191',
-            'message' => 'required',
-        ]);
-
-        Mail::send(new SendContact($request->only(['name', 'email', 'message'])));
+        $data = $request->validated();
+        Mail::send(new SendContact($data));
 
         return response()->json(['message' => 'success']);
     }
