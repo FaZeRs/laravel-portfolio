@@ -3,10 +3,13 @@
 namespace Database\Factories;
 
 use App\Models\Experience;
+use Database\Factories\Traits\SoftDeleted;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ExperienceFactory extends Factory
 {
+    use SoftDeleted;
+
     /**
      * The name of the factory's corresponding model.
      *
@@ -28,7 +31,6 @@ class ExperienceFactory extends Factory
             'from' => $this->faker->date,
             'to' => $this->faker->date,
             'ongoing' => $this->faker->boolean(25),
-            'logo' => 'experience/'.$this->faker->image(storage_path('app/public/experience'), 640, 480, 'business', false),
         ];
     }
 }

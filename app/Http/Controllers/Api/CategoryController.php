@@ -3,9 +3,10 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreCategoryRequest;
+use App\Http\Requests\UpdateCategoryRequest;
 use App\Http\Resources\CategoryResource;
 use App\Models\Category;
-use Illuminate\Http\Request;
 use Spatie\QueryBuilder\QueryBuilder;
 
 class CategoryController extends Controller
@@ -28,16 +29,18 @@ class CategoryController extends Controller
         return new CategoryResource($category);
     }
 
-    public function store(Request $request)
+    public function store(StoreCategoryRequest $request)
     {
-        $category = Category::create($request->only('title'));
+        $data = $request->validated();
+        $category = Category::create($data);
 
         return new CategoryResource($category);
     }
 
-    public function update(Category $category, Request $request)
+    public function update(UpdateCategoryRequest $request, Category $category)
     {
-        $category->update($request->only('title'));
+        $data = $request->validated();
+        $category->update($data);
 
         return new CategoryResource($category);
     }
@@ -46,6 +49,20 @@ class CategoryController extends Controller
     {
         $category->delete();
 
-        return response()->json([], 204);
+        return new CategoryResource($category);
+    }
+
+    public function restore(Category $category)
+    {
+        $category->restore();
+
+        return new CategoryResource($category);
+    }
+
+    public function delete(Category $category)
+    {
+        $category->forceDelete();
+
+        return response()->json([]);
     }
 }

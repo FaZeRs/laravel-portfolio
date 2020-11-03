@@ -3,9 +3,10 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreLinkRequest;
+use App\Http\Requests\UpdateLinkRequest;
 use App\Http\Resources\LinkResource;
 use App\Models\Link;
-use Illuminate\Http\Request;
 
 class LinkController extends Controller
 {
@@ -24,16 +25,18 @@ class LinkController extends Controller
         return new LinkResource($link);
     }
 
-    public function store(Request $request)
+    public function store(StoreLinkRequest $request)
     {
-        $link = Link::create($request->only('title', 'project_id', 'url', 'order'));
+        $data = $request->validated();
+        $link = Link::create($data);
 
         return new LinkResource($link);
     }
 
-    public function update(Link $link, Request $request)
+    public function update(UpdateLinkRequest $request, Link $link)
     {
-        $link->update($request->only('title', 'project_id', 'url', 'order'));
+        $data = $request->validated();
+        $link->update($data);
 
         return new LinkResource($link);
     }
@@ -42,6 +45,6 @@ class LinkController extends Controller
     {
         $link->delete();
 
-        return response()->json([], 204);
+        return response()->json([]);
     }
 }

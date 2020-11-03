@@ -34,7 +34,7 @@ class ProjectTest extends TestCase
         ];
 
         $response = $this->json('POST', '/api/projects', $data);
-        $response->assertStatus(401);
+        $response->assertUnauthorized();
     }
 
     public function test_user_cannot_create_a_project()
@@ -59,7 +59,7 @@ class ProjectTest extends TestCase
         ];
 
         $response = $this->json('POST', '/api/projects', $data);
-        $response->assertStatus(401);
+        $response->assertUnauthorized();
     }
 
     public function test_admin_can_create_a_project()
@@ -110,7 +110,7 @@ class ProjectTest extends TestCase
         ];
 
         $response = $this->json('PUT', '/api/projects/'.$project->id, $data);
-        $response->assertStatus(401);
+        $response->assertUnauthorized();
     }
 
     public function test_user_cannot_edit_a_project()
@@ -124,7 +124,7 @@ class ProjectTest extends TestCase
         ];
 
         $response = $this->json('PUT', '/api/projects/'.$project->id, $data);
-        $response->assertStatus(401);
+        $response->assertUnauthorized();
     }
 
     public function test_admin_can_edit_a_project()
@@ -159,7 +159,7 @@ class ProjectTest extends TestCase
         $project = Project::factory()->create();
 
         $response = $this->json('DELETE', '/api/projects/'.$project->id);
-        $response->assertStatus(401);
+        $response->assertUnauthorized();
     }
 
     public function test_user_cannot_delete_a_project()
@@ -169,7 +169,7 @@ class ProjectTest extends TestCase
         $project = Project::factory()->create();
 
         $response = $this->json('DELETE', '/api/projects/'.$project->id);
-        $response->assertStatus(401);
+        $response->assertUnauthorized();
     }
 
     public function test_admin_can_delete_a_project()
@@ -179,6 +179,24 @@ class ProjectTest extends TestCase
         $project = Project::factory()->create();
         $response = $this->json('DELETE', '/api/projects/'.$project->id);
         $response->assertSuccessful();
+        $this->assertSoftDeleted($project);
+    }
+
+    public function test_admin_can_restore_a_project()
+    {
+        $this->loginAsAdmin();
+        $project = Project::factory()->softDeleted()->create();
+        $response = $this->json('PUT', route('api.project.restore', $project));
+        $response->assertSuccessful();
+    }
+
+    public function test_admin_can_delete_permanently_a_project()
+    {
+        $this->loginAsAdmin();
+        $project = Project::factory()->softDeleted()->create();
+        $response = $this->json('PUT', route('api.project.delete-permanently', $project));
+        $response->assertSuccessful();
+        $this->assertDeleted($project);
     }
 
     public function test_get_projects()

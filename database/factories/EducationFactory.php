@@ -3,10 +3,13 @@
 namespace Database\Factories;
 
 use App\Models\Education;
+use Database\Factories\Traits\SoftDeleted;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class EducationFactory extends Factory
 {
+    use SoftDeleted;
+
     /**
      * The name of the factory's corresponding model.
      *

@@ -3,9 +3,10 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreProjectRequest;
+use App\Http\Requests\UpdateProjectRequest;
 use App\Http\Resources\ProjectResource;
 use App\Models\Project;
-use Illuminate\Http\Request;
 use Spatie\QueryBuilder\AllowedFilter;
 use Spatie\QueryBuilder\QueryBuilder;
 
@@ -32,9 +33,10 @@ class ProjectController extends Controller
         return new ProjectResource($project);
     }
 
-    public function store(Request $request)
+    public function store(StoreProjectRequest $request)
     {
-        $project = Project::create($request->only('title', 'category_id', 'description', 'visible', 'order', 'status'));
+        $data = $request->validated();
+        $project = Project::create($data);
 
         if ($request->has('tags')) {
             $project->tags()->sync($request->get('tags'));
@@ -43,10 +45,10 @@ class ProjectController extends Controller
         return new ProjectResource($project);
     }
 
-    public function update($id, Request $request)
+    public function update(UpdateProjectRequest $request, Project $project)
     {
-        $project = Project::findOrFail($id);
-        $project->update($request->only('title', 'category_id', 'description', 'visible', 'order', 'status'));
+        $data = $request->validated();
+        $project->update($data);
 
         if ($request->has('tags')) {
             $project->tags()->sync($request->get('tags'));
@@ -59,6 +61,18 @@ class ProjectController extends Controller
     {
         $project->delete();
 
-        return response()->json([], 204);
+        return new ProjectResource($project);
+    }
+
+    public function restore(Project $project)
+    {
+        $project->restore();
+
+        return new ProjectResource($project);
+    }
+
+    public function delete(Project $project)
+    {
+        $project->forceDelete();
     }
 }

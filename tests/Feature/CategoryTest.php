@@ -19,7 +19,7 @@ class CategoryTest extends TestCase
         ];
 
         $response = $this->json('POST', '/api/categories', $data);
-        $response->assertStatus(401);
+        $response->assertUnauthorized();
     }
 
     public function test_user_cannot_create_a_category()
@@ -31,7 +31,7 @@ class CategoryTest extends TestCase
         ];
 
         $response = $this->json('POST', '/api/categories', $data);
-        $response->assertStatus(401);
+        $response->assertUnauthorized();
     }
 
     public function test_admin_can_create_a_category()
@@ -43,7 +43,7 @@ class CategoryTest extends TestCase
         ];
 
         $response = $this->json('POST', '/api/categories', $data);
-        $response->assertStatus(201);
+        $response->assertSuccessful();
         $response->assertJsonStructure([
             'id',
             'title',
@@ -61,7 +61,7 @@ class CategoryTest extends TestCase
             'title' => $this->faker->name,
         ];
         $response = $this->json('PUT', '/api/categories/'.$category->id, $data);
-        $response->assertStatus(401);
+        $response->assertUnauthorized();
     }
 
     public function test_user_cannot_edit_a_category()
@@ -74,7 +74,7 @@ class CategoryTest extends TestCase
             'title' => $this->faker->name,
         ];
         $response = $this->json('PUT', '/api/categories/'.$category->id, $data);
-        $response->assertStatus(401);
+        $response->assertUnauthorized();
     }
 
     public function test_admin_can_edit_a_category()
@@ -87,7 +87,7 @@ class CategoryTest extends TestCase
             'title' => $this->faker->name,
         ];
         $response = $this->json('PUT', '/api/categories/'.$category->id, $data);
-        $response->assertStatus(200);
+        $response->assertSuccessful();
         $response->assertJsonStructure([
             'id',
             'title',
@@ -102,7 +102,7 @@ class CategoryTest extends TestCase
         $category = Category::factory()->create();
 
         $response = $this->json('DELETE', '/api/categories/'.$category->id);
-        $response->assertStatus(401);
+        $response->assertUnauthorized();
     }
 
     public function test_user_cannot_delete_a_category()
@@ -112,7 +112,7 @@ class CategoryTest extends TestCase
         $category = Category::factory()->create();
 
         $response = $this->json('DELETE', '/api/categories/'.$category->id);
-        $response->assertStatus(401);
+        $response->assertUnauthorized();
     }
 
     public function test_admin_can_delete_a_category()
@@ -120,15 +120,33 @@ class CategoryTest extends TestCase
         $this->loginAsAdmin();
 
         $category = Category::factory()->create();
-        $response = $this->json('DELETE', '/api/categories/'.$category->id);
-        $response->assertStatus(204);
+        $response = $this->json('DELETE', route('api.category.destroy', $category));
+        $response->assertSuccessful();
+        $this->assertSoftDeleted($category);
+    }
+
+    public function test_admin_can_restore_a_category()
+    {
+        $this->loginAsAdmin();
+        $category = Category::factory()->softDeleted()->create();
+        $response = $this->json('PUT', route('api.category.restore', $category));
+        $response->assertSuccessful();
+    }
+
+    public function test_admin_can_delete_permanently_a_category()
+    {
+        $this->loginAsAdmin();
+        $category = Category::factory()->softDeleted()->create();
+        $response = $this->json('PUT', route('api.category.delete-permanently', $category));
+        $response->assertSuccessful();
+        $this->assertDeleted($category);
     }
 
     public function test_get_categories()
     {
         Category::factory()->count(5)->create();
         $response = $this->json('GET', '/api/categories');
-        $response->assertStatus(200);
+        $response->assertSuccessful();
         $response->assertJsonStructure([
             '*' => [
                 'id',
@@ -144,7 +162,7 @@ class CategoryTest extends TestCase
     {
         $category = Category::factory()->create();
         $response = $this->json('GET', '/api/categories/'.$category->id);
-        $response->assertStatus(200);
+        $response->assertSuccessful();
         $response->assertJsonStructure([
             'id',
             'title',

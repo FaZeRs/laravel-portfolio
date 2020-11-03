@@ -4,10 +4,13 @@ namespace Database\Factories;
 
 use App\Models\Category;
 use App\Models\Project;
+use Database\Factories\Traits\SoftDeleted;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ProjectFactory extends Factory
 {
+    use SoftDeleted;
+
     /**
      * The name of the factory's corresponding model.
      *
@@ -29,7 +32,6 @@ class ProjectFactory extends Factory
                 return optional($category)->id ?? Category::factory()->create()->id;
             },
             'description' => $this->faker->paragraph,
-            'image'       => 'projects/'.$this->faker->image(storage_path('app/public/projects'), 640, 480, null, false),
             'visible'     => $this->faker->boolean($chanceOfGettingTrue = 80),
             'order'       => $this->faker->randomDigit,
             'status'      => $this->faker->randomElement([

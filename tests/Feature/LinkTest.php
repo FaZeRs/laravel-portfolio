@@ -23,7 +23,7 @@ class LinkTest extends TestCase
             'icon'       => $this->faker->word,
         ];
         $response = $this->json('POST', '/api/links', $data);
-        $response->assertStatus(401);
+        $response->assertUnauthorized();
     }
 
     public function test_user_cannot_create_a_link()
@@ -37,7 +37,7 @@ class LinkTest extends TestCase
             'icon'       => $this->faker->word,
         ];
         $response = $this->json('POST', '/api/links', $data);
-        $response->assertStatus(401);
+        $response->assertUnauthorized();
     }
 
     public function test_admin_can_create_a_link()
@@ -70,7 +70,7 @@ class LinkTest extends TestCase
             'title' => $this->faker->sentence,
         ];
         $response = $this->json('PUT', '/api/links/' . $link->id, $data);
-        $response->assertStatus(401);
+        $response->assertUnauthorized();
     }
 
     public function test_user_cannot_edit_a_link()
@@ -81,7 +81,7 @@ class LinkTest extends TestCase
             'title' => $this->faker->sentence,
         ];
         $response = $this->json('PUT', '/api/links/' . $link->id, $data);
-        $response->assertStatus(401);
+        $response->assertUnauthorized();
     }
 
     public function test_admin_can_edit_a_link()
@@ -108,7 +108,7 @@ class LinkTest extends TestCase
     {
         $link = Link::factory()->create();
         $response = $this->json('DELETE', '/api/links/' . $link->id);
-        $response->assertStatus(401);
+        $response->assertUnauthorized();
     }
 
     public function test_user_cannot_delete_a_link()
@@ -116,7 +116,7 @@ class LinkTest extends TestCase
         $this->loginAsUser();
         $link = Link::factory()->create();
         $response = $this->json('DELETE', '/api/links/' . $link->id);
-        $response->assertStatus(401);
+        $response->assertUnauthorized();
     }
 
     public function test_admin_can_delete_a_link()

@@ -20,7 +20,7 @@ class TagTest extends TestCase
         ];
 
         $response = $this->json('POST', '/api/tags', $data);
-        $response->assertStatus(401);
+        $response->assertUnauthorized();
     }
 
     public function test_user_cannot_create_a_tag()
@@ -33,7 +33,7 @@ class TagTest extends TestCase
         ];
 
         $response = $this->json('POST', '/api/tags', $data);
-        $response->assertStatus(401);
+        $response->assertUnauthorized();
     }
 
     public function test_admin_can_create_a_tag()
@@ -65,7 +65,7 @@ class TagTest extends TestCase
         ];
 
         $response = $this->json('PUT', '/api/tags/'.$tag->id, $data);
-        $response->assertStatus(401);
+        $response->assertUnauthorized();
     }
 
     public function test_user_cannot_edit_a_tag()
@@ -78,7 +78,7 @@ class TagTest extends TestCase
         ];
 
         $response = $this->json('PUT', '/api/tags/'.$tag->id, $data);
-        $response->assertStatus(401);
+        $response->assertUnauthorized();
     }
 
     public function test_admin_can_edit_a_tag()
@@ -105,7 +105,7 @@ class TagTest extends TestCase
     {
         $tag = Tag::factory()->create();
         $response = $this->json('DELETE', '/api/tags/'.$tag->id);
-        $response->assertStatus(401);
+        $response->assertUnauthorized();
     }
 
     public function test_user_cannot_delete_a_tag()
@@ -113,7 +113,7 @@ class TagTest extends TestCase
         $this->loginAsUser();
         $tag = Tag::factory()->create();
         $response = $this->json('DELETE', '/api/tags/'.$tag->id);
-        $response->assertStatus(401);
+        $response->assertUnauthorized();
     }
 
     public function test_admin_can_delete_a_tag()
@@ -122,6 +122,24 @@ class TagTest extends TestCase
         $tag = Tag::factory()->create();
         $response = $this->json('DELETE', '/api/tags/'.$tag->id);
         $response->assertSuccessful();
+        $this->assertSoftDeleted($tag);
+    }
+
+    public function test_admin_can_restore_a_tag()
+    {
+        $this->loginAsAdmin();
+        $tag = Tag::factory()->softDeleted()->create();
+        $response = $this->json('PUT', route('api.tag.restore', $tag));
+        $response->assertSuccessful();
+    }
+
+    public function test_admin_can_delete_permanently_a_tag()
+    {
+        $this->loginAsAdmin();
+        $tag = Tag::factory()->softDeleted()->create();
+        $response = $this->json('PUT', route('api.tag.delete-permanently', $tag));
+        $response->assertSuccessful();
+        $this->assertDeleted($tag);
     }
 
     public function test_get_tags()

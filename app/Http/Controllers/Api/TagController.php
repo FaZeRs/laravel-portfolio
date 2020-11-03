@@ -3,9 +3,10 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreTagRequest;
+use App\Http\Requests\UpdateTagRequest;
 use App\Http\Resources\TagResource;
 use App\Models\Tag;
-use Illuminate\Http\Request;
 
 class TagController extends Controller
 {
@@ -24,16 +25,18 @@ class TagController extends Controller
         return new TagResource($tag);
     }
 
-    public function store(Request $request)
+    public function store(StoreTagRequest $request)
     {
-        $tag = Tag::create($request->only('title', 'color'));
+        $data = $request->validated();
+        $tag = Tag::create($data);
 
         return new TagResource($tag);
     }
 
-    public function update(Tag $tag, Request $request)
+    public function update(UpdateTagRequest $request, Tag $tag)
     {
-        $tag->update($request->only('title', 'color'));
+        $data = $request->validated();
+        $tag->update($data);
 
         return new TagResource($tag);
     }
@@ -42,6 +45,18 @@ class TagController extends Controller
     {
         $tag->delete();
 
-        return response()->json([], 204);
+        return new TagResource($tag);
+    }
+
+    public function restore(Tag $tag)
+    {
+        $tag->restore();
+
+        return new TagResource($tag);
+    }
+
+    public function delete(Tag $tag)
+    {
+        $tag->forceDelete();
     }
 }

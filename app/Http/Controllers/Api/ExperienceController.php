@@ -3,9 +3,10 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreExperienceRequest;
+use App\Http\Requests\UpdateExperienceRequest;
 use App\Http\Resources\ExperienceResource;
 use App\Models\Experience;
-use Illuminate\Http\Request;
 
 class ExperienceController extends Controller
 {
@@ -24,16 +25,18 @@ class ExperienceController extends Controller
         return new ExperienceResource($experience);
     }
 
-    public function store(Request $request)
+    public function store(StoreExperienceRequest $request)
     {
-        $experience = Experience::create($request->only('position', 'employer', 'website', 'from', 'to', 'ongoing'));
+        $data = $request->validated();
+        $experience = Experience::create($data);
 
         return new ExperienceResource($experience);
     }
 
-    public function update(Experience $experience, Request $request)
+    public function update(UpdateExperienceRequest $request, Experience $experience)
     {
-        $experience->update($request->only('position', 'employer', 'website', 'from', 'to', 'ongoing'));
+        $data = $request->validated();
+        $experience->update($data);
 
         return new ExperienceResource($experience);
     }
@@ -42,6 +45,20 @@ class ExperienceController extends Controller
     {
         $experience->delete();
 
-        return response()->json([], 204);
+        return new ExperienceResource($experience);
+    }
+
+    public function restore(Experience $experience)
+    {
+        $experience->restore();
+
+        return new ExperienceResource($experience);
+    }
+
+    public function delete(Experience $experience)
+    {
+        $experience->forceDelete();
+
+        return response()->json([]);
     }
 }

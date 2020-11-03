@@ -3,11 +3,14 @@
 namespace Database\Factories;
 
 use App\Models\User;
+use Database\Factories\Traits\SoftDeleted;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
 class UserFactory extends Factory
 {
+    use SoftDeleted;
+
     /**
      * The name of the factory's corresponding model.
      *
