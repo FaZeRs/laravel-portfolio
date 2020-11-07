@@ -25,6 +25,7 @@ class ExperienceFactory extends Factory
     public function definition()
     {
         $from = $this->faker->dateTimeThisDecade;
+
         return [
             'position' => $this->faker->jobTitle,
             'employer' => $this->faker->company,
