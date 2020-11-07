@@ -1,8 +1,8 @@
-import http from '~/plugins/axios';
+import axios from 'axios';
 
 export const actions = {
   async sendContactMessage ({ payload }) {
-    return await http.post('/contact/send', payload);
+    return await axios.post('/contact/send', payload);
   },
 }
 
