@@ -12,4 +12,10 @@ class SettingController extends Controller
 
         return response()->json($settings);
     }
+
+    public function show(string $name)
+    {
+        $setting = settings($name);
+        return response()->json($setting);
+    }
 }

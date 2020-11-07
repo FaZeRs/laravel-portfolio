@@ -31,6 +31,7 @@ Route::name('api.')->group(function () {
     Route::get('details', [UserController::class, 'details'])->name('user.details');
     Route::get('logout', [UserController::class, 'logout'])->name('user.logout');
     Route::get('settings', [SettingController::class, 'index']);
+    Route::get('settings/{name}', [SettingController::class, 'show']);
 
     Route::prefix('categories')->name('category.')->group(function () {
         Route::get('/', [CategoryController::class, 'index'])->name('index');
