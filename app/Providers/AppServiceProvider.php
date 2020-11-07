@@ -20,7 +20,10 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->app->singleton(Settings::class, function () {
             return Cache::remember('settings', 15, function () {
-                return Settings::make(config('settings.path'));
+                $default = collect(config('settings.default'))->map(function ($setting) {
+                    return $setting->value;
+                })->all();
+                return Settings::make(config('settings.path'), $default);
             });
         });
         if ($this->app->isLocal()) {
