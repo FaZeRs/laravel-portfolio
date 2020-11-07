@@ -24,12 +24,13 @@ class ExperienceFactory extends Factory
      */
     public function definition()
     {
+        $from = $this->faker->dateTimeThisDecade;
         return [
             'position' => $this->faker->jobTitle,
             'employer' => $this->faker->company,
             'website' => $this->faker->domainName,
-            'from' => $this->faker->date,
-            'to' => $this->faker->date,
+            'from' => $from,
+            'to' => $this->faker->dateTimeBetween($from, 'now'),
             'ongoing' => $this->faker->boolean(25),
         ];
     }
