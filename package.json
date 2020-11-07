@@ -30,7 +30,6 @@
     "vee-validate": "^3.4.3",
     "vue": "^2.6.12",
     "vue-api-query": "^1.7.0",
-    "vue-axios": "^2.1.5",
     "vue-cookie-law": "^1.13.3",
     "vue-i18n": "^8.22.1",
     "vue-meta": "^2.4.0",

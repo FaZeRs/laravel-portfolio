@@ -1,4 +1,4 @@
-import axios from 'axios';
+import http from '~/plugins/axios';
 
 export const state = {
   settings: {
@@ -19,7 +19,7 @@ export const state = {
 export const actions = {
   async fetchSettings ({ commit }) {
     try {
-      const settings = await axios.get('/settings')
+      const settings = await http.get('/settings')
       commit('setSettings', settings.data)
     } catch (error) {
       throw new Error(error)

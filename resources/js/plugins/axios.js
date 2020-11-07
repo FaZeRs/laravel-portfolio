@@ -1,12 +1,13 @@
-import axios from 'axios'
-import store from '~/store'
+import axios from 'axios';
 
-// Request interceptor
-axios.interceptors.request.use(request => {
-  const locale = store.getters['locale']
-  if (locale) {
-    request.headers.common['Accept-Language'] = locale
-  }
+const options = {};
+options.baseURL = process.env.MIX_API_URL;
+options.withCredentials = true
+const token = sessionStorage.getItem('token');
+if (token) {
+  options.headers.Authorization = token
+}
 
-  return request
-})
+const http = axios.create(options);
+
+export default http
