@@ -18,25 +18,25 @@ class SettingTest extends TestCase
         $response = $this->json('GET', '/api/settings');
         $response->assertSuccessful();
         $response->assertJsonStructure([
-           'app_name',
-           'name',
-           'photo',
-           'profession',
-           'about_you',
-           'contact_email',
-           'facebook',
-           'twitter',
-           'linkedin',
-           'github',
-           'gitlab',
-           'bitbucket',
+            'app_name',
+            'name',
+            'photo',
+            'profession',
+            'about_you',
+            'contact_email',
+            'facebook',
+            'twitter',
+            'linkedin',
+            'github',
+            'gitlab',
+            'bitbucket',
         ]);
     }
 
     public function test_get_setting()
     {
         $name = 'app_name';
-        $response = $this->json('GET', '/api/settings/' . $name);
+        $response = $this->json('GET', '/api/settings/'.$name);
         $response->assertSuccessful();
     }
 }
