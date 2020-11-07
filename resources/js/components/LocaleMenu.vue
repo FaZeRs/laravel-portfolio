@@ -24,7 +24,7 @@ export default {
   }),
   methods: {
     setLocale (locale) {
-      this.$store.dispatch('lang/changeLocale', locale)
+      this.$store.dispatch('changeLocale', locale)
     }
   }
 }
