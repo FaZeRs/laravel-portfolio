@@ -22,7 +22,6 @@ class DatabaseSeeder extends Seeder
             ProjectsTableSeeder::class,
             EducationTableSeeder::class,
             ExperienceTableSeeder::class,
-            SettingsSeeder::class,
         ]);
 
         $this->enableForeignKeys();
