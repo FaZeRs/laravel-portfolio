@@ -106,9 +106,11 @@ class ExperienceTest extends TestCase
         $this->loginAsAdmin();
 
         $experience = Experience::factory()->create();
-
+        Storage::fake('logos');
+        $file = UploadedFile::fake()->image('logo.jpg');
         $data = [
             'position' => $this->faker->jobTitle,
+            'logo' => $file,
         ];
         $response = $this->json('PUT', route('api.experience.update', $experience), $data);
         $response->assertSuccessful();
