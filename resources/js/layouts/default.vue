@@ -56,7 +56,7 @@
 </template>
 
 <script>
-import NavBar from '~/partials/NavBar'
+import NavBar from '~/components/NavBar'
 import BackToTop from '~/components/BackToTop'
 import CookieLaw from 'vue-cookie-law'
 import { mapGetters } from 'vuex'
