@@ -17,7 +17,7 @@ class EducationController extends Controller
 
     public function index()
     {
-        return EducationResource::collection(Education::all());
+        return EducationResource::collection(Education::get());
     }
 
     public function show(Education $education)
