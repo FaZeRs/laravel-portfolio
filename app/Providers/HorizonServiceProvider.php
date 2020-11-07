@@ -18,18 +18,11 @@ class HorizonServiceProvider extends HorizonApplicationServiceProvider
     {
         parent::boot();
 
-        Horizon::auth(function ($request) {
-            if (! backpack_auth()) {
-                throw new UnauthorizedHttpException('Unauthorized');
-            }
-
-            return true;
-        });
         // Horizon::routeSmsNotificationsTo('15556667777');
         // Horizon::routeMailNotificationsTo('example@example.com');
         // Horizon::routeSlackNotificationsTo('slack-webhook-url', '#channel');
 
-        // Horizon::night();
+        Horizon::night();
     }
 
     /**
@@ -42,7 +35,9 @@ class HorizonServiceProvider extends HorizonApplicationServiceProvider
     protected function gate()
     {
         Gate::define('viewHorizon', function ($user) {
-            return backpack_auth()->check();
+            return in_array($user->email, [
+                'naurislinde@gmail.com',
+            ]);
         });
     }
 }
