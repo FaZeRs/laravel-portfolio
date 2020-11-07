@@ -2,8 +2,8 @@
 
 namespace App\Http\Middleware;
 
-use Carbon\Carbon;
 use Closure;
+use Illuminate\Support\Facades\App;
 
 /**
  * Class LocaleMiddleware.
@@ -20,17 +20,9 @@ class LocaleMiddleware
      */
     public function handle($request, Closure $next)
     {
-        $locale = $request->header('Content-Language');
-        if (! $locale) {
-            $locale = config('app.locale');
+        if (session()->has('locale')) {
+            App::setlocale(session()->get('locale'));
         }
-        if (! array_key_exists($locale, config('app.locales'))) {
-            return abort(403, 'Language not supported.');
-        }
-        app()->setLocale($locale);
-        $response = $next($request);
-        $response->headers->set('Content-Language', $locale);
-
-        return $response;
+        return $next($request);
     }
 }
