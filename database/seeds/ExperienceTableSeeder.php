@@ -15,6 +15,9 @@ class ExperienceTableSeeder extends Seeder
     public function run()
     {
         $this->truncate('experience');
-        Experience::factory()->count(4)->create();
+        $faker = Faker\Factory::create();
+        Experience::factory()->count(4)->create()->each(function ($job) use ($faker) {
+            $job->addMediaFromUrl($faker->imageUrl())->toMediaCollection('logo');
+        });
     }
 }

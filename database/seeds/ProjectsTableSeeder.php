@@ -17,11 +17,14 @@ class ProjectsTableSeeder extends Seeder
     public function run()
     {
         $this->truncateMultiple(['projects', 'links']);
-        Project::factory()->count(6)->create()->each(function ($project) {
+        $faker = Faker\Factory::create();
+        Project::factory()->count(6)->create()->each(function ($project) use ($faker) {
             $project->tags()->saveMany(Tag::inRandomOrder()->take(3)->get());
             $project->links()->saveMany(Link::factory()->count(2)->make([
                 'project_id' => $project->id,
             ]));
+
+            $project->addMediaFromUrl($faker->imageUrl(640, 480))->toMediaCollection('photos');
         });
     }
 }
