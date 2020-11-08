@@ -34,7 +34,7 @@ class UpdateExperienceRequest extends FormRequest
             'to' => ['date'],
             'ongoing' => ['boolean'],
             'logo' => ['image'],
-            'active' => ['boolean']
+            'active' => ['boolean'],
         ];
     }
 }

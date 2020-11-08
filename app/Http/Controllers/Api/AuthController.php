@@ -19,7 +19,7 @@ class AuthController extends Controller
     public function login(LoginRequest $request)
     {
         $data = $request->validated();
-        if (!$token = auth()->attempt($data)) {
+        if (! $token = auth()->attempt($data)) {
             throw ValidationException::withMessages([
                 'email' => ['The provided credentials are incorrect.'],
             ]);
@@ -60,7 +60,7 @@ class AuthController extends Controller
             'access_token' => $token,
             'token_type' => 'bearer',
             'expires_in' => auth()->factory()->getTTL() * 60,
-            'user' => new UserResource(auth()->user())
+            'user' => new UserResource(auth()->user()),
         ]);
     }
 }

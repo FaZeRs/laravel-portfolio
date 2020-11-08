@@ -23,7 +23,7 @@ return [
      */
     'paths' => [
         'sanctum/csrf-cookie',
-        'api/*'
+        'api/*',
     ],
 
     /*

@@ -29,7 +29,7 @@ class AuthTest extends TestCase
         $response = $this->json('POST', '/api/auth/register', $data);
         $response->assertSuccessful();
         $response->assertJsonStructure([
-            'access_token' ,
+            'access_token',
             'token_type',
             'expires_in',
             'user',
@@ -80,7 +80,7 @@ class AuthTest extends TestCase
         ]);
         $response->assertSuccessful();
         $response->assertJsonStructure([
-            'access_token' ,
+            'access_token',
             'token_type',
             'expires_in',
             'user',
