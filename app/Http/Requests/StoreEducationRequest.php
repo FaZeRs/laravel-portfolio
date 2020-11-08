@@ -32,7 +32,7 @@ class StoreEducationRequest extends FormRequest
             'from' => ['required', 'date'],
             'to' => ['date'],
             'ongoing' => ['boolean'],
-            'active' => ['boolean']
+            'active' => ['boolean'],
         ];
     }
 }

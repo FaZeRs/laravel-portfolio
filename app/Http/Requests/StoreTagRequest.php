@@ -30,7 +30,7 @@ class StoreTagRequest extends FormRequest
         return [
             'title' => ['required', 'string', 'max:191', Rule::unique('tags')],
             'color' => ['required', 'string', 'max:191'],
-            'active' => ['boolean']
+            'active' => ['boolean'],
         ];
     }
 }

@@ -18,7 +18,7 @@ class Tag extends Model
     protected $fillable = [
         'title',
         'color',
-        'active'
+        'active',
     ];
 
     public $translatable = [
@@ -30,7 +30,6 @@ class Tag extends Model
         'updated_at',
         'deleted_at',
     ];
-
 
     protected $casts = [
         'active' => 'boolean',

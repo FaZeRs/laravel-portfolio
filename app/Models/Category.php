@@ -17,7 +17,7 @@ class Category extends Model
 
     protected $fillable = [
         'title',
-        'active'
+        'active',
     ];
 
     protected $translatable = [

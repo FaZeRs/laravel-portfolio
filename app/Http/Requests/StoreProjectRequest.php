@@ -37,7 +37,7 @@ class StoreProjectRequest extends FormRequest
             'visible' => ['boolean'],
             'order' => ['numeric'],
             'photos' => [],
-            'active' => ['boolean']
+            'active' => ['boolean'],
         ];
     }
 }

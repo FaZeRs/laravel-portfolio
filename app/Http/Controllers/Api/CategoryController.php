@@ -22,7 +22,7 @@ class CategoryController extends Controller
     public function index(Request $request)
     {
         $query = Category::query();
-        if (!$request->user() || !$request->user()->isAdmin()) {
+        if (! $request->user() || ! $request->user()->isAdmin()) {
             $query->active();
         }
         $categories = QueryBuilder::for($query)
@@ -34,7 +34,7 @@ class CategoryController extends Controller
             ->allowedSorts('title', 'active', 'created_at', 'updated_at');
 
         if ($request->get('page', null)) {
-            $limit = (int)$request->get('limit', 10);
+            $limit = (int) $request->get('limit', 10);
             if ($limit === -1) {
                 $limit = $query->count();
             }

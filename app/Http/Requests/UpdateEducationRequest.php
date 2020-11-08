@@ -32,7 +32,7 @@ class UpdateEducationRequest extends FormRequest
             'from' => ['date'],
             'to' => ['date'],
             'ongoing' => ['boolean'],
-            'active' => ['boolean']
+            'active' => ['boolean'],
         ];
     }
 }

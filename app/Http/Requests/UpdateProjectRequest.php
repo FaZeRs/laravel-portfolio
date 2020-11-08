@@ -36,7 +36,7 @@ class UpdateProjectRequest extends FormRequest
             'status' => [Rule::in(['unknown', 'open', 'scheduled', 'in_development', 'completed', 'cancelled'])],
             'visible' => ['boolean'],
             'order' => ['numeric'],
-            'active' => ['boolean']
+            'active' => ['boolean'],
         ];
     }
 }
