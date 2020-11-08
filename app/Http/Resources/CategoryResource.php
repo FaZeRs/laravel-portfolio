@@ -17,10 +17,10 @@ class CategoryResource extends JsonResource
         return [
             'id'         => $this->id,
             'title'      => $this->title,
-            'slug'      => $this->slug,
             'projects' => ProjectResource::collection($this->whenLoaded('projects')),
-            'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at,
+            'active' => $this->active,
+            'created_at' => $this->created_at->format('Y-m-d h:i:s'),
+            'updated_at' => $this->updated_at->format('Y-m-d h:i:s'),
         ];
     }
 }

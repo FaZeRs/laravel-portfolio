@@ -30,8 +30,9 @@ class StoreEducationRequest extends FormRequest
             'qualification' => ['required', 'string', 'max:191'],
             'organisation' => ['required', 'string', 'max:191'],
             'from' => ['required', 'date'],
-            'to' => ['nullable', 'date'],
+            'to' => ['date'],
             'ongoing' => ['boolean'],
+            'active' => ['boolean']
         ];
     }
 }

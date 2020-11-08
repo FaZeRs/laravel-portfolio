@@ -17,6 +17,7 @@ class CreateTagsTable extends Migration
             $table->bigIncrements('id');
             $table->json('title');
             $table->string('color')->nullable();
+            $table->boolean('active')->default(false);
             $table->timestamps();
             $table->softDeletes();
         });

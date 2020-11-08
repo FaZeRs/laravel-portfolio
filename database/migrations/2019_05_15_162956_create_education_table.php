@@ -20,6 +20,7 @@ class CreateEducationTable extends Migration
             $table->date('from');
             $table->date('to')->nullable();
             $table->boolean('ongoing')->default(false);
+            $table->boolean('active')->default(false);
             $table->timestamps();
             $table->softDeletes();
         });

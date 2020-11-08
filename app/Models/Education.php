@@ -13,45 +13,36 @@ class Education extends Model
     use HasTranslations;
     use SoftDeletes;
 
-    /**
-     * The table associated with the model.
-     *
-     * @var string
-     */
     protected $table = 'education';
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = [
         'qualification',
         'organisation',
         'from',
         'to',
         'ongoing',
+        'active',
     ];
 
-    /**
-     * The attributes that are translatable.
-     *
-     * @var array
-     */
     public $translatable = [
         'qualification',
         'organisation',
     ];
 
-    /**
-     * The attributes that should be mutated to dates.
-     *
-     * @var array
-     */
     protected $dates = [
         'from',
         'to',
         'created_at',
         'updated_at',
+        'deleted_at',
     ];
+
+    protected $casts = [
+        'active' => 'boolean',
+    ];
+
+    public function scopeActive($query)
+    {
+        return $query->where('active', 1);
+    }
 }

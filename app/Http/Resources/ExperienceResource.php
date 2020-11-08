@@ -28,6 +28,7 @@ class ExperienceResource extends JsonResource
             'to'         => Carbon::parse($this->to)->format('M Y'),
             'ongoing'    => $this->ongoing,
             'logo'       => $logo,
+            'active' => $this->active,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ];

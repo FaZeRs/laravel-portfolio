@@ -99,13 +99,13 @@ class ProjectTest extends TestCase
         $response->assertJsonStructure([
             'id',
             'title',
-            'slug',
             'category_id',
             'description',
             'visible',
             'order',
             'status',
             'images',
+            'active',
             'created_at',
             'updated_at',
         ]);
@@ -153,12 +153,12 @@ class ProjectTest extends TestCase
         $response->assertJsonStructure([
             'id',
             'title',
-            'slug',
             'category_id',
             'description',
             'visible',
             'order',
             'status',
+            'active',
             'created_at',
             'updated_at',
         ]);
@@ -218,12 +218,12 @@ class ProjectTest extends TestCase
             '*' => [
                 'id',
                 'title',
-                'slug',
                 'category_id',
                 'description',
                 'visible',
                 'order',
                 'status',
+                'active',
                 'created_at',
                 'updated_at',
             ],
@@ -239,12 +239,12 @@ class ProjectTest extends TestCase
         $response->assertJsonStructure([
             'id',
             'title',
-            'slug',
             'category_id',
             'description',
             'visible',
             'order',
             'status',
+            'active',
             'created_at',
             'updated_at',
         ]);

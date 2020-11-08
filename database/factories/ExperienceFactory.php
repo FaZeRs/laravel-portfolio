@@ -33,6 +33,7 @@ class ExperienceFactory extends Factory
             'from' => $from,
             'to' => $this->faker->dateTimeBetween($from, 'now'),
             'ongoing' => $this->faker->boolean(25),
+            'active' => $this->faker->boolean(80),
         ];
     }
 }

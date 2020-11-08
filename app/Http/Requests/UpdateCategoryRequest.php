@@ -29,6 +29,7 @@ class UpdateCategoryRequest extends FormRequest
     {
         return [
             'title' => ['string', 'max:191', Rule::unique('categories')->ignore($this->category->id)],
+            'active' => ['boolean']
         ];
     }
 }

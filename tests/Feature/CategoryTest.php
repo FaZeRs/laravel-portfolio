@@ -47,7 +47,7 @@ class CategoryTest extends TestCase
         $response->assertJsonStructure([
             'id',
             'title',
-            'slug',
+            'active',
             'created_at',
             'updated_at',
         ]);
@@ -91,7 +91,7 @@ class CategoryTest extends TestCase
         $response->assertJsonStructure([
             'id',
             'title',
-            'slug',
+            'active',
             'created_at',
             'updated_at',
         ]);
@@ -151,7 +151,7 @@ class CategoryTest extends TestCase
             '*' => [
                 'id',
                 'title',
-                'slug',
+                'active',
                 'created_at',
                 'updated_at',
             ],
@@ -166,7 +166,7 @@ class CategoryTest extends TestCase
         $response->assertJsonStructure([
             'id',
             'title',
-            'slug',
+            'active',
             'created_at',
             'updated_at',
         ]);

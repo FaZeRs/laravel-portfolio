@@ -31,9 +31,10 @@ class StoreExperienceRequest extends FormRequest
             'employer' => ['required', 'string', 'max:191'],
             'website' => ['required', 'string', 'max:191'],
             'from' => ['required', 'date'],
-            'to' => ['nullable', 'date'],
+            'to' => ['date'],
             'ongoing' => ['boolean'],
-            'logo' => ['nullable', 'image'],
+            'logo' => ['image'],
+            'active' => ['boolean']
         ];
     }
 }

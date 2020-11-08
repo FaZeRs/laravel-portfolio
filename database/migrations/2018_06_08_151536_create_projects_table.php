@@ -16,13 +16,13 @@ class CreateProjectsTable extends Migration
         Schema::create('projects', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->json('title');
-            $table->json('slug');
             $table->unsignedBigInteger('category_id');
             $table->json('description')->nullable();
             $table->string('image')->nullable();
             $table->enum('status', ['unknown', 'open', 'scheduled', 'in_development', 'completed', 'cancelled'])->default('unknown');
             $table->boolean('visible')->default(false);
             $table->integer('order')->default(0);
+            $table->boolean('active')->default(false);
             $table->timestamps();
             $table->softDeletes();
 

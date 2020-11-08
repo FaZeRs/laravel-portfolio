@@ -27,6 +27,7 @@ class TagFactory extends Factory
         return [
             'title' => $this->faker->word,
             'color' => $this->faker->colorName,
+            'active' => $this->faker->boolean(80),
         ];
     }
 }

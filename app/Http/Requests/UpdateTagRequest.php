@@ -30,6 +30,7 @@ class UpdateTagRequest extends FormRequest
         return [
             'title' => ['string', 'max:191', Rule::unique('tags')->ignore($this->tag->id)],
             'color' => ['string', 'max:191'],
+            'active' => ['boolean']
         ];
     }
 }

@@ -43,6 +43,7 @@ class ProjectFactory extends Factory
                 'completed',
                 'cancelled',
             ]),
+            'active' => $this->faker->boolean(80),
         ];
     }
 }

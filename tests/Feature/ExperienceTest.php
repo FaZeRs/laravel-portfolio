@@ -72,6 +72,7 @@ class ExperienceTest extends TestCase
             'to',
             'ongoing',
             'logo',
+            'active',
             'created_at',
             'updated_at',
         ]);
@@ -123,6 +124,7 @@ class ExperienceTest extends TestCase
             'to',
             'ongoing',
             'logo',
+            'active',
             'created_at',
             'updated_at',
         ]);
@@ -188,6 +190,7 @@ class ExperienceTest extends TestCase
                 'to',
                 'ongoing',
                 'logo',
+                'active',
                 'created_at',
                 'updated_at',
             ],
@@ -207,6 +210,7 @@ class ExperienceTest extends TestCase
             'from',
             'to',
             'ongoing',
+            'active',
             'created_at',
             'updated_at',
         ]);

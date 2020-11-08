@@ -26,6 +26,7 @@ class CategoryFactory extends Factory
     {
         return [
             'title' => $this->faker->sentence(2),
+            'active' => $this->faker->boolean(80),
         ];
     }
 }

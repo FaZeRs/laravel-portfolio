@@ -21,6 +21,7 @@ class EducationResource extends JsonResource
             'organisation'  => $this->organisation,
             'from'          => Carbon::parse($this->from)->format('Y'),
             'to'            => Carbon::parse($this->to)->format('Y'),
+            'active' => $this->active,
             'created_at'    => $this->created_at,
             'updated_at'    => $this->updated_at,
         ];

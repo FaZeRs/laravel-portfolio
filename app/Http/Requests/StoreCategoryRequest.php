@@ -29,6 +29,7 @@ class StoreCategoryRequest extends FormRequest
     {
         return [
             'title' => ['required', 'string', 'max:191', Rule::unique('categories')],
+            'active' => ['boolean']
         ];
     }
 }

@@ -15,25 +15,13 @@ class Project extends Model implements HasMedia
 {
     use HasFactory;
     use HasTranslations;
-    use Sluggable;
     use SoftDeletes;
     use InteractsWithMedia;
 
-    /**
-     * The table associated with the model.
-     *
-     * @var string
-     */
     protected $table = 'projects';
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = [
         'title',
-        'slug',
         'category_id',
         'description',
         'image',
@@ -41,34 +29,29 @@ class Project extends Model implements HasMedia
         'status',
         'visible',
         'order',
+        'active',
     ];
 
-    /**
-     * The attributes that are translatable.
-     *
-     * @var array
-     */
     public $translatable = [
         'title',
-        'slug',
         'description',
     ];
 
-    /**
-     * The attributes that should be casted to native types.
-     *
-     * @var array
-     */
     protected $casts = [
         'visible' => 'boolean',
+        'active' => 'boolean',
     ];
 
-    /**
-     * Fields that are dates.
-     *
-     * @var array
-     */
-    protected $dates = ['created_at', 'updated_at'];
+    protected $dates = [
+        'created_at',
+        'updated_at',
+        'deleted_at',
+    ];
+
+    public function scopeActive($query)
+    {
+        return $query->where('active', 1);
+    }
 
     public function category()
     {

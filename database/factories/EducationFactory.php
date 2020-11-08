@@ -30,6 +30,7 @@ class EducationFactory extends Factory
             'from' => $this->faker->date,
             'to' => $this->faker->date,
             'ongoing' => $this->faker->boolean(25),
+            'active' => $this->faker->boolean(80),
         ];
     }
 }

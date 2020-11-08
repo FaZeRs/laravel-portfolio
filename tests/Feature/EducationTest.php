@@ -62,6 +62,7 @@ class EducationTest extends TestCase
             'organisation',
             'from',
             'to',
+            'active',
             'created_at',
             'updated_at',
         ]);
@@ -108,6 +109,7 @@ class EducationTest extends TestCase
             'organisation',
             'from',
             'to',
+            'active',
             'created_at',
             'updated_at',
         ]);
@@ -170,6 +172,7 @@ class EducationTest extends TestCase
                 'organisation',
                 'from',
                 'to',
+                'active',
                 'created_at',
                 'updated_at',
             ],
@@ -187,6 +190,7 @@ class EducationTest extends TestCase
             'organisation',
             'from',
             'to',
+            'active',
             'created_at',
             'updated_at',
         ]);

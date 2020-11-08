@@ -30,12 +30,13 @@ class UpdateProjectRequest extends FormRequest
         return [
             'title' => ['string', 'max:191'],
             'category_id' => ['exists:categories,id'],
-            'description' => ['nullable'],
-            'image' => ['image', 'nullable'],
+            'description' => [],
+            'image' => ['image'],
             'links' => [],
             'status' => [Rule::in(['unknown', 'open', 'scheduled', 'in_development', 'completed', 'cancelled'])],
             'visible' => ['boolean'],
             'order' => ['numeric'],
+            'active' => ['boolean']
         ];
     }
 }
