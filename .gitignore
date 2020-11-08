@@ -29,3 +29,7 @@ Todo.rtf
 /public/vendor
 /public/packages
 .php_cs.cache
+.cache
+.next
+.nuxt
+dist

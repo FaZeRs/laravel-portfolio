@@ -1,42 +1,32 @@
 {
+  "name": "client",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "yarn && yarn dev",
-    "dev": "yarn development",
-    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch": "yarn development --watch",
-    "watch-poll": "yarn watch -- --watch-poll",
-    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "prod": "yarn production",
-    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --config=node_modules/laravel-mix/setup/webpack.config.js"
-  },
-  "devDependencies": {
-    "axios": "^0.21",
-    "cross-env": "^7.0",
-    "laravel-mix": "^5.0.7",
-    "lodash": "^4.17.19",
-    "resolve-url-loader": "^3.1.0",
-    "sass": "^1.28.0",
-    "sass-loader": "^7.3.1",
-    "vue-template-compiler": "^2.6.12",
-    "vuetify-loader": "^1.6.0",
-    "vuetifyjs-mix-extension": "^0.0.17"
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore client/",
+    "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore client/",
+    "lint": "npm run lint:js && npm run lint:style"
   },
   "dependencies": {
-    "@mdi/font": "^5.8.55",
-    "axios": "^0.21",
-    "js-cookie": "^2.2.1",
-    "v-img": "^0.2.0",
+    "@nuxtjs/auth-next": "^5.0.0-1602966760.822bc05",
+    "@nuxtjs/axios": "^5.12.2",
+    "core-js": "^3.6.5",
+    "nuxt": "^2.14.6",
+    "nuxt-i18n": "^6.15.4",
     "vee-validate": "^3.4.3",
-    "vue": "^2.6.12",
-    "vue-api-query": "^1.7.0",
+    "vue-api-query": "^1.7.1",
     "vue-cookie-law": "^1.13.3",
-    "vue-i18n": "^8.22.1",
-    "vue-meta": "^2.4.0",
-    "vue-recaptcha": "^1.3.0",
-    "vue-router": "^3.4.8",
-    "vuetify": "^2.3.16",
-    "vuex": "^3.5.1",
-    "vuex-router-sync": "^5.0.0"
+    "vue-image-lightbox": "^7.2.0",
+    "vue-lazyload": "^1.3.3",
+    "vue-recaptcha": "^1.3.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/vuetify": "^1.11.2",
+    "@nuxt/webpack": "^2.14.7",
+    "vuetify-loader": "^1.6.0"
   }
 }
