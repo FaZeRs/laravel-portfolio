@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\LoginRequest;
+use App\Http\Resources\UserResource;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException;
@@ -22,7 +23,7 @@ class LoginController extends Controller
         }
 
         $response['token'] = $user->createToken(config('app.name'))->plainTextToken;
-        $response['user'] = $user;
+        $response['user'] = new UserResource($user);
 
         return response()->json($response);
     }
