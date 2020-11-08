@@ -15,6 +15,6 @@ class TagsTableSeeder extends Seeder
     public function run()
     {
         $this->truncate('tags');
-        Tag::factory()->count(6)->create();
+        Tag::factory()->count(10)->create();
     }
 }

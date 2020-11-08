@@ -18,7 +18,7 @@ class ProjectsTableSeeder extends Seeder
     {
         $this->truncateMultiple(['projects', 'links']);
         $faker = Faker\Factory::create();
-        Project::factory()->count(6)->create()->each(function ($project) use ($faker) {
+        Project::factory()->count(20)->create()->each(function ($project) use ($faker) {
             $project->tags()->saveMany(Tag::inRandomOrder()->take(3)->get());
             $project->links()->saveMany(Link::factory()->count(2)->make([
                 'project_id' => $project->id,
