@@ -11,25 +11,27 @@
 |
 */
 
+use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\ContactController;
 use App\Http\Controllers\Api\EducationController;
 use App\Http\Controllers\Api\ExperienceController;
 use App\Http\Controllers\Api\LinkController;
-use App\Http\Controllers\Api\LoginController;
 use App\Http\Controllers\Api\ProjectController;
-use App\Http\Controllers\Api\RegisterController;
 use App\Http\Controllers\Api\SettingController;
 use App\Http\Controllers\Api\TagController;
-use App\Http\Controllers\Api\UserController;
 
 Route::name('api.')->group(function () {
     Route::post('contact/send', [ContactController::class, 'send'])->name('contact.send');
 
-    Route::post('login', [LoginController::class, 'login'])->name('login');
-    Route::post('register', [RegisterController::class, 'register'])->name('register');
-    Route::get('details', [UserController::class, 'details'])->name('user.details');
-    Route::get('logout', [UserController::class, 'logout'])->name('user.logout');
+    Route::prefix('auth')->name('auth.')->group(function () {
+        Route::post('login', [AuthController::class, 'login'])->name('login');
+        Route::post('register', [AuthController::class, 'register'])->name('register');
+        Route::post('logout', [AuthController::class, 'logout'])->name('logout');
+        Route::post('refresh', [AuthController::class, 'refresh'])->name('refresh');
+        Route::post('user', [AuthController::class, 'user'])->name('user');
+    });
+
     Route::get('settings', [SettingController::class, 'index']);
     Route::get('settings/{name}', [SettingController::class, 'show']);
 

@@ -4,7 +4,7 @@ namespace Tests;
 
 use App\Models\User;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
-use Laravel\Sanctum\Sanctum;
+use Tymon\JWTAuth\Facades\JWTAuth;
 
 abstract class TestCase extends BaseTestCase
 {
@@ -33,10 +33,9 @@ abstract class TestCase extends BaseTestCase
     {
         $admin = $this->createUser(true);
 
-        Sanctum::actingAs(
-            $admin,
-            ['*']
-        );
+        $token = JWTAuth::fromUser($admin);
+        $this->withHeader('Authorization', "Bearer {$token}");
+        parent::actingAs($admin);
 
         return $admin;
     }
@@ -50,10 +49,9 @@ abstract class TestCase extends BaseTestCase
     {
         $user = $this->createUser();
 
-        Sanctum::actingAs(
-            $user,
-            ['*']
-        );
+        $token = JWTAuth::fromUser($user);
+        $this->withHeader('Authorization', "Bearer {$token}");
+        parent::actingAs($user);
 
         return $user;
     }

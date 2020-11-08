@@ -14,7 +14,7 @@ class AuthTest extends TestCase
 
     public function testUserRegisterValidation()
     {
-        $response = $this->json('POST', '/api/register', []);
+        $response = $this->json('POST', '/api/auth/register', []);
         $response->assertStatus(422);
     }
 
@@ -26,8 +26,14 @@ class AuthTest extends TestCase
             'password' => 'secret',
             'password_confirmation' => 'secret',
         ];
-        $response = $this->json('POST', '/api/register', $data);
+        $response = $this->json('POST', '/api/auth/register', $data);
         $response->assertSuccessful();
+        $response->assertJsonStructure([
+            'access_token' ,
+            'token_type',
+            'expires_in',
+            'user',
+        ]);
     }
 
     public function testUserRegisterUniqueEmail()
@@ -39,13 +45,13 @@ class AuthTest extends TestCase
             'password' => 'secret',
             'password_confirmation' => 'secret',
         ];
-        $response = $this->json('POST', '/api/register', $data);
+        $response = $this->json('POST', '/api/auth/register', $data);
         $response->assertStatus(422);
     }
 
     public function testUserLoginValidation()
     {
-        $response = $this->json('POST', '/api/login', []);
+        $response = $this->json('POST', '/api/auth/login', []);
         $response->assertStatus(422);
     }
 
@@ -55,7 +61,7 @@ class AuthTest extends TestCase
             'email' => 'john@doe.com',
             'password' => 'secret',
         ]);
-        $response = $this->json('POST', '/api/login', [
+        $response = $this->json('POST', '/api/auth/login', [
             'email' => 'john@doe.com',
             'password' => 'password',
         ]);
@@ -68,13 +74,15 @@ class AuthTest extends TestCase
             'email' => 'john@doe.com',
             'password' => 'secret',
         ]);
-        $response = $this->json('POST', '/api/login', [
+        $response = $this->json('POST', '/api/auth/login', [
             'email' => 'john@doe.com',
             'password' => 'secret',
         ]);
         $response->assertSuccessful();
         $response->assertJsonStructure([
-            'token',
+            'access_token' ,
+            'token_type',
+            'expires_in',
             'user',
         ]);
     }
@@ -82,9 +90,7 @@ class AuthTest extends TestCase
     public function testUserGetDetails()
     {
         $user = $this->loginAsUser();
-
-        $response = $this->json('GET', '/api/details');
-
+        $response = $this->json('POST', '/api/auth/user');
         $response->assertStatus(200);
         $response->assertJson([
             'id' => $user->id,
@@ -98,18 +104,16 @@ class AuthTest extends TestCase
     public function testLogout()
     {
         $this->loginAsUser();
-
-        $response = $this->json('GET', '/api/logout');
-
+        $response = $this->json('POST', '/api/auth/logout');
         $response->assertStatus(200);
         $response->assertJson([
-            'success' => 'You have successfully logged out',
+            'message' => 'You have successfully logged out',
         ]);
     }
 
     public function testGuest()
     {
-        $response = $this->json('GET', '/api/details');
-        $response->assertStatus(401);
+        $response = $this->json('POST', '/api/auth/user');
+        $response->assertUnauthorized();
     }
 }
