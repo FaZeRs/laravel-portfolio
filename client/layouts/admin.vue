@@ -1,10 +1,10 @@
 <template>
-  <v-app id="admin" light>
+  <v-app light>
     <client-only>
       <nav-bar :items="nav_items"/>
     </client-only>
-    <v-main id="content">
-      <v-container fluid fill-height>
+    <v-main>
+      <v-container>
         <router-view></router-view>
       </v-container>
     </v-main>
@@ -38,6 +38,12 @@ export default {
   data: () => ({
     year: new Date().getFullYear(),
     nav_items: [
+      { icon: 'home', title: 'dashboard', url: '/admin/dashboard' },
+      { icon: 'home', title: 'education', url: '/admin/education' },
+      { icon: 'home', title: 'experience', url: '/admin/experience' },
+      { icon: 'home', title: 'categories', url: '/admin/categories' },
+      { icon: 'home', title: 'projects', url: '/admin/projects' },
+      { icon: 'home', title: 'tags', url: '/admin/tags' },
       { icon: 'home', title: 'home', url: '/' },
     ]
   }),

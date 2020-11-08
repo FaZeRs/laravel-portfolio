@@ -7,6 +7,8 @@ use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Requests\UpdateCategoryRequest;
 use App\Http\Resources\CategoryResource;
 use App\Models\Category;
+use Illuminate\Http\Request;
+use Spatie\QueryBuilder\AllowedFilter;
 use Spatie\QueryBuilder\QueryBuilder;
 
 class CategoryController extends Controller
@@ -16,11 +18,30 @@ class CategoryController extends Controller
         $this->middleware('admin')->except('index', 'show');
     }
 
-    public function index()
+    // todo : make data validation
+    public function index(Request $request)
     {
-        $categories = QueryBuilder::for(Category::class)
+        $query = Category::query();
+        if (!$request->user() || !$request->user()->isAdmin()) {
+            $query->active();
+        }
+        $categories = QueryBuilder::for($query)
+            ->allowedFilters([
+                AllowedFilter::scope('active'),
+            ])
             ->allowedIncludes('projects', 'projects.tags', 'projects.links')
-            ->get();
+            ->defaultSort('created_at')
+            ->allowedSorts('title', 'active', 'created_at', 'updated_at');
+
+        if ($request->get('page', null)) {
+            $limit = (int)$request->get('limit', 10);
+            if ($limit === -1) {
+                $limit = $query->count();
+            }
+            $categories = $categories->paginate($limit)->appends($request->query());
+        } else {
+            $categories = $categories->get();
+        }
 
         return CategoryResource::collection($categories);
     }
