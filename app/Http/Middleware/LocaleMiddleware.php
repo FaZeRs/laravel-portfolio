@@ -3,7 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use Illuminate\Support\Facades\App;
+use Illuminate\Http\Request;
 
 /**
  * Class LocaleMiddleware.
@@ -18,12 +18,22 @@ class LocaleMiddleware
      *
      * @return mixed
      */
-    public function handle($request, Closure $next)
+    public function handle(Request $request, Closure $next)
     {
-        if (session()->has('locale')) {
-            App::setlocale(session()->get('locale'));
+        $locale = $request->header('Content-Language');
+
+        if (! $locale) {
+            $locale = config('app.locale');
         }
 
-        return $next($request);
+        if (! array_key_exists($locale, config('app.locales'))) {
+            return abort(403, 'Language not supported.');
+        }
+
+        app()->setLocale($locale);
+        $response = $next($request);
+        $response->headers->set('Content-Language', $locale);
+
+        return $response;
     }
 }
