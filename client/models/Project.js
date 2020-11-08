@@ -6,10 +6,6 @@ export default class Project extends Model {
   {
     return 'projects'
   }
-  primaryKey()
-  {
-    return 'slug'
-  }
   relations() {
     return {
       category: Category

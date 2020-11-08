@@ -6,10 +6,6 @@ export default class Category extends Model {
   {
     return 'categories'
   }
-  primaryKey()
-  {
-    return 'slug'
-  }
   projects () {
     return this.hasMany(Project)
   }
