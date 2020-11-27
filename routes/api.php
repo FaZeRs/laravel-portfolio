@@ -88,6 +88,7 @@ Route::name('api.')->group(function () {
         Route::get('{experience}', [ExperienceController::class, 'show'])->name('show');
         Route::post('/', [ExperienceController::class, 'store'])->name('store');
         Route::put('{experience}', [ExperienceController::class, 'update'])->name('update');
+        Route::post('{experience}/upload-logo', [ExperienceController::class, 'uploadLogo'])->name('upload-logo');
         Route::delete('{experience}', [ExperienceController::class, 'destroy'])->name('destroy');
         Route::put('{experience}/restore', [ExperienceController::class, 'restore'])->name('restore');
         Route::put('{experience}/delete', [ExperienceController::class, 'delete'])->name('delete-permanently');

@@ -16,21 +16,23 @@ class ExperienceResource extends JsonResource
      */
     public function toArray($request): array
     {
-        $logo['src'] = $this->getFirstMediaUrl('logo');
-        $logo['thumb'] = $this->getFirstMediaUrl('logo', 'thumb');
-
+        $logo = [];
+        if ($this->resource->relationLoaded('media')) {
+            $logo['src'] = $this->getFirstMediaUrl('logo');
+            $logo['thumb'] = $this->getFirstMediaUrl('logo', 'thumb');
+        }
         return [
             'id'         => $this->id,
             'position'   => $this->position,
             'employer'   => $this->employer,
             'website'    => $this->website,
-            'from'       => Carbon::parse($this->from)->format('M Y'),
-            'to'         => Carbon::parse($this->to)->format('M Y'),
+            'from'       => $this->from->toDateString(),
+            'to'         => $this->to->toDateString(),
             'ongoing'    => $this->ongoing,
             'logo'       => $logo,
             'active' => $this->active,
-            'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at,
+            'created_at' => $this->created_at->toDateTimeString(),
+            'updated_at' => $this->updated_at->toDateTimeString(),
         ];
     }
 }
