@@ -27,10 +27,6 @@ class AppServiceProvider extends ServiceProvider
                 return Settings::make(config('settings.path'), $default);
             });
         });
-        if ($this->app->isLocal()) {
-            $this->app->register(\Laravel\Telescope\TelescopeServiceProvider::class);
-            $this->app->register(TelescopeServiceProvider::class);
-        }
     }
 
     /**
