@@ -28,7 +28,16 @@ class LinkFactory extends Factory
                 return Project::factory()->create()->id;
             },
             'url'        => $this->faker->url,
-            'icon'       => $this->faker->randomElement(['open_in_browser', 'mdi-github-circle', 'mdi-gitlab', 'mdi-bitbucket']),
+            'icon'       => $this->faker->randomElement([
+                'mdi-earth',
+                'mdi-github',
+                'mdi-gitlab',
+                'mdi-bitbucket',
+                'mdi-facebook',
+                'mdi-twitter',
+                'mdi-linkedin',
+                'mdi-youtube'
+            ]),
         ];
     }
 }
