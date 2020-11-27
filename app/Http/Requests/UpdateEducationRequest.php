@@ -29,8 +29,8 @@ class UpdateEducationRequest extends FormRequest
         return [
             'qualification' => ['string', 'max:191'],
             'organisation' => ['string', 'max:191'],
-            'from' => ['date'],
-            'to' => ['date'],
+            'from' => ['nullable', 'date'],
+            'to' => ['nullable', 'date'],
             'ongoing' => ['boolean'],
             'active' => ['boolean'],
         ];

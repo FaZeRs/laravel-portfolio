@@ -30,10 +30,9 @@ class UpdateExperienceRequest extends FormRequest
             'position' => ['string', 'max:191'],
             'employer' => ['string', 'max:191'],
             'website' => ['string', 'max:191'],
-            'from' => ['date'],
-            'to' => ['date'],
+            'from' => ['nullable', 'date'],
+            'to' => ['nullable', 'date'],
             'ongoing' => ['boolean'],
-            'logo' => ['image'],
             'active' => ['boolean'],
         ];
     }
