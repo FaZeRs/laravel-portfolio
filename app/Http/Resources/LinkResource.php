@@ -20,8 +20,8 @@ class LinkResource extends JsonResource
             'project_id' => $this->project_id,
             'url'        => $this->url,
             'icon'       => $this->icon,
-            'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at,
+            'created_at' => $this->created_at->toDateTimeString(),
+            'updated_at' => $this->updated_at->toDateTimeString(),
         ];
     }
 }

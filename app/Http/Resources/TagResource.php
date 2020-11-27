@@ -19,8 +19,8 @@ class TagResource extends JsonResource
             'title'      => $this->title,
             'color'      => $this->color,
             'active' => $this->active,
-            'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at,
+            'created_at' => $this->created_at->toDateTimeString(),
+            'updated_at' => $this->updated_at->toDateTimeString(),
         ];
     }
 }

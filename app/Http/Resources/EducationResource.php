@@ -19,11 +19,12 @@ class EducationResource extends JsonResource
             'id'            => $this->id,
             'qualification' => $this->qualification,
             'organisation'  => $this->organisation,
-            'from'          => Carbon::parse($this->from)->format('Y'),
-            'to'            => Carbon::parse($this->to)->format('Y'),
+            'from'          => $this->from->toDateString(),
+            'to'            => $this->to->toDateString(),
+            'ongoing' => $this->ongoing,
             'active' => $this->active,
-            'created_at'    => $this->created_at,
-            'updated_at'    => $this->updated_at,
+            'created_at'    => $this->created_at->toDateTimeString(),
+            'updated_at'    => $this->updated_at->toDateTimeString(),
         ];
     }
 }

@@ -19,8 +19,8 @@ class CategoryResource extends JsonResource
             'title'      => $this->title,
             'projects' => ProjectResource::collection($this->whenLoaded('projects')),
             'active' => $this->active,
-            'created_at' => $this->created_at->format('Y-m-d h:i:s'),
-            'updated_at' => $this->updated_at->format('Y-m-d h:i:s'),
+            'created_at' => $this->created_at->toDateTimeString(),
+            'updated_at' => $this->updated_at->toDateTimeString(),
         ];
     }
 }
