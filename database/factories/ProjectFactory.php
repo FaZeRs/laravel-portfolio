@@ -33,16 +33,8 @@ class ProjectFactory extends Factory
                 return optional($category)->id ?? Category::factory()->create()->id;
             },
             'description' => $this->faker->paragraph,
-            'visible'     => $this->faker->boolean($chanceOfGettingTrue = 80),
             'order'       => $this->faker->randomDigit,
-            'status'      => $this->faker->randomElement([
-                'unknown',
-                'open',
-                'scheduled',
-                'in_development',
-                'completed',
-                'cancelled',
-            ]),
+            'status'      => $this->faker->numberBetween(0, 5),
             'active' => $this->faker->boolean(80),
         ];
     }

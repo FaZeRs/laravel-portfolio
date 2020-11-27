@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->disableForeignKeys();
-
+        $this->truncate('media');
         $this->call([
             UserTableSeeder::class,
             CategoriesTableSeeder::class,

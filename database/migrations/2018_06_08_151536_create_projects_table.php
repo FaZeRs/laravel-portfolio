@@ -18,10 +18,8 @@ class CreateProjectsTable extends Migration
             $table->json('title');
             $table->unsignedBigInteger('category_id');
             $table->json('description')->nullable();
-            $table->string('image')->nullable();
-            $table->enum('status', ['unknown', 'open', 'scheduled', 'in_development', 'completed', 'cancelled'])->default('unknown');
-            $table->boolean('visible')->default(false);
-            $table->integer('order')->default(0);
+            $table->unsignedInteger('status')->default(0);
+            $table->unsignedInteger('order')->default(0);
             $table->boolean('active')->default(false);
             $table->timestamps();
             $table->softDeletes();

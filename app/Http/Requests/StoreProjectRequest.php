@@ -31,12 +31,9 @@ class StoreProjectRequest extends FormRequest
             'title' => ['required', 'string', 'max:191'],
             'category_id' => ['required', 'exists:categories,id'],
             'description' => [],
-            'image' => ['image'],
             'links' => [],
-            'status' => ['required', Rule::in(['unknown', 'open', 'scheduled', 'in_development', 'completed', 'cancelled'])],
-            'visible' => ['boolean'],
+            'status' => ['required', 'numeric'],
             'order' => ['numeric'],
-            'photos' => [],
             'active' => ['boolean'],
         ];
     }

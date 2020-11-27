@@ -29,7 +29,7 @@ class CategoryController extends Controller
             ->allowedFilters([
                 AllowedFilter::scope('active'),
             ])
-            ->allowedIncludes('projects', 'projects.tags', 'projects.links')
+            ->allowedIncludes('projects', 'projects.tags', 'projects.links', 'projects.media')
             ->defaultSort('created_at')
             ->allowedSorts('title', 'active', 'created_at', 'updated_at');
 

@@ -18,16 +18,20 @@ class Project extends Model implements HasMedia
     use SoftDeletes;
     use InteractsWithMedia;
 
+    const STATUS_UNKNOWN = 0;
+    const STATUS_OPEN = 1;
+    const STATUS_SCHEDULED = 2;
+    const STATUS_IN_DEVELOPMENT = 3;
+    const STATUS_CANCELED = 4;
+    const STATUS_COMPLETED = 5;
+
     protected $table = 'projects';
 
     protected $fillable = [
         'title',
         'category_id',
         'description',
-        'image',
-        'links',
         'status',
-        'visible',
         'order',
         'active',
     ];
@@ -38,7 +42,8 @@ class Project extends Model implements HasMedia
     ];
 
     protected $casts = [
-        'visible' => 'boolean',
+        'status' => 'integer',
+        'order' => 'integer',
         'active' => 'boolean',
     ];
 

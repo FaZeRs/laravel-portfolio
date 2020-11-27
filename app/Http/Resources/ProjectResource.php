@@ -16,9 +16,11 @@ class ProjectResource extends JsonResource
     public function toArray($request): array
     {
         $photos = [];
-        foreach ($this->getMedia('photos') as $key => $media) {
-            $photos[$key]['src'] = $media->getUrl();
-            $photos[$key]['thumb'] = $media->getUrl('thumb');
+        if ($this->resource->relationLoaded('media')) {
+            foreach ($this->getMedia('photos') as $key => $media) {
+                $photos[$key]['src'] = $media->getUrl();
+                $photos[$key]['thumb'] = $media->getUrl('thumb');
+            }
         }
 
         return [
@@ -27,15 +29,14 @@ class ProjectResource extends JsonResource
             'category_id' => $this->category_id,
             'category' => new CategoryResource($this->whenLoaded('category')),
             'description' => $this->description,
-            'visible' => $this->visible,
             'order' => $this->order,
             'status' => $this->status,
             'active' => $this->active,
             'images' => $photos,
             'tags' => TagResource::collection($this->whenLoaded('tags')),
             'links' => LinkResource::collection($this->whenLoaded('links')),
-            'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at,
+            'created_at' => $this->created_at->toDateTimeString(),
+            'updated_at' => $this->updated_at->toDateTimeString(),
         ];
     }
 }
