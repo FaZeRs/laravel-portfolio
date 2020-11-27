@@ -10,8 +10,8 @@
                 <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 1}`" height="100%">
                   <div class="edu-block">
                     <div class="edu-session">
-                      <span v-if="school.ongoing">{{ school.from }} - {{ $t('present') }}</span>
-                      <span v-else>{{ school.from }} - {{ school.to }}</span>
+                      <span v-if="school.ongoing">{{ new Date(school.from).getFullYear() }} - {{ $t('present') }}</span>
+                      <span v-else>{{ new Date(school.from).getFullYear() }} - {{ new Date(school.to).getFullYear() }}</span>
                     </div>
                     <div class="pl-12">
                       <h4 class="block-title title">
