@@ -2,12 +2,13 @@
   <section>
     <v-data-table
       :headers="headers"
-      :items="categories"
+      :items="items"
       sort-by="created_at"
+      sort-desc
       class="elevation-1"
       :options.sync="options"
       :loading="loading"
-      :server-items-length="totalCategories"
+      :server-items-length="totalItems"
       :footer-props="{
         'items-per-page-options': rowsPerPageItems
       }"
@@ -61,15 +62,12 @@
               <v-card-actions>
                 <v-spacer></v-spacer>
                 <v-btn
-                  color="blue darken-1"
-                  text
                   @click="close"
                 >
                   Cancel
                 </v-btn>
                 <v-btn
-                  color="blue darken-1"
-                  text
+                  color="success"
                   @click="save"
                 >
                   Save
@@ -82,8 +80,8 @@
               <v-card-title class="headline">Are you sure you want to delete this item?</v-card-title>
               <v-card-actions>
                 <v-spacer></v-spacer>
-                <v-btn color="blue darken-1" text @click="closeDelete">Cancel</v-btn>
-                <v-btn color="blue darken-1" text @click="deleteItemConfirm">OK</v-btn>
+                <v-btn @click="closeDelete">Cancel</v-btn>
+                <v-btn color="error" @click="deleteItemConfirm">OK</v-btn>
                 <v-spacer></v-spacer>
               </v-card-actions>
             </v-card>
@@ -137,7 +135,7 @@
       <template v-slot:no-data>
         <v-btn
           color="primary"
-          @click="fetchCategories"
+          @click="fetchItems"
         >
           Refresh
         </v-btn>
@@ -171,8 +169,8 @@ export default {
         title: '',
         active: false,
       },
-      totalCategories: 0,
-      categories: [],
+      totalItems: 0,
+      items: [],
       loading: true,
       options: {},
       rowsPerPageItems: [10, 20, 30, 40, -1],
@@ -185,7 +183,7 @@ export default {
     },
   },
   mounted() {
-    this.fetchCategories()
+    this.fetchItems()
   },
   watch: {
     dialog(val) {
@@ -196,7 +194,7 @@ export default {
     },
     options: {
       handler () {
-        this.fetchCategories()
+        this.fetchItems()
       },
       deep: true,
     },
@@ -204,13 +202,13 @@ export default {
   methods: {
     editItem(item) {
       console.log(item)
-      this.editedIndex = this.categories.indexOf(item)
+      this.editedIndex = this.items.indexOf(item)
       this.editedItem = Object.assign({}, item)
       this.dialog = true
     },
 
     deleteItem(item) {
-      this.editedIndex = this.categories.indexOf(item)
+      this.editedIndex = this.items.indexOf(item)
       this.editedItem = Object.assign({}, item)
       this.dialogDelete = true
     },
@@ -218,17 +216,17 @@ export default {
     async disableItem(item) {
       if (item) {
         item.active = !item.active
-        await this.$store.dispatch('category/updateCategory', item).then((response) => {
-          const index = this.categories.indexOf(item)
-          Object.assign(this.categories[index], response)
+        await this.$store.dispatch('category/updateCategory', {id: item.id, active: item.active}).then((response) => {
+          const index = this.items.indexOf(item)
+          Object.assign(this.items[index], response)
         })
       }
     },
 
     async deleteItemConfirm() {
       if (this.editedIndex > -1) {
-        await this.$store.dispatch('category/deleteCategory', this.editedItem).then(() => {
-          this.categories.splice(this.editedIndex, 1)
+        await this.$store.dispatch('category/deleteCategory', {id: this.editedItem.id}).then(() => {
+          this.items.splice(this.editedIndex, 1)
           this.closeDelete()
         })
       }
@@ -253,24 +251,24 @@ export default {
     async save() {
       if (this.editedIndex > -1) {
         await this.$store.dispatch('category/updateCategory', this.editedItem).then((response) => {
-          Object.assign(this.categories[this.editedIndex], response)
+          Object.assign(this.items[this.editedIndex], response)
           this.close()
         })
       } else {
         await this.$store.dispatch('category/createCategory', this.editedItem).then((response) => {
-          this.categories.push(response)
+          this.items.push(response)
           this.close()
         })
       }
     },
 
-    async fetchCategories() {
+    async fetchItems() {
       await this.$store.dispatch('category/fetchAdminCategories', this.options).then((response) => {
         if(response.data) {
-          this.categories = response.data
+          this.items = response.data
         }
         if(response.meta && response.meta.total) {
-          this.totalCategories = response.meta.total
+          this.totalItems = response.meta.total
         }
 
         this.loading = false
