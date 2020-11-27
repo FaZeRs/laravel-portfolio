@@ -45,6 +45,6 @@ class LinkController extends Controller
     {
         $link->delete();
 
-        return response()->json([]);
+        return response()->noContent();
     }
 }

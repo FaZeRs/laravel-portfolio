@@ -7,6 +7,9 @@ use App\Http\Requests\StoreEducationRequest;
 use App\Http\Requests\UpdateEducationRequest;
 use App\Http\Resources\EducationResource;
 use App\Models\Education;
+use Illuminate\Http\Request;
+use Spatie\QueryBuilder\AllowedFilter;
+use Spatie\QueryBuilder\QueryBuilder;
 
 class EducationController extends Controller
 {
@@ -15,9 +18,30 @@ class EducationController extends Controller
         $this->middleware('admin')->except('index', 'show');
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        return EducationResource::collection(Education::get());
+        $query = Education::query();
+        if (! $request->user() || !$request->user()->isAdmin()) {
+            $query->active();
+        }
+        $education = QueryBuilder::for($query)
+            ->allowedFilters([
+                AllowedFilter::scope('active'),
+            ])
+            ->defaultSort('ongoing', 'from')
+            ->allowedSorts('qualification', 'organisation', 'from', 'to', 'ongoing', 'active', 'created_at', 'updated_at');
+
+        if ($request->get('page', null)) {
+            $limit = (int) $request->get('limit', 10);
+            if ($limit === -1) {
+                $limit = $query->count();
+            }
+            $education = $education->paginate($limit)->appends($request->query());
+        } else {
+            $education = $education->get();
+        }
+
+        return EducationResource::collection($education);
     }
 
     public function show(Education $education)

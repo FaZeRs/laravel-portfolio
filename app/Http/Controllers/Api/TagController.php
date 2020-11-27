@@ -7,6 +7,9 @@ use App\Http\Requests\StoreTagRequest;
 use App\Http\Requests\UpdateTagRequest;
 use App\Http\Resources\TagResource;
 use App\Models\Tag;
+use Illuminate\Http\Request;
+use Spatie\QueryBuilder\AllowedFilter;
+use Spatie\QueryBuilder\QueryBuilder;
 
 class TagController extends Controller
 {
@@ -15,9 +18,32 @@ class TagController extends Controller
         $this->middleware('admin');
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        return TagResource::collection(Tag::all());
+        $query = Tag::query();
+        if (! $request->user() || !$request->user()->isAdmin()) {
+            $query->active();
+        }
+        $experience = QueryBuilder::for($query)
+            ->allowedFilters([
+                'title',
+                'color',
+                AllowedFilter::scope('active'),
+            ])
+            ->defaultSort('created_at')
+            ->allowedSorts('title', 'color', 'active', 'created_at', 'updated_at');
+
+        if ($request->get('page', null)) {
+            $limit = (int) $request->get('limit', 10);
+            if ($limit === -1) {
+                $limit = $query->count();
+            }
+            $experience = $experience->paginate($limit)->appends($request->query());
+        } else {
+            $experience = $experience->get();
+        }
+
+        return TagResource::collection($experience);
     }
 
     public function show(Tag $tag)
@@ -58,5 +84,7 @@ class TagController extends Controller
     public function delete(Tag $tag)
     {
         $tag->forceDelete();
+
+        return response()->noContent();
     }
 }
