@@ -33,7 +33,6 @@ class StoreExperienceRequest extends FormRequest
             'from' => ['required', 'date'],
             'to' => ['date'],
             'ongoing' => ['boolean'],
-            'logo' => ['image'],
             'active' => ['boolean'],
         ];
     }
