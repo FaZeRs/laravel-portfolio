@@ -16,19 +16,20 @@
           <v-layout row wrap>
             <v-flex v-for="project in projects" :key="project.id" xs12 sm6 md4>
               <v-hover>
-                <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`" height="100%">
-                  <v-img v-if="project.images.length > 0" :src="project.images[0]['thumb']" @click="showImages(project)" :alt="project.title" height="200" contain></v-img>
+                <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`" class="d-flex flex-column" tile height="100%">
+                  <v-img v-if="project.images.length > 0" :src="projectFeaturedImage(project)" @click="showImages(project)" :alt="project.title" height="200" contain></v-img>
                   <v-card-title primary-title class="justify-center">
                     <div>
                       <h3 class="headline">{{ project.title }}</h3>
-                      <span v-for="tag in project.tags" :key="tag.id" class="text-center">
+                      <span v-for="tag in project.tags" :key="project.id + '_' + tag.id" class="text-center mr-1">
                         <v-chip :color="tag.color" dark>{{ tag.title }}</v-chip>
                       </span>
                     </div>
                   </v-card-title>
-                  <v-card-actions>
+                  <v-spacer/>
+                  <v-card-actions class="mt-auto">
                     <v-spacer/>
-                    <v-btn v-for="link in project.links" :key="link.id" :href="link.url" target="_blank" icon>
+                    <v-btn v-for="link in project.links" :key="project.id + '_' + link.id" :href="link.url" target="_blank" icon>
                       <v-icon>{{ link.icon }}</v-icon>
                     </v-btn>
                   </v-card-actions>
@@ -82,6 +83,12 @@ export default {
     hideImages: function () {
       this.images = []
       this.show_images = false
+    },
+    projectFeaturedImage(project) {
+      if(project.images && project.images.length > 0) {
+        return project.images[0]['thumb'] ?? project.images[0]['src']
+      }
+      return '' // todo : default project image
     }
   }
 }

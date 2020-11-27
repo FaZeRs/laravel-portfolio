@@ -7,7 +7,7 @@ export const state = () => ({
 export const actions = {
   async fetchCategories({commit}) {
     try {
-      const categories = await Category.where('active', true).include('projects').get()
+      const categories = await Category.where('active', true).include('projects', 'projects.links', 'projects.tags', 'projects.media').get()
       commit('setCategories', categories)
       return categories
     } catch (error) {
@@ -24,7 +24,7 @@ export const actions = {
       if(itemsPerPage) {
         categories.limit(itemsPerPage)
       }
-      if (sortBy.length === 1 && sortDesc.length === 1) {
+      if (sortBy && sortBy.length === 1 && sortDesc && sortDesc.length === 1) {
         let column = sortBy[0]
         const desc = sortDesc[0]
         if(desc) {
@@ -32,10 +32,7 @@ export const actions = {
         }
         categories.orderBy(column)
       }
-      let result = await categories.get()
-
-      commit('setCategories', result.data)
-      return result
+      return await categories.get()
     } catch (error) {
       throw error
     }
@@ -43,10 +40,10 @@ export const actions = {
   async updateCategory({}, payload) {
     try {
       const category = await Category.find(payload.id)
-      if (payload.title) {
+      if (payload.hasOwnProperty('title')) {
         category.title = payload.title
       }
-      if (payload.active) {
+      if (payload.hasOwnProperty('active')) {
         category.active = payload.active
       }
       return await category.save()
