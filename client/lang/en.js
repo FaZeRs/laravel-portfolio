@@ -45,5 +45,8 @@ export default {
   validation: veeValidate.messages,
   login: 'Login',
   logout: 'Logout',
-  dashboard: 'Dashboard'
+  dashboard: 'Dashboard',
+  categories: 'Categories',
+  projects: 'Projects',
+  tags: 'Tags'
 }

@@ -9,6 +9,73 @@ export const actions = {
     const education = await Education.get()
     commit('setEducation', education)
     return education
+  },
+  async fetchAdminEducation({commit}, payload) {
+    console.log('fetchAdminEducation')
+    try {
+      let education = new Education
+      const { sortBy, sortDesc, page, itemsPerPage } = payload
+      if(page) {
+        education.page(page)
+      }
+      if(itemsPerPage) {
+        education.limit(itemsPerPage)
+      }
+      if (sortBy && sortBy.length === 1 && sortDesc && sortDesc.length === 1) {
+        let column = sortBy[0]
+        const desc = sortDesc[0]
+        if(desc) {
+          column = '-' + column
+        }
+        education.orderBy(column)
+      }
+      return await education.get()
+    } catch (error) {
+      throw error
+    }
+  },
+  async updateEducation({}, payload) {
+    try {
+      console.log(payload)
+      const education = await Education.find(payload.id)
+      if (payload.hasOwnProperty('qualification')) {
+        education.qualification = payload.qualification
+      }
+      if (payload.hasOwnProperty('organisation')) {
+        education.organisation = payload.organisation
+      }
+      if (payload.hasOwnProperty('from')) {
+        education.from = payload.from
+      }
+      if (payload.hasOwnProperty('to')) {
+        education.to = payload.to
+      }
+      if (payload.hasOwnProperty('ongoing')) {
+        education.ongoing = payload.ongoing
+      }
+      if (payload.hasOwnProperty('active')) {
+        education.active = payload.active
+      }
+      return await education.save()
+    } catch (error) {
+      throw error
+    }
+  },
+  async createEducation({}, payload) {
+    try {
+      const education = new Education(payload)
+      return await education.save()
+    } catch (error) {
+      throw error
+    }
+  },
+  async deleteEducation({}, payload) {
+    try {
+      const education = await Education.find(payload.id)
+      return await education.delete()
+    } catch (error) {
+      throw error
+    }
   }
 }
 
