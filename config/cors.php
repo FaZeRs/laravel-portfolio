@@ -22,7 +22,6 @@ return [
      * Example: ['api/*']
      */
     'paths' => [
-        'sanctum/csrf-cookie',
         'api/*',
     ],
 
@@ -34,7 +33,7 @@ return [
     /*
      * Matches the request origin. `['*']` allows all origins. Wildcards can be used, eg `*.mydomain.com`
      */
-    'allowed_origins' => explode(',', env('CORS_ALLOWED_ORIGINS', 'localhost,localhost:3000,127.0.0.1,127.0.0.1:8000,::1')),
+    'allowed_origins' => ['*'],
 
     /*
      * Patterns that can be used with `preg_match` to match the origin.
