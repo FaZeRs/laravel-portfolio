@@ -22,7 +22,7 @@ class ExperienceController extends Controller
     public function index(Request $request)
     {
         $query = Experience::query();
-        if (! $request->user() || !$request->user()->isAdmin()) {
+        if (! $request->user() || ! $request->user()->isAdmin()) {
             $query->active();
         }
         $experience = QueryBuilder::for($query)

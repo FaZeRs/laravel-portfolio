@@ -36,7 +36,7 @@ class LinkFactory extends Factory
                 'mdi-facebook',
                 'mdi-twitter',
                 'mdi-linkedin',
-                'mdi-youtube'
+                'mdi-youtube',
             ]),
         ];
     }

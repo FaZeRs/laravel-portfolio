@@ -21,6 +21,7 @@ class ExperienceResource extends JsonResource
             $logo['src'] = $this->getFirstMediaUrl('logo');
             $logo['thumb'] = $this->getFirstMediaUrl('logo', 'thumb');
         }
+
         return [
             'id'         => $this->id,
             'position'   => $this->position,

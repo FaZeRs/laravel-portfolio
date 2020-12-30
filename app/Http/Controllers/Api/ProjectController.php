@@ -21,7 +21,7 @@ class ProjectController extends Controller
     public function index(Request $request)
     {
         $query = Project::query();
-        if (! $request->user() || !$request->user()->isAdmin()) {
+        if (! $request->user() || ! $request->user()->isAdmin()) {
             $query->active();
         }
         $projects = QueryBuilder::for($query)
