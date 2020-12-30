@@ -21,7 +21,7 @@ class TagController extends Controller
     public function index(Request $request)
     {
         $query = Tag::query();
-        if (! $request->user() || !$request->user()->isAdmin()) {
+        if (! $request->user() || ! $request->user()->isAdmin()) {
             $query->active();
         }
         $experience = QueryBuilder::for($query)

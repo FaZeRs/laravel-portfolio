@@ -21,7 +21,7 @@ class EducationController extends Controller
     public function index(Request $request)
     {
         $query = Education::query();
-        if (! $request->user() || !$request->user()->isAdmin()) {
+        if (! $request->user() || ! $request->user()->isAdmin()) {
             $query->active();
         }
         $education = QueryBuilder::for($query)
