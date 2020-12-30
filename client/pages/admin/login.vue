@@ -2,7 +2,8 @@
   <v-container fluid fill-height>
     <v-layout align-center justify-center>
       <v-flex xs12 sm8 md4 lg4>
-        <v-card class="elevation-1 pa-3">
+        <v-card class="elevation-1 pa-3 text-center">
+          <h1 v-if="settings.app_name" class="section-title">{{ settings.app_name }}</h1>
           <validation-observer
             ref="observer"
             v-slot="{ invalid, validated, passes }"
