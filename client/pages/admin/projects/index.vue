@@ -201,6 +201,7 @@ export default {
       dialog: false,
       dialogDelete: false,
       headers: [
+        {text: 'ID', value: 'id'},
         {text: 'Title', align: 'start', value: 'title'},
         {text: 'Category',value: 'category.title', sortable: false},
         {text: 'Status', value: 'status'},

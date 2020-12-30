@@ -179,6 +179,7 @@ export default {
       dialog: false,
       dialogDelete: false,
       headers: [
+        {text: 'ID', value: 'id'},
         {text: 'Title', align: 'start', value: 'title'},
         {text: 'Color', align: 'start', value: 'color'},
         {text: 'Active', value: 'active'},

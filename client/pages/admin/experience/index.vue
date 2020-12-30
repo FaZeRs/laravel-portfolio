@@ -256,6 +256,7 @@ export default {
       dialog: false,
       dialogDelete: false,
       headers: [
+        {text: 'ID', value: 'id'},
         {text: 'Position', align: 'start', value: 'position'},
         {text: 'Employer', align: 'start', value: 'employer'},
         {text: 'Website', align: 'start', value: 'website'},

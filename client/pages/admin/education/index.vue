@@ -231,6 +231,7 @@ export default {
       dialog: false,
       dialogDelete: false,
       headers: [
+        {text: 'ID', value: 'id'},
         {text: 'Qualification', align: 'start', value: 'qualification'},
         {text: 'Organisation', value: 'organisation'},
         {text: 'From', value: 'from'},
