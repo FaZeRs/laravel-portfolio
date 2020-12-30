@@ -1,5 +1,5 @@
 <template>
-  <v-app id="login" class="secondary">
+  <v-app id="app">
     <v-main id="content">
       <v-container fluid fill-height>
         <router-view></router-view>

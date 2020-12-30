@@ -1,9 +1,9 @@
 <template>
-  <v-app light>
+  <v-app id="app">
     <client-only>
       <nav-bar :items="nav_items"/>
     </client-only>
-    <v-main>
+    <v-main class="d-flex align-center">
       <v-container>
         <router-view></router-view>
       </v-container>
