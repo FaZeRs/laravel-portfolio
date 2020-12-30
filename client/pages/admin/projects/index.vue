@@ -76,7 +76,7 @@
                         :items="tags"
                         :loading="loading_tags"
                         item-text="title"
-                        item-value="id"
+                        return-object
                         chips
                         label="Tags"
                         multiple

@@ -80,7 +80,7 @@ class ProjectController extends Controller
         $data = $request->validated();
         $project->update($data);
         if (array_key_exists('tags', $data)) {
-            $project->tags()->sync($data['tags']);
+            $project->tags()->sync(collect($data['tags'])->pluck('id'));
         }
 
         return new ProjectResource($project->load('category', 'tags', 'links', 'media'));
