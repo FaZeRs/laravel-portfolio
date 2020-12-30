@@ -72,7 +72,7 @@
             "@composer install -n --prefer-dist",
             "@php artisan key:generate",
             "@php artisan migrate --seed",
-            "@php artisan passport:install",
+            "@php artisan jwt:secret",
             "@php artisan horizon:install",
             "@composer test"
         ],
