@@ -156,6 +156,13 @@
         <v-icon
           small
           class="mr-2"
+          @click="editLinks(item)"
+        >
+          mdi-link
+        </v-icon>
+        <v-icon
+          small
+          class="mr-2"
           @click="disableItem(item)"
         >
           mdi-cancel
@@ -176,14 +183,19 @@
         </v-btn>
       </template>
     </v-data-table>
+    <ProjectLinks :dialog="linksDialog" :item="editedItem" @closeDialog="closeLinks"/>
   </section>
 </template>
 <script>
+import ProjectLinks from '~/components/ProjectLinks'
 
 export default {
   name: 'projects',
   layout: 'admin',
   middleware: 'auth',
+  components: {
+    ProjectLinks
+  },
   data() {
     return {
       dialog: false,
@@ -235,6 +247,7 @@ export default {
       loading: true,
       options: {},
       rowsPerPageItems: [10, 20, 30, 40, -1],
+      linksDialog: false,
     }
   },
   computed: {
@@ -350,6 +363,18 @@ export default {
         this.tags = await this.$store.dispatch('tag/fetchAdminTags', {})
       }
       this.loading_tags = false
+    },
+    editLinks(item) {
+      this.editedIndex = this.items.indexOf(item)
+      this.editedItem = Object.assign({}, item)
+      this.linksDialog = true
+    },
+    closeLinks() {
+      this.linksDialog = false
+      this.$nextTick(() => {
+        this.editedItem = Object.assign({}, this.defaultItem)
+        this.editedIndex = -1
+      })
     }
   }
 }

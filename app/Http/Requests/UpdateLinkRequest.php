@@ -30,6 +30,7 @@ class UpdateLinkRequest extends FormRequest
             'title' => ['string', 'max:191'],
             'project_id' => ['exists:projects,id'],
             'url' => ['url'],
+            'icon' => ['string'],
             'order' => ['numeric'],
         ];
     }

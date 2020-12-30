@@ -1,5 +1,5 @@
 import Project from "~/models/Project";
-import Tag from "~/models/Tag";
+import Link from "~/models/Link";
 
 export const state = () => ({
   projects: [],
@@ -70,6 +70,40 @@ export const actions = {
     try {
       const project = await Project.find(payload.id)
       return await project.delete()
+    } catch (error) {
+      throw error
+    }
+  },
+  async updateLink({}, payload) {
+    try {
+      const link = await Link.find(payload.id)
+      if (payload.hasOwnProperty('title')) {
+        link.title = payload.title
+      }
+      if (payload.hasOwnProperty('url')) {
+        link.url = payload.url
+      }
+      if (payload.hasOwnProperty('icon')) {
+        link.icon = payload.icon
+      }
+      return await link.save()
+    } catch (error) {
+      throw error
+    }
+  },
+  async createLink({}, payload) {
+    try {
+      const link = new Link(payload)
+      return await link.save()
+    } catch (error) {
+      throw error
+    }
+  },
+  async deleteLink({}, payload) {
+    console.log('deleteLink', payload)
+    try {
+      const link = await Link.find(payload.id)
+      return await link.delete()
     } catch (error) {
       throw error
     }

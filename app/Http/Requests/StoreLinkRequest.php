@@ -30,6 +30,7 @@ class StoreLinkRequest extends FormRequest
             'title' => ['required', 'string', 'max:191'],
             'project_id' => ['required', 'exists:projects,id'],
             'url' => ['required', 'url'],
+            'icon' => ['required'],
             'order' => ['numeric'],
         ];
     }
