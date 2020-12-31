@@ -106,6 +106,11 @@
 <script>
 export default {
   name: 'services',
+  head() {
+    return {
+      title: this.$t('services')
+    }
+  },
   data: () => ({
     webDevelopment: require('~/assets/images/web-development.png'),
     seoOptimization: require('~/assets/images/seo-optimization.png'),

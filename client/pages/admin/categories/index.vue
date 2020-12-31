@@ -149,6 +149,11 @@ export default {
   name: 'categories',
   layout: 'admin',
   middleware: 'auth',
+  head() {
+    return {
+      title: this.$t('categories'),
+    }
+  },
   data() {
     return {
       dialog: false,

@@ -13,6 +13,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   layout: 'empty',
   props: {
@@ -21,17 +23,29 @@ export default {
       default: null
     }
   },
+  head() {
+    const title =
+      this.error.statusCode === 404 ? this.pageNotFound : this.otherError
+    return {
+      title: title,
+      titleTemplate: '%s | ' + this.app_name
+    }
+  },
   data () {
     return {
+      app_name: '',
       pageNotFound: '404 Not Found',
       otherError: 'An error occurred'
     }
   },
-  head () {
-    const title =
-      this.error.statusCode === 404 ? this.pageNotFound : this.otherError
-    return {
-      title
+  computed: {
+    ...mapGetters({
+      settings: 'settings/settings'
+    })
+  },
+  mounted() {
+    if(this.settings) {
+      this.app_name = this.settings.app_name
     }
   }
 }

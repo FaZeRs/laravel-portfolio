@@ -22,7 +22,14 @@ import {mapGetters} from "vuex";
 
 export default {
   name: 'login_layout',
+  head() {
+    return {
+      title: this.app_name,
+      titleTemplate: '%s | ' + this.app_name
+    }
+  },
   data: () => ({
+    app_name: '',
     year: new Date().getFullYear(),
   }),
   computed: {
@@ -30,5 +37,10 @@ export default {
       settings: 'settings/settings'
     })
   },
+  mounted() {
+    if(this.settings) {
+      this.app_name = this.settings.app_name
+    }
+  }
 }
 </script>

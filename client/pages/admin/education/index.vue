@@ -226,6 +226,11 @@ export default {
   name: 'education',
   layout: 'admin',
   middleware: 'auth',
+  head() {
+    return {
+      title: this.$t('education'),
+    }
+  },
   data() {
     return {
       dialog: false,

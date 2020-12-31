@@ -251,6 +251,11 @@ export default {
   name: 'experience',
   layout: 'admin',
   middleware: 'auth',
+  head() {
+    return {
+      title: this.$t('experience'),
+    }
+  },
   data() {
     return {
       dialog: false,

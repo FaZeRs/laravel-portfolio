@@ -174,6 +174,11 @@ export default {
   name: 'tags',
   layout: 'admin',
   middleware: 'auth',
+  head() {
+    return {
+      title: this.$t('tags'),
+    }
+  },
   data() {
     return {
       dialog: false,
@@ -207,7 +212,6 @@ export default {
       rowsPerPageItems: [10, 20, 30, 40, -1],
     }
   },
-
   computed: {
     formTitle() {
       return this.editedIndex === -1 ? 'New Tag' : 'Edit Tag'

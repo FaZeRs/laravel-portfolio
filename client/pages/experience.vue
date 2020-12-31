@@ -61,6 +61,11 @@
 <script>
 export default {
   name: 'experience',
+  head() {
+    return {
+      title: this.$t('experience')
+    }
+  },
   data() {
     return {
       education: [],

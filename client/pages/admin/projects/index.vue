@@ -196,6 +196,11 @@ export default {
   components: {
     ProjectLinks
   },
+  head() {
+    return {
+      title: this.$t('projects'),
+    }
+  },
   data() {
     return {
       dialog: false,

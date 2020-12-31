@@ -47,6 +47,11 @@
 <script>
 export default {
   name: 'portfolio',
+  head() {
+    return {
+      title: this.$t('portfolio')
+    }
+  },
   data() {
     return {
       categories: [],

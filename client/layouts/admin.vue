@@ -35,7 +35,14 @@ export default {
     BackToTop,
     NavBar,
   },
+  head() {
+    return {
+      title: this.app_name,
+      titleTemplate: '%s | ' + this.app_name
+    }
+  },
   data: () => ({
+    app_name: '',
     year: new Date().getFullYear(),
     nav_items: [
       { icon: 'home', title: 'dashboard', url: '/admin/dashboard' },
@@ -51,6 +58,11 @@ export default {
     ...mapGetters({
       settings: 'settings/settings'
     })
+  },
+  mounted() {
+    if(this.settings) {
+      this.app_name = this.settings.app_name
+    }
   },
 }
 </script>

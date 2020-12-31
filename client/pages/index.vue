@@ -23,6 +23,11 @@ import {mapGetters} from "vuex";
 
 export default {
   name: 'index',
+  head() {
+    return {
+      title: this.$t('home')
+    }
+  },
   computed: {
     ...mapGetters({
       settings: 'settings/settings'

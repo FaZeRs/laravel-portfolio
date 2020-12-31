@@ -59,6 +59,11 @@ export default {
   components: {
     ContactForm
   },
+  head() {
+    return {
+      title: this.$t('contact')
+    }
+  },
   computed: {
     ...mapGetters({
       settings: 'settings/settings'
