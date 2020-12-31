@@ -27,6 +27,7 @@ class AppServiceProvider extends ServiceProvider
                 $defaults = collect(config('settings.defaults'))->map(function ($setting) {
                     return $setting['value'];
                 })->all();
+
                 return Settings::make(config('settings.path'), $defaults);
             });
         });
