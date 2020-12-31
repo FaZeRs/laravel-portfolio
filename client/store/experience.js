@@ -6,7 +6,7 @@ export const state = () => ({
 
 export const actions = {
   async fetchExperience ({ commit }) {
-    const experience = await Experience.get()
+    const experience = await Experience.include('media').get()
     commit('setExperience', experience)
     return experience
   },
