@@ -24,7 +24,7 @@
                 <v-icon class="fa-hover" dark>mdi-linkedin</v-icon>
               </v-btn>
               <v-btn v-if="settings.github" :href="settings.github" target="_blank" outlined fab color="white">
-                <v-icon class="fa-hover" dark>mdi-github-circle</v-icon>
+                <v-icon class="fa-hover" dark>mdi-github</v-icon>
               </v-btn>
               <v-btn v-if="settings.gitlab" :href="settings.gitlab" target="_blank" outlined fab color="white">
                 <v-icon class="fa-hover" dark>mdi-gitlab</v-icon>

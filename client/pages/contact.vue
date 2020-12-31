@@ -30,7 +30,7 @@
                         <v-icon>mdi-linkedin</v-icon>
                       </v-btn>
                       <v-btn v-if="settings.github" color="#222" dark small fab :href="settings.github" target="_blank">
-                        <v-icon>mdi-github-circle</v-icon>
+                        <v-icon>mdi-github</v-icon>
                       </v-btn>
                       <v-btn v-if="settings.gitlab" color="#fca326" dark small fab :href="settings.gitlab" target="_blank">
                         <v-icon>mdi-gitlab</v-icon>
