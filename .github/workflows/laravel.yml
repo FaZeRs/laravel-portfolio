@@ -21,7 +21,10 @@ jobs:
         path: /tmp/composer-cache
         key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}
 
-    - uses: php-actions/composer@v5
+    - name: Install dependencies
+      uses: php-actions/composer@v5
+      with:
+        php_version: 7.4
 
     - name: Copy .env
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
