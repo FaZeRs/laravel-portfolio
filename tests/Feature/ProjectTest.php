@@ -23,7 +23,7 @@ class ProjectTest extends TestCase
             'title'       => $this->faker->sentence,
             'category_id' => $category->id,
             'description' => $this->faker->paragraph,
-            'visible'     => $this->faker->boolean($chanceOfGettingTrue = 80),
+            'active'     => $this->faker->boolean($chanceOfGettingTrue = 80),
             'order'       => $this->faker->randomDigit,
             'status'      => $this->faker->randomElement([
                 'unknown',
@@ -48,7 +48,7 @@ class ProjectTest extends TestCase
             'title'       => $this->faker->sentence,
             'category_id' => $category->id,
             'description' => $this->faker->paragraph,
-            'visible'     => $this->faker->boolean($chanceOfGettingTrue = 80),
+            'active'     => $this->faker->boolean($chanceOfGettingTrue = 80),
             'order'       => $this->faker->randomDigit,
             'status'      => $this->faker->randomElement([
                 'unknown',
@@ -77,7 +77,6 @@ class ProjectTest extends TestCase
             'title'       => $this->faker->sentence,
             'category_id' => $category->id,
             'description' => $this->faker->paragraph,
-            'visible'     => $this->faker->boolean($chanceOfGettingTrue = 80),
             'order'       => $this->faker->randomDigit,
             'status'      => $this->faker->randomElement([
                 'unknown',
@@ -87,7 +86,8 @@ class ProjectTest extends TestCase
                 'completed',
                 'cancelled',
             ]),
-            'tags'        => $tags->pluck('id'),
+            'active'     => $this->faker->boolean($chanceOfGettingTrue = 80),
+            'tags'        => $tags,
             'photos' => [
                 0 => $file,
                 1 => $file2,
@@ -101,7 +101,6 @@ class ProjectTest extends TestCase
             'title',
             'category_id',
             'description',
-            'visible',
             'order',
             'status',
             'images',
@@ -145,7 +144,7 @@ class ProjectTest extends TestCase
         $tags = Tag::factory()->count(2)->create();
         $data = [
             'title' => $this->faker->sentence,
-            'tags'  => $tags->pluck('id'),
+            'tags'  => $tags,
         ];
 
         $response = $this->json('PUT', '/api/projects/'.$project->id, $data);
@@ -155,7 +154,6 @@ class ProjectTest extends TestCase
             'title',
             'category_id',
             'description',
-            'visible',
             'order',
             'status',
             'active',
@@ -220,7 +218,6 @@ class ProjectTest extends TestCase
                 'title',
                 'category_id',
                 'description',
-                'visible',
                 'order',
                 'status',
                 'active',
@@ -241,7 +238,6 @@ class ProjectTest extends TestCase
             'title',
             'category_id',
             'description',
-            'visible',
             'order',
             'status',
             'active',

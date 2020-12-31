@@ -55,6 +55,9 @@ class ExperienceController extends Controller
     {
         $data = $request->validated();
         $experience = Experience::create($data);
+        if ($request->hasFile('image')) {
+            $experience->addMediaFromRequest('image')->toMediaCollection('logo');
+        }
 
         return new ExperienceResource($experience->load('media'));
     }
