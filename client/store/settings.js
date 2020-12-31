@@ -19,7 +19,7 @@ export const actions = {
   async fetchSettings ({ commit }) {
     try {
       const settings = await this.$axios.get('/settings')
-      console.log('settings', settings)
+      commit('setSettings', settings.data)
     } catch (error) {
       throw error
     }
