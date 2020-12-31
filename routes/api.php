@@ -32,8 +32,12 @@ Route::name('api.')->group(function () {
         Route::post('user', [AuthController::class, 'user'])->name('user');
     });
 
-    Route::get('settings', [SettingController::class, 'index']);
-    Route::get('settings/{name}', [SettingController::class, 'show']);
+    Route::prefix('settings')->name('settings.')->group(function () {
+        Route::get('/', [SettingController::class, 'index'])->name('index');
+        Route::get('{name}', [SettingController::class, 'show'])->name('show');
+        Route::post('upload-photo', [SettingController::class, 'uploadPhoto'])->name('upload-photo');
+        Route::put('/', [SettingController::class, 'update'])->name('update');
+    });
 
     Route::prefix('categories')->name('category.')->group(function () {
         Route::get('/', [CategoryController::class, 'index'])->name('index');

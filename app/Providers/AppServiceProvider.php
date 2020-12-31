@@ -6,6 +6,7 @@ use App\Settings;
 use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 
@@ -20,11 +21,13 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->app->singleton(Settings::class, function () {
             return Cache::remember('settings', 15, function () {
-                $default = collect(config('settings.default'))->map(function ($setting) {
-                    return $setting->value;
+                if (Storage::disk('local')->exists(basename(config('settings.path')))) {
+                    return Settings::make(config('settings.path'));
+                }
+                $defaults = collect(config('settings.defaults'))->map(function ($setting) {
+                    return $setting['value'];
                 })->all();
-
-                return Settings::make(config('settings.path'), $default);
+                return Settings::make(config('settings.path'), $defaults);
             });
         });
     }

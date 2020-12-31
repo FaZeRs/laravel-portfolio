@@ -19,11 +19,32 @@ export const actions = {
   async fetchSettings ({ commit }) {
     try {
       const settings = await this.$axios.get('/settings')
+      console.log('settings', settings)
+    } catch (error) {
+      throw error
+    }
+  },
+  async update ({ commit, dispatch }, payload) {
+    try {
+      if (payload.hasOwnProperty('photo')) {
+        dispatch('uploadPhoto', payload)
+        payload['photo'] = null
+      }
+      const settings = await this.$axios.put('/settings', payload)
       commit('setSettings', settings.data)
     } catch (error) {
       throw error
     }
-  }
+  },
+  async uploadPhoto({}, payload) {
+    try {
+      let data = new FormData();
+      data.append('photo', payload.photo)
+      return await this.$axios.post('/settings/upload-photo', data)
+    } catch (error) {
+      throw error
+    }
+  },
 }
 
 export const mutations = {
