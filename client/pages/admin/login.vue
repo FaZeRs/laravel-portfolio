@@ -10,9 +10,6 @@
           >
             <form @submit.prevent="passes(onSubmit)">
               <v-card-text>
-                <div class="layout column align-center">
-                  <h1 class="flex my-4 primary--text">{{ settings.app_name }}</h1>
-                </div>
                 <validation-provider
                   v-slot="{ errors }"
                   name="email"
@@ -68,7 +65,7 @@ export default {
     ValidationProvider,
     ValidationObserver,
   },
-  metaInfo() {
+  head() {
     return {
       title: this.$t('login')
     }
