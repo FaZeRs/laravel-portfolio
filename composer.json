@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "name": "sref/laravel-portfolio",
+    "description": "Personal portfolio created with Laravel, Nuxt and Vuetify.",
+    "keywords": ["portfolio", "laravel", "nuxt", "vuetify", "php"],
     "license": "MIT",
     "type": "project",
     "require": {
