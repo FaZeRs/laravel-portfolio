@@ -59,7 +59,7 @@ class ProjectController extends Controller
         $project = Project::create($data);
 
         if ($request->has('tags')) {
-            $project->tags()->sync($request->get('tags'));
+            $project->tags()->sync(collect($data['tags'])->pluck('id'));
         }
 
         if ($request->has('photos')) {

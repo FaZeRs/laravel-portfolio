@@ -78,14 +78,7 @@ class ProjectTest extends TestCase
             'category_id' => $category->id,
             'description' => $this->faker->paragraph,
             'order'       => $this->faker->randomDigit,
-            'status'      => $this->faker->randomElement([
-                'unknown',
-                'open',
-                'scheduled',
-                'in_development',
-                'completed',
-                'cancelled',
-            ]),
+            'status'      => $this->faker->numberBetween(0, 5),
             'active'     => $this->faker->boolean($chanceOfGettingTrue = 80),
             'tags'        => $tags,
             'photos' => [
@@ -93,7 +86,6 @@ class ProjectTest extends TestCase
                 1 => $file2,
             ],
         ];
-
         $response = $this->json('POST', '/api/projects', $data);
         $response->assertSuccessful();
         $response->assertJsonStructure([
