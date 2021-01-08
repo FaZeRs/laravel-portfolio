@@ -79,7 +79,7 @@ export default {
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
-    baseURL: 'http://localhost/api'
+    baseURL: 'http://portfolio.test/api'
   },
   auth: {
     redirect: {
