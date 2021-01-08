@@ -48,5 +48,7 @@ jobs:
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
     - name: Generate key
       run: php artisan key:generate
+    - name: Generate jwt secret key
+      run: php artisan jwt:secret
     - name: Execute Tests
       run: vendor/bin/phpunit
