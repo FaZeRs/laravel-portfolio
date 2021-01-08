@@ -16,7 +16,7 @@ jobs:
       matrix:
         php: [8.0]
         laravel: [8.*]
-        dependency-version: [prefer-lowest, prefer-stable]
+        dependency-version: [prefer-stable]
     steps:
     - uses: actions/checkout@v2
 
