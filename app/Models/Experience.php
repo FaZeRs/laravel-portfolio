@@ -23,8 +23,8 @@ class Experience extends Model implements HasMedia
         'position',
         'employer',
         'website',
-        'from',
-        'to',
+        'date_from',
+        'date_to',
         'ongoing',
         'logo',
         'active',
@@ -35,8 +35,8 @@ class Experience extends Model implements HasMedia
     ];
 
     protected $dates = [
-        'from',
-        'to',
+        'date_from',
+        'date_to',
         'created_at',
         'updated_at',
         'deleted_at',

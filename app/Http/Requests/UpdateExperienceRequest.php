@@ -29,9 +29,9 @@ class UpdateExperienceRequest extends FormRequest
         return [
             'position' => ['string', 'max:191'],
             'employer' => ['string', 'max:191'],
-            'website' => ['string', 'max:191'],
-            'from' => ['nullable', 'date'],
-            'to' => ['nullable', 'date'],
+            'website' => ['nullable', 'string', 'max:191'],
+            'date_from' => ['date'],
+            'date_to' => ['nullable', 'date'],
             'ongoing' => ['boolean'],
             'active' => ['boolean'],
         ];

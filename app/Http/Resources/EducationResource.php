@@ -10,7 +10,8 @@ class EducationResource extends JsonResource
     /**
      * Transform the resource into an array.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
+     *
      * @return array
      */
     public function toArray($request): array
@@ -19,10 +20,10 @@ class EducationResource extends JsonResource
             'id'            => $this->id,
             'qualification' => $this->qualification,
             'organisation'  => $this->organisation,
-            'from'          => $this->from->toDateString(),
-            'to'            => $this->to->toDateString(),
-            'ongoing' => $this->ongoing,
-            'active' => $this->active,
+            'date_from'     => optional($this->date_from)->toDateString(),
+            'date_to'       => optional($this->date_to)->toDateString(),
+            'ongoing'       => $this->ongoing,
+            'active'        => $this->active,
             'created_at'    => $this->created_at->toDateTimeString(),
             'updated_at'    => $this->updated_at->toDateTimeString(),
         ];

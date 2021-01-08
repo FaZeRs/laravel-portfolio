@@ -40,10 +40,16 @@ export default {
     name: 'Vārds',
     email: 'Epasts',
     message: 'Jūsu teksts šeit...',
-    password: 'Parole'
+    password: 'Parole',
+    position: 'Position',
+    employer: 'Uzņēmums',
+    date_from: 'Datums No'
   },
   validation: veeValidate.messages,
   login: 'Ieliegoties',
   logout: 'Iziet',
-  dashboard: 'Panelis'
+  dashboard: 'Panelis',
+  categories: 'Kategorijas',
+  projects: 'Projekti',
+  tags: 'Birkas'
 }

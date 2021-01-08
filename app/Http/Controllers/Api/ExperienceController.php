@@ -30,8 +30,8 @@ class ExperienceController extends Controller
             ->allowedFilters([
                 AllowedFilter::scope('active'),
             ])
-            ->defaultSort('ongoing', 'from')
-            ->allowedSorts('from', 'to', 'ongoing', 'active', 'created_at', 'updated_at');
+            ->defaultSort('ongoing', 'date_from')
+            ->allowedSorts('date_from', 'date_to', 'ongoing', 'active', 'created_at', 'updated_at');
 
         if ($request->get('page', null)) {
             $limit = (int) $request->get('limit', 10);

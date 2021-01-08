@@ -29,8 +29,8 @@ class StoreEducationRequest extends FormRequest
         return [
             'qualification' => ['required', 'string', 'max:191'],
             'organisation' => ['required', 'string', 'max:191'],
-            'from' => ['required', 'date'],
-            'to' => ['date'],
+            'date_from' => ['required', 'date'],
+            'date_to' => ['nullable', 'date'],
             'ongoing' => ['boolean'],
             'active' => ['boolean'],
         ];

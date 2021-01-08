@@ -11,7 +11,6 @@ export const actions = {
     return education
   },
   async fetchAdminEducation({commit}, payload) {
-    console.log('fetchAdminEducation')
     try {
       let education = new Education
       const { sortBy, sortDesc, page, itemsPerPage } = payload
@@ -36,7 +35,6 @@ export const actions = {
   },
   async updateEducation({}, payload) {
     try {
-      console.log(payload)
       const education = await Education.find(payload.id)
       if (payload.hasOwnProperty('qualification')) {
         education.qualification = payload.qualification
@@ -44,11 +42,11 @@ export const actions = {
       if (payload.hasOwnProperty('organisation')) {
         education.organisation = payload.organisation
       }
-      if (payload.hasOwnProperty('from')) {
-        education.from = payload.from
+      if (payload.hasOwnProperty('date_from')) {
+        education.date_from = payload.date_from
       }
-      if (payload.hasOwnProperty('to')) {
-        education.to = payload.to
+      if (payload.hasOwnProperty('date_to')) {
+        education.date_to = payload.date_to
       }
       if (payload.hasOwnProperty('ongoing')) {
         education.ongoing = payload.ongoing

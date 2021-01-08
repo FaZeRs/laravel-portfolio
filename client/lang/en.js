@@ -40,7 +40,10 @@ export default {
     name: 'Name',
     email: 'Email',
     message: 'Message',
-    password: 'Password'
+    password: 'Password',
+    position: 'Position',
+    employer: 'Employer',
+    date_from: 'Date From'
   },
   validation: veeValidate.messages,
   login: 'Login',

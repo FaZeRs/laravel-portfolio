@@ -30,8 +30,8 @@ class ExperienceFactory extends Factory
             'position' => $this->faker->jobTitle,
             'employer' => $this->faker->company,
             'website' => $this->faker->domainName,
-            'from' => $from,
-            'to' => $this->faker->dateTimeBetween($from, 'now'),
+            'date_from' => $from,
+            'date_to' => $this->faker->dateTimeBetween($from, 'now'),
             'ongoing' => $this->faker->boolean(25),
             'active' => $this->faker->boolean(80),
         ];

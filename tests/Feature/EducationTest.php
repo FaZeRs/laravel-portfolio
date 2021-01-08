@@ -17,8 +17,8 @@ class EducationTest extends TestCase
         $data = [
             'qualification' => $this->faker->sentence(4),
             'organisation' => $this->faker->sentence(2),
-            'from' => $this->faker->date,
-            'to' => $this->faker->date,
+            'date_from' => $this->faker->date,
+            'date_to' => $this->faker->date,
             'ongoing' => $this->faker->boolean(25),
         ];
 
@@ -33,8 +33,8 @@ class EducationTest extends TestCase
         $data = [
             'qualification' => $this->faker->sentence(4),
             'organisation' => $this->faker->sentence(2),
-            'from' => $this->faker->date,
-            'to' => $this->faker->date,
+            'date_from' => $this->faker->date,
+            'date_to' => $this->faker->date,
             'ongoing' => $this->faker->boolean(25),
         ];
 
@@ -49,8 +49,8 @@ class EducationTest extends TestCase
         $data = [
             'qualification' => $this->faker->sentence(4),
             'organisation' => $this->faker->sentence(2),
-            'from' => $this->faker->date,
-            'to' => $this->faker->date,
+            'date_from' => $this->faker->date,
+            'date_to' => $this->faker->date,
             'ongoing' => $this->faker->boolean(25),
         ];
 
@@ -60,8 +60,8 @@ class EducationTest extends TestCase
             'id',
             'qualification',
             'organisation',
-            'from',
-            'to',
+            'date_from',
+            'date_to',
             'active',
             'created_at',
             'updated_at',
@@ -107,8 +107,8 @@ class EducationTest extends TestCase
             'id',
             'qualification',
             'organisation',
-            'from',
-            'to',
+            'date_from',
+            'date_to',
             'active',
             'created_at',
             'updated_at',
@@ -170,8 +170,8 @@ class EducationTest extends TestCase
                 'id',
                 'qualification',
                 'organisation',
-                'from',
-                'to',
+                'date_from',
+                'date_to',
                 'active',
                 'created_at',
                 'updated_at',
@@ -188,8 +188,8 @@ class EducationTest extends TestCase
             'id',
             'qualification',
             'organisation',
-            'from',
-            'to',
+            'date_from',
+            'date_to',
             'active',
             'created_at',
             'updated_at',

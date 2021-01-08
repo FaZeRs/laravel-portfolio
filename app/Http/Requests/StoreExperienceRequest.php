@@ -29,9 +29,9 @@ class StoreExperienceRequest extends FormRequest
         return [
             'position' => ['required', 'string', 'max:191'],
             'employer' => ['required', 'string', 'max:191'],
-            'website' => ['required', 'string', 'max:191'],
-            'from' => ['required', 'date'],
-            'to' => ['date'],
+            'website' => ['nullable', 'string', 'max:191'],
+            'date_from' => ['required', 'date'],
+            'date_to' => ['nullable', 'date'],
             'ongoing' => ['boolean'],
             'active' => ['boolean'],
         ];

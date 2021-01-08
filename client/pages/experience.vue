@@ -11,7 +11,7 @@
                   <div class="edu-block">
                     <div class="edu-session">
                       <span v-if="school.ongoing">{{ new Date(school.from).getFullYear() }} - {{ $t('present') }}</span>
-                      <span v-else>{{ new Date(school.from).getFullYear() }} - {{ new Date(school.to).getFullYear() }}</span>
+                      <span v-else>{{ new Date(school.date_from).getFullYear() }} - {{ new Date(school.date_to).getFullYear() }}</span>
                     </div>
                     <div class="pl-12">
                       <h4 class="block-title title">
@@ -37,8 +37,8 @@
                 <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 1}`" height="100%">
                   <div class="work-exp-block">
                     <div class="working-duration title d-block">
-                      <span v-if="job.ongoing">{{ job.from }} - {{ $t('present') }}</span>
-                      <span v-else>{{ job.from }} - {{ job.to }}</span>
+                      <span v-if="job.ongoing">{{ job.date_from }} - {{ $t('present') }}</span>
+                      <span v-else>{{ job.date_from }} - {{ job.date_to }}</span>
                     </div>
                     <div class="work-exp-logo">
                       <v-img v-if="job.logo" :src="job.logo['thumb']" aspect-ratio="1" contain max-width="125"></v-img>

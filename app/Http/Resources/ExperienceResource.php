@@ -11,7 +11,8 @@ class ExperienceResource extends JsonResource
     /**
      * Transform the resource into an array.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
+     *
      * @return array
      */
     public function toArray($request): array
@@ -27,11 +28,11 @@ class ExperienceResource extends JsonResource
             'position'   => $this->position,
             'employer'   => $this->employer,
             'website'    => $this->website,
-            'from'       => $this->from->toDateString(),
-            'to'         => $this->to->toDateString(),
+            'date_from'  => optional($this->date_from)->toDateString(),
+            'date_to'    => optional($this->date_to)->toDateString(),
             'ongoing'    => $this->ongoing,
             'logo'       => $logo,
-            'active' => $this->active,
+            'active'     => $this->active,
             'created_at' => $this->created_at->toDateTimeString(),
             'updated_at' => $this->updated_at->toDateTimeString(),
         ];

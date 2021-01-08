@@ -18,8 +18,8 @@ class CreateExperienceTable extends Migration
             $table->json('position');
             $table->string('employer');
             $table->string('website')->nullable();
-            $table->date('from');
-            $table->date('to')->nullable();
+            $table->date('date_from');
+            $table->date('date_to')->nullable();
             $table->boolean('ongoing')->default(false);
             $table->boolean('active')->default(false);
             $table->timestamps();

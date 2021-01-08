@@ -18,8 +18,8 @@ class Education extends Model
     protected $fillable = [
         'qualification',
         'organisation',
-        'from',
-        'to',
+        'date_from',
+        'date_to',
         'ongoing',
         'active',
     ];
@@ -30,8 +30,8 @@ class Education extends Model
     ];
 
     protected $dates = [
-        'from',
-        'to',
+        'date_from',
+        'date_to',
         'created_at',
         'updated_at',
         'deleted_at',

@@ -17,8 +17,8 @@ class CreateEducationTable extends Migration
             $table->bigIncrements('id');
             $table->json('qualification');
             $table->json('organisation');
-            $table->date('from');
-            $table->date('to')->nullable();
+            $table->date('date_from');
+            $table->date('date_to')->nullable();
             $table->boolean('ongoing')->default(false);
             $table->boolean('active')->default(false);
             $table->timestamps();

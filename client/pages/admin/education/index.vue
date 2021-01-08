@@ -68,7 +68,7 @@
                       >
                         <template v-slot:activator="{ on, attrs }">
                           <v-text-field
-                            v-model="editedItem.from"
+                            v-model="editedItem.date_from"
                             label="Date From"
                             readonly
                             v-bind="attrs"
@@ -76,9 +76,9 @@
                           ></v-text-field>
                         </template>
                         <v-date-picker
-                          v-model="editedItem.from"
+                          v-model="editedItem.date_from"
                           @input="editedItem.fromMenu = false"
-                          :max="editedItem.to"
+                          :max="editedItem.date_to"
                         ></v-date-picker>
                       </v-menu>
                       <v-menu
@@ -91,7 +91,7 @@
                       >
                         <template v-slot:activator="{ on, attrs }">
                           <v-text-field
-                            v-model="editedItem.to"
+                            v-model="editedItem.date_to"
                             label="Date To"
                             readonly
                             v-bind="attrs"
@@ -99,8 +99,8 @@
                           ></v-text-field>
                         </template>
                         <v-date-picker
-                          v-model="editedItem.to"
-                          :min="editedItem.from"
+                          v-model="editedItem.date_to"
+                          :min="editedItem.date_from"
                           :max="new Date().toISOString().substr(0, 10)"
                           @input="editedItem.toMenu = false"
                         ></v-date-picker>
@@ -239,8 +239,8 @@ export default {
         {text: 'ID', value: 'id'},
         {text: 'Qualification', align: 'start', value: 'qualification'},
         {text: 'Organisation', value: 'organisation'},
-        {text: 'From', value: 'from'},
-        {text: 'To', value: 'to'},
+        {text: 'Date From', value: 'date_from'},
+        {text: 'Date To', value: 'date_to'},
         {text: 'On Going', value: 'ongoing'},
         {text: 'Active', value: 'active'},
         {text: 'Created At', value: 'created_at'},
@@ -251,9 +251,9 @@ export default {
       editedItem: {
         qualification: '',
         organisation: '',
-        from: null,
+        date_from: null,
         fromMenu: false,
-        to: null,
+        date_to: null,
         toMenu: false,
         ongoing: null,
         active: false,
@@ -261,9 +261,9 @@ export default {
       defaultItem: {
         qualification: '',
         organisation: '',
-        from: null,
+        date_from: null,
         fromMenu: false,
-        to: null,
+        date_to: null,
         toMenu: false,
         ongoing: null,
         active: false,

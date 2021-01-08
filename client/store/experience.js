@@ -45,11 +45,11 @@ export const actions = {
       if (payload.hasOwnProperty('website')) {
         experience.website = payload.website
       }
-      if (payload.hasOwnProperty('from')) {
-        experience.from = payload.from
+      if (payload.hasOwnProperty('date_from')) {
+        experience.date_from = payload.date_from
       }
-      if (payload.hasOwnProperty('to')) {
-        experience.to = payload.to
+      if (payload.hasOwnProperty('date_to')) {
+        experience.date_to = payload.date_to
       }
       if (payload.hasOwnProperty('ongoing')) {
         experience.ongoing = payload.ongoing
