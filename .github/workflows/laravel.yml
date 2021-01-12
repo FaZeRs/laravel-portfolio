@@ -1,4 +1,4 @@
-name: Portfolio-CI
+name: Backend-CI
 
 on:
   push:

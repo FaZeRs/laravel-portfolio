@@ -1,6 +1,6 @@
 # The source code of [naurislinde.com](https://naurislinde.com)
 
-[![Build Status](https://img.shields.io/travis/FaZeRs/naurislinde.com/master.svg?style=flat-square)](https://travis-ci.org/FaZeRs/naurislinde.com)
+[![Build Status](https://img.shields.io/github/workflow/status/FaZeRs/naurislinde.com/Backend-CI/master.svg?style=flat-square&label=Backend-CI%20)](https://travis-ci.org/FaZeRs/naurislinde.com)
 [![StyleCI](https://styleci.io/repos/130983433/shield)](https://styleci.io/repos/130983433)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 
@@ -12,7 +12,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Requirements
 
-- PHP >= 7.2
+- PHP 8.0
 - OpenSSL PHP Extension
 - PDO PHP Extension
 - Mbstring PHP Extension
@@ -37,7 +37,7 @@ docker-compose up -d --build
 
 Access docker environment
 ```
-docker container exec -it portfolio sh
+docker container exec -it php-fpm sh
 ```
 
 Run this command inside terminal to create .env file, install dependencies, generate key, run migrations and tests. 
@@ -45,12 +45,7 @@ Run this command inside terminal to create .env file, install dependencies, gene
 composer start
 ```
 
-To install javascript dependencies and compile assets run this command
-```
-npm run start
-```
-
-The application will be available on http://localhost:8000, the phpMyAdmin on http://localhost:8080, the mailhog on http://localhost:8025
+The application will be available on http://localhost:3000, the mailhog on http://localhost:8025
 
 #### Common way
 
@@ -83,7 +78,7 @@ php artisan migrate --seed
 
 Now we need to create the encryption keys needed to generate secure access tokens.
 ```
-php artisan passport:install
+php artisan jwt:secret
 ```
 
 In order to install the Javascript packages for frontend development, you will need the [Node Package Manager](https://www.npmjs.com/), and optionally the [Yarn Package Manager](https://yarnpkg.com/lang/en/) by Facebook (Recommended)
@@ -95,59 +90,12 @@ npm install
 
 Compile assets:
 ```
-# NPM
-npm run dev
-
-# Watch to update automatically while developing
-npm run watch
+npm run build
 ```
 
 ## REST API
 
 We use [Laravel Passport](https://laravel.com/docs/master/passport). It is an OAuth2 server and API authentication package.
-
-#### API Links
-
-Verb | Path | NamedRoute | Controller | Action | Middleware
---- | --- | --- | --- | --- | ---
-POST      | /api/login                  | api.login              | \App\Http\Controllers\Api\LoginController      | login      | -
-POST      | /api/register               | api.register           | \App\Http\Controllers\Api\RegisterController   | register   | -
-GET       | /api/details                | api.user.details       | \App\Http\Controllers\Api\UserController       | details    | auth:api
-GET       | /api/logout                 | api.user.logout        | \App\Http\Controllers\Api\UserController       | logout     | auth:api
-GET       | /api/categories             | api.categories.index   | \App\Http\Controllers\Api\CategoryController   | index      | -
-GET       | /api/categories/{category}  | api.categories.show    | \App\Http\Controllers\Api\CategoryController   | show       | -
-POST      | /api/categories             | api.categories.store   | \App\Http\Controllers\Api\CategoryController   | store      | api_admin
-PUT/PATCH | /api/categories/{category}  | api.categories.update  | \App\Http\Controllers\Api\CategoryController   | update     | api_admin
-DELETE    | /api/categories/{category}  | api.categories.destroy | \App\Http\Controllers\Api\CategoryController   | destroy    | api_admin
-GET       | /api/projects               | api.projects.index     | \App\Http\Controllers\Api\ProjectController    | index      | -
-GET       | /api/projects/{project}     | api.projects.show      | \App\Http\Controllers\Api\ProjectController    | show       | -
-POST      | /api/projects               | api.projects.store     | \App\Http\Controllers\Api\ProjectController    | store      | api_admin
-PUT/PATCH | /api/projects/{project}     | api.projects.update    | \App\Http\Controllers\Api\ProjectController    | update     | api_admin
-DELETE    | /api/projects/{project}     | api.projects.destroy   | \App\Http\Controllers\Api\ProjectController    | destroy    | api_admin
-GET       | /api/tags                   | api.tags.index         | \App\Http\Controllers\Api\TagController        | index      | -
-GET       | /api/tags/{tag}             | api.tags.show          | \App\Http\Controllers\Api\TagController        | show       | -
-POST      | /api/tags                   | api.tags.store         | \App\Http\Controllers\Api\TagController        | store      | api_admin
-PUT/PATCH | /api/tags/{project}         | api.tags.update        | \App\Http\Controllers\Api\TagController        | update     | api_admin
-DELETE    | /api/tags/{project}         | api.tags.destroy       | \App\Http\Controllers\Api\TagController        | destroy    | api_admin
-GET       | /api/links                  | api.links.index        | \App\Http\Controllers\Api\LinkController       | index      | -
-GET       | /api/links/{link}           | api.links.show         | \App\Http\Controllers\Api\LinkController       | show       | -
-POST      | /api/links                  | api.links.store        | \App\Http\Controllers\Api\LinkController       | store      | api_admin
-PUT/PATCH | /api/links/{link}           | api.links.update       | \App\Http\Controllers\Api\LinkController       | update     | api_admin
-DELETE    | /api/links/{link}           | api.links.destroy      | \App\Http\Controllers\Api\LinkController       | destroy    | api_admin
-POST      | /api/contact/send           | api.contact.send       | \App\Http\Controllers\Api\ContactController    | send       | -
-GET       | /api/education              | api.education.index    | \App\Http\Controllers\Api\EducationController  | index      | -
-GET       | /api/education/{education}  | api.education.show     | \App\Http\Controllers\Api\EducationController  | show       | -
-POST      | /api/education              | api.education.store    | \App\Http\Controllers\Api\EducationController  | store      | api_admin
-PUT/PATCH | /api/education/{education}  | api.education.update   | \App\Http\Controllers\Api\EducationController  | update     | api_admin
-DELETE    | /api/education/{education}  | api.education.destroy  | \App\Http\Controllers\Api\EducationController  | destroy    | api_admin
-GET       | /api/experience             | api.experience.index   | \App\Http\Controllers\Api\ExperienceController | index      | -
-GET       | /api/experience/{experience}| api.experience.show    | \App\Http\Controllers\Api\ExperienceController | show       | -
-POST      | /api/experience             | api.experience.store   | \App\Http\Controllers\Api\ExperienceController | store      | api_admin
-PUT/PATCH | /api/experience/{experience}| api.experience.update  | \App\Http\Controllers\Api\ExperienceController | update     | api_admin
-DELETE    | /api/experience/{experience}| api.experience.destroy | \App\Http\Controllers\Api\ExperienceController | destroy    | api_admin  
-GET       | /api/settings               | api.settings.index     | \App\Http\Controllers\Api\SettingController    | index      | -
-GET       | /api/settings/{setting}     | api.settings.show      | \App\Http\Controllers\Api\SettingController    | show       | -
-
 
 ## Running the tests
 
@@ -162,7 +110,7 @@ composer test
 * [Vue](https://vuejs.org) - The frontend framework used
 * [Vuetify](https://vuetifyjs.com) - Vue component framework used
 * [Docker](https://www.docker.com/) - PHP development environment
-* [Laravel Backpack](https://backpackforlaravel.com/) - Laravel admin panel
+* [Nuxt](https://nuxtjs.org/) - The Intuitive Vue Framework
 
 ## Contributing
 
