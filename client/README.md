@@ -1,4 +1,4 @@
-# client
+# The frontend code of [naurislinde.com](https://naurislinde.com)
 
 ## Build Setup
 

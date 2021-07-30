@@ -1,0 +1,17 @@
+version: '3.4'
+
+x-base:
+  &base
+  image: node:lts
+  volumes:
+    - ./client:/usr/src/app
+  working_dir: /usr/src/app
+
+services:
+  install:
+    << : *base
+    command: npm install
+
+  build:
+    << : *base
+    command: npm run build

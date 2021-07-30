@@ -1,7 +1,9 @@
 version: '3'
 
 networks:
-  app-network:
+  internal:
+    driver: bridge
+  web:
     driver: bridge
 
 volumes:
@@ -16,12 +18,12 @@ services:
     build: ./docker/php
     restart: unless-stopped
     volumes:
-      - ./docker/php/php.prod.ini:/usr/local/etc/php/php.ini
-      - ./api:/var/www
+      - ./docker/php/php.dev.ini:/usr/local/etc/php/php.ini
+      - ./api:/var/www/api
     expose:
       - 9000
     networks:
-      - app-network
+      - internal
 
   nginx:
     build: ./docker/nginx
@@ -33,12 +35,14 @@ services:
       - ./docker/nginx/ssl/:/etc/nginx/ssl
     ports:
       - 80:80
+      - 81:81
       - 443:443
-    depends_on:
+    links:
       - php-fpm
       - node
     networks:
-      - app-network
+      - internal
+      - web
 
   mariadb:
     image: mariadb:latest
@@ -53,7 +57,7 @@ services:
     volumes:
       - ${DATA_PATH_HOST}/mariadb:/var/lib/mysql
     networks:
-      - app-network
+      - internal
 
   redis:
     image: redis:alpine
@@ -64,24 +68,20 @@ services:
     ports:
       - 6379:6379
     networks:
-      - app-network
+      - internal
 
   node:
-    build: ./docker/node
+    image: node:lts
     restart: unless-stopped
     command: npm run dev
-    working_dir: /usr/src/app
+    working_dir: /var/www/client
     volumes:
-      - ./client:/usr/src/app
+      - ./client:/var/www/client
+    ports:
+      - 3000:3000
+    environment:
+      HOST: 0.0.0.0
+    depends_on:
+      - php-fpm
     networks:
-      - app-network
-
-#  certbot:
-#    image: certbot/certbot
-#    container_name: certbot
-#    volumes:
-#      - ${DATA_PATH_HOST}/certbot/etc:/etc/letsencrypt
-#      - ${DATA_PATH_HOST}/certbot/var:/var/lib/letsencrypt
-#    depends_on:
-#      - nginx
-#    command: certonly --webroot --webroot-path=/var/www/html --email sammy@example.com --agree-tos --no-eff-email --staging -d example.com  -d www.example.com
+      - web
