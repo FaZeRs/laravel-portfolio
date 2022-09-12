@@ -1,4 +1,4 @@
-# The source code of [naurislinde.com](https://naurislinde.com)
+# The source code of [naurislinde.dev](https://naurislinde.com)
 
 [![Build Status](https://img.shields.io/github/workflow/status/FaZeRs/naurislinde.com/Backend-CI/master.svg?style=flat-square&label=Backend-CI%20)](https://travis-ci.org/FaZeRs/naurislinde.com)
 [![StyleCI](https://styleci.io/repos/130983433/shield)](https://styleci.io/repos/130983433)
